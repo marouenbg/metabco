@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 7,
+  "growth_claimed": 0.132,
+  "growth_allowed": 0.132,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ser__L"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "clipped uptake ser__L to pool limit -4.39",
+   "P: credited 0.154 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0346 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "L-serine uptake supports growth and fermentation",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ser__L": -5.0,
+   "ac": 3.0,
+   "co2": 2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "ser__L": -4.3948,
+   "ac": 3.0,
+   "co2": 2.0,
+   "h2": 1.0,
+   "pi": -0.154,
+   "so4": -0.0346
+  }
+ }
+]

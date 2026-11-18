@@ -1,0 +1,100 @@
+# Metabolic Decision: Prevotella copri CB7 DSM 18205, Turn 8
+
+Let me think through my situation carefully.
+
+## Current Status
+I am at 3.877 gDW/L after 32 hours in a sealed anaerobic batch culture. My recent history shows:
+- Turn 6: successful growth at 0.311 /h on acetate and propionate
+- Turn 7: growth ceased (0.000 /h), and I released accumulated products while taking up carbohydrates (maltose, arabinose)
+- This suggests I may have encountered nitrogen limitation or shifted to fermentation mode
+
+## Available Carbon & Nitrogen Sources
+
+**Abundant carbons I can use:**
+- Acetate (58.4 mM): readily transportable, key substrate for Prevotella
+- Propionate (44.92 mM): also readily used
+- Formate (34.94 mM): usable
+- Lactate (6.204 mM): fermentable
+- Amino acids (various): can be catabolized for both C and N
+
+**Nitrogen sources:**
+- Amino acids are my primary N source now (nitrate is only 0.1 mM, unusable in anaerobic conditions without specific nitrate reductase)
+- L-asparagine (2.6 mM), L-lysine (2.4 mM), L-threonine (1.9 mM), L-proline (1.791 mM) are most abundant
+- Many amino acids are present but at low concentrations
+
+## Metabolic Strategy
+
+As a Gram-negative anaerobic bacterium, I ferment mixed substrates. My turn 6 success suggests I can grow on acetate + propionate + amino acids. The zero growth in turn 7 despite taking up carbohydrates suggests:
+1. Nitrogen became limiting
+2. I was forced into maintenance/survival mode
+
+**For turn 8 (32-36 h mark):**
+I should resume growth by:
+1. Taking up acetate and propionate as primary carbon sources
+2. Taking up amino acids strategically for both carbon and nitrogen
+3. Producing fermentation products (formate, lactate, succinate)
+
+## Growth Calculation
+
+For biomass synthesis: ~45 mmol C/gDW and ~10 mmol N/gDW
+
+If I target **μ = 0.25 /h** (conservative, given nutrient constraints):
+- Carbon needed: 45 × 0.25 = 11.25 mmol C/gDW
+- Nitrogen needed: 10 × 0.25 = 2.5 mmol N/gDW
+
+**Carbon uptake strategy:**
+- Acetate: 8 mmol/gDW/h (provides 16 mmol C)
+- Propionate: 5 mmol/gDW/h (provides 15 mmol C)
+- L-lysine: 1.5 mmol/gDW/h (6 C, 2 N)
+- L-threonine: 1.0 mmol/gDW/h (4 C, 1 N)
+- Total C in: 16 + 15 + 6 + 4 = 41 mmol C/gDW
+
+**Nitrogen balance:**
+- From lysine: 2 mmol N
+- From threonine: 1 mmol N
+- Total N in: 3 mmol N/gDW (sufficient for 0.25 /h growth)
+
+**Carbon balance:**
+- In: 41 mmol C
+- Growth cost: 11.25 mmol C
+- Fermentation products: 41 - 11.25 = 29.75 mmol C to release
+
+I'll release formate and acetate as fermentation products (typical for Prevotella):
+- Formate: 15 mmol/gDW/h
+- Acetate: 14.75 mmol/gDW/h
+
+This balances mass and is consistent with my known fermentation pathways.
+
+```json
+{
+  "fluxes": {
+    "ac": -8.0,
+    "ppa": -5.0,
+    "lys__L": -1.5,
+    "thr__L": -1.0,
+    "for": 15.0,
+    "ac": 14.75
+  },
+  "growth_rate": 0.25,
+  "rationale": "Resuming mixed-acid fermentation on acetate and propionate with amino acid co-fermentation for nitrogen. Nitrogen-limited conditions require careful amino acid uptake. Producing formate and acetate as fermentation end-products, consistent with Prevotella metabolism in anaerobic conditions.",
+  "confidence": 0.62
+}
+```
+
+Wait, I have a duplicate key. Let me fix:
+
+```json
+{
+  "fluxes": {
+    "ac": -8.0,
+    "ppa": -5.0,
+    "lys__L": -1.5,
+    "thr__L": -1.0,
+    "for": 15.0,
+    "succ": 14.75
+  },
+  "growth_rate": 0.25,
+  "rationale": "Resuming growth on acetate and propionate with amino acid co-uptake for nitrogen. Anaerobic fermentation producing formate and succinate as end-products. Conservative growth rate reflects nitrogen limitation in batch culture.",
+  "confidence": 0.60
+}
+```

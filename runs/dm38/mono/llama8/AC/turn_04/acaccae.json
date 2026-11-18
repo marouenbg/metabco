@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -10.0,
+  "lac__D": 30.0,
+  "pi": -0.87
+ },
+ "growth_rate": 0.381,
+ "rationale": "utilizing D-glucose and Ammonium for growth, releasing D-lactate and hydrogenphosphate as products",
+ "confidence": 0.9
+}

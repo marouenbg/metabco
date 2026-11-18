@@ -1,0 +1,89 @@
+# Metabolic Decision: Collinsella aerofaciens at t=24h
+
+## Analysis of my metabolic capabilities
+
+**Carbon sources I can transport:**
+- Glucose (glc__D): I've been using this consistently via PTS or hexokinase pathways
+- Lactate (lac__L): Clear uptake history, likely via lactate permease
+- Acetate (ac): I produce this, suggesting I can both make and consume it
+- Arabinose (arab__L): Demonstrated uptake in turns 4-5
+- Formate (for): I produce it but may also consume it anaerobically
+- Propionate (ppa): I produce it, may consume it
+- Amino acids: L-arginine clearly consumed (protein synthesis, energy); others available but less efficient
+
+**Carbon sources likely unavailable to me:**
+- Maltose, other disaccharides: I lack the transporters/hydrolases
+- Most other amino acids: While present, they're secondary; arginine is my primary amino acid uptake
+
+**Nitrogen sources:**
+- L-arginine: Primary nitrogen source (consumed every turn)
+- Ammonium (nh4): Produced in my fermentation, indicating arginine catabolism
+
+## Current metabolic state (t=24h)
+
+At 1.81 gDW/L, I've been growing steadily at ~0.3/h. I've consumed ~7 mmol/L glucose per turn initially, but glucose is now depleted (below 0.4 mM). I must shift to lactate and arabinose as primary carbon sources.
+
+Lactate (12.29 mM) and arabinose (7.96 mM) remain abundant. These are fermentable by a Collinsella species under anaerobic conditions.
+
+## Fermentation strategy
+
+As an obligate anaerobe (Collinsella aerofaciens, despite the name, is facultative but thrives anaerobically), I ferment via:
+- Lactate → acetate + formate (or propionate)
+- Arabinose → mixed acid fermentation (acetate, lactate, formate, propionate)
+- Arginine catabolism → ammonia, CO₂, various organic acids
+
+## Flux calculation
+
+**Uptake plan:**
+- L-lactate: 4.0 mmol/gDW/h (sustaining flux from prior turns)
+- L-arabinose: 3.0 mmol/gDW/h (sustaining flux)
+- L-arginine: 2.0 mmol/gDW/h (nitrogen + energy)
+
+**Carbon balance:**
+- Lactate in: 4.0 mmol C (2 carbons per lactate) = 8.0 mmol C
+- Arabinose in: 3.0 mmol C (5 carbons per arabinose) = 15.0 mmol C
+- Arginine in: 2.0 mmol C (6 carbons per arginine) = 12.0 mmol C
+- **Total C in: 35.0 mmol C/gDW/h**
+
+**Growth requirement:**
+- Growth rate μ: estimated 0.30 /h (conservative, matching turn 5)
+- C needed for biomass: 0.30 × 30 = 9.0 mmol C/gDW/h
+- N needed for biomass: 0.30 × 8 = 2.4 mmol N/gDW/h
+- N from arginine: 2.0 mmol/gDW/h → need 0.4 more (from CO₂ fixation or recycling, minor)
+
+**Carbon available for fermentation products:**
+- 35.0 (in) - 9.0 (growth) = 26.0 mmol C/gDW/h for secretion
+
+**Expected products** (typical mixed-acid fermentation):
+- Acetate: ~4.0 mmol/gDW/h
+- Formate: ~1.5 mmol/gDW/h
+- Propionate: ~1.5 mmol/gDW/h
+- CO₂: ~5.0 mmol/gDW/h
+- **Total: ~12.0 mmol C**, leaving buffer for other minor products and pH regulation
+
+This is conservative and sustainable.
+
+**Nitrogen audit:**
+- Arginine uptake: 2.0 mmol N/gDW/h
+- Growth demand: 2.4 mmol N/gDW/h
+- Shortfall: 0.4 mmol/gDW/h (acceptable; recycling and minor uptake of other amino acids cover this)
+
+---
+
+```json
+{
+  "fluxes": {
+    "lac__L": -4.0,
+    "arab__L": -3.0,
+    "arg__L": -2.0,
+    "ac": 4.0,
+    "for": 1.5,
+    "ppa": 1.5,
+    "co2": 5.0,
+    "nh4": 0.5
+  },
+  "growth_rate": 0.30,
+  "rationale": "Glucose depleted; switching to lactate and arabinose fermentation with arginine as nitrogen source. Mixed-acid fermentation under anaerobic conditions produces acetate, formate, and propionate. Carbon balance: 35 mmol in (8+15+12) minus 9 mmol for growth minus ~12 mmol for fermentation products = sustainable. Nitrogen from arginine covers biosynthetic demand with minor recycling.",
+  "confidence": 0.72
+}
+```

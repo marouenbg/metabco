@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 3,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "P: credited 0.455 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.11 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "D-glucose and L-arginine uptake support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "ppa": 0.85,
+   "nh4": -1.5
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "ppa": 0.85,
+   "nh4": 0.0,
+   "pi": -0.4546,
+   "so4": -0.1097
+  }
+ }
+]

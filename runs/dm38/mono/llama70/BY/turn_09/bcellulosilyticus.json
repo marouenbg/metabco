@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "ppa": 3.0,
+  "inost": -2.0,
+  "nh4": -1.0,
+  "succ": 2.0
+ },
+ "growth_rate": 0.1,
+ "rationale": "Limited by nitrogen uptake",
+ "confidence": 0.8
+}

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "malt": -10.0,
+  "nh4": -1.0,
+  "ac": 5.0,
+  "ppa": 3.0,
+  "but": 2.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing maltose as primary carbon source, ammonium and amino acids for nitrogen, producing acetate, propionate, and butyrate as fermentation products.",
+ "confidence": 0.8
+}

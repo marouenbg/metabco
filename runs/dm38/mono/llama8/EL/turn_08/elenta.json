@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "co2": -296.32,
+  "glc__D": -68.98,
+  "nh4": -19.65,
+  "ac": 23.6,
+  "for": 4.32,
+  "h2": 0.43
+ },
+ "growth_rate": 0.75,
+ "rationale": "I will take up CO2, glucose, and ammonia, and produce acetate, formate, and hydrogen. This will allow me to grow at a rate of approximately 0.75 /h.",
+ "confidence": 0.9
+}

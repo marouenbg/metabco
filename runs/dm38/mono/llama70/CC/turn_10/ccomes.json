@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "but": -10.0,
+  "ac": -5.0,
+  "arg__L": -2.0,
+  "co2": 10.0
+ },
+ "growth_rate": 0.44,
+ "rationale": "butyrate and acetate uptake, L-arginine as nitrogen source, producing acetate and CO2",
+ "confidence": 0.8
+}

@@ -1,0 +1,90 @@
+# Metabolic Decision — Turn 5, t = 20.00 h
+
+## Analysis
+
+**Transporters and substrate availability:**
+I am *Clostridium hiranonis*, a strict anaerobe known for secondary bile acid metabolism and fermentation. My genome encodes:
+- Glucose uptake (PTS or permease) — **glucose is depleted** (0 mM); this was my primary carbon source turns 1–2
+- Lactate uptake (monocarboxylate transporter) — 4.36 mM available; I have used this every turn
+- Amino acid permeases — multiple amino acids present (cysteine, proline, alanine, serine, etc.)
+- Acetate, butyrate, formate uptake/activation (via CoA ligases)
+- Ammonia/ammonium uptake
+
+**Current state:**
+- Biomass: 2.582 gDW/L (48.8 h of growth accumulated)
+- Glucose exhausted; lactate still available but limited
+- Acetate and butyrate are abundant (60.77 and 21.26 mM) — these are fermentation products *I* produce, now available as overflow or from prior metabolism
+- Amino acids present in modest amounts (cysteine 6.3 mM, proline 5.9 mM, alanine 5.3 mM, serine 0.58 mM)
+- Ammonium: 11.9 mM (adequate for nitrogen)
+
+**Fermentation strategy:**
+My known fermentation products are: **acetate, butyrate, formate, hydrogen, CO₂, and lactate** (from pyruvate branch-points). Turn 3 showed zero growth despite high flux; turns 1, 2, 4 achieved 0.7, 0.5, 0.4 /h respectively. The decline suggests substrate limitation or accumulation of inhibitory products.
+
+**Carbon and nitrogen budget for this turn:**
+- **Growth target:** 0.35 /h (conservative, given declining trend)
+- **Biomass carbon cost:** 0.35 × 38 = 13.3 mmol C/gDW/h
+- **Biomass nitrogen cost:** 0.35 × 10 = 3.5 mmol N/gDW/h
+
+**Substrate selection:**
+1. **Lactate:** 4.36 mM remains. Lactate → pyruvate is a canonical fermentation substrate. Uptake ~4.0 mmol/gDW/h (modest, to avoid overflow).
+2. **Amino acids:** Cysteine (6.3 mM), proline (5.9 mM), alanine (5.3 mM) — fermentable via Stickland reactions or transamination. These provide both carbon and nitrogen. I'll take:
+   - Cysteine: ~3.0 mmol/gDW/h (yields pyruvate + acetate + H₂S)
+   - Proline: ~2.0 mmol/gDW/h (yields acetate + butyrate)
+   - Alanine: ~2.0 mmol/gDW/h (transamination/oxidation)
+3. **Ammonium:** ~2.0 mmol/gDW/h (modest uptake; plenty available)
+
+**Carbon balance (per gDW):**
+- Lactate (4.0): 4 × 3C = 12 mmol C
+- Cysteine (3.0): 3 × 3C = 9 mmol C
+- Proline (2.0): 2 × 5C = 10 mmol C
+- Alanine (2.0): 2 × 3C = 6 mmol C
+- **Total in:** 37 mmol C
+
+**Carbon out:**
+- Biomass: 13.3 mmol C
+- Fermentation products (acetate, butyrate, formate, CO₂): ~23.7 mmol C
+- **Total:** ~37 mmol C ✓
+
+**Nitrogen balance:**
+- Ammonium (2.0): 2 mmol N
+- Cysteine (3.0): 3 mmol N
+- Proline (2.0): 2 mmol N
+- Alanine (2.0): 2 mmol N
+- **Total in:** 9 mmol N
+- Biomass cost: 3.5 mmol N
+- Excess: 5.5 mmol N (released as ammonia or incorporated into amino acids) ✓
+
+**Growth rate derivation:**
+With 37 mmol C in and 13.3 mmol C cost for growth, I have ~23.7 mmol C for fermentation products. This supports **0.35 /h**, consistent with the declining trend and substrate availability.
+
+**Fermentation products released:**
+- Acetate: ~8.0 mmol/gDW/h (from lactate, cysteine, proline)
+- Butyrate: ~4.0 mmol/gDW/h (from proline)
+- Formate: ~3.0 mmol/gDW/h (from pyruvate)
+- CO₂: ~5.0 mmol/gDW/h (decarboxylation)
+- H₂: ~2.0 mmol/gDW/h (hydrogenase)
+- H₂S: ~1.5 mmol/gDW/h (cysteine degradation)
+- Ammonia: ~1.5 mmol/gDW/h (excess nitrogen)
+
+---
+
+```json
+{
+  "fluxes": {
+    "lac__L": -4.0,
+    "cys__L": -3.0,
+    "pro__L": -2.0,
+    "ala__L": -2.0,
+    "nh4": -2.0,
+    "ac": 8.0,
+    "but": 4.0,
+    "for": 3.0,
+    "co2": 5.0,
+    "h2": 2.0,
+    "h2s": 1.5
+  },
+  "growth_rate": 0.35,
+  "rationale": "Glucose depleted; switching to lactate and amino acid fermentation (cysteine, proline, alanine) as primary carbon and nitrogen sources. Lactate degradation plus Stickland-type amino acid fermentation yields acetate, butyrate, formate, H₂, CO₂, and H₂S. Carbon budget: 37 mmol in (lactate 12, cysteine 9, proline 10, alanine 6) covers 13.3 mmol biomass + ~23.7 mmol products. Nitrogen: 9 mmol in covers 3.5 mmol biomass cost. Growth rate 0.35 /h reflects continued substrate limitation and product accumulation.",
+  "confidence": 0.62
+}
+```

@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 9,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.1447,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=1 out=0 biomass=1.09"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.14 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0315 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.15 -> 0.145"
+  ],
+  "rationale": "L-arabinose and L-serine uptake support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arab__L": -5.0,
+   "ser__L": -1.0,
+   "but": 2.0,
+   "ac": 1.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "arab__L": -5.0,
+   "ser__L": -1.0,
+   "but": 2.0,
+   "ac": 1.0,
+   "co2": 1.0,
+   "pi": -0.1396,
+   "so4": -0.0315
+  }
+ }
+]

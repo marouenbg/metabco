@@ -1,0 +1,22 @@
+{
+ "fluxes": {
+  "val__L": -1.2,
+  "leu__L": -1.0,
+  "ile__L": -0.8,
+  "phe__L": -0.9,
+  "tyr__L": -0.8,
+  "pro__L": -0.6,
+  "lys__L": -0.5,
+  "gln__L": -0.6,
+  "asn__L": -0.5,
+  "thr__L": -0.4,
+  "cys__L": -0.3,
+  "ac": 2.0,
+  "but": 0.3,
+  "co2": 1.8,
+  "h2": 0.6
+ },
+ "growth_rate": 0.18,
+ "rationale": "Amino acid fermentation is my primary strategy: branched-chain and aromatic amino acids provide both carbon and nitrogen. Acetate and butyrate supplement carbon. Fermentation products (acetate, CO\u2082, H\u2082) balance redox and mass. Growth is limited by available nitrogen from amino acids (~2 mmol/gDW/h available, supporting ~0.2 /h). This is realistic for the final 8 hours of a sealed batch.",
+ "confidence": 0.62
+}

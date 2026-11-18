@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 6,
+  "growth_claimed": 0.131,
+  "growth_allowed": 0.131,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: arab__L",
+   "uptake_absent: nh4"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake arab__L to pool limit -4.31",
+   "zeroed uptake of absent nh4",
+   "P: credited 0.119 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0287 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing L-arabinose, glycine, and L-serine as carbon sources, and L-arginine as a nitrogen source to support growth. Producing acetate, butyrate, and propionate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "arab__L": -5.0,
+   "gly": -2.0,
+   "ser__L": -2.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "ppa": 1.75,
+   "nh4": -1.0
+  },
+  "fluxes_applied": {
+   "arab__L": -4.3063,
+   "gly": -2.0,
+   "ser__L": -2.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "ppa": 1.75,
+   "nh4": 0.0,
+   "pi": -0.1191,
+   "so4": -0.0287
+  }
+ }
+]

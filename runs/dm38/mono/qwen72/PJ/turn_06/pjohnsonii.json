@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "arab__L": -5.0,
+  "lac__L": -5.0,
+  "arg__L": -2.5,
+  "cys__L": -1.0,
+  "ac": 2.5,
+  "but": 2.5,
+  "ppa": 1.0,
+  "co2": 3.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.167,
+ "rationale": "Utilizing abundant L-arabinose and L-lactate for carbon, and L-arginine and L-cysteine for nitrogen. Producing acetate, butyrate, propionate, CO2, and H2 as fermentation products.",
+ "confidence": 0.9
+}

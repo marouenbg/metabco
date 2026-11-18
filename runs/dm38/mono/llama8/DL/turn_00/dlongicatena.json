@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": 20.0,
+  "nh4": 5.0,
+  "lac__L": 5.0,
+  "for": 2.0,
+  "etoh": 1.0
+ },
+ "growth_rate": 0.83,
+ "rationale": "I take up glucose and ammonia to support growth, and release lactate as a major fermentation product.",
+ "confidence": 0.9
+}

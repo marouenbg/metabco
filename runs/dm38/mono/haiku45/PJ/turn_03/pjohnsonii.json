@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -6.0,
+  "arab__L": -4.0,
+  "arg__L": -3.0,
+  "nh4": -3.0,
+  "ser__L": -2.0,
+  "ac": 15.0,
+  "ppa": 10.0,
+  "succ": 8.0,
+  "co2": 7.4
+ },
+ "growth_rate": 0.8,
+ "rationale": "Mixed fermentation of glucose, lactate, arabinose, and arginine. Nitrogen limitation (8 mmol available vs 10 mmol needed per g) constrains growth to 0.8/h. Carbon balanced: 101 in, 33.6 for biomass, 67.4 for fermentation products. Produces acetate, propionate, succinate, and CO2 characteristic of Parabacteroides metabolism.",
+ "confidence": 0.72
+}

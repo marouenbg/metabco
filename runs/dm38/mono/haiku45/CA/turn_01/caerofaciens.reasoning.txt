@@ -1,0 +1,94 @@
+# Metabolic reasoning for Collinsella aerofaciens ATCC 25986
+
+## Assessment of available substrates and transport capacity
+
+Collinsella aerofaciens is a facultative anaerobe and obligate heterofermentative lactic acid bacterium. I must evaluate what I can actually transport and metabolise:
+
+**Primary carbon sources I can use:**
+- **D-glucose (24.85 mM)**: Abundant, fermentable via the Embden-Meyerhof pathway. I have PTS or permease systems for this.
+- **L-lactate (28.4 mM)**: High concentration. As a lactic acid bacterium, I can consume lactate, particularly under anaerobic conditions where it serves as both carbon and electron acceptor.
+- **L-arabinose (21.31 mM)**: Fermentable pentose; Collinsella can metabolise this via pentose pathways.
+- **Maltose (4.382 mM)**: Disaccharide; I have maltose transport systems.
+
+**Amino acids as secondary carbon/nitrogen sources:**
+- L-arginine (21.81 mM): High concentration; I can deaminate and ferment this.
+- L-serine, L-alanine, L-cysteine: Can be deaminated and fermented, but less efficient than sugars.
+
+**Nitrogen sources:**
+- **Ammonium (9.308 mM)**: Primary nitrogen source; readily incorporated.
+- Amino acids provide both carbon and nitrogen.
+
+**What I cannot use efficiently:**
+- CO₂ at -200 mV redox potential under anaerobic conditions is not a primary growth substrate for a heterotroph; it's mainly a product of fermentation.
+
+## Fermentation strategy
+
+At turn 0, I grew at 0.300 /h consuming glucose and producing lactate and acetate. This is consistent with mixed-acid fermentation. At this turn, lactate is now abundant (28.4 mM), suggesting I or other organisms have been producing it.
+
+For turn 1, I should:
+1. Continue fermenting glucose (still 24.85 mM available)
+2. Co-ferment lactate as an electron acceptor to regenerate NAD+ (lactate → products like acetate, propionate, butyrate)
+3. Incorporate arginine as both carbon and nitrogen
+
+## Stoichiometric calculation
+
+**Growth requirement**: ~30 mmol C and 8 mmol N per gram dry weight.
+
+**Proposed uptake strategy:**
+- Glucose: 6 mmol/gDW/h (moderate, sustainable rate)
+- Lactate: 4 mmol/gDW/h (electron acceptor for mixed fermentation)
+- Arginine: 2 mmol/gDW/h (amino acid catabolism)
+- Ammonium: 1.5 mmol/gDW/h (supplemental nitrogen)
+
+**Carbon balance:**
+- Glucose (6 mmol C): 6 × 6 = 36 mmol C
+- Lactate (4 mmol C): 4 × 3 = 12 mmol C
+- Arginine (2 mmol N, 6 mmol C): 2 × 6 = 12 mmol C
+- **Total in: 60 mmol C**
+
+**Carbon out (for growth rate μ):**
+- Biomass: 30 mmol C/g per gram made
+- Fermentation products: lactate, acetate, formate, propionate, butyrate
+- Rough stoichiometry: ~50% of consumed carbon goes to biomass, ~50% to products
+
+At μ = 0.35 /h:
+- Biomass carbon cost: 0.35 × 30 = 10.5 mmol C/gDW/h
+- Remaining for products: 60 - 10.5 = 49.5 mmol C/gDW/h
+
+**Nitrogen balance:**
+- Ammonium: 1.5 mmol N
+- Arginine: 2 mmol N
+- Total: 3.5 mmol N
+- Biomass need: 8 mmol N per gram
+- At μ = 0.35: 0.35 × 8 = 2.8 mmol N needed ✓
+
+This is feasible but tight. Adjust to μ = **0.32 /h** for safety margin.
+
+**Fermentation products** (mixed-acid fermentation of glucose + lactate reduction):
+- Acetate: 6 mmol/gDW/h
+- Lactate: 2 mmol/gDW/h (net; some consumed, some produced)
+- Formate: 3 mmol/gDW/h
+- Propionate: 2 mmol/gDW/h
+- CO₂: 8 mmol/gDW/h
+
+Total C out: 10.5 (biomass) + 6 + 6 + 3 + 6 + 8 = 39.5 mmol C ✓ (within 60 in)
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -6.0,
+    "lac__L": -4.0,
+    "arg__L": -2.0,
+    "nh4": -1.5,
+    "ac": 6.0,
+    "for": 3.0,
+    "ppa": 2.0,
+    "co2": 8.0
+  },
+  "growth_rate": 0.32,
+  "rationale": "Mixed-acid fermentation of glucose with lactate as electron acceptor; arginine catabolism supplies supplemental carbon and nitrogen. Glucose is primary fermentative substrate; lactate is reduced to acetate and other products. Growth supported by 60 mmol C and 3.5 mmol N uptake against 30 mmol C and 8 mmol N biomass cost per gram.",
+  "confidence": 0.72
+}
+```

@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 4,
+  "growth_claimed": 0.229,
+  "growth_allowed": 0.229,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "zeroed uptake of absent nh4"
+  ],
+  "rationale": "Continuing to ferment L-lactate to acetate and formate while supplementing nitrogen with L-arginine to support growth.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "arg__L": -0.6,
+   "ac": 5.0,
+   "for": 5.0,
+   "nh4": -1.6,
+   "pi": -0.71,
+   "so4": -0.16
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "arg__L": -0.6,
+   "ac": 5.0,
+   "for": 5.0,
+   "nh4": 0.0,
+   "pi": -0.71,
+   "so4": -0.16
+  }
+ }
+]

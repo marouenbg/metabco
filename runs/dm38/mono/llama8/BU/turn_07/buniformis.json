@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arg__L": -5.0,
+  "for": 3.0,
+  "but": 5.0,
+  "lac__L": 0.0,
+  "co2": 5.0,
+  "h2": 0.0,
+  "h2s": 0.0,
+  "nh4": 0.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "I am taking up D-glucose and L-arginine as my primary carbon and nitrogen sources, respectively. I will also produce butyrate and formate as my products. My growth rate is determined by my uptake of these two sources.",
+ "confidence": 0.8
+}

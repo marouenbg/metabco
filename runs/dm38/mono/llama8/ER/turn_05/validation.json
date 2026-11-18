@@ -1,0 +1,29 @@
+[
+ {
+  "species_id": "erectale",
+  "turn": 5,
+  "growth_claimed": 0.083,
+  "growth_allowed": 0.083,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0773 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0174 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Eubacterium rectale utilizes glucose, lactate, and serine as primary carbon and nitrogen sources. Lactate, formate, and acetate are produced as fermentation products to support a growth rate of 0.083/",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -8.4,
+   "ser__L": -6.4
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -8.4,
+   "ser__L": -6.4,
+   "pi": -0.0773,
+   "so4": -0.0174
+  }
+ }
+]

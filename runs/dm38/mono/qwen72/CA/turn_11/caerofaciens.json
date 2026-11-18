@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "for": 3.0,
+  "ac": 4.0,
+  "nh4": -8.0,
+  "but": 4.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Utilizing formate and acetate for growth, producing acetate and butyrate as fermentation products.",
+ "confidence": 0.9
+}

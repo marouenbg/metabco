@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -15.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.35,
+ "rationale": "Carbon-limited growth on glucose and arginine",
+ "confidence": 0.8
+}

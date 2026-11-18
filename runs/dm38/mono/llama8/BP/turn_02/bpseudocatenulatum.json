@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": 20.0,
+  "nh4": 8.0,
+  "co2": 5.0,
+  "for": 5.0,
+  "ac": 5.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilize lactate and ammonium as primary carbon and nitrogen sources, produce formate and acetate as secondary products, and maintain a balanced carbon balance.",
+ "confidence": 0.9
+}

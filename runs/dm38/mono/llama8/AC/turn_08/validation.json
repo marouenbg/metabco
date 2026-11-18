@@ -1,0 +1,32 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 8,
+  "growth_claimed": 0.85,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=0 out=0 biomass=8.67"
+  ],
+  "warnings": [],
+  "repairs": [
+   "N: growth 0.85 -> 0"
+  ],
+  "rationale": "Based on previous growth rates and available nutrients, I'll take up D-lactate and L-lactate at a rate of 10 mmol/gDW/h each, release formate at a rate of 0.85 mmol/gDW/h, and take up hydrogenphosphat",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__D": -10.0,
+   "lac__L": -10.0,
+   "for": 0.85,
+   "pi": -0.99,
+   "so4": -0.22
+  },
+  "fluxes_applied": {
+   "lac__D": -10.0,
+   "lac__L": -10.0,
+   "for": 0.85,
+   "pi": -0.99,
+   "so4": -0.22
+  }
+ }
+]

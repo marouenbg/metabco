@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 6,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.356 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.11 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing lactate and arginine as primary carbon and nitrogen sources to support growth",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -26.55,
+   "arg__L": -18.04,
+   "co2": 26.55,
+   "nh4": 18.04
+  },
+  "fluxes_applied": {
+   "lac__L": -26.55,
+   "arg__L": -18.04,
+   "co2": 26.55,
+   "nh4": 18.04,
+   "pi": -0.3563,
+   "so4": -0.1097
+  }
+ }
+]

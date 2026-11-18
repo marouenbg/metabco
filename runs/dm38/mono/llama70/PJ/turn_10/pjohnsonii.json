@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "succ": -5.0,
+  "ac": -2.0,
+  "pro__L": -1.0,
+  "ppa": 1.0,
+  "nh4": 0.5
+ },
+ "growth_rate": 0.1,
+ "rationale": "Limited by nitrogen uptake, using succinate, acetate, and L-proline as primary carbon and nitrogen sources",
+ "confidence": 0.8
+}

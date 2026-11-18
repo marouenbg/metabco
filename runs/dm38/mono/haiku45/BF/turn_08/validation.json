@@ -1,0 +1,48 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 8,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.249,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: arg__L",
+   "c_imbalance: in=24.6 out=15.7 biomass=16.2"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake arg__L to pool limit -1.89",
+   "P: credited 0.364 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.4 -> 0.249"
+  ],
+  "rationale": "Resuming growth by consuming abundant acetate, butyrate, formate, and amino acids (N and C source). Nitrogen is limiting at ~41 mM total; growth rate constrained to 0.40 /h to stay within N budget. Fe",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "ac": 3.0,
+   "but": 1.5,
+   "for": 1.2,
+   "arg__L": -2.0,
+   "gly": -1.5,
+   "val__L": -1.2,
+   "cys__L": -0.8,
+   "ser__L": -0.6,
+   "nh4": 1.5,
+   "co2": 2.5
+  },
+  "fluxes_applied": {
+   "ac": 3.0,
+   "but": 1.5,
+   "for": 1.2,
+   "arg__L": -1.8935,
+   "gly": -1.5,
+   "val__L": -1.2,
+   "cys__L": -0.8,
+   "ser__L": -0.6,
+   "nh4": 1.5,
+   "co2": 2.5,
+   "pi": -0.3637
+  }
+ }
+]

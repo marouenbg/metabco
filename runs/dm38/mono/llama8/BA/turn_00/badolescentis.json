@@ -1,0 +1,9 @@
+{
+ "fluxes": {
+  "lac__L": -0.073,
+  "co2": 0.073,
+  "nh4": 0.018
+ },
+ "growth_rate": 0.047,
+ "rationale": "I took up lactate (lac__L) to support growth, and released carbon dioxide (co2) and ammonia (NH4) as byproducts. I am confident in my decision (confidence: 0.9)"
+}

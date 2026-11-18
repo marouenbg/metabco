@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arg__L": -8.26,
+  "but": 2.5,
+  "h2": 0.5,
+  "for": 0.5
+ },
+ "growth_rate": 0.43,
+ "rationale": "I took up glucose and arginine to support growth, and released butyrate and hydrogen to balance the pH and carbon balance. I also released formate to balance the pH.",
+ "confidence": 0.8
+}

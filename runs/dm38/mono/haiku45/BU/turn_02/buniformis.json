@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -4.0,
+  "arg__L": -1.2,
+  "nh4": -2.0,
+  "ac": 10.0,
+  "ppa": 5.0,
+  "succ": 2.5,
+  "for": 3.0,
+  "co2": 5.0
+ },
+ "growth_rate": 0.32,
+ "rationale": "Saccharolytic fermentation of abundant glucose and lactate with mixed-acid SCFA production (acetate, propionate, succinate, formate). Nitrogen from ammonium and arginine. Carbon and nitrogen balance audited for growth at 0.32 /h.",
+ "confidence": 0.72
+}

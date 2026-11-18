@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "arg__L": -10.0,
+  "malt": -4.0,
+  "but": 6.0,
+  "ac": 3.0,
+  "ala__L": -1.5,
+  "h2": 1.0,
+  "co2": 2.0,
+  "nh4": -2.0,
+  "pi": -0.5
+ },
+ "growth_rate": 0.409,
+ "rationale": "Utilizing L-arginine, maltose, butyrate, acetate, and L-alanine for carbon and nitrogen. Producing butyrate, acetate, and hydrogen as fermentation products.",
+ "confidence": 0.9
+}

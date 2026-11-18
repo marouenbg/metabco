@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -8.0,
+  "nh4": -2.5,
+  "so4": -2.0,
+  "ac": 3.0,
+  "co2": 7.0,
+  "h2s": 2.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Lactate oxidation coupled to sulfate reduction, the canonical metabolism of D. piger. Lactate (8 mmol/gDW/h) is oxidized incompletely to acetate and CO2, with sulfate as terminal acceptor producing H2S. Ammonium uptake (2.5 mmol/gDW/h) meets nitrogen demand for growth at 0.25 /h. Carbon and nitrogen balance verified. Conservative rates chosen after turn 3 failure.",
+ "confidence": 0.72
+}

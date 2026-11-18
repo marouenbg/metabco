@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "h2": 5.0,
+  "co2": -5.0,
+  "ala__L": -2.0,
+  "cys__L": -2.0,
+  "ac": 2.5,
+  "but": 2.5,
+  "for": 2.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Using hydrogen and carbon dioxide for carbon, and amino acids for nitrogen. Producing acetate, butyrate, hydrogen, and formate as fermentation products.",
+ "confidence": 0.9
+}

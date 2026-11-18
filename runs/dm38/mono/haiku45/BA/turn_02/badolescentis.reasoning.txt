@@ -1,0 +1,92 @@
+# Metabolic reasoning for Bifidobacterium adolescentis at t=8h
+
+## Carbon and nitrogen sources I can transport
+
+**Bifidobacterium adolescentis** is a bifidogenic specialist with a relatively constrained set of transporters:
+
+**Readily available and transportable:**
+- **D-glucose** (24.64 mM): Primary hexose sugar; I have PTS and/or permease systems
+- **L-arabinose** (21.31 mM): Pentose; I can transport via arabinose permeases
+- **Maltose** (4.382 mM): Disaccharide; I have maltose transporters
+- **L-lactate** (28.5 mM): I can consume lactate via lactate permease/oxidation
+- **Amino acids** (L-arginine, L-cysteine, etc.): I have amino acid permeases for most proteinogenic amino acids
+
+**Not readily transportable:**
+- **CO₂** (47.67 mM): This is a waste product I release, not a primary carbon source for growth
+- **Formate** (trace): I release this as a fermentation product, not consume it
+
+**Nitrogen sources:**
+- **Ammonium** (9.268 mM): Primary nitrogen source
+- **L-arginine** (21.76 mM): Can be catabolized for both C and N
+- **Other amino acids**: Can be used as N sources
+
+## Known fermentation products
+
+Bifidobacterium adolescentis is a **homofermentative lactic acid bacterium** that also produces:
+- **Acetate** (major product from hexose fermentation via fructose-6-phosphate shunt)
+- **Lactate** (major product)
+- **CO₂** (minor, from decarboxylations)
+- **Formate** (minor, from amino acid metabolism)
+
+The characteristic bifido fermentation from glucose yields roughly:
+- 2.5 mol acetate + 1.5 mol lactate per mol glucose (net)
+
+## Growth rate calculation
+
+Current biomass: 0.008832 gDW/L
+At turn 1, I achieved 0.350 /h growth. Nutrient availability remains strong.
+
+**Carbon budget for growth at rate μ:**
+- Growth requires ~33 mmol C per gDW produced
+- At μ = 0.350 /h on 0.008832 gDW/L: biomass production = 0.008832 × 0.350 = 0.00309 gDW/L·h
+- Carbon cost = 0.00309 × 33 = 0.102 mmol C/L·h
+
+**Nitrogen budget:**
+- Growth requires ~8 mmol N per gDW
+- Nitrogen cost = 0.00309 × 8 = 0.0247 mmol N/L·h
+- Available ammonium: 9.268 mM (ample)
+
+**Carbon sources (uptake rates):**
+
+I'll consume glucose preferentially (most efficient), then arabinose, then lactate for mixed metabolism:
+- Glucose: -12 mmol/gDW/h (consistent with prior turn)
+- Arabinose: -6 mmol/gDW/h (secondary hexose-equivalent)
+- L-arginine: -2 mmol/gDW/h (for N and C)
+- Ammonium: -1.5 mmol/gDW/h (primary N source)
+
+**Carbon accounting:**
+- Uptake: 12 (glc) + 5 (arab) + 2 (arg) = 19 mmol C/gDW/h
+- Growth cost: 33 × μ
+- Fermentation products (acetate + lactate): remainder
+
+At μ = 0.40 /h:
+- Growth C cost: 33 × 0.40 = 13.2 mmol C/gDW/h
+- Fermentation C: 19 - 13.2 = 5.8 mmol C/gDW/h
+- This yields ~3.5 acetate + 2.3 lactate (approximate bifido ratio)
+
+**Nitrogen accounting:**
+- Uptake: 1.5 (nh4) + 0.6 (arg, 2/3 of uptake) = 2.1 mmol N/gDW/h
+- Growth N cost: 8 × 0.40 = 3.2 mmol N/gDW/h
+- Deficit: 3.2 - 2.1 = 1.1 mmol N/gDW/h
+
+Adjust: increase ammonium uptake to -2.5 mmol/gDW/h:
+- N uptake: 2.5 + 0.6 = 3.1 mmol N/gDW/h (covers 3.2 with margin)
+
+Recalculate μ with adjusted N: μ ≈ **0.38 /h** (sustainable)
+
+## Final audit (per gDW/h at μ=0.38)
+
+**Carbon in:** 12 (glc) + 5 (arab) + 2 (arg) = 19 mmol C
+**Carbon out:**
+- Growth: 33 × 0.38 = 12.54 mmol C
+- Acetate: ~3.0 mmol C
+- Lactate: ~2.0 mmol C
+- CO₂: ~1.5 mmol C
+- Total: 19.04 mmol C ✓ (balanced)
+
+**Nitrogen in:** 2.5 (nh4) + 0.6 (arg) = 3.1 mmol N
+**Nitrogen out:** 8 × 0.38 = 3.04 mmol N ✓ (balanced)
+
+```json
+{"fluxes": {"glc__D": -12.0, "arab__L": -5.0, "arg__L": -2.0, "nh4": -2.5, "ac": 3.0, "lac__L": 2.0, "co2": 1.5}, "growth_rate": 0.38, "rationale": "Glucose and arabinose are preferred hexose/pentose substrates for bifido fermentation. Mixed uptake with arginine for nitrogen co-utilization. Fermentation yields acetate and lactate as primary products with minor CO2 and formate. Carbon and nitrogen budgets balanced for sustainable growth.", "confidence": 0.72}
+```

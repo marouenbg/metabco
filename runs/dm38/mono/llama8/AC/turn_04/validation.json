@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 4,
+  "growth_claimed": 0.381,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=60 out=90 biomass=14.4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "S: credited 0.0997 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.381 -> 0",
+   "C: secretions scaled by 0.7"
+  ],
+  "rationale": "utilizing D-glucose and Ammonium for growth, releasing D-lactate and hydrogenphosphate as products",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "nh4": -10.0,
+   "lac__D": 30.0,
+   "pi": -0.87
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "nh4": -10.0,
+   "lac__D": 21.0,
+   "pi": -0.87,
+   "so4": -0.0997
+  }
+ }
+]

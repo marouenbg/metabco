@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "malt": -1.095,
+  "pro__L": -0.5,
+  "ala__L": -0.25,
+  "ac": 1.0,
+  "co2": 1.0,
+  "h2": 0.1
+ },
+ "growth_rate": 0.1095,
+ "rationale": "Limited by maltose availability, utilizing amino acids as nitrogen sources, and producing typical Clostridium fermentation products",
+ "confidence": 0.8
+}

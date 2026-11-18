@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -3.0,
+  "arg__L": -1.5,
+  "nh4": -2.0,
+  "ser__L": -1.0,
+  "but": 3.5,
+  "ac": 2.0,
+  "for": 1.5,
+  "co2": 2.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.64,
+ "rationale": "Dorea formicigenerans ferments glucose and lactate as primary substrates, with arginine providing additional carbon and nitrogen. Nitrogen is the limiting nutrient; ammonium and amino acids together support balanced growth at ~0.64/h. Major fermentation products are butyrate, acetate, formate, and CO\u2082. Carbon and nitrogen budgets close.",
+ "confidence": 0.72
+}

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "lac__L": 5.0,
+  "gln__L": 10.0,
+  "but": 38.0,
+  "h2": 0.5
+ },
+ "growth_rate": 1.5,
+ "rationale": "I chose to take up D-glucose (glc__D) and L-lactate (lac__L) as my primary carbon sources, L-glutamine (gln__L) as my primary nitrogen source, and release butyrate (but) as my primary fermentation product. I will also release hydrogen gas (h2) as a byproduct of my metabolism.",
+ "confidence": 0.8
+}

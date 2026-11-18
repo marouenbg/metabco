@@ -1,0 +1,101 @@
+# Reasoning through my metabolic strategy
+
+## Available transporters and carbon sources
+
+As *Eggerthella lenta*, I am a strictly anaerobic, gram-positive bacterium capable of fermenting various carbohydrates and amino acids. My genome encodes transporters for:
+
+- **Carbohydrates**: D-glucose, L-arabinose, maltose (via PTS or permeases)
+- **Organic acids**: L-lactate (lactate permease)
+- **Amino acids**: L-arginine, L-cysteine, L-serine, and other proteinogenic amino acids (various amino acid transporters)
+
+Looking at abundant substrates I **cannot** use:
+- **Myo-inositol (6.27 mM)**: requires inositol transporters absent in my genome
+- **L-proline (5.9 mM)**: I lack proline utilization genes; this is not a primary substrate for *E. lenta*
+
+## My fermentation strategy
+
+*Eggerthella lenta* is known to produce:
+- **Acetate** (major product)
+- **Formate** (from pyruvate decarboxylation)
+- **Lactate** (can both consume and produce, depending on redox balance)
+- **Succinate** (minor, from amino acid catabolism)
+- **CO₂** (from decarboxylation reactions)
+
+The recent turns show I've been fermenting glucose and lactate while catabolizing arginine and cysteine for nitrogen and additional carbon.
+
+## Current substrate selection
+
+At turn 2 (t=8h), I have substantial supplies:
+- **D-glucose**: 24.86 mM (excellent primary carbon source)
+- **L-lactate**: 28.3 mM (can be fermented or oxidized under certain redox conditions)
+- **L-arginine**: 21.75 mM (good for both carbon and nitrogen; arginine fermentation yields ATP)
+- **L-cysteine**: 8.38 mM (sulfur source; can be catabolized)
+- **Ammonium**: 9.4 mM (good nitrogen source, but I prefer amino acids)
+
+My strategy: **Continue mixed-substrate fermentation** with glucose as primary carbon, supplemented by lactate and arginine.
+
+## Growth calculation
+
+For balanced growth on glucose + arginine:
+
+**Glucose fermentation stoichiometry** (to acetate + formate + CO₂):
+- C₆H₁₂O₆ → 2 CH₃COOH + 2 HCOOH + CO₂ (approximate mixed fermentation)
+
+**Arginine catabolism** provides:
+- Additional carbon (C₆ skeleton)
+- Nitrogen (N₄ in arginine)
+- Energy via arginine deiminase pathway
+
+**Uptake plan** (mmol/gDW/h):
+- D-glucose: **-6.0** (primary fermentable; conservative to preserve supply over 48h)
+- L-lactate: **+3.0** (net secretion; I produce more than I can usefully consume given glucose availability)
+- L-arginine: **-3.5** (for nitrogen and additional carbon)
+- L-cysteine: **-0.8** (for sulfur and some carbon)
+- Ammonium: **-1.5** (supplementary nitrogen)
+
+**Carbon balance check:**
+- In: 6 C (glucose) + 6 C (arginine) + 0.8×2 C (cysteine) = 13.6 mmol C
+- Out (products): acetate + formate + CO₂ from glucose fermentation ≈ 6 mmol C
+- Arginine catabolism products ≈ 4 mmol C (as acetate/formate)
+- Growth demand: ~33 mmol C/gDW × growth_rate
+- Lactate secretion: 3 mmol C
+
+If growth_rate = **0.12 /h**:
+- Growth carbon cost: 33 × 0.12 = 3.96 mmol C
+- Total out: 6 + 4 + 3.96 + 3 = 16.96 mmol C
+- This exceeds 13.6 in, so reduce growth to **0.08 /h**
+- Growth carbon cost: 33 × 0.08 = 2.64 mmol C
+- Total out: 6 + 4 + 2.64 + 3 = 15.64 mmol C (still tight)
+
+Recalculate conservatively at **0.06 /h**:
+- Growth carbon: 1.98 mmol C
+- Fermentation products: ~10 mmol C
+- Lactate out: 3 mmol C
+- Total: ~14 mmol C (within 13.6 budget with rounding)
+
+**Nitrogen balance:**
+- In: 4 (arginine) + 1 (cysteine) + 1.5 (ammonium) = 6.5 mmol N
+- Growth demand: ~8 mmol N/gDW × 0.06 = 0.48 mmol N
+- Remaining for catabolism: ~6 mmol N ✓
+
+## Final decision
+
+Growth rate: **0.06 /h** (conservative, sustainable over remaining 40h)
+
+```json
+{
+  "fluxes": {
+    "glc__D": -6.0,
+    "lac__L": 3.0,
+    "arg__L": -3.5,
+    "cys__L": -0.8,
+    "nh4": -1.5,
+    "ac": 8.0,
+    "for": 4.5,
+    "co2": 3.5
+  },
+  "growth_rate": 0.06,
+  "rationale": "Mixed fermentation of glucose and arginine under anaerobic conditions. Glucose provides primary carbon; arginine supplies nitrogen and additional carbon. Lactate is secreted due to redox imbalance from mixed substrates. Products (acetate, formate, CO₂) reflect typical *E. lenta* fermentation. Conservative flux maintains nutrient availability over full 48h batch culture.",
+  "confidence": 0.65
+}
+```

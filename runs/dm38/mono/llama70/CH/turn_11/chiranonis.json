@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "gly": -2.0,
+  "phe__L": -1.0,
+  "co2": 1.0,
+  "but": 1.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.126,
+ "rationale": "acetate, glycine, and phenylalanine uptake support growth and fermentation product production",
+ "confidence": 0.8
+}

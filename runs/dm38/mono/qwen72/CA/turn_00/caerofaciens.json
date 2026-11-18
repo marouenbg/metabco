@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": 10.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "for": 10.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing glucose and lactate for carbon, arginine for nitrogen. Producing acetate, butyrate, lactate, and formate as fermentation products. Growth rate adjusted to balance nitrogen uptake.",
+ "confidence": 0.9
+}

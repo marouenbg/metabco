@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 9,
+  "growth_claimed": 0.133,
+  "growth_allowed": 0.133,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.181 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0348 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing acetate and CO2 for energy and carbon, and proline and phenylalanine for nitrogen, supporting a growth rate of 0.133 gDW/h.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "co2": -1.0,
+   "pro__L": -2.0,
+   "phe__L": -1.0,
+   "for": 1.0,
+   "ppa": 2.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "co2": -1.0,
+   "pro__L": -2.0,
+   "phe__L": -1.0,
+   "for": 1.0,
+   "ppa": 2.0,
+   "pi": -0.1813,
+   "so4": -0.0348
+  }
+ }
+]

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "co2": -5.0,
+  "lac__L": -5.0,
+  "nh4": -2.0,
+  "glu__L": -1.0,
+  "lac__D": 21.5
+ },
+ "growth_rate": 0.5,
+ "rationale": "I am taking up carbon dioxide (co2), L-lactate (lac__L), and ammonium (nh4) to sustain my growth. I will also release carbon dioxide (co2) to cover the biomass cost.",
+ "confidence": 0.9
+}

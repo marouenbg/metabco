@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": 9.0,
+  "arg__L": -1.2,
+  "ser__L": -0.6,
+  "nh4": -0.4,
+  "pi": -0.08,
+  "ac": 12.0,
+  "for": 4.0,
+  "co2": 12.0,
+  "succ": 5.5,
+  "h2": 0.5
+ },
+ "growth_rate": 0.25,
+ "rationale": "Glucose fermentation as primary pathway with lactate and amino acids as secondary substrates. Mixed-acid fermentation producing acetate, lactate, formate, and CO\u2082. Conservative growth rate supported by C and N balance in sealed batch. Succinate and H\u2082 produced from amino acid catabolism.",
+ "confidence": 0.65
+}

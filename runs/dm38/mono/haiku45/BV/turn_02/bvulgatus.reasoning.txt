@@ -1,0 +1,97 @@
+# Reasoning
+
+## Current situation
+I am at 2.388 gDW/L after 8 hours. I have consumed glucose and lactate heavily while producing acetate, butyrate, and propionate. This is consistent with Bacteroides vulgatus metabolism: a saccharolytic anaerobe that ferments carbohydrates via the Embden-Meyerhof pathway and produces short-chain fatty acids (acetate, butyrate, propionate).
+
+## Available carbon sources and transporters
+Bacteroides vulgatus is a saccharolytic specialist with:
+- **Glucose (glc__D)**: 3.02 mM remaining — transportable via PTS; nearly depleted
+- **L-arabinose (arab__L)**: 21.31 mM — transportable via arabinose transporters
+- **Maltose (malt)**: 4.382 mM — transportable via maltose PTS
+- **L-lactate (lac__L)**: 15.78 mM — transportable and fermentable
+- **Acetate (ac)**: 10.2 mM — can be activated and used
+- **Butyrate (but)**: 4.728 mM — can be activated; less preferred
+- **Propionate (ppa)**: 2.364 mM — can be activated; less preferred
+
+**Cannot transport efficiently**: amino acids as primary carbon sources (no broad amino acid fermentation in B. vulgatus); inositol is not a preferred substrate.
+
+## Nitrogen sources
+- **Ammonium (nh4)**: 6.984 mM — preferred nitrogen source
+- **L-arginine (arg__L)**: 17.11 mM — transportable; can be deaminated for nitrogen + carbon
+- **L-cysteine (cys__L)**: 8.4 mM — transportable; provides nitrogen + sulfur
+- **Other amino acids**: available but secondary
+
+## Fermentation strategy
+At turn 2 (8 h), glucose is nearly exhausted. I should shift to:
+1. **Primary substrate**: L-arabinose (abundant, 21.31 mM) — fermentable via pentose pathway
+2. **Secondary substrates**: L-lactate (15.78 mM), acetate (10.2 mM)
+3. **Nitrogen**: Ammonium (6.984 mM) is preferred; L-arginine (17.11 mM) as backup
+
+B. vulgatus ferments arabinose to acetate, propionate, and butyrate (mixed-acid fermentation).
+
+## Growth calculation
+Assume I take up:
+- L-arabinose: ~12 mmol/gDW/h (pentose fermentation is robust)
+- L-lactate: ~6 mmol/gDW/h (secondary)
+- L-arginine: ~2 mmol/gDW/h (nitrogen + some carbon)
+- Ammonium: ~1.5 mmol/gDW/h (nitrogen only)
+
+**Carbon balance:**
+- Arabinose (C₅): 12 mmol × 5 = 60 mmol C
+- Lactate (C₃): 6 mmol × 3 = 18 mmol C
+- Arginine (C₆): 2 mmol × 6 = 12 mmol C
+- **Total in**: 90 mmol C
+
+**Growth cost**: ~41 mmol C per gram DW produced
+**Fermentation products** (typical B. vulgatus):
+- Acetate: ~8 mmol (2C)
+- Propionate: ~3 mmol (3C)
+- Butyrate: ~2 mmol (4C)
+- CO₂: ~8 mmol (1C)
+- **Total out**: 8×2 + 3×3 + 2×4 + 8×1 = 16 + 9 + 8 + 8 = 41 mmol C
+
+**Biomass**: (90 − 41) / 41 = 49 / 41 ≈ **1.2 gDW** produced
+
+**Growth rate**: 1.2 gDW / 1 h = **1.2 /h** (consistent with turn 1)
+
+## Nitrogen balance
+- Arginine (N₄): 2 mmol × 4 = 8 mmol N
+- Ammonium: 1.5 mmol = 1.5 mmol N
+- **Total N in**: 9.5 mmol
+
+**Growth cost**: ~8 mmol N per gram DW
+**For 1.2 gDW**: 1.2 × 8 = 9.6 mmol N required
+
+This is tight but feasible; I'll adjust slightly.
+
+## Final fluxes
+- **arab__L**: −12.0 (uptake)
+- **lac__L**: −6.0 (uptake)
+- **arg__L**: −2.0 (uptake, nitrogen)
+- **nh4**: −1.5 (uptake, nitrogen)
+- **ac**: +8.0 (secretion)
+- **ppa**: +3.0 (secretion)
+- **but**: +2.0 (secretion)
+- **co2**: +8.0 (secretion)
+
+**Growth rate**: 1.2 /h
+
+---
+
+```json
+{
+  "fluxes": {
+    "arab__L": -12.0,
+    "lac__L": -6.0,
+    "arg__L": -2.0,
+    "nh4": -1.5,
+    "ac": 8.0,
+    "ppa": 3.0,
+    "but": 2.0,
+    "co2": 8.0
+  },
+  "growth_rate": 1.2,
+  "rationale": "Shift from glucose (nearly depleted) to arabinose fermentation, the primary abundant pentose substrate for Bacteroides vulgatus. Co-ferment lactate and use arginine for nitrogen. Mixed-acid fermentation produces acetate, propionate, and butyrate. Carbon and nitrogen balance achieved; growth rate consistent with turn 1 performance.",
+  "confidence": 0.75
+}
+```

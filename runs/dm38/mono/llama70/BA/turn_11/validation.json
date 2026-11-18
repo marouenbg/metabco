@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 11,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: lac__L",
+   "uptake_exceeds_pool: lys__L",
+   "n_imbalance: in=1.25 out=0 biomass=4.14",
+   "p_imbalance: in=0 out=0 biomass=0.113"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "clipped uptake lac__L to pool limit -1.85",
+   "clipped uptake lys__L to pool limit -0.626",
+   "S: credited 0.11 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.5 -> 0.159",
+   "P: growth 0.159 -> 0"
+  ],
+  "rationale": "Utilizing available carbon and nitrogen sources to support growth and fermentation product formation",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "for": -3.0,
+   "lac__L": -2.0,
+   "lys__L": -1.0,
+   "co2": 1.0,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "for": -3.0,
+   "lac__L": -1.8462,
+   "lys__L": -0.6264,
+   "co2": 1.0,
+   "h2": 0.5,
+   "so4": -0.1097
+  }
+ }
+]

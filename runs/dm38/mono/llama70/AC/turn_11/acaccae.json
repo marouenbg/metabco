@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "but": -5.0,
+  "ppa": -2.0,
+  "ser__L": -1.0,
+  "ac": 5.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.125,
+ "rationale": "Butyrate and propionate uptake for energy and carbon, L-serine for nitrogen, producing acetate and butyrate",
+ "confidence": 0.8
+}

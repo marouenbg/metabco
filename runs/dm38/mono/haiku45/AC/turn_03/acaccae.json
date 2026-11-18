@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -12.0,
+  "lac__L": -3.5,
+  "arab__L": -2.5,
+  "arg__L": -1.5,
+  "nh4": -2.0,
+  "but": 4.5,
+  "ac": 2.5,
+  "for": 1.5,
+  "co2": 2.0
+ },
+ "growth_rate": 0.35,
+ "rationale": "A. caccae ferments glucose and lactate preferentially; arginine provides supplementary C and N via Stickland metabolism. Nitrogen becomes limiting; uptake of ammonium and arginine supports 0.35 /h growth. Butyrate and acetate are major fermentation products; carbon balance verified (104 mmol in vs 39.8 mmol out + growth).",
+ "confidence": 0.72
+}

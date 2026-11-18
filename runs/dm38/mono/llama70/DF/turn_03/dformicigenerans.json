@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "arab__L": -5.0,
+  "glc__D": -2.0,
+  "nh4": -1.0,
+  "arg__L": -1.0,
+  "for": 2.0,
+  "ac": 3.0
+ },
+ "growth_rate": 0.212,
+ "rationale": "Fermenting L-arabinose and D-glucose with ammonium and L-arginine as nitrogen sources",
+ "confidence": 0.8
+}

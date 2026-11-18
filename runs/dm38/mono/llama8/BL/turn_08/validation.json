@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 8,
+  "growth_claimed": 0.623,
+  "growth_allowed": 0.623,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.178 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Based on the available nutrients and my own metabolic capabilities, I will take up glucose (glc__D) as my primary carbon source, ammonia (nh4) as my primary nitrogen source, and produce acetate (ac) a",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -20.0,
+   "cys__L": -8.4,
+   "ser__L": -6.4,
+   "nh4": -10.0,
+   "lac__L": 2.0,
+   "ac": 4.0,
+   "for": 2.0,
+   "pi": -0.52,
+   "so4": -0.12
+  },
+  "fluxes_applied": {
+   "glc__D": -20.0,
+   "cys__L": -8.4,
+   "ser__L": -6.4,
+   "nh4": -10.0,
+   "lac__L": 2.0,
+   "ac": 4.0,
+   "for": 2.0,
+   "pi": -0.6985,
+   "so4": -0.12
+  }
+ }
+]

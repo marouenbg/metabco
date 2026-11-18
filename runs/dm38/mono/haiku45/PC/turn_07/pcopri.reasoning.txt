@@ -1,0 +1,106 @@
+# Metabolic reasoning for Prevotella copri at t=28h
+
+## Current status
+I am at 3.877 gDW/L, 20 hours into a 48-hour batch culture. I've been cycling through fermentation-based growth, with recent turns showing I can consume acetate and propionate (likely as overflow products from my own fermentation), amino acids, and carbohydrates when available.
+
+## Carbon and nitrogen source assessment
+
+**Readily available carbon sources I can transport:**
+- Acetate (45.99 mM): I have acetyl-CoA synthetase and can use this via the acetyl-CoA pathway
+- Propionate (36.39 mM): I can activate and metabolize propionyl-CoA
+- Formate (30.28 mM): I can use formate via formate-tetrahydrofolate ligase
+- Amino acids (phenylalanine, leucine, tyrosine, valine, asparagine, lysine, cysteine, threonine, proline, isoleucine, serine, histidine, methionine, tryptophan, glutamate, alanine, aspartate): These are amino acids I can catabolize
+- Sugars (maltose 4.382 mM, arabinose 4.12 mM): I have PTS systems for these
+- myo-inositol (6.272 mM): I can ferment this
+
+**Sources I likely cannot use efficiently:**
+- CO2 alone (I'm heterotrophic, not autotrophic)
+- H2 (0.6247 mM, very low and I'm not a hydrogenotroph)
+- Nitrate (0.1093 mM, too low and I'm primarily anaerobic fermenter)
+
+**Nitrogen sources:**
+- Amino acids provide both carbon and nitrogen
+- Nitrate is present but minimal
+- My recent turns show I can catabolize amino acids for both C and N
+
+## Fermentation products and strategy
+
+As a Prevotella species, I'm an obligate anaerobe that ferments carbohydrates and amino acids. My known fermentation products include:
+- Acetate (I've been releasing this)
+- Propionate (I've been releasing this)
+- Formate (I've been releasing this)
+- Lactate (I consumed this in turn 3, suggesting I ferment to lactate then further process it)
+- Succinate (possible from amino acid fermentation)
+
+## Nutrient limitation analysis
+
+At t=28h with 20h remaining, I need to assess what's limiting:
+- Carbohydrates are nearly depleted (maltose 4.38 mM, arabinose 4.12 mM)
+- Amino acids are present but finite; they're my primary remaining substrates
+- Acetate and propionate are abundant but these are typically overflow products, not primary growth substrates for me in batch culture
+- I have good supplies of branched-chain amino acids (leucine 3.6, valine 2.8, isoleucine 1.6 mM)
+
+## Growth rate calculation
+
+Recent turn 6 showed growth of 0.311 /h consuming:
+- Acetate: 12 mmol/gDW/h
+- Propionate: 8 mmol/gDW/h
+- Serine: 2 mmol/gDW/h
+- Glutamine: 1.97 mmol/gDW/h
+- Alanine: 1.5 mmol/gDW/h
+- Cysteine: 1 mmol/gDW/h
+
+This suggests I was growing on mixed amino acid catabolism. With amino acids still available and some carbohydrates remaining, I should focus on:
+1. Consuming remaining carbohydrates (maltose, arabinose) for rapid fermentation
+2. Supplementing with branched-chain amino acids
+3. Using formate as an electron sink
+
+For a growth rate of ~0.35 /h (slightly higher than turn 6, given available substrates):
+- Carbon needed: 0.35 × 45 = 15.75 mmol C/gDW/h
+- Nitrogen needed: 0.35 × 10 = 3.5 mmol N/gDW/h
+
+**Carbon balance:**
+- Maltose (4.382 mM × 6 C/mol = 26.3 mmol C/L, ÷ 3.877 gDW/L ≈ 6.8 mmol C/gDW available)
+- Arabinose (4.12 mM × 5 C/mol = 20.6 mmol C/L ÷ 3.877 ≈ 5.3 mmol C/gDW)
+- Leucine, valine, isoleucine (combined ≈ 7.0 mM, ~60 C atoms total ≈ 15.5 mmol C/gDW available)
+
+I'll consume sugars rapidly, supplement with amino acids, and ferment to acetate/propionate/formate.
+
+**Proposed uptake (mmol/gDW/h):**
+- Maltose: -4.0
+- L-arabinose: -3.0
+- L-leucine: -2.0
+- L-valine: -1.5
+- L-isoleucine: -1.0
+- L-serine: -1.5
+- L-cysteine: -0.8
+
+Carbon in: 4.0×12 + 3.0×10 + 2.0×12 + 1.5×11 + 1.0×12 + 1.5×5 + 0.8×6 = 48 + 30 + 24 + 16.5 + 12 + 7.5 + 4.8 = 142.8 mmol C/gDW/h
+
+For growth at 0.35 /h: 15.75 mmol C (growth) + fermentation products
+Fermentation products (acetate, propionate, formate, lactate, CO2): ~127 mmol C/gDW/h
+
+This balances. Growth rate: **0.35 /h**
+
+```json
+{
+  "fluxes": {
+    "malt": -4.0,
+    "arab__L": -3.0,
+    "leu__L": -2.0,
+    "val__L": -1.5,
+    "ile__L": -1.0,
+    "ser__L": -1.5,
+    "cys__L": -0.8,
+    "ac": 8.0,
+    "ppa": 5.5,
+    "for": 3.0,
+    "lac__L": 4.0,
+    "co2": 3.5,
+    "h2": 0.3
+  },
+  "growth_rate": 0.35,
+  "rationale": "Consuming remaining carbohydrates (maltose, arabinose) and branched-chain amino acids for rapid fermentation. Fermentation products (acetate, propionate, formate, lactate) are released to balance redox. Amino acid nitrogen supports growth at 0.35/h. Carbon budget: 142.8 mmol in supports 15.75 mmol biomass C and ~127 mmol fermentation products.",
+  "confidence": 0.72
+}
+```

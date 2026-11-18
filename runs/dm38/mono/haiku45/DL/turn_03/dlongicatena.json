@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "lac__L": -4.0,
+  "arg__L": -2.5,
+  "arab__L": -1.5,
+  "but": 8.0,
+  "ac": 4.0,
+  "for": 3.0,
+  "co2": 21.3
+ },
+ "growth_rate": 0.9,
+ "rationale": "Dorea longicatena continues saccharolytic and proteolytic fermentation. Glucose, lactate, and arginine are primary substrates; arabinose supplements. Mixed-acid fermentation yields butyrate, acetate, formate, and CO\u2082. Growth is limited by ammonium and arginine nitrogen availability (~9 mmol N/gDW/h vs. 10 mmol needed), supporting ~0.9 /h. Carbon is conserved: 70.5 mmol in covers 34.2 mmol biomass + 36.3 mmol fermentation products.",
+ "confidence": 0.72
+}

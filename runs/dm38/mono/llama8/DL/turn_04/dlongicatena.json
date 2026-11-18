@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "co2": 0,
+  "lac__L": 0,
+  "lac__D": 0,
+  "for": 0,
+  "succ": 0,
+  "etoh": 0,
+  "h2": 0,
+  "h2s": 0,
+  "nh4": 0,
+  "ac": 0,
+  "but": 0,
+  "ppa": 0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Taking up CO2 and lactate at the maximum rate, releasing lactate, formate, and succinate, and adjusting the growth rate based on the available nutrients.",
+ "confidence": 0.8
+}

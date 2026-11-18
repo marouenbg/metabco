@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 10,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.2,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.186 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.042 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "acetate and amino acid uptake, formate and acetate production",
+  "confidence": 0.6,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "pro__L": -2.0,
+   "gly": -1.0,
+   "phe__L": -1.0,
+   "for": 2.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "pro__L": -2.0,
+   "gly": -1.0,
+   "phe__L": -1.0,
+   "for": 2.0,
+   "co2": 1.0,
+   "pi": -0.1862,
+   "so4": -0.042
+  }
+ }
+]

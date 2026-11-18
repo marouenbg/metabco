@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 3,
+  "growth_claimed": 0.42,
+  "growth_allowed": 0.42,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.382 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0922 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Shifting from glucose-dominant to mixed lactate/glucose/arginine strategy as glucose depletes. Lactate is abundant and fermentable. Arginine provides both C and N. Maintaining anaerobic fermentation t",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -4.0,
+   "arg__L": -3.0,
+   "arab__L": -2.0,
+   "nh4": -2.0,
+   "ac": 3.0,
+   "but": 3.0,
+   "for": 10.0,
+   "co2": 10.0
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -4.0,
+   "arg__L": -3.0,
+   "arab__L": -2.0,
+   "nh4": -2.0,
+   "ac": 3.0,
+   "but": 3.0,
+   "for": 10.0,
+   "co2": 10.0,
+   "pi": -0.3818,
+   "so4": -0.0922
+  }
+ }
+]

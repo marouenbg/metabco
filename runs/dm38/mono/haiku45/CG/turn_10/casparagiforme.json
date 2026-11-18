@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ac": 3.5,
+  "leu__L": -0.8,
+  "val__L": -0.6,
+  "tyr__L": -0.4,
+  "phe__L": -0.3,
+  "nh4": -0.5,
+  "for": 2.0,
+  "but": 2.5,
+  "co2": 1.5,
+  "h2": 0.5
+ },
+ "growth_rate": 0.25,
+ "rationale": "Late-stage batch culture (40/48 h). Acetate is abundant and accessible; amino acids provide both C and N. N-limitation is primary constraint (2.5 mmol N available supports max 0.25 /h growth). Fermentation via acetate/formate/butyrate/H\u2082/CO\u2082 balances remaining C. Mass audit passes.",
+ "confidence": 0.68
+}

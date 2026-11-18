@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -5.0,
+  "ac": 4.0,
+  "arg__L": -1.0,
+  "nh4": -0.3,
+  "but": 4.0,
+  "for": 1.0
+ },
+ "growth_rate": 0.13,
+ "rationale": "Optimized use of available lactate, acetate, and arginine for growth, with efficient production of acetate, butyrate, and formate.",
+ "confidence": 0.8
+}

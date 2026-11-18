@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "etoh": 5.0,
+  "arg__L": -2.0,
+  "nh4": -2.0,
+  "pi": -0.15,
+  "so4": -0.05
+ },
+ "growth_rate": 0.15,
+ "rationale": "Continuing fermentation of D-glucose and L-lactate to produce acetate, butyrate, and ethanol. Utilizing L-arginine and ammonium as nitrogen sources to support moderate growth.",
+ "confidence": 0.85
+}

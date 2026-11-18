@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "erectale",
+  "turn": 0,
+  "growth_claimed": 0.28,
+  "growth_allowed": 0.28,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.261 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "E. rectale ferments glucose and lactate anaerobically to short-chain fatty acids. Nitrogen (ammonium + amino acids) limits growth at 0.28 /h. Carbon balance: 17 mmol in, 9.24 for biomass, 7.76 as ferm",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -2.0,
+   "cys__L": -0.8,
+   "ser__L": -0.6,
+   "arg__L": -0.6,
+   "ac": 4.7,
+   "but": 2.3,
+   "for": 0.76,
+   "co2": 0.5
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -2.0,
+   "cys__L": -0.8,
+   "ser__L": -0.6,
+   "arg__L": -0.6,
+   "ac": 4.7,
+   "but": 2.3,
+   "for": 0.76,
+   "co2": 0.5,
+   "pi": -0.2606
+  }
+ }
+]

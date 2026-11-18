@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "pro__L": -3.0,
+  "leu__L": -1.5,
+  "phe__L": -1.2,
+  "cys__L": -1.0,
+  "ac": 2.5,
+  "nh4": -0.8,
+  "but": 1.5,
+  "for": 0.8,
+  "co2": 1.0
+ },
+ "growth_rate": 0.93,
+ "rationale": "Switching to amino acid and acetate fermentation in the absence of carbohydrates. Stickland-like amino acid catabolism provides carbon, nitrogen, and energy. Acetate supplementation maintains reducing power balance. Fermentation products (acetate, butyrate, formate, CO\u2082) are typical of B. fragilis anaerobic metabolism. Carbon and nitrogen budgets close at growth rate 0.93 /h.",
+ "confidence": 0.75
+}

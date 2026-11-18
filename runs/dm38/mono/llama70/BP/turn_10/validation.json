@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 10,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.216,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ser__L",
+   "n_imbalance: in=1.71 out=0 biomass=2.08"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "clipped uptake ser__L to pool limit -1.71",
+   "P: credited 0.168 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0645 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.25 -> 0.216"
+  ],
+  "rationale": "balanced growth with acetate and amino acid uptake",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "ser__L": -2.0,
+   "lac__L": 2.0,
+   "for": 1.0,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "ser__L": -1.7095,
+   "lac__L": 2.0,
+   "for": 1.0,
+   "h2": 0.5,
+   "pi": -0.168,
+   "so4": -0.0645
+  }
+ }
+]

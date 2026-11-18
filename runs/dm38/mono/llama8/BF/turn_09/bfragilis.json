@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -0.5,
+  "arg__L": -0.5,
+  "nh4": 0.5,
+  "but": 0.25,
+  "for": 0.25
+ },
+ "growth_rate": 0.15,
+ "rationale": "Utilizing lactate for growth and energy production, with butyrate and formate as fermentation products.",
+ "confidence": 0.8
+}

@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 0,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.227 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0549 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 0.00922 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Glucose is the preferred fermentable substrate; ammonium is the primary nitrogen source. Nitrogen availability (9.347 mM) limits growth to ~0.25 /h. Fermentation yields acetate, propionate, butyrate, ",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "nh4": -2.0,
+   "ac": 5.0,
+   "ppa": 3.75,
+   "but": 2.5,
+   "co2": 1.25,
+   "for": 0.25
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "nh4": -2.0092,
+   "ac": 5.0,
+   "ppa": 3.75,
+   "but": 2.5,
+   "co2": 1.25,
+   "for": 0.25,
+   "pi": -0.2273,
+   "so4": -0.0549
+  }
+ }
+]

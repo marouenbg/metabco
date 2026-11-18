@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "arg__L": -5.0,
+  "cys__L": -3.0,
+  "ser__L": -2.0,
+  "ac": 5.0,
+  "ppa": 2.0,
+  "nh4": -1.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Amino acid uptake and fermentation product secretion support growth",
+ "confidence": 0.8
+}

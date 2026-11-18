@@ -1,0 +1,85 @@
+# Metabolic reasoning for Bacteroides cellulosilyticus at t=20h
+
+## Assessment of transporters and substrate availability
+
+I am a Gram-negative anaerobic bacterium specialized in plant polysaccharide degradation. My genome encodes:
+- Hexose transporters (glucose, arabinose, maltose)
+- Organic acid transporters (lactate, acetate, propionate, butyrate, formate)
+- Amino acid transporters (arginine, serine, proline, and others)
+
+**Available carbon sources I can transport:**
+- D-glucose (8.386 mM) — primary hexose
+- L-arabinose (16.89 mM) — pentose, readily transported
+- L-lactate (14.42 mM) — fermentation substrate
+- Acetate (36.17 mM) — abundant but typically used for energy, not growth
+- Propionate, butyrate, formate — secondary fermentation products
+
+**Nitrogen sources:**
+- L-arginine (17.56 mM) — amino acid, excellent source
+- Ammonium (4.037 mM) — limited, but available
+- Other amino acids present in lower amounts
+
+## Fermentation pattern and metabolic strategy
+
+My recent history shows I ferment glucose and lactate to acetate, propionate, and butyrate while releasing CO₂. This is consistent with mixed-acid fermentation typical of Bacteroides species. Growth has been declining (0.400 → 0.203 → 0.270 → 0.021 /h), suggesting substrate limitation.
+
+**Current bottleneck:** At turn 4, growth dropped to 0.021 /h despite continued glucose/lactate uptake. This suggests:
+1. Glucose is becoming limiting (8.386 mM remaining, down from initial ~20 mM)
+2. Lactate remains available (14.42 mM)
+3. Acetate accumulation (36.17 mM) indicates fermentation is ongoing but growth is stalling
+
+## Revised strategy for turn 5
+
+Given declining glucose, I should:
+1. **Increase lactate uptake** — still abundant, fermentable
+2. **Maintain glucose uptake** — though limited, it's preferred
+3. **Continue arginine uptake** — excellent nitrogen source
+4. **Produce acetate, propionate, butyrate** — standard fermentation products
+5. **Modest growth** — limited by carbon availability, not energy
+
+**Carbon and nitrogen audit:**
+
+Proposed uptake:
+- Glucose: -5.0 mmol/gDW/h (6 C each = 30 C)
+- Lactate: -6.0 mmol/gDW/h (3 C each = 18 C)
+- Arginine: -1.5 mmol/gDW/h (6 C each = 9 C)
+- **Total C in: 57 mmol/gDW/h**
+
+Proposed secretion (fermentation products):
+- Acetate: +12.0 mmol/gDW/h (2 C each = 24 C)
+- Propionate: +4.0 mmol/gDW/h (3 C each = 12 C)
+- Butyrate: +2.0 mmol/gDW/h (4 C each = 8 C)
+- CO₂: +8.0 mmol/gDW/h (1 C each = 8 C)
+- **Total C out (products): 52 C**
+
+**Growth calculation:**
+- C available for biomass: 57 - 52 = 5 mmol C/gDW/h
+- C needed per g biomass: 42 mmol
+- **Growth rate: 5/42 ≈ 0.119 /h**
+
+**Nitrogen audit:**
+- Arginine uptake: 1.5 mmol/gDW/h (provides N)
+- Ammonium uptake: -1.5 mmol/gDW/h
+- **Total N in: ~3 mmol/gDW/h** (arginine has 4 N, but net usable ~2)
+- N needed for 0.119 /h growth: 0.119 × 10 ≈ 1.19 mmol/gDW/h
+- **Sufficient nitrogen available**
+
+This growth rate (~0.12 /h) is realistic and represents a modest decline from turn 4, consistent with glucose limitation in a sealed batch culture at 20h.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -5.0,
+    "lac__L": -6.0,
+    "arg__L": -1.5,
+    "nh4": -1.5,
+    "ac": 12.0,
+    "ppa": 4.0,
+    "but": 2.0,
+    "co2": 8.0
+  },
+  "growth_rate": 0.119,
+  "rationale": "Glucose becoming limiting; shift to lactate fermentation. Maintain arginine uptake for nitrogen. Ferment to acetate, propionate, butyrate. Growth limited by remaining glucose (8.4 mM) and lactate availability in sealed batch at 20h.",
+  "confidence": 0.72
+}
+```

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": 3.0,
+  "arg__L": -2.0,
+  "nh4": -1.5,
+  "ser__L": -1.0,
+  "ac": 20.0,
+  "for": 1.0,
+  "co2": 0.5
+ },
+ "growth_rate": 0.8,
+ "rationale": "Fermenting available glucose, lactate, and amino acids (arginine, serine) to generate biomass and fermentation products (acetate, lactate, formate, CO\u2082). Growth is N-limited. Carbon and nitrogen budgets balance. This is my first realistic growth attempt after poor early turns; I now have sufficient cofactors and amino acids to support biosynthesis.",
+ "confidence": 0.65
+}

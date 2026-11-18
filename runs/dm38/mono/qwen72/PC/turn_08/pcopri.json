@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "cys__L": -5.0,
+  "ser__L": -4.0,
+  "ala__L": -3.0,
+  "gly": -3.0,
+  "ac": 3.0,
+  "ppa": 2.0,
+  "for": 1.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.889,
+ "rationale": "Utilizing abundant amino acids and acetate for efficient growth and fermentation, ensuring carbon and nitrogen balance.",
+ "confidence": 0.9
+}

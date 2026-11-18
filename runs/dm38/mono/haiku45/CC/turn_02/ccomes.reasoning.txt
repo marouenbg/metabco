@@ -1,0 +1,91 @@
+# Metabolic Decision for Coprococcus comes ATCC 27758 — Turn 2
+
+## Analysis of Transporters and Available Substrates
+
+Coprococcus comes is a butyrate-producing bacterium from the human gut microbiome. Based on its known genomic capabilities:
+
+**Transportable carbon sources I can access:**
+- L-lactate (lac__L): 26.38 mM — primary substrate, well-established
+- D-glucose (glc__D): 23.79 mM — fermentable via glycolysis
+- L-arabinose (arab__L): 21.31 mM — pentose fermentation
+- Acetate (ac): 2.688 mM — can be oxidized or incorporated
+- Butyrate (but): 2.221 mM — my own product, can be recycled under certain conditions
+- Maltose (malt): 4.382 mM — disaccharide transport likely available
+
+**Abundant but likely inaccessible:**
+- L-arginine, L-cysteine, L-serine, L-proline, etc. — amino acids that require specific transporters; while some may be present, the primary carbon flux should come from sugars and lactate
+- CO₂: present but not a primary uptake substrate for heterotrophic growth
+
+**Nitrogen sources:**
+- Ammonium (nh4): 8.954 mM — preferred nitrogen source
+- Amino acids (arg, cys, ser, etc.) — can serve as nitrogen and carbon, but less efficient
+
+## Known Fermentation Strategy
+
+Coprococcus comes ferments lactate and glucose to butyrate and acetate (the "butyrate-producing pathway"). The stoichiometry is roughly:
+- 2 lactate → butyrate + acetate + CO₂ + H₂O (net)
+- Glucose → mixed products including butyrate, acetate, formate, CO₂
+
+My recent turns show I was consuming lactate and glucose while producing butyrate and acetate — this is consistent with my known metabolism.
+
+## Current Metabolic State and Strategy
+
+At turn 1, I reported **zero growth** despite consuming substrates. This suggests I may have been limited by nitrogen or that the prior calculation was conservative. Now at turn 2 (8 h elapsed), I have ample lactate (26.38 mM), glucose (23.79 mM), and ammonium (8.954 mM).
+
+**Proposed uptake:**
+- L-lactate: -10.0 mmol/gDW/h (primary fermentable substrate)
+- D-glucose: -6.0 mmol/gDW/h (secondary fermentable substrate)
+- Ammonium: -2.0 mmol/gDW/h (nitrogen source)
+
+**Proposed secretion (fermentation products):**
+- Butyrate: +8.0 mmol/gDW/h
+- Acetate: +6.0 mmol/gDW/h
+- CO₂: +6.0 mmol/gDW/h
+- Formate: +2.0 mmol/gDW/h (minor product)
+
+## Growth Rate Calculation
+
+**Carbon budget:**
+- Carbon in: 10 (lactate, C₃) + 6 (glucose, C₆) = 10×3 + 6×6 = 30 + 36 = **66 mmol C/gDW/h**
+- Carbon out (products): 8×4 (butyrate) + 6×2 (acetate) + 6×1 (CO₂) + 2×1 (formate) = 32 + 12 + 6 + 2 = **52 mmol C/gDW/h**
+- Carbon for biomass: 66 − 52 = **14 mmol C/gDW/h**
+
+**Nitrogen budget:**
+- Nitrogen in: 2.0 mmol NH₄⁺/gDW/h
+- Nitrogen for biomass: ~8 mmol N per gram dry weight produced
+- Maximum growth from nitrogen: 2.0 / 8 = **0.25 /h**
+
+**Growth rate limited by carbon:**
+- 14 mmol C for biomass ÷ 30 mmol C per gram = **0.47 g/g/h** — but this exceeds realistic growth rates
+- Conservative estimate: **0.30 /h** (realistic for anaerobic fermentation)
+
+**Nitrogen check at 0.30 /h:**
+- Needed: 0.30 × 8 = 2.4 mmol N/gDW/h
+- Available: 2.0 mmol NH₄⁺/gDW/h
+- **Nitrogen is limiting** — reduce growth to **0.25 /h**
+
+At 0.25 /h growth:
+- Carbon needed: 0.25 × 30 = 7.5 mmol C/gDW/h
+- Carbon available (after products): 14 mmol C/gDW/h ✓
+- Nitrogen needed: 0.25 × 8 = 2.0 mmol N/gDW/h ✓
+
+**Final growth rate: 0.25 /h**
+
+---
+
+```json
+{
+  "fluxes": {
+    "lac__L": -10.0,
+    "glc__D": -6.0,
+    "nh4": -2.0,
+    "but": +8.0,
+    "ac": +6.0,
+    "co2": +6.0,
+    "for": +2.0
+  },
+  "growth_rate": 0.25,
+  "rationale": "Coprococcus comes ferments lactate and glucose to butyrate and acetate under anaerobic conditions. Lactate (26.38 mM) and glucose (23.79 mM) are abundant; ammonium (8.954 mM) is limiting nitrogen. Uptake of 10 mmol lactate + 6 mmol glucose yields 66 mmol C in; fermentation products (butyrate, acetate, CO₂, formate) consume 52 mmol C, leaving 14 mmol C for biomass. At 0.25 /h growth, nitrogen demand (2.0 mmol/gDW/h) matches ammonium availability, and carbon budget is satisfied (7.5 mmol C needed < 14 mmol C available).",
+  "confidence": 0.72
+}
+```

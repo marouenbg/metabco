@@ -1,0 +1,67 @@
+# Reasoning through my metabolic state
+
+## Current situation
+At t=40h of a 48h batch, I have 4.707 gDW/L and 8 hours remaining. Acetate (97.72 mM) and succinate (7.008 mM) are abundant. CO₂ (136.8 mM) reflects my own fermentation products accumulating. I'm a Gram-negative anaerobe specializing in complex carbohydrate fermentation, but the primary sugars (maltose, etc.) are nearly depleted. I must pivot to amino acid and organic acid catabolism.
+
+## What I can transport
+As *Bacteroides vulgatus*, I have:
+- **Acetate/succinate uptake**: Yes (PTS and other systems)
+- **Amino acids**: Yes (multiple permeases for Phe, Tyr, Thr, Cys, Val, His, Met, Asn, Ser, Trp, Glu, Gly, Leu, Asp, Pro, Lys)
+- **Carbohydrates**: Maltose transporter present but substrate nearly exhausted
+- **Propionate/butyrate**: I can produce these but uptake is limited
+- **Nitrate**: I have nitrate reductase (facultative anaerobe)
+
+## Fermentation strategy
+My recent turns show I'm fermenting mixed substrates to acetate, butyrate, propionate, and CO₂. At this stage, with acetate abundant and amino acids still available, I should:
+
+1. **Consume acetate** (abundant, 97.72 mM): My primary carbon source. Acetate → acetyl-CoA → biosynthesis + fermentation
+2. **Consume amino acids selectively**: Phe, Tyr, Cys, Gly, Ser (available in useful quantities) for both carbon and nitrogen
+3. **Use succinate** (7.008 mM): Anaplerotic, supports TCA shunt in anaerobe
+4. **Ferment to butyrate**: My signature product; acetyl-CoA → butyrate regenerates NAD⁺
+
+## Growth calculation
+For growth on acetate + amino acids:
+- Acetate uptake: ~12 mmol/gDW/h (realistic for this phase)
+- Amino acids (Phe, Tyr, Cys, Gly, Ser, Val, Thr): ~3 mmol/gDW/h combined
+- Succinate: ~1 mmol/gDW/h
+- **Total C in**: 12×2 (ac) + 3×5 (avg aa) + 1×4 (succ) ≈ 24 + 15 + 4 = 43 mmol C/gDW/h
+
+**Growth requirement**: 41 mmol C/gDW/h + biosynthetic overflow
+- Nitrogen from amino acids: ~3 mmol/gDW/h covers 8 mmol requirement partially; use nitrate for remainder (~0.3 mmol/gDW/h)
+
+**Estimated growth**: (43 - 41) / 2 + overflow fermentation → **μ ≈ 0.25 /h** (modest, limited by N and C balance)
+
+## Mass audit
+- **C in**: Ac (12×2=24) + amino acids (3×5=15) + succinate (1×4=4) = 43 mmol C
+- **C out (growth)**: 41 mmol C (biomass) + ~2 mmol overflow → butyrate/acetate (~1.5 mmol C as but, ~0.5 as ac)
+- **N in**: Amino acids + nitrate ≈ 3 + 0.3 = 3.3 mmol (covers 8 mmol requirement partially, but amino acid catabolism provides N)
+- **Balanced**: Yes, with ~2 mmol C overflow as fermentation products
+
+## Products
+- **Butyrate** (but): +1.5 mmol/gDW/h (my main fermentation end-product)
+- **Acetate** (ac): +0.5 mmol/gDW/h (overflow)
+- **CO₂** (co2): +3.0 mmol/gDW/h (decarboxylation of pyruvate, amino acid oxidation)
+- **H₂** (h2): +0.1 mmol/gDW/h (minor, from formate lyase)
+
+```json
+{
+  "fluxes": {
+    "ac": -12.0,
+    "phe__L": -0.8,
+    "tyr__L": -0.7,
+    "cys__L": -0.6,
+    "gly": -0.5,
+    "ser__L": -0.4,
+    "val__L": -0.4,
+    "thr__L": -0.3,
+    "succ": -1.0,
+    "no3": -0.3,
+    "but": 1.5,
+    "co2": 3.0,
+    "h2": 0.1
+  },
+  "growth_rate": 0.25,
+  "rationale": "Late-stage batch: acetate is abundant and my primary C source. Amino acids provide both C and N for biosynthesis. Succinate supports anaplerotic reactions. Fermentation to butyrate and CO₂ regenerates NAD⁺ under anaerobic conditions. Growth limited by N availability and C overflow balance.",
+  "confidence": 0.62
+}
+```

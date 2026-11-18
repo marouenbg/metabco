@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 10,
+  "growth_claimed": 0.089,
+  "growth_allowed": 0.089,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "P: credited 0.121 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0233 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing maltose, propionate, formate, acetate, and myo-inositol for carbon and energy, and L-arginine, L-glutamine, and L-lysine for nitrogen. Producing acetate, propionate, and formate as fermentat",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "malt": -2.0,
+   "ppa": 2.0,
+   "for": 1.0,
+   "ac": 3.0,
+   "inost": -1.0,
+   "arg__L": -1.0,
+   "gln__L": -1.0,
+   "lys__L": -1.0,
+   "nh4": 3.0
+  },
+  "fluxes_applied": {
+   "malt": -2.0,
+   "ppa": 2.0,
+   "for": 1.0,
+   "ac": 3.0,
+   "inost": -1.0,
+   "arg__L": -1.0,
+   "gln__L": -1.0,
+   "lys__L": -1.0,
+   "nh4": 3.0,
+   "pi": -0.1213,
+   "so4": -0.0233
+  }
+ }
+]

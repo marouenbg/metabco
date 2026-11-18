@@ -1,0 +1,100 @@
+# Metabolic Decision: Bifidobacterium pseudocatenulatum DSM 20438, turn 5
+
+## Analysis
+
+### Carbon and Nitrogen Sources Available and Transportable
+
+**Primary carbon sources I can metabolize:**
+- D-glucose (glc__D): 24.75 mM — I have hexose transporters; this is my preferred substrate
+- L-arabinose (arab__L): 21.29 mM — pentose, transportable via arabinose permeases
+- Maltose (malt): 4.382 mM — disaccharide, transportable
+- L-lactate (lac__L): 28.54 mM — I can ferment lactate anaerobically
+
+**Nitrogen sources:**
+- Ammonium (nh4): 9.321 mM — direct assimilation
+- L-arginine (arg__L): 21.77 mM — can be deaminated and catabolized
+- L-serine (ser__L): 6.388 mM — deaminable
+- L-cysteine (cys__L): 8.4 mM — contains sulfur and nitrogen
+- Various other amino acids in smaller quantities
+
+### Known Fermentation Products
+
+As a bifidobacterium, I produce primarily:
+- **Acetate (ac)** — major end product from fructose-6-phosphate via the bifid shunt
+- **Lactate (lac__L)** — secondary product, especially from mixed sugar fermentation
+- **Formate (for)** — minor product
+- Small amounts of **succinate (succ)** and **ethanol (etoh)** under certain conditions
+- **CO₂** — from decarboxylation reactions
+
+### Current Metabolic Strategy
+
+At turn 5 (t=20h), I have been growing poorly (zero growth reported). My recent history shows I've been fermenting glucose to acetate and lactate but not accumulating biomass. This suggests I've been in a lag phase or the conditions weren't optimal for growth.
+
+Now I have abundant substrates:
+- Glucose: 24.75 mM (good carbon source)
+- Arabinose: 21.29 mM (secondary carbon)
+- Arginine: 21.77 mM (nitrogen + carbon)
+- Ammonium: 9.321 mM (nitrogen)
+- Lactate: 28.54 mM (can be fermented)
+
+### Growth Calculation
+
+I will prioritize:
+1. **Glucose uptake**: ~8 mmol/gDW/h (my typical maximum for hexose)
+2. **Arginine uptake**: ~2 mmol/gDW/h (amino acid catabolism for nitrogen and supplemental carbon)
+3. **Ammonium uptake**: ~1.5 mmol/gDW/h (direct nitrogen assimilation)
+
+**Carbon balance:**
+- Glucose: 8 mmol C6 = 48 mmol C in
+- Arginine: 2 mmol C6 = 12 mmol C in
+- **Total C in: 60 mmol C/gDW/h**
+
+**Nitrogen balance:**
+- Arginine: 2 mmol N in
+- Ammonium: 1.5 mmol N in
+- **Total N in: 3.5 mmol N/gDW/h**
+
+**Growth requirement:** ~30 mmol C and ~8 mmol N per gram dry weight produced
+
+With 60 mmol C available and 3.5 mmol N available:
+- C-limited: 60/30 = 2 grams potential
+- N-limited: 3.5/8 = 0.44 grams potential
+
+**Nitrogen is the limiting nutrient.** Maximum growth = 0.44 gDW/gDW, but this is per interval.
+
+For a 4-hour interval, realistic growth rate = **0.11 /h** (conservative, accounting for maintenance and biosynthetic efficiency)
+
+**Carbon output:**
+- Biomass: 0.11 gDW/h × 4h = 0.44 gDW requires ~13.2 mmol C
+- Fermentation products: 60 - 13.2 = 46.8 mmol C to release
+
+**Fermentation stoichiometry (glucose → acetate + lactate + CO₂):**
+- Typical bifid ratio: 2.5 acetate : 1.5 lactate per glucose
+- CO₂ production from pyruvate decarboxylation
+
+Releasing: ~23 mmol acetate, ~14 mmol lactate, ~10 mmol CO₂
+
+### Audit
+- C in: 60 mmol/gDW/h ✓
+- C out (biomass): 13.2 mmol ✓
+- C out (products): 47 mmol ✓
+- N in: 3.5 mmol/gDW/h ✓
+- N out (biomass): 0.11 × 8 = 0.88 mmol ✓
+- N out (products): 2.6 mmol (in amino acid catabolism) ✓
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "arg__L": -2.0,
+    "nh4": -1.5,
+    "ac": 23.0,
+    "lac__L": 14.0,
+    "co2": 10.0,
+    "for": 1.5
+  },
+  "growth_rate": 0.11,
+  "rationale": "Glucose and arginine provide primary carbon and nitrogen. Nitrogen is limiting (3.5 mmol available vs 8 mmol needed per gDW). Fermentation of glucose via bifid shunt produces acetate and lactate as major products. Conservative growth rate of 0.11/h reflects nitrogen limitation and maintenance costs in anaerobic batch culture.",
+  "confidence": 0.72
+}
+```

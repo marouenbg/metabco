@@ -1,0 +1,32 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 0,
+  "growth_claimed": 0.303,
+  "growth_allowed": 0.303,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.282 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0637 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 0.0973 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Metabolizing lactate as the primary carbon source and ammonium for nitrogen, producing acetate and formate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "nh4": -2.0,
+   "ac": 5.0,
+   "for": 5.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "nh4": -2.0973,
+   "ac": 5.0,
+   "for": 5.0,
+   "pi": -0.282,
+   "so4": -0.0637
+  }
+ }
+]

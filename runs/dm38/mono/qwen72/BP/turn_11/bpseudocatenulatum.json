@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": -2.0,
+  "nh4": -2.0,
+  "ac": 2.0,
+  "for": 1.5,
+  "co2": 0.5,
+  "pi": -0.07
+ },
+ "growth_rate": 0.1,
+ "confidence": 0.9,
+ "rationale": "Continuing to utilize D-glucose and L-lactate for carbon, ammonium for nitrogen, and producing acetate, formate, and CO2 as fermentation products, while maintaining a sustainable growth rate."
+}

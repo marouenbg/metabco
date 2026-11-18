@@ -1,0 +1,29 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 0,
+  "growth_claimed": 0.0009,
+  "growth_allowed": 0.0009,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.000818 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.000197 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "growth requirements",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -0.054,
+   "gln__L": -0.0059,
+   "h2": -0.0009
+  },
+  "fluxes_applied": {
+   "glc__D": -0.054,
+   "gln__L": -0.0059,
+   "h2": -0.0009,
+   "pi": -0.0008,
+   "so4": -0.0002
+  }
+ }
+]

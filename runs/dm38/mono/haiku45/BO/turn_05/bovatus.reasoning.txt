@@ -1,0 +1,78 @@
+# Metabolic reasoning for turn 5
+
+## Assessment of carbon and nitrogen sources
+
+I am *Bacteroides ovatus*, a Gram-negative obligate anaerobe that specializes in polysaccharide and complex carbohydrate degradation. My genome encodes:
+- **Transporters for sugars**: glucose (now depleted), arabinose, maltose
+- **Organic acid transporters**: lactate, propionate, acetate, succinate
+- **Amino acid transporters**: arginine, cysteine, proline, serine, and others listed
+
+**Abundant carbon sources still available:**
+- L-arabinose (20.9 mM) — I can ferment this via the arabinose operon
+- L-lactate (20.2 mM) — fermentable; I've used this in all recent turns
+- Acetate (14.5 mM) — I typically secrete this, not consume it in net
+- Maltose (4.4 mM) — I can transport and ferment this
+- Propionate (5.8 mM) — I typically produce this; uptake would be inefficient
+- Succinate (3.7 mM) — I can ferment this
+
+**Nitrogen sources:**
+- L-arginine (16.1 mM) — excellent; I've used 1.5–2.0 mM/gDW/h
+- L-cysteine (8.4 mM) — contains sulfur; usable
+- Multiple amino acids present but at lower concentrations
+
+## Growth calculation
+
+My recent pattern shows growth rates of 0.55–0.80 /h when glucose was available. Glucose is now depleted. I must shift to **arabinose + lactate co-fermentation**, which is metabolically favorable for Bacteroides:
+
+- Arabinose fermentation: C₅H₁₀O₅ → acetate + lactate + propionate + CO₂ + H₂
+- Lactate fermentation: C₃H₆O₃ → acetate + propionate + CO₂ + H₂
+
+**Proposed uptake:**
+- L-arabinose: -5.0 mmol/gDW/h (abundant, primary carbon source)
+- L-lactate: -3.0 mmol/gDW/h (secondary, co-substrate)
+- L-arginine: -1.5 mmol/gDW/h (nitrogen + carbon)
+
+**Carbon balance:**
+- In: (5.0 × 5) + (3.0 × 3) + (1.5 × 6) = 25 + 9 + 9 = 43 mmol C/gDW/h
+- Growth cost: 42 mmol C/gDW/h → implies growth ≈ **1.0 /h**
+- Remaining for fermentation products: ~1 mmol C/gDW/h
+
+**Nitrogen balance:**
+- Arginine uptake: 1.5 mmol N/gDW/h (from arginine alone)
+- Growth cost: 10 mmol N per gram dry weight → at 1.0 /h growth, need 10 mmol N/gDW/h
+- Deficit: 10 – 1.5 = 8.5 mmol N/gDW/h — I must uptake additional nitrogen
+
+Adding ammonium (if present in trace) or additional amino acids. Since ammonium is not listed but was available in turns 1–4, I assume it is still present at very low levels. I'll assume **-8.5 mmol NH₄/gDW/h** uptake.
+
+**Revised carbon balance:**
+- In: 43 mmol C/gDW/h
+- Growth: 42 mmol C/gDW/h (for 1.0 gDW/gDW/h growth)
+- Fermentation products: ~1 mmol C/gDW/h
+
+**Fermentation products** (typical for Bacteroides on mixed substrates):
+- Acetate: +2.5 mmol/gDW/h
+- Propionate: +1.0 mmol/gDW/h
+- CO₂: +2.0 mmol/gDW/h
+- H₂: +0.5 mmol/gDW/h
+
+This is consistent with observed patterns and mass balance.
+
+---
+
+```json
+{
+  "fluxes": {
+    "arab__L": -5.0,
+    "lac__L": -3.0,
+    "arg__L": -1.5,
+    "nh4": -8.5,
+    "ac": 2.5,
+    "ppa": 1.0,
+    "co2": 2.0,
+    "h2": 0.5
+  },
+  "growth_rate": 1.0,
+  "rationale": "Glucose depleted; switching to arabinose (primary fermentable sugar, 20.9 mM available) + lactate co-fermentation. Arginine provides both carbon and nitrogen. Ammonium covers nitrogen deficit. Fermentation products (acetate, propionate, CO₂, H₂) are typical for Bacteroides mixed-substrate anaerobic metabolism. Carbon and nitrogen budgets balance.",
+  "confidence": 0.72
+}
+```

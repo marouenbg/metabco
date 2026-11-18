@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -15,
+  "lac__L": -15,
+  "nh4": -5,
+  "arg__L": -2.5,
+  "ser__L": -2.5,
+  "ac": 5,
+  "ppa": 5,
+  "but": 2,
+  "for": 2
+ },
+ "growth_rate": 0.1,
+ "rationale": "Balanced uptake of glucose and lactate for carbon, ammonium and amino acids for nitrogen. Reduced fermentation product production to balance carbon deficit and support growth.",
+ "confidence": 0.9
+}

@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 6,
+  "growth_claimed": 0.067,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: cys__L",
+   "uptake_exceeds_pool: ser__L",
+   "uptake_absent: nh4",
+   "c_imbalance: in=19.5 out=22 biomass=1.98"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake cys__L to pool limit -3.69",
+   "clipped uptake ser__L to pool limit -2.81",
+   "zeroed uptake of absent nh4",
+   "P: credited 0.045 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.067 -> 0",
+   "C: secretions scaled by 0.932"
+  ],
+  "rationale": "Utilizing acetate and amino acids for carbon and nitrogen, producing acetate and butyrate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": 5.0,
+   "cys__L": -5.0,
+   "ser__L": -3.0,
+   "but": 3.0,
+   "nh4": -8.0
+  },
+  "fluxes_applied": {
+   "ac": 4.6581,
+   "cys__L": -3.6929,
+   "ser__L": -2.8137,
+   "but": 2.7949,
+   "nh4": 0.0,
+   "pi": -0.045
+  }
+ }
+]

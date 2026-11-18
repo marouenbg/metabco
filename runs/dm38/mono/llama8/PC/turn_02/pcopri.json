@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -12.6,
+  "ser__L": -6.11,
+  "arg__L": -2.72,
+  "nh4": -2.72,
+  "for": 4.44,
+  "ac": 2.28,
+  "succ": 0.9,
+  "h2": 0.9
+ },
+ "growth_rate": 0.85,
+ "rationale": "Utilizing D-glucose, L-serine, and L-arginine for growth, with secondary nitrogen source ammonium. Releasing formate, acetate, and succinate as fermentation products.",
+ "confidence": 0.9
+}

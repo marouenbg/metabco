@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 1,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.583 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 4.05 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing L-lactate as primary carbon source, with CO2 and amino acids supplementing carbon and nitrogen needs, producing acetate and formate as major products.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "co2": -5.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "for": 2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "co2": -5.0,
+   "nh4": -5.0501,
+   "ac": 5.0,
+   "for": 2.0,
+   "h2": 1.0,
+   "pi": -0.5832,
+   "so4": -0.1309
+  }
+ }
+]

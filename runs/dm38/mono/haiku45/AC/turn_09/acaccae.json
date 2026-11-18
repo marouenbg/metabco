@@ -1,0 +1,29 @@
+{
+ "fluxes": {
+  "leu__L": -3.6,
+  "phe__L": -4.5,
+  "tyr__L": -3.2,
+  "val__L": -2.8,
+  "ile__L": -1.6,
+  "lys__L": -2.4,
+  "his__L": -1.0,
+  "gln__L": -2.7,
+  "asn__L": -2.6,
+  "met__L": -0.84,
+  "trp__L": -0.73,
+  "pro__L": -0.7,
+  "ala__L": -1.4,
+  "gly": -1.45,
+  "cys__L": -1.52,
+  "inost": -6.27,
+  "ac": 12.5,
+  "but": 8.0,
+  "for": 6.5,
+  "co2": 14.0,
+  "h2": 3.5,
+  "nh4": 3.2
+ },
+ "growth_rate": 0.1,
+ "rationale": "Late-stage batch culture (36/48h). Amino acids and inositol are primary fermentable substrates. Catabolize to butyrate, acetate, formate, CO\u2082, H\u2082, and ammonia. Modest growth rate sustained by protein/amino acid fermentation.",
+ "confidence": 0.55
+}

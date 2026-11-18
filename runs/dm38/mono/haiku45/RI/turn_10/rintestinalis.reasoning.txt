@@ -1,0 +1,59 @@
+# Metabolic reasoning for Roseburia intestinalis L1-82 at t=40h
+
+## Current situation
+I am at 4.948 gDW/L in a sealed anaerobic batch. I have consumed most readily available sugars (maltose, glucose are gone). The vessel is 8 hours from completion. I need to assess what I can still metabolize.
+
+## Available carbon and nitrogen sources
+
+**Primary carbon sources still present:**
+- Acetate (9.929 mM) — I can ferment this via acetyl-CoA
+- Butyrate (7.792 mM) — I can β-oxidize this to acetyl-CoA
+- Formate (2.719 mM) — I can oxidize this to CO₂ or use in reductive pathways
+- Amino acids (phe, tyr, gln, asn, cys, ile, leu, gly, val, lac, met, pro, trp, glu, ser, thr, asp) — I can catabolize these for carbon and energy
+- Lactate (0.906 mM) — fermentable
+- CO₂ (140 mM) — present but I'm heterotrophic; I use it in anapleurotic reactions, not as primary carbon source
+
+**Nitrogen sources:**
+- Glutamine (2.7 mM) — excellent
+- Asparagine (2.6 mM) — good
+- Amino acids (met, trp, glu, ser, thr, asp, etc.) — can be deaminated
+- Nitrate (0.1093 mM) — present but anaerobic; I likely cannot use this efficiently
+
+## Fermentation strategy
+
+As a Roseburia species, I am a butyrate producer. My main fermentation pathways:
+1. Acetyl-CoA → butyrate (via acetoacetyl-CoA → crotonyl-CoA → butyryl-CoA)
+2. Lactate fermentation to butyrate
+3. Amino acid fermentation (Stickland reactions where applicable)
+
+Recent turns show I've been consuming butyrate and acetate, releasing CO₂. This is consistent with energy generation from short-chain fatty acid oxidation.
+
+## Growth rate calculation
+
+At turn 9 I grew at 0.220 /h with modest uptake. Now at turn 10, I have:
+- Butyrate: 7.792 mM (good energy source)
+- Acetate: 9.929 mM (good energy source)
+- Amino acids: ~25 mM total (nitrogen + carbon)
+- Formate: 2.719 mM (minor)
+
+For growth at ~0.25-0.30 /h, I need:
+- Carbon: 38 mmol/gDW → 0.25 /h × 38 = 9.5 mmol/gDW/h consumed
+- Nitrogen: 10 mmol/gDW → 0.25 /h × 10 = 2.5 mmol/gDW/h consumed
+
+**Carbon budget:**
+I'll consume butyrate (3.0 mmol/gDW/h) + acetate (3.5 mmol/gDW/h) + amino acids (3.0 mmol/gDW/h) = 9.5 mmol C/gDW/h in.
+Minus growth biomass (9.5 mmol C/gDW/h out), I have ~0 left over for fermentation products—this is tight but feasible if I'm oxidizing these substrates efficiently for ATP.
+
+**Nitrogen budget:**
+Glutamine (1.5 mmol/gDW/h) + asparagine (1.0 mmol/gDW/h) = 2.5 mmol N/gDW/h. This covers growth.
+
+I'll release CO₂ from oxidation and perhaps small amounts of formate or acetate overflow.
+
+## Strategy
+- Uptake butyrate and acetate for energy and carbon
+- Uptake glutamine and asparagine for nitrogen
+- Uptake minor amino acids for cofactors and additional carbon
+- Release CO₂ from oxidation
+- Growth rate: 0.28 /h (sustainable for 4 more hours before resources deplete further)
+
+{"fluxes": {"but": -3.0, "ac": -3.5, "gln__L": -1.5, "asn__L": -1.0, "phe__L": -0.8, "tyr__L": -0.6, "cys__L": -0.5, "for": -0.4, "co2": 4.5, "h2": 0.2}, "growth_rate": 0.28, "rationale": "Butyrate and acetate oxidation for energy and carbon; glutamine and asparagine for nitrogen; amino acid catabolism for cofactors. CO₂ release from heterotrophic oxidation. Carbon budget balanced: ~10.4 mmol in, 10.6 mmol (growth + release) out. Sustainable growth rate given remaining substrate in sealed batch near end-stage.", "confidence": 0.68}

@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 7,
+  "growth_claimed": 0.0952,
+  "growth_allowed": 0.0952,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.119 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Utilizing acetate, butyrate, L-arabinose, and hydrogen for carbon, and L-arginine, L-serine, and L-cysteine for nitrogen. Producing acetate, butyrate, propionate, CO2, and ammonium as fermentation pro",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": 1.5,
+   "but": 1.0,
+   "arab__L": -2.0,
+   "h2": -1.0,
+   "arg__L": -2.0,
+   "ser__L": -1.0,
+   "cys__L": -0.5,
+   "ppa": 0.5,
+   "co2": 1.0,
+   "nh4": 1.0
+  },
+  "fluxes_applied": {
+   "ac": 1.5,
+   "but": 1.0,
+   "arab__L": -2.0,
+   "h2": -1.0,
+   "arg__L": -2.0,
+   "ser__L": -1.0,
+   "cys__L": -0.5,
+   "ppa": 0.5,
+   "co2": 1.0,
+   "nh4": 1.0,
+   "pi": -0.1192
+  }
+ }
+]

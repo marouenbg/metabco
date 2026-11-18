@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -3.0,
+  "inost": -2.0,
+  "nh4": -4.17,
+  "arg__L": -1.0,
+  "but": 2.0,
+  "ppa": 1.5,
+  "ac": 1.0
+ },
+ "growth_rate": 0.144,
+ "rationale": "Utilize readily available and utilizable carbon sources, take up sufficient nitrogen sources, and produce fermentation products."
+}

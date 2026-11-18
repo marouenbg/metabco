@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "nh4": -7.0,
+  "co2": 6.0,
+  "but": 2.0,
+  "ac": 2.0,
+  "h2": 2.0,
+  "pi": -0.23
+ },
+ "growth_rate": 0.25,
+ "confidence": 0.9,
+ "rationale": "Sustaining previous metabolic strategy with D-glucose and L-lactate as primary carbon sources, and ammonium as the nitrogen source. Producing butyrate, acetate, hydrogen, and carbon dioxide as fermentation products."
+}

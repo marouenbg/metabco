@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 7,
+  "growth_claimed": 1.0,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "p_imbalance: in=0 out=0 biomass=1.25"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: growth 1 -> 0"
+  ],
+  "rationale": "Nitrogen-limited growth with mixed acid fermentation",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "ppa": -10.0,
+   "but": -10.0,
+   "cys__L": -5.0,
+   "pro__L": -5.0,
+   "lac__L": 5.0,
+   "for": 5.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "ppa": -10.0,
+   "but": -10.0,
+   "cys__L": -5.0,
+   "pro__L": -5.0,
+   "lac__L": 5.0,
+   "for": 5.0
+  }
+ }
+]

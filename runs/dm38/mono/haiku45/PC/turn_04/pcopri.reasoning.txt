@@ -1,0 +1,103 @@
+# Metabolic decision for turn 4
+
+## Analysis of my capabilities and constraints
+
+I am *Prevotella copri*, a saccharolytic and proteolytic anaerobe. Looking at my recent history (turns 0-3), I have been:
+- Consuming glucose and arabinose (carbohydrates)
+- Consuming arginine (protein fermentation substrate)
+- Producing acetate, propionate, formate, and CO₂ (typical fermentation products)
+- Growing at 0.48-0.65 /h
+
+## Current nutrient landscape (turn 4, t=16h)
+
+**Carbon sources available:**
+- Acetate (55.58 mM) — already present, I produce this
+- Propionate (41.87 mM) — already present, I produce this
+- Formate (25.49 mM) — already present, I produce this
+- CO₂ (102.3 mM) — present, I produce this
+- Lactate (8.31 mM) — *fermentable*
+- Carbohydrates: maltose (4.38 mM), arabinose (4.12 mM) — *fermentable*
+- Amino acids: proline (5.9), alanine (5.3), phenylalanine (4.5), leucine (3.6), cysteine (3.53), tyrosine (3.2), valine (2.8), glutamine (2.7), asparagine (2.6), lysine (2.4), threonine (1.9), isoleucine (1.6), histidine (1.0), glycine (0.95), methionine (0.84), tryptophan (0.73), glutamate (0.66) — *proteolytic substrate*
+
+**Nitrogen sources:**
+- Ammonium (2.124 mM) — low but present
+- Amino acids — contain both C and N
+
+**What I cannot use:**
+- The accumulated VFAs (acetate, propionate, formate) and CO₂ are end products; I do not reuptake my own fermentation waste in batch culture
+- Glucose is depleted (not listed; I consumed it in earlier turns)
+
+## Fermentation strategy
+
+Given the depletion of glucose and the presence of lactate, carbohydrates (maltose, arabinose), and amino acids, I should:
+
+1. **Consume lactate** (8.31 mM available) — a primary fermentation substrate for Prevotella
+2. **Consume amino acids** selectively — proline, alanine, and other abundant amino acids
+3. **Produce** acetate, propionate, formate, and CO₂ (standard mixed-acid fermentation)
+
+## Flux calculation
+
+**Lactate uptake:** 8 mmol/L available; I'll take up at ~5 mmol/gDW/h (moderate rate)
+- Lactate is C₃H₆O₃; each mmol is 3 C atoms
+- 5 mmol/gDW/h lactate = 15 mmol C/gDW/h in
+
+**Amino acid uptake:** Proline (5.9 mM), alanine (5.3 mM) are abundant
+- Proline: C₅H₉NO₂ (5 C, 1 N per mmol)
+- Alanine: C₃H₇NO₂ (3 C, 1 N per mmol)
+- I'll consume proline at 3 mmol/gDW/h (9 C, 3 N) and alanine at 2 mmol/gDW/h (6 C, 2 N)
+- Total from amino acids: 15 mmol C, 5 mmol N
+
+**Ammonium uptake:** 2.124 mM available; I'll take up ~1 mmol/gDW/h (1 N)
+
+**Total C in:** 15 (lactate) + 15 (amino acids) = 30 mmol C/gDW/h
+**Total N in:** 5 (amino acids) + 1 (ammonium) = 6 mmol N/gDW/h
+
+**Growth cost:** 45 mmol C/gDW and 10 mmol N/gDW per gram biomass produced
+- With 30 mmol C and 6 mmol N available, nitrogen is limiting
+- Max growth = 6 / 10 = 0.60 gDW/h... but that consumes 0.60 × 45 = 27 mmol C
+- Remaining for fermentation: 30 - 27 = 3 mmol C/gDW/h
+
+**Fermentation products:**
+- Lactate (C₃) + amino acids → acetate (C₂), propionate (C₃), formate (C₁), CO₂
+- Typical P. copri stoichiometry: lactate → 1 acetate + 1 propionate + CO₂
+- Amino acid fermentation also yields acetate, propionate
+- I'll produce: acetate (+6), propionate (+4), formate (+2), CO₂ (+1)
+- Total C out: 12 + 12 + 2 + 4 = 30 mmol C (balanced)
+
+**Growth rate:** 0.60 /h (limited by nitrogen)
+
+## Final flux audit
+- **C in:** 30 mmol/gDW/h
+- **C out (fermentation):** 12 (acetate) + 12 (propionate) + 2 (formate) + 4 (CO₂) = 30 mmol/gDW/h
+- **C growth:** 0.60 × 45 = 27 mmol/gDW/h
+- **Total C needed:** 30 + 27 = 57... *This exceeds input!*
+
+**Correction:** I must reduce growth or uptake. Let me recalculate:
+- If I uptake 30 mmol C/gDW/h and need 27 for growth, only 3 mmol remains for fermentation products
+- This is unrealistic. I should increase carbon uptake or reduce growth.
+
+**Revised:** Increase lactate uptake to 8 mmol/gDW/h (all available lactate in local environment)
+- Lactate: 8 × 3 = 24 mmol C
+- Amino acids: 15 mmol C
+- **Total C in: 39 mmol/gDW/h**
+- Growth at 0.60 /h: 27 mmol C consumed
+- Fermentation products: 39 - 27 = 12 mmol C available
+- Output: acetate (5), propionate (4), formate (2), CO₂ (+1) = 12 mmol C ✓
+
+```json
+{
+  "fluxes": {
+    "lac__L": -8.0,
+    "pro__L": -3.0,
+    "ala__L": -2.0,
+    "nh4": -1.0,
+    "ac": 5.0,
+    "ppa": 4.0,
+    "for": 2.0,
+    "co2": 1.0
+  },
+  "growth_rate": 0.60,
+  "rationale": "Lactate and amino acids are primary fermentable substrates. Lactate (8 mmol/gDW/h) + proline (3) + alanine (2) provide 39 mmol C and 6 mmol N. Nitrogen limits growth to 0.60 /h, consuming 27 mmol C. Remaining 12 mmol C is fermented to acetate, propionate, formate, and CO₂. Carbon balance verified.",
+  "confidence": 0.72
+}
+```

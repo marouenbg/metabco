@@ -1,0 +1,87 @@
+# Reasoning through this metabolic decision
+
+## What I can transport and metabolize
+
+*Eubacterium rectale* is a butyrate-producing bacterium from the human gut. Looking at my genome capabilities:
+
+**Carbohydrates I can use:**
+- D-glucose (glc__D): 24.34 mM — I have hexose transporters. This is my primary fermentable sugar.
+- L-lactate (lac__L): 27.99 mM — I can ferment lactate via lactate oxidation to pyruvate.
+- L-arabinose (arab__L): 21.31 mM — I have pentose utilization pathways.
+- Maltose (malt): 4.382 mM — I can use this via maltose transporters.
+
+**Amino acids:**
+- I can transport and catabolize many amino acids listed, but they are secondary nitrogen/carbon sources.
+- L-arginine (arg__L): 21.8 mM — I can ferment arginine via the arginine deiminase pathway (yields ATP, CO₂, ammonia).
+
+**What I cannot use efficiently:**
+- CO₂ at -200 mV is not a useful electron acceptor for me (I'm not autotrophic).
+- Nitrate (no3) is present but below detection threshold and I'm anaerobic.
+
+## Fermentation strategy
+
+My known fermentation products are **butyrate** and **acetate** (confirmed by my previous turns). I also produce formate and CO₂. The Stickland reaction with amino acids can yield additional energy.
+
+From turns 0–1, I've been:
+- Consuming ~10 mmol/gDW/h glucose
+- Consuming ~5 mmol/gDW/h lactate
+- Producing ~4.5–4.7 mmol/gDW/h acetate
+- Producing ~2.3 mmol/gDW/h butyrate
+- Consuming ~0.8 mmol/gDW/h cysteine
+- Growing at ~0.28–0.30 /h
+
+## Growth rate calculation
+
+At turn 1, I achieved 0.300 /h with:
+- Glucose uptake: 10 mmol/gDW/h
+- Lactate uptake: 5 mmol/gDW/h
+- Total carbon in: (10 × 6) + (5 × 3) = 60 + 15 = **75 mmol C/gDW/h**
+
+Nitrogen uptake was ~1.5 mmol/gDW/h (ammonium) + amino acid cysteine (0.8 mmol/gDW/h, 1 N per molecule) ≈ **2.3 mmol N/gDW/h**
+
+Growth cost: 33 mmol C/g and 7 mmol N/g.
+At 0.30 /h: 33 × 0.30 = **9.9 mmol C consumed**, 7 × 0.30 = **2.1 mmol N consumed**.
+
+Carbon balance check:
+- In: 75 mmol C
+- Growth cost: 9.9 mmol C
+- Fermentation products: acetate (4.5 × 2) + butyrate (2.3 × 4) + formate (0.8 × 1) + CO₂ (14 × 1) = 9 + 9.2 + 0.8 + 14 = **33 mmol C**
+- Total out: 9.9 + 33 = 42.9 mmol C (reasonable; some C is in lactate which I'm oxidizing)
+
+I'll maintain similar uptake rates. The supplies are still abundant, and I'm in early-to-mid exponential phase (8 h of 48 h total).
+
+## My decision for the next 4 hours
+
+**Uptake:**
+- D-glucose: -10.0 mmol/gDW/h (primary fermentable)
+- L-lactate: -5.0 mmol/gDW/h (secondary fermentable, lactate oxidizer)
+- L-cysteine: -0.8 mmol/gDW/h (amino acid catabolism, nitrogen + sulfur)
+- Ammonium: -1.5 mmol/gDW/h (nitrogen assimilation)
+
+**Secretion (fermentation products):**
+- Acetate: +4.5 mmol/gDW/h
+- Butyrate: +2.3 mmol/gDW/h
+- Formate: +0.8 mmol/gDW/h
+- CO₂: +14.0 mmol/gDW/h
+
+**Growth rate: 0.30 /h**
+
+This is sustainable given the carbon and nitrogen math above.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "lac__L": -5.0,
+    "cys__L": -0.8,
+    "nh4": -1.5,
+    "ac": 4.5,
+    "but": 2.3,
+    "for": 0.8,
+    "co2": 14.0
+  },
+  "growth_rate": 0.30,
+  "rationale": "Continuing glucose + lactate co-fermentation with amino acid catabolism. Carbon: 75 in (60 from glucose, 15 from lactate), 42.9 out (growth 9.9 + products 33), balanced. Nitrogen: 2.3 in (ammonium + cysteine), 2.1 for growth, balanced. Butyrate-producing Firmicute strategy confirmed by prior turns.",
+  "confidence": 0.82
+}
+```

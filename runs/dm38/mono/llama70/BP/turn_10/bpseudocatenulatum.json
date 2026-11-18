@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "ser__L": -2.0,
+  "lac__L": 2.0,
+  "for": 1.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.25,
+ "rationale": "balanced growth with acetate and amino acid uptake",
+ "confidence": 0.8
+}

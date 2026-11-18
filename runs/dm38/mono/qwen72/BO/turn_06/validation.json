@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 6,
+  "growth_claimed": 0.0714,
+  "growth_allowed": 0.0714,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.0894 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0187 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing to use D-glucose and L-lactate for growth, producing acetate and butyrate as fermentation products. Ammonium is taken up for nitrogen needs.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -1.0,
+   "ac": 7.0,
+   "but": 5.0,
+   "for": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -1.0,
+   "ac": 7.0,
+   "but": 5.0,
+   "for": 1.0,
+   "pi": -0.0894,
+   "so4": -0.0187
+  }
+ }
+]

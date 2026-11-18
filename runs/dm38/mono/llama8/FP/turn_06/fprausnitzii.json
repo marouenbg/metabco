@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": 10.0,
+  "h2": 5.0,
+  "nh4": 5.0,
+  "but": 5.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Utilizing L-lactate and hydrogen for growth, producing butyrate, formate, and hydrogen as fermentation products, and conserving energy by reducing the growth rate.",
+ "confidence": 0.8
+}

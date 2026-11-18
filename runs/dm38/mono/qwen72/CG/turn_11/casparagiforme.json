@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -5.0,
+  "ac": 4.43,
+  "arg__L": -2.0,
+  "nh4": -1.0,
+  "but": 4.43,
+  "etoh": 0.89
+ },
+ "growth_rate": 0.059,
+ "rationale": "Using L-lactate and acetate as primary carbon sources, and L-arginine and ammonium as nitrogen sources to support growth and fermentation product secretion.",
+ "confidence": 0.8
+}

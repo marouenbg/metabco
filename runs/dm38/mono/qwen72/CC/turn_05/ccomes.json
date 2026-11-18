@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "arg__L": -5.0,
+  "ac": 5.0,
+  "but": 3.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Utilizing L-lactate and L-arginine for growth, producing acetate and butyrate as fermentation products.",
+ "confidence": 0.9
+}

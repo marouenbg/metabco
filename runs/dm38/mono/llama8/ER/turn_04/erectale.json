@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -8.4,
+  "arg__L": -6.17,
+  "co2": 8.3,
+  "ac": 8.3,
+  "for": 6.0,
+  "nh4": 6.0
+ },
+ "growth_rate": 0.083,
+ "rationale": "Based on the available nutrients and my own capabilities as Eubacterium rectale, I have decided to take up glucose, lactate, and ammonia, and produce acetate and formate as fermentation products. This will support a growth rate of 0.083/h and meet my carbon and nitrogen needs.",
+ "confidence": 0.9
+}

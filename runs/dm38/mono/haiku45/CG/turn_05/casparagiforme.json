@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "gly": -2.5,
+  "ser__L": -2.0,
+  "glc__D": -2.0,
+  "lac__L": -1.5,
+  "ac": 4.0,
+  "but": 2.0,
+  "co2": 0.5,
+  "h2": 1.0,
+  "ala__L": 2.5
+ },
+ "growth_rate": 0.35,
+ "rationale": "Stickland-type amino acid fermentation (glycine + serine) paired with glucose and lactate fermentation. Glycine acts as electron acceptor, producing alanine. Carbohydrates ferment to acetate, butyrate, CO\u2082, and H\u2082. Carbon and nitrogen balance supports moderate growth; abundant amino acids and carbohydrates still available.",
+ "confidence": 0.72
+}

@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 10,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.0937,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: gly",
+   "uptake_exceeds_pool: asp__L",
+   "n_imbalance: in=1.8 out=1.1 biomass=1.69"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake gly to pool limit -0.707",
+   "clipped uptake asp__L to pool limit -0.294",
+   "P: credited 0.182 mmol/gDW/h of pi (declared present in excess)",
+   "N: growth 0.2 -> 0.0937"
+  ],
+  "rationale": "Late stationary phase (40/48 h). Nitrogen is limiting; I'm catabolizing abundant butyrate, acetate, and formate while carefully consuming amino acids for both C and N. Modest growth of 0.20/h is susta",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "but": -8.0,
+   "for": -3.0,
+   "gly": -1.5,
+   "cys__L": -0.8,
+   "asp__L": -0.4,
+   "nh4": 1.1,
+   "co2": 2.5
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "but": -8.0,
+   "for": -3.0,
+   "gly": -0.7067,
+   "cys__L": -0.8,
+   "asp__L": -0.2941,
+   "nh4": 1.1,
+   "co2": 2.5,
+   "pi": -0.1818
+  }
+ }
+]

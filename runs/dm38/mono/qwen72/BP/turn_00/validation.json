@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 0,
+  "growth_claimed": 0.067,
+  "growth_allowed": 0.067,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.045 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0173 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing abundant lactate and glucose for energy, producing acetate, formate, and lactate as fermentation products. Growth rate is limited by carbon availability.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": 2.0,
+   "glc__D": -5.0,
+   "nh4": -1.5,
+   "arg__L": -0.5,
+   "ac": 4.0,
+   "for": 2.0
+  },
+  "fluxes_applied": {
+   "lac__L": 2.0,
+   "glc__D": -5.0,
+   "nh4": -1.5,
+   "arg__L": -0.5,
+   "ac": 4.0,
+   "for": 2.0,
+   "pi": -0.045,
+   "so4": -0.0173
+  }
+ }
+]

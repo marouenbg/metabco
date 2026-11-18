@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "lac__L": 10.0,
+  "ac": 10.0,
+  "nh4": 6.17,
+  "co2": -10.0,
+  "h2s": 0.0,
+  "h2": 0.0,
+  "for": 6.0,
+  "pi": -0.23,
+  "so4": -0.05
+ },
+ "growth_rate": 0.25,
+ "rationale": "Based on my transporters and the abundance of carbon sources in the environment, I've chosen to take up D-glucose (glc__D), L-lactate (lac__L), and Acetate (ac) at a rate of 10 mmol/gDW/h. I've also chosen to continue taking up Ammonium (nh4) at a rate of 6.17 mmol/gDW/h. I'll release 10 mmol/gDW/h of carbon dioxide (co2) to balance the carbon account. This uptake supports a growth rate of 0.25/h.",
+ "confidence": 0.8
+}

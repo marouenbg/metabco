@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "ac": 5.0,
+  "h2": 0.5,
+  "nh4": -5.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "I'm choosing to take up glucose and lactate to support growth, while secreting acetate and hydrogen to offset the carbon and nitrogen fluxes required to support growth. I'm also taking up ammonium to support growth.",
+ "confidence": 0.9
+}

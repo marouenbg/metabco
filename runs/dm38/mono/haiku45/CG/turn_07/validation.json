@@ -1,0 +1,49 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 7,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.2,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.208 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0523 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Nitrogen-limited growth phase; consuming remaining glucose and arabinose with amino acid catabolism (asparagine, glutamine, lysine) for both C and N; mixed-acid fermentation producing acetate, butyrat",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "glc__D": -1.5,
+   "arab__L": -2.0,
+   "asn__L": -1.0,
+   "gln__L": -1.0,
+   "lys__L": -0.8,
+   "nh4": -1.2,
+   "ac": 3.5,
+   "but": 2.0,
+   "co2": 4.0,
+   "h2": 1.5,
+   "for": 0.8,
+   "lac__L": 0.5
+  },
+  "fluxes_applied": {
+   "glc__D": -1.5,
+   "arab__L": -2.0,
+   "asn__L": -1.0,
+   "gln__L": -1.0,
+   "lys__L": -0.8,
+   "nh4": -1.2,
+   "ac": 3.5,
+   "but": 2.0,
+   "co2": 4.0,
+   "h2": 1.5,
+   "for": 0.8,
+   "lac__L": 0.5,
+   "pi": -0.2079,
+   "so4": -0.0523
+  }
+ }
+]

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -3.5,
+  "ala__L": -1.0,
+  "cys__L": -0.5,
+  "nh4": -0.5,
+  "ac": 1.8,
+  "for": 0.8,
+  "ppa": 0.7,
+  "co2": 2.5
+ },
+ "growth_rate": 0.15,
+ "rationale": "Late batch phase with ammonium depletion; shift to lactate fermentation with amino acid co-metabolism. Produces acetate, formate, propionate via mixed-acid fermentation. Carbon and nitrogen balanced for sustainable growth.",
+ "confidence": 0.62
+}

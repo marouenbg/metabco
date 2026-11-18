@@ -1,0 +1,11 @@
+I am Coprococcus ATCC 27758, a Gram-positive, anaerobic bacterium. Given the environment, I will make the following decision.
+
+Firstly, I can transport and utilize the following carbon sources: L-lactate (lac__L), D-glucose (glc__D), L-arabinose (arab__L), L-serine (ser__L), myo-inositol (inost), L-proline (pro__L), L-alanine (ala__L), Glycine (gly), L-phenylalanine (phe__L), Maltose (malt), L-leucine (leu__L), L-tyrosine (tyr__L), L-valine (val__L), L-glutamine (gln__L), L-asparagine (asn__L), L-lysine (lys__L), L-threonine (thr__L), L-isoleucine (ile__L), L-histidine (his__L), L-methionine (met__L), L-tryptophan (trp__L), L-glutamate (glu__L), L-aspartate (asp__L). However, I can only utilize the following nitrogen sources: Ammonium (nh4), L-arginine (arg__L), L-cysteine (cys__L), L-serine (ser__L), L-glutamine (gln__L), L-asparagine (asn__L), L-lysine (lys__L).
+
+As for the fermentation products, I am known to produce formate (for), ethanol (etoh), acetate (ac), and hydrogen gas (h2).
+
+Given the available carbon and nitrogen sources, I will choose to take up D-glucose (glc__D) and L-glutamine (gln__L), and secrete formate (for) and hydrogen gas (h2). This combination supports a growth rate of approximately 0.6 gDW/h, considering the biomass cost of 30 mmol of carbon and 8 mmol of nitrogen per gram of dry weight produced.
+
+Audit: the total carbon in (glc__D and gln__L) is 28.98 mmol/L, which covers the carbon out (growth, formate, and hydrogen gas) of approximately 31.13 mmol/L, leaving a deficit of 2.15 mmol/L. To address this deficit, I will take up additional carbon sources. I will take up L-lactate (lac__L) and L-serine (ser__L) to supplement the deficit.
+
+{"fluxes": {"glc__D": 2.0, "gln__L": 0.5, "lac__L": 1.5, "ser__L": 1.0, "for": 0.5, "h2": 0.5, "ac": 0.0, "but": 0.0, "ppa": 0.0, "etoh": 0.0, "co2": 0.0, "nh4": 0.0, "h2s": 0.0}, "growth_rate": 0.6, "rationale": "taking up glucose and glutamine, secreting formate and hydrogen gas, and supplementing with lactate and serine to address the carbon deficit", "confidence": 0.8}

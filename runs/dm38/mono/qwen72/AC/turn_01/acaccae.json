@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -4.0,
+  "lac__L": -1.0,
+  "arg__L": -1.0,
+  "cys__L": -1.0,
+  "but": 4.0,
+  "ac": 2.0,
+  "nh4": -1.0
+ },
+ "growth_rate": 0.184,
+ "rationale": "Adjusted fluxes to balance carbon and nitrogen uptake with biomass production and fermentation product release.",
+ "confidence": 0.85
+}

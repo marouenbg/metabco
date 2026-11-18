@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": 20.0,
+  "glc__D": 5.0,
+  "ser__L": 2.0,
+  "etoh": 10.0,
+  "ac": 5.0,
+  "nh4": 10.0
+ },
+ "growth_rate": -0.8,
+ "rationale": "Based on my transport capabilities, available nutrients, and fermentation products, I will take up L-lactate, D-glucose, and L-serine, and secrete lactate, ethanol, and acetate as fermentation products. I will also secrete ammonia as a nitrogen source.",
+ "confidence": 0.9
+}

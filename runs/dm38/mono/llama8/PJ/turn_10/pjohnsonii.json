@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "for": -5.0,
+  "malt": 0.5,
+  "ser__L": 1,
+  "ac": 2.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.275,
+ "rationale": "Based on available nutrients, my ability to transport and utilize them, and the growth rate supported by my chosen uptake. I'll also release formate, acetate, and hydrogen as fermentation products.",
+ "confidence": 0.8
+}

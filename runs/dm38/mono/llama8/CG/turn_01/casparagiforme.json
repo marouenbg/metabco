@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -5.0,
+  "arg__L": -5.0,
+  "ac": 5.0,
+  "for": 2.0,
+  "h2": 1.0,
+  "but": 1.0,
+  "ppa": 1.0
+ },
+ "growth_rate": 0.7,
+ "rationale": "I have chosen to take up lactate, glucose, and arginine as my primary carbon and nitrogen sources. I will convert lactate into acetate, formate, hydrogen gas, butyrate, and propionate as my primary fermentation products. I will support a growth rate of 0.7 /h with these uptake rates.",
+ "confidence": 0.9
+}

@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 9,
+  "growth_claimed": 0.1,
+  "growth_allowed": 0.1,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.131 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 1.03 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing acetate and ammonium for growth, producing hydrogen sulfide and formate as byproducts.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "nh4": -5.0,
+   "h2s": 1.0,
+   "for": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "nh4": -5.0,
+   "h2s": 1.0,
+   "for": 1.0,
+   "pi": -0.1313,
+   "so4": -1.0262
+  }
+ }
+]

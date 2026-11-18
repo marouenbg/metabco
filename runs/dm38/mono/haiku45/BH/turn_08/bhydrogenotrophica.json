@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "h2": -8.0,
+  "co2": -20.0,
+  "arg__L": -3.0,
+  "nh4": -2.0,
+  "ac": 2.5,
+  "for": 2.2
+ },
+ "growth_rate": 0.45,
+ "rationale": "Activated hydrogenotrophic autotrophy with H\u2082 and CO\u2082 as primary energy/carbon source, supplemented by arginine for nitrogen and additional carbon. Remaining carbon released as acetate and formate. Limited by nitrogen availability (NH\u2084\u207a depleted); arginine provides dual C/N support.",
+ "confidence": 0.68
+}

@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "nh4": -2.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "etoh": 5.0
+ },
+ "growth_rate": 0.11,
+ "rationale": "Utilizing glucose and lactate for carbon, ammonium for nitrogen, and producing acetate, butyrate, and ethanol as fermentation products to support a growth rate of 0.11 gDW/h.",
+ "confidence": 0.9
+}

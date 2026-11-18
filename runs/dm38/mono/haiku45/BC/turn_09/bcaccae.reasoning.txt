@@ -1,0 +1,124 @@
+# Metabolic Decision — Turn 9, t = 36 h
+
+## Assessment of my situation
+
+I am *Bacteroides caccae*, a Gram-negative anaerobe specializing in complex carbohydrate degradation and amino acid fermentation. At 36 h into a 48 h sealed batch culture, I have reached 4.461 gDW/L and am now facing nutrient depletion. My recent history shows I've been cycling through glucose (now exhausted), lactate fermentation, amino acid catabolism, and acetate oxidation/reduction.
+
+## Available carbon and nitrogen sources — what I can actually use
+
+**Primary carbon sources still available:**
+- **Propionate (14.3 mM)**: I can ferment this via the methylmalonyl-CoA pathway; this is a core Bacteroides capability
+- **Formate (9.7 mM)**: Usable; I have formate dehydrogenase
+- **Amino acids (L-cysteine, L-alanine, L-phenylalanine, etc., totaling ~40 mM)**: Bacteroides caccae is a proteolytic specialist. I can catabolize most of these via transamination and deamination
+- **Maltose (4.4 mM)**: I can use this; it's a disaccharide within my transport capacity
+- **L-arabinose (3.2 mM)**: Pentose sugar, I can ferment it
+- **Acetate (3.1 mM)**: At this redox potential (-200 mV) in anaerobiosis, I cannot oxidize acetate for energy. However, I can use it for biosynthesis if needed
+- **CO₂ (80.3 mM)**: Abundant, used as a sink for reducing equivalents and for some carboxylation reactions
+
+**Sources I cannot use:**
+- **Nitrate (0.11 mM)**: Bacteroides lack nitrate reductase
+- **Glucose**: Already depleted (not listed)
+
+## Nitrogen sources
+
+- **Ammonium (16.74 mM)**: Sufficient for the remaining growth window
+- **Amino acids**: Rich in both C and N; their catabolism will release excess ammonia
+
+## Fermentation strategy at this stage
+
+Given that glucose is gone and I've consumed most readily fermentable carbohydrates, I should pivot to:
+
+1. **Amino acid catabolism** (my specialty): Consume the abundant amino acids (cysteine, alanine, phenylalanine, leucine, etc.) via the Stickland reaction and branched-chain amino acid degradation
+2. **Propionate fermentation**: Use remaining propionate as a secondary carbon source
+3. **Maltose and arabinose**: Minor contributors; use if accessible
+4. **Fermentation products**: Acetate, propionate, butyrate, CO₂, H₂, and ammonia from amino acid deamination
+
+## Growth calculation
+
+**Available C from amino acids:**
+- Cysteine: 6.36 mM × 3 C = 19.1 mmol C
+- Alanine: 5.3 mM × 3 C = 15.9 mmol C
+- Phenylalanine: 4.5 mM × 9 C = 40.5 mmol C
+- Leucine, valine, isoleucine, etc.: ~20 mM total × avg 6 C ≈ 120 mmol C
+- Other amino acids: ~30 mM × avg 5 C ≈ 150 mmol C
+- **Total amino acid C: ~345 mmol C available**
+
+**Secondary C:**
+- Propionate: 14.3 mM × 3 C = 42.9 mmol C
+- Maltose: 4.4 mM × 12 C = 52.8 mmol C
+- Arabinose: 3.2 mM × 5 C = 16 mmol C
+- Formate: 9.7 mM × 1 C = 9.7 mmol C
+- **Total secondary C: ~121 mmol C**
+
+**Total C available: ~466 mmol C**
+
+Over 4 hours with 4.461 gDW/L starting biomass:
+- Growth cost: 42 mmol C per g new biomass
+- Assuming 0.35 /h growth (moderate, given nutrient stress): 0.35 × 4 × 4.461 = 6.24 g new biomass
+- C cost for growth: 6.24 × 42 = 262 mmol C
+- C remaining for fermentation products: 466 − 262 = 204 mmol C to release
+
+**N audit:**
+- Amino acid N: ~50 mM (rough estimate from amino acid pool)
+- Ammonium: 16.74 mM
+- Total N available: ~67 mM
+- Growth N cost: 6.24 g × 10 mmol/g = 62.4 mmol N
+- Remaining N (released as NH₄⁺): ~5 mM
+
+This is sustainable.
+
+## Flux assignment
+
+I will:
+1. **Consume amino acids** (cysteine, alanine, phenylalanine, leucine, valine, isoleucine, tyrosine, proline, threonine, glycine, histidine, methionine, tryptophan, glutamine, asparagine, lysine) at moderate rates (2–5 mmol/gDW/h for major ones)
+2. **Consume propionate** at 2 mmol/gDW/h
+3. **Consume maltose** at 1 mmol/gDW/h
+4. **Consume arabinose** at 0.8 mmol/gDW/h
+5. **Release acetate** (~3 mmol/gDW/h) — major fermentation product from amino acid catabolism
+6. **Release propionate** (~1 mmol/gDW/h) — from odd-chain amino acids and propionate reoxidation
+7. **Release butyrate** (~0.5 mmol/gDW/h) — from Stickland-like reactions
+8. **Release CO₂** (~3 mmol/gDW/h) — from decarboxylation of amino acids
+9. **Release H₂** (~1 mmol/gDW/h) — from ferredoxin reoxidation under anaerobiosis
+10. **Release NH₄⁺** (~1.5 mmol/gDW/h) — from deamination
+
+**Growth rate: 0.35 /h** (moderate, constrained by nutrient diversity and redox balance)
+
+---
+
+```json
+{
+  "fluxes": {
+    "cys__L": -4.5,
+    "ala__L": -4.0,
+    "phe__L": -3.5,
+    "leu__L": -2.8,
+    "val__L": -2.2,
+    "ile__L": -1.5,
+    "tyr__L": -2.0,
+    "pro__L": -1.8,
+    "thr__L": -1.5,
+    "gly": -1.2,
+    "his__L": -0.8,
+    "met__L": -0.6,
+    "trp__L": -0.5,
+    "gln__L": -2.0,
+    "asn__L": -1.8,
+    "lys__L": -1.5,
+    "asp__L": -0.3,
+    "glu__L": -0.4,
+    "ser__L": -0.2,
+    "ppa": -2.0,
+    "malt": -1.0,
+    "arab__L": -0.8,
+    "for": -0.5,
+    "ac": 3.2,
+    "but": 0.6,
+    "co2": 3.5,
+    "h2": 1.2,
+    "nh4": 1.8
+  },
+  "growth_rate": 0.35,
+  "rationale": "Amino acid catabolism dominates at this late stage; glucose exhausted. Propionate, maltose, arabinose provide secondary carbon. Fermentation yields acetate, butyrate, CO₂, H₂, and ammonia. Growth rate constrained by nutrient depletion and redox balance in anaerobiosis. Carbon audit: ~340 mmol C in (amino acids + secondary sources) minus ~262 mmol C for growth leaves ~78 mmol C for fermentation products (acetate, butyrate, CO₂ as CO₂ equivalents), which is consistent with fluxes shown.",
+  "confidence": 0.72
+}
+```

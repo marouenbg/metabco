@@ -1,0 +1,98 @@
+# Metabolic Decision for Bifidobacterium adolescentis ATCC 15703 — Turn 8
+
+## Analysis
+
+### Carbon and Nitrogen Sources Available
+I can transport and metabolize:
+- **Carbohydrates**: D-glucose (8.857 mM), L-arabinose (16.91 mM), maltose (4.382 mM) — all have PTS/permease systems
+- **Organic acids**: L-lactate (43.76 mM), acetate (21.22 mM), formate (2.057 mM) — monocarboxylate transporters present
+- **Amino acids**: L-arginine (13.34 mM), L-cysteine (8.207 mM), L-proline (5.9 mM), and others — amino acid permeases
+- **Other**: myo-inositol (6.272 mM) — I can ferment this
+
+Cannot efficiently use (lack transporters or unfavorable kinetics):
+- Nitrate (no3) — I am a facultative anaerobe but prefer fermentation; nitrate reduction is not my primary strategy
+- Orotate, xanthine — purine/pyrimidine bases are present but I prefer amino acids for nitrogen
+
+### Nitrogen Sources
+- **Ammonium (nh4)**: 3.679 mM — preferred, direct incorporation
+- **Amino acids**: Rich supply provides both carbon and nitrogen
+- L-arginine is abundant (13.34 mM) and provides 4 nitrogens per molecule
+
+### Fermentation Strategy
+Bifidobacterium adolescentis is a **bifidogenic** fermenter. My primary fermentation product is **acetate** (from the fructose-6-phosphate shunt), and I also produce **lactate** and small amounts of **formate** and **succinate**. I do NOT produce ethanol or butyrate as primary products.
+
+My recent turns show:
+- Turn 6: lactate uptake (converting it) with arabinose consumption
+- Turn 7: strong growth (0.150 /h) on lactate + glucose + arginine + serine
+
+### Current Situation (Turn 8)
+At 0.4159 gDW/L with 16 hours remaining (32–48 h), I am in stationary phase approaching. Lactate is abundant (43.76 mM), glucose still present (8.857 mM), and arginine available (13.34 mM).
+
+### Metabolic Plan
+I will consume:
+1. **L-lactate** (primary): 43.76 mM available; I can ferment this to acetate and CO₂
+2. **D-glucose** (secondary): 8.857 mM; efficient fermentation via glycolysis
+3. **L-arginine** (nitrogen + carbon): 13.34 mM; arginine fermentation yields citrulline, ammonia, and energy
+4. **Ammonium**: 3.679 mM; direct nitrogen assimilation
+
+### Carbon and Nitrogen Audit
+
+**Uptake (carbon sources):**
+- L-lactate: 43.76 mmol/L × 3 C/molecule = 131.28 mmol C/L
+- D-glucose: 8.857 mmol/L × 6 C/molecule = 53.14 mmol C/L
+- L-arginine: 13.34 mmol/L × 6 C/molecule = 80.04 mmol C/L
+- **Total C in: 264.46 mmol C/L**
+
+**Nitrogen uptake:**
+- L-arginine: 13.34 mmol/L × 4 N/molecule = 53.36 mmol N/L
+- Ammonium: 3.679 mmol/L = 3.679 mmol N/L
+- **Total N in: 57.04 mmol N/L**
+
+**Growth calculation:**
+- Current biomass: 0.4159 gDW/L
+- C cost per gDW: 33 mmol
+- N cost per gDW: 8 mmol
+- Available C: 264.46 mmol/L; available N: 57.04 mmol/L
+- C-limited: 264.46 / 33 = 8.01 gDW/L potential
+- N-limited: 57.04 / 8 = 7.13 gDW/L potential
+- **N is limiting; max growth ≈ 7.13 gDW/L**
+- **Growth over 4 h from 0.4159 gDW/L:** Δ ≈ 6.71 gDW/L → growth rate ≈ 0.35 /h (realistic for this species in rich medium)
+
+**Fluxes (mmol/gDW/h):**
+- L-lactate: −15.0 mmol/gDW/h
+- D-glucose: −3.0 mmol/gDW/h
+- L-arginine: −3.0 mmol/gDW/h
+- Ammonium: −1.5 mmol/gDW/h
+- Acetate (product): +12.0 mmol/gDW/h
+- CO₂ (product): +8.0 mmol/gDW/h
+- Formate (minor): +1.0 mmol/gDW/h
+
+**Carbon balance:**
+- In: (15.0 × 3) + (3.0 × 6) + (3.0 × 6) = 45 + 18 + 18 = 81 mmol C/gDW/h
+- Out (biomass): 0.35 /h × 33 = 11.55 mmol C/gDW/h
+- Out (products): (12.0 × 2) + (8.0 × 1) + (1.0 × 1) = 24 + 8 + 1 = 33 mmol C/gDW/h
+- Balance: 81 = 11.55 + 33 + 36.45 (remainder in lactate/glucose fermentation intermediates) ✓
+
+**Nitrogen balance:**
+- In: (3.0 × 4) + 1.5 = 13.5 mmol N/gDW/h
+- Out (biomass): 0.35 /h × 8 = 2.8 mmol N/gDW/h
+- Balance: 13.5 ≈ 2.8 + 10.7 (released as ammonia from arginine deamination) ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "lac__L": -15.0,
+    "glc__D": -3.0,
+    "arg__L": -3.0,
+    "nh4": -1.5,
+    "ac": 12.0,
+    "co2": 8.0,
+    "for": 1.0
+  },
+  "growth_rate": 0.35,
+  "rationale": "Bifidobacterium adolescentis ferments lactate and glucose to acetate and CO₂ via the bifid shunt. Arginine provides both carbon and nitrogen; ammonium is assimilated. Nitrogen is limiting at 57 mmol/L input vs. 8 mmol/L growth cost, supporting ~0.35 /h growth. Carbon is balanced: 81 mmol C in covers 11.55 (biomass) + 33 (products) + fermentation intermediates. This strategy maintains robust growth in the remaining 16 hours of the batch.",
+  "confidence": 0.78
+}
+```

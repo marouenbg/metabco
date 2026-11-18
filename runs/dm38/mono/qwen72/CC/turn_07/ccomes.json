@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "but": -3.0,
+  "ala__L": -2.0,
+  "pro__L": -2.0,
+  "lac__L": 2.0,
+  "nh4": 1.0
+ },
+ "growth_rate": 0.375,
+ "confidence": 0.8,
+ "rationale": "Balanced uptake of acetate, butyrate, alanine, and proline to support growth and produce lactate and ammonium."
+}

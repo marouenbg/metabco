@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 4,
+  "growth_claimed": 0.099,
+  "growth_allowed": 0.099,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.124 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0259 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Using CO2 as primary carbon source, taking up ammonium, and secreting butyrate, formate, and acetate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "co2": -46.79,
+   "arg__L": -23.13,
+   "but": 4.79,
+   "lac__L": 4.79,
+   "for": 4.79,
+   "ac": 4.79
+  },
+  "fluxes_applied": {
+   "co2": -46.79,
+   "arg__L": -23.13,
+   "but": 4.79,
+   "lac__L": 4.79,
+   "for": 4.79,
+   "ac": 4.79,
+   "pi": -0.124,
+   "so4": -0.0259
+  }
+ }
+]

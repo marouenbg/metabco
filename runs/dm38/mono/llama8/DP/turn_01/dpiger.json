@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "h2s": 10.0,
+  "for": 10.0,
+  "ac": 5.0
+ },
+ "growth_rate": 0.27,
+ "rationale": "I choose to take up lactate, release formate and acetate, and support a growth rate of 0.270/h.",
+ "confidence": 0.9
+}

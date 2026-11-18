@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": 5.0,
+  "glc__D": -10.0,
+  "arg__L": -2.0,
+  "cys__L": -2.0,
+  "ser__L": -2.0,
+  "but": 5.0,
+  "for": 2.0,
+  "lac__D": 2.0
+ },
+ "growth_rate": 0.7,
+ "rationale": "Utilizing lactate and glucose for growth, producing acetate and lactate as byproducts.",
+ "confidence": 0.8
+}

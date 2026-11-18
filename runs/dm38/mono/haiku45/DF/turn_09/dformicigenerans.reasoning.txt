@@ -1,0 +1,75 @@
+# Metabolic reasoning for Dorea formicigenerans at t=36h
+
+## Assessment of my situation
+I am at 3.6 gDW/L, 36 hours into a 48-hour batch culture. I have been reporting zero growth for the past four turns while releasing fermentation products. This is the critical phase: resources are depleting and I must decide whether to continue catabolizing or attempt growth.
+
+## Carbon and nitrogen source availability
+
+**Primary carbon sources I can use:**
+- **Butyrate (62.33 mmol/L)**: Dorea formicigenerans is a butyrate-producing bacterium; I can ferment butyrate via β-oxidation or use it directly
+- **Acetate (55.06 mmol/L)**: I can activate and metabolize acetate
+- **Formate (25.95 mmol/L)**: Available for catabolism
+- **CO₂ (116.2 mmol/L)**: Present but I cannot fix CO₂ autotrophically; I use it as a sink for reducing equivalents
+- **Amino acids (various)**: I have transported and catabolized these in previous turns; they are available but limited
+
+**Nitrogen sources:**
+- **Ammonium (10.21 mmol/L)**: The primary inorganic nitrogen source, directly assimilable
+- **Amino acids**: Contain nitrogen; I can deaminate them
+
+## Growth constraint calculation
+
+For growth at rate μ (per hour), I need:
+- **Carbon**: ~33 mmol C per gram DW
+- **Nitrogen**: ~7 mmol N per gram DW
+
+At μ = 0.3 /h over 4 hours:
+- Biomass produced: 0.3 × 4 = 1.2 gDW (per gDW initial)
+- Carbon needed: 1.2 × 33 = 39.6 mmol C/gDW
+- Nitrogen needed: 1.2 × 7 = 8.4 mmol N/gDW
+
+My nitrogen is limiting. At 10.21 mmol/L NH₄⁺ in a 1 mL flask = 10.21 mmol total, and I'm at 3.6 gDW, I have ~2.8 mmol N/gDW available. This supports only modest growth.
+
+## Realistic growth rate
+
+Given nitrogen limitation and the need to maintain ATP/redox balance:
+- If I take up 5 mmol butyrate/gDW/h and 2 mmol acetate/gDW/h, I get ~7 mmol C/gDW/h
+- Over 4 hours: 28 mmol C available for growth + catabolism
+- With 8.4 mmol needed for 0.3 /h growth, I have ~19.6 mmol for maintenance and overflow fermentation
+- Growth rate: **μ = 0.25 /h** is sustainable
+
+## Fermentation strategy
+
+Dorea formicigenerans primarily produces **butyrate and acetate** from carbohydrate fermentation. Since I'm in the stationary/decline phase with limited fresh substrate:
+- I will take up remaining butyrate and acetate
+- I will release **acetate**, **formate**, and **CO₂** as overflow products
+- I will scavenge amino acids to supplement nitrogen
+
+## Mass balance audit (per gDW over 4h, μ=0.25/h)
+
+**Carbon in:**
+- Butyrate: 5.0 mmol × 4 C/butyrate = 20 mmol C
+- Acetate: 2.0 mmol × 2 C/acetate = 4 mmol C
+- Amino acids (mixed): ~3.0 mmol × avg 5 C = 15 mmol C
+- **Total in: 39 mmol C**
+
+**Carbon out:**
+- Biomass: 0.25 × 4 × 33 = 33 mmol C
+- Acetate release: 2.5 mmol × 2 = 5 mmol C
+- Formate release: 1.0 mmol × 1 = 1 mmol C
+- **Total out: 39 mmol C** ✓
+
+**Nitrogen in:**
+- NH₄⁺: 2.55 mmol (uptake rate 2.55/4h)
+- Amino acids: ~3.0 mmol
+- **Total in: 5.55 mmol N**
+
+**Nitrogen out:**
+- Biomass: 0.25 × 4 × 7 = 7 mmol N... *This exceeds intake.*
+
+**Correction**: I must reduce growth to μ = 0.18 /h to match nitrogen availability.
+
+At μ = 0.18/h: nitrogen cost = 0.18 × 4 × 7 = 5.04 mmol N ✓
+
+Revised uptake: butyrate 4.0, acetate 1.5, amino acids (net N) 2.5 mmol/gDW/h.
+
+{"fluxes": {"but": -4.0, "ac": -1.5, "nh4": -2.2, "phe__L": -0.8, "leu__L": -0.6, "ac": 2.0, "for": 1.2, "co2": 3.5, "h2": 0.1}, "growth_rate": 0.18, "rationale": "Nitrogen-limited growth in stationary phase. Fermenting butyrate and acetate with amino acid supplementation. Releasing acetate, formate, and CO2 as overflow. Nitrogen availability constrains growth to 0.18/h.", "confidence": 0.62}

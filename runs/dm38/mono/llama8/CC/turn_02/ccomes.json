@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": 30.054,
+  "cys__L": 0.018,
+  "ser__L": 0.01,
+  "gly": 0.001,
+  "nh4": -0.001,
+  "lac__L": 30.054,
+  "for": 0.003,
+  "etoh": 0.003
+ },
+ "growth_rate": 0.012,
+ "rationale": "I chose to take up D-glucose and L-cysteine as my carbon and nitrogen sources, respectively, to support growth. I will also release L-lactate, formate, and ethanol as my fermentation products.",
+ "confidence": 0.8
+}

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "arab__L": -5.0,
+  "ac": 3.0,
+  "but": 2.0,
+  "inost": -1.0,
+  "gly": -0.5,
+  "nh4": 0.5,
+  "ppa": 1.0
+ },
+ "growth_rate": 0.0625,
+ "confidence": 0.85,
+ "rationale": "Balanced metabolism with available carbon and nitrogen sources, limited by nitrogen availability."
+}

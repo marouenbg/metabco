@@ -1,0 +1,103 @@
+# Metabolic Decision — Turn 3, t = 12.00 h
+
+## Analysis
+
+### Current State
+I am at 2.388 gDW/L with 48 hours total runtime. I've been growing well in turns 0–1 but stalled at turn 2, likely due to substrate depletion or metabolic imbalance. I need to reassess what I can actually transport and metabolize.
+
+### Carbon and Nitrogen Sources: Capability Assessment
+
+**Primary carbohydrates (which I can ferment):**
+- D-glucose (glc__D): 3.02 mM — I have PTS transporters for glucose; this is my preferred substrate
+- Maltose (malt): 4.382 mM — I have maltose transporters
+- L-arabinose: consumed at turn 2, but now depleted (not listed); I can transport this
+- myo-inositol (inost): 6.272 mM — I have inositol transporters
+
+**Amino acids & small organic acids (nitrogen and/or carbon):**
+- L-arginine (arg__L): 13.56 mM — I can transport and ferment; excellent N source
+- L-lactate (lac__L): 5.119 mM — I can consume lactate via lactate oxidoreductase
+- L-proline (pro__L): 5.9 mM — I can transport; ferments to succinate + CO₂
+- Acetate (ac): 24.41 mM — I can import but only use if I have acetyl-CoA synthetase; at pH 7 and with my metabolic state, uptake is limited
+- Butyrate (but): 8.28 mM — I can import and β-oxidize
+- Propionate (ppa): 7.693 mM — I can import
+- Other amino acids: serine, alanine, glycine, leucine, valine, etc. — all transportable
+
+**Inorganic nitrogen:**
+- Ammonium (nh4): 4.054 mM — essential, always taken up as needed
+
+### Why I Stalled at Turn 2
+
+The zero growth at turn 2 suggests I over-committed to L-arabinose (12 mmol/gDW/h uptake) without corresponding nitrogen, or hit a redox bottleneck. Fermentation of sugars alone without amino acid co-fermentation can lead to NADH overflow and growth arrest.
+
+### Fermentation Strategy for This Turn
+
+As an obligate anaerobe, I ferment via the Stickland reaction (amino acid pairs) and sugar fermentation:
+- **Paired amino acid fermentation (Stickland):** e.g., arginine + proline → alanine + CO₂ + NH₃ + energy
+- **Lactate fermentation:** lactate → propionate + acetate + CO₂
+- **Sugar fermentation:** glucose/inositol → mixed acids (acetate, butyrate, propionate, lactate) + CO₂
+
+### Choosing Substrates
+
+Given constraints:
+1. **Glucose (glc__D):** 3.02 mM available. I'll take 10 mmol/gDW/h (moderate, avoiding overflow).
+2. **L-arginine (arg__L):** 13.56 mM. I'll take 5 mmol/gDW/h (pairs with proline in Stickland).
+3. **L-proline (pro__L):** 5.9 mM. I'll take 3 mmol/gDW/h (Stickland partner for arginine).
+4. **L-lactate (lac__L):** 5.119 mM. I'll take 4 mmol/gDW/h (good reductant for redox balance).
+5. **Ammonium (nh4):** As needed for growth.
+
+### Carbon and Nitrogen Budget
+
+**Carbon in (mmol/gDW/h):**
+- Glucose: 10 mmol × 6 C/mol = 60 mmol C
+- Arginine: 5 mmol × 6 C/mol = 30 mmol C
+- Proline: 3 mmol × 5 C/mol = 15 mmol C
+- Lactate: 4 mmol × 3 C/mol = 12 mmol C
+- **Total in: 117 mmol C/gDW/h**
+
+**Nitrogen in (mmol/gDW/h):**
+- Arginine: 5 mmol × 4 N/mol = 20 mmol N
+- Proline: 3 mmol × 1 N/mol = 3 mmol N
+- Ammonium: uptake as needed = ~5 mmol N (to balance)
+- **Total in: ~28 mmol N/gDW/h**
+
+**Growth rate calculation:**
+- C cost: 41 mmol C per gDW → 117 / 41 ≈ 2.85 gDW/h possible
+- N cost: 8 mmol N per gDW → 28 / 8 = 3.5 gDW/h possible
+- N is limiting → **max growth ≈ 0.4 /h** (conservative; realistic for batch)
+
+I'll set growth to **0.35 /h** (safe margin).
+
+**Carbon out (mmol/gDW/h):**
+- Biomass: 0.35 gDW/h × 41 mmol C/gDW = 14.35 mmol C
+- Fermentation products (acetate, butyrate, propionate, CO₂):
+  - Remaining: 117 − 14.35 = 102.65 mmol C
+  - Distributed as: acetate (40), butyrate (25), propionate (20), CO₂ (17.65)
+
+**Audit:** 117 in = 14.35 (growth) + 102.65 (products) ✓
+
+### Nitrogen Audit
+- In: 28 mmol N
+- Biomass: 0.35 × 8 = 2.8 mmol N
+- Out (ammonia release): 28 − 2.8 = 25.2 mmol N ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "arg__L": -5.0,
+    "pro__L": -3.0,
+    "lac__L": -4.0,
+    "nh4": -5.0,
+    "ac": 40.0,
+    "but": 25.0,
+    "ppa": 20.0,
+    "co2": 17.65,
+    "h2": 0.0
+  },
+  "growth_rate": 0.35,
+  "rationale": "Stickland fermentation (arginine + proline) coupled with glucose and lactate fermentation to balance redox and sustain growth. Amino acid pairing avoids redox overflow that caused turn 2 stall. Carbon and nitrogen budgets close with conservative growth rate.",
+  "confidence": 0.65
+}
+```

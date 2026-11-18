@@ -1,0 +1,32 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 5,
+  "growth_claimed": 0.229,
+  "growth_allowed": 0.229,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [],
+  "rationale": "Maximizing growth by utilizing glucose and arginine, producing acetate and formate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "for": 5.0,
+   "nh4": 5.39,
+   "pi": -0.71,
+   "so4": -0.16
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "for": 5.0,
+   "nh4": 5.39,
+   "pi": -0.71,
+   "so4": -0.16
+  }
+ }
+]

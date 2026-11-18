@@ -1,0 +1,15 @@
+As Bifidobacterium longum NCC2705, I will evaluate my metabolic strategy for the next 4.00 hours.
+
+Upon reviewing the available nutrients, I notice that I can transport a variety of carbon sources, including CO2, L-lactate, and D-glucose. However, I am unable to utilize the abundant CO2 due to the lack of a suitable carbon fixation pathway in my genome. Similarly, I can take up L-lactate and D-glucose, but I must be mindful of the transport rates, as excessive uptake can lead to substrate limitation.
+
+As a lactic acid bacterium, I am known to produce lactate as a primary fermentation product. I can also produce formate, but at a lower rate. Acetate is also a potential product, but I must be cautious not to overproduce it, as it can be inhibitory to my growth.
+
+To determine the growth rate supported by my chosen uptake, I will calculate it based on the carbon and nitrogen requirements. Assuming I take up 20 mmol/gDW/h of D-glucose, I will require approximately 38 mmol/gDW/h of carbon and 10 mmol/gDW/h of nitrogen for growth. Given the available D-glucose concentration, I can support a growth rate of approximately 0.55/h.
+
+To perform a carbon audit, I will calculate the total carbon in taken up by my chosen uptake. I will take up 20 mmol/gDW/h of D-glucose (12.66 mmol/gDW/h of carbon) and 2 mmol/gDW/h of L-lactate (2 mmol/gDW/h of carbon). Additionally, I will produce 2 mmol/gDW/h of lactate and 2 mmol/gDW/h of formate as fermentation products. The total carbon in is 18.66 mmol/gDW/h, which covers the carbon out (18.66 mmol/gDW/h) plus the biomass cost (38 mmol/gDW/h).
+
+Considering all the above factors, I will choose the following exchange fluxes for the next 4.00 hours:
+
+{"fluxes": {"glc__D": -20.0, "lac__L": -2.0, "for": 2.0, "lac__D": 2.0, "ac": 4.0}, "growth_rate": 0.55, "rationale": "D-glucose and L-lactate uptake to support growth, with formate and lactate production as fermentation products."}
+
+{"confidence": 0.9}

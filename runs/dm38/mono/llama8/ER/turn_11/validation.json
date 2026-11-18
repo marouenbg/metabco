@@ -1,0 +1,47 @@
+[
+ {
+  "species_id": "erectale",
+  "turn": 11,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: glc__D",
+   "c_imbalance: in=10 out=116 biomass=8.32",
+   "n_imbalance: in=0 out=6.17 biomass=0"
+  ],
+  "warnings": [],
+  "repairs": [
+   "S: credited 3.81e-05 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.25 -> 0",
+   "C: secretions scaled by 0.0905",
+   "N: secretions scaled by 0"
+  ],
+  "rationale": "Based on my transporters and the abundance of carbon sources in the environment, I've chosen to take up D-glucose (glc__D), L-lactate (lac__L), and Acetate (ac) at a rate of 10 mmol/gDW/h. I've also c",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": 10.0,
+   "lac__L": 10.0,
+   "ac": 10.0,
+   "nh4": 6.17,
+   "co2": -10.0,
+   "h2s": 0.0,
+   "h2": 0.0,
+   "for": 6.0,
+   "pi": -0.23,
+   "so4": -0.05
+  },
+  "fluxes_applied": {
+   "glc__D": 0.9052,
+   "lac__L": 0.9052,
+   "ac": 0.9052,
+   "nh4": 0.0,
+   "co2": -10.0,
+   "h2s": 0.0,
+   "h2": 0.0,
+   "for": 0.5431,
+   "pi": -0.23,
+   "so4": -0.05
+  }
+ }
+]

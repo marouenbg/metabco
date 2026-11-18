@@ -1,0 +1,32 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 10,
+  "growth_claimed": 0.0,
+  "growth_allowed": 0.0,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [],
+  "rationale": "Nitrogen severely limiting (0.77 mM NH\u2084\u207a remaining for 2.42 gDW culture). Cannot support growth. Entering stationary phase. Slow amino acid catabolism for maintenance ATP only.",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "gly": -0.5,
+   "thr__L": -0.3,
+   "asp__L": -0.2,
+   "glu__L": -0.2,
+   "for": 0.8,
+   "h2": 0.3,
+   "co2": 0.2
+  },
+  "fluxes_applied": {
+   "gly": -0.5,
+   "thr__L": -0.3,
+   "asp__L": -0.2,
+   "glu__L": -0.2,
+   "for": 0.8,
+   "h2": 0.3,
+   "co2": 0.2
+  }
+ }
+]

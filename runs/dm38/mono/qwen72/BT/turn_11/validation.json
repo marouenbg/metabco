@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 11,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: etoh"
+  ],
+  "repairs": [
+   "P: credited 0.136 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Balanced carbon and nitrogen uptake to support growth and fermentation product release.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": 2.0,
+   "but": 1.0,
+   "ppa": 0.0,
+   "lac__L": 0.0,
+   "cys__L": -1.0,
+   "tyr__L": -1.0,
+   "phe__L": -1.0,
+   "etoh": 0.5,
+   "for": 0.5
+  },
+  "fluxes_applied": {
+   "ac": 2.0,
+   "but": 1.0,
+   "ppa": 0.0,
+   "lac__L": 0.0,
+   "cys__L": -1.0,
+   "tyr__L": -1.0,
+   "phe__L": -1.0,
+   "etoh": 0.5,
+   "for": 0.5,
+   "pi": -0.1364
+  }
+ }
+]

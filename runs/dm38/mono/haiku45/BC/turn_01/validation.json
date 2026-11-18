@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 1,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.313 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0654 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Glucose and lactate co-fermentation with arginine and ammonia for nitrogen. Growth limited by nitrogen availability (3 mmol/gDW/h vs. 10 mmol/g demand). Mixed-acid fermentation yields acetate, formate",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -9.0,
+   "lac__L": -2.0,
+   "arg__L": -1.5,
+   "nh4": -1.5,
+   "ac": 2.0,
+   "co2": 0.8,
+   "for": 0.3
+  },
+  "fluxes_applied": {
+   "glc__D": -9.0,
+   "lac__L": -2.0,
+   "arg__L": -1.5,
+   "nh4": -1.5,
+   "ac": 2.0,
+   "co2": 0.8,
+   "for": 0.3,
+   "pi": -0.3132,
+   "so4": -0.0654
+  }
+ }
+]

@@ -1,0 +1,99 @@
+# Reasoning through my metabolic strategy at t = 28 h
+
+## Assessment of my situation
+I am *Eubacterium rectale*, a butyrate-producing bacterium, currently at 3.564 gDW/L in a sealed anaerobic vessel. I've been fermenting available carbohydrates and amino acids for 28 hours. The glucose and arabinose that sustained early growth are now depleted (not listed in current inventory). I must now switch to the remaining carbon and nitrogen sources.
+
+## Available carbon sources I can use
+- **Acetate** (26.65 mM): I can ferment this via acetyl-CoA pathways; this is a primary substrate for butyrate producers in the Roseburia/Eubacterium clade
+- **Butyrate** (24.46 mM): Already produced by me; I can catabolize it via β-oxidation if needed, but it's energetically unfavorable and I prefer to make it
+- **Formate** (10.92 mM): Fermentable via formate dehydrogenase; I use this
+- **L-arginine** (12.88 mM): Fermentable via arginine dihydrolase pathway; yields ATP, CO₂, ammonia, and can feed into butyrate synthesis
+- **Amino acids** (serine, proline, leucine, etc.): I can ferment these via various deaminase and transamination pathways
+- **myo-inositol** (6.272 mM): Some Eubacterium species can ferment this; it's a 6-carbon sugar alcohol
+- **CO₂** (109.5 mM): Abundant but I use this primarily as a product/buffer, not a growth substrate in fermentation
+
+**Cannot efficiently use:** Butyrate is my product, not my primary substrate at this stage.
+
+## Nitrogen sources
+- **Ammonium** (0.9837 mM): Very low; limiting
+- **L-arginine** (12.88 mM): Rich source; can be fermented and yields NH₃
+- **Amino acids** (multiple): Can be deaminated to yield nitrogen and carbon skeletons
+- **Nitrate** (0.1093 mM): Trace; I'm anaerobic and cannot reduce it efficiently
+
+## Known fermentation products of E. rectale
+I am a primary butyrate producer. My main products are:
+- **Butyrate** (C₄): My signature product via acetyl-CoA condensation
+- **Acetate** (C₂): Byproduct, overflow metabolism
+- **CO₂**: From decarboxylations
+- **Formate**: From pyruvate; can be oxidized or released
+- **H₂**: From pyruvate formate-lyase and hydrogenases (trace)
+- Rarely: lactate, ethanol, or propionate under specific conditions
+
+## Strategy for this interval
+
+At this point in the batch culture (28 h of 48 h total), I have:
+- Acetate remaining (26.65 mM)
+- Arginine (12.88 mM) — excellent fermentation substrate
+- Amino acids — secondary
+- Formate (10.92 mM) — can recycle
+- Nitrogen is severely limiting (only 0.98 mM NH₄⁺ free, but arginine + amino acids provide ~50+ mM N if fully catabolized)
+
+**Primary strategy:** 
+1. Ferment acetate via acetyl-CoA → butyrate (my core metabolism)
+2. Ferment arginine via arginine dihydrolase → ATP + NH₃ + CO₂ + ornithine → further metabolism
+3. Use amino acids as both carbon and nitrogen sources
+4. Maintain butyrate production as the dominant fermentation product
+
+**Growth rate estimation:**
+- Current biomass: 3.564 gDW/L
+- Acetate uptake: ~12 mmol/gDW/h (realistic for acetate fermentation in butyrate producers)
+- Arginine uptake: ~4 mmol/gDW/h (secondary, but rich in N)
+- Amino acid uptake (serine, alanine, etc.): ~3 mmol/gDW/h
+- Total C uptake: ~19 mmol C/gDW/h (mostly from acetate)
+- Growth yield on acetate in fermentation: ~0.05 gDW/mmol acetate
+- Expected growth: **0.40–0.50 /h** (I'll use 0.45 /h as a realistic middle estimate)
+
+This requires:
+- C for growth: 0.45 × 33 = 14.85 mmol C/gDW/h
+- N for growth: 0.45 × 7 = 3.15 mmol N/gDW/h
+
+**Carbon audit:**
+- Acetate in: 12 mmol C/gDW/h (2 C per acetate)
+- Arginine in: 4 mmol × 6 C/arg = 24 mmol C/gDW/h
+- Amino acids in: 3 mmol × 4.5 C avg = 13.5 mmol C/gDW/h
+- **Total C in: ~50 mmol C/gDW/h**
+
+- Growth consumes: 14.85 mmol C/gDW/h
+- Butyrate out: ~20 mmol C/gDW/h (4 C per butyrate; typical overflow)
+- Acetate out: ~3 mmol C/gDW/h (overflow)
+- CO₂ out: ~12 mmol C/gDW/h (decarboxylations)
+- **Total C out: ~50 mmol C/gDW/h** ✓
+
+**Nitrogen audit:**
+- Arginine: 4 mmol N/gDW/h
+- Amino acids (avg): 3 mmol × 1 N/aa = 3 mmol N/gDW/h
+- NH₄ available: 0.98 mmol/L; minimal uptake ~0.5 mmol/gDW/h
+- **Total N in: ~7.5 mmol N/gDW/h**
+- Growth needs: 3.15 mmol N/gDW/h
+- Released as NH₃: ~4.35 mmol N/gDW/h ✓
+
+## Final fluxes
+
+```json
+{
+  "fluxes": {
+    "ac": -12.0,
+    "arg__L": -4.0,
+    "ser__L": -1.5,
+    "ala__L": -1.0,
+    "gly": -0.5,
+    "but": 20.0,
+    "co2": 12.0,
+    "for": 3.0,
+    "nh4": 4.5
+  },
+  "growth_rate": 0.45,
+  "rationale": "Eubacterium rectale ferments acetate and arginine as primary C and N sources, producing butyrate as the dominant product. Acetate (12 mmol/gDW/h) drives butyrate synthesis; arginine (4 mmol/gDW/h) provides both C and N via dihydrolase pathway. Amino acids supplement C and N. Growth rate of 0.45 /h is supported by ~50 mmol C/gDW/h input, with 14.85 mmol consumed for biomass, remainder as fermentation products (butyrate, acetate, CO₂, formate). Nitrogen balance: arginine + amino acids + trace NH₄ supply 7.5 mmol N/gDW/h; growth consumes 3.15, excess released as NH₃.",
+  "confidence": 0.72
+}
+```

@@ -1,0 +1,95 @@
+# Metabolic decision for Bacteroides ovatus, turn 7
+
+## Assessment of available resources and capabilities
+
+I am a Gram-negative anaerobe specialized in polysaccharide and complex carbohydrate fermentation. Let me evaluate what I can actually use:
+
+**Carbon sources I can transport and metabolize:**
+- **Propionate (ppa)**: 12.31 mM available. I can take this up and ferment it via the methylmalonyl-CoA pathway.
+- **Acetate (ac)**: 5.8 mM available. I can use acetate, though it's less efficient than propionate for growth.
+- **Succinate (succ)**: 5.192 mM available. I can ferment succinate.
+- **myo-inositol (inost)**: 6.272 mM available. I possess inositol transporters and can ferment this via the Dahms pathway.
+- **Maltose (malt)**: 4.382 mM available. I have maltose PTS and can ferment this.
+- **Amino acids**: I have amino acid transporters. L-arginine (6.002 mM), L-proline (5.9 mM), L-cysteine (5.528 mM), and others are available for catabolism and protein synthesis.
+
+**Carbon sources I cannot use:**
+- Glucose is not currently present (I consumed it turns 4-5).
+- L-arabinose is depleted.
+- Lactate from my previous fermentation is still present but I'm not re-consuming it at this point.
+
+## Nitrogen sources
+- L-arginine: 6.002 mM (excellent; can be catabolized for both carbon and nitrogen)
+- Multiple other amino acids available for protein synthesis
+- Nitrate: only 0.1093 mM (minimal)
+- No ammonium listed, so I must rely on amino acid catabolism and uptake for nitrogen
+
+## Fermentation strategy
+
+At 28 h into a 48 h batch, I am mid-exponential. Resources are finite but still substantial. My recent pattern shows I can grow at 0.35-0.8 /h when substrates are abundant.
+
+**Preferred strategy:**
+1. **Primary carbon uptake**: Propionate (most abundant at 12.31 mM) via methylmalonyl-CoA fermentation
+2. **Secondary carbon**: myo-inositol (6.272 mM) via inositol fermentation
+3. **Nitrogen**: L-arginine (6.002 mM) for both carbon skeletons and amino groups
+4. **Supplementary amino acids**: L-cysteine, L-proline for protein synthesis
+
+**Fermentation products** (typical for Bacteroides):
+- Acetate (primary end product)
+- Propionate (from propionate fermentation cycling)
+- Succinate (from inositol and propionate fermentation)
+- CO₂ (from decarboxylation)
+- H₂ (minor, from formate production)
+
+## Growth rate calculation
+
+**Carbon budget:**
+- Propionate uptake: 10 mmol/gDW/h (conservative, leaving buffer)
+- myo-inositol uptake: 4 mmol/gDW/h (C6 sugar, 6 carbons each)
+- L-arginine uptake: 2 mmol/gDW/h (C6N4 amino acid, 6 carbons each)
+- L-cysteine uptake: 1 mmol/gDW/h (C3 amino acid)
+
+**Total carbon in**: (10×3) + (4×6) + (2×6) + (1×3) = 30 + 24 + 12 + 3 = **69 mmol C/gDW/h**
+
+**Carbon out (fermentation products):**
+- Acetate: 8 mmol/gDW/h (C2)
+- Propionate: 2 mmol/gDW/h (C3)
+- Succinate: 3 mmol/gDW/h (C4)
+- CO₂: 4 mmol/gDW/h (C1)
+- Formate: 1 mmol/gDW/h (C1)
+
+**Total carbon out**: (8×2) + (2×3) + (3×4) + (4×1) + (1×1) = 16 + 6 + 12 + 4 + 1 = **39 mmol C/gDW/h**
+
+**Carbon for growth**: 69 - 39 = 30 mmol C/gDW/h
+**Growth rate**: 30 / 42 = **0.71 /h**
+
+**Nitrogen budget:**
+- L-arginine: 2 mmol/gDW/h × 4 N atoms = 8 mmol N
+- L-cysteine: 1 mmol/gDW/h × 1 N atom = 1 mmol N
+- Total N in: 9 mmol N/gDW/h
+- N for growth: 0.71 /h × 10 = 7.1 mmol N/gDW/h
+- Surplus N for excretion: ~2 mmol/gDW/h (as ammonia or other products)
+
+This is balanced and realistic.
+
+---
+
+```json
+{
+  "fluxes": {
+    "ppa": -10.0,
+    "inost": -4.0,
+    "arg__L": -2.0,
+    "cys__L": -1.0,
+    "ac": 8.0,
+    "ppa": 2.0,
+    "succ": 3.0,
+    "co2": 4.0,
+    "for": 1.0,
+    "nh4": 2.0,
+    "pi": -0.35
+  },
+  "growth_rate": 0.71,
+  "rationale": "Propionate and myo-inositol are abundant and fermentable. Arginine and cysteine provide nitrogen and additional carbon. Fermentation yields acetate, propionate, succinate, CO₂, and formate in proportions consistent with Bacteroides mixed-acid fermentation. Carbon and nitrogen budgets balance; growth rate supported by available amino acid nitrogen.",
+  "confidence": 0.72
+}
+```

@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "buniformis",
+  "turn": 7,
+  "growth_claimed": 0.27,
+  "growth_allowed": 0.27,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.338 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0707 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing available carbon and nitrogen sources to support growth and produce short-chain fatty acids",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "ppa": -3.0,
+   "arg__L": -2.0,
+   "but": 2.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "ppa": -3.0,
+   "arg__L": -2.0,
+   "but": 2.0,
+   "pi": -0.3382,
+   "so4": -0.0707
+  }
+ }
+]

@@ -1,0 +1,81 @@
+# Metabolic Decision: Bacteroides caccae ATCC 43185, turn 11
+
+## Analysis
+
+**Carbon and nitrogen sources available to me:**
+
+I am a Gram-negative anaerobic bacterium with saccharolytic and amino-acid fermenting capabilities. Looking at my recent history and known metabolism:
+
+- **Acetate (26.61 mM)**: I can ferment and use this. High abundance.
+- **Formate (17.75 mM)**: I can metabolize formate via formate hydrogen lyase or incorporation into central carbon.
+- **Propionate (7.163 mM)**: I produce and can re-utilize propionate.
+- **myo-inositol (4.488 mM)**: I can ferment this via my inositol utilization pathway (characteristic of Bacteroides).
+- **Butyrate (1.127 mM)**: I can produce and utilize butyrate.
+- **Ammonium (15.49 mM)**: My primary nitrogen source, abundant.
+- **Sugars (maltose, arabinose)**: I have some capacity but these are now depleted or very low.
+- **Amino acids**: I can catabolize these, but they appear to be mostly consumed already.
+
+**What I cannot use:**
+- Nitrate (0.1093 mM): Bacteroides caccae lacks nitrate reductase; anaerobic, but not denitrifying.
+- The vitamins and nucleobases are cofactors/growth factors—not primary carbon sources.
+
+**Fermentation products I make:**
+As an obligate anaerobe with mixed-acid fermentation capability, I produce:
+- Acetate (main product)
+- Propionate 
+- Butyrate
+- Formate
+- CO₂
+- H₂ (minor, under low redox)
+- Succinate (minor, from carboxylation)
+
+**Current growth phase:**
+At 44 h in a 48 h batch, I am in late stationary/decline phase. Biomass is 4.679 gDW/L. Soluble substrates are depleting. I should shift to slower, maintenance-focused metabolism or ferment remaining accessible carbon.
+
+**Substrate choice for next 4 h:**
+
+Given the redox potential (-200 mV, highly reducing), I will:
+1. **Continue acetate fermentation** (26.61 mM available): acetate → propionate + butyrate + CO₂ via mixed-acid pathways
+2. **Use myo-inositol** (4.488 mM): I can ferment this to acetate, propionate, and butyrate
+3. **Take up ammonium** for minimal biosynthesis and maintenance
+4. **Produce formate, acetate, propionate, butyrate, CO₂**
+
+**Growth rate calculation:**
+
+With acetate and inositol as primary substrates and ammonium abundant, I estimate modest growth. At this late stage with limited fresh substrate and accumulating fermentation products, growth will be slow.
+
+- Acetate uptake: ~5 mmol/gDW/h (reasonable for stationary phase)
+- myo-inositol uptake: ~1.5 mmol/gDW/h (lower abundance, slower kinetics)
+- Total C in: ~6.5 mmol/gDW/h
+- N demand (growth): ~42 mmol C / 4.2 C:N ratio ≈ 10 mmol N per gram produced
+- For 0.15 /h growth: need ~1.5 mmol N/gDW/h uptake ✓ (nh4 available)
+
+**Carbon balance:**
+- C in: 5 (ac) + 1.5 (inost) = 6.5 mmol/gDW/h
+- Growth at 0.15 /h: 42 × 0.15 = 6.3 mmol C/gDW/h
+- Fermentation products: ~0.2 mmol C/gDW/h net (mostly balanced by CO₂ release)
+- **Audit**: 6.5 in ≈ 6.3 (growth) + 0.2 (products) ✓
+
+**Nitrogen balance:**
+- N in: 1.5 mmol NH₄/gDW/h
+- N for growth: 10 × 0.15 = 1.5 mmol/gDW/h ✓
+
+**Fermentation stoichiometry:**
+Acetate and inositol fermentation under these conditions yields primarily acetate, propionate, and butyrate. I will net-produce these as overflow.
+
+```json
+{
+  "fluxes": {
+    "ac": -5.0,
+    "inost": -1.5,
+    "nh4": -1.5,
+    "ppa": 1.2,
+    "but": 0.8,
+    "for": 0.5,
+    "co2": 2.0
+  },
+  "growth_rate": 0.15,
+  "rationale": "Late stationary phase: fermenting residual acetate and myo-inositol (Bacteroides specialty) with ammonium. Modest growth sustained by mixed-acid fermentation producing propionate, butyrate, formate, and CO₂. Carbon and nitrogen budgets balanced.",
+  "confidence": 0.62
+}
+```

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "co2": 10.0,
+  "h2": 10.0,
+  "ac": 10.0,
+  "nh4": 6.99,
+  "ser__L": 3.15
+ },
+ "growth_rate": 0.615,
+ "rationale": "Utilizing primary carbon sources and nitrogen sources to support growth, while producing acetate, formate, and ethanol.",
+ "confidence": 0.9
+}

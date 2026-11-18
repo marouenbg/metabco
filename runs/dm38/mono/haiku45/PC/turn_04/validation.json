@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 4,
+  "growth_claimed": 0.6,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: lac__L",
+   "c_imbalance: in=39.2 out=25 biomass=27",
+   "p_imbalance: in=0 out=0 biomass=0.49"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake lac__L to pool limit -6.07",
+   "S: credited 0.157 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.6 -> 0.36",
+   "P: growth 0.36 -> 0"
+  ],
+  "rationale": "Lactate and amino acids are primary fermentable substrates. Lactate (8 mmol/gDW/h) + proline (3) + alanine (2) provide 39 mmol C and 6 mmol N. Nitrogen limits growth to 0.60 /h, consuming 27 mmol C. R",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -8.0,
+   "pro__L": -3.0,
+   "ala__L": -2.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "ppa": 4.0,
+   "for": 2.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -6.0677,
+   "pro__L": -3.0,
+   "ala__L": -2.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "ppa": 4.0,
+   "for": 2.0,
+   "co2": 1.0,
+   "so4": -0.157
+  }
+ }
+]

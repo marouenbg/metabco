@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -12.0,
+  "arab__L": -4.0,
+  "arg__L": -2.5,
+  "nh4": -2.0,
+  "cys__L": -0.5,
+  "lac__L": 16.0,
+  "ac": 4.5,
+  "for": 2.0,
+  "co2": 1.5
+ },
+ "growth_rate": 0.4,
+ "rationale": "Glucose remains abundant; continuing fermentation to lactate with arginine-driven nitrogen uptake. Growth limited by nitrogen availability (~5 mmol/h supports 0.40 /h). Carbon balance: 107 mmol in, 13.2 for biomass, ~93.8 for products (lactate dominant). Modest increase from recent 0.35-0.38 /h justified by sustained substrate abundance.",
+ "confidence": 0.72
+}

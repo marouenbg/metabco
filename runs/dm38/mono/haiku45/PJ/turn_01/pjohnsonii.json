@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -4.0,
+  "arg__L": -2.0,
+  "nh4": -1.5,
+  "ac": 22.9,
+  "ppa": 14.3,
+  "succ": 11.5,
+  "co2": 8.6
+ },
+ "growth_rate": 0.35,
+ "rationale": "P. johnsonii ferments glucose and lactate as primary carbon sources with arginine providing secondary C and essential N. Nitrogen is limiting; 3.5 mmol/gDW/h uptake supports 0.35 /h growth. Fermentation products reflect mixed-acid metabolism typical of Bacteroidetes under anaerobic conditions. Carbon balance: 72 mmol in, 14.7 for growth, 57.3 for fermentation products (57.3 mmol out).",
+ "confidence": 0.72
+}

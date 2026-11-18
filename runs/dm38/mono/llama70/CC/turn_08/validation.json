@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 8,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=20 out=25 biomass=7.38"
+  ],
+  "warnings": [
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "P: credited 0.168 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0645 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.25 -> 0",
+   "C: secretions scaled by 0.84"
+  ],
+  "rationale": "Butyrate and amino acid uptake support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": 5.0,
+   "inost": -2.0,
+   "pro__L": -1.0,
+   "ala__L": -1.0,
+   "ac": 2.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "but": 4.2,
+   "inost": -2.0,
+   "pro__L": -1.0,
+   "ala__L": -1.0,
+   "ac": 1.68,
+   "co2": 0.84,
+   "pi": -0.168,
+   "so4": -0.0645
+  }
+ }
+]

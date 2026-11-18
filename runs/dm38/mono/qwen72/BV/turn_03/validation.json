@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 3,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.227 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0549 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing to utilize D-glucose and L-lactate for carbon, and L-arginine and ammonium for nitrogen, while producing acetate, propionate, butyrate, and formate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 5.0,
+   "nh4": 2.0,
+   "arg__L": -2.0,
+   "for": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 5.0,
+   "nh4": 2.0,
+   "arg__L": -2.0,
+   "for": 2.0,
+   "pi": -0.2273,
+   "so4": -0.0549
+  }
+ }
+]

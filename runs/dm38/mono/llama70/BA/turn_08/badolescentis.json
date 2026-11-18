@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "inost": -5.0,
+  "pro__L": -2.0,
+  "ala__L": -1.0,
+  "ac": 5.0,
+  "for": 3.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing L-lactate and myo-inositol as carbon sources, with amino acids for nitrogen, to support growth and produce acetate and formate as fermentation products",
+ "confidence": 0.8
+}

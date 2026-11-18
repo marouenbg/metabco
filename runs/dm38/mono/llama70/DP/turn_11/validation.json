@@ -1,0 +1,29 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 11,
+  "growth_claimed": 0.0698,
+  "growth_allowed": 0.0698,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0917 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Utilizing L-cysteine and L-alanine as primary carbon and nitrogen sources, producing acetate and hydrogen as byproducts",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "cys__L": -2.0,
+   "ala__L": -1.0,
+   "ac": 2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "cys__L": -2.0,
+   "ala__L": -1.0,
+   "ac": 2.0,
+   "h2": 1.0,
+   "pi": -0.0917
+  }
+ }
+]

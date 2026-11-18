@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": 10.0,
+  "nh4": -5.34,
+  "for": 5.34,
+  "ac": 5.34,
+  "pi": -0.7,
+  "so4": -0.16
+ },
+ "growth_rate": 0.3,
+ "rationale": "growth supported by uptake of L-lactate and Ammonium, with secretion of lactic acid, formate, and acetate.",
+ "confidence": 0.8
+}

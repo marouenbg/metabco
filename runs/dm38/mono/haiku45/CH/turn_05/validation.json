@@ -1,0 +1,52 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 5,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=37 out=40 biomass=13.2"
+  ],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but",
+   "no_transporter: h2",
+   "no_transporter: h2s"
+  ],
+  "repairs": [
+   "P: credited 0.408 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.35 -> 0",
+   "C: secretions scaled by 0.971"
+  ],
+  "rationale": "Glucose depleted; switching to lactate and amino acid fermentation (cysteine, proline, alanine) as primary carbon and nitrogen sources. Lactate degradation plus Stickland-type amino acid fermentation ",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "lac__L": -4.0,
+   "cys__L": -3.0,
+   "pro__L": -2.0,
+   "ala__L": -2.0,
+   "nh4": -2.0,
+   "ac": 8.0,
+   "but": 4.0,
+   "for": 3.0,
+   "co2": 5.0,
+   "h2": 2.0,
+   "h2s": 1.5
+  },
+  "fluxes_applied": {
+   "lac__L": -4.0,
+   "cys__L": -3.0,
+   "pro__L": -2.0,
+   "ala__L": -2.0,
+   "nh4": -2.0,
+   "ac": 7.77,
+   "but": 3.885,
+   "for": 2.9138,
+   "co2": 4.8563,
+   "h2": 2.0,
+   "h2s": 1.5,
+   "pi": -0.4083
+  }
+ }
+]

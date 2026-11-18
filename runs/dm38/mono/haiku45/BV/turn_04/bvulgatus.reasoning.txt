@@ -1,0 +1,146 @@
+# Metabolic reasoning for Bacteroides vulgatus at turn 4
+
+## Assessment of the situation
+
+I am at 2.388 gDW/L after 16 hours. The recent history shows I was growing well early (0.55–1.2 /h on glucose and lactate), but turns 2–3 show zero growth despite active fermentation. This suggests I exhausted my preferred carbon sources (glucose, arabinose, lactate are now gone or depleted) and entered a stationary/survival phase, catabolizing amino acids and releasing fermentation products without net biomass synthesis.
+
+## Carbon and nitrogen sources available
+
+**Readily transportable carbon sources:**
+- **Acetate (ac)** 36.24 mM: I have acetyl-CoA synthase; can activate to acetyl-CoA
+- **Butyrate (but)** 15.67 mM: can be activated via butyryl-CoA synthetase
+- **Propionate (ppa)** 13.61 mM: can activate to propionyl-CoA
+- **Short-chain fatty acids (SCFA)**: These are my fermentation products now accumulating; I can catabolize them via β-oxidation and the citric acid cycle (in anaerobic mode, glyoxylate shunt)
+- **Amino acids**: L-arginine, L-cysteine, L-alanine, etc. — I can deaminate and ferment these; they are secondary carbon sources
+- **Maltose** 4.38 mM: I likely have maltose PTS or symporter
+- **myo-inositol** 6.27 mM: Bacteroides can ferment this
+- **Lactate** 1.3 mM: still present in trace; can be oxidized
+
+**Cannot readily use:**
+- **CO₂** 74.11 mM: I am not autotrophic; CO₂ is a product, not a primary substrate
+
+**Nitrogen sources:**
+- **L-arginine** 8.785 mM: abundant amino acid; I can catabolize via arginine deiminase pathway (produces ammonia, citrulline, ATP)
+- **L-cysteine** 8.4 mM: can be catabolized; yields sulfur and carbon
+- **Other amino acids**: present but at lower levels
+- **Ammonia (nh4)**: not listed as available, so likely depleted or very low
+
+## Known fermentation strategy for B. vulgatus
+
+B. vulgatus is a Gram-negative obligate anaerobe (Bacteroidetes). Its canonical fermentation products from carbohydrates and amino acids are:
+- **Acetate** (major)
+- **Butyrate** (major)
+- **Propionate** (major)
+- **CO₂**
+- **H₂** (minor, if present)
+- Trace formate, succinate
+
+The accumulation of ac, but, and ppa in turns 2–3 confirms this. At pH 7 these are mostly in their anion forms and buffered.
+
+## Current strategy: Amino acid catabolism
+
+With glucose, lactate, and arabinose exhausted, I must now rely on:
+1. **Amino acids** (arginine, cysteine, alanine, etc.) as carbon + nitrogen
+2. **Accumulated SCFA** (acetate, butyrate, propionate) as alternative carbon (though these are harder to grow on anaerobically without carbohydrates; they support maintenance but slow growth)
+3. **Maltose and inositol** as secondary carbohydrate sources
+
+**Arginine catabolism** is energetically favorable:
+- Arginine → citrulline + ammonia (via arginine deiminase, net ATP)
+- Citrulline → carbamoyl phosphate + ornithine (regenerates ATP)
+- Ornithine can be transaminated or further catabolized
+
+This yields carbon skeletons (α-ketoglutarate family) and ammonia for biosynthesis.
+
+## Growth rate calculation
+
+Given:
+- Biomass requirement: ~41 mmol C/gDW, ~8 mmol N/gDW
+- Current biomass: 2.388 gDW/L
+- Time interval: 4 h
+- Available substrates: primarily amino acids + trace carbohydrates
+
+**Limiting factors:**
+- Nitrogen is limiting (amino acids are my only N source now)
+- Arginine (8.8 mM) at 2.388 gDW/L means ~3.7 mmol N per gDW in the culture
+- To grow 1 gDW, I need 8 mmol N, but I have only ~3.7 mmol N per gDW already present
+- This suggests I can grow modestly on amino acids, but not at high rates
+
+**Estimate:**
+- If I take up arginine at ~2–3 mmol/gDW/h and couple it with trace maltose (~1 mmol/gDW/h), I can support ~0.15–0.25 /h growth
+- I will also take up cysteine (N and S source) and alanine (C + N)
+- Fermentation of these will yield acetate, butyrate, propionate, CO₂, and ammonia
+
+**Conservative estimate: 0.18 /h growth rate**
+
+## Proposed fluxes
+
+**Uptakes:**
+- L-arginine: -2.5 mmol/gDW/h (primary N + C source; arginine deiminase pathway)
+- L-cysteine: -1.5 mmol/gDW/h (secondary N + C; sulfur source)
+- L-alanine: -1.2 mmol/gDW/h (C + N)
+- Maltose: -1.0 mmol/gDW/h (carbohydrate, supports growth better)
+- L-lactate: -0.3 mmol/gDW/h (residual, if available)
+
+**Secretions (fermentation products):**
+- Acetate: +3.5 mmol/gDW/h
+- Butyrate: +2.0 mmol/gDW/h
+- Propionate: +1.5 mmol/gDW/h
+- CO₂: +2.0 mmol/gDW/h
+- Ammonia (nh4): +1.5 mmol/gDW/h (deamination byproduct)
+
+## Carbon audit
+
+**Carbon in:**
+- Arginine (C₆): 2.5 × 6 = 15 mmol C/gDW/h
+- Cysteine (C₃): 1.5 × 3 = 4.5 mmol C/gDW/h
+- Alanine (C₃): 1.2 × 3 = 3.6 mmol C/gDW/h
+- Maltose (C₁₂): 1.0 × 12 = 12 mmol C/gDW/h
+- Lactate (C₃): 0.3 × 3 = 0.9 mmol C/gDW/h
+- **Total C in: 36 mmol/gDW/h**
+
+**Carbon out:**
+- Acetate (C₂): 3.5 × 2 = 7 mmol C/gDW/h
+- Butyrate (C₄): 2.0 × 4 = 8 mmol C/gDW/h
+- Propionate (C₃): 1.5 × 3 = 4.5 mmol C/gDW/h
+- CO₂ (C₁): 2.0 × 1 = 2 mmol C/gDW/h
+- **Total C secreted: 21.5 mmol/gDW/h**
+
+**Carbon for growth:**
+- 36 − 21.5 = 14.5 mmol C/gDW/h available for biomass
+- Growth at 0.18 /h requires 41 × 0.18 = 7.38 mmol C/gDW/h
+- **Surplus: 14.5 − 7.38 = 7.12 mmol C/gDW/h** (reasonable; some overflow/maintenance)
+
+## Nitrogen audit
+
+**Nitrogen in:**
+- Arginine (N₄): 2.5 × 4 = 10 mmol N/gDW/h
+- Cysteine (N₁): 1.5 × 1 = 1.5 mmol N/gDW/h
+- Alanine (N₁): 1.2 × 1 = 1.2 mmol N/gDW/h
+- **Total N in: 12.7 mmol/gDW/h**
+
+**Nitrogen for growth:**
+- 0.18 /h × 8 = 1.44 mmol N/gDW/h
+
+**Nitrogen secreted (ammonia):**
+- 12.7 − 1.44 = 11.26 mmol N/gDW/h → release as nh4
+
+This is consistent with amino acid catabolism: excess N is deaminated and released as ammonia.
+
+---
+
+```json
+{
+  "fluxes": {
+    "arg__L": -2.5,
+    "cys__L": -1.5,
+    "ala__L": -1.2,
+    "malt": -1.0,
+    "lac__L": -0.3,
+    "ac": 3.5,
+    "but": 2.0,
+    "ppa": 1.5,
+    "co2": 2.0,
+    "nh4": 1.1
+  },
+  "growth_rate": 0.18,
+  "rationale": "Glucose and lactate exhausted; switching to amino acid catabolism (arginine, cysteine, alanine) as primary C+N sources, supplemented by residual maltose. Fermentation yields acetate, butyrate, propionate, CO2, and ammonia. Growth is N-limited by available amino acids; modest 0.18 /h rate is supported by carbon and nitrogen balance.",

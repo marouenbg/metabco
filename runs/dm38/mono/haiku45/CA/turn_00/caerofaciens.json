@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "nh4": -2.5,
+  "lac__L": 6.0,
+  "ac": 3.0,
+  "co2": 12.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Glucose is the primary fermentable carbon source in excess. Heterofermentative glucose metabolism produces lactate, acetate, and CO2. Growth rate of 0.30/h is supported by 8 mmol/gDW/h glucose uptake with 30% biomass yield. Nitrogen from ammonium is non-limiting. Carbon balance verified: 48 mmol C in = 18 (lactate) + 6 (acetate) + 12 (CO2) + 9 (biomass) = 45 mmol C out.",
+ "confidence": 0.65
+}

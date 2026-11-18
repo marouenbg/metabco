@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "arab__L": -5.0,
+  "malt": -2.5,
+  "arg__L": -1.5,
+  "ala__L": -2.0,
+  "gly": -1.5,
+  "pro__L": -1.0,
+  "nh4": -1.2,
+  "but": 3.5,
+  "ac": 2.5,
+  "for": 1.5,
+  "co2": 8.0
+ },
+ "growth_rate": 0.35,
+ "rationale": "Lactate exhausted; switching to arabinose and maltose fermentation with amino acid catabolism. Nitrogen-limited growth at 0.35/h supported by ammonium and amino acid nitrogen. Butyrate and acetate production consistent with fermentation metabolism.",
+ "confidence": 0.72
+}

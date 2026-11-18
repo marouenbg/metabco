@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "arab__L": -8.0,
+  "ac": 8.0,
+  "arg__L": -4.0,
+  "cys__L": -1.5,
+  "nh4": -2.0,
+  "lac__L": 12.0,
+  "but": 6.0,
+  "co2": 12.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Glucose depleted; switching to arabinose fermentation with acetate and amino acid catabolism. Mixed-acid fermentation maintains productivity while nitrogen becomes limiting. Carbon and nitrogen balanced; growth rate reduced slightly due to N constraint.",
+ "confidence": 0.72
+}

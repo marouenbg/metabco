@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ppa": -5,
+  "succ": -2,
+  "ac": 2,
+  "tyr__L": -1,
+  "val__L": -0.5,
+  "co2": 1
+ },
+ "growth_rate": 0.12,
+ "rationale": "Balanced uptake of propionate, succinate, and acetate, with production of acetate and carbon dioxide",
+ "confidence": 0.8
+}

@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -18.47,
+  "lac__L": -15.11,
+  "malt": -3.09,
+  "nh4": -5.71,
+  "but": 0.75,
+  "co2": 0.0
+ },
+ "growth_rate": 1.3,
+ "rationale": "I've chosen to take up glucose, lactate, and maltose as my carbon sources, and ammonium as my nitrogen source. I'll produce butyrate as a fermentation product. My growth rate is approximately 1.3 gDW/h, which is supported by the available carbon and nitrogen sources.",
+ "confidence": 0.9
+}

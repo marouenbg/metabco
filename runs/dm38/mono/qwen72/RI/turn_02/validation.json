@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 2,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0175 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0393 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing glucose and lactate for growth and butyrate/acetate production, balanced with nitrogen uptake from ammonium.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": -5.0,
+   "nh4": -1.5,
+   "but": 2.15,
+   "ac": 2.15,
+   "co2": 1.0,
+   "pi": -0.15
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": -5.0,
+   "nh4": -1.5,
+   "but": 2.15,
+   "ac": 2.15,
+   "co2": 1.0,
+   "pi": -0.1675,
+   "so4": -0.0393
+  }
+ }
+]

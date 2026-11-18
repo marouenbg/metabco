@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "arab__L": -3.0,
+  "arg__L": -1.5,
+  "nh4": -1.2,
+  "lac__L": 18.0,
+  "ac": 8.0,
+  "for": 1.5,
+  "co2": 3.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Restart growth after stall by consuming glucose and arabinose (primary fermentable sugars), supplemented with arginine for nitrogen and carbon. Ammonium is limiting; conserve it. Excrete lactate, acetate, formate, and CO\u2082 as fermentation products. Growth rate of 0.30 /h is conservative, sustainable for remaining 24 h of batch culture.",
+ "confidence": 0.65
+}

@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 9,
+  "growth_claimed": 0.5175,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: cys__L",
+   "uptake_exceeds_pool: ser__L",
+   "uptake_exceeds_pool: pro__L",
+   "p_imbalance: in=0 out=0 biomass=0.602"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake cys__L to pool limit -5.35",
+   "clipped uptake ser__L to pool limit -4.07",
+   "clipped uptake pro__L to pool limit -3.75",
+   "P: growth 0.517 -> 0"
+  ],
+  "rationale": "Utilizing abundant amino acids and formate for growth, producing acetate and formate as fermentation products.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "cys__L": -8.4,
+   "ser__L": -6.4,
+   "pro__L": -5.9,
+   "for": 2.0,
+   "ac": 5.0,
+   "nh4": 1.0
+  },
+  "fluxes_applied": {
+   "cys__L": -5.3455,
+   "ser__L": -4.0727,
+   "pro__L": -3.7546,
+   "for": 2.0,
+   "ac": 5.0,
+   "nh4": 1.0
+  }
+ }
+]

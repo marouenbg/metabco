@@ -1,0 +1,34 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 3,
+  "growth_claimed": 0.496,
+  "growth_allowed": 0.496,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=30 out=15 biomass=16.5"
+  ],
+  "warnings": [],
+  "repairs": [
+   "C: growth 0.496 -> 0.496"
+  ],
+  "rationale": "Continuing to ferment L-lactate to produce acetate and formate, maintaining similar growth rate as previous turns.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "nh4": -5.39,
+   "ac": 5.0,
+   "for": 5.0,
+   "pi": -0.71,
+   "so4": -0.16
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "nh4": -5.39,
+   "ac": 5.0,
+   "for": 5.0,
+   "pi": -0.71,
+   "so4": -0.16
+  }
+ }
+]

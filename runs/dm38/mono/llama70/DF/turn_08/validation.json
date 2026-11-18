@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 8,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.35,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: cys__L",
+   "uptake_exceeds_pool: malt",
+   "uptake_absent: nh4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake cys__L to pool limit -6.72",
+   "clipped uptake malt to pool limit -3.5",
+   "zeroed uptake of absent nh4",
+   "P: credited 0.326 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Utilizing available amino acids and sugars for growth and fermentation",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "cys__L": -10.0,
+   "malt": -5.0,
+   "ac": 5.0,
+   "for": 2.0,
+   "co2": 2.0,
+   "nh4": -0.5
+  },
+  "fluxes_applied": {
+   "cys__L": -6.7186,
+   "malt": -3.505,
+   "ac": 5.0,
+   "for": 2.0,
+   "co2": 2.0,
+   "nh4": 0.0,
+   "pi": -0.3258
+  }
+ }
+]

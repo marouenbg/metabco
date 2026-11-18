@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "etoh": 5.0,
+  "nh4": -2.0,
+  "pi": -0.12
+ },
+ "growth_rate": 0.12,
+ "rationale": "Balanced use of available carbon and nitrogen sources to support growth while producing common fermentation products.",
+ "confidence": 0.9
+}

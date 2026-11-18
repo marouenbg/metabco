@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "arg__L": -3.5,
+  "cys__L": -0.9,
+  "nh4": -0.5,
+  "ac": 9.5,
+  "for": 5.0,
+  "co2": 4.5
+ },
+ "growth_rate": 0.08,
+ "rationale": "Eggerthella lenta is a saccharolytic anaerobe that ferments glucose and amino acids to acetate, formate, and CO\u2082. Abundant glucose (24.71 mM) and arginine (21.67 mM) support mixed-acid fermentation. Glucose provides primary carbon and energy; arginine supplies nitrogen and secondary carbon. Cysteine uptake provides sulfur. Fermentation products (acetate, formate, CO\u2082) balance carbon and redox. Growth rate 0.080 /h is conservative, consistent with recent turns 2\u20133 and supported by available substrate.",
+ "confidence": 0.72
+}

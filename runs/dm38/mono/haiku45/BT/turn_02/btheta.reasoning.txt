@@ -1,0 +1,128 @@
+# Reasoning through my metabolic state at t=8h
+
+## What I can transport and what I cannot
+
+I am *Bacteroides thetaiotaomicron*, a saccharolytic and proteolytic anaerobe. My genome encodes extensive carbohydrate utilisation systems and amino acid transporters, but I lack certain capabilities.
+
+**Carbon sources I can use:**
+- **D-glucose (glc__D)**: 24.45 mM available. I have robust glucose PTS and fermentation pathways. This is my preferred substrate.
+- **L-lactate (lac__L)**: 28.31 mM available. I can consume lactate via lactate permease and oxidise it anaerobically.
+- **L-arabinose (arab__L)**: 21.31 mM available. I have arabinose utilisation genes.
+- **Maltose (malt)**: 4.382 mM available. I have maltose transporters.
+- **Amino acids** (arg, ser, cys, pro, ala, gly, phe, leu, tyr, val, lys, thr, ile, his, met, trp, asp, glu, etc.): I can catabolise these for both carbon and nitrogen via various pathways (Stickland reactions, transamination, deamination).
+
+**What I likely cannot use efficiently or at all:**
+- **myo-inositol (inost)**: 6.272 mM. While some Bacteroides species have inositol utilisation genes, *B. thetaiotaomicron* does not encode the necessary inositol phosphate kinase cluster. I will skip this.
+
+## Nitrogen sources
+- **Ammonium (nh4)**: 9.241 mM. Direct assimilation via GS/GOGAT.
+- **Amino acids**: Arginine (21.81 mM), and all others listed. These provide both C and N.
+
+## Known fermentation products of *B. thetaiotaomicron*
+Under anaerobic conditions, I produce:
+- **Acetate** (major)
+- **Propionate** (major)
+- **Butyrate** (major)
+- **Formate** (minor)
+- **Succinate** (under certain conditions)
+- **Lactate** (lactate can also be consumed; I may produce it transiently or consume it depending on redox balance)
+
+My previous two turns show a steady pattern: glucose fermentation to acetate, propionate, and butyrate with a growth rate of 0.250 /h.
+
+## Current strategy assessment
+
+I have already consumed ~20 mM of the initial 24.45 mM glucose (turns 0 and 1, each 4 h at 10 mmol/gDW/h flux on ~0.01 gDW). Glucose is still abundant at 24.45 mM. I should continue this successful strategy but also begin to incorporate lactate, which is present in high concentration (28.31 mM) and can support growth.
+
+At turn 2 (t=8h), my biomass is still very low (0.01609 gDW/L). I have plenty of time and substrate ahead (48 h total, 40 h remaining). I should:
+
+1. **Continue glucose fermentation** as the primary carbon source (it is most efficient).
+2. **Add lactate uptake** to diversify and use the abundant pool.
+3. **Use ammonium and amino acids** for nitrogen.
+
+## Growth rate calculation
+
+**Glucose fermentation stoichiometry** (simplified anaerobic fermentation to mixed products):
+- 1 glucose (C6) → ~2.5 acetate + 1.875 propionate + 1.25 butyrate (approximate molar yields)
+- Net: C6 → products with ~6 C out, ~0 C stored initially, but with growth consuming C.
+
+**For 1 g dry weight of biomass:**
+- C needed: 41 mmol
+- N needed: 8 mmol
+
+**Uptake plan:**
+- Glucose: 8 mmol/gDW/h (reduced from 10 to allow lactate co-utilisation)
+- Lactate: 3 mmol/gDW/h (lactate is also fermentable)
+- Ammonium: 1.6 mmol/gDW/h (8 mmol per gram of biomass produced at growth rate μ)
+- Arginine: 0.5 mmol/gDW/h (supplemental N and C, rich in both)
+
+**Carbon balance:**
+- Glucose in: 8 mmol C/gDW/h × 6 = 48 mmol C/gDW/h
+- Lactate in: 3 mmol C/gDW/h × 3 = 9 mmol C/gDW/h
+- Arginine in: 0.5 mmol C/gDW/h × 6 = 3 mmol C/gDW/h
+- **Total C in: 60 mmol C/gDW/h**
+
+**Growth rate μ:**
+- If μ = 0.25 /h: biomass C cost = 41 × 0.25 = 10.25 mmol C/gDW/h
+- **Remaining C for fermentation: 60 − 10.25 = 49.75 mmol C/gDW/h**
+
+**Fermentation products (approximately balanced):**
+- Acetate: ~20 mmol C/gDW/h (2.5 acetate molecules per glucose, adjusted)
+- Propionate: ~15 mmol C/gDW/h
+- Butyrate: ~10 mmol C/gDW/h
+- Formate: ~2 mmol C/gDW/h
+- CO2: ~2.75 mmol C/gDW/h (from decarboxylations)
+- **Total out: ~49.75 mmol C/gDW/h** ✓
+
+**Nitrogen balance:**
+- Ammonium: 1.6 mmol N/gDW/h
+- Arginine: 0.5 mmol N/gDW/h (1 N per arginine)
+- **Total N in: 2.1 mmol N/gDW/h**
+- Growth N cost at μ = 0.25: 8 × 0.25 = 2.0 mmol N/gDW/h ✓
+
+This is tight but feasible. I'll use growth rate **0.25 /h** as before, which has proven sustainable.
+
+## Audit
+
+| Metabolite | Flux (mmol/gDW/h) | Role |
+|---|---|---|
+| glc__D | -8.0 | uptake (C source) |
+| lac__L | -3.0 | uptake (C + fermentation) |
+| arg__L | -0.5 | uptake (C + N) |
+| nh4 | -1.6 | uptake (N) |
+| ac | +10.0 | product |
+| ppa | +7.5 | product |
+| but | +5.0 | product |
+| for | +1.0 | product |
+| co2 | +2.75 | product |
+| pi | -0.23 | phosphate for biomass |
+
+**C in:** 8×6 + 3×3 + 0.5×6 = 48 + 9 + 3 = 60 mmol C/gDW/h
+**C out (products):** 10×1 + 7.5×3 + 5×4 + 1×1 + 2.75×1 = 10 + 22.5 + 20 + 1 + 2.75 = 56.25 mmol C/gDW/h
+**C to biomass:** 60 − 56.25 = 3.75 mmol C/gDW/h (but need 41 × 0.25 = 10.25)
+
+**Correction needed:** I must reduce product secretion or accept lower growth. Let me recalculate at μ = 0.15 /h:
+- Biomass C: 41 × 0.15 = 6.15 mmol C/gDW/h
+- Biomass N: 8 × 0.15 = 1.2 mmol N/gDW/h
+- Remaining C for products: 60 − 6.15 = 53.85 mmol C/gDW/h
+
+Adjust products proportionally and use **growth_rate = 0.15 /h** for safety.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -3.0,
+    "arg__L": -0.5,
+    "nh4": -1.2,
+    "ac": +9.0,
+    "ppa": +7.0,
+    "but": +5.0,
+    "for": +1.0,
+    "co2": +2.85,
+    "pi": -0.23
+  },
+  "growth_rate": 0.15,
+  "rationale": "Glucose and lactate co-fermentation with arginine supplementation. Continued mixed-acid fermentation (acetate, propionate, butyrate, formate) under anaerobic conditions. Growth rate reduced to 0.15 /h to ensure carbon and nitrogen balance are maintained with 40 h remaining in the batch culture.",
+  "confidence": 0.72
+}
+```

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "but": -16.5,
+  "lac__L": -3.5,
+  "h2": -20,
+  "ac": 8.5,
+  "nh4": 3.5
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing butyrate as primary carbon and nitrogen source, with secondary production of acetate and ammonia.",
+ "confidence": 0.9
+}

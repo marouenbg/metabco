@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "ppa": 3.0,
+  "co2": 2.0,
+  "nh4": -8.0,
+  "arg__L": -1.0,
+  "ser__L": -1.0,
+  "pro__L": -0.62,
+  "h2": 2.0
+ },
+ "growth_rate": 0.303,
+ "rationale": "Utilizing acetate and propionate for carbon, ammonium and amino acids for nitrogen, and producing acetate, propionate, hydrogen, and carbon dioxide.",
+ "confidence": 0.9
+}

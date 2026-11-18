@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 6,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: glc__D",
+   "sugar_export: arab__L",
+   "c_imbalance: in=30 out=50 biomass=18.9"
+  ],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.583 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.5 -> 0",
+   "C: secretions scaled by 0.63"
+  ],
+  "rationale": "I'll take up CO2, glucose, and arabinose to support lactate production and growth. I'll produce lactate as a fermentation product.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "co2": 15.0,
+   "glc__D": 5.0,
+   "arab__L": 1.0,
+   "lac__L": -10.0
+  },
+  "fluxes_applied": {
+   "co2": 9.45,
+   "glc__D": 3.15,
+   "arab__L": 0.63,
+   "lac__L": -10.0,
+   "pi": -0.5832,
+   "so4": -0.1309
+  }
+ }
+]

@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "pro__L": -2.0,
+  "ala__L": -1.5,
+  "arg__L": -2.0,
+  "cys__L": -0.8,
+  "for": -2.5,
+  "malt": -1.5,
+  "glc__D": -0.5,
+  "but": 4.5,
+  "ac": 2.8,
+  "co2": 7.2,
+  "h2": 0.15
+ },
+ "growth_rate": 0.4,
+ "rationale": "Late-stage batch culture; carbohydrates depleted; switch to amino acid fermentation (proline, alanine, arginine, cysteine) with formate as electron sink. Butyrate + acetate fermentation. Growth rate reduced from peak due to substrate limitation. Carbon and nitrogen budgets balanced.",
+ "confidence": 0.68
+}

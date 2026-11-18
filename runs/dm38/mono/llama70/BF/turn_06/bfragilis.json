@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "ppa": -3.0,
+  "arg__L": -2.0,
+  "cys__L": -1.0,
+  "ser__L": -1.0,
+  "nh4": -1.5,
+  "but": 2.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.6,
+ "rationale": "Moderate uptake of acetate, propionate, and amino acids, with production of acetate, propionate, and butyrate",
+ "confidence": 0.7
+}

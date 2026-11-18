@@ -1,0 +1,97 @@
+# Metabolic decision for Clostridium hiranonis TO-931
+
+Let me reason through this systematically.
+
+## Available carbon and nitrogen sources
+
+**Primary carbon sources I can likely transport:**
+- L-lactate (28.31 mM) — abundant, classical Clostridium substrate
+- D-glucose (24.98 mM) — abundant, standard hexose
+- L-arabinose (21.31 mM) — pentose, likely transportable
+- Amino acids (arg, cys, ser, pro, ala, gly, phe, leu, tyr, val, gln, asn, lys, thr, ile, his, met, trp, glu, asp) — multiple sources
+
+**Nitrogen sources:**
+- Ammonium (9.347 mM) — preferred
+- L-arginine (21.81 mM) — can be catabolized for both C and N
+- Amino acids generally — dual C/N sources
+
+## Known metabolism of C. hiranonis
+
+C. hiranonis is a strict anaerobe, bile acid-degrading Clostridium. It ferments carbohydrates and amino acids to produce short-chain fatty acids (acetate, butyrate, propionate) and CO₂, H₂, and sometimes formate. Given the anaerobic conditions and the presence of lactate and glucose, I will prioritize:
+
+1. **Lactate fermentation** — this species can use lactate
+2. **Glucose fermentation** — standard substrate
+3. **Amino acid catabolism** — arginine is abundant and provides both C and N
+
+## Uptake strategy
+
+I will prioritize:
+- **L-lactate**: 28.31 mM available, high uptake rate (~8 mmol/gDW/h)
+- **D-glucose**: 24.98 mM available, high uptake rate (~6 mmol/gDW/h)
+- **L-arginine**: 21.81 mM available, moderate uptake (~4 mmol/gDW/h) — excellent for N
+- **NH₄⁺**: 9.347 mM, uptake as needed (~2 mmol/gDW/h)
+
+## Growth calculation
+
+**Carbon requirement**: 38 mmol C per gram DW
+**Nitrogen requirement**: 10 mmol N per gram DW
+
+**Uptake plan** (mmol/gDW/h):
+- Lactate (C₃): 8 mmol/h → 24 mmol C/h
+- Glucose (C₆): 6 mmol/h → 36 mmol C/h
+- Arginine (C₆N₄O₂): 4 mmol/h → 24 mmol C/h + 16 mmol N/h
+- NH₄⁺: 2 mmol/h → 2 mmol N/h
+
+**Total C in**: 24 + 36 + 24 = 84 mmol C/h
+**Total N in**: 16 + 2 = 18 mmol N/h
+
+**For growth at rate μ (1/h)**:
+- C cost: 38μ mmol/h
+- N cost: 10μ mmol/h
+- Remaining C for fermentation: 84 - 38μ
+- Remaining N for fermentation: 18 - 10μ
+
+N is the limiting nutrient: 18 - 10μ ≥ 0 → μ ≤ 1.8 /h
+But realistically, μ ≈ 0.8 /h (accounting for maintenance and fermentation overhead)
+
+**At μ = 0.8 /h:**
+- C consumed for growth: 38 × 0.8 = 30.4 mmol C/h
+- N consumed for growth: 10 × 0.8 = 8 mmol N/h
+- Remaining C: 84 - 30.4 = 53.6 mmol C/h (fermented)
+- Remaining N: 18 - 8 = 10 mmol N/h (fermented as urea or amino acid products)
+
+## Fermentation products
+
+The remaining 53.6 mmol C/h will be fermented to:
+- **Acetate** (2 C per molecule): ~15 mmol/h
+- **Butyrate** (4 C per molecule): ~8 mmol/h
+- **CO₂**: ~8 mmol/h
+- **H₂**: variable, ~5 mmol/h
+- **Formate** (1 C): ~3 mmol/h
+
+This balances to ~53.6 mmol C/h output.
+
+## Carbon audit
+- **In**: 84 mmol C/h
+- **Out (growth)**: 30.4 mmol C/h
+- **Out (fermentation)**: 53.6 mmol C/h
+- **Total out**: 84 mmol C/h ✓
+
+```json
+{
+  "fluxes": {
+    "lac__L": -8.0,
+    "glc__D": -6.0,
+    "arg__L": -4.0,
+    "nh4": -2.0,
+    "ac": 15.0,
+    "but": 8.0,
+    "co2": 8.0,
+    "h2": 5.0,
+    "for": 3.0
+  },
+  "growth_rate": 0.8,
+  "rationale": "C. hiranonis ferments lactate and glucose while using arginine as primary N source. At 0.8 /h growth, 84 mmol C/h input supports 30.4 mmol C biomass plus 53.6 mmol C fermented to acetate, butyrate, CO₂, H₂, and formate. N balance: 18 mmol/h in (16 from arginine, 2 from NH₄) minus 8 mmol/h for growth leaves 10 mmol/h for fermentation products.",
+  "confidence": 0.72
+}
+```

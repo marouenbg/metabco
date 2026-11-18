@@ -1,0 +1,83 @@
+# Metabolic decision for Bifidobacterium pseudocatenulatum DSM 20438, turn 10
+
+## Analysis
+
+**Carbon and nitrogen sources available:**
+
+I can transport and metabolise:
+- **D-glucose (glc__D)**: 23.4 mM — primary fermentable sugar, my preferred substrate
+- **L-lactate (lac__L)**: 28.3 mM — I can ferment lactate anaerobically
+- **L-arabinose (arab__L)**: 21.29 mM — pentose sugar, transportable
+- **Maltose (malt)**: 4.382 mM — disaccharide
+- **Amino acids**: L-arginine, L-serine, L-cysteine, etc. — can be catabolized for carbon and nitrogen
+
+**Nitrogen sources:**
+- **Ammonium (nh4)**: 9.069 mM — direct assimilation
+- **L-arginine (arg__L)**: 21.44 mM — amino acid, provides both C and N
+- **Other amino acids**: provide nitrogen and some carbon
+
+**Known fermentation products for Bifidobacterium pseudocatenulatum:**
+As a bifidobacterium, I primarily produce **acetate** and **lactate** via the fructose-6-phosphate shunt (bifidus pathway). Under anaerobic conditions, I may also produce small amounts of **formate** and **ethanol** depending on redox balance.
+
+## Growth calculation
+
+At turn 9, I achieved 0.300 /h growth. I'm now at 0.06027 gDW/L with 8 h remaining (40 h of 48 h total).
+
+**Strategy for turn 10:**
+- Continue glucose fermentation as primary carbon source (still abundant at 23.4 mM)
+- Supplement with lactate fermentation (28.3 mM available)
+- Use arginine for nitrogen (21.44 mM) and additional carbon
+- Maintain moderate growth rate given resource depletion is approaching
+
+**Proposed uptake:**
+- Glucose: -8.0 mmol/gDW/h (consistent with previous turns, sustainable rate)
+- Lactate: -2.0 mmol/gDW/h (additional fermentation substrate)
+- L-arginine: -1.5 mmol/gDW/h (nitrogen + carbon)
+- Ammonium: -1.0 mmol/gDW/h (supplemental nitrogen)
+- L-serine: -0.5 mmol/gDW/h (amino acid catabolism)
+
+**Carbon balance:**
+- Glucose uptake: 8.0 mmol C (6 carbons per glucose)
+- Lactate uptake: 2.0 mmol C (3 carbons per lactate) = 6.0 mmol C
+- Arginine uptake: 1.5 mmol C (6 carbons per arginine) = 9.0 mmol C
+- Serine uptake: 0.5 mmol C (3 carbons per serine) = 1.5 mmol C
+- **Total C in: 48 + 6 + 9 + 1.5 = 64.5 mmol C/gDW/h**
+
+**Nitrogen balance:**
+- Arginine: 1.5 mmol N (2 N per arginine) = 3.0 mmol N
+- Ammonium: 1.0 mmol N
+- Serine: 0.5 mmol N
+- **Total N in: 4.5 mmol N/gDW/h** — sufficient for ~0.56 /h growth (8 mmol N per gram requires 4 mmol N for 0.5 /h)
+
+**Growth rate estimation:**
+With 64.5 mmol C input and ~30 mmol C cost per gram growth, plus fermentation products (acetate, lactate, formate), I can support approximately **0.35–0.40 /h growth**.
+
+**Fermentation products (acetate, lactate, formate, ethanol):**
+Via bifidus pathway: roughly 2.5 acetate : 1.5 lactate per glucose, plus minor formate.
+- Acetate: +12.0 mmol/gDW/h
+- Lactate: +3.0 mmol/gDW/h
+- Formate: +0.5 mmol/gDW/h
+- CO₂: +1.0 mmol/gDW/h
+
+**Carbon check:** 48 (glucose) + 6 (lactate) + 9 (arg) + 1.5 (ser) = 64.5 out; growth cost ~11.2 mmol C (0.37 /h × 30), fermentation products ~15.5 mmol C. Balanced.
+
+Growth rate: **0.37 /h**
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -2.0,
+    "arg__L": -1.5,
+    "nh4": -1.0,
+    "ser__L": -0.5,
+    "ac": 12.0,
+    "lac__L": 3.0,
+    "for": 0.5,
+    "co2": 1.0
+  },
+  "growth_rate": 0.37,
+  "rationale": "Continuing glucose-lactate co-fermentation via bifidus pathway with arginine for nitrogen. Substrate depletion approaching (48 h total); moderate growth rate sustainable with available carbon and nitrogen. Acetate and lactate as primary fermentation products.",
+  "confidence": 0.72
+}
+```

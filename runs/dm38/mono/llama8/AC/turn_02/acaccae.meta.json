@@ -1,0 +1,12 @@
+{
+ "model": "meta-llama/Llama-3.1-8B-Instruct",
+ "spec": "hf:meta-llama/Llama-3.1-8B-Instruct",
+ "temperature": 0.7,
+ "cached": false,
+ "usage": {
+  "input_tokens": 1780,
+  "output_tokens": 1064,
+  "total_tokens": 2844
+ },
+ "latency_ms": 71448.13
+}

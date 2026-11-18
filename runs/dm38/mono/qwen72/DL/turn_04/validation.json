@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 4,
+  "growth_claimed": 0.04,
+  "growth_allowed": 0.0397,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=30 out=30 biomass=1.51"
+  ],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "C: growth 0.04 -> 0.0397"
+  ],
+  "rationale": "Continuing to ferment L-lactate into acetate and butyrate with the production of hydrogen, as this strategy has been successful and the nutrients are still abundant.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "nh4": -5.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "h2": 2.0,
+   "pi": -0.31,
+   "so4": -0.07
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "nh4": -5.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "h2": 2.0,
+   "pi": -0.31,
+   "so4": -0.07
+  }
+ }
+]

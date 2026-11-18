@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "arg__L": -5.0,
+  "cys__L": -2.0,
+  "ser__L": -2.0,
+  "ac": 8.0,
+  "ppa": 4.0,
+  "but": 2.0,
+  "nh4": -14.0,
+  "pi": -0.91
+ },
+ "growth_rate": 1.75,
+ "rationale": "Utilizing D-glucose, L-lactate, and L-arginine for growth and carbon sources, while producing acetate, propionate, and butyrate as fermentation products. The growth rate is limited by nitrogen availability.",
+ "confidence": 0.9
+}

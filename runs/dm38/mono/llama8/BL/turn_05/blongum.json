@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -4.0,
+  "nh4": -0.3,
+  "lac__L": 2.0,
+  "for": 2.0,
+  "ac": 4.0
+ },
+ "growth_rate": 0.8,
+ "rationale": "Utilizing glucose as a primary carbon source, taking up ammonium to meet the nitrogen requirement, and releasing lactate, formate, and acetate as byproducts of glucose metabolism.",
+ "confidence": 0.9
+}

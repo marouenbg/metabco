@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "co2": -10.0,
+  "h2": -5.0,
+  "arg__L": -1.0,
+  "nh4": 0.5,
+  "for": 5.0,
+  "ac": 5.0
+ },
+ "growth_rate": 0.2,
+ "confidence": 0.9,
+ "rationale": "Utilizing CO2 and H2 for formate and acetate production, and L-arginine and ammonium for nitrogen, supports a sustainable growth rate of 0.2 /h."
+}

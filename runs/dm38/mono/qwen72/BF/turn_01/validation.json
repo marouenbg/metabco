@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 1,
+  "growth_claimed": 1.75,
+  "growth_allowed": 1.75,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.636 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Utilizing D-glucose, L-lactate, and L-arginine for growth and carbon sources, while producing acetate, propionate, and butyrate as fermentation products. The growth rate is limited by nitrogen availab",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "arg__L": -5.0,
+   "cys__L": -2.0,
+   "ser__L": -2.0,
+   "ac": 8.0,
+   "ppa": 4.0,
+   "but": 2.0,
+   "nh4": -14.0,
+   "pi": -0.91
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "arg__L": -5.0,
+   "cys__L": -2.0,
+   "ser__L": -2.0,
+   "ac": 8.0,
+   "ppa": 4.0,
+   "but": 2.0,
+   "nh4": -14.0,
+   "pi": -1.5455
+  }
+ }
+]

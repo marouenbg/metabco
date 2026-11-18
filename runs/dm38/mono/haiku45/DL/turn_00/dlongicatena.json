@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -8.0,
+  "arg__L": -6.0,
+  "arab__L": -4.0,
+  "nh4": -2.0,
+  "but": 16.4,
+  "ac": 8.2,
+  "co2": 8.2,
+  "for": 4.1,
+  "h2": 1.0
+ },
+ "growth_rate": 0.8,
+ "rationale": "Dorea longicatena is a butyrate-producing anaerobe. Glucose, lactate, arginine, and arabinose are fermented via mixed-acid fermentation to butyrate (primary), acetate, and CO\u2082. Nitrogen limitation from 8 mmol N/gDW/h (NH\u2084\u207a + arginine) constrains growth to 0.8 /h. Carbon balance verified: 140 mmol C in supports 30.4 mmol C (biomass) + 94.3 mmol C (fermentation products).",
+ "confidence": 0.72
+}

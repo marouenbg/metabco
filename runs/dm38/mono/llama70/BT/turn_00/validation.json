@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 0,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.455 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.11 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Balanced carbon budget with glucose and ammonium uptake",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "nh4": -2.0,
+   "arg__L": -1.0,
+   "ac": 5.0,
+   "ppa": 2.0,
+   "succ": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "nh4": -2.0,
+   "arg__L": -1.0,
+   "ac": 5.0,
+   "ppa": 2.0,
+   "succ": 1.0,
+   "pi": -0.4546,
+   "so4": -0.1097
+  }
+ }
+]

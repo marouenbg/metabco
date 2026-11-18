@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "co2": 10.0,
+  "nh4": 5.0,
+  "for": 10.0,
+  "ac": 15.0
+ },
+ "growth_rate": 0.32,
+ "rationale": "Based on available carbon and nitrogen sources, I can support a growth rate of 0.32/h. I take up 10 mmol of CO2 and 5 mmol of Ammonium (nh4) per hour to meet the growth rate. I release 10 mmol of formate (for) and 15 mmol of acetate (ac) per hour.",
+ "confidence": 0.8
+}

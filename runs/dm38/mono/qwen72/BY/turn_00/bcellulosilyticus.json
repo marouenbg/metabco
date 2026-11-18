@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "nh4": -5.0,
+  "arg__L": -2.0,
+  "ac": 15.0,
+  "but": 15.0,
+  "for": 24.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing glucose and lactate as primary carbon sources, and ammonium and arginine for nitrogen. Producing acetate, butyrate, and formate as fermentation products to balance carbon and nitrogen intake with biomass production.",
+ "confidence": 0.8
+}

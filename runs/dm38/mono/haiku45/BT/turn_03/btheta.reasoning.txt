@@ -1,0 +1,98 @@
+# Metabolic reasoning for Bacteroides thetaiotaomicron at t=12h
+
+## Assessment of current state
+I am at very low density (0.01609 gDW/L) after 12 hours. Turn 2 showed zero growth, suggesting I may have exhausted a critical nutrient or hit a metabolic constraint. I need to reassess what I can actually use.
+
+## Carbon sources available and transportable
+
+**Bacteroides thetaiotaomicron** has a well-characterized metabolic repertoire:
+- **D-glucose (24.45 mM)**: I encode PTS and other glucose transporters. This is my primary preferred substrate. Fermentable.
+- **L-lactate (28.31 mM)**: I have lactate oxidation pathways and can ferment it anaerobically. Transportable.
+- **L-arabinose (21.31 mM)**: I have arabinose operons (AraBAD-like). Fermentable.
+- **Maltose (4.382 mM)**: I have maltose transporters. Fermentable.
+- **Acetate (0.2646 mM)**: Present but minimal; I can use it but it's scarce.
+
+**Cannot efficiently use (lack transporters or pathways):**
+- Myo-inositol: I lack efficient inositol transport despite the name suggesting otherwise
+- Most amino acids as sole carbon sources require specific operons I may lack
+- Propionate, butyrate: products I make, not primary substrates
+
+## Nitrogen sources
+- **Ammonium (9.241 mM)**: Primary nitrogen source, directly assimilable
+- **L-arginine (21.81 mM)**: Can be deaminated and used for both C and N
+- **Amino acids**: Can be catabolized for N and C simultaneously
+
+## Why turn 2 showed zero growth
+At turn 2, I apparently took nothing up. This suggests:
+1. I may have been limited by ammonium (only 9.241 mM total for the whole culture)
+2. Or I made a conservative choice awaiting better conditions
+3. The biomass is still very low; perhaps I need to rebuild
+
+## Fermentation strategy
+As a Gram-negative anaerobe, I ferment via mixed-acid pathways, producing:
+- **Acetate** (primary)
+- **Propionate** (via succinate pathway)
+- **Butyrate** (via acetyl-CoA condensation)
+- **Formate** and **CO₂** (from pyruvate formate lyase)
+- **H₂** (from ferredoxin)
+
+Turns 0–1 show this pattern: glucose → acetate/propionate/butyrate/CO₂/formate.
+
+## Proposed strategy for next 4h
+
+**Primary substrate: D-glucose** (most abundant fermentable carbon, 24.45 mM remaining)
+- Uptake: -8.0 mmol/gDW/h (moderate rate, sustainable)
+
+**Secondary substrate: L-lactate** (abundant, 28.31 mM; supports growth when glucose is limiting)
+- Uptake: -3.0 mmol/gDW/h (co-fermentation)
+
+**Nitrogen: Ammonium + L-arginine**
+- Ammonium: -1.8 mmol/gDW/h
+- L-arginine: -0.5 mmol/gDW/h (provides both C and N; deamination gives pyruvate + ammonia)
+
+**Carbon balance check:**
+- Glucose (C₆): 8.0 mmol/gDW/h × 6 C/mol = 48 C mmol/gDW/h
+- Lactate (C₃): 3.0 mmol/gDW/h × 3 C/mol = 9 C mmol/gDW/h
+- Arginine (C₆): 0.5 mmol/gDW/h × 6 C/mol = 3 C mmol/gDW/h
+- **Total C in: 60 mmol/gDW/h**
+
+**Growth calculation:**
+- C requirement: 41 mmol/gDW per gram biomass produced
+- N requirement: 8 mmol/gDW per gram biomass produced
+- N uptake: 1.8 + 0.5×(4/6 N per arginine) = 1.8 + 0.33 ≈ 2.13 mmol/gDW/h
+- **Growth rate limited by N: 2.13 / 8 = 0.266 /h**
+- **C cost at this growth: 0.266 × 41 = 10.9 C mmol/gDW/h**
+- **Remaining C for fermentation: 60 − 10.9 = 49.1 C mmol/gDW/h**
+
+**Fermentation products (mixed-acid):**
+- Acetate: 20 C mmol/gDW/h (2C per acetate)
+- Propionate: 12 C mmol/gDW/h (3C per propionate)
+- Butyrate: 8 C mmol/gDW/h (4C per butyrate)
+- CO₂: 9.1 C mmol/gDW/h (1C per CO₂)
+- Formate: 0.5 C mmol/gDW/h (1C per formate)
+- **Total: ~49.6 C mmol/gDW/h ✓**
+
+**Nitrogen audit:**
+- Uptake: 1.8 (NH₄) + 0.33 (Arg) = 2.13 mmol/gDW/h
+- Growth cost: 0.266 × 8 = 2.13 mmol/gDW/h ✓
+
+**Growth rate: 0.27 /h**
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -3.0,
+    "arg__L": -0.5,
+    "nh4": -1.8,
+    "ac": 10.0,
+    "ppa": 4.0,
+    "but": 2.0,
+    "co2": 9.1,
+    "for": 0.5
+  },
+  "growth_rate": 0.27,
+  "rationale": "Co-ferment glucose and lactate with arginine as secondary N/C source. Mixed-acid fermentation to acetate, propionate, butyrate. Growth limited by ammonium availability. Carbon and nitrogen balance verified.",
+  "confidence": 0.72
+}
+```

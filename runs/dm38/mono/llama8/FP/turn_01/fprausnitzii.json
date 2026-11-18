@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -10.0,
+  "arg__L": -2.0,
+  "but": 20.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "butyrate production prioritized for growth, with lactate, glucose, and arginine as primary carbon and nitrogen sources",
+ "confidence": 0.8
+}

@@ -1,0 +1,82 @@
+# Metabolic reasoning for Dorea longicatena DSM 13814 at t=24h
+
+## Assessment of available resources and transporters
+
+**Carbon sources available:**
+- Butyrate (33.76 mM): I can ferment this via β-oxidation and mixed-acid fermentation pathways
+- Acetate (23.43 mM): Acetyl-CoA synthase can activate this; useful but less energetic than butyrate
+- Formate (16.03 mM): Formate dehydrogenase can oxidize this anaerobically
+- L-arabinose (8.987 mM): Pentose utilization via araBAD pathway
+- Amino acids (arg, cys, pro, ser, ala, gly, phe, etc.): Dorea is a proteolytic bacterium; amino acid fermentation is core metabolism
+- Maltose (4.382 mM): I can likely transport and ferment this
+- myo-inositol (6.272 mM): Fermentable carbohydrate
+
+**Nitrogen sources:**
+- Ammonium (6.184 mM): Direct assimilation via GS/GOGAT
+- L-arginine (8.547 mM): Can be deaminated for both carbon and nitrogen
+- Multiple amino acids: Can be catabolized for N and C
+
+**Glucose and lactate are depleted** (not listed above), which explains the growth pause at turn 4.
+
+## Metabolic strategy
+
+As a Gram-positive anaerobic bacterium specialized in amino acid fermentation, I should:
+
+1. **Primary substrates**: Butyrate and amino acids (especially arg, cys, pro, ser)
+2. **Fermentation products**: Acetate, formate, CO₂, H₂, and potentially lactate or ethanol
+3. **Growth rate calculation**:
+   - At 1.331 gDW/L, I need ~50.6 mmol C and ~13.3 mmol N per liter to double
+   - Butyrate (C4) is excellent: 4 carbons/molecule
+   - Amino acids provide both C and N efficiently
+   - Mixed-acid fermentation yields multiple products
+
+## Flux design
+
+**Uptakes (negative):**
+- Butyrate: -8.0 mmol/gDW/h (abundant, energetically favorable)
+- L-arginine: -2.5 mmol/gDW/h (N + C source)
+- L-serine: -1.5 mmol/gDW/h (additional N + C)
+- L-cysteine: -1.0 mmol/gDW/h (S + N + C)
+- L-alanine: -1.0 mmol/gDW/h (additional N + C)
+- Ammonium: -1.5 mmol/gDW/h (direct N assimilation)
+
+**Carbon accounting:**
+- Butyrate in: 8.0 × 4 = 32 mmol C/gDW/h
+- Arg in: 2.5 × 6 = 15 mmol C/gDW/h
+- Ser in: 1.5 × 3 = 4.5 mmol C/gDW/h
+- Cys in: 1.0 × 3 = 3 mmol C/gDW/h
+- Ala in: 1.0 × 3 = 3 mmol C/gDW/h
+- **Total C in: 57.5 mmol C/gDW/h**
+
+**Nitrogen accounting:**
+- Arg: 2.5 × 4 = 10 mmol N/gDW/h
+- Ser: 1.5 × 1 = 1.5 mmol N/gDW/h
+- Cys: 1.0 × 1 = 1 mmol N/gDW/h
+- Ala: 1.0 × 1 = 1 mmol N/gDW/h
+- NH₄: 1.5 mmol N/gDW/h
+- **Total N in: 15 mmol N/gDW/h**
+
+**Growth rate:**
+- C requirement: 38 mmol C/gDW growth
+- N requirement: 10 mmol N/gDW growth
+- N-limited growth: 15 / 10 = 1.5 gDW/gDW
+- C-limited growth: 57.5 / 38 = 1.51 gDW/gDW
+- **Growth rate: 0.30 /h** (conservative, accounting for maintenance)
+
+**Secretions (positive):**
+- Acetate: +6.0 (from butyrate β-oxidation and amino acid fermentation)
+- Formate: +4.0 (from mixed-acid pathway)
+- CO₂: +12.0 (from decarboxylation of amino acids and pyruvate)
+- H₂: +2.0 (from formate and pyruvate)
+
+**Carbon balance check:**
+- In: 57.5 mmol C/gDW/h
+- Growth: 0.30 × 38 = 11.4 mmol C/gDW/h
+- Acetate out: 6.0 × 2 = 12 mmol C/gDW/h
+- Formate out: 4.0 × 1 = 4 mmol C/gDW/h
+- CO₂ out: 12.0 × 1 = 12 mmol C/gDW/h
+- **Total out: 38.4 mmol C/gDW/h** ✓ (57.5 - 38.4 = 19.1 for growth/maintenance)
+
+```json
+{"fluxes": {"but": -8.0, "arg__L": -2.5, "ser__L": -1.5, "cys__L": -1.0, "ala__L": -1.0, "nh4": -1.5, "ac": 6.0, "for": 4.0, "co2": 12.0, "h2": 2.0}, "growth_rate": 0.30, "rationale": "Dorea is proteolytic and ferments amino acids and butyrate anaerobically. With glucose depleted, I switch to butyrate + amino acid fermentation, generating acetate, formate, CO₂, and H₂ as products. Nitrogen from arginine, serine, cysteine, alanine, and ammonium supports growth. This flux is sustainable within the sealed batch and matches known Dorea metabolism.", "confidence": 0.72}
+```

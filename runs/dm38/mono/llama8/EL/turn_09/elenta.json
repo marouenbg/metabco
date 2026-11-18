@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": 20.0,
+  "arab__L": 10.0,
+  "gly": 5.0,
+  "ser__L": 10.0,
+  "asn__L": 5.0,
+  "for": 40.0
+ },
+ "growth_rate": 0.833,
+ "rationale": "Utilize acetate, L-arabinose, and glycine as carbon sources, and L-serine and L-asparagine as nitrogen sources to support growth. Produce formate and acetate as primary products.",
+ "confidence": 0.9
+}

@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 0,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.3,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.35 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0785 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Lactate and glucose uptake support growth and acetate production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "co2": 5.0,
+   "h2": 2.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "co2": 5.0,
+   "h2": 2.0,
+   "pi": -0.3499,
+   "so4": -0.0785
+  }
+ }
+]

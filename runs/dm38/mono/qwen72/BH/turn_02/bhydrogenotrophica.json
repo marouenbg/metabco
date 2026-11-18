@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "co2": -5.0,
+  "nh4": -5.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "h2": 5.0,
+  "for": 5.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Balanced uptake of lactate and CO2, with production of acetate, butyrate, hydrogen, and formate to support sustainable growth.",
+ "confidence": 0.9
+}

@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 10,
+  "growth_claimed": 0.28,
+  "growth_allowed": 0.28,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: gln__L"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake gln__L to pool limit -1.36",
+   "P: credited 0.327 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Butyrate and acetate oxidation for energy and carbon; glutamine and asparagine for nitrogen; amino acid catabolism for cofactors. CO\u2082 release from heterotrophic oxidation. Carbon budget balanced: ~10.",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "but": -3.0,
+   "ac": -3.5,
+   "gln__L": -1.5,
+   "asn__L": -1.0,
+   "phe__L": -0.8,
+   "tyr__L": -0.6,
+   "cys__L": -0.5,
+   "for": -0.4,
+   "co2": 4.5,
+   "h2": 0.2
+  },
+  "fluxes_applied": {
+   "but": -3.0,
+   "ac": -3.5,
+   "gln__L": -1.3643,
+   "asn__L": -1.0,
+   "phe__L": -0.8,
+   "tyr__L": -0.6,
+   "cys__L": -0.5,
+   "for": -0.4,
+   "co2": 4.5,
+   "h2": 0.2,
+   "pi": -0.3266
+  }
+ }
+]

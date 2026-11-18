@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "lac__L": -4.0,
+  "arg__L": -4.0,
+  "ala__L": -4.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "ppa": 2.0,
+  "co2": 3.0,
+  "nh4": -4.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Continuing to utilize glucose, lactate, arginine, and alanine for growth, producing acetate, butyrate, propionate, and CO2 as fermentation products.",
+ "confidence": 0.9
+}

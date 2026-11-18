@@ -1,0 +1,34 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 4,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.1156,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=37 out=35 biomass=8.33"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.177 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0549 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.25 -> 0.116"
+  ],
+  "rationale": "Utilizing arabinose and arginine as carbon and nitrogen sources, producing lactate and formate as fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arab__L": -5.0,
+   "arg__L": -2.0,
+   "lac__L": 10.0,
+   "for": 5.0
+  },
+  "fluxes_applied": {
+   "arab__L": -5.0,
+   "arg__L": -2.0,
+   "lac__L": 10.0,
+   "for": 5.0,
+   "pi": -0.1772,
+   "so4": -0.0549
+  }
+ }
+]

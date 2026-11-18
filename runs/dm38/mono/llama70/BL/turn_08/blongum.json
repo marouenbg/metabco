@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "inost": -5.0,
+  "arg__L": -1.0,
+  "ac": 2.5,
+  "lac__L": 1.5
+ },
+ "growth_rate": 0.3,
+ "rationale": "Utilizing myo-inositol as primary carbon source and L-arginine as nitrogen source for growth and fermentation",
+ "confidence": 0.8
+}

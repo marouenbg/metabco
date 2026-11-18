@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "lac__L": 3.0,
+  "arg__L": -3.5,
+  "cys__L": -0.8,
+  "nh4": -1.5,
+  "ac": 8.0,
+  "for": 4.5,
+  "co2": 3.5
+ },
+ "growth_rate": 0.06,
+ "rationale": "Mixed fermentation of glucose and arginine under anaerobic conditions. Glucose provides primary carbon; arginine supplies nitrogen and additional carbon. Lactate is secreted due to redox imbalance from mixed substrates. Products (acetate, formate, CO\u2082) reflect typical *E. lenta* fermentation. Conservative flux maintains nutrient availability over full 48h batch culture.",
+ "confidence": 0.65
+}

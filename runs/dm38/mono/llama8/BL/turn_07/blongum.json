@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": 13.35,
+  "lac__L": 26.67,
+  "nh4": 10.0,
+  "ac": 20.0,
+  "for": 20.0
+ },
+ "growth_rate": 0.345,
+ "rationale": "To maximize growth while considering available nutrients and ability to transport them.",
+ "confidence": 0.8
+}

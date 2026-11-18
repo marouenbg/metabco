@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "but": -3.0,
+  "ac": -3.5,
+  "gln__L": -1.5,
+  "asn__L": -1.0,
+  "phe__L": -0.8,
+  "tyr__L": -0.6,
+  "cys__L": -0.5,
+  "for": -0.4,
+  "co2": 4.5,
+  "h2": 0.2
+ },
+ "growth_rate": 0.28,
+ "rationale": "Butyrate and acetate oxidation for energy and carbon; glutamine and asparagine for nitrogen; amino acid catabolism for cofactors. CO\u2082 release from heterotrophic oxidation. Carbon budget balanced: ~10.4 mmol in, 10.6 mmol (growth + release) out. Sustainable growth rate given remaining substrate in sealed batch near end-stage.",
+ "confidence": 0.68
+}

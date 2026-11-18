@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -4.17,
+  "ser__L": -6.388,
+  "but": 2.0,
+  "ppa": 1.5,
+  "ac": 1.0
+ },
+ "growth_rate": 0.007,
+ "rationale": "Utilizing D-glucose (glc__D), Ammonium (nh4), and L-serine (ser__L) as carbon and nitrogen sources, and releasing butyrate (but), propionate (ppa), and acetate (ac) into the environment.",
+ "confidence": 0.9
+}

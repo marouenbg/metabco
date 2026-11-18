@@ -1,0 +1,107 @@
+# Reasoning
+
+## 1. Carbon and nitrogen sources I can transport
+
+**Dorea longicatena** is a Gram-positive, obligate anaerobe in the Faecalibacterium cluster. It is a saccharolytic bacterium with capacity for amino acid fermentation. Based on genomic characterisation, it encodes:
+
+- **Carbohydrate transporters**: PTS systems for glucose, arabinose, maltose; likely general hexose/pentose permeases
+- **Organic acid transporters**: monocarboxylate transporters for lactate, acetate, formate, butyrate (uptake and/or exchange)
+- **Amino acid transporters**: broad-specificity amino acid permeases
+
+**What I cannot use:**
+- Glucose (glc__D) is **absent** from this turn's environment (depleted by turn 4)
+- Arabinose is present but at lower concentration now; I have the transporter
+
+**What I can use:**
+- **Butyrate** (27.49 mM) — I can import via monocarboxylate transporter and ferment
+- **Acetate** (15.07 mM) — I can import and potentially use for growth/fermentation
+- **L-lactate** (10.45 mM) — I can import and ferment
+- **Formate** (11.85 mM) — I can import; formate is a product of amino acid fermentation
+- **L-arabinose** (14.21 mM) — I have PTS; can ferment
+- **Amino acids** — broad array available; I can use these for both carbon and nitrogen
+
+## 2. Fermentation products
+
+D. longicatena is known to produce:
+- **Butyrate** (primary product from carbohydrate fermentation via acetyl-CoA → butyrate)
+- **Acetate** (from pyruvate, also via mixed-acid fermentation)
+- **Formate** (from pyruvate decarboxylation)
+- **CO₂** (from decarboxylation reactions)
+- **H₂** (from formate lyase or hydrogenase under anaerobic conditions)
+
+## 3. Metabolic strategy
+
+At turn 5, glucose is gone. I must shift to fermentation of:
+- **Butyrate** (abundant, 27.49 mM) — can β-oxidise to acetyl-CoA, then refermenting or using for biosynthesis
+- **L-lactate** (10.45 mM) — lactate can be oxidised to pyruvate, then fermented
+- **L-arabinose** (14.21 mM) — pentose fermentation
+- **Amino acids** — as supplementary carbon and nitrogen source
+
+Given I showed **zero growth at turn 4**, I need to reassess. The most likely explanation: I ran out of readily fermentable carbohydrate (glucose) and may have miscalculated or attempted unsustainable growth. Now I must rely on lactate, arabinose, and amino acid fermentation.
+
+## 4. Growth calculation
+
+**Carbon budget:**
+- Uptake: L-lactate (10 mmol/gDW/h) → 2C per lactate = 20 C
+- Uptake: L-arabinose (5 mmol/gDW/h) → 5C per arabinose = 25 C
+- Uptake: L-arginine (2 mmol/gDW/h) → 6C per arg = 12 C
+- **Total C in: ~57 mmol C/gDW/h**
+
+**Carbon costs:**
+- Growth at rate μ (1/h): 38 mmol C per g biomass produced = 38μ mmol C/gDW/h
+- Fermentation products (acetate, butyrate, formate, CO₂): these are carbon skeletons released
+
+For sustainable growth without accumulating errors, I estimate:
+- μ ≈ **0.35 /h** (moderate growth, given depleted carbohydrate but available lactate + arabinose + amino acids)
+
+**Nitrogen budget:**
+- Uptake: L-arginine (2 mmol/gDW/h) → 4 N per arg = 8 N
+- Uptake: L-serine (1 mmol/gDW/h) → 1 N per ser = 1 N
+- Uptake: Ammonium (1 mmol/gDW/h) → 1 N per NH₄ = 1 N
+- **Total N in: ~10 mmol N/gDW/h**
+- Growth cost: 10 mmol N per g biomass = 10μ = 3.5 mmol N/gDW/h at μ=0.35
+- **Sufficient nitrogen available.**
+
+**Carbon audit at μ = 0.35 /h:**
+- C in: 57 mmol C/gDW/h
+- C for growth: 38 × 0.35 = 13.3 mmol C/gDW/h
+- C for fermentation products: 57 − 13.3 = 43.7 mmol C/gDW/h
+
+I will release this as acetate, butyrate, formate, and CO₂ in proportions consistent with mixed-acid fermentation of lactate and arabinose.
+
+## 5. Flux allocation
+
+| Metabolite | Flux (mmol/gDW/h) | Rationale |
+|---|---|---|
+| L-lactate | −10.0 | Primary carbon source; lactate → pyruvate oxidation |
+| L-arabinose | −5.0 | Secondary carbohydrate; pentose fermentation |
+| L-arginine | −2.0 | Amino acid carbon + nitrogen |
+| L-serine | −1.0 | Amino acid carbon + nitrogen |
+| Ammonium | −1.0 | Nitrogen supplementation |
+| Acetate | +8.0 | Fermentation product |
+| Butyrate | +6.0 | Fermentation product |
+| Formate | +4.0 | Fermentation product |
+| CO₂ | +25.0 | Decarboxylation product |
+
+**Growth rate: 0.35 /h**
+
+---
+
+```json
+{
+  "fluxes": {
+    "lac__L": -10.0,
+    "arab__L": -5.0,
+    "arg__L": -2.0,
+    "ser__L": -1.0,
+    "nh4": -1.0,
+    "ac": 8.0,
+    "but": 6.0,
+    "for": 4.0,
+    "co2": 25.0
+  },
+  "growth_rate": 0.35,
+  "rationale": "Glucose depleted; switching to lactate + arabinose + amino acid fermentation. Lactate oxidation and pentose fermentation provide 57 mmol C/gDW/h. Growth at 0.35 /h consumes 13.3 mmol C/gDW/h (38×0.35) and 3.5 mmol N/gDW/h. Remaining 43.7 mmol C/gDW/h released as mixed-acid fermentation products (acetate, butyrate, formate, CO₂). Nitrogen balanced via arginine + serine + ammonium.",
+  "confidence": 0.68
+}
+```

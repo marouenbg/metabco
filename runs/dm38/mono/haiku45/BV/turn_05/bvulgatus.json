@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "arg__L": -5.0,
+  "cys__L": -2.0,
+  "ala__L": -2.0,
+  "inost": -2.0,
+  "ac": 8.5,
+  "but": 4.2,
+  "ppa": 3.1,
+  "co2": 8.0,
+  "nh4": -1.8
+ },
+ "growth_rate": 0.35,
+ "rationale": "Nitrogen limitation halted growth; resuming amino acid fermentation (arg, cys, ala) with inositol co-utilization. Mixed fermentation yields acetate, butyrate, propionate, CO\u2082. Modest growth recovery supported by available amino-acid N.",
+ "confidence": 0.62
+}

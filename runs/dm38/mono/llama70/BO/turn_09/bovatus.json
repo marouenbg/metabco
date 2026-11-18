@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "inost": -5.0,
+  "ala__L": -2.0,
+  "arg__L": -1.0,
+  "ac": 2.0,
+  "ppa": 1.0,
+  "but": 1.0,
+  "nh4": 1.0
+ },
+ "growth_rate": 0.065,
+ "rationale": "Carbon and nitrogen sources available, growth rate limited by nitrogen uptake",
+ "confidence": 0.8
+}

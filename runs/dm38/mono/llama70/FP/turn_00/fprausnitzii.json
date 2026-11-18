@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -2.0,
+  "but": 8.0,
+  "co2": 1.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.286,
+ "rationale": "L-lactate and ammonium uptake, butyrate production, and nitrogen-limited growth",
+ "confidence": 0.8
+}

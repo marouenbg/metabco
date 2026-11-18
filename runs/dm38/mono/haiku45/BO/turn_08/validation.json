@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 8,
+  "growth_claimed": 0.18,
+  "growth_allowed": 0.18,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.225 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0471 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Bacteroides ovatus ferments remaining acetate and amino acids (proline, arginine) under anaerobic conditions. Moderate uptake rates reflect nutrient depletion at 32h into 48h batch. Nitrogen from amin",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "ac": 1.5,
+   "pro__L": -2.0,
+   "arg__L": -1.0,
+   "nh4": -1.5,
+   "ppa": 1.2,
+   "co2": 1.0,
+   "for": 0.2,
+   "h2": 0.1
+  },
+  "fluxes_applied": {
+   "ac": 1.5,
+   "pro__L": -2.0,
+   "arg__L": -1.0,
+   "nh4": -1.5,
+   "ppa": 1.2,
+   "co2": 1.0,
+   "for": 0.2,
+   "h2": 0.1,
+   "pi": -0.2255,
+   "so4": -0.0471
+  }
+ }
+]

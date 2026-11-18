@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "so4": -2.02,
+  "nh4": -2.0,
+  "gly": -0.8,
+  "ala__L": -0.6,
+  "ac": 3.0,
+  "co2": 8.0,
+  "h2s": 2.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Lactate-sulfate reduction is my primary metabolism. Lactate is abundant (28 mM) and I oxidize it to acetate while reducing sulfate to H\u2082S. Amino acids supplement nitrogen. Carbon balance: 30 mmol C in (lactate) \u2192 14 mmol C out (acetate + CO\u2082) + 16 mmol C biomass (0.40 gDW/h \u00d7 43 mmol C/gDW).",
+ "confidence": 0.75
+}

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -7.5,
+  "lac__L": -2.5,
+  "arab__L": -1.5,
+  "nh4": -3.0,
+  "ac": 4.8,
+  "ppa": 2.5,
+  "co2": 3.2,
+  "succ": 1.5
+ },
+ "growth_rate": 0.58,
+ "rationale": "Mixed-acid fermentation of glucose, lactate, and arabinose under anaerobic conditions. Glucose is primary carbon source; lactate and arabinose are co-fermented. Ammonium satisfies nitrogen demand. Products are acetate, propionate, succinate, and CO\u2082\u2014typical fermentation end products for Bacteroides. Carbon and nitrogen budgets balanced.",
+ "confidence": 0.72
+}

@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -6.0,
+  "arg__L": -4.0,
+  "nh4": -3.0,
+  "ac": 6.0,
+  "but": 2.0,
+  "for": 2.0,
+  "co2": 3.5,
+  "h2": 2.0
+ },
+ "growth_rate": 0.7,
+ "rationale": "Co-ferment glucose, lactate, and arginine (via ADI pathway) with ammonium as supplemental nitrogen. Mixed-acid fermentation yields acetate, butyrate, formate, CO\u2082, and H\u2082. Carbon and nitrogen budgets balanced; growth sustainable at 0.7 /h in early-to-mid batch phase.",
+ "confidence": 0.72
+}

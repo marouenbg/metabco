@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 6,
+  "growth_claimed": 0.225,
+  "growth_allowed": 0.225,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.262 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0589 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "butyrate-producing bacterium fermenting D-glucose and utilizing L-arginine as nitrogen source",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "but": 1.55,
+   "ac": 3.1,
+   "co2": 3.1
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "but": 1.55,
+   "ac": 3.1,
+   "co2": 3.1,
+   "pi": -0.2616,
+   "so4": -0.0589
+  }
+ }
+]

@@ -1,0 +1,47 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 8,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: glc__D",
+   "c_imbalance: in=60 out=60 biomass=10.6",
+   "n_imbalance: in=0 out=0 biomass=0.726",
+   "s_imbalance: in=0 out=10 biomass=0"
+  ],
+  "warnings": [
+   "no_transporter: glc__D"
+  ],
+  "repairs": [
+   "P: credited 0.328 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.25 -> 0.0705",
+   "N: growth 0.0705 -> 0",
+   "S: secretions scaled by 0"
+  ],
+  "rationale": "growth supported by glucose, hydrogen, and hydrogen sulfide uptake, with formate, lactate, and acetate release",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": 10.0,
+   "h2": 10.0,
+   "h2s": 10.0,
+   "nh4": 0.0,
+   "for": -10.0,
+   "lac__L": -10.0,
+   "ac": -10.0,
+   "co2": 0.0
+  },
+  "fluxes_applied": {
+   "glc__D": 10.0,
+   "h2": 10.0,
+   "h2s": 0.0,
+   "nh4": 0.0,
+   "for": -10.0,
+   "lac__L": -10.0,
+   "ac": -10.0,
+   "co2": 0.0,
+   "pi": -0.3283
+  }
+ }
+]

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "arab__L": -5.0,
+  "arg__L": -2.0,
+  "ac": 3.0,
+  "ppa": 2.0,
+  "for": 1.0,
+  "co2": 1.0,
+  "nh4": 2.0
+ },
+ "growth_rate": 0.6,
+ "rationale": "Utilizing L-arabinose and L-arginine for growth, producing acetate, propionate, formate, and CO2 as fermentation products.",
+ "confidence": 0.85
+}

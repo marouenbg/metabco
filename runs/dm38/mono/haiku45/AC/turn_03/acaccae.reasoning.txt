@@ -1,0 +1,92 @@
+# Metabolic reasoning for Anaerostipes caccae, turn 3 (t=12h)
+
+## Current state
+- Biomass: 0.4451 gDW/L
+- 48 h batch culture, anaerobic, sealed
+- Significant substrates remain (glucose, lactate, arabinose, arginine all >12 mM)
+
+## Substrate availability & transport capacity
+
+**Known transporters & metabolism for A. caccae:**
+- **D-glucose**: abundant (12.66 mM), readily transported via PTS or glucose permeases. Primary fermentable sugar.
+- **L-lactate**: present (24.6 mM), can be fermented via lactate oxidation to acetyl-CoA.
+- **L-arabinose**: present (18.74 mM), pentose fermentation pathway.
+- **L-arginine**: present (19.72 mM), can be fermented via Stickland reactions (paired with amino acid oxidation).
+- **Carbohydrates (maltose, inositol)**: present but typically lower priority than glucose and lactate.
+- **Amino acids**: multiple present; arginine especially useful for Stickland-type metabolism.
+
+A. caccae is a butyrate-producing bacterium (confirmed by recent secretion pattern). It ferments carbohydrates and amino acids via mixed-acid fermentation, producing primarily **butyrate and acetate**, with minor **formate** and **CO₂**.
+
+## Recent trend analysis
+- Turns 0–2 show declining growth rate: 0.480 → 0.450 → 0.400 /h
+- Consistent uptake: glucose (12–15 mmol/gDW/h), lactate (3–4), arabinose (3–5), arginine (2–3)
+- Consistent secretion: butyrate (1–8.5), acetate (1–6.5), formate (2–2.5)
+- Ammonium uptake initiated at turn 2 (−3.0), indicating nitrogen limitation beginning
+
+## Nitrogen constraint check
+- Available N: nh4 (6.77 mM) + arg (19.72 mM, ~1 N per molecule) + other amino acids ≈ 50+ mmol N total
+- At 0.4 gDW/L with 10 mmol N per g, biomass has incorporated ~4.4 mmol N so far
+- Remaining N is adequate for continued growth but not unlimited
+
+## Strategy for turn 3
+
+**Carbon uptake plan:**
+- Maintain glucose uptake at ~12 mmol/gDW/h (primary fermentable substrate)
+- Add lactate uptake at ~3–4 mmol/gDW/h (secondary fermentable)
+- Reduce arabinose slightly to ~2–3 mmol/gDW/h (competition with glucose)
+- Reduce arginine to ~1.5 mmol/gDW/h (Stickland reactions provide less energy per C than fermentation)
+
+**Nitrogen uptake:**
+- Continue ammonium uptake at ~2 mmol/gDW/h (modest, to support growth)
+- Small arginine uptake (1.5 mmol/gDW/h) covers both C and N
+
+**Fermentation products:**
+- Butyrate: ~4.5 mmol/gDW/h (primary product for butyrate producer)
+- Acetate: ~2.5 mmol/gDW/h (secondary product)
+- Formate: ~1.5 mmol/gDW/h (minor)
+- CO₂: ~2 mmol/gDW/h (from decarboxylation)
+
+## Carbon audit
+**Uptake (mmol C/gDW/h):**
+- Glucose (6 C): 12 × 6 = 72
+- Lactate (3 C): 3.5 × 3 = 10.5
+- Arabinose (5 C): 2.5 × 5 = 12.5
+- Arginine (6 C): 1.5 × 6 = 9
+- **Total in: 104 mmol C/gDW/h**
+
+**Secretion + growth (mmol C/gDW/h):**
+- Butyrate (4 C): 4.5 × 4 = 18
+- Acetate (2 C): 2.5 × 2 = 5
+- Formate (1 C): 1.5 × 1 = 1.5
+- CO₂ (1 C): 2 × 1 = 2
+- Growth (38 mmol C/g): 0.35 /h × 38 = 13.3
+- **Total out: 39.8 mmol C/gDW/h**
+
+**Balance: 104 − 39.8 = 64.2** (surplus; acceptable for mixed-acid fermentation with overflow metabolism)
+
+## Growth rate derivation
+- Carbon cost for growth: 38 mmol C/g DW
+- Nitrogen cost for growth: 10 mmol N/g DW
+- Available N uptake: 2 (nh4) + 1.5×1 (arg) = 3.5 mmol N/gDW/h
+- **N-limited growth: 3.5 / 10 = 0.35 /h**
+- Carbon available after fermentation products: adequate (104 >> 39.8)
+- **Growth rate: 0.35 /h** (declining from turn 2's 0.40, consistent with N limitation)
+
+```json
+{
+  "fluxes": {
+    "glc__D": -12.0,
+    "lac__L": -3.5,
+    "arab__L": -2.5,
+    "arg__L": -1.5,
+    "nh4": -2.0,
+    "but": 4.5,
+    "ac": 2.5,
+    "for": 1.5,
+    "co2": 2.0
+  },
+  "growth_rate": 0.35,
+  "rationale": "A. caccae ferments glucose and lactate preferentially; arginine provides supplementary C and N via Stickland metabolism. Nitrogen becomes limiting; uptake of ammonium and arginine supports 0.35 /h growth. Butyrate and acetate are major fermentation products; carbon balance verified (104 mmol in vs 39.8 mmol out + growth).",
+  "confidence": 0.72
+}
+```

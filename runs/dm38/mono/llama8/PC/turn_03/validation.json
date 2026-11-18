@@ -1,0 +1,56 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 3,
+  "growth_claimed": 0.9,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=0.5 out=0 biomass=9.31",
+   "p_imbalance: in=0 out=0 biomass=0.0692"
+  ],
+  "warnings": [
+   "no_transporter: h2",
+   "no_transporter: h2s",
+   "no_transporter: but",
+   "no_transporter: etoh",
+   "no_transporter: lac__D"
+  ],
+  "repairs": [
+   "S: credited 0.236 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.9 -> 0.0507",
+   "P: growth 0.0507 -> 0"
+  ],
+  "rationale": "I take up L-arabinose, L-lactate, and formate as my primary carbon sources, and ammonium as my primary nitrogen source. I will aim for a growth rate of 0.900/h.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "arab__L": -10.0,
+   "lac__L": -5.0,
+   "for": -2.0,
+   "nh4": -0.5,
+   "ac": 0.939,
+   "h2": 0.5,
+   "h2s": 0.0,
+   "but": 0.0,
+   "ppa": 0.0,
+   "etoh": 0.0,
+   "co2": 0.0,
+   "lac__D": 0.0
+  },
+  "fluxes_applied": {
+   "arab__L": -10.0,
+   "lac__L": -5.0,
+   "for": -2.0,
+   "nh4": -0.5,
+   "ac": 0.939,
+   "h2": 0.5,
+   "h2s": 0.0,
+   "but": 0.0,
+   "ppa": 0.0,
+   "etoh": 0.0,
+   "co2": 0.0,
+   "lac__D": 0.0,
+   "so4": -0.2356
+  }
+ }
+]

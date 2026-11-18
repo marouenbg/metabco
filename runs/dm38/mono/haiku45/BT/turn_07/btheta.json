@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "lac__L": -8.0,
+  "arab__L": -6.0,
+  "arg__L": -1.5,
+  "ala__L": -1.0,
+  "nh4": -0.8,
+  "ac": 8.0,
+  "ppa": 4.5,
+  "but": 2.0,
+  "for": 1.5,
+  "co2": 10.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Lactate and arabinose are now abundant primary substrates; glucose depleted. Amino acid catabolism provides limiting nitrogen. Mixed-acid fermentation products balance carbon and support growth at ~0.25/h, consistent with recent observations as nutrient complexity increases.",
+ "confidence": 0.72
+}

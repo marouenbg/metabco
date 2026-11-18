@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "arg__L": -2.0,
+  "ser__L": -1.0,
+  "pro__L": -1.0,
+  "ala__L": -1.0,
+  "ac": 5.0,
+  "ppa": 3.0,
+  "h2": 2.0,
+  "co2": 2.0,
+  "nh4": 4.0
+ },
+ "growth_rate": 0.152,
+ "rationale": "Utilizing amino acids for nitrogen and carbon, producing acetate, propionate, hydrogen, and carbon dioxide as fermentation products.",
+ "confidence": 0.9
+}

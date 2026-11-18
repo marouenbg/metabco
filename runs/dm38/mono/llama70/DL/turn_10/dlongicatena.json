@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "but": -5.0,
+  "ala__L": -1.0,
+  "gly": -1.0,
+  "ac": 2.0,
+  "ppa": 1.0
+ },
+ "growth_rate": 0.132,
+ "rationale": "Utilizing butyrate, L-alanine, and glycine as primary carbon and nitrogen sources, with acetate and propionate production",
+ "confidence": 0.8
+}

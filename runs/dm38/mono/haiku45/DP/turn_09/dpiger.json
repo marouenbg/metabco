@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "ac": -8.0,
+  "arg__L": -1.5,
+  "glc__D": -2.0,
+  "so4": -2.0,
+  "nh4": -0.5,
+  "pi": -0.4,
+  "co2": 4.0,
+  "h2s": 2.0,
+  "for": 0.5
+ },
+ "growth_rate": 0.15,
+ "rationale": "Lactate depleted; switching to acetate (primary substrate) + arginine (N-rich). Sulfate reduction provides energy. Glucose fermentation supplements. Growth limited by nitrogen availability (only 13 mM total N remaining for culture). Conservative rate reflects 12 h remaining and need to sustain metabolism to end.",
+ "confidence": 0.62
+}

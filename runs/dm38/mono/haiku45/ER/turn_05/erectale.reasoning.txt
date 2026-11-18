@@ -1,0 +1,98 @@
+# Metabolic reasoning for Eubacterium rectale at t=20h
+
+## Assessment of transporters and available substrates
+
+I am Eubacterium rectale, a butyrate-producing bacteroid. My genomic capabilities include:
+- **Carbohydrate uptake**: I have active transporters for glucose (which was depleted by turn 1), arabinose, maltose, and other sugars. However, glucose is now exhausted.
+- **Organic acid uptake**: I can transport lactate, acetate, butyrate, formate, and propionate via my carboxylic acid transporters.
+- **Amino acid uptake**: I have broad amino acid transport capacity (arginine, cysteine, serine, proline, alanine, glycine, etc.).
+- **Nitrogen sources**: Ammonium, amino acids, and arginine are available.
+
+## Current substrate availability (turn 5, t=20h)
+
+The glucose I relied on for turns 1–4 is now exhausted. I must pivot to alternative carbon sources:
+- **L-lactate** (15.82 mM): abundant, fermentable
+- **L-arabinose** (21.31 mM): abundant, fermentable
+- **Acetate** (11.24 mM): present but typically used for energy/biosynthesis, not primary growth substrate
+- **Amino acids** (arginine 21.8 mM, cysteine 6.4 mM, serine 6.4 mM, proline 5.9 mM, etc.): available for catabolism and biosynthesis
+- **Ammonium** (5.593 mM): limiting nitrogen source
+
+## Fermentation strategy
+
+As a butyrate producer, my canonical fermentation pathway is:
+- **Glucose → Pyruvate → Acetyl-CoA + CO₂** (via pyruvate dehydrogenase)
+- **Acetyl-CoA → Butyrate** (via butyryl-CoA pathway)
+- **Acetyl-CoA → Acetate** (overflow)
+- **Lactate oxidation**: Lactate → Pyruvate → feeds butyrate synthesis
+- **Arabinose fermentation**: Arabinose → Pyruvate → Butyrate + CO₂ + Acetate
+
+I will now use **lactate and arabinose** as primary carbon sources, supplemented by amino acid catabolism for nitrogen and additional carbon.
+
+## Flux calculation
+
+**Carbon uptake strategy:**
+- Lactate: 5.0 mmol/gDW/h (a realistic rate for established fermentation)
+- Arabinose: 4.0 mmol/gDW/h (secondary fermentable sugar)
+- Arginine: 2.0 mmol/gDW/h (amino acid catabolism; also provides nitrogen)
+- Cysteine: 0.8 mmol/gDW/h (sulfur source + amino acid catabolism)
+- Serine: 0.6 mmol/gDW/h (amino acid catabolism)
+
+**Total carbon input:**
+- Lactate (C₃): 5.0 × 3 = 15.0 mmol C/gDW/h
+- Arabinose (C₅): 4.0 × 5 = 20.0 mmol C/gDW/h
+- Arginine (C₆): 2.0 × 6 = 12.0 mmol C/gDW/h
+- Cysteine (C₃): 0.8 × 3 = 2.4 mmol C/gDW/h
+- Serine (C₃): 0.6 × 3 = 1.8 mmol C/gDW/h
+- **Total: 51.2 mmol C/gDW/h**
+
+**Nitrogen uptake:**
+- Arginine: 2.0 mmol/gDW/h → 2.0 mmol N/gDW/h
+- Cysteine: 0.8 mmol/gDW/h → 0.8 mmol N/gDW/h
+- Serine: 0.6 mmol/gDW/h → 0.6 mmol N/gDW/h
+- Ammonium: 0.8 mmol/gDW/h (direct uptake)
+- **Total: 4.2 mmol N/gDW/h**
+
+**Growth calculation:**
+- Carbon cost: 33 mmol C per gram dry weight
+- Nitrogen cost: 7 mmol N per gram dry weight
+- Limiting factor: Nitrogen (4.2 / 7 = 0.6) vs. Carbon (51.2 / 33 = 1.55)
+- **Growth rate: 0.60 /h** (limited by nitrogen availability)
+
+**Carbon balance check:**
+- Carbon in: 51.2 mmol C/gDW/h
+- Growth cost: 0.6 × 33 = 19.8 mmol C/gDW/h
+- Available for fermentation products: 51.2 − 19.8 = 31.4 mmol C/gDW/h
+
+**Fermentation product distribution** (butyrate producer):
+- Butyrate (C₄): 4.0 mmol/gDW/h → 16.0 mmol C/gDW/h
+- Acetate (C₂): 3.5 mmol/gDW/h → 7.0 mmol C/gDW/h
+- CO₂: 4.2 mmol/gDW/h → 4.2 mmol C/gDW/h
+- Formate (C₁): 2.0 mmol/gDW/h → 2.0 mmol C/gDW/h
+- **Total products: 29.2 mmol C/gDW/h** ✓ (within 31.4 available)
+
+**Nitrogen audit:**
+- N in: 4.2 mmol N/gDW/h
+- Growth cost: 0.6 × 7 = 4.2 mmol N/gDW/h
+- **Balance: 0 mmol N released** ✓
+
+This strategy maintains anaerobic fermentation, uses available substrates efficiently, and respects mass balance constraints.
+
+```json
+{
+  "fluxes": {
+    "lac__L": -5.0,
+    "arab__L": -4.0,
+    "arg__L": -2.0,
+    "cys__L": -0.8,
+    "ser__L": -0.6,
+    "nh4": -0.8,
+    "but": 4.0,
+    "ac": 3.5,
+    "co2": 4.2,
+    "for": 2.0
+  },
+  "growth_rate": 0.60,
+  "rationale": "Glucose exhausted; pivoting to lactate and arabinose fermentation supplemented by amino acid catabolism. Growth limited by nitrogen (4.2 mmol N available vs 7 mmol N required per gDW). Butyrate production maintained via canonical fermentation pathway. Carbon and nitrogen mass balance satisfied.",
+  "confidence": 0.72
+}
+```

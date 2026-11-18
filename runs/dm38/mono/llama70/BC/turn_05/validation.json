@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 5,
+  "growth_claimed": 1.19,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "p_imbalance: in=0 out=0 biomass=1.49"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "S: credited 0.311 mmol/gDW/h of so4 (declared present in excess)",
+   "P: growth 1.19 -> 0"
+  ],
+  "rationale": "L-arabinose and L-arginine uptake support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arab__L": -10.0,
+   "arg__L": -5.0,
+   "ac": 3.0,
+   "ppa": 2.0,
+   "but": 2.0,
+   "co2": 10.0
+  },
+  "fluxes_applied": {
+   "arab__L": -10.0,
+   "arg__L": -5.0,
+   "ac": 3.0,
+   "ppa": 2.0,
+   "but": 2.0,
+   "co2": 10.0,
+   "so4": -0.3115
+  }
+ }
+]

@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 11,
+  "growth_claimed": 0.476,
+  "growth_allowed": 0.4452,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ala__L",
+   "n_imbalance: in=4.39 out=0 biomass=4.93"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake ala__L to pool limit -4.39",
+   "P: credited 0.596 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.125 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.476 -> 0.445"
+  ],
+  "rationale": "Utilizing abundant acetate and butyrate for carbon and L-alanine for nitrogen to support growth. No fermentation products released to maximize carbon retention.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "but": -10.0,
+   "ala__L": -10.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "but": -10.0,
+   "ala__L": -4.3903,
+   "pi": -0.5962,
+   "so4": -0.1246
+  }
+ }
+]

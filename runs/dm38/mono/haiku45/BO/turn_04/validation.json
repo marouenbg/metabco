@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 4,
+  "growth_claimed": 0.8,
+  "growth_allowed": 0.8,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 1 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.209 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Resuming fermentation after turn 3 zero-growth anomaly. Using abundant glucose and lactate as primary C sources; arginine, alanine, serine for N. Ferment to acetate, propionate, succinate, CO2. Carbon",
+  "confidence": 0.65,
+  "fluxes_claimed": {
+   "glc__D": -6.0,
+   "lac__L": -2.0,
+   "arg__L": -1.5,
+   "ala__L": -1.5,
+   "ser__L": -1.0,
+   "ac": 3.5,
+   "ppa": 1.2,
+   "co2": 2.0,
+   "succ": 0.8
+  },
+  "fluxes_applied": {
+   "glc__D": -6.0,
+   "lac__L": -2.0,
+   "arg__L": -1.5,
+   "ala__L": -1.5,
+   "ser__L": -1.0,
+   "ac": 3.5,
+   "ppa": 1.2,
+   "co2": 2.0,
+   "succ": 0.8,
+   "pi": -1.0021,
+   "so4": -0.2094
+  }
+ }
+]

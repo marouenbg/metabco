@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "for": -3.0,
+  "tyr__L": -1.0,
+  "val__L": -1.0,
+  "lac__L": 2.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Utilizing available acetate, formate, and amino acids for growth and fermentation",
+ "confidence": 0.7
+}

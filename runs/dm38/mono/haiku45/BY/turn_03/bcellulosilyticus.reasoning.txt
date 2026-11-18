@@ -1,0 +1,108 @@
+# Metabolic reasoning for Bacteroides cellulosilyticus DSM 14838 at t=12h
+
+## Carbon and nitrogen sources available
+
+**Abundant carbon sources I can use:**
+- D-glucose (22.17 mM): yes, I have glucose transporters
+- L-lactate (25.91 mM): yes, I ferment lactate well
+- L-arabinose (21.31 mM): yes, I can metabolize pentoses
+- Acetate (6.73 mM): I can use this as a carbon source
+- Maltose (4.38 mM): likely transportable
+
+**Nitrogen sources:**
+- Ammonium (8.47 mM): primary inorganic nitrogen, readily used
+- L-arginine (21 mM): excellent amino acid nitrogen source
+- L-cysteine (8.4 mM): provides both C and N
+- Other amino acids: serine, proline, alanine, glycine, etc.
+
+**Why I cannot use some:**
+- I lack transporters for many trace amino acids at very low concentrations
+- Some compounds (vitamins, nucleotides) are cofactors, not energy/growth sources
+
+## Fermentation strategy
+
+As a saccharolytic anaerobe, I primarily ferment carbohydrates via the Embden-Meyerhof pathway to pyruvate, then produce:
+- **Acetate** (main product)
+- **Propionate** (via acrylyl-CoA)
+- **Butyrate** (via acetyl-CoA condensation)
+- **CO₂** (from decarboxylations)
+- Small amounts of **formate** and **lactate** (overflow)
+
+My recent pattern shows I'm consuming glucose and lactate while producing acetate, propionate, butyrate, and CO₂. This is consistent with mixed-acid fermentation.
+
+## Nutrient limitation analysis at turn 3
+
+**Current biomass:** 0.1205 gDW/L  
+**Elapsed time:** 12 h  
+**Average growth rate so far:** ~0.33 /h (declining from 0.40 to 0.20)
+
+The decline in growth rate (turn 2: 0.203 /h) suggests I'm becoming limited. Checking constraints:
+
+- **Nitrogen:** 8.47 mM NH₄ remaining. For 0.1205 gDW at 10 mmol N/g, I've consumed ~1.2 mmol N already. I still have capacity but it's the limiting factor.
+- **Carbon:** Abundant (glucose 22, lactate 26, arabinose 21 mM). Not limiting yet.
+- **Glucose depletion rate:** Consuming ~6-8 mmol/L per 4h interval. At this rate, glucose will last another ~10-15 h.
+
+## Growth rate calculation
+
+For sustainable growth, I need:
+- **Carbon:** 42 mmol C per g biomass produced
+- **Nitrogen:** 10 mmol N per g biomass produced
+
+With **ammonium at 8.47 mM** and needing 10 mmol N/g:
+- Maximum biomass I can produce: ~0.85 g (8.47 / 10)
+- But I'm only at 0.1205 g now, so I have room.
+
+**Conservative strategy:** Maintain moderate growth (0.25-0.30 /h) to preserve nitrogen. I'll consume glucose and lactate preferentially, using arginine as supplementary nitrogen.
+
+**Carbon budget for 4 h at growth rate μ:**
+- Uptake glucose: 6 mmol/L → 6 mmol C
+- Uptake lactate: 5 mmol/L → 10 mmol C (lactate is C₃)
+- Uptake arginine: 1.5 mmol/L → 6 mmol C
+- Total C in: ~22 mmol/L per 4h interval = 5.5 mmol/gDW/h
+
+**For growth of 0.27 /h over 4 h:**
+- Biomass produced: 0.1205 × e^(0.27×4) ≈ 0.1205 × 3.05 ≈ 0.368 gDW
+- Carbon cost: (0.368 - 0.1205) × 42 ≈ 11.3 mmol C
+- Nitrogen cost: (0.368 - 0.1205) × 10 ≈ 2.69 mmol N
+
+**Fermentation products (anaerobic):**
+- Acetate: ~3.5 mmol/gDW/h
+- Propionate: ~2.5 mmol/gDW/h
+- Butyrate: ~1.2 mmol/gDW/h
+- CO₂: ~8 mmol/gDW/h
+
+This matches my recent pattern and balances mass.
+
+## Final decision
+
+**Growth rate:** 0.27 /h (sustainable with available N)
+
+**Uptakes:**
+- Glucose: -6.0 mmol/gDW/h
+- Lactate: -5.0 mmol/gDW/h
+- Arginine: -1.5 mmol/gDW/h
+- Ammonium: -1.8 mmol/gDW/h
+
+**Secretions:**
+- Acetate: +3.5 mmol/gDW/h
+- Propionate: +2.5 mmol/gDW/h
+- Butyrate: +1.2 mmol/gDW/h
+- CO₂: +8.0 mmol/gDW/h
+
+```json
+{
+  "fluxes": {
+    "glc__D": -6.0,
+    "lac__L": -5.0,
+    "arg__L": -1.5,
+    "nh4": -1.8,
+    "ac": 3.5,
+    "ppa": 2.5,
+    "but": 1.2,
+    "co2": 8.0
+  },
+  "growth_rate": 0.27,
+  "rationale": "Nitrogen becoming limiting (8.47 mM NH₄ remaining). Maintaining moderate growth on glucose and lactate with arginine supplementation. Fermentation yields acetate, propionate, butyrate, and CO₂ consistent with observed pattern. Carbon and nitrogen budgets balanced.",
+  "confidence": 0.72
+}
+```

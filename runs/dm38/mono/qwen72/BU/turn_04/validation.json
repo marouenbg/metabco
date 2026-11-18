@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "buniformis",
+  "turn": 4,
+  "growth_claimed": 0.0357,
+  "growth_allowed": 0.0357,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.0447 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.00934 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing to utilize D-glucose and L-lactate for carbon, and ammonium for nitrogen, while producing acetate, butyrate, propionate, and formate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -6.0,
+   "lac__L": -2.0,
+   "nh4": -1.5,
+   "ac": 3.0,
+   "but": 2.0,
+   "ppa": 1.0,
+   "for": 0.5
+  },
+  "fluxes_applied": {
+   "glc__D": -6.0,
+   "lac__L": -2.0,
+   "nh4": -1.5,
+   "ac": 3.0,
+   "but": 2.0,
+   "ppa": 1.0,
+   "for": 0.5,
+   "pi": -0.0447,
+   "so4": -0.0093
+  }
+ }
+]

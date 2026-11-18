@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 9,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.2489,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4",
+   "n_imbalance: in=2 out=0 biomass=2.11"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "P: credited 0.227 mmol/gDW/h of pi (declared present in excess)",
+   "N: growth 0.25 -> 0.249"
+  ],
+  "rationale": "Fermenting butyrate, acetate, and L-cysteine to produce acetate, butyrate, and propionate",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": -5.0,
+   "ac": -3.0,
+   "cys__L": -2.0,
+   "ppa": 2.0,
+   "nh4": -1.0
+  },
+  "fluxes_applied": {
+   "but": -5.0,
+   "ac": -3.0,
+   "cys__L": -2.0,
+   "ppa": 2.0,
+   "nh4": 0.0,
+   "pi": -0.2273
+  }
+ }
+]

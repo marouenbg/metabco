@@ -1,0 +1,90 @@
+# Metabolic decision for Desulfovibrio piger ATCC 29098 at t=0
+
+## Analysis of available substrates and capabilities
+
+*D. piger* is a sulfate-reducing bacterium with a well-characterized metabolic repertoire. Let me assess what I can use:
+
+**Carbon sources available:**
+- Lactate (28.31 mM): *D. piger* is a classical lactate oxidizer; I have lactate transporters and can use this as primary electron donor
+- Glucose (24.98 mM): I can ferment or oxidize glucose via glycolysis
+- Arabinose (21.31 mM): pentose fermentation is possible
+- Amino acids (arginine, cysteine, serine, proline, alanine, glycine, phenylalanine, leucine, tyrosine, valine, etc.): I can catabolize these as both carbon and nitrogen sources
+- CO₂ (47.62 mM): available as an electron acceptor sink and for biosynthesis
+
+**Nitrogen sources:**
+- Ammonium (9.347 mM): primary preferred source
+- Amino acids (multiple, ~100+ mM total): can be deaminated and used
+
+**Electron acceptors in anaerobic conditions:**
+- Sulfate (in excess): I am a sulfate reducer; this is my primary electron acceptor
+- Nitrate (0.1093 mM): trace, can use but limited
+- No hydrogen sulfide listed initially
+
+**Key metabolic strategy:**
+
+As a sulfate-reducing bacterium, my optimal metabolism is lactate oxidation coupled to sulfate reduction:
+
+C₃H₆O₃ (lactate) + SO₄²⁻ → HCO₃⁻ + H₂S + H₂O
+
+This yields ~2 mol ATP per mol lactate and is my most efficient pathway. I will:
+1. **Take up lactate** as primary electron donor (abundant, 28.31 mM)
+2. **Take up ammonium** for biosynthesis (9.347 mM available)
+3. **Take up some amino acids** to supplement nitrogen and provide additional carbon
+4. **Reduce sulfate** (in excess) as electron acceptor
+5. **Release CO₂, H₂S, and possibly acetate/formate** as fermentation products
+
+## Growth calculation
+
+**Carbon balance:**
+- Lactate uptake: ~10 mmol/gDW/h (aggressive but sustainable for 48 h given 28.31 mM available)
+- This provides ~30 mmol C per gDW/h
+
+**Nitrogen balance:**
+- Ammonium: ~2 mmol/gDW/h (9.347 mM / 0.002178 gDW/L ≈ 4300 mM per gDW; conservative uptake)
+- Amino acid uptake (glycine, alanine, serine): ~1.5 mmol/gDW/h
+- Total N: ~3.5 mmol/gDW/h
+
+**Growth rate calculation:**
+- Carbon requirement: 43 mmol C per g DW
+- Nitrogen requirement: 10 mmol N per g DW
+- From 30 mmol C input: 30/43 = 0.70 g DW per mmol C = limited by carbon
+- From 3.5 mmol N input: 3.5/10 = 0.35 g DW per mmol N = **limited by nitrogen**
+
+At 3.5 mmol N/gDW/h → growth rate = 3.5/10 = **0.35 /h**
+
+This consumes: 0.35 × 43 = **15.05 mmol C per gDW/h**
+
+**Carbon audit:**
+- Lactate input: 10 mmol/gDW/h = 30 mmol C/gDW/h
+- Growth consumption: 15.05 mmol C/gDW/h
+- Remaining for oxidation/fermentation: 30 - 15.05 = 14.95 mmol C/gDW/h
+- Expected products: CO₂ (from lactate oxidation) + acetate/formate (from partial fermentation)
+
+Lactate oxidation: C₃H₆O₃ → products. Complete oxidation yields 3 CO₂; partial fermentation yields acetate + CO₂.
+
+**Fermentation stoichiometry:**
+- Lactate → acetate + CO₂ (Pasteur fermentation)
+- Lactate oxidation coupled to sulfate reduction
+
+I will release: **CO₂** (~8 mmol/gDW/h), **H₂S** (~2 mmol/gDW/h), and **acetate** (~3 mmol/gDW/h)
+
+## Final fluxes
+
+```json
+{
+  "fluxes": {
+    "lac__L": -10.0,
+    "nh4": -2.0,
+    "gly": -0.8,
+    "ala__L": -0.6,
+    "ser__L": -0.5,
+    "so4": -1.5,
+    "co2": 8.0,
+    "h2s": 2.0,
+    "ac": 3.0
+  },
+  "growth_rate": 0.35,
+  "rationale": "D. piger oxidizes lactate coupled to sulfate reduction as primary metabolism. Lactate (10 mmol/gDW/h) and amino acid uptake (2.3 mmol N/gDW/h) support growth limited by nitrogen availability at 0.35 /h. Carbon balance: 30 mmol C input minus 15 mmol C biomass leaves 15 mmol C for fermentation products (CO₂, H₂S, acetate). Sulfate reduction is energetically favorable in anaerobic conditions.",
+  "confidence": 0.72
+}
+```

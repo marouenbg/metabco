@@ -1,0 +1,32 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 5,
+  "growth_claimed": 0.233,
+  "growth_allowed": 0.233,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.306 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.061 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 0.299 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Uptake of acetate and ammonium supports growth and maintenance",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "nh4": -2.0,
+   "co2": 5.0,
+   "h2": 5.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "nh4": -2.2991,
+   "co2": 5.0,
+   "h2": 5.0,
+   "pi": -0.306,
+   "so4": -0.061
+  }
+ }
+]

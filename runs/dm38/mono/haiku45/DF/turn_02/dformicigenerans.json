@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -4.0,
+  "arg__L": -2.0,
+  "nh4": -2.0,
+  "but": 12.0,
+  "ac": 4.0,
+  "co2": 3.0,
+  "for": 1.0
+ },
+ "growth_rate": 0.57,
+ "rationale": "Dorea ferments glucose and lactate as primary carbon sources, with arginine as supplementary substrate. Nitrogen is limiting (4 mmol/gDW/h available supports ~0.57 /h growth). Fermentation produces butyrate, acetate, CO\u2082, and formate. Carbon balance: 84 mmol C in (60 from glucose + 12 from lactate + 12 from arginine); 78.81 mmol C out (60 fermentation + 18.81 growth). Nitrogen balance: 4 mmol N in supports 4.48 mmol N needed for growth at 0.57 /h.",
+ "confidence": 0.72
+}

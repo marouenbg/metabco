@@ -1,0 +1,123 @@
+# Metabolic reasoning for Bifidobacterium adolescentis at t=28h
+
+## Assessment of my genome and transporters
+
+I am *Bifidobacterium adolescentis*, a facultative anaerobe with a well-characterized metabolism. My genome encodes:
+- **Carbohydrate transporters**: PTS systems for glucose, arabinose, maltose; permeases for lactate, acetate
+- **Amino acid transporters**: broad specificity for common amino acids (arginine, serine, alanine, etc.)
+- **Cofactor/vitamin transporters**: I require exogenous B vitamins and nucleotide precursors (present in excess here)
+
+## Carbon source hierarchy
+
+Looking at what I can actually use:
+1. **L-lactate (49.83 mM)**: I transport and ferment this efficiently. It's my primary substrate now.
+2. **D-glucose (12.5 mM)**: I can use this via PTS; a good secondary source.
+3. **L-arabinose (16.91 mM)**: Fermentable via my pentose metabolism.
+4. **Acetate (9.081 mM)**: I can take this up, though it's energetically poor in anaerobiosis.
+5. **Maltose (4.382 mM)**: I have maltose PTS.
+
+Cannot use efficiently: CO₂ is a sink/buffer, not a growth substrate under anaerobiosis.
+
+## Nitrogen sources
+
+Available:
+- **Ammonium (7.321 mM)**: Primary inorganic N source
+- **Amino acids**: Abundant; I can deaminate and use the carbon skeleton + recover NH₄⁺
+
+Current N is not limiting (I have 7.3 mM NH₄ remaining; at 8 mmol N per gram biomass, this supports ~0.9 g/L more growth).
+
+## Fermentation strategy
+
+As a bifidobacterium, my signature fermentation is the **bifid shunt** (fructose-6-phosphate → acetyl-CoA + lactate pathway), producing:
+- **Lactate** (primary product, regenerated from lactate substrate)
+- **Acetate** (secondary product, energy-conserving)
+- **Formate** (minor, from pyruvate)
+- **CO₂** (from decarboxylation steps)
+
+My recent history shows I've been producing lactate and acetate, which matches this.
+
+## Growth rate calculation
+
+**Substrate available for next 4 h:**
+- Lactate: 49.83 mM (abundant)
+- Glucose: 12.5 mM (good backup)
+- Arabinose: 16.91 mM (available)
+- Arginine: 19.41 mM (can use for C + N)
+
+**Conservative strategy**: Focus on lactate + glucose fermentation, modest amino acid use.
+
+Lactate fermentation (homofermentative-like under these conditions):
+- Lactate → pyruvate → acetyl-CoA + formate/CO₂
+- Net: lactate regenerates lactate + acetate + CO₂
+
+Let me propose:
+- **Lactate uptake**: 12 mmol/gDW/h (sustainable, not maximal)
+- **Glucose uptake**: 4 mmol/gDW/h (secondary)
+- **Arginine uptake**: 2 mmol/gDW/h (C + N source)
+- **Ammonium uptake**: 1.5 mmol/gDW/h (N for biosynthesis)
+
+**Carbon balance:**
+- In: 12(lactate, C₃) + 4(glucose, C₆) + 2(arginine, C₆) = 36 + 24 + 12 = 72 mmol C/gDW/h
+- Biomass cost: 33 mmol C/gDW/h
+- Available for fermentation products: 72 - 33 = 39 mmol C/gDW/h
+
+**Nitrogen balance:**
+- In: 1.5(NH₄) + 2(arginine) = 1.5 + 2 = 3.5 mmol N/gDW/h
+- Biomass cost: 8 mmol N/gDW/h
+- **Problem**: I need 8 but only have 3.5. I need more amino acid uptake.
+
+**Revised uptake:**
+- Lactate: 10 mmol/gDW/h
+- Glucose: 3 mmol/gDW/h
+- Arginine: 3 mmol/gDW/h
+- Serine: 2 mmol/gDW/h
+- Ammonium: 1.5 mmol/gDW/h
+
+Carbon in: 10(3) + 3(6) + 3(6) + 2(3) = 30 + 18 + 18 + 6 = 72 mmol C/gDW/h
+Nitrogen in: 1.5 + 3 + 2 = 6.5 mmol N/gDW/h → still short
+
+Add more arginine:
+- Arginine: 5 mmol/gDW/h → N = 1.5 + 5 = 6.5 (still short)
+
+I need ~8 mmol N. With arginine at 5 mmol/h and NH₄ at 1.5, I get 6.5. Let me increase NH₄ to 3:
+- NH₄: 3 mmol/gDW/h
+- Arginine: 5 mmol/gDW/h
+- N total: 8 mmol/gDW/h ✓
+
+Carbon: 10(3) + 3(6) + 5(6) = 30 + 18 + 30 = 78 mmol C/gDW/h
+Biosynthesis: 33 mmol C/gDW/h
+Fermentation products: 45 mmol C/gDW/h
+
+**Growth rate**: With 8 mmol N/gDW/h and 33 mmol C/gDW/h requirement, growth = 0.15 /h (conservative; N and C both allow it)
+
+**Product secretion** (to balance C):
+- Lactate: +8 mmol/gDW/h (regenerated)
+- Acetate: +12 mmol/gDW/h
+- CO₂: +15 mmol/gDW/h
+- Formate: +10 mmol/gDW/h
+- Total C out: 8(3) + 12(2) + 15(1) + 10(1) = 24 + 24 + 15 + 10 = 73 mmol C/gDW/h ✓ (78 in - 33 biomass - 73 out = -28, adjust)
+
+Let me rebalance:
+- Products: Lactate +6, Acetate +15, CO₂ +12, Formate +12
+- C out: 18 + 30 + 12 + 12 = 72 → 78 - 33 = 45 needed, so 72 is too high.
+
+Correct to: Lactate +5, Acetate +12, CO₂ +12, Formate +10
+- C: 15 + 24 + 12 + 10 = 61... still off.
+
+Simple fix: Lactate +3, Acetate +14, CO₂ +13, Formate +10
+- C: 9 + 28 + 13 + 10 = 60 (need 45) — too much.
+
+Let me recalculate more carefully. 78 C in, 33 for biomass = 45 for products. If I make lactate (C₃), acetate (C₂), CO₂ (C₁), formate (C₁):
+- 3a + 2b + c + d = 45, where a, b, c, d are molar amounts.
+- Typical bifid fermentation: roughly equal lactate and acetate production.
+- Try: a=5, b=10, c=10, d=0 → 15 + 20 + 10 = 45 ✓
+
+**Final decision:**
+
+```
+Uptake: lactate -10, glucose -3, arginine -5, ammonium -3, serine -2
+Secretion: lactate +5, acetate +10, co2 +10
+Growth: 0.15 /h
+```
+
+{"fluxes": {"lac__L": -10, "glc__D": -3, "arg__L": -5, "nh4": -3, "ser__L": -2, "lactate": 5, "ac": 10, "co2": 10}, "growth_rate": 0.15, "rationale": "Lactate fermentation with glucose and amino acids as secondary C/N sources. Bifid shunt produces lactate and acetate. Growth limited by nitrogen availability (8 mmol/gDW needed). Conservative rate sustainable with available substrates in sealed batch at 28h.", "confidence": 0.65}

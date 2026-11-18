@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "cys__L": -2.0,
+  "ala__L": -1.0,
+  "ac": 2.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.0698,
+ "rationale": "Utilizing L-cysteine and L-alanine as primary carbon and nitrogen sources, producing acetate and hydrogen as byproducts",
+ "confidence": 0.8
+}

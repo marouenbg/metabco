@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 3,
+  "growth_claimed": 0.65,
+  "growth_allowed": 0.65,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.591 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.143 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing available carbohydrates and amino acids for energy and growth, producing typical fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arg__L": -5.0,
+   "ala__L": -2.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "co2": -4.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arg__L": -5.0,
+   "ala__L": -2.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "co2": -4.0,
+   "pi": -0.5909,
+   "so4": -0.1426
+  }
+ }
+]

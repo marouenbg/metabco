@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -8.4,
+  "ser__L": -6.4
+ },
+ "growth_rate": 0.083,
+ "rationale": "Eubacterium rectale utilizes glucose, lactate, and serine as primary carbon and nitrogen sources. Lactate, formate, and acetate are produced as fermentation products to support a growth rate of 0.083/h.",
+ "confidence": 0.9
+}

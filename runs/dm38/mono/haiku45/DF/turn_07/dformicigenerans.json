@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ser__L": -3.0,
+  "ala__L": -2.0,
+  "pro__L": -1.5,
+  "ac": 7.0,
+  "but": 5.5,
+  "for": 3.0,
+  "co2": 2.0,
+  "nh4": 5.5
+ },
+ "growth_rate": 0.15,
+ "rationale": "Late stationary phase: fermentable carbohydrates depleted, switching to amino acid fermentation (serine, alanine, proline). Modest growth rate reflects substrate limitation and reduced energy yield from amino acid catabolism vs. carbohydrates. Carbon and nitrogen balanced. Produces acetate, butyrate, formate, CO\u2082, and ammonia consistent with Dorea fermentation metabolism.",
+ "confidence": 0.45
+}

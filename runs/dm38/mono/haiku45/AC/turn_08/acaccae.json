@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "for": 3.0,
+  "nh4": -2.5,
+  "co2": 2.5
+ },
+ "growth_rate": 0.25,
+ "rationale": "Resuming growth on remaining acetate and formate after amino-acid starvation phase. Nitrogen limitation sets growth at 0.25/h. Carbon balance closes with fermentation products. Realistic uptake rates and sustainable for sealed batch at 32h mark.",
+ "confidence": 0.72
+}

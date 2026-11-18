@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -10.0,
+  "nh4": -5.0,
+  "co2": -5.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "h2": 5.0,
+  "for": 5.0
+ },
+ "growth_rate": 0.658,
+ "rationale": "Utilizing L-lactate and D-glucose as primary carbon sources, and ammonium as a nitrogen source. Producing acetate, butyrate, hydrogen, and formate as fermentation products. The growth rate is derived from the carbon and nitrogen uptake, balancing the carbon and nitrogen requirements for biomass production.",
+ "confidence": 0.9
+}

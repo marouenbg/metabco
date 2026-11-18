@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -4.17,
+  "arg__L": -0.5,
+  "but": 2.0,
+  "ppa": 1.5,
+  "ac": 1.0
+ },
+ "growth_rate": 0.15,
+ "rationale": "I will take up D-glucose, Ammonium, and L-arginine to support growth. I will release butyrate, propionate, and acetate as part of my metabolic strategy. I will also take up additional carbon dioxide to meet the biomass carbon requirement. My calculated growth rate is 0.150 /h.",
+ "confidence": 0.9
+}

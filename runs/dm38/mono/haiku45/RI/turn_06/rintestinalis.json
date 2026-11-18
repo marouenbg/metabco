@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "glc__D": -2.0,
+  "malt": -3.0,
+  "arg__L": -2.5,
+  "cys__L": -1.5,
+  "ser__L": -1.0,
+  "but": 5.0,
+  "ac": 4.0,
+  "co2": 8.5,
+  "for": 0.8,
+  "h2": 0.3,
+  "nh4": -0.5,
+  "pi": -0.4
+ },
+ "growth_rate": 0.35,
+ "rationale": "Carbohydrates nearly depleted; switching to amino acid catabolism via Stickland fermentation. Glucose and maltose consumption limited by availability. Arginine and cysteine provide additional carbon and nitrogen. Fermentation yields butyrate, acetate, CO\u2082, and formate as end products. Growth rate constrained by nitrogen availability and remaining carbohydrate.",
+ "confidence": 0.62
+}

@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 5,
+  "growth_claimed": 0.2381,
+  "growth_allowed": 0.2381,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [],
+  "rationale": "Balanced uptake of D-glucose, L-arginine, and L-lactate, with secretion of acetate, butyrate, succinate, and hydrogen.",
+  "confidence": null,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arg__L": -10.0,
+   "lac__L": -5.0,
+   "nh4": -10.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "succ": 5.0,
+   "h2": 2.0,
+   "pi": -0.56,
+   "so4": -0.11
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arg__L": -10.0,
+   "lac__L": -5.0,
+   "nh4": -10.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "succ": 5.0,
+   "h2": 2.0,
+   "pi": -0.56,
+   "so4": -0.11
+  }
+ }
+]

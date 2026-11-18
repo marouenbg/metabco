@@ -1,0 +1,30 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 3,
+  "growth_claimed": 0.0,
+  "growth_allowed": 0.0,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [],
+  "rationale": "I took up D-glucose, L-lactate, and Ammonium, and released acetate, formate, and hydrogenphosphate. I calculated a growth rate of 0.000 /h, which means I will not grow in this interval. The carbon and",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -4.0,
+   "lac__L": -2.0,
+   "nh4": -1.02,
+   "ac": 4.0,
+   "for": 2.0,
+   "pi": -0.12
+  },
+  "fluxes_applied": {
+   "glc__D": -4.0,
+   "lac__L": -2.0,
+   "nh4": -1.02,
+   "ac": 4.0,
+   "for": 2.0,
+   "pi": -0.12
+  }
+ }
+]

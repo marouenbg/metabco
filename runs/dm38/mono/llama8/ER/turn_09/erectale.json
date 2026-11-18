@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "ser__L": -6.4,
+  "nh4": -6.17,
+  "co2": 8.3
+ },
+ "growth_rate": 0.083,
+ "rationale": "D-glucose and L-serine uptake to support growth, with acetate, formate, and hydrogenphosphate production as byproducts.",
+ "confidence": 0.8
+}

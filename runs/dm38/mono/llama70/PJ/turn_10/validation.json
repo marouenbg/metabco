@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 10,
+  "growth_claimed": 0.1,
+  "growth_allowed": 0.0531,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=1 out=0.5 biomass=1.04"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.125 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0262 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.1 -> 0.0531"
+  ],
+  "rationale": "Limited by nitrogen uptake, using succinate, acetate, and L-proline as primary carbon and nitrogen sources",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "succ": -5.0,
+   "ac": -2.0,
+   "pro__L": -1.0,
+   "ppa": 1.0,
+   "nh4": 0.5
+  },
+  "fluxes_applied": {
+   "succ": -5.0,
+   "ac": -2.0,
+   "pro__L": -1.0,
+   "ppa": 1.0,
+   "nh4": 0.5,
+   "pi": -0.1253,
+   "so4": -0.0262
+  }
+ }
+]

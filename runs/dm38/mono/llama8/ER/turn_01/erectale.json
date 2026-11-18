@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": 7.0,
+  "lac__L": 10.0,
+  "h2": 5.0,
+  "pi": -0.79,
+  "co2": -60.0,
+  "ac": 60.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "I will take up glucose to produce lactic acid and support growth. I will also take up ammonia to provide the nitrogen needed for growth. The growth rate supported by my chosen uptake is 0.5/h.",
+ "confidence": 0.9
+}

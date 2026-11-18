@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "arab__L": -3.0,
+  "arg__L": -1.5,
+  "ser__L": -0.8,
+  "nh4": -0.5,
+  "ac": 30.0,
+  "lac__L": 6.0,
+  "for": 2.0,
+  "co2": 8.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "B. pseudocatenulatum ferments glucose and arabinose via bifid shunt to acetate (major), lactate, and formate. Amino acids (arginine, serine) provide supplemental C and N. At 12 h, I exit lag phase and commit to balanced growth at 0.30 /h, sustainable for remaining 36 h. Carbon and nitrogen budgets close; fermentation products match known bifid metabolism.",
+ "confidence": 0.72
+}

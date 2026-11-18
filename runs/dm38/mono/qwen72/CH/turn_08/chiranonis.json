@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "lac__L": -3.5,
+  "but": 3.0,
+  "nh4": -3.0,
+  "co2": 2.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.224,
+ "confidence": 0.9,
+ "rationale": "Utilizing abundant acetate and lactate for growth, producing butyrate, acetate, carbon dioxide, and hydrogen. Growth rate is supported by carbon and nitrogen uptake."
+}

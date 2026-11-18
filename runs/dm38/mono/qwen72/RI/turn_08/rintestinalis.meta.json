@@ -1,0 +1,12 @@
+{
+ "model": "Qwen/Qwen2.5-72B-Instruct",
+ "spec": "hf:Qwen/Qwen2.5-72B-Instruct",
+ "temperature": 0.7,
+ "cached": false,
+ "usage": {
+  "input_tokens": 2103,
+  "output_tokens": 665,
+  "total_tokens": 2768
+ },
+ "latency_ms": 23165.86
+}

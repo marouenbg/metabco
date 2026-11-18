@@ -1,0 +1,32 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 0,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.354 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.11 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 3.09 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Glucose and ammonium uptake support moderate growth and fermentation to acetate and lactate",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "lac__L": 2.5
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "nh4": -4.0933,
+   "ac": 5.0,
+   "lac__L": 2.5,
+   "pi": -0.3545,
+   "so4": -0.1097
+  }
+ }
+]

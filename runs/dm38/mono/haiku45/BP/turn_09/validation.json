@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 9,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.3,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.202 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0775 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Glucose and lactate fermentation via bifid shunt; arginine catabolism for C and N; ammonium assimilation. Nitrogen-limited growth. Products: acetate (primary), CO\u2082, formate. Conservative rate given re",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -3.0,
+   "arg__L": -2.0,
+   "nh4": -1.5,
+   "ser__L": -0.5,
+   "ac": 4.0,
+   "co2": 1.2,
+   "for": 0.3
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -3.0,
+   "arg__L": -2.0,
+   "nh4": -1.5,
+   "ser__L": -0.5,
+   "ac": 4.0,
+   "co2": 1.2,
+   "for": 0.3,
+   "pi": -0.2017,
+   "so4": -0.0775
+  }
+ }
+]

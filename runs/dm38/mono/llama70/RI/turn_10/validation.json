@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 10,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.2,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.233 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0523 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Limited by nitrogen availability",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": -10.0,
+   "ac": -5.0,
+   "for": -3.0,
+   "gly": -2.0,
+   "co2": 5.0,
+   "h2": 2.0
+  },
+  "fluxes_applied": {
+   "but": -10.0,
+   "ac": -5.0,
+   "for": -3.0,
+   "gly": -2.0,
+   "co2": 5.0,
+   "h2": 2.0,
+   "pi": -0.2333,
+   "so4": -0.0523
+  }
+ }
+]

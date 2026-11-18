@@ -1,0 +1,99 @@
+# Metabolic Decision for Bacteroides caccae ATCC 43185 — Turn 0
+
+## Analysis of Available Substrates
+
+**Carbon sources I can use:**
+- **D-glucose (glc__D)**: 24.98 mM — Bacteroides caccae is a saccharolytic anaerobe with excellent glucose fermentation capacity. This is a primary substrate.
+- **L-lactate (lac__L)**: 28.31 mM — I can ferment lactate as both carbon and energy source.
+- **L-arabinose (arab__L)**: 21.31 mM — Bacteroides species typically ferment pentoses.
+- **Maltose (malt)**: 4.382 mM — accessible via maltose transporters.
+- **Amino acids** (arg, ser, cys, pro, ala, etc.): I can catabolize these, but they are secondary to carbohydrates and are better reserved as nitrogen sources given limited ammonium.
+
+**Carbon sources I likely cannot use efficiently:**
+- myo-inositol: while some Bacteroides species can use it, it's not a primary substrate for B. caccae.
+
+**Nitrogen sources:**
+- **Ammonium (nh4)**: 9.347 mM — primary inorganic nitrogen source, directly assimilable.
+- **Amino acids**: Rich supply; L-arginine (21.81 mM) is particularly valuable as both carbon and nitrogen.
+- **Nitrate (no3)**: 0.1093 mM — very low; anaerobic nitrate reduction is possible but not preferred given ammonium availability.
+
+## Fermentation Strategy
+
+Bacteroides caccae is a strict anaerobe that ferments carbohydrates to short-chain fatty acids (primarily **acetate** and **propionate**, with some **butyrate**) and CO₂. The organism also produces lactate and formate depending on redox balance.
+
+Given the sealed batch culture and anaerobic conditions, I will:
+1. **Prioritize glucose** (fastest fermentation, most energy-efficient)
+2. **Co-utilize lactate** (secondary carbon source; good for redox balance)
+3. **Use arginine** as a secondary carbon/nitrogen source (Bacteroides can ferment arginine via the arginine deiminase pathway)
+4. **Conserve ammonium** as the primary inorganic nitrogen source
+
+## Growth Rate Calculation
+
+**Carbon budget:**
+- Glucose uptake: 10 mmol/gDW/h (reasonable for Bacteroides on preferred substrate)
+- Lactate uptake: 3 mmol/gDW/h (secondary)
+- Arginine uptake: 2 mmol/gDW/h (tertiary, also provides nitrogen)
+
+**Total carbon in:** 10 + 3 + 2 = 15 mmol C/gDW/h
+
+**Carbon cost for growth:**
+- Growth requirement: 42 mmol C/gDW of biomass produced
+- At growth rate μ: 42μ mmol C/gDW/h consumed for biosynthesis
+
+**Fermentation products (typical ratios for Bacteroides on glucose):**
+- Glucose fermentation yields ~2 mol acetate + 1 mol propionate + 1 mol CO₂ per glucose
+- Lactate oxidation (to balance redox): lactate → acetate + CO₂
+- Expected product distribution: ~60% acetate, ~25% propionate, ~15% other (formate, succinate)
+
+**Carbon balance:**
+- Acetate release: ~9 mmol/gDW/h
+- Propionate release: ~4 mmol/gDW/h
+- CO₂ release: ~2 mmol/gDW/h
+- Total carbon out (fermentation): ~15 mmol C/gDW/h
+- Plus biomass: 42μ
+
+For balance: 15 = 15 + 42μ → **μ ≈ 0 is wrong; let me recalculate.**
+
+Actually, fermentation products are **net positive** from the substrate. If I consume 15 mmol C, I release some as products and some as growth.
+
+Let me use: **μ = 0.25 /h** (reasonable for Bacteroides in batch with good substrate)
+
+**Nitrogen budget:**
+- Ammonium uptake: 2.5 mmol/gDW/h
+- Arginine uptake: 2 mmol/gDW/h (contains 2 N per molecule)
+- Total nitrogen in: 2.5 + 4 = 6.5 mmol N/gDW/h
+- Nitrogen cost for growth: 10μ = 10 × 0.25 = 2.5 mmol N/gDW/h
+- Remaining N for catabolism: 6.5 - 2.5 = 4 mmol N/gDW/h (released as NH₄⁺)
+
+This is feasible.
+
+## Audit Summary
+- **Carbon in:** 15 mmol/gDW/h (glucose, lactate, arginine)
+- **Carbon out:** ~11 mmol/gDW/h (fermentation products) + ~10.5 mmol/gDW/h (growth at μ=0.25) = 21.5 mmol/gDW/h
+
+**This doesn't balance.** Let me revise downward.
+
+With **μ = 0.18 /h**:
+- Biomass carbon: 42 × 0.18 = 7.56 mmol/gDW/h
+- Fermentation products: 15 - 7.56 ≈ 7.4 mmol/gDW/h ✓
+
+**Nitrogen:** 10 × 0.18 = 1.8 mmol/gDW/h needed; available is >6 mmol/gDW/h ✓
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "lac__L": -3.0,
+    "arg__L": -2.0,
+    "nh4": -2.2,
+    "ac": 4.5,
+    "ppa": 2.0,
+    "co2": 1.5,
+    "for": 0.8,
+    "h2": 0.2
+  },
+  "growth_rate": 0.18,
+  "rationale": "Bacteroides caccae prioritizes glucose fermentation under anaerobic conditions, with lactate and arginine as secondary substrates. Fermentation yields acetate, propionate, formate, and CO₂. Growth rate limited by carbon availability in sealed batch culture; nitrogen from ammonium and arginine is sufficient. Excess amino-group nitrogen released as ammonia.",
+  "confidence": 0.62
+}
+```

@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -15.0,
+  "arab__L": -10.0,
+  "arg__L": -3.0,
+  "nh4": -2.5,
+  "ac": 12.0,
+  "lac__L": -8.0,
+  "for": 8.0,
+  "co2": 2.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "Co-fermentation of glucose and arabinose with arginine as secondary C+N source. Heterofermentative mixed-acid pathway producing acetate, formate, and H2. Nitrogen balance supported by arginine ADI pathway plus residual ammonium. Strategy validated by successful turns 3 and 5.",
+ "confidence": 0.72
+}

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "co2": 15.0,
+  "lac__L": 10.0,
+  "nh4": 2.5,
+  "for": 1.0,
+  "ac": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing CO2, lactate, and ammonium to meet growth requirements and produce formate and acetate.",
+ "confidence": 0.9
+}

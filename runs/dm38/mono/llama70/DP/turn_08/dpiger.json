@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "inost": -5.0,
+  "ala__L": -1.0,
+  "ac": 2.5,
+  "co2": 1.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.15,
+ "rationale": "Using myo-inositol and L-alanine as primary carbon and nitrogen sources, producing acetate, CO2, and H2 as fermentation products",
+ "confidence": 0.8
+}

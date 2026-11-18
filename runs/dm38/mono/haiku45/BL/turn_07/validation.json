@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 7,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.3,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "P: credited 0.349 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Nitrogen is limiting (7 mM ammonium for 3 gDW). I catabolize inositol (bifidogenic), acetate (primary energy), and amino acids (C+N sources) to support growth. Ferment to acetate, CO\u2082, and trace lacta",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "ac": -3.0,
+   "co2": 4.0,
+   "lac__L": -1.0,
+   "for": 0.3,
+   "inost": -3.0,
+   "ala__L": -2.5,
+   "ser__L": -1.5,
+   "cys__L": -1.0,
+   "nh4": -2.0
+  },
+  "fluxes_applied": {
+   "ac": -3.0,
+   "co2": 4.0,
+   "lac__L": -1.0,
+   "for": 0.3,
+   "inost": -3.0,
+   "ala__L": -2.5,
+   "ser__L": -1.5,
+   "cys__L": -1.0,
+   "nh4": -2.0,
+   "pi": -0.3489
+  }
+ }
+]

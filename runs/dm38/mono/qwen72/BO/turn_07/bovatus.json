@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "ac": 7.0,
+  "but": 5.0,
+  "lac__L": -5.0,
+  "nh4": -1.0,
+  "for": 1.0,
+  "pi": -0.09
+ },
+ "growth_rate": 0.071,
+ "rationale": "Continuing efficient fermentation of D-glucose to produce acetate, butyrate, and formate, while consuming L-lactate and ammonium to support growth.",
+ "confidence": 0.9
+}

@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 2,
+  "growth_claimed": 0.6,
+  "growth_allowed": 0.6,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: glc__D",
+   "no_transporter: arab__L",
+   "no_transporter: but",
+   "no_transporter: lac__D"
+  ],
+  "repairs": [
+   "P: credited 0.428 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.132 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Conservative estimate based on available nutrients and transport capabilities.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "co2": 4.0,
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "arab__L": -5.0,
+   "nh4": -8.0,
+   "ac": 6.0,
+   "but": 3.0,
+   "lac__D": 0.0
+  },
+  "fluxes_applied": {
+   "co2": 4.0,
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "arab__L": -5.0,
+   "nh4": -8.0,
+   "ac": 6.0,
+   "but": 3.0,
+   "lac__D": 0.0,
+   "pi": -0.4275,
+   "so4": -0.1317
+  }
+ }
+]

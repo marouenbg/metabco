@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 11,
+  "growth_claimed": 0.18,
+  "growth_allowed": 0.18,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ac"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake ac to pool limit -5.82",
+   "P: credited 0.209 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Late stationary phase (44/48 h). Nitrogen is limiting; abundant amino acids (gln, asn, lys, thr, cys, pro) provide both carbon and nitrogen via deamination. Primary acetate uptake (6 mmol/gDW/h) + ami",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "ac": -6.0,
+   "gln__L": -0.8,
+   "asn__L": -0.7,
+   "lys__L": -0.5,
+   "thr__L": -0.4,
+   "cys__L": -0.3,
+   "pro__L": -0.3,
+   "lac__L": 1.2,
+   "for": 0.3,
+   "co2": 1.5,
+   "nh4": 0.2
+  },
+  "fluxes_applied": {
+   "ac": -5.8224,
+   "gln__L": -0.8,
+   "asn__L": -0.7,
+   "lys__L": -0.5,
+   "thr__L": -0.4,
+   "cys__L": -0.3,
+   "pro__L": -0.3,
+   "lac__L": 1.2,
+   "for": 0.3,
+   "co2": 1.5,
+   "nh4": 0.2,
+   "pi": -0.2093
+  }
+ }
+]

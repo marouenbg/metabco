@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 2,
+  "growth_claimed": 0.625,
+  "growth_allowed": 0.625,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.783 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.164 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "I will take up D-glucose, L-arginine, and Ammonium to support growth, and release acetate and hydrogen to utilize excess electrons.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arg__L": -5.0,
+   "nh4": -2.5,
+   "ac": 2.0,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arg__L": -5.0,
+   "nh4": -2.5,
+   "ac": 2.0,
+   "h2": 0.5,
+   "pi": -0.7829,
+   "so4": -0.1636
+  }
+ }
+]

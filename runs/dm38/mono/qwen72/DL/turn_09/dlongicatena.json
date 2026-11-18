@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.263,
+ "rationale": "Continuing to ferment L-lactate to produce acetate, butyrate, and hydrogen. Growth rate is limited by carbon balance.",
+ "confidence": 1.0
+}

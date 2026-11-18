@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 2,
+  "growth_claimed": 0.06,
+  "growth_allowed": 0.06,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: glc__D"
+  ],
+  "repairs": [
+   "P: credited 0.0428 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Mixed fermentation of glucose and arginine under anaerobic conditions. Glucose provides primary carbon; arginine supplies nitrogen and additional carbon. Lactate is secreted due to redox imbalance fro",
+  "confidence": 0.65,
+  "fluxes_claimed": {
+   "glc__D": -6.0,
+   "lac__L": 3.0,
+   "arg__L": -3.5,
+   "cys__L": -0.8,
+   "nh4": -1.5,
+   "ac": 8.0,
+   "for": 4.5,
+   "co2": 3.5
+  },
+  "fluxes_applied": {
+   "glc__D": -6.0,
+   "lac__L": 3.0,
+   "arg__L": -3.5,
+   "cys__L": -0.8,
+   "nh4": -1.5,
+   "ac": 8.0,
+   "for": 4.5,
+   "co2": 3.5,
+   "pi": -0.0428
+  }
+ }
+]

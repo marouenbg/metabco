@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -3.0,
+  "arg__L": -0.5,
+  "but": 2.0,
+  "ppa": 1.5,
+  "ac": 1.0,
+  "for": 0.5
+ },
+ "growth_rate": 0.2,
+ "rationale": "Utilizing glucose, lactate, and arginine to support growth, with butyrate, formate, and acetate as fermentation products.",
+ "confidence": 0.8
+}

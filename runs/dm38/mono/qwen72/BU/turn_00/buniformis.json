@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10,
+  "nh4": -2,
+  "ac": 5,
+  "but": 3,
+  "ppa": 2,
+  "for": 1
+ },
+ "growth_rate": 0.2,
+ "rationale": "Prioritize D-glucose and ammonium for growth, fermenting to produce acetate, butyrate, propionate, and formate.",
+ "confidence": 0.85
+}

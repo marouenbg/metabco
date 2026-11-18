@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 5,
+  "growth_claimed": 0.0625,
+  "growth_allowed": 0.003,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=0.5 out=0.5 biomass=0.527"
+  ],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "P: credited 0.0568 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0137 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.0625 -> 0.00296"
+  ],
+  "rationale": "Balanced metabolism with available carbon and nitrogen sources, limited by nitrogen availability.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "arab__L": -5.0,
+   "ac": 3.0,
+   "but": 2.0,
+   "inost": -1.0,
+   "gly": -0.5,
+   "nh4": 0.5,
+   "ppa": 1.0
+  },
+  "fluxes_applied": {
+   "arab__L": -5.0,
+   "ac": 3.0,
+   "but": 2.0,
+   "inost": -1.0,
+   "gly": -0.5,
+   "nh4": 0.5,
+   "ppa": 1.0,
+   "pi": -0.0568,
+   "so4": -0.0137
+  }
+ }
+]

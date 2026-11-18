@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "lac__L": -4.0,
+  "cys__L": -3.0,
+  "pro__L": -2.0,
+  "ala__L": -2.0,
+  "nh4": -2.0,
+  "ac": 8.0,
+  "but": 4.0,
+  "for": 3.0,
+  "co2": 5.0,
+  "h2": 2.0,
+  "h2s": 1.5
+ },
+ "growth_rate": 0.35,
+ "rationale": "Glucose depleted; switching to lactate and amino acid fermentation (cysteine, proline, alanine) as primary carbon and nitrogen sources. Lactate degradation plus Stickland-type amino acid fermentation yields acetate, butyrate, formate, H\u2082, CO\u2082, and H\u2082S. Carbon budget: 37 mmol in (lactate 12, cysteine 9, proline 10, alanine 6) covers 13.3 mmol biomass + ~23.7 mmol products. Nitrogen: 9 mmol in covers 3.5 mmol biomass cost. Growth rate 0.35 /h reflects continued substrate limitation and product accumulation.",
+ "confidence": 0.62
+}

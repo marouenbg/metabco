@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "cys__L": -5.0,
+  "ser__L": -3.0,
+  "nh4": -2.0,
+  "ac": 2.0,
+  "ppa": 1.5,
+  "but": 1.0
+ },
+ "growth_rate": 0.727,
+ "rationale": "Utilizing available amino acids and producing fermentation products",
+ "confidence": 0.8
+}

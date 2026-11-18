@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "but": -15.0,
+  "cys__L": -4.0,
+  "ser__L": -2.0,
+  "nh4": -2.0,
+  "ac": 12.0,
+  "for": 8.0,
+  "ppa": 6.0,
+  "co2": 18.0,
+  "h2": 3.0
+ },
+ "growth_rate": 0.8,
+ "rationale": "Butyrate fermentation with co-catabolism of L-cysteine and L-serine to recover from arginine depletion. Nitrogen-limited growth at 0.80 /h supported by amino acid deamination. Carbon balance: 78 mmol in \u2212 30.4 (growth) \u2212 47.6 (fermentation products) = 0. Produces typical Anaerostipes end products.",
+ "confidence": 0.72
+}

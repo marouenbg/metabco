@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 11,
+  "growth_claimed": 0.06,
+  "growth_allowed": 0.06,
+  "ok": false,
+  "violations": [
+   "uptake_absent: asp__L"
+  ],
+  "warnings": [],
+  "repairs": [
+   "zeroed uptake of absent asp__L",
+   "P: credited 0.07 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0157 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Final 4 h of batch culture. Consumed remaining fermentable carbohydrates (maltose, arabinose) and amino acids (leucine, glutamine, aspartate) to support modest growth. Fermentation produces acetate, b",
+  "confidence": 0.52,
+  "fluxes_claimed": {
+   "malt": -2.0,
+   "arab__L": -1.5,
+   "leu__L": -0.4,
+   "gln__L": -0.3,
+   "asp__L": -0.1,
+   "ac": 4.5,
+   "but": 3.0,
+   "for": 1.5,
+   "h2": 0.8,
+   "co2": 2.2
+  },
+  "fluxes_applied": {
+   "malt": -2.0,
+   "arab__L": -1.5,
+   "leu__L": -0.4,
+   "gln__L": -0.3,
+   "asp__L": 0.0,
+   "ac": 4.5,
+   "but": 3.0,
+   "for": 1.5,
+   "h2": 0.8,
+   "co2": 2.2,
+   "pi": -0.07,
+   "so4": -0.0157
+  }
+ }
+]

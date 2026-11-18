@@ -1,0 +1,93 @@
+# Metabolic decision for Bacteroides cellulosilyticus DSM 14838, turn 8
+
+## Analysis of available substrates and transporters
+
+**Carbon sources I can utilize:**
+- **Acetate (74.63 mM)**: I have acetyl-CoA synthetase and can ferment acetate via the Wood-Ljungdahl pathway or other routes. Abundant.
+- **Propionate (26.99 mM)**: I can metabolize propionate through propionyl-CoA and methylmalonyl-CoA pathways. Available.
+- **Butyrate (12.1 mM)**: I can activate and β-oxidize butyrate. Available.
+- **Formate (8.856 mM)**: I can use formate via the Wood-Ljungdahl pathway. Available.
+- **Maltose (4.382 mM)**: I have maltose transporters and can ferment it. Present but limited.
+- **Amino acids**: L-arginine (6.471 mM), L-proline (5.9 mM), L-serine (5.311 mM), and others are present. I can catabolize these for both carbon and nitrogen.
+- **myo-inositol (6.272 mM)**: I can ferment inositol via fructose-6-phosphate entry.
+- **CO₂ (128.4 mM)**: Present but only useful as an electron sink or in carboxylation reactions, not a primary carbon source for heterotrophic growth.
+
+**Nitrogen sources:**
+- **Ammonium (6.588 mM)**: Direct incorporation via GDH/GOGAT. Preferred.
+- **L-arginine (6.471 mM)**: Rich in nitrogen; can be deaminated or used in urea cycle variants.
+- **L-proline, L-serine, other amino acids**: Can be catabolized for amino groups.
+
+## Growth trajectory and metabolic state
+
+At turn 7, I achieved strong growth (0.427 /h) on L-arabinose fermentation with amino acid supplementation. At turn 8 (t=32h), I have consumed most readily fermentable sugars from the initial inoculum. The culture is transitioning from sugar fermentation to amino acid and fatty acid catabolism—typical for *Bacteroides* in stationary/late-exponential phase of a sealed batch.
+
+## Fermentation strategy
+
+*Bacteroides cellulosilyticus* is a saccharolytic specialist but can switch to proteolytic and lipolytic metabolism. My fermentation products include:
+- **Acetate** (primary end product)
+- **Propionate** (from odd-chain or branched substrates)
+- **Butyrate** (from β-oxidation and fermentation pathways)
+- **Formate** (from pyruvate)
+- **CO₂** (from decarboxylation)
+- **Succinate** (intermediate, often re-assimilated)
+
+Given the nutrient profile, I will:
+1. **Primary uptake**: Amino acids (L-arginine, L-proline, L-serine) for both carbon and nitrogen
+2. **Secondary uptake**: Acetate, propionate, butyrate (to avoid accumulation toxicity and recover energy)
+3. **Nitrogen**: Ammonium + amino acid nitrogen
+4. **Release**: Acetate, propionate, butyrate (fermentation products), CO₂, formate
+
+## Growth rate calculation
+
+**Carbon budget:**
+- L-arginine (6 carbons/molecule): uptake ~2.0 mmol/gDW/h → 12 mmol C/gDW/h
+- L-proline (5 carbons): uptake ~1.5 mmol/gDW/h → 7.5 mmol C/gDW/h
+- L-serine (3 carbons): uptake ~1.0 mmol/gDW/h → 3.0 mmol C/gDW/h
+- Acetate (2 carbons): uptake ~3.0 mmol/gDW/h → 6.0 mmol C/gDW/h
+- **Total C in: ~28.5 mmol C/gDW/h**
+
+**Carbon costs:**
+- Biomass growth: 42 mmol C per gram dry weight
+- For growth rate μ: cost = 42 × μ mmol C/gDW/h
+- Fermentation loss (incomplete oxidation): ~30% of substrate C released as fermentation products
+- Released C: ~8.5 mmol C/gDW/h (acetate, propionate, butyrate, formate, CO₂)
+
+**Net available for growth:**
+- 28.5 − 8.5 = 20 mmol C/gDW/h
+- μ = 20 / 42 ≈ **0.476 /h**
+
+This is realistic for late-exponential phase amino acid fermentation.
+
+**Nitrogen budget:**
+- L-arginine (4 N): 2.0 mmol/gDW/h → 8.0 mmol N/gDW/h
+- L-proline (1 N): 1.5 mmol/gDW/h → 1.5 mmol N/gDW/h
+- L-serine (1 N): 1.0 mmol/gDW/h → 1.0 mmol N/gDW/h
+- Ammonium: 1.5 mmol/gDW/h
+- **Total N in: 12 mmol N/gDW/h**
+- **Biomass cost: 10 × μ = 10 × 0.476 ≈ 4.76 mmol N/gDW/h**
+- **Excess N (released as NH₄⁺ or other products): ~7.2 mmol N/gDW/h**
+
+This is consistent with proteolytic fermentation releasing ammonia.
+
+## Final fluxes
+
+```
+Uptake (negative):
+- L-arginine: -2.0 mmol/gDW/h
+- L-proline: -1.5 mmol/gDW/h
+- L-serine: -1.0 mmol/gDW/h
+- Acetate: -3.0 mmol/gDW/h
+- Ammonium: -1.5 mmol/gDW/h
+
+Release (positive):
+- Acetate: +3.5 mmol/gDW/h (net fermentation product)
+- Propionate: +2.0 mmol/gDW/h
+- Butyrate: +1.5 mmol/gDW/h
+- Formate: +1.0 mmol/gDW/h
+- CO₂: +5.0 mmol/gDW/h
+- Ammonium: +2.0 mmol/gDW/h (excess deamination)
+
+Growth rate: 0.476 /h
+```
+
+{"fluxes": {"arg__L": -2.0, "pro__L": -1.5, "ser__L": -1.0, "ac": -3.0, "nh4": -1.5, "ac": 3.5, "ppa": 2.0, "but": 1.5, "for": 1.0, "co2": 5.0, "nh4": 2.0}, "growth_rate": 0.476, "rationale": "Late-exponential amino acid fermentation phase. Uptaking branched-chain and polar amino acids (arginine, proline, serine) for both carbon and nitrogen, supplemented with acetate uptake to manage accumulation. Fermentation yields acetate, propionate, butyrate, formate, and CO₂ as end products with excess ammonia release. Carbon and nitrogen budgets balance; growth rate supported by net 20 mmol C/gDW/h available after fermentation losses.", "confidence": 0.72}

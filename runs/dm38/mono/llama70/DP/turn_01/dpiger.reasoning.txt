@@ -1,0 +1,23 @@
+As Desulfovibrio piger ATCC 29098, I must carefully consider my metabolic strategy for the next 4 hours. Given my genome and the available nutrients, I can transport and utilize L-lactate (lac__L), D-glucose (glc__D), and L-arginine (arg__L) as carbon and nitrogen sources. However, I notice that I am in an anaerobic environment, which means I will need to rely on fermentation pathways to generate energy.
+
+My species is known to produce acetate (ac), carbon dioxide (co2), and hydrogen (h2) as fermentation products. Considering the available nutrients, I decide to uptake L-lactate (lac__L) and L-arginine (arg__L) to support my growth. I will also uptake hydrogenphosphate (pi) and sulfate (so4) to maintain my cellular functions.
+
+To calculate my growth rate, I need to consider the amount of carbon and nitrogen available from my chosen uptake sources. Assuming I uptake 10 mmol/gDW/h of L-lactate (lac__L) and 5 mmol/gDW/h of L-arginine (arg__L), I can calculate the total carbon and nitrogen available. L-lactate provides 10 mmol/gDW/h of carbon, and L-arginine provides 5 mmol/gDW/h of carbon and 5 mmol/gDW/h of nitrogen.
+
+Using the stoichiometry of my fermentation pathways, I can estimate the amount of acetate (ac), carbon dioxide (co2), and hydrogen (h2) produced. For every 10 mmol of L-lactate consumed, I produce 5 mmol of acetate (ac), 5 mmol of carbon dioxide (co2), and 5 mmol of hydrogen (h2).
+
+To calculate my growth rate, I need to consider the biomass cost of 43 mmol of carbon and 10 mmol of nitrogen per gram of dry weight produced. Assuming I allocate 50% of my carbon uptake to biomass production, I can calculate my growth rate as follows:
+
+Growth rate (1/h) = (10 mmol/gDW/h of L-lactate + 5 mmol/gDW/h of L-arginine) \* 0.5 / 43 mmol/gDW
+
+Growth rate (1/h) = 0.73
+
+Performing a carbon audit, I ensure that the carbon input from L-lactate and L-arginine covers the carbon output from acetate, carbon dioxide, and hydrogen, as well as the biomass cost:
+
+Carbon input: 10 mmol/gDW/h (L-lactate) + 5 mmol/gDW/h (L-arginine) = 15 mmol/gDW/h
+Carbon output: 5 mmol/gDW/h (acetate) + 5 mmol/gDW/h (carbon dioxide) + 5 mmol/gDW/h (hydrogen) = 15 mmol/gDW/h
+Biomass cost: 0.73 gDW/h \* 43 mmol/gDW = 31.39 mmol/h
+
+Since the carbon input covers the carbon output and biomass cost, my metabolic strategy is feasible.
+
+{"fluxes": {"lac__L": -10.0, "arg__L": -5.0, "pi": -0.66, "so4": -0.13, "ac": 5.0, "co2": 5.0, "h2": 5.0}, "growth_rate": 0.73, "rationale": "L-lactate and L-arginine uptake support growth and fermentation", "confidence": 0.8}

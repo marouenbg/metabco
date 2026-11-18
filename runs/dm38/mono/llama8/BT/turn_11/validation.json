@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 11,
+  "growth_claimed": 0.007,
+  "growth_allowed": 0.007,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.00636 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.00154 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing D-glucose (glc__D), Ammonium (nh4), and L-serine (ser__L) as carbon and nitrogen sources, and releasing butyrate (but), propionate (ppa), and acetate (ac) into the environment.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "nh4": -4.17,
+   "ser__L": -6.388,
+   "but": 2.0,
+   "ppa": 1.5,
+   "ac": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "nh4": -4.17,
+   "ser__L": -6.388,
+   "but": 2.0,
+   "ppa": 1.5,
+   "ac": 1.0,
+   "pi": -0.0064,
+   "so4": -0.0015
+  }
+ }
+]

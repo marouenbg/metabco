@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "arab__L": -6.0,
+  "gly": -1.5,
+  "leu__L": -1.2,
+  "val__L": -0.8,
+  "pro__L": -1.0,
+  "asn__L": -1.2,
+  "gln__L": -1.3,
+  "ac": 2.2,
+  "nh4": 5.0,
+  "but": 4.5,
+  "co2": 5.5,
+  "for": 0.6
+ },
+ "growth_rate": 0.42,
+ "rationale": "Late-stage batch culture (44/48 h). Fermenting remaining carbohydrates (arabinose) and amino acids (Gly, Leu, Val, Pro, Asn, Gln) via mixed-acid fermentation. Producing butyrate and acetate in characteristic 2:1 ratio with CO\u2082. Uptake of residual acetate and ammonium supports growth stoichiometry. Carbon and nitrogen balance verified for 0.42 /h growth.",
+ "confidence": 0.72
+}

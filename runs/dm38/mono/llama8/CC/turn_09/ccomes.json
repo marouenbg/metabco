@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "h2": 10.0,
+  "for": 5.0,
+  "etoh": 5.0,
+  "nh4": 8.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "I will take up lactate, hydrogen, formate, and ethanol to support growth. I will also take up ammonium to cover the nitrogen cost of biomass production.",
+ "confidence": 0.9
+}

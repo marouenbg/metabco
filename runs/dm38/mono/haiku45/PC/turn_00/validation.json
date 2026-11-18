@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 0,
+  "growth_claimed": 0.6,
+  "growth_allowed": 0.6,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.818 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.157 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Prevotella copri is saccharolytic and amino-acid fermenting. Glucose and arginine are preferred substrates; uptake rates chosen to support ~0.6/h growth (N-limited by available ammonium + arginine N).",
+  "confidence": 0.65,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "arg__L": -4.0,
+   "nh4": -2.0,
+   "ac": 10.0,
+   "ppa": 6.0,
+   "for": 5.0,
+   "co2": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "arg__L": -4.0,
+   "nh4": -2.0,
+   "ac": 10.0,
+   "ppa": 6.0,
+   "for": 5.0,
+   "co2": 2.0,
+   "pi": -0.8179,
+   "so4": -0.157
+  }
+ }
+]

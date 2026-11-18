@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 6,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=26 out=31 biomass=30.4"
+  ],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "C: growth 0.75 -> 0",
+   "C: secretions scaled by 0.881"
+  ],
+  "rationale": "Bacteroides fragilis continues saccharolytic and proteolytic fermentation. Acetate and butyrate are abundant and well-utilized; amino acids provide limiting nitrogen (6 mmol/gDW/h in, 8 needed for gro",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "ac": 4.5,
+   "but": 3.0,
+   "ala__L": -2.5,
+   "cys__L": -1.5,
+   "gly": -1.0,
+   "ser__L": -1.0,
+   "inost": -1.5,
+   "for": 2.0,
+   "co2": 8.0,
+   "nh4": 1.0
+  },
+  "fluxes_applied": {
+   "ac": 3.9629,
+   "but": 2.6419,
+   "ala__L": -2.5,
+   "cys__L": -1.5,
+   "gly": -1.0,
+   "ser__L": -1.0,
+   "inost": -1.5,
+   "for": 1.7613,
+   "co2": 7.0452,
+   "nh4": 1.0
+  }
+ }
+]

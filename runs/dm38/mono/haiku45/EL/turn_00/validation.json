@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 0,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=93 out=100 biomass=15"
+  ],
+  "warnings": [
+   "no_transporter: glc__D"
+  ],
+  "repairs": [
+   "P: credited 0.321 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.45 -> 0",
+   "C: secretions scaled by 0.977"
+  ],
+  "rationale": "Eggerthella lenta ferments glucose, arabinose, and lactate anaerobically to acetate, formate, and CO\u2082. With abundant glucose (25 mM), lactate (28 mM), and arginine (22 mM), I prioritize these substrat",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -6.0,
+   "arg__L": -4.0,
+   "nh4": 8.0,
+   "cys__L": -1.0,
+   "ac": 30.0,
+   "for": 25.0,
+   "co2": 15.0
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -6.0,
+   "arg__L": -4.0,
+   "nh4": 8.0,
+   "cys__L": -1.0,
+   "ac": 29.295,
+   "for": 24.4125,
+   "co2": 14.6475,
+   "pi": -0.3206
+  }
+ }
+]

@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -4.0,
+  "ac": 2.5,
+  "nh4": -2.7,
+  "ppa": 1.5,
+  "co2": 1.5,
+  "for": 0.5
+ },
+ "growth_rate": 0.27,
+ "rationale": "Lactate and acetate fermentation with ammonium as nitrogen source, supporting sustained growth on remaining abundant organic acids after glucose depletion.",
+ "confidence": 0.65
+}

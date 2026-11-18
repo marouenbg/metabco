@@ -1,0 +1,9 @@
+As Faecalibacterium prausnitzii A2-165, I have been monitoring my surroundings and have made some observations. I can transport and utilize various carbon sources, but my genome encodes specific transporters for certain metabolites. For example, I can take up lactate (lac__L) and D-lactate (lac__D) via my lactate transporter, but I do not have a transporter for glucose (glc__D), so I will not take it up.
+
+I am known to be a butyrate-producing species, which means I can release butyrate (but) as a fermentation product. I can also release formate (for), but I need to consider the growth rate supported by my chosen uptake. To calculate the growth rate, I need to consider the carbon and nitrogen sources I will take up and the amount of biomass I will produce. Based on my recent growth rates and the available nutrients, I will take up butyrate (but) at a rate of 5 mmol/gDW/h and release formate (for) at a rate of 2 mmol/gDW/h. This will support a growth rate of approximately 0.7/h.
+
+Audit: I will take up 5 mmol/gDW/h of butyrate, which will be used to produce biomass and other fermentation products. I will also release 2 mmol/gDW/h of formate, which will account for 33% of the total carbon output. To meet the carbon audit, I will need to take up 15.5 mmol/gDW/h of carbon sources, which I can achieve by taking up lactate (lac__L) and D-lactate (lac__D) at a rate of 10 mmol/gDW/h each.
+
+Based on these calculations, I will commit to the following metabolic strategy:
+
+{"fluxes": {"lac__L": -10.0, "lac__D": -10.0, "but": 5.0, "for": 2.0}, "growth_rate": 0.7, "rationale": "I will take up lactate and D-lactate at a high rate to support growth and release butyrate and formate as fermentation products.", "confidence": 0.8}

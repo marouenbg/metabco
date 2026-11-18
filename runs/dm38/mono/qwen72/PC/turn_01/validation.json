@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 1,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.682 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing abundant glucose and lactate for carbon, ammonium and arginine for nitrogen, and producing acetate, propionate, formate, and hydrogen as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": -5.0,
+   "ac": 3.0,
+   "ppa": 2.0,
+   "for": 1.0,
+   "co2": 1.0,
+   "nh4": -2.0,
+   "arg__L": -2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": -5.0,
+   "ac": 3.0,
+   "ppa": 2.0,
+   "for": 1.0,
+   "co2": 1.0,
+   "nh4": -2.0,
+   "arg__L": -2.0,
+   "h2": 1.0,
+   "pi": -0.6816,
+   "so4": -0.1309
+  }
+ }
+]

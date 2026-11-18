@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -5.0,
+  "arg__L": -1.0,
+  "nh4": -5.0,
+  "ac": 3.53,
+  "but": 3.53,
+  "for": 0.88,
+  "pi": -0.63
+ },
+ "growth_rate": 0.14,
+ "rationale": "Utilizing L-lactate and L-arginine for growth, producing acetate and butyrate as primary fermentation products.",
+ "confidence": 0.8
+}

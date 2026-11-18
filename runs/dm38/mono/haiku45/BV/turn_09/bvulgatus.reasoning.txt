@@ -1,0 +1,96 @@
+# Metabolic Decision: *Bacteroides vulgatus* at t=36h
+
+## Analysis of available resources and constraints
+
+**Carbon sources I can access:**
+- Acetate (84.01 mM): abundant, I ferment this routinely
+- Propionate (9.374 mM): I can use via propionyl-CoA
+- Butyrate (9.141 mM): I ferment this
+- Succinate (7.008 mM): I can utilize
+- Amino acids (phenylalanine, proline, tyrosine, lysine, threonine, etc.): I have Stickland pathway enzymes for amino acid fermentation
+- CO₂ (116.2 mM): product of my metabolism, not a primary carbon source
+
+**Nitrogen sources:**
+- Amino acids provide both carbon and nitrogen
+- Nitrate (0.1093 mM): present but I'm a strict anaerobe; nitrate reduction is not my primary strategy
+- I will rely on amino acid catabolism for nitrogen
+
+**Why I cannot use some resources:**
+- Maltose (trace): I lack the maltose transporter in this genome
+- Most vitamins/cofactors: already in excess or present in sufficient amounts
+
+## Fermentation strategy
+
+I am a saccharolytic and proteolytic anaerobe. My known fermentation products include:
+- Acetate (major end product)
+- Propionate (from succinate, lactate, and certain amino acids)
+- Butyrate (from acetyl-CoA condensation)
+- CO₂ and H₂ (from mixed-acid fermentation)
+- Small amounts of formate
+
+## Current metabolic state
+
+At turn 9 (36 h into a 48 h batch), I have:
+- Depleted most simple carbohydrates (maltose gone)
+- Abundant acetate and short-chain fatty acids (my fermentation products accumulating)
+- Moderate amino acid availability
+- Declining growth rate in recent turns (0.159 /h at turn 8, 0.000 at turn 7)
+
+The batch is entering stationary phase. I should:
+1. Continue consuming available amino acids (nitrogen-limited growth)
+2. Ferment remaining butyrate and propionate (reverse-fermentation or catabolism)
+3. Maintain modest growth on protein catabolism
+4. Release acetate, propionate, and CO₂
+
+## Growth calculation
+
+**Nitrogen audit:**
+Amino acids available: Phe (3.5) + Pro (3.034) + Tyr (2.601) + Lys (2.4) + Thr (1.9) + Cys (1.537) + Val (1.4) + His (1.0) + Met (0.84) + Asn (0.8) + Ser (0.78) + Trp (0.73) + Glu (0.66) + Gly (0.58) + Leu (0.48) + Asp (0.4) ≈ 22.3 mmol/L total
+
+Not all are nitrogen-bearing, but most amino acids are ~10% N by mass. Rough N available: ~2.2 mmol/L / 4 gDW/L ≈ 0.55 mmol N/gDW in solution.
+
+At 8 mmol N per gram biomass, I can grow ~0.07 gDW/L, or at 4 gDW/L current density, about 0.07/4 = 0.017 /h if nitrogen-limited. But I can consume amino acids at higher rates.
+
+**Carbon audit:**
+If I uptake: acetate (6), butyrate (2), propionate (1), amino acids (2 mmol C) = ~11 mmol C/gDW/h
+Growth at 0.15 /h needs: 41 × 0.15 = 6.15 mmol C/gDW/h
+Remaining for secretion: 11 - 6.15 = 4.85 mmol C/gDW/h
+
+I will secrete this as acetate, propionate, CO₂, and H₂.
+
+**Proposed growth rate: 0.15 /h** (conservative, matching recent performance)
+
+## Flux assignment
+
+**Uptakes (negative):**
+- Acetate: -6.0 (abundant, preferred)
+- Butyrate: -2.0 (available, fermentable)
+- Propionate: -1.0 (available)
+- L-proline: -0.8 (Stickland substrate)
+- L-lysine: -0.6 (Stickland substrate)
+- L-cysteine: -0.4 (Stickland substrate)
+
+**Secretions (positive):**
+- Acetate: +3.5 (major fermentation product)
+- Propionate: +1.0 (Stickland product)
+- CO₂: +5.0 (mixed-acid fermentation)
+- H₂: +0.2 (minor product)
+
+**Carbon check:** In = 6 + 2 + 1 + (0.8×5.1) + (0.6×6.0) + (0.4×3.0) ≈ 9.08 + 3.6 + 1.2 = 13.88 mmol C/gDW/h
+Out (growth + secretion) = 6.15 + 3.5 + 1.0 + 5.0 + 0.2 = 15.85 ... slight imbalance; adjusting.
+
+**Revised:**
+- Acetate: -5.5
+- Butyrate: -2.0
+- Propionate: -0.8
+- L-proline: -0.6
+- L-lysine: -0.5
+- Acetate out: +3.0
+- CO₂: +4.5
+- H₂: +0.15
+
+Carbon in ≈ 5.5 + 2 + 0.8 + 3.06 + 3.0 = 14.36; out = 6.15 + 3.0 + 4.5 + 0.15 = 13.8. Balanced.
+
+```json
+{"fluxes": {"ac": -5.5, "but": -2.0, "ppa": -0.8, "pro__L": -0.6, "lys__L": -0.5, "ac": 3.0, "co2": 4.5, "h2": 0.15}, "growth_rate": 0.15, "rationale": "Nitrogen-limited stationary phase. Consuming remaining short-chain fatty acids and amino acids via Stickland pathways. Secreting acetate, CO₂, and H₂ as major fermentation products. Growth rate constrained by amino acid availability.", "confidence": 0.68}
+```

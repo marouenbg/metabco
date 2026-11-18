@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 8,
+  "growth_claimed": 0.22,
+  "growth_allowed": 0.22,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.2 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Sustained catabolism of abundant acetate, propionate, butyrate, and arabinose with amino acid co-metabolism (arginine, cysteine) for nitrogen. Carbon and nitrogen budgets balance. Growth rate reflects",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "ppa": -4.0,
+   "but": -2.0,
+   "arab__L": -4.0,
+   "arg__L": -1.5,
+   "cys__L": -0.8,
+   "nh4": 0.5,
+   "co2": 10.0,
+   "for": 1.5
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "ppa": -4.0,
+   "but": -2.0,
+   "arab__L": -4.0,
+   "arg__L": -1.5,
+   "cys__L": -0.8,
+   "nh4": 0.5,
+   "co2": 10.0,
+   "for": 1.5,
+   "pi": -0.2
+  }
+ }
+]

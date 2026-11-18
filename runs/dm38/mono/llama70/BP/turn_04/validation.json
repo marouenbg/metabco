@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 4,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.336 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.129 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing lactate and arabinose as primary carbon sources, arginine as nitrogen source, producing acetate and lactate.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": 3.0,
+   "arab__L": -5.0,
+   "arg__L": -2.0,
+   "ac": 5.0
+  },
+  "fluxes_applied": {
+   "lac__L": 3.0,
+   "arab__L": -5.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "pi": -0.3361,
+   "so4": -0.1291
+  }
+ }
+]

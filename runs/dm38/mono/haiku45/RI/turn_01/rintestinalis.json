@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -8.0,
+  "nh4": -4.0,
+  "but": 5.0,
+  "ac": 3.0,
+  "co2": 8.0,
+  "for": 0.5
+ },
+ "growth_rate": 0.37,
+ "rationale": "Roseburia intestinalis ferments lactate and glucose to butyrate and acetate under anaerobic conditions. Abundant lactate and glucose support continued saccharolytic fermentation. Ammonium provides nitrogen. This flux pattern is consistent with previous successful growth and respects mass balance constraints.",
+ "confidence": 0.78
+}

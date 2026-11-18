@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -20.0,
+  "lac__L": -2.0,
+  "for": 2.0,
+  "lac__D": 2.0,
+  "ac": 4.0
+ },
+ "growth_rate": 0.55,
+ "rationale": "D-glucose and L-lactate uptake to support growth, with formate and lactate production as fermentation products."
+}

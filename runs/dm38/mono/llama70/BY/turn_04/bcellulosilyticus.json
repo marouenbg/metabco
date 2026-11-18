@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "arab__L": -5.0,
+  "glc__D": -5.0,
+  "arg__L": -2.0,
+  "nh4": -1.0,
+  "ac": 5.0,
+  "ppa": 2.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.286,
+ "rationale": "Carbon and nitrogen sources are abundant, and fermentation products are consistent with anaerobic metabolism",
+ "confidence": 0.8
+}

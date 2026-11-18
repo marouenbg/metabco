@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 11,
+  "growth_claimed": 0.1,
+  "growth_allowed": 0.0932,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=18 out=16.2 biomass=2.95"
+  ],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.0676 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.1 -> 0.0932"
+  ],
+  "rationale": "Late stationary phase (44/48h). Acetate and formate remain abundant; cysteine provides dual C/N. Fermentation yields lactate and propionate as end products. Growth limited by nitrogen availability and",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "ac": -4.0,
+   "for": -1.5,
+   "cys__L": -0.8,
+   "malt": -0.5,
+   "ser__L": -0.05,
+   "lac__L": 3.2,
+   "ppa": 1.5,
+   "co2": 2.1,
+   "nh4": 0.05,
+   "h2": 0.0
+  },
+  "fluxes_applied": {
+   "ac": -4.0,
+   "for": -1.5,
+   "cys__L": -0.8,
+   "malt": -0.5,
+   "ser__L": -0.05,
+   "lac__L": 3.2,
+   "ppa": 1.5,
+   "co2": 2.1,
+   "nh4": 0.05,
+   "h2": 0.0,
+   "pi": -0.0676
+  }
+ }
+]

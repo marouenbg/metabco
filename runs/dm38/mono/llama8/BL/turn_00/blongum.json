@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -4.0,
+  "nh4": -1.0,
+  "lac__L": -2.0,
+  "ac": 4.0,
+  "nh3": 1.0
+ },
+ "growth_rate": 0.105,
+ "rationale": "Utilizing glucose and ammonium for growth, with lactate and other amino acids available for nitrogen. Fermenting lactate into acetate and releasing ammonia.",
+ "confidence": 0.9
+}

@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 9,
+  "growth_claimed": 0.55,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=0 out=0 biomass=5.61"
+  ],
+  "warnings": [
+   "no_transporter: lac__D"
+  ],
+  "repairs": [
+   "P: credited 0.64 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.144 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.55 -> 0"
+  ],
+  "rationale": "D-glucose and L-lactate uptake to support growth, with formate and lactate production as fermentation products.",
+  "confidence": null,
+  "fluxes_claimed": {
+   "glc__D": -20.0,
+   "lac__L": -2.0,
+   "for": 2.0,
+   "lac__D": 2.0,
+   "ac": 4.0
+  },
+  "fluxes_applied": {
+   "glc__D": -20.0,
+   "lac__L": -2.0,
+   "for": 2.0,
+   "lac__D": 2.0,
+   "ac": 4.0,
+   "pi": -0.6396,
+   "so4": -0.144
+  }
+ }
+]

@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 6,
+  "growth_claimed": 0.171,
+  "growth_allowed": 0.1245,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: malt",
+   "n_imbalance: in=1 out=0 biomass=1.44"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake malt to pool limit -4.18",
+   "P: credited 0.155 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0375 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.171 -> 0.124"
+  ],
+  "rationale": "Utilizing butyrate and maltose for energy, producing acetate, butyrate, and propionate, and releasing hydrogen to balance redox state.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "but": 1.0,
+   "malt": -5.0,
+   "ac": 1.0,
+   "ppa": 1.0,
+   "nh4": -1.0,
+   "h2": 0.5,
+   "co2": 0.5
+  },
+  "fluxes_applied": {
+   "but": 1.0,
+   "malt": -4.1796,
+   "ac": 1.0,
+   "ppa": 1.0,
+   "nh4": -1.0,
+   "h2": 0.5,
+   "co2": 0.5,
+   "pi": -0.1555,
+   "so4": -0.0375
+  }
+ }
+]

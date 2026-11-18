@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "pro__L": -5.0,
+  "ala__L": -3.0,
+  "gly": -2.0,
+  "glc__D": -1.0,
+  "ac": 3.0,
+  "lac__L": 2.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Prioritizing amino acid uptake and producing acetate and lactate as fermentation products",
+ "confidence": 0.8
+}

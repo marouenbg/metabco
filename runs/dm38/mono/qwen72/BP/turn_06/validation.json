@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 6,
+  "growth_claimed": 0.083,
+  "growth_allowed": 0.083,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0558 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0214 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing to utilize D-glucose and L-lactate for carbon, ammonium and L-arginine for nitrogen, and producing acetate, formate, and L-lactate as fermentation products to maintain a balanced metabolism",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": 1.0,
+   "nh4": -2.0,
+   "arg__L": -0.5,
+   "ac": 2.0,
+   "for": 1.5,
+   "co2": 0.5
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": 1.0,
+   "nh4": -2.0,
+   "arg__L": -0.5,
+   "ac": 2.0,
+   "for": 1.5,
+   "co2": 0.5,
+   "pi": -0.0558,
+   "so4": -0.0214
+  }
+ }
+]

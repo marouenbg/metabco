@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "ac": 5.0,
+  "cys__L": -1.0,
+  "gln__L": -2.5,
+  "for": 2.0,
+  "co2": 1.0,
+  "h2s": 1.0
+ },
+ "growth_rate": 0.94,
+ "confidence": 0.9,
+ "rationale": "Utilizing L-lactate and acetate for carbon, L-glutamine and L-cysteine for nitrogen and sulfur. Producing acetate, formate, CO2, and H2S as fermentation products."
+}

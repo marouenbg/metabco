@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 8,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.0225,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=17 out=17 biomass=7.55"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.233 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.2 -> 0.0225"
+  ],
+  "rationale": "Using hydrogen and carbon dioxide for carbon, and amino acids for nitrogen. Producing acetate, butyrate, hydrogen, and formate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "h2": 5.0,
+   "co2": -5.0,
+   "ala__L": -2.0,
+   "cys__L": -2.0,
+   "ac": 2.5,
+   "but": 2.5,
+   "for": 2.0
+  },
+  "fluxes_applied": {
+   "h2": 5.0,
+   "co2": -5.0,
+   "ala__L": -2.0,
+   "cys__L": -2.0,
+   "ac": 2.5,
+   "but": 2.5,
+   "for": 2.0,
+   "pi": -0.2333
+  }
+ }
+]

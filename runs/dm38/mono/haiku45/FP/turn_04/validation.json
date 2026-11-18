@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 4,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: malt"
+  ],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "clipped uptake malt to pool limit -4.83",
+   "P: credited 0.465 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.105 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Lactate exhausted; pivoting to butyrate and maltose fermentation. Nitrogen limitation (arginine + ammonium) constrains growth to 0.50/h. Fermentation products reflect mixed-acid pathway typical of F. ",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "but": -8.0,
+   "malt": -6.0,
+   "arg__L": -2.5,
+   "nh4": -1.0,
+   "ac": 8.5,
+   "for": 2.0,
+   "co2": 5.0,
+   "ppa": 1.0
+  },
+  "fluxes_applied": {
+   "but": -8.0,
+   "malt": -4.8276,
+   "arg__L": -2.5,
+   "nh4": -1.0,
+   "ac": 8.5,
+   "for": 2.0,
+   "co2": 5.0,
+   "ppa": 1.0,
+   "pi": -0.4654,
+   "so4": -0.1051
+  }
+ }
+]

@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 10,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: glc__D",
+   "no_transporter: arab__L"
+  ],
+  "repairs": [
+   "P: credited 0.197 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Glucose and arabinose fermentation coupled to sulfate reduction. Amino acids provide supplemental C and N. Acetate and CO\u2082 are primary fermentation products. Carbon balance: 10 mmol C in, ~6 mmol for ",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "glc__D": -3.0,
+   "arab__L": -2.0,
+   "ser__L": -1.2,
+   "cys__L": -0.8,
+   "arg__L": -1.0,
+   "so4": -2.0,
+   "nh4": -0.3,
+   "ac": 3.5,
+   "co2": 2.5,
+   "h2s": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -3.0,
+   "arab__L": -2.0,
+   "ser__L": -1.2,
+   "cys__L": -0.8,
+   "arg__L": -1.0,
+   "so4": -2.0,
+   "nh4": -0.3,
+   "ac": 3.5,
+   "co2": 2.5,
+   "h2s": 2.0,
+   "pi": -0.197
+  }
+ }
+]

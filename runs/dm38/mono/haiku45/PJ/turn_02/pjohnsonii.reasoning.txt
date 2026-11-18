@@ -1,0 +1,92 @@
+# Metabolic reasoning for Parabacteroides johnsonii DSM 18315 at t=8h
+
+## Assessment of available substrates and transporters
+
+Parabacteroides johnsonii is a Gram-negative anaerobic bacteroid with a relatively complete saccharolytic and proteolytic metabolism. Looking at my recent history and the available nutrients:
+
+**Carbon sources I can use:**
+- **D-glucose (glc__D)**: 24.82 mM available. I have demonstrated active uptake (turns 0-1 both consumed it). This is my preferred fermentable sugar.
+- **L-lactate (lac__L)**: 28.2 mM available. I consumed this in turns 0-1, indicating functional lactate transporters.
+- **L-arabinose (arab__L)**: 21.31 mM. As a Bacteroidetes member with pentose utilization capacity, I likely transport this.
+- **Maltose (malt)**: 4.382 mM. Bacteroidetes commonly use maltose via PTS or permeases.
+- **L-arginine (arg__L)**: 21.77 mM. I've been consuming this; arginine is a nitrogen source but also yields carbon via fermentation pathways (arginine dihydrolase pathway).
+
+**Carbon sources I cannot reliably use:**
+- Most amino acids beyond arginine (leucine, phenylalanine, etc.) require specific amino acid oxidases/deaminases; many Bacteroidetes lack comprehensive amino acid degradation.
+- Acetate (ac): 0.25 mM only, and at this low concentration in a sealed batch, I should not waste energy trying to use it.
+
+**Nitrogen sources:**
+- **Ammonium (nh4)**: 9.317 mM. The preferred nitrogen source; I've been consuming it.
+- **L-arginine (arg__L)**: Provides both carbon and nitrogen via the arginine dihydrolase complex (ADI pathway): arginine → citrulline + NH3, then citrulline → ornithine + carbamoyl phosphate, yielding ATP and ammonia.
+- **L-cysteine (cys__L)**: 8.387 mM. Contains sulfur and nitrogen; can be catabolized.
+
+## Fermentation strategy
+
+At turn 1, I was still in lag/early exponential with zero growth reported. Now at turn 2 (t=8h), I'm at 0.002178 gDW/L—still very low biomass. The accumulation of acetate and propionate in my secretions indicates:
+- Mixed-acid fermentation of glucose and lactate
+- Likely pyruvate → acetyl-CoA → acetate (via acetyl-CoA hydrolase)
+- Pyruvate → propionyl-CoA → propionate (via lactate or alanine fermentation pathways)
+- Some succinate production (Bacteroidetes can use the succinate shunt)
+
+My strategy: **Commit to exponential growth** by taking up the most abundant and readily fermentable substrates.
+
+## Substrate uptake plan
+
+**Primary substrates (high abundance, high digestibility):**
+1. **D-glucose**: Uptake at 8.0 mmol/gDW/h (modest rate, sustainable)
+2. **L-lactate**: Uptake at 6.0 mmol/gDW/h (co-fermentation)
+3. **L-arginine**: Uptake at 3.0 mmol/gDW/h (nitrogen + carbon)
+4. **L-arabinose**: Uptake at 2.0 mmol/gDW/h (secondary sugar)
+
+**Nitrogen:**
+- **Ammonium**: Uptake at 2.5 mmol/gDW/h (assimilation)
+
+**Total carbon uptake**: 8.0 + 6.0 + (3.0 × 0.5 carbon per arginine, rough estimate) + 2.0 = ~16.5 mmol C/gDW/h
+
+**Growth calculation:**
+- Carbon requirement: 42 mmol C per gram dry weight produced
+- Nitrogen requirement: 10 mmol N per gram dry weight produced
+- Nitrogen uptake: 2.5 (from NH4) + ~0.5 (from arginine) = 3.0 mmol N/gDW/h
+- **Maximum growth rate limited by nitrogen**: 3.0 / 10 = **0.30 /h**
+
+However, I must verify carbon balance. Assuming:
+- Glucose (6 C): 8.0 uptake → 48 mmol C/h
+- Lactate (3 C): 6.0 uptake → 18 mmol C/h
+- Arginine (6 C): 3.0 uptake → 18 mmol C/h
+- Arabinose (5 C): 2.0 uptake → 10 mmol C/h
+- **Total: 94 mmol C/h uptake**
+
+At growth rate μ = 0.25 /h:
+- Biomass production: 0.25 gDW/h requires 42 × 0.25 = 10.5 mmol C/h
+- Remaining carbon for fermentation: 94 - 10.5 = 83.5 mmol C/h
+- Fermentation products (acetate + propionate + lactate + succinate + CO₂): must balance to 83.5 mmol C/h
+
+This is reasonable for mixed fermentation. I'll secrete:
+- **Acetate (ac)**: +18 mmol/gDW/h
+- **Propionate (ppa)**: +12 mmol/gDW/h
+- **Succinate (succ)**: +8 mmol/gDW/h
+- **CO₂ (co2)**: +45 mmol/gDW/h (decarboxylation of pyruvate and intermediates)
+- **Ammonia (nh4)** net: small amount from amino acid degradation, but mostly consumed, so net zero or slight uptake already accounted for
+
+**Carbon audit**: 94 in = 10.5 (biomass) + 18 + 12 + 8 + 45 = 93.5 ✓ (balanced within rounding)
+
+**Growth rate: 0.25 /h**
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -6.0,
+    "arg__L": -3.0,
+    "arab__L": -2.0,
+    "nh4": -2.5,
+    "ac": 18.0,
+    "ppa": 12.0,
+    "succ": 8.0,
+    "co2": 45.0
+  },
+  "growth_rate": 0.25,
+  "rationale": "Parabacteroides johnsonii is a saccharolytic anaerobe with mixed-acid fermentation. At 8h, I transition to exponential growth using abundant glucose, lactate, and arginine. Nitrogen is limiting (9.3 mM ammonium + arginine nitrogen); uptake of 2.5 mM NH4 + ~0.5 mM N from arginine supports ~0.25/h growth. Carbon balance: 94 mmol C/h uptake → 10.5 (biomass) + 83.5 (fermentation products: acetate, propionate, succinate, CO₂). This is consistent with Bacteroidetes fermentation stoichiometry.",
+  "confidence": 0.62
+}
+```

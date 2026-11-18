@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "buniformis",
+  "turn": 2,
+  "growth_claimed": 0.12,
+  "growth_allowed": 0.12,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.15 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0314 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 0.193 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Balanced carbon and nitrogen uptake to support moderate growth rate, with fermentation products acetate, butyrate, propionate, and formate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -6.0,
+   "nh4": -1.0,
+   "ac": 3.0,
+   "but": 2.0,
+   "ppa": 1.0,
+   "for": 0.45
+  },
+  "fluxes_applied": {
+   "glc__D": -6.0,
+   "nh4": -1.1926,
+   "ac": 3.0,
+   "but": 2.0,
+   "ppa": 1.0,
+   "for": 0.45,
+   "pi": -0.1503,
+   "so4": -0.0314
+  }
+ }
+]

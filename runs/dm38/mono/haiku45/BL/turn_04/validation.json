@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 4,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.523 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.118 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Lactate now abundant; switching primary carbon source from depleted glucose. Lactate + arginine provide C and N. Arginine supplies 4 N per molecule plus 6 C. Fermentation to acetate, formate, CO\u2082 bala",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -12.0,
+   "arg__L": -6.0,
+   "glc__D": -3.0,
+   "arab__L": -4.0,
+   "nh4": -1.5,
+   "ac": 4.0,
+   "co2": 8.0,
+   "for": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -12.0,
+   "arg__L": -6.0,
+   "glc__D": -3.0,
+   "arab__L": -4.0,
+   "nh4": -1.5,
+   "ac": 4.0,
+   "co2": 8.0,
+   "for": 1.0,
+   "pi": -0.5233,
+   "so4": -0.1178
+  }
+ }
+]

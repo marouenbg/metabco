@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 2,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.52 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing L-lactate and D-glucose as carbon sources, Ammonium as nitrogen source, and producing acetate as a fermentation product",
+  "confidence": 0.7,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -10.0,
+   "nh4": -5.0,
+   "ac": 5.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -10.0,
+   "nh4": -5.0,
+   "ac": 5.0,
+   "pi": -0.5199,
+   "so4": -0.1309
+  }
+ }
+]

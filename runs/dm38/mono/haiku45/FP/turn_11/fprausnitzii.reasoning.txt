@@ -1,0 +1,97 @@
+# Reasoning through my metabolic state
+
+## Current situation
+I am at 6.764 gDW/L after 44 h. The culture is 4 h from completion. I need to assess what I can still metabolise and whether growth is sustainable.
+
+## Carbon sources available and transportable
+As *Faecalibacterium prausnitzii*, I am a strict anaerobe specialising in butyrate production from complex carbohydrates and amino acids. My genome encodes:
+- **Acetate (ac)**: 25.78 mM — I can use this as both carbon and energy source via acetyl-CoA
+- **Butyrate (but)**: 9.212 mM — I can metabolise this via β-oxidation, though it's also my main product
+- **Formate (for)**: 10.66 mM — I can use this
+- **Propionate (ppa)**: 0.9077 mM — limited, can use
+- **Glucose (glc__D)**: 0.7775 mM — very limited; I prefer complex substrates but can ferment this
+- **Amino acids**: I have substantial pools (phe, tyr, leu, gln, asn, val, lys, cys, thr, ile, trp, his, met, glu, asp, pro). These are excellent for both carbon and nitrogen.
+
+What I **cannot** use efficiently:
+- Nitrate (no3): I am an obligate anaerobe; I cannot reduce nitrate
+- Orotate, nucleobases, vitamins: these are cofactors, not primary energy sources
+
+## Nitrogen sources
+- **Ammonium (nh4)**: 1.411 mM — I can assimilate this
+- **Amino acids**: All free amino acids are nitrogen-rich and directly usable
+- The amino acid pool is substantial and my recent turns show I've been catabolising them
+
+## Fermentation products I make
+*F. prausnitzii* is named for its characteristic butyrate production. My recent history shows:
+- Turn 7: I produced butyrate (negative uptake = production)
+- Turn 10: I consumed butyrate (negative uptake of butyrate)
+- I also produce: acetate, formate, CO₂, H₂, and lactate from amino acid fermentation
+
+## Growth rate calculation
+
+**Carbon and nitrogen demand per gDW:**
+- Growth requires ~33 mmol C/gDW and ~7 mmol N/gDW
+
+**Available substrates for next 4 h interval:**
+
+My best strategy is to continue mixed-acid fermentation of remaining amino acids and acetate:
+
+1. **Amino acid catabolism**: I have ~25 mmol/L of amino acids total. These provide both C and N.
+   - Using 2 mmol/L of amino acids over 4 h at 6.764 gDW/L = 2/(6.764×4) ≈ 0.074 mmol/gDW/h per substrate
+   - But I can take up multiple amino acids simultaneously
+
+2. **Acetate utilization**: 25.78 mM available; I can oxidise this
+   - Acetate → 2 CO₂ + 4 H₂ (in fermentation)
+   - Or: Acetate + CO₂ → butyrate (via reverse β-oxidation/acetogenesis)
+
+3. **Growth limitation**: With 7 mmol N/gDW needed and ~1.4 mM NH₄ + amino acid N available, nitrogen becomes limiting quickly.
+
+**Conservative estimate:**
+- I can support ~0.10-0.15 /h growth rate
+- This requires: 33×0.12 = 3.96 mmol C/gDW and 7×0.12 = 0.84 mmol N/gDW
+
+**Substrate uptake plan:**
+- Amino acids (mixed): ~3.0 mmol/gDW/h (leu, ile, val, phe, tyr, etc.) — these are rich in both C and N
+- Acetate: ~4.0 mmol/gDW/h (additional carbon)
+- Ammonium: ~0.3 mmol/gDW/h (supplemental N)
+- Formate: ~1.0 mmol/gDW/h (additional reducing power)
+
+**Products:**
+- CO₂: ~5.0 mmol/gDW/h (from decarboxylation)
+- H₂: ~1.0 mmol/gDW/h (from formate, amino acid fermentation)
+- Butyrate: ~2.0 mmol/gDW/h (my signature product)
+- Acetate: ~1.0 mmol/gDW/h (overflow metabolism)
+
+**Carbon audit:**
+- In: (3.0 amino acids avg 4C each = 12) + (4.0 acetate = 8) + (1.0 formate = 1) = ~21 mmol C/gDW/h
+- Out: (5.0 CO₂ = 5) + (2.0 butyrate = 8) + (1.0 acetate = 2) + growth (3.96) = ~18.96 mmol C/gDW/h ✓
+
+**Nitrogen audit:**
+- In: (3.0 mmol amino acids with ~0.3 N each = 0.9) + (0.3 NH₄) = 1.2 mmol N/gDW/h
+- Out: growth (0.84) + small amount in products = ~0.84 mmol N/gDW/h ✓
+
+**Growth rate: 0.12 /h**
+
+```json
+{
+  "fluxes": {
+    "leu__L": -0.5,
+    "ile__L": -0.4,
+    "val__L": -0.4,
+    "phe__L": -0.4,
+    "tyr__L": -0.4,
+    "lys__L": -0.3,
+    "cys__L": -0.2,
+    "thr__L": -0.2,
+    "ac": -4.0,
+    "for": -1.0,
+    "nh4": -0.3,
+    "co2": 5.0,
+    "but": 2.0,
+    "h2": 1.0
+  },
+  "growth_rate": 0.12,
+  "rationale": "Late-stage batch culture (44/48 h). Continuing amino acid and acetate fermentation with mixed-acid end products (butyrate, acetate, formate, H₂, CO₂). Nitrogen becomes limiting; amino acids provide both C and N. Conservative growth rate reflects substrate depletion and accumulation of fermentation products.",
+  "confidence": 0.65
+}
+```

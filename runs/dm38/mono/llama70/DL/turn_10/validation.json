@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 10,
+  "growth_claimed": 0.132,
+  "growth_allowed": 0.132,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.154 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0346 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing butyrate, L-alanine, and glycine as primary carbon and nitrogen sources, with acetate and propionate production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": -5.0,
+   "ala__L": -1.0,
+   "gly": -1.0,
+   "ac": 2.0,
+   "ppa": 1.0
+  },
+  "fluxes_applied": {
+   "but": -5.0,
+   "ala__L": -1.0,
+   "gly": -1.0,
+   "ac": 2.0,
+   "ppa": 1.0,
+   "pi": -0.154,
+   "so4": -0.0346
+  }
+ }
+]

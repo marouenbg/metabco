@@ -1,0 +1,55 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 10,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: gly",
+   "uptake_exceeds_pool: no3"
+  ],
+  "warnings": [
+   "no_transporter: no3",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake gly to pool limit -0.309",
+   "clipped uptake no3 to pool limit -0.0581",
+   "P: credited 0.227 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Late-stage batch: acetate is abundant and my primary C source. Amino acids provide both C and N for biosynthesis. Succinate supports anaplerotic reactions. Fermentation to butyrate and CO\u2082 regenerates",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "ac": -12.0,
+   "phe__L": -0.8,
+   "tyr__L": -0.7,
+   "cys__L": -0.6,
+   "gly": -0.5,
+   "ser__L": -0.4,
+   "val__L": -0.4,
+   "thr__L": -0.3,
+   "succ": -1.0,
+   "no3": -0.3,
+   "but": 1.5,
+   "co2": 3.0,
+   "h2": 0.1
+  },
+  "fluxes_applied": {
+   "ac": -12.0,
+   "phe__L": -0.8,
+   "tyr__L": -0.7,
+   "cys__L": -0.6,
+   "gly": -0.3087,
+   "ser__L": -0.4,
+   "val__L": -0.4,
+   "thr__L": -0.3,
+   "succ": -1.0,
+   "no3": -0.0581,
+   "but": 1.5,
+   "co2": 3.0,
+   "h2": 0.1,
+   "pi": -0.2273
+  }
+ }
+]

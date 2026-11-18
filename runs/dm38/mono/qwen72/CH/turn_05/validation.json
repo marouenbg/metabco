@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 5,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.0175 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0393 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing D-glucose and L-lactate for growth and fermentation, producing acetate and butyrate while maintaining carbon and nitrogen balance.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -3.5,
+   "lac__L": -3.5,
+   "arg__L": -1.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "nh4": -3.0,
+   "co2": 2.0,
+   "h2": 1.0,
+   "pi": -0.15
+  },
+  "fluxes_applied": {
+   "glc__D": -3.5,
+   "lac__L": -3.5,
+   "arg__L": -1.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "nh4": -3.0,
+   "co2": 2.0,
+   "h2": 1.0,
+   "pi": -0.1675,
+   "so4": -0.0393
+  }
+ }
+]

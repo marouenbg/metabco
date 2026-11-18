@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "but": 3.0,
+  "ppa": 1.0,
+  "gly": -1.0,
+  "phe__L": -1.0,
+  "nh4": -1.0,
+  "co2": -1.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.25,
+ "confidence": 0.8,
+ "rationale": "Utilizing acetate, butyrate, propionate, and amino acids for growth, while producing acetate, butyrate, propionate, and hydrogen."
+}

@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 7,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.583 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing glucose and lactate for growth, and releasing acetate, formate, hydrogen, and carbon dioxide as fermentation products and byproducts.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -20.0,
+   "co2": 20.0,
+   "h2": 10.0,
+   "ac": 10.0,
+   "for": 5.0,
+   "nh4": -10.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -20.0,
+   "co2": 20.0,
+   "h2": 10.0,
+   "ac": 10.0,
+   "for": 5.0,
+   "nh4": -10.0,
+   "pi": -0.5832,
+   "so4": -0.1309
+  }
+ }
+]

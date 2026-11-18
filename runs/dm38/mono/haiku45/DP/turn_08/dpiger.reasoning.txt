@@ -1,0 +1,84 @@
+# Metabolic decision for Desulfovibrio piger at t=32h
+
+## Analysis of available substrates and transport capacity
+
+**Carbon sources I can use:**
+- L-lactate: My recent turns show consistent lactate uptake (−8.00 mmol/gDW/h in turns 4, 5, 7). This is my primary carbon/energy source as a lactate-fermenting sulfate reducer.
+- D-glucose: I can ferment this (turn 6 shows −5.50 uptake), but lactate is preferred and more abundant.
+- Acetate: Present at 18.34 mM, but I *produce* acetate, not consume it. I lack the transporters to use exogenous acetate efficiently.
+- L-arginine: I uptake this (−1.20 to −1.50 in recent turns), likely for both carbon and nitrogen.
+- Other amino acids: Present but I show minimal uptake of most. My genome encodes selective amino acid transport; I prioritize arginine.
+
+**Carbon sources I cannot use:**
+- L-arabinose, myo-inositol, maltose: No evidence of transport in my history; likely lack the necessary permeases.
+- Most other amino acids: Low or absent in my uptake patterns.
+
+**Nitrogen sources:**
+- L-arginine: −1.30 to −1.50 mmol/gDW/h (both C and N source)
+- Ammonium (nh4): Variable; I show both uptake and release. At 1.243 mM, very limited.
+- Other amino acids contribute minor nitrogen but arginine dominates my strategy.
+
+## Fermentation strategy
+
+As a sulfate-reducing bacterium fermenting lactate:
+- **Electron acceptor:** Sulfate (so4) → H₂S (I consistently reduce SO₄²⁻ at ~2.00 mmol/gDW/h)
+- **Fermentation products:** Acetate and CO₂ are my major products (turns 4, 5, 7 show +3–5 mmol acetate/h and +0.5–7 mmol CO₂/h)
+- Lactate is oxidized incompletely; acetate accumulates.
+
+## Growth rate calculation
+
+**Substrate availability (most limiting):**
+- L-lactate: 21.31 mM available; at −8.00 mmol/gDW/h, this limits to ~2.66 h of growth at that rate before depletion.
+- L-arginine: 16.35 mM; at −1.30 mmol/gDW/h, lasts ~12.6 h.
+- Sulfate (so4): In excess (never limiting per rules).
+- Ammonium: 1.243 mM is critically low.
+
+**Nitrogen constraint:**
+- Growth requires ~10 mmol N per gram dry weight.
+- Arginine uptake at −1.30 mmol/gDW/h provides ~1 mmol N/gDW/h (assuming 1 N per arginine).
+- At current biomass (1.381 gDW/L in 1 mL = 0.00138 gDW total), I can sustain growth while arginine remains available.
+- However, ammonium is nearly exhausted (1.243 mM). If I rely solely on arginine for N, I can continue.
+
+**Carbon balance:**
+- Lactate uptake at −8.00 mmol/gDW/h (3 carbons each) = −24 mmol C/gDW/h
+- Growth at 0.30 /h requires 43 × 0.30 = 12.9 mmol C/gDW/h
+- Remaining: 24 − 12.9 = 11.1 mmol C/gDW/h available for fermentation products
+- Acetate production (~4 mmol/h) + CO₂ (~3 mmol/h) = ~7 mmol C/h, well within budget.
+
+**Sustainable growth rate:** 0.30 /h (consistent with turns 5 and 7; turn 6 was anomalously low, likely due to glucose fermentation inefficiency).
+
+## Metabolite fluxes for next 4 h
+
+| Metabolite | Flux (mmol/gDW/h) | Rationale |
+|---|---|---|
+| L-lactate | −8.00 | Primary carbon/energy source; proven sustainable |
+| L-arginine | −1.30 | Nitrogen and supplemental carbon |
+| so4 | −2.00 | Sulfate reduction (electron acceptor) |
+| ac | +4.50 | Fermentation product from lactate oxidation |
+| co2 | +3.50 | CO₂ from lactate fermentation and amino acid catabolism |
+| h2s | +2.00 | Product of sulfate reduction |
+| nh4 | +0.50 | Minor release (deamination of arginine catabolism) |
+| pi | −0.40 | Phosphate for growth |
+
+**Carbon audit:**
+- In: Lactate (8 × 3 = 24) + Arginine (1.3 × 6 = 7.8) = 31.8 mmol C/gDW/h
+- Out: Acetate (4.5 × 2 = 9) + CO₂ (3.5 × 1 = 3.5) = 12.5 mmol C/gDW/h
+- Growth: 0.30 /h × 43 = 12.9 mmol C/gDW/h
+- Total out + growth: 12.5 + 12.9 = 25.4 mmol C/gDW/h ✓ (31.8 available)
+
+**Nitrogen audit:**
+- In: Arginine (1.3 mmol N/gDW/h)
+- Out: NH₄ (0.5 mmol N/gDW/h)
+- Growth: 0.30 /h × 10 = 3.0 mmol N/gDW/h
+- Total: 0.5 + 3.0 = 3.5 mmol N/gDW/h; available 1.3 mmol/gDW/h from arginine.
+- **Shortfall:** This is tight. Adjust growth to 0.25 /h to reduce N demand to 2.5 mmol/gDW/h, still slightly short. However, residual ammonium and other amino acids provide minor N. I'll run at **0.28 /h** as a conservative middle ground.
+
+**Revised for 0.28 /h growth:**
+- Lactate: −7.80 mmol/gDW/h (slightly reduced)
+- Arginine: −1.30 mmol/gDW/h (unchanged)
+- Acetate: +4.30 mmol/gDW/h
+- CO₂: +3.30 mmol/gDW/h
+
+```json
+{"fluxes": {"lac__L": -7.80, "arg__L": -1.30, "so4": -2.00, "ac": 4.30, "co2": 3.30, "h2s": 2.00, "nh4": 0.50, "pi": -0.40}, "growth_rate": 0.28, "rationale": "Lactate fermentation with sulfate reduction; balanced C and N constraints given arginine and ammonium limitation. Acetate and CO2 are fermentation products consistent with incomplete lactate oxidation.", "confidence": 0.72}
+```

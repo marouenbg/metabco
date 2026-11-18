@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "pro__L": -2.0,
+  "ala__L": -2.0,
+  "ser__L": -2.0,
+  "arg__L": -3.0,
+  "gly": -2.0,
+  "co2": 6.0,
+  "but": 2.0,
+  "ac": 2.0,
+  "h2": 2.0,
+  "nh4": -9.31,
+  "pi": -0.23
+ },
+ "growth_rate": 1.33,
+ "rationale": "Using available amino acids to support growth and producing butyrate and acetate as fermentation products.",
+ "confidence": 0.85
+}

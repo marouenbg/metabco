@@ -1,0 +1,87 @@
+# Metabolic Decision for Bacteroides ovatus — Turn 8
+
+## Analysis of Available Resources and Constraints
+
+**Carbon sources I can access:**
+- Acetate (18.34 mM): readily transportable, well-established substrate
+- Propionate (15.44 mM): I ferment this; can use it
+- Succinate (9.896 mM): can ferment
+- Maltose (4.382 mM): I have α-glucosidase and maltose transporters
+- Formate (1.568 mM): can use
+- Hydrogen (2.685 mM): can use in anaerobic respiration with fumarate/succinate
+
+**Amino acids:** Present in modest amounts (pro, gly, phe, ser, cys, leu, tyr, arg, val, gln, asn, lys, ala, thr, ile, his, met, trp, glu, asp). These are primarily nitrogen sources but contain usable carbon.
+
+**Nitrogen sources:**
+- Ammonium (3.136 mM): primary nitrogen source
+- Amino acids: contain nitrogen; arginine particularly useful
+- Glutamine, asparagine: good nitrogen donors
+
+**Carbon sources I cannot use effectively:**
+- CO₂ alone (no photosynthesis; only used as fermentation product)
+- Glucose is depleted (not listed; was used in earlier turns)
+
+## Fermentation Strategy
+
+As Bacteroides ovatus, I am an obligate anaerobe. My recent history shows:
+- Turn 4: strong growth (0.8 /h) on glucose + arginine/alanine
+- Turn 5: no growth (substrate exhaustion after glucose depletion)
+- Turn 6: resumed growth (0.35 /h) on acetate + lactate
+- Turn 7: minimal growth (0.046 /h) on inositol fermentation
+
+I am now at 32 h in a 48 h batch. Nutrients are becoming limiting. I should:
+
+1. **Consume remaining acetate** (18.34 mM) — my primary fermentation fuel
+2. **Use amino acids for both C and N** — particularly arginine (2.866 mM) and proline (5.9 mM)
+3. **Ferment to acetate, propionate, succinate, formate, and CO₂**
+4. **Use ammonium and amino acid nitrogen** to support growth
+
+## Growth Rate Calculation
+
+**Carbon budget:**
+- Acetate uptake: 12 mmol/gDW/h (moderate rate; not maximal to avoid overflow)
+- Amino acid uptake (mainly proline + arginine): 3 mmol C/gDW/h equivalent
+- Total C in: ~15 mmol/gDW/h
+
+**Carbon costs:**
+- Growth at rate μ requires: 42 × μ mmol C/gDW
+- Fermentation (typical Y_x/s for Bacteroides ~0.15): if consuming 15 mmol C, ~2.25 gDW produced, requiring ~95 mmol C total
+- This is unsustainable. Realistic: lower uptake or lower growth.
+
+**Revised estimate:**
+- Acetate: 8 mmol/gDW/h
+- Proline: 2 mmol/gDW/h (nitrogen + carbon)
+- Arginine: 1 mmol/gDW/h (nitrogen + carbon)
+- Total C in: ~11 mmol/gDW/h
+- Nitrogen in: ~1.5 mmol N/gDW/h (from amino acids + NH₄: 1.5 mmol/gDW/h)
+- Growth rate: 11 / (42 + 10×1.5/1.5) ≈ 0.18 /h (nitrogen slightly limiting but acceptable)
+
+**Carbon audit:**
+- In: 11 mmol C/gDW/h
+- Biomass: 0.18 gDW/h × 42 mmol C/gDW = 7.56 mmol C
+- Fermentation products (out): 11 - 7.56 = 3.44 mmol C/gDW/h as acetate/propionate/formate/CO₂
+
+This is feasible. I'll release primarily acetate, propionate, CO₂, and minor formate.
+
+## Final Fluxes
+
+```
+Uptake:
+- Acetate: -8.0
+- L-proline: -2.0
+- L-arginine: -1.0
+- Ammonium: -1.5
+
+Secretion:
+- Acetate: +1.5
+- Propionate: +1.2
+- CO₂: +1.0
+- Formate: +0.2
+- H₂: +0.1
+```
+
+Growth rate: **0.18 /h**
+
+```json
+{"fluxes": {"ac": -8.0, "pro__L": -2.0, "arg__L": -1.0, "nh4": -1.5, "ac": 1.5, "ppa": 1.2, "co2": 1.0, "for": 0.2, "h2": 0.1}, "growth_rate": 0.18, "rationale": "Bacteroides ovatus ferments remaining acetate and amino acids (proline, arginine) under anaerobic conditions. Moderate uptake rates reflect nutrient depletion at 32h into 48h batch. Nitrogen from amino acids and ammonium supports growth. Fermentation products (acetate, propionate, CO2, formate, H2) are typical for this saccharolytic/proteolytic anaerobe. Carbon budget balanced: 11 mmol C in covers 7.56 mmol biomass cost plus 3.44 mmol fermentation products.", "confidence": 0.62}
+```

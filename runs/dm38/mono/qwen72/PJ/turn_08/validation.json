@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 8,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=31 out=39 biomass=14.8"
+  ],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.438 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.35 -> 0",
+   "C: secretions scaled by 0.835"
+  ],
+  "rationale": "Balanced carbon and nitrogen uptake to support growth while producing fermentation products.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": 5.0,
+   "but": 5.0,
+   "ppa": 2.0,
+   "arab__L": -3.0,
+   "pro__L": -2.0,
+   "cys__L": -2.0,
+   "co2": 3.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "ac": 4.1731,
+   "but": 4.1731,
+   "ppa": 1.6692,
+   "arab__L": -3.0,
+   "pro__L": -2.0,
+   "cys__L": -2.0,
+   "co2": 2.5038,
+   "h2": 1.0,
+   "pi": -0.4384
+  }
+ }
+]

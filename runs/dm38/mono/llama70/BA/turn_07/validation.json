@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 7,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.3,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "P: credited 0.213 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Balancing carbon and nitrogen budgets to support growth",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "for": -5.0,
+   "ac": -5.0,
+   "cys__L": -2.0,
+   "ser__L": -1.0,
+   "lac__L": 2.0,
+   "nh4": -1.5
+  },
+  "fluxes_applied": {
+   "for": -5.0,
+   "ac": -5.0,
+   "cys__L": -2.0,
+   "ser__L": -1.0,
+   "lac__L": 2.0,
+   "nh4": 0.0,
+   "pi": -0.2127
+  }
+ }
+]

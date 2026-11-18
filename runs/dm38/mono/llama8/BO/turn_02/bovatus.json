@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": 1.5,
+  "arg__L": 0.5,
+  "lac__L": 0.2,
+  "nh4": 0.1,
+  "but": 0.5,
+  "ac": 0.1,
+  "for": 0.05
+ },
+ "growth_rate": 0.35,
+ "rationale": "based on carbon and nitrogen fluxes, growth costs, and fermentation products",
+ "confidence": 0.8
+}

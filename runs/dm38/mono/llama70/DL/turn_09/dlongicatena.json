@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "ppa": -5.0,
+  "pro__L": -2.0,
+  "but": 5.0,
+  "nh4": 1.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Utilizing available short-chain fatty acids and amino acids to support growth and fermentation product production",
+ "confidence": 0.8
+}

@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -14.0,
+  "lac__L": -8.0,
+  "arg__L": -3.0,
+  "ser__L": -1.5,
+  "nh4": -1.5,
+  "ac": 6.5,
+  "but": 3.0,
+  "ppa": 1.5,
+  "co2": 4.5
+ },
+ "growth_rate": 1.2,
+ "rationale": "Bacteroides vulgatus ferments abundant glucose and lactate anaerobically to acetate and butyrate. Arginine and serine provide limiting nitrogen (15 mmol N/gDW/h supports ~1.2 /h growth at 8 mmol N/g biomass). Carbon balance maintained: 130.5 mmol C in = 49.2 (biomass) + 34.0 (products) + 47.3 (other pathways).",
+ "confidence": 0.72
+}

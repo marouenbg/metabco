@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 5,
+  "growth_claimed": 0.7,
+  "growth_allowed": 0.7,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.877 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.183 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing available carbon and nitrogen sources to support growth and produce fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "arab__L": -5.0,
+   "arg__L": -5.0,
+   "ac": 5.0,
+   "ppa": 2.5
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "arab__L": -5.0,
+   "arg__L": -5.0,
+   "ac": 5.0,
+   "ppa": 2.5,
+   "pi": -0.8768,
+   "so4": -0.1832
+  }
+ }
+]

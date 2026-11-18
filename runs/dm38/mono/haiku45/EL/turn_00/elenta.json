@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -6.0,
+  "arg__L": -4.0,
+  "nh4": 8.0,
+  "cys__L": -1.0,
+  "ac": 30.0,
+  "for": 25.0,
+  "co2": 15.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "Eggerthella lenta ferments glucose, arabinose, and lactate anaerobically to acetate, formate, and CO\u2082. With abundant glucose (25 mM), lactate (28 mM), and arginine (22 mM), I prioritize these substrates. Growth rate of 0.45 /h is realistic for anaerobic fermentation; carbon balance: 93 mmol C in supports 14.85 mmol C for growth + 78 mmol C for fermentation products. Nitrogen from arginine and ammonium supports biosynthesis; excess N released as ammonia.",
+ "confidence": 0.72
+}

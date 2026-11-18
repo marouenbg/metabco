@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -3.0,
+  "arg__L": -0.5,
+  "nh4": -1.8,
+  "pi": -0.23,
+  "ac": 10.0,
+  "ppa": 4.0,
+  "but": 2.0,
+  "for": 0.25,
+  "co2": 9.1
+ },
+ "growth_rate": 0.27,
+ "rationale": "Continued mixed glucose\u2013lactate fermentation with arginine supplementation. Carbon and nitrogen balance satisfied; realistic anaerobic fermentation stoichiometry (acetate, propionate, butyrate, formate, CO\u2082). Growth rate 0.27 /h supported by 60 mmol C input minus 11.07 mmol C biomass cost.",
+ "confidence": 0.82
+}

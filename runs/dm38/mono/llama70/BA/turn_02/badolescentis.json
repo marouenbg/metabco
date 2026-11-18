@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -4.0,
+  "ac": 5.0,
+  "lac__L": 2.5
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing D-glucose and ammonium for growth, producing acetate and lactate",
+ "confidence": 0.8
+}

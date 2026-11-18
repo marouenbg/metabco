@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "h2": -3.0,
+  "co2": 2.0,
+  "for": -2.0,
+  "nh4": -0.1,
+  "ac": 6.0
+ },
+ "growth_rate": 0.02,
+ "rationale": "Severely nitrogen-limited at end of batch culture. Minimal growth; maintenance acetogenesis from H\u2082 + CO\u2082. Formate oxidation provides additional reducing equivalents. Remaining NH\u2084\u207a (1.012 mM) insufficient for significant biomass synthesis.",
+ "confidence": 0.55
+}

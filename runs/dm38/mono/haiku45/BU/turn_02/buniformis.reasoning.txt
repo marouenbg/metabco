@@ -1,0 +1,78 @@
+# Metabolic Decision for Bacteroides uniformis ATCC 8492 — Turn 2
+
+## Analysis
+
+**Carbon sources available and transportable:**
+Bacteroides uniformis is a saccharolytic bacterium with broad carbohydrate utilization capacity. I can transport and ferment:
+- D-glucose (24.88 mM) — primary preferred substrate
+- L-lactate (28.25 mM) — can be co-fermented
+- L-arabinose (21.31 mM) — pentose fermentation
+- Maltose (4.382 mM) — disaccharide
+- Myo-inositol (6.272 mM) — polyol
+
+I cannot efficiently use acetate (0.2 mM, too dilute and I'm not acetogenic), and I lack transporters for most amino acids as primary carbon sources, though I can catabolize some amino acids for nitrogen and supplementary carbon.
+
+**Nitrogen sources:**
+- Ammonium (9.326 mM) — direct assimilation
+- L-arginine (21.79 mM) — can be deaminated and catabolized
+- Multiple amino acids available for deamination
+
+**Fermentation strategy:**
+At turn 0, I was already producing acetate, propionate, and succinate — consistent with mixed-acid fermentation of glucose and lactate. This is typical Bacteroides metabolism: saccharolytic fermentation yielding short-chain fatty acids (SCFAs). I will continue this strategy.
+
+**Growth calculation:**
+Current biomass: 0.002178 gDW/L = 0.002178 gDW in 1 mL vessel.
+
+For the next 4 h interval, I will:
+- Uptake glucose (abundant, 24.88 mM) at ~8 mmol/gDW/h
+- Co-uptake lactate at ~4 mmol/gDW/h (lactate is co-fermented)
+- Uptake ammonium at ~1.5 mmol/gDW/h (nitrogen limitation is mild)
+- Uptake arginine at ~1.0 mmol/gDW/h (supplementary nitrogen and carbon)
+
+**Carbon balance:**
+- Glucose uptake: 8 mmol/gDW/h × 6 C = 48 C
+- Lactate uptake: 4 mmol/gDW/h × 3 C = 12 C
+- Arginine uptake: 1 mmol/gDW/h × 6 C = 6 C
+- **Total C in: 66 mmol C/gDW/h**
+
+Growth at μ = 0.35 /h requires:
+- Biomass C: 0.35 × 42 = 14.7 mmol C/gDW/h
+- Remaining for fermentation products: 66 − 14.7 = 51.3 mmol C/gDW/h
+
+**Fermentation products** (typical Bacteroides mixed-acid fermentation):
+- Acetate: ~20 mmol C/gDW/h (2 C per acetate)
+- Propionate: ~15 mmol C/gDW/h (3 C per propionate)
+- Succinate: ~10 mmol C/gDW/h (4 C per succinate)
+- Formate: ~6 mmol C/gDW/h (1 C per formate)
+- **Total: 51 mmol C/gDW/h** ✓ (balanced)
+
+**Nitrogen balance:**
+- Ammonium uptake: 1.5 mmol/gDW/h
+- Arginine uptake: 1.0 mmol/gDW/h (1 N per arginine)
+- **Total N in: 2.5 mmol N/gDW/h**
+- Growth requirement: 0.35 × 10 = 3.5 mmol N/gDW/h
+
+This is slightly tight. I will increase ammonium uptake to 2.0 mmol/gDW/h and arginine to 1.2 mmol/gDW/h to reach 3.2 mmol N/gDW/h, supporting μ = 0.32 /h.
+
+**Revised growth rate: 0.32 /h**
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -4.0,
+    "arg__L": -1.2,
+    "nh4": -2.0,
+    "ac": 10.0,
+    "ppa": 5.0,
+    "succ": 2.5,
+    "for": 3.0,
+    "co2": 5.0
+  },
+  "growth_rate": 0.32,
+  "rationale": "Saccharolytic fermentation of abundant glucose and lactate with mixed-acid SCFA production (acetate, propionate, succinate, formate). Nitrogen from ammonium and arginine. Carbon and nitrogen balance audited for growth at 0.32 /h.",
+  "confidence": 0.72
+}
+```

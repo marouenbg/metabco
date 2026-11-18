@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -5.0,
+  "nh4": -2.5,
+  "but": 2.0,
+  "ac": 1.0,
+  "co2": 2.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Balanced carbon and nitrogen fluxes to support growth while producing butyrate and acetate as fermentation products.",
+ "confidence": 0.9
+}

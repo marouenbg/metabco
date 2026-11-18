@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "ac": -12.0,
+  "gln__L": -1.2,
+  "asn__L": -0.8,
+  "ser__L": -0.5,
+  "thr__L": -0.5,
+  "for": -0.8,
+  "but": 6.0,
+  "co2": 2.4,
+  "nh4": 0.5
+ },
+ "growth_rate": 0.4,
+ "rationale": "E. rectale ferments acetate to butyrate via acetyl-CoA condensation. Uptaking abundant acetate (12 mmol/gDW/h) plus amino acids (2 mmol/gDW/h) for nitrogen yields 38 mmol C/gDW/h. After 13.2 mmol C/gDW/h biomass cost at \u03bc=0.40, remaining 24.8 mmol C/gDW/h is fermented to butyrate (6 mmol/gDW/h, 24 C) and CO\u2082 (2.4 mmol). Nitrogen sourced from glutamine and asparagine (2 mmol/gDW/h) covers 2.8 mmol/gDW/h demand. Late stationary phase; maximize growth before nutrient crash.",
+ "confidence": 0.85
+}

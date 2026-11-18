@@ -1,0 +1,16 @@
+{
+ "treatment": "RI",
+ "members": [
+  "rintestinalis"
+ ],
+ "codes": [
+  "RI"
+ ],
+ "dt_h": 4.0,
+ "n_turns": 12,
+ "medium": "DM38",
+ "memory": true,
+ "model": "hf:Qwen/Qwen2.5-72B-Instruct",
+ "od_start": 0.0066,
+ "gdw_per_od": 0.33
+}

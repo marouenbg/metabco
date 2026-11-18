@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "but": 5.0,
+  "co2": 5.0,
+  "nh4": -10.0,
+  "h2": 5.0
+ },
+ "growth_rate": 0.05,
+ "confidence": 0.8,
+ "rationale": "Balanced uptake of acetate, butyrate, and carbon dioxide to support moderate growth while releasing fermentation products."
+}

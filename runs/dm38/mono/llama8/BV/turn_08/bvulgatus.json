@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "lac__L": 0.0,
+  "nh4": 8.0,
+  "ac": 5.0,
+  "but": 10.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.356,
+ "rationale": "Taking up D-glucose (glc__D) and Ammonium (nh4) to cover the carbon and nitrogen requirements for growth and biomass production.",
+ "confidence": 0.9
+}

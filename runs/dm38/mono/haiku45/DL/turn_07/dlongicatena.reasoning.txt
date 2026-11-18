@@ -1,0 +1,100 @@
+# Metabolic reasoning for Dorea longicatena DSM 13814 at t=28h
+
+## Assessment of available transporters and carbon sources
+
+Dorea longicatena is a Gram-positive, obligately anaerobic bacterium capable of fermenting carbohydrates and amino acids. Based on genomic capacity and recent metabolic history, I can transport:
+
+**Carbohydrates:** L-arabinose (clearly used in turns 3, 5, 6), maltose (present 4.38 mM), and likely glucose (used in turn 3). Lactate was consumed in turns 5–6, indicating lactate oxidation capacity.
+
+**Amino acids:** L-arginine (consistently consumed), L-serine (used turns 5–6), and the suite of proteinogenic amino acids present in high concentration (leucine, phenylalanine, valine, etc.). These are typical substrates for Dorea species.
+
+**Short-chain fatty acids:** Butyrate was both consumed (turn 6: -8.0) and produced (turns 3, 5, 6), indicating reversible butyrate metabolism and/or production from fermentation.
+
+**Formate/H₂/CO₂:** These appear as fermentation products in all recent turns, consistent with mixed-acid fermentation.
+
+**Cannot use:** Acetate appears *only* as a product despite high concentration (43.94 mM), suggesting I lack acetate kinase or acetyl-CoA synthetase. Hydrogen (6.91 mM) cannot be oxidized anaerobically without an external electron acceptor.
+
+## Fermentation strategy
+
+Recent turns show a consistent pattern:
+- **Inputs:** Arabinose, arginine, serine, lactate (when present)
+- **Outputs:** CO₂, formate, butyrate, acetate, H₂
+
+This is consistent with **mixed-acid fermentation** with butyrate and acetate as major products, plus CO₂ and formate. Butyrate production requires pyruvate → acetyl-CoA → malonyl-CoA → butyrate pathway (or crotonyl-CoA reductase).
+
+## Current nutrient constraints
+
+At t=28h (halfway through 48h run), I remain in mid-exponential phase. Abundant residual substrates:
+- Arabinose: 8.99 mM (limiting but not depleted)
+- Amino acids: substantial (pro, cys, phe, leu, val, gln, asn, lys, thr, ala, ile, his, met, trp, glu, asp, ser all present)
+- Formate: 29.71 mM (product accumulation)
+- Butyrate: 6.41 mM (product accumulation)
+- CO₂: 176 mM (product accumulation)
+
+**Nitrogen sources:** Ammonium is low (1.06 mM), but amino acids provide ample organic nitrogen. Arginine, serine, and glutamine are excellent nitrogen donors for biosynthesis.
+
+## Growth rate calculation
+
+Recent growth rates have been 0.119–0.300 /h. Given:
+- Arabinose (8.99 mM) is limiting
+- Amino acids are abundant
+- Ammonium is scarce but not limiting (amino acids compensate)
+
+**Arabinose uptake strategy:** Consume arabinose at ~5–6 mmol/gDW/h (similar to turn 5: 5.0 mmol/gDW/h uptake).
+
+**Amino acid uptake:** Arginine ~2.0, serine ~1.0, and minor contributions from others (leucine, valine, etc. at ~0.5–1.0 each).
+
+**Carbon balance:**
+- Arabinose (C₅): 5.0 mmol/gDW/h = 25 mmol C/gDW/h
+- Arginine (C₆N₄O₂): 2.0 mmol/gDW/h = 12 mmol C/gDW/h
+- Serine (C₃NO₃): 1.0 mmol/gDW/h = 3 mmol C/gDW/h
+- Minor amino acids: ~3 mmol C/gDW/h
+- **Total C in: ~43 mmol C/gDW/h**
+
+**Carbon requirements for growth:**
+- Growth at 0.25 /h: 0.25 × 38 = 9.5 mmol C/gDW/h
+- Remaining for fermentation products: 43 − 9.5 = 33.5 mmol C/gDW/h
+
+**Fermentation products (typical Dorea ratios):**
+- Butyrate (C₄): ~4 mmol/gDW/h
+- Acetate (C₂): ~6 mmol/gDW/h
+- Formate (C₁): ~4 mmol/gDW/h
+- CO₂: ~15 mmol/gDW/h
+- H₂: ~1 mmol/gDW/h
+- **Total: ~30 mmol C/gDW/h** ✓ (matches available carbon)
+
+**Nitrogen balance:**
+- Arginine: 2.0 × 4 = 8 mmol N/gDW/h
+- Serine: 1.0 × 1 = 1 mmol N/gDW/h
+- Minor amino acids: ~2 mmol N/gDW/h
+- Ammonium: 0.3 mmol/gDW/h (minimal, nearly depleted)
+- **Total N in: ~11 mmol N/gDW/h**
+
+**Nitrogen requirement for growth at 0.25 /h:** 0.25 × 10 = 2.5 mmol N/gDW/h ✓
+
+**Supported growth rate: 0.25 /h** (conservative, consistent with turn 5 and sustainable given remaining substrate).
+
+---
+
+```json
+{
+  "fluxes": {
+    "arab__L": -5.0,
+    "arg__L": -2.0,
+    "ser__L": -1.0,
+    "leu__L": -0.8,
+    "val__L": -0.6,
+    "pro__L": -0.5,
+    "ala__L": -0.4,
+    "nh4": -0.3,
+    "co2": 15.0,
+    "but": 4.0,
+    "ac": 6.0,
+    "for": 4.0,
+    "h2": 1.0
+  },
+  "growth_rate": 0.25,
+  "rationale": "Arabinose and amino acids (arginine, serine, leucine, valine, proline) are abundant and transportable. Mixed-acid fermentation yields butyrate, acetate, formate, CO₂, and H₂. Carbon balance: 43 mmol C/gDW/h in → 9.5 (biomass) + 33.5 (products) = 43 ✓. Nitrogen: 11 mmol/gDW/h in → 2.5 (biomass) + 8.5 (products/overflow) ✓. Growth rate 0.25 /h is sustainable mid-exponential phase.",
+  "confidence": 0.72
+}
+```

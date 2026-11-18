@@ -1,0 +1,95 @@
+# Reasoning through my metabolic state
+
+## Current situation
+I am at 2.748 gDW/L after 40 hours. The culture is sealed with 8 hours remaining. Turn 9 showed zero growth, suggesting I hit a constraint. Let me assess what I can actually use.
+
+## Carbon sources available and transportable
+As *Clostridium hiranonis*, a secondary bile acid degrader, I have limited carbohydrate utilization but strong amino acid and organic acid metabolism:
+
+**Available and likely transportable:**
+- **Acetate** (93.19 mM): I can ferment and use this via acetyl-CoA
+- **Butyrate** (27.91 mM): Usable via β-oxidation or direct metabolism
+- **Formate** (22.76 mM): Can be oxidized or used in one-carbon metabolism
+- **Amino acids** (various): My genome encodes amino acid transporters and deaminases
+  - Phe, Tyr, Val, Gln, Asn, Lys, Pro, Thr, Cys, Ile, Leu, His, Met, Trp, Glu, Asp available
+- **myo-inositol** (6.27 mM): Likely degradable via inositol utilization pathways
+- **Maltose** (4.38 mM): May be transportable (PTS or specific permease)
+
+**Not readily accessible:**
+- H₂ and CO₂: These are products, not primary substrates for growth
+- Nitrate: I'm anaerobic; nitrate reduction is unlikely my primary pathway
+
+## Nitrogen sources
+- **Ammonium** (1.477 mM): Low but usable
+- **Amino acids** (multiple): Rich source of nitrogen via deamination
+- The amino acid pool is substantial and nitrogen-rich
+
+## Recent metabolic pattern
+Turn 8 showed 0.1 /h growth using arabinose (which is now depleted). Turns 6–7 showed fermentation of substrates to acetate, formate, and CO₂ with zero growth—likely exploratory or overflow metabolism. Turn 9 was silent, possibly due to substrate depletion or transient nutrient limitation.
+
+## Strategy for remaining 8 hours
+
+**Primary substrates:**
+1. **Amino acids** (especially branched-chain: Leu, Val, Ile; and aromatic: Phe, Tyr): Excellent carbon and nitrogen sources. These are already depleted from turn 8, but still present. Clostridium species are known amino acid fermenters.
+2. **Acetate** (abundant): Can be oxidized or further fermented depending on redox balance.
+3. **Butyrate**: Can support growth via β-oxidation.
+
+**Growth calculation:**
+- To grow at 0.3 /h, I need: 38 mmol C/gDW and 10 mmol N/gDW
+- Amino acids provide both C and N efficiently
+- Available amino acids: ~33 mmol/L total
+- At 2.748 gDW/L, I can access ~12 mmol/L amino acid equivalents per gram
+
+**Fermentation products:**
+Clostridium hiranonis is known to produce:
+- **Acetate, butyrate, propionate** (VFA fermentation)
+- **CO₂, H₂** (from carbohydrate and amino acid fermentation)
+- **H₂S** (from cysteine and sulfate reduction)
+
+## Proposed fluxes (mmol/gDW/h)
+
+**Uptake:**
+- Amino acids (mixed pool, ~6 mmol/gDW/h): Val, Leu, Ile, Phe, Tyr, Pro, Lys, Gln, Asn, Thr, Cys (nitrogen-rich)
+- Acetate (~3 mmol/gDW/h): Additional carbon
+- Butyrate (~1 mmol/gDW/h): Supplementary carbon
+
+**Secretion:**
+- Acetate (~2 mmol/gDW/h): Overflow/fermentation product
+- CO₂ (~1.5 mmol/gDW/h): From amino acid decarboxylation and acetyl-CoA oxidation
+- H₂ (~0.5 mmol/gDW/h): Redox balance
+- Butyrate (~0.3 mmol/gDW/h): Minor overflow
+
+**Growth rate:** 
+- Amino acid uptake (~6 mmol C/gDW/h) + acetate (3) + butyrate (1) = ~10 mmol C/gDW/h
+- After ~2 mmol C/gDW/h secreted as acetate and CO₂, net available: ~8 mmol C/gDW/h
+- Growth at 38 mmol C/gDW needed: 8 / 38 ≈ **0.21 /h**
+- Nitrogen: ~2 mmol N/gDW/h from amino acids; need 10 mmol N/gDW/h: supports ~0.2 /h
+
+**Conservative estimate: 0.18 /h** (limited by nitrogen scarcity)
+
+```json
+{
+  "fluxes": {
+    "val__L": -1.2,
+    "leu__L": -1.0,
+    "ile__L": -0.8,
+    "phe__L": -0.9,
+    "tyr__L": -0.8,
+    "pro__L": -0.6,
+    "lys__L": -0.5,
+    "gln__L": -0.6,
+    "asn__L": -0.5,
+    "thr__L": -0.4,
+    "cys__L": -0.3,
+    "ac": -3.0,
+    "but": -1.0,
+    "ac": 2.0,
+    "co2": 1.8,
+    "h2": 0.6,
+    "but": 0.3
+  },
+  "growth_rate": 0.18,
+  "rationale": "Amino acid fermentation is my primary strategy: branched-chain and aromatic amino acids provide both carbon and nitrogen. Acetate and butyrate supplement carbon. Fermentation products (acetate, CO₂, H₂) balance redox and mass. Growth is limited by available nitrogen from amino acids (~2 mmol/gDW/h available, supporting ~0.2 /h). This is realistic for the final 8 hours of a sealed batch.",
+  "confidence": 0.62
+}
+```

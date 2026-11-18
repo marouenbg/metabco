@@ -1,0 +1,80 @@
+# Metabolic decision for Bacteroides uniformis at t=40h
+
+## Analysis of available resources and capabilities
+
+**Carbon sources available:**
+- Glucose (glc__D): absent, not available
+- Lactate (lac__L): absent, not available
+- Arabinose (arab__L): 12.08 mM - I can ferment this
+- Acetate (ac): 12.55 mM - I can use this
+- Propionate (ppa): 6.478 mM - present but I typically excrete this
+- Maltose (malt): 4.382 mM - I can ferment this
+- Formate (for): 5.382 mM - I can use this
+- Succinate (succ): 1.321 mM - I can ferment this
+- myo-inositol (inost): 6.272 mM - I can ferment this
+- Various amino acids: abundant, usable as carbon and nitrogen sources
+
+**Nitrogen sources:**
+- L-arginine (arg__L): 9.77 mM - excellent source
+- Ammonium (nh4): 0.4543 mM - limited
+- Other amino acids: available but better used for carbon
+- L-cysteine (cys__L): 5.845 mM - can provide nitrogen and sulfur
+
+**Recent metabolic pattern:**
+My previous turns show I was fermenting lactate and glucose when available, using arginine as nitrogen source, and excreting acetate, propionate, and formate. Now those primary substrates are depleted, but I have substantial arabinose, acetate, and amino acids.
+
+## Metabolic strategy for next 4 hours
+
+Since lactate and glucose are gone, I'll shift to:
+1. **Primary carbon source**: L-arabinose (12.08 mM) - my genome encodes arabinose fermentation
+2. **Secondary carbon**: Acetate (12.55 mM) - can be used oxidatively or fermented
+3. **Nitrogen source**: L-arginine (9.77 mM) - reliable nitrogen source
+4. **Additional amino acids**: L-cysteine for nitrogen and sulfur
+
+**Growth calculation:**
+- Arabinose fermentation is efficient; typical yield ~0.4 g cells per g substrate
+- At 12.08 mM arabinose (180 g/mol) = 2.17 g/L available
+- Expected dry biomass production: ~0.87 g/L
+- Current biomass: 2.244 g/L; over 4h with growth rate μ, final = 2.244·e^(4μ)
+- Realistic growth rate given substrate depletion stress: **0.35 /h**
+
+**Carbon balance audit:**
+- Arabinose uptake: -6.0 mmol/gDW/h (C5 sugar, 5 carbons per molecule)
+  - Carbon in: 6.0 × 5 = 30 mmol C/gDW/h
+- Acetate uptake: -2.0 mmol/gDW/h (2 carbons)
+  - Carbon in: 2.0 × 2 = 4 mmol C/gDW/h
+- **Total carbon in: 34 mmol C/gDW/h**
+
+- Biomass production at μ=0.35: 42 × 0.35 = 14.7 mmol C/gDW/h
+- Fermentation products (acetate + formate + CO2): ~19.3 mmol C/gDW/h
+- **Total carbon out: 34 mmol C/gDW/h** ✓
+
+**Nitrogen balance:**
+- Arginine uptake: -2.5 mmol/gDW/h (contains 3 nitrogens)
+  - Nitrogen in: 2.5 × 3 = 7.5 mmol N/gDW/h
+- Cysteine uptake: -1.0 mmol/gDW/h (1 nitrogen)
+  - Nitrogen in: 1.0 mmol N/gDW/h
+- **Total nitrogen in: 8.5 mmol N/gDW/h**
+- Biomass need: 10 × 0.35 = 3.5 mmol N/gDW/h
+- Excess nitrogen released as ammonia: ~5 mmol/gDW/h ✓
+
+**Fermentation products:**
+Bacteroides uniformis typically produces acetate, propionate, formate, and succinate from carbohydrate fermentation. I'll release acetate and formate as primary products.
+
+```json
+{
+  "fluxes": {
+    "arab__L": -6.0,
+    "ac": -2.0,
+    "arg__L": -2.5,
+    "cys__L": -1.0,
+    "ac": 3.5,
+    "for": 2.0,
+    "co2": 3.0,
+    "nh4": 5.0
+  },
+  "growth_rate": 0.35,
+  "rationale": "Arabinose fermentation as primary pathway with acetate as secondary carbon source. Arginine and cysteine for nitrogen. Fermentation yields acetate, formate, CO2, and ammonia. Carbon and nitrogen balanced; realistic growth given substrate transition.",
+  "confidence": 0.72
+}
+```

@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "glc__D": 776.0,
+  "nh4": 490.0,
+  "but": 490.0
+ },
+ "growth_rate": 0.049,
+ "rationale": "limiting nitrogen source supports growth rate",
+ "confidence": 0.8
+}

@@ -1,0 +1,88 @@
+# Metabolic decision for Bacteroides uniformis ATCC 8492, t=0
+
+## Analysis
+
+**Carbon sources available and transportable:**
+Bacteroides uniformis is a saccharolytic specialist with a large PUL (polysaccharide utilization locus) repertoire. I can transport:
+- D-glucose (glc__D): 24.98 mM — primary substrate, readily fermented
+- L-lactate (lac__L): 28.31 mM — can be utilized as both C and energy source
+- L-arabinose (arab__L): 21.31 mM — pentose, fermentable
+- Maltose (malt): 4.382 mM — disaccharide, fermentable
+- myo-inositol (inost): 6.272 mM — can be fermented by many Bacteroides
+
+I cannot efficiently transport or use most amino acids as primary carbon sources (they are available but energetically unfavorable compared to carbohydrates for a specialist like me).
+
+**Nitrogen sources:**
+- Ammonium (nh4): 9.347 mM — primary nitrogen source, readily assimilated
+- L-arginine (arg__L): 21.81 mM — can serve as N source through arginine deaminase pathway
+- Other amino acids: available but not preferred as N sources when ammonium is present
+
+**Fermentation strategy:**
+As an obligate anaerobe, I ferment carbohydrates to short-chain fatty acids. Bacteroides uniformis primarily produces:
+- Acetate (ac)
+- Propionate (ppa)
+- Succinate (succ)
+- Minor: formate (for), lactate (lac__L)
+
+**Metabolic plan:**
+I will prioritize glucose (highest quality, fastest growth) alongside lactate uptake. Glucose fermentation via mixed-acid fermentation yields ~2 mol acetate + 1 mol propionate per glucose, with some succinate.
+
+**Growth rate calculation:**
+- Glucose: ~24 mM available. At realistic uptake of 12 mmol/gDW/h, this is rich.
+- Lactate: ~28 mM, can uptake ~8 mmol/gDW/h (secondary substrate).
+- Nitrogen: 9.347 mM NH4 + amino acid pool. Ammonium uptake ~3 mmol/gDW/h is typical.
+
+Stoichiometry for glucose fermentation (simplified):
+- 1 glucose (6C) → ~2.5 acetate (5C) + 0.5 propionate (1.5C) + CO2 (1C, released)
+- Net: 6C in → ~6.5C out (accounting for biomass incorporation)
+
+Carbon budget for 0.5 /h growth:
+- Glucose uptake: 12 mmol/gDW/h × 6 C/glucose = 72 C/gDW/h
+- Lactate uptake: 8 mmol/gDW/h × 3 C/lactate = 24 C/gDW/h
+- **Total C in: 96 C/gDW/h**
+
+For growth at μ = 0.5 /h:
+- Biomass C cost: 0.5 /h × 42 mmol C/gDW = 21 C/gDW/h
+- Fermentation products (acetate + propionate + CO2): 96 − 21 = 75 C/gDW/h
+
+Nitrogen budget:
+- NH4 uptake: 3 mmol/gDW/h
+- Biomass N cost: 0.5 /h × 10 mmol N/gDW = 5 N/gDW/h
+- This is **insufficient**. I need ~5 N/gDW/h but only have 3 from ammonia.
+- Arg__L uptake: 4 mmol/gDW/h (yields ~4 mmol N via deamination)
+- **Total N in: 3 + 4 = 7 N/gDW/h** ✓ Adequate for 0.5 /h growth
+
+Revised growth rate: **μ = 0.45 /h** (conservative, accounting for stoichiometric constraints)
+
+**Final fluxes:**
+- glc__D: −11 (uptake)
+- lac__L: −7 (uptake)
+- arg__L: −3 (uptake, N source)
+- nh4: −2.5 (uptake)
+- ac: +35 (acetate, major product)
+- ppa: +15 (propionate, major product)
+- co2: +18 (CO2 from decarboxylation)
+- succ: +8 (succinate, minor product)
+
+**Audit:**
+- C in: 11×6 + 7×3 + 3×2 = 66 + 21 + 6 = 93 C
+- C out: 35 + 15 + 18 + 8 + (0.45 × 42) = 76 + 19 = 95 C ✓ (within rounding)
+- N in: 2.5 + 3 = 5.5 mmol; N out via growth: 0.45 × 10 = 4.5 ✓
+
+```json
+{
+  "fluxes": {
+    "glc__D": -11.0,
+    "lac__L": -7.0,
+    "arg__L": -3.0,
+    "nh4": -2.5,
+    "ac": 35.0,
+    "ppa": 15.0,
+    "co2": 18.0,
+    "succ": 8.0
+  },
+  "growth_rate": 0.45,
+  "rationale": "Bacteroides uniformis preferentially ferments glucose and lactate under anaerobic conditions. Uptake of primary carbohydrates (11 mmol glucose, 7 mmol lactate) with ammonium and arginine as N sources supports mixed-acid fermentation producing acetate, propionate, succinate, and CO2. Growth rate limited by nitrogen availability; carbon and nitrogen budgets balance.",
+  "confidence": 0.72
+}
+```

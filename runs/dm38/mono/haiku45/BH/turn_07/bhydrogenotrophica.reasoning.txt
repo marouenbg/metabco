@@ -1,0 +1,100 @@
+# Metabolic reasoning for Blautia hydrogenotrophica DSM 10507 at t=28h
+
+## Assessment of my metabolic capabilities
+
+**Blautia hydrogenotrophica** is a strictly anaerobic, obligately saccharolytic bacterium with hydrogenotrophic capacity. I ferment sugars and amino acids, producing acetate, formate, lactate, and hydrogen. I can also use H₂ as an electron donor with CO₂ as terminal electron acceptor (hydrogenotrophic metabolism).
+
+**Carbon sources I can transport and use:**
+- D-glucose (glc__D): I have PTS or permeases for glucose; this is my preferred substrate
+- L-arabinose (arab__L): I can ferment pentoses
+- L-lactate (lac__L): I can consume lactate via lactate permease
+- Acetate (ac): I can use acetate (though less efficiently than glucose)
+- Formate (for): I can ferment formate
+- L-serine, L-alanine, other amino acids: limited capacity
+
+**Carbon sources I cannot use effectively:**
+- Maltose, myo-inositol: I lack the specific transporters for these
+- Most other amino acids at high rates: I have limited amino acid permeases
+
+**Nitrogen sources:**
+- Ammonium (nh4): primary nitrogen source, I have ammonium transporters
+- L-arginine (arg__L): I can use via arginine permease; also provides carbon
+- Other amino acids: secondary nitrogen sources
+
+**Problem:** I notice glucose is listed as "D-glucose (glc__D)" in my recent behaviour, but it does NOT appear in the current nutrient list! This is critical. The vessel is sealed and has been running for 28 h. My glucose supply has been consumed.
+
+## Current metabolic strategy (turn 7, t=28h)
+
+**Available primary substrates:**
+1. **Acetate** (26.31 mM): abundant, can ferment
+2. **L-arabinose** (14.39 mM): can ferment
+3. **L-lactate** (15.51 mM): can ferment
+4. **Formate** (16.43 mM): can ferment
+5. **H₂** (3.347 mM): low but present; I can use hydrogenotrophically
+6. **CO₂** (60.01 mM): abundant; terminal electron acceptor for H₂ metabolism
+7. **Amino acids**: arginine, serine, alanine, etc. for both C and N
+
+**Nitrogen availability:**
+- Ammonium (5.165 mM): good supply
+- L-arginine (17.85 mM): excellent; both C and N source
+- Other amino acids: present but lower concentration
+
+## Growth calculation
+
+Since glucose is gone, I must switch to mixed-substrate fermentation. My optimal strategy:
+
+**Uptake plan:**
+- L-arabinose: 10 mmol/gDW/h (good fermentable sugar)
+- L-lactate: 8 mmol/gDW/h (readily fermented)
+- L-arginine: 3 mmol/gDW/h (provides both C and N)
+- Ammonium: 2.5 mmol/gDW/h (N requirement)
+- Formate: 2 mmol/gDW/h (additional C)
+
+**Carbon balance:**
+- Arabinose (C₅H₁₀O₅): 10 mmol × 5 C = 50 mmol C in
+- Lactate (C₃H₆O₃): 8 mmol × 3 C = 24 mmol C in
+- Arginine (C₆H₁₄N₄O₂): 3 mmol × 6 C = 18 mmol C in
+- Formate (CH₂O₂): 2 mmol × 1 C = 2 mmol C in
+- **Total C in: 94 mmol/gDW**
+
+**Carbon out (fermentation products) + growth:**
+- Growth at μ = 0.40 /h requires: 0.40 × 38 = 15.2 mmol C/gDW (biomass)
+- Fermentation: acetate, formate, lactate, CO₂, H₂ production
+- Typical fermentation balance: ~70% carbon to products, ~20% to biomass, ~10% to CO₂
+- Products: ~60 mmol C out as organic acids + CO₂
+- Remaining: 94 - 15.2 - 60 = ~19 mmol for CO₂ or other products
+
+**Nitrogen balance:**
+- Arginine: 3 mmol × 4 N = 12 mmol N
+- Ammonium: 2.5 mmol × 1 N = 2.5 mmol N
+- **Total N in: 14.5 mmol/gDW**
+- Growth requirement: 0.40 × 10 = 4.0 mmol N
+- Excess N for excretion or storage: ~10.5 mmol (released as ammonia or amino groups)
+
+**Growth rate: 0.40 /h** (conservative, sustainable on mixed fermentation substrates without glucose)
+
+## Product secretion
+- Acetate (ac): +12 mmol/gDW/h
+- Formate (for): +8 mmol/gDW/h
+- Lactate (lac__L): +6 mmol/gDW/h
+- CO₂ (co2): +15 mmol/gDW/h
+- H₂ (h2): +2 mmol/gDW/h
+- NH₄ (nh4): +3 mmol/gDW/h (excess from arginine deamination)
+
+```json
+{
+  "fluxes": {
+    "arab__L": -10.0,
+    "lac__L": -8.0,
+    "arg__L": -3.0,
+    "nh4": -2.5,
+    "for": -2.0,
+    "ac": 12.0,
+    "co2": 15.0,
+    "h2": 2.0
+  },
+  "growth_rate": 0.40,
+  "rationale": "Glucose exhausted; switching to mixed fermentation of arabinose, lactate, and arginine. Arginine provides both C and N. Ammonium uptake covers growth N demand. Fermentation products (acetate, formate, lactate, CO2, H2) balance carbon accounting. Conservative growth rate reflects substrate diversity and lower efficiency without preferred glucose.",
+  "confidence": 0.72
+}
+```

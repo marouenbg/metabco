@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "inost": -5.0,
+  "ser__L": -2.0,
+  "but": 8.0,
+  "ppa": 4.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Uptake of acetate, myo-inositol, and L-serine to support butyrate production and growth",
+ "confidence": 0.8
+}

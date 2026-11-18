@@ -1,0 +1,73 @@
+# Metabolic reasoning for Bacteroides fragilis at t=8h
+
+## Transporters and substrate availability
+
+As a Gram-negative anaerobe with a large genome, B. fragilis has broad saccharolytic and proteolytic capabilities. I can transport:
+
+**Carbohydrates:** D-glucose, L-arabinose, maltose are readily fermented via my PTS and other sugar transporters. L-lactate is available at 28.31 mM—a substantial secondary carbon source I can consume.
+
+**Amino acids:** I have broad amino acid uptake capacity. L-arginine (20.23 mM) is abundant and valuable—it supports both growth and can be catabolized for energy and nitrogen. Other amino acids (cysteine, serine, proline, alanine, etc.) are available in lower amounts.
+
+**Limitations:** I cannot use nitrate as an electron acceptor (I'm a strict anaerobe). Glucose is still present at 21.91 mM but declining; lactate is now the most abundant carbon source.
+
+## Fermentation strategy
+
+At this stage (8h into 48h batch culture), I should:
+1. Continue mixed-acid fermentation of glucose and arabinose (primary, fast substrates)
+2. Increase lactate uptake—it's abundant and will become critical as sugars deplete
+3. Use arginine for both nitrogen assimilation and catabolism (arginine dihydrolase pathway yields ATP and ammonia)
+4. Maintain secretion of acetate, butyrate, formate—my characteristic fermentation products
+
+## Growth rate calculation
+
+**Carbon budget:**
+- Glucose uptake: 10 mmol/gDW/h (slightly reduced from turn 1; glucose declining)
+- Arabinose uptake: 3 mmol/gDW/h (reduced, becoming limiting)
+- Lactate uptake: 5 mmol/gDW/h (increasing reliance)
+- Arginine uptake: 4 mmol/gDW/h (for nitrogen + catabolism)
+- **Total C in:** ~22 mmol C/gDW/h
+
+**Carbon out (fermentation products):**
+- Acetate: 1.5 mmol/gDW/h
+- Butyrate: 1.2 mmol/gDW/h
+- Formate: 0.6 mmol/gDW/h
+- CO₂: 2.5 mmol/gDW/h (increased from lactate oxidation)
+- **Total C out:** ~5.8 mmol C/gDW/h
+
+**Biomass requirement:** 41 mmol C/gDW of biomass
+
+**Available for growth:** 22 − 5.8 = 16.2 mmol C/gDW/h
+**Growth rate:** 16.2 / 41 ≈ **0.395 /h** (slightly declining from turn 1, as expected in batch)
+
+**Nitrogen budget:**
+- Ammonium: 1.5 mmol/gDW/h
+- Arginine: 4 mmol/gDW/h (contains 2 N per molecule, so ~8 mmol N/gDW/h)
+- Other amino acids: ~1 mmol N/gDW/h
+- **Total N in:** ~10.5 mmol N/gDW/h
+- **Biomass requirement:** 8 mmol N/gDW of biomass
+- **Surplus:** 2.5 mmol N/gDW/h ✓ (released as ammonia from catabolism)
+
+Audit passes: carbon and nitrogen both support this growth rate.
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "arab__L": -3.0,
+    "lac__L": -5.0,
+    "arg__L": -4.0,
+    "nh4": -1.5,
+    "cys__L": -0.8,
+    "ser__L": -0.5,
+    "ac": 1.5,
+    "but": 1.2,
+    "for": 0.6,
+    "co2": 2.5
+  },
+  "growth_rate": 0.395,
+  "rationale": "Glucose and arabinose are declining but still primary substrates; lactate uptake increases as it accumulates and becomes cost-effective. Arginine provides both nitrogen and additional catabolizable carbon. Mixed-acid fermentation yields acetate, butyrate, and formate as characteristic products. Growth rate declines moderately as substrate depletion proceeds in batch culture.",
+  "confidence": 0.72
+}
+```

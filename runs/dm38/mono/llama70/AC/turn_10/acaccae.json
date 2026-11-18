@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "cys__L": -2.0,
+  "but": 5.0,
+  "co2": 3.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.263,
+ "rationale": "acetate and L-cysteine uptake support growth and fermentation product formation",
+ "confidence": 0.8
+}

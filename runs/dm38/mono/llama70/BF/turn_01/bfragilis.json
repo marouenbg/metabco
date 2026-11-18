@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -5.0,
+  "glc__D": -3.0,
+  "nh4": -1.5,
+  "ac": 2.0,
+  "ppa": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing primary carbon sources for energy and growth, with a balanced approach to nitrogen uptake and fermentation product release.",
+ "confidence": 0.8
+}

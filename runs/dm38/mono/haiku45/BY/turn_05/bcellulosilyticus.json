@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": -6.0,
+  "arg__L": -1.5,
+  "nh4": -1.5,
+  "ac": 12.0,
+  "ppa": 4.0,
+  "but": 2.0,
+  "co2": 8.0
+ },
+ "growth_rate": 0.119,
+ "rationale": "Glucose becoming limiting; shift to lactate fermentation. Maintain arginine uptake for nitrogen. Ferment to acetate, propionate, butyrate. Growth limited by remaining glucose (8.4 mM) and lactate availability in sealed batch at 20h.",
+ "confidence": 0.72
+}

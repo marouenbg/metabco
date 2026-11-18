@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "h2s": 5,
+  "lac__L": 5,
+  "so4": 5,
+  "co2": 0,
+  "nh4": 5,
+  "ac": 0,
+  "h2": 0,
+  "for": 0,
+  "succ": 0,
+  "etoh": 0,
+  "ppa": 0,
+  "but": 0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Supporting growth through hydrogen sulfide, lactate, sulfate, and carbon dioxide uptake, with acetate and succinate production as byproducts.",
+ "confidence": 1.0
+}

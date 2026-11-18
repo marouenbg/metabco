@@ -1,0 +1,60 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 9,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.024,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: no3",
+   "n_imbalance: in=0.236 out=0 biomass=1.55"
+  ],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: no3",
+   "no_transporter: h2s",
+   "no_transporter: lac__L",
+   "no_transporter: etoh"
+  ],
+  "repairs": [
+   "clipped uptake no3 to pool limit -0.236",
+   "P: credited 0.188 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0393 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.15 -> 0.024"
+  ],
+  "rationale": "Bacteroides cellulosilyticus DSM 14838 will take up butyrate, acetate, and formate to support growth, and release CO2 as a byproduct. The growth rate supported by these fluxes is 0.15 gDW/h.",
+  "confidence": null,
+  "fluxes_claimed": {
+   "but": -10.53,
+   "ac": -10.53,
+   "for": -10.53,
+   "no3": -3.12,
+   "co2": 31.59,
+   "h2": 0.0,
+   "h2s": 0.0,
+   "nh4": 0.0,
+   "lac__L": 0.0,
+   "lac__D": 0.0,
+   "succ": 0.0,
+   "etoh": 0.0,
+   "ppa": 0.0
+  },
+  "fluxes_applied": {
+   "but": -10.53,
+   "ac": -10.53,
+   "for": -10.53,
+   "no3": -0.2364,
+   "co2": 31.59,
+   "h2": 0.0,
+   "h2s": 0.0,
+   "nh4": 0.0,
+   "lac__L": 0.0,
+   "lac__D": 0.0,
+   "succ": 0.0,
+   "etoh": 0.0,
+   "ppa": 0.0,
+   "pi": -0.1879,
+   "so4": -0.0393
+  }
+ }
+]

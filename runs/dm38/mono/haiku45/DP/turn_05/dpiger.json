@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -8.0,
+  "arg__L": -1.2,
+  "so4": -1.8,
+  "nh4": -0.5,
+  "ac": 4.0,
+  "co2": 3.5,
+  "h2s": 1.8
+ },
+ "growth_rate": 0.3,
+ "rationale": "Lactate-sulfate fermentation with amino acid co-utilization. Lactate is preferred carbon/energy source; arginine provides supplemental nitrogen and carbon. Sulfate reduction coupled to lactate oxidation. Products: acetate, CO\u2082, H\u2082S. Growth limited by ammonium availability.",
+ "confidence": 0.72
+}

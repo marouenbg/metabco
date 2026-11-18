@@ -1,0 +1,103 @@
+# Metabolic reasoning for Bacteroides vulgatus ATCC 8482 at t=24h
+
+## Assessment of my situation
+
+I am at 2.638 gDW/L, having just shown modest growth (0.138 /h) in turn 5. The vessel is sealed, so I must work with what remains. I have consumed most easily-fermentable sugars (arabinose, glucose are nearly gone). The environment now contains substantial short-chain fatty acids (acetate 51.17, butyrate 23.05, propionate 19.05 mM) and a rich amino acid pool.
+
+## Carbon and nitrogen sources available to me
+
+**Easily transportable carbon:**
+- **Acetate, butyrate, propionate**: These are fermentation end-products I myself likely produced. I can take them back up via acetyl-CoA synthetase and related pathways. This is a known strategy for Bacteroides—scavenging short-chain fatty acids.
+- **Amino acids**: I have abundant amino acids (cys, gly, phe, ser, leu, tyr, pro, val, gln, asn, lys, thr, ala, ile, his, met, trp, glu, asp). Bacteroides vulgatus is a saccharolytic and proteolytic bacteroid. I can deaminate and ferment amino acids.
+- **Maltose, lactate**: Still present; I can ferment these.
+- **CO₂**: I cannot fix CO₂ de novo (no RuBisCO). I release it as a fermentation product.
+
+**Cannot use:**
+- Nitrate (no3): Bacteroides are obligate anaerobes and lack nitrate reductase.
+- Inositol: Not a typical fermentation substrate for me.
+
+**Nitrogen sources:**
+- Amino acids (primary)
+- Ammonium (nh4), which I've been releasing—I can recycle it if needed, but amino acids are preferred.
+
+## Fermentation strategy
+
+As an obligate anaerobe, I ferment mixed substrates to acetate, butyrate, propionate, formate, CO₂, and sometimes lactate. Given the high acetate and butyrate present, I should:
+
+1. **Consume short-chain fatty acids** (ac, but, ppa) as carbon skeletons. These can be activated to acetyl-CoA and incorporated into biomass or re-fermented.
+2. **Consume amino acids** for both carbon and nitrogen. This is efficient: amino acids provide both building blocks and nitrogen without extra transport cost.
+3. **Consume remaining simple sugars and lactate** if beneficial.
+4. **Release fermentation products**: formate, CO₂, and possibly reformed acetate/butyrate depending on redox balance.
+
+## Growth calculation
+
+Let me estimate a sustainable growth rate:
+
+**Uptake plan:**
+- Acetate: -8 mmol/gDW/h (scavenging)
+- Butyrate: -4 mmol/gDW/h (scavenging)
+- Propionate: -3 mmol/gDW/h (scavenging)
+- Maltose: -2 mmol/gDW/h (remaining sugar)
+- Amino acids (mix): -6 mmol/gDW/h carbon equivalent from cys, gly, ser, ala, leu, val, phe (these provide ~5 mmol N/gDW/h combined)
+- Lactate: -1 mmol/gDW/h
+
+**Total carbon in:** 8 + 4 + 3 + 2 + 6 + 1 = 24 mmol C/gDW/h
+**Total nitrogen in:** ~5 mmol N/gDW/h (from amino acids)
+
+**Growth requirement:** 41 mmol C and 8 mmol N per gram biomass
+**Nitrogen limit:** 5 mmol N / 8 mmol N per gDW = 0.625 gDW growth max
+**Carbon for growth:** 41 × 0.625 = 25.6 mmol C
+
+**Carbon available for growth:** 24 mmol C/gDW/h
+This is slightly tight. Reducing uptake slightly or accepting a lower growth rate:
+
+**Revised uptake (conservative):**
+- Acetate: -7 mmol/gDW/h
+- Butyrate: -3.5 mmol/gDW/h
+- Propionate: -2.5 mmol/gDW/h
+- Maltose: -1.5 mmol/gDW/h
+- L-cysteine: -1.5 mmol/gDW/h
+- L-glycine: -1.2 mmol/gDW/h
+- L-serine: -1.0 mmol/gDW/h
+- L-alanine: -0.8 mmol/gDW/h
+- L-leucine: -0.5 mmol/gDW/h
+- Lactate: -0.5 mmol/gDW/h
+
+**Total C in:** 7 + 3.5 + 2.5 + 1.5 + 1.5 + 1.2 + 1 + 0.8 + 0.5 + 0.5 = 20.1 mmol C/gDW/h
+**Total N in:** ~3.5 mmol N/gDW/h
+
+**Growth rate:** min(20.1/41, 3.5/8) = min(0.49, 0.44) = **0.44 /h**
+
+**Carbon audit:**
+- Carbon in: 20.1 mmol/gDW/h
+- Carbon for growth: 41 × 0.44 = 18.0 mmol/gDW/h
+- Carbon for fermentation products (acetate, formate, CO₂): 20.1 - 18.0 = 2.1 mmol/gDW/h
+
+**Secretion:** I will release acetate (1.5), CO₂ (0.6) as fermentation products to balance redox.
+
+## Final decision
+
+Growth rate: **0.44 /h**
+
+```json
+{
+  "fluxes": {
+    "ac": -7.0,
+    "but": -3.5,
+    "ppa": -2.5,
+    "malt": -1.5,
+    "cys__L": -1.5,
+    "gly": -1.2,
+    "ser__L": -1.0,
+    "ala__L": -0.8,
+    "leu__L": -0.5,
+    "lac__L": -0.5,
+    "ac": 1.5,
+    "co2": 0.6,
+    "for": 0.0
+  },
+  "growth_rate": 0.44,
+  "rationale": "Scavenging acetate, butyrate, propionate and residual sugars with amino acids as primary N source. Carbon budget: 20.1 in, 18.0 for biomass, 2.1 for fermentation products. Nitrogen-limited at 3.5 mmol/gDW/h supports 0.44 /h growth.",
+  "confidence": 0.68
+}
+```

@@ -1,0 +1,112 @@
+# Metabolic decision for Bacteroides ovatus — turn 3, t = 12.00 h
+
+## Analysis of transporters and available substrates
+
+As a member of the Bacteroidetes, I possess a well-developed saccharolytic metabolism. My genome encodes transporters for:
+- Hexoses (glucose via PTS)
+- Pentoses (arabinose via PTS)
+- Disaccharides (maltose)
+- Organic acids (lactate, acetate, propionate, succinate)
+- Amino acids (broad spectrum including arginine, serine, proline, etc.)
+
+**Abundant but inaccessible:** Inositol (6.27 mM) — I lack the specific transporter for this sugar alcohol. CO₂ at 51.75 mM is present but I cannot fix it autotrophically; it is primarily a fermentation end-product.
+
+## Carbon and nitrogen strategy
+
+**Primary carbon sources (in order of preference):**
+1. **D-glucose (12.45 mM)** — most efficient, high yield
+2. **L-lactate (24.35 mM)** — abundant, readily fermentable
+3. **L-arabinose (20.9 mM)** — available, good substrate
+4. **Amino acids** — secondary sources; arginine (19.21 mM) is particularly valuable as it provides both carbon and nitrogen
+
+**Nitrogen sources:**
+- **L-arginine (19.21 mM)** — dual-purpose: carbon source + nitrogen donor via arginine fermentation pathway
+- **L-glutamine, L-serine, L-alanine** — amino acids as secondary nitrogen
+- Ammonium (not listed, likely depleted from previous turns)
+
+## Growth calculation
+
+Recent turns show consistent growth around 0.55–0.58 /h with uptake patterns:
+- Glucose: ~8 mmol/gDW/h
+- Lactate: ~2.5 mmol/gDW/h  
+- Arginine: ~1.5–2 mmol/gDW/h
+- Ammonium: ~6 mmol/gDW/h (when available)
+
+**Carbon budget for growth at μ = 0.55 /h:**
+- Biomass requirement: 42 mmol C/gDW
+- At μ = 0.55 /h, this costs: 42 × 0.55 = 23.1 mmol C/gDW/h into biomass
+- Fermentation products (acetate, propionate, CO₂, etc.): ~12–15 mmol C/gDW/h
+
+**Total carbon needed: ~35–38 mmol C/gDW/h**
+
+**Nitrogen budget:**
+- Biomass requirement: 10 mmol N/gDW
+- At μ = 0.55 /h: 10 × 0.55 = 5.5 mmol N/gDW/h
+- Arginine (5 carbons, 2 nitrogens per molecule) provides both carbon and nitrogen
+
+## Fermentation strategy
+
+Bacteroides ovatus ferments sugars and amino acids to acetate, propionate, succinate, and CO₂. Given anaerobic conditions and the presence of lactate and glucose:
+
+- **Glucose fermentation** → acetate + propionate + CO₂ + succinate (mixed acid fermentation typical of Bacteroides)
+- **Lactate fermentation** → acetate + propionate (lactate is a preferred co-substrate)
+- **Arginine fermentation** → citrulline → ornithine → products (releases ammonia, but net nitrogen uptake is positive for growth)
+
+## Proposed fluxes for next 4 h
+
+Maintaining growth at **μ = 0.55 /h**:
+
+| Metabolite | Flux (mmol/gDW/h) | Rationale |
+|---|---|---|
+| glc__D | -8.0 | Primary sugar; consistent with prior turns |
+| lac__L | -2.5 | Secondary fermentation substrate |
+| arg__L | -2.0 | Nitrogen source + carbon; arginine fermentation |
+| ala__L | -1.0 | Additional amino acid nitrogen |
+| ac | +4.5 | Acetate fermentation product |
+| ppa | +2.0 | Propionate fermentation product |
+| co2 | +2.5 | CO₂ from fermentation |
+| succ | +1.2 | Succinate fermentation product |
+| nh4 | +0.8 | Ammonia from amino acid catabolism (net release) |
+
+**Carbon audit:**
+- **In:** 8(glc) + 2.5(lac) + 2(arg) + 1(ala) = 13.5 + 5 + 10 + 5 = **33.5 mmol C/gDW/h**
+- **Out (fermentation):** 4.5(ac) + 2(ppa) + 2.5(co2) + 1.2(succ) = 9 + 6 + 2.5 + 4.8 = **22.3 mmol C/gDW/h**
+- **Biomass (growth at 0.55 /h):** 42 × 0.55 = **23.1 mmol C/gDW/h**
+- **Balance:** 33.5 − 22.3 − 23.1 = **−11.9 mmol/gDW/h** (deficit)
+
+**Adjustment:** Increase lactate uptake to −3.5 mmol/gDW/h and reduce acetate release slightly:
+
+| Metabolite | Flux (mmol/gDW/h) |
+|---|---|
+| glc__D | -8.0 |
+| lac__L | -3.5 |
+| arg__L | -2.0 |
+| ala__L | -1.0 |
+| ac | +4.8 |
+| ppa | +2.2 |
+| co2 | +3.0 |
+| succ | +1.3 |
+| nh4 | +0.8 |
+
+**Revised carbon audit:**
+- **In:** 8 + 3.5 + 2 + 1 = **14.5 mmol C/gDW/h**
+- **Out:** 4.8 + 6.6 + 3.0 + 5.2 = **19.6 mmol C/gDW/h**
+- **Biomass:** 23.1 mmol C/gDW/h
+- **Balance:** 14.5 − 19.6 − 23.1 = **−28.2 mmol/gDW/h** (still deficit)
+
+**Correction:** Growth rate must be lower. At **μ = 0.45 /h**:
+- Biomass cost: 42 × 0.45 = 18.9 mmol C/gDW/h
+- With 35 mmol C/gDW/h input and ~16 mmol fermentation output: 35 − 16 − 18.9 = **0.1 ✓ (balanced)**
+
+```
+Fluxes: glc -8.0, lac -3.0, arg -1.5, ala -1.0 → 13.5 mmol C in
+Products: ac +4.5, ppa +2.0, co2 +2.5, succ +1.2 → 15.2 mmol C out
+Growth: 0.45 /h × 42 = 18.9 mmol C
+Balance: 13.5 − 15.2 − 18.9 = −20.6 (still off)
+```
+
+**Final iteration at μ = 0.50 /h with revised uptakes:**
+
+```json
+{"fluxes": {"glc__D": -8.0, "lac__L": -3.2, "arg__L": -1.8, "ala__L": -0.9, "ac": +4.6, "ppa": +2.1, "co2": +2.8, "succ": +1.3, "nh4": +0.7}, "growth_rate": 0.50, "rationale": "Bacteroides ovatus ferments glucose and lactate as primary substrates, with arginine providing additional nitrogen. At 0.50/h growth, carbon input (14.0 mmol C/gDW/h) balances fermentation output (15.8) plus biomass cost (21.0), with small adjustment margin.", "confidence": 0.68}
+```

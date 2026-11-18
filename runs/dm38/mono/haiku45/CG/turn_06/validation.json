@@ -1,0 +1,55 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 6,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=100 out=170 biomass=10.3"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.312 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0785 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.3 -> 0",
+   "C: secretions scaled by 0.621"
+  ],
+  "rationale": "Stickland + sugar fermentation on abundant arabinose and limiting amino acids. Nitrogen constrains growth. Products: acetate, butyrate, CO\u2082, H\u2082, formate, NH\u2084\u207a. Carbon balance: 100.5 in, 10.2 growth, 9",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "arab__L": -8.0,
+   "ala__L": -4.0,
+   "phe__L": -2.0,
+   "leu__L": -2.0,
+   "glc__D": -1.5,
+   "lac__L": -1.5,
+   "val__L": -1.0,
+   "ac": 30.0,
+   "but": 20.0,
+   "co2": 25.0,
+   "h2": 10.0,
+   "for": 5.0,
+   "nh4": 6.0
+  },
+  "fluxes_applied": {
+   "arab__L": -8.0,
+   "ala__L": -4.0,
+   "phe__L": -2.0,
+   "leu__L": -2.0,
+   "glc__D": -1.5,
+   "lac__L": -1.5,
+   "val__L": -1.0,
+   "ac": 18.6221,
+   "but": 12.4147,
+   "co2": 15.5184,
+   "h2": 10.0,
+   "for": 3.1037,
+   "nh4": 6.0,
+   "pi": -0.3119,
+   "so4": -0.0785
+  }
+ }
+]

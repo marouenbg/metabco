@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": 1,
+  "ser__L": 0.5,
+  "pro__L": 0.5,
+  "but": 0.5,
+  "ac": 0.5,
+  "for": 0.5
+ },
+ "growth_rate": 0.214,
+ "rationale": "Taking up a mix of carbon and nitrogen sources to support growth.",
+ "confidence": 0.9
+}

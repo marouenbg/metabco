@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "inost": -5.0,
+  "cys__L": -1.0,
+  "ac": 2.5,
+  "lac__L": 1.5,
+  "h2": 0.5
+ },
+ "growth_rate": 0.375,
+ "rationale": "myo-inositol and L-cysteine uptake, acetate and lactate production",
+ "confidence": 0.8
+}

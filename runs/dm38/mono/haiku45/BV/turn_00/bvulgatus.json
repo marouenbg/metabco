@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -15.0,
+  "lac__L": -8.0,
+  "arg__L": -3.0,
+  "nh4": -2.0,
+  "ac": 7.0,
+  "but": 4.0,
+  "ppa": 2.0,
+  "co2": 5.0,
+  "h2": 1.5
+ },
+ "growth_rate": 0.55,
+ "rationale": "Bacteroides vulgatus ferments glucose and lactate as primary carbon sources under anaerobiosis. Glucose uptake (15 mmol/gDW/h) is preferred; lactate (8) provides secondary fermentation. Arginine (3) supplies both carbon and nitrogen. Ammonium (2) covers direct N assimilation. Growth at 0.55 /h is limited by nitrogen availability (5 mmol in vs. 8 mmol needed per g biomass). Fermentation yields acetate, butyrate, propionate, CO\u2082, and H\u2082. Carbon balance: 38 mmol in = 22.6 (growth) + 15.4 (products). Confidence high; strategy aligns with known Bacteroides metabolism in anaerobic batch culture.",
+ "confidence": 0.78
+}

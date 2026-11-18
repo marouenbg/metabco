@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "for": -12.0,
+  "arg__L": -1.5,
+  "inost": -2.0,
+  "nh4": -2.0,
+  "ac": 1.2,
+  "ppa": 1.2,
+  "but": 0.5,
+  "co2": 3.5
+ },
+ "growth_rate": 0.4,
+ "rationale": "In late stationary phase with 4 h remaining, I consume abundant formate and inositol as primary carbon sources, supplemented by arginine Stickland fermentation. Nitrogen is limiting; I take up ammonium and amino acid nitrogen. Fermentation products (acetate, propionate, butyrate, CO\u2082) are released to balance redox and pH. Growth is limited by nitrogen availability to ~0.40 /h.",
+ "confidence": 0.6
+}

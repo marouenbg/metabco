@@ -1,0 +1,96 @@
+# Metabolic reasoning for Eggerthella lenta DSM 2243 at turn 3
+
+## Carbon and nitrogen sources available and transportable
+
+**Eggerthella lenta** is a gram-positive anaerobe capable of fermenting carbohydrates and amino acids. My genome encodes:
+- **Carbohydrate transporters**: glucose (PTS), arabinose, maltose (likely PTS or permease systems)
+- **Organic acid transporters**: lactate (monocarboxylate transporter), acetate uptake/excretion
+- **Amino acid transporters**: broad specificity for L-amino acids (arginine, cysteine, serine, proline, alanine, phenylalanine, leucine, tyrosine, valine, lysine, threonine, isoleucine, histidine, methionine, tryptophan)
+- **Ammonia**: ammonium transporter (Amt)
+
+**Cannot transport efficiently** (or at all): CO₂ as a carbon source (I'm not autotrophic), formate (not a primary substrate for me—I produce it, not consume it preferentially), inositol, glutamate, aspartate (poor uptake), and trace vitamins.
+
+## Fermentation strategy and products
+
+At turn 2, I achieved 0.060 /h growth. This modest rate reflects the mixed substrate utilization: glucose fermentation coupled with amino acid catabolism. My typical fermentation products are:
+- **Acetate** (major end product of glucose fermentation)
+- **Formate** (from pyruvate decarboxylation)
+- **Lactate** (from pyruvate reduction; also consumed when acetyl-CoA is limiting)
+- **CO₂** (from decarboxylation reactions)
+- **Ammonia** (from amino acid deamination, released as NH₄⁺)
+
+## Current nutrient status and constraints
+
+- **Glucose** (24.8 mM): abundant, my preferred fermentable carbohydrate
+- **Lactate** (28.33 mM): still plentiful; I can ferment it further or produce it
+- **Amino acids**: substantial pool (arginine 21.72, arabinose 21.31, cysteine 8.375, serine 6.4, proline 5.9, etc.)
+- **Ammonium** (9.385 mM): moderate; sufficient for continued growth but not unlimited
+- **Phosphate, sulfate, minerals**: in excess
+
+## Growth rate calculation
+
+From turn 2, I grew at 0.060 /h on:
+- Glucose uptake: 6.00 mmol/gDW/h
+- Arginine uptake: 3.50 mmol/gDW/h
+- Cysteine uptake: 0.80 mmol/gDW/h
+- Ammonium uptake: 1.50 mmol/gDW/h
+
+**Carbon balance for 0.060 /h growth:**
+- Glucose (6 C per molecule): 6.00 × 6 = 36 mmol C/gDW/h
+- Arginine (6 C per molecule): 3.50 × 6 = 21 mmol C/gDW/h
+- Cysteine (3 C per molecule): 0.80 × 3 = 2.4 mmol C/gDW/h
+- **Total C in**: 59.4 mmol C/gDW/h
+
+**Carbon out (turn 2):**
+- Acetate (2 C): 8.00 × 2 = 16 mmol C/gDW/h
+- Formate (1 C): 4.50 × 1 = 4.5 mmol C/gDW/h
+- CO₂ (1 C): 3.50 × 1 = 3.5 mmol C/gDW/h
+- Lactate (3 C): 3.00 × 3 = 9 mmol C/gDW/h
+- **Total C out (products)**: 33 mmol C/gDW/h
+- **Biomass C cost** (0.060 /h × 33 mmol C/gDW): 1.98 mmol C/gDW/h
+- **Total C committed**: 33 + 1.98 = 34.98 mmol C/gDW/h
+
+This is sustainable (59.4 in >> 35 out). I can maintain or slightly increase growth.
+
+**Nitrogen balance:**
+- Ammonium uptake: 1.50 mmol/gDW/h
+- Arginine (1 N per molecule): 3.50 mmol N/gDW/h
+- Cysteine (1 N per molecule): 0.80 mmol N/gDW/h
+- **Total N in**: 5.8 mmol N/gDW/h
+- **Biomass N cost** (0.060 /h × 8 mmol N/gDW): 0.48 mmol N/gDW/h
+- **Available for excretion/retention**: 5.8 − 0.48 = 5.32 mmol N/gDW/h
+
+I will release excess ammonia from amino acid catabolism.
+
+## Strategy for turn 3
+
+I will **increase glucose and amino acid uptake** slightly to push growth toward 0.070–0.075 /h, given the abundant substrate pool and 36 hours remaining. Lactate is still high; I can use it as a secondary carbon source. I'll maintain fermentative metabolism with acetate, formate, and CO₂ as major products, and release ammonia from amino acid deamination.
+
+**Proposed fluxes:**
+- Glucose: −7.0 mmol/gDW/h (increase from 6.0)
+- Lactate: −2.0 mmol/gDW/h (secondary fermentation)
+- Arginine: −4.0 mmol/gDW/h (increase from 3.5)
+- Cysteine: −1.0 mmol/gDW/h (maintain)
+- Ammonium: −2.0 mmol/gDW/h (increase uptake for biosynthesis)
+- Acetate: +9.0 mmol/gDW/h (major fermentation product)
+- Formate: +5.0 mmol/gDW/h (secondary product)
+- CO₂: +4.0 mmol/gDW/h
+- Ammonia (nh4): +3.5 mmol/gDW/h (excess from amino acid catabolism)
+
+**Carbon audit:**
+- In: (7.0 × 6) + (2.0 × 3) + (4.0 × 6) + (1.0 × 3) = 42 + 6 + 24 + 3 = 75 mmol C/gDW/h
+- Out: (9.0 × 2) + (5.0 × 1) + (4.0 × 1) = 18 + 5 + 4 = 27 mmol C/gDW/h
+- Biomass cost (0.072 /h × 33): 2.376 mmol C/gDW/h
+- **Total committed**: 27 + 2.376 = 29.376 mmol C/gDW/h ✓ (75 >> 29.4)
+
+**Nitrogen audit:**
+- In: 2.0 (nh4) + 4.0 (arg) + 1.0 (cys) = 7.0 mmol N/gDW/h
+- Out: 3.5 (nh4) = 3.5 mmol N/gDW/h
+- Biomass cost (0.072 /h × 8): 0.576 mmol N/gDW/h
+- **Total committed**: 3.5 + 0.576 = 4.076 mmol N/gDW/h ✓ (7.0 > 4.1)
+
+**Growth rate**: 0.072 /h (sustainable given substrate availability and remaining time)
+
+```json
+{"fluxes": {"glc__D": -7.0, "lac__L": -2.0, "arg__L": -4.0, "cys__L": -1.0, "nh4": -2.0, "ac": 9.0, "for": 5.0, "co2": 4.0, "nh4": 3.5}, "growth_rate": 0.072, "rationale": "Eggerthella lenta ferments glucose and amino acids anaerobically. Increasing glucose and arginine uptake to sustain growth at 0.072 /h on abundant substrates. Major products are acetate, formate, and CO₂. Excess ammonia released from amino acid catabolism. Carbon and nitrogen budgets balance.", "confidence": 0.68}
+```

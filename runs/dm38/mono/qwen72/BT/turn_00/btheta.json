@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10,
+  "lac__L": -10,
+  "nh4": -2,
+  "ac": 5,
+  "but": 3,
+  "ppa": 1.75
+ },
+ "growth_rate": 0.25,
+ "rationale": "Taking up D-glucose and L-lactate for carbon, and ammonium for nitrogen. Producing acetate, butyrate, and propionate as fermentation products. Growth rate is limited by nitrogen uptake.",
+ "confidence": 0.9
+}

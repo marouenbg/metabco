@@ -1,0 +1,32 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 11,
+  "growth_claimed": 0.333,
+  "growth_allowed": 0.2028,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=2 out=0 biomass=3.45"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.417 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0872 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.333 -> 0.203"
+  ],
+  "rationale": "Utilizing abundant acetate and propionate, producing succinate as a fermentation product, and limiting growth rate based on carbon and nitrogen availability",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -12.0,
+   "pro__L": -2.0,
+   "succ": 5.0
+  },
+  "fluxes_applied": {
+   "ac": -12.0,
+   "pro__L": -2.0,
+   "succ": 5.0,
+   "pi": -0.4171,
+   "so4": -0.0872
+  }
+ }
+]

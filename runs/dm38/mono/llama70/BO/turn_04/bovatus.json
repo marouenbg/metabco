@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "arg__L": -5.0,
+  "ac": 5.0,
+  "ppa": 2.5,
+  "nh4": -2.5
+ },
+ "growth_rate": 0.55,
+ "rationale": "Prioritizing abundant carbon and nitrogen sources, producing known fermentation products, and ensuring carbon and nitrogen requirements are met.",
+ "confidence": 0.8
+}

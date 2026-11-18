@@ -1,0 +1,79 @@
+# Metabolic reasoning for Bacteroides fragilis at t=16h
+
+## Assessment of my transporters and available substrates
+
+I am a Gram-negative anaerobe specializing in polysaccharide and protein fermentation. My genome encodes:
+- **Glucose transporters**: I have relied on glucose (glc__D) for the first three turns, but it is now **completely depleted** (0 mM). This was my primary carbon source.
+- **Lactate transporters**: L-lactate (lac__L) is abundant at 17.35 mM. I can ferment lactate via lactate dehydrogenase and pyruvate metabolism.
+- **Arabinose transporters**: L-arabinose (arab__L) at 14.1 mM is available; I can metabolize pentose sugars.
+- **Amino acid transporters**: I have broad amino acid utilization, especially arginine (arg__L at 11.68 mM), cysteine (cys__L at 7.35 mM), and others.
+- **Formate**: Present at 11.95 mM; I can oxidize formate as an electron acceptor under anaerobic conditions.
+
+**Cannot use**: Maltose (malt) and myo-inositol (inost) — I lack the necessary transporters for these.
+
+## Fermentation strategy
+
+As a Bacteroides species, I ferment carbohydrates and amino acids to:
+- **Acetate** (primary product)
+- **Butyrate** (major product)
+- **Formate** (typical end product)
+- **CO₂** (from decarboxylation)
+- **Succinate** (minor, from amino acid catabolism)
+
+## Carbon and nitrogen balance calculation
+
+**Primary substrates chosen** (based on availability and my demonstrated use):
+- L-lactate: **-8.0 mmol/gDW/h** (abundant, high flux in turn 2–3)
+- L-arabinose: **-4.0 mmol/gDW/h** (pentose fermentation)
+- L-arginine: **-3.0 mmol/gDW/h** (protein substrate, provides N)
+- Ammonium: **-1.0 mmol/gDW/h** (supplemental N source)
+
+**Carbon audit:**
+- Lactate (C₃): 8 × 3 = 24 mmol C in
+- Arabinose (C₅): 4 × 5 = 20 mmol C in
+- Arginine (C₆, contributes C): 3 × 6 = 18 mmol C in
+- **Total C in: 62 mmol C/gDW/h**
+
+**Carbon out (products):**
+- Growth cost: 41 mmol C/gDW/h (at μ ≈ 0.40 /h)
+- Acetate secretion: +3.0 mmol/gDW/h (C₂: 6 mmol C)
+- Butyrate secretion: +2.5 mmol/gDW/h (C₄: 10 mmol C)
+- Formate secretion: +0.5 mmol/gDW/h (C₁: 0.5 mmol C)
+- CO₂ secretion: +2.0 mmol/gDW/h (C₁: 2 mmol C)
+- **Total C out: 41 + 6 + 10 + 0.5 + 2 = 59.5 mmol C/gDW/h** ✓ (balanced, slight surplus for redox)
+
+**Nitrogen audit:**
+- Arginine: 3 mmol N/gDW/h
+- Ammonium: 1 mmol N/gDW/h
+- **Total N in: 4 mmol N/gDW/h**
+- Growth cost: 8 mmol N/gDW/h at μ = 1.0 /h; at μ = 0.40 /h: 3.2 mmol N
+- **Net: 4 − 3.2 = 0.8 mmol N surplus** ✓
+
+## Growth rate derivation
+
+At this stage (16h), my growth is slowing as glucose is depleted. Lactate and arabinose fermentation support moderate growth. Based on substrate kinetics and my recent trajectory (0.42 → 0.40 /h), I estimate:
+
+**μ = 0.38 /h** (sustainable on lactate + arabinose + arginine mix)
+
+This is conservative, accounting for:
+- Depletion of preferred glucose
+- Shift to mixed fermentation
+- Increasing metabolic stress from accumulated fermentation products
+
+```json
+{
+  "fluxes": {
+    "lac__L": -8.0,
+    "arab__L": -4.0,
+    "arg__L": -3.0,
+    "nh4": -1.0,
+    "ac": 3.0,
+    "but": 2.5,
+    "for": 0.5,
+    "co2": 2.0
+  },
+  "growth_rate": 0.38,
+  "rationale": "Glucose exhausted; switching to lactate and arabinose fermentation with arginine as supplemental N and amino acid substrate. Fermentation yields acetate, butyrate, formate, and CO₂. Carbon and nitrogen budgets balance. Growth rate moderately reduced from glucose phase due to substrate shift and accumulated fermentation products.",
+  "confidence": 0.72
+}
+```

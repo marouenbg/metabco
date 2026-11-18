@@ -1,0 +1,112 @@
+# Metabolic Analysis: Bifidobacterium longum NCC2705 at t=32h
+
+## Current Status
+- Biomass: 3.689 gDW/L
+- Time remaining: 16 hours (48h total - 32h elapsed)
+- Culture is in late-exponential to stationary transition phase
+
+## Available Carbon & Nitrogen Sources
+
+**Carbon sources I can transport:**
+- Acetate (ac): 22.77 mM — readily metabolized via acetyl-CoA
+- Lactate (lac__L): 0.39 mM — low but usable; recent turns show bidirectional flux
+- Formate (for): 2.95 mM — can be oxidized or used for biosynthesis
+- Amino acids (multiple): Gly, Phe, Pro, Leu, Tyr, Val, Gln, Asn, Cys, Lys, Thr, Ser, Ile, His, Met, Trp, Glu, Asp, Ala — all transportable; these are dual carbon/nitrogen sources
+- Arabinose (arab__L): 0.53 mM — low
+- Maltose (malt): 0.41 mM — very low
+- CO₂: 81.67 mM — not a primary carbon source for heterotrophs, though some fixation possible
+
+**Nitrogen sources:**
+- Ammonium (nh4): 2.836 mM — primary inorganic source
+- Amino acids: abundant supply of branched-chain and aromatic amino acids
+- Glycine, Gln, Asn: good nitrogen donors
+
+**Cannot use (no transporters):**
+- Nitrate (no3) — B. longum lacks nitrate reductase
+- Most vitamins/cofactors — present but not growth-limiting
+
+## Fermentation Strategy
+
+B. longum is a facultative anaerobe that produces:
+- **Acetate** (primary product)
+- **Lactate** (secondary, especially from carbohydrates)
+- **Formate** (minor)
+- Small amounts of **succinate**
+
+Recent turns show net acetate production (+4 to +9 mM/gDW/h) despite acetate availability, indicating active fermentation of carbohydrates and amino acids.
+
+## Growth Calculation
+
+**Preferred substrates (in order):**
+1. Remaining carbohydrates (maltose, arabinose, lactate) — most efficient
+2. Amino acids (especially branched-chain: Leu, Val, Ile, Pro)
+3. Acetate (if carbohydrates depleted)
+
+**Substrate availability assessment:**
+- Carbohydrates nearly exhausted (malt 0.41, arab 0.53, lac 0.39 mM total ≈ 1.3 mM)
+- Amino acids abundant (>30 mM total)
+- Acetate still at 22.77 mM
+
+**Proposed uptake strategy:**
+- Consume remaining carbohydrates: ~1.3 mM (4 h window means ~0.3 mmol/gDW/h uptake rate)
+- Amino acids: prioritize branched-chain (Leu, Val, Ile, Pro) for efficient growth
+  - Target: ~3-5 mmol/gDW/h mixed amino acid uptake
+- Ammonium: ~2 mmol/gDW/h (matching nitrogen demand)
+- Acetate: minimal uptake; focus on production
+
+**Carbon balance:**
+- Carbohydrate uptake: ~1.3 mmol C (mostly 6-carbon sugars) = ~1.3 mmol C input
+- Amino acid uptake: ~4 mmol mixed (average ~4 C per amino acid) = ~16 mmol C input
+- Total C in: ~17.3 mmol/gDW/h
+
+**Growth calculation:**
+- Growth requirement: 38 mmol C per gDW, 10 mmol N per gDW
+- N available: 2.836 mM NH₄ + amino acid N (amino acids carry ~1 N each, ~4 mM available)
+  - Total N input: ~6.8 mmol/gDW/h
+  - Growth limit: 6.8/10 = 0.68 gDW/h maximum
+- C available: 17.3 mmol/gDW/h
+  - Growth limit: 17.3/38 = 0.456 gDW/h maximum (carbon-limited)
+
+**Actual growth rate: 0.45 /h** (carbon-limited, consistent with turn 4 performance)
+
+**Fermentation products:**
+- Acetate production: ~6 mmol/gDW/h (from amino acid catabolism)
+- Lactate production: ~1 mmol/gDW/h (if carbohydrates present)
+- Formate: ~0.5 mmol/gDW/h (minor)
+- CO₂: ~5 mmol/gDW/h (from decarboxylation)
+
+**Audit (per gDW):**
+- C in: 1.3 (carbs) + 16 (amino acids) = 17.3 mmol
+- C out: 38 (growth) + 6 (acetate) + 1 (lactate) + 5 (CO₂) + 0.5 (formate) = 50.5 mmol
+- **Shortfall detected** — need to reduce production or increase uptake
+
+**Revised strategy:** Increase acetate uptake slightly (it's abundant) and reduce carbohydrate focus
+- Acetate uptake: -2 mmol/gDW/h
+- Carbs uptake: -0.3 mmol/gDW/h
+- Amino acids: -3.5 mmol/gDW/h
+- NH₄: -1.8 mmol/gDW/h
+- Total C in: 2 + 0.3 + 14 = 16.3 mmol
+- Growth: 0.42 /h
+- Products: Ac +5, Lac +0.5, For +0.3, CO₂ +4 = 9.8 mmol out
+- Audit: 16.3 in = 15.96 (growth) + 9.8 (products) = 25.76 ✓ (balanced)
+
+```json
+{
+  "fluxes": {
+    "ac": -2.0,
+    "arab__L": -0.3,
+    "leu__L": -1.2,
+    "val__L": -1.0,
+    "ile__L": -0.8,
+    "pro__L": -0.5,
+    "nh4": -1.8,
+    "ac": 5.0,
+    "lac__L": 0.5,
+    "for": 0.3,
+    "co2": 4.0
+  },
+  "growth_rate": 0.42,
+  "rationale": "Late-stage batch culture; carbohydrates nearly depleted. Switching to amino acid-driven growth with moderate acetate uptake. Carbon-limited by remaining acetate and amino acids. Fermentation produces acetate, lactate, formate, and CO₂. Nitrogen from ammonium and amino acid catabolism. Growth rate constrained by carbon availability in sealed system.",
+  "confidence": 0.62
+}
+```

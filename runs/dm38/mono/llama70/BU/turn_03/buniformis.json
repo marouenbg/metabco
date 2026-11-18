@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arg__L": -2.0,
+  "ala__L": -1.5,
+  "ac": 5.0,
+  "ppa": 3.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "glucose and amino acid uptake support growth and fermentation product production",
+ "confidence": 0.8
+}

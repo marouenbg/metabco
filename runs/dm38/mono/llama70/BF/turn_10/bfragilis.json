@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "pro__L": -10.0,
+  "ser__L": -5.0,
+  "ac": 5.0,
+  "ppa": 3.0,
+  "but": 2.0
+ },
+ "growth_rate": 0.244,
+ "rationale": "Utilizing available amino acids and producing short-chain fatty acids",
+ "confidence": 0.8
+}

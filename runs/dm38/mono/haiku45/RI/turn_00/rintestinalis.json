@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -10.0,
+  "nh4": -4.0,
+  "but": 0.8,
+  "ac": 0.5,
+  "for": 0.3,
+  "co2": 0.4,
+  "h2": 0.2
+ },
+ "growth_rate": 0.37,
+ "rationale": "Roseburia intestinalis ferments glucose and lactate (both abundant) to butyrate as primary product, with acetate and formate as minor byproducts. Ammonium supports growth. Carbon and nitrogen budgets balance; growth rate limited by nitrogen availability at current uptake rates.",
+ "confidence": 0.72
+}

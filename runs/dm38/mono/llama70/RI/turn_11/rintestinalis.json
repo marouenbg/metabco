@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "but": -10.0,
+  "phe__L": -2.0,
+  "ac": 3.0,
+  "for": 2.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Butyrate and L-phenylalanine uptake support growth and fermentation product production",
+ "confidence": 0.8
+}

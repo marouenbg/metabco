@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "ac": 5.0,
+  "h2s": 10.0,
+  "co2": 10.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "I am taking up lactate and ammonia as carbon and nitrogen sources, respectively. I am releasing acetate, hydrogen sulfide, and carbon dioxide as fermentation products. I am producing biomass at a rate of 0.4/h.",
+ "confidence": 0.8
+}

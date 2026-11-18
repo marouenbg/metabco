@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 7,
+  "growth_claimed": 0.7,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=30.5 out=34 biomass=20.7"
+  ],
+  "warnings": [],
+  "repairs": [
+   "C: growth 0.7 -> 0",
+   "C: secretions scaled by 0.942"
+  ],
+  "rationale": "Prioritizing acetate and butyrate uptake, utilizing L-cysteine and L-serine as nitrogen sources, and producing butyrate and carbon dioxide as fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "but": 8.0,
+   "cys__L": -2.0,
+   "ser__L": -1.5,
+   "co2": 2.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "but": 7.5353,
+   "cys__L": -2.0,
+   "ser__L": -1.5,
+   "co2": 1.8838
+  }
+ }
+]

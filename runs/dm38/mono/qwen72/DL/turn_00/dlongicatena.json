@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -20.0,
+  "nh4": -5.0,
+  "ac": 10.0,
+  "but": 10.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.633,
+ "rationale": "Utilizing lactate as the primary carbon source and ammonium as the nitrogen source to produce acetate, butyrate, and hydrogen. The growth rate is derived from the carbon and nitrogen balance.",
+ "confidence": 0.9
+}

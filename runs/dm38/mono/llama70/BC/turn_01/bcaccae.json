@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "ac": 2.0,
+  "ppa": 2.0,
+  "but": 2.0
+ },
+ "growth_rate": 0.9,
+ "rationale": "Lactate fermentation with acetate, propionate, and butyrate production",
+ "confidence": 0.85
+}

@@ -1,0 +1,33 @@
+{
+ "fluxes": {
+  "co2": 10.0,
+  "lac__L": 0.0,
+  "nh4": 5.0,
+  "h2s": 10.0,
+  "so4": -10.07,
+  "cys__L": 0.0,
+  "ser__L": 0.0,
+  "pro__L": 0.0,
+  "ala__L": 0.0,
+  "gly": 0.0,
+  "phe__L": 0.0,
+  "malt": 0.0,
+  "leu__L": 0.0,
+  "tyr__L": 0.0,
+  "val__L": 0.0,
+  "gln__L": 0.0,
+  "asn__L": 0.0,
+  "lys__L": 0.0,
+  "thr__L": 0.0,
+  "h2": 0.0,
+  "for": 0.0,
+  "ac": 0.0,
+  "met__L": 0.0,
+  "trp__L": 0.0,
+  "glu__L": 0.0,
+  "cbl1": 0.0
+ },
+ "growth_rate": 0.55,
+ "rationale": "Prioritizing sulfate utilization and hydrogen sulfide production, taking up carbon dioxide and ammonium for growth.",
+ "confidence": 0.8
+}

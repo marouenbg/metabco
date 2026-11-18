@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -14.96,
+  "glc__D": -6.49,
+  "arg__L": -1.56,
+  "ser__L": -0.97,
+  "ac": 2.28,
+  "for": 0.9,
+  "etoh": 0.7
+ },
+ "growth_rate": 0.8,
+ "rationale": "Utilizing available lactate and glucose for growth, and releasing butyrate, formate, and ethanol as typical fermentation products.",
+ "confidence": 0.9
+}

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "arab__L": -6.0,
+  "ac": 3.5,
+  "arg__L": -2.5,
+  "cys__L": -1.0,
+  "for": 2.0,
+  "co2": 3.0,
+  "nh4": 5.0
+ },
+ "growth_rate": 0.35,
+ "rationale": "Arabinose fermentation as primary pathway with acetate as secondary carbon source. Arginine and cysteine for nitrogen. Fermentation yields acetate, formate, CO2, and ammonia. Carbon and nitrogen balanced; realistic growth given substrate transition.",
+ "confidence": 0.72
+}

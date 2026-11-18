@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -6.0,
+  "arg__L": -5.0,
+  "nh4": -3.0,
+  "cys__L": -2.0,
+  "ac": 6.5,
+  "but": 5.5,
+  "for": 2.0,
+  "co2": 8.0,
+  "pi": -0.4,
+  "so4": -0.12
+ },
+ "growth_rate": 0.3,
+ "rationale": "Resuming growth after turn 2 stasis. Lactate and glucose are abundant primary carbons; arginine and cysteine provide nitrogen and sulfur. Mixed-acid fermentation produces acetate, butyrate, formate, and CO\u2082. Carbon audit: 10\u00d73 (lactate) + 6\u00d76 (glucose) + 5\u00d76 (arginine) + 2\u00d73 (cysteine) = 97 mmol C in; growth at 0.30/h costs 30 mmol C + 9 mmol net C in products (6.5 + 5.5 + 2.0 + 8.0 \u2212 recycled) = 47 mmol C out; balance feasible. Nitrogen: 3 (NH\u2084) + 5 (Arg) + 2 (Cys) = 10 mmol N in; growth costs 8 mmol N; adequate.",
+ "confidence": 0.62
+}

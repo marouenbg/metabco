@@ -1,0 +1,12 @@
+{
+ "model": "claude-haiku-4-5-20251001",
+ "spec": "anthropic:claude-haiku-4-5-20251001",
+ "temperature": 0.7,
+ "cached": true,
+ "usage": {
+  "input_tokens": 1737,
+  "output_tokens": 1476,
+  "total_tokens": 3213
+ },
+ "latency_ms": 0.0
+}

@@ -1,0 +1,88 @@
+# Metabolic reasoning for Anaerostipes caccae DSM 14662, turn 1 (t=4h)
+
+## Assessment of transporters and carbon sources
+
+*Anaerostipes caccae* is a strict anaerobe and butyrate producer, a member of Clostridium cluster IV. My genome encodes:
+- Hexose transporters (PTS or permeases): glucose, arabinose, maltose ✓
+- Lactate permease: L-lactate ✓
+- Amino acid transporters: arginine, serine, cysteine, proline, and other amino acids ✓
+- No known transporter for myo-inositol (this is typically not a primary substrate for *Anaerostipes*)
+
+The most abundant fermentable carbon sources available are:
+- **D-glucose (24.62 mM)**: excellent substrate, readily fermented
+- **L-lactate (28.33 mM)**: excellent substrate, co-fermented with glucose
+- **L-arabinose (21.2 mM)**: fermentable pentose
+- **Maltose (4.334 mM)**: fermentable disaccharide
+
+## Known fermentation metabolism
+
+*Anaerostipes caccae* ferments carbohydrates and amino acids to **butyrate** (primary), **acetate**, and **formate**, with trace **H₂**. This is consistent with my turn 0 output. The Stickland reaction also occurs with amino acid pairs (e.g., arginine + serine). My turn 0 behavior shows:
+- Glucose uptake: -15 mmol/gDW/h
+- Butyrate production: +8.5 mmol/gDW/h
+- Acetate: +6.0 mmol/gDW/h
+- Formate: +2.5 mmol/gDW/h
+
+## Nitrogen sources
+
+Available nitrogen: NH₄⁺ (9.3 mM), amino acids (arginine 21.7 mM, cysteine 8.4 mM, serine 6.4 mM, proline 5.9 mM, etc.). My turn 0 shows arginine uptake (-3 mmol/gDW/h), which can support both nitrogen assimilation and Stickland fermentation.
+
+## Growth rate calculation
+
+From turn 0, I achieved 0.480 /h growth. The biomass cost is ~38 mmol C and ~10 mmol N per gram dry weight produced.
+
+**Turn 0 carbon balance check:**
+- Glucose in: 15 mmol C (15 × 6 C/mol)
+- Arabinose in: 5 mmol C (5 × 5 C/mol)  
+- Maltose in: 2 mmol C (2 × 12 C/mol)
+- **Total C in: 90 + 25 + 24 = 139 mmol C/gDW**
+
+- Butyrate out: 8.5 × 4 = 34 mmol C
+- Acetate out: 6.0 × 2 = 12 mmol C
+- Formate out: 2.5 × 1 = 2.5 mmol C
+- **Total C out (products): 48.5 mmol C/gDW**
+- **Biomass C cost: 0.480 × 38 = 18.24 mmol C/gDW**
+- **Total C out (products + growth): ~66.74 mmol C/gDW**
+
+This is well within the 139 mmol available, so 0.480 /h is sustainable.
+
+## Turn 1 strategy
+
+Substrate availability is still abundant. I will maintain a similar strategy but optimize slightly:
+- **Glucose**: continue high uptake (~14 mmol/gDW/h), as it's the preferred substrate
+- **Lactate**: modest uptake (~3 mmol/gDW/h) to diversify and support Stickland
+- **Arginine**: uptake (~2.5 mmol/gDW/h) for nitrogen and Stickland fermentation with serine
+- **Serine**: uptake (~1.5 mmol/gDW/h) for Stickland with arginine
+- **NH₄⁺**: minimal uptake (~0.5 mmol/gDW/h) as amino acids provide most N
+
+**Fermentation products** (same as turn 0):
+- Butyrate: ~8 mmol/gDW/h
+- Acetate: ~5.5 mmol/gDW/h
+- Formate: ~2.0 mmol/gDW/h
+- CO₂: ~1.0 mmol/gDW/h (minor)
+
+**Growth rate**: Maintain ~0.45 /h (slightly conservative given substrate depletion over 48 h).
+
+**Carbon audit:**
+- In: (14×6) + (3×3) + (2.5×7) + (1.5×3) = 84 + 9 + 17.5 + 4.5 = 115 mmol C/gDW
+- Out (products): 8×4 + 5.5×2 + 2×1 = 32 + 11 + 2 = 45 mmol C/gDW
+- Biomass: 0.45 × 38 = 17.1 mmol C/gDW
+- **Total out: 62.1 mmol C/gDW < 115 mmol C/gDW ✓**
+
+```json
+{
+  "fluxes": {
+    "glc__D": -14.0,
+    "lac__L": -3.0,
+    "arg__L": -2.5,
+    "ser__L": -1.5,
+    "nh4": -0.5,
+    "but": 8.0,
+    "ac": 5.5,
+    "for": 2.0,
+    "co2": 1.0
+  },
+  "growth_rate": 0.45,
+  "rationale": "Glucose and lactate fermentation with amino acid Stickland reactions (arginine + serine). Butyrate is the primary fermentation end product. Nitrogen from amino acids and trace ammonium. Carbon balance verified: 115 mmol C in supports 45 mmol products + 17.1 mmol biomass.",
+  "confidence": 0.78
+}
+```

@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -15.0,
+  "lac__L": -8.0,
+  "arg__L": -3.0,
+  "nh4": -2.5,
+  "ac": 45.0,
+  "for": 25.0,
+  "co2": 40.0,
+  "h2": 2.0,
+  "pi": -0.41
+ },
+ "growth_rate": 0.45,
+ "rationale": "Homoacetogenic fermentation of glucose and lactate with amino acid co-catabolism. Acetate is the major product. Carbon and nitrogen budgets balance. Nutrients remain abundant; growth rate sustained from turn 3.",
+ "confidence": 0.78
+}

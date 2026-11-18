@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "co2": 5.0,
+  "lac__L": 15.0,
+  "nh4": 0.5,
+  "lac__D": 0.0,
+  "glc__D": 0.0,
+  "for": 5.0,
+  "ac": 0.5
+ },
+ "growth_rate": 0.083,
+ "rationale": "Based on nutrient availability and transport capabilities, I can take up CO2, lactate, and ammonium to support growth and fermentation.",
+ "confidence": 0.8
+}

@@ -1,0 +1,59 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 11,
+  "growth_claimed": 0.42,
+  "growth_allowed": 0.3717,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: arab__L",
+   "uptake_exceeds_pool: gly",
+   "uptake_exceeds_pool: leu__L",
+   "uptake_exceeds_pool: val__L",
+   "c_imbalance: in=37.6 out=28.5 biomass=12.4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake arab__L to pool limit -2.95",
+   "clipped uptake gly to pool limit -1.13",
+   "clipped uptake leu__L to pool limit -0.573",
+   "clipped uptake val__L to pool limit -0.167",
+   "P: credited 0.282 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.108 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 0.226 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.42 -> 0.372"
+  ],
+  "rationale": "Late-stage batch culture (44/48 h). Fermenting remaining carbohydrates (arabinose) and amino acids (Gly, Leu, Val, Pro, Asn, Gln) via mixed-acid fermentation. Producing butyrate and acetate in charact",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "arab__L": -6.0,
+   "gly": -1.5,
+   "leu__L": -1.2,
+   "val__L": -0.8,
+   "pro__L": -1.0,
+   "asn__L": -1.2,
+   "gln__L": -1.3,
+   "ac": 2.2,
+   "nh4": 5.0,
+   "but": 4.5,
+   "co2": 5.5,
+   "for": 0.6
+  },
+  "fluxes_applied": {
+   "arab__L": -2.9509,
+   "gly": -1.1311,
+   "leu__L": -0.5732,
+   "val__L": -0.1674,
+   "pro__L": -1.0,
+   "asn__L": -1.2,
+   "gln__L": -1.3,
+   "ac": 2.2,
+   "nh4": 4.7743,
+   "but": 4.5,
+   "co2": 5.5,
+   "for": 0.6,
+   "pi": -0.2823,
+   "so4": -0.1084
+  }
+ }
+]

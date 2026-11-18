@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -6.3,
+  "ac": 3.0,
+  "but": 2.0,
+  "ppa": 1.0,
+  "for": 0.3,
+  "nh4": -1.5
+ },
+ "growth_rate": 0.15,
+ "rationale": "Utilize D-glucose and ammonium for growth, producing acetate, butyrate, propionate, and formate as fermentation products.",
+ "confidence": 0.9
+}

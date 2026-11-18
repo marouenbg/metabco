@@ -1,0 +1,92 @@
+# Reasoning through my metabolic state
+
+## Current situation
+At turn 10 (t=40h), I am Bacteroides fragilis with 3.4 gDW/L biomass in a sealed anaerobic batch culture. I've been growing modestly (0.22-0.25 /h recently) but resources are becoming constrained after 40 hours of 48-hour total culture.
+
+## Carbon and nitrogen sources available
+
+**Primary carbon sources I can use:**
+- **Acetate (ac)**: 25.2 mM — I have acetyl-CoA synthetase; this is a standard substrate
+- **Butyrate (but)**: 31.93 mM — I can activate via butyryl-CoA synthetase; excellent energy source
+- **Formate (for)**: 23.35 mM — formate dehydrogenase pathway available
+- **CO₂**: 92.87 mM — mostly for carboxylation reactions, limited as sole carbon source anaerobically
+- **Amino acids** (tyr, lys, phe, thr, ile, val, cys, his, gly, met, asn, trp, glu, leu, ser, asp, gln): I can catabolize these via Stickland reactions and transamination. However, these are present in low concentrations (0.4–3.2 mM) and are better reserved for biosynthesis since they contain both carbon and nitrogen.
+- **Succinate**: 0.626 mM — limited; can be used but scarce
+- **Propionate (ppa)**: 0.068 mM — too low to rely on
+
+**Nitrogen sources:**
+- Amino acids (can be deaminated for both C and N)
+- Ammonium (nh4) — not currently listed as present; I've been generating it from amino acid catabolism
+- Nitrate (no3): 0.1093 mM — I lack nitrate reductase for anaerobic nitrate reduction
+
+## Fermentation products I produce
+Bacteroides fragilis is a strict anaerobe that ferments sugars and amino acids via the Embden-Meyerhof pathway and Stickland reactions, producing:
+- **Acetate** (major)
+- **Butyrate** (major)
+- **Propionate** (minor)
+- **Formate** (from pyruvate)
+- **CO₂** (from decarboxylation)
+- **H₂** (minor, from pyruvate formate-lyase)
+- **Succinate** (minor)
+
+## Strategy at turn 10
+
+I've already consumed most easily-fermentable carbohydrates (they were depleted earlier). Now I'm in the **late stationary phase** of a 48-hour batch culture, at 40 hours in.
+
+**Remaining strategy:**
+1. Continue catabolizing the abundant short-chain fatty acids (acetate, butyrate, formate) — these are products of earlier fermentation that I can re-oxidize or use for gluconeogenesis and biosynthesis
+2. Use amino acids selectively for nitrogen and carbon, not wastefully
+3. Reduce growth rate as nutrient availability declines
+
+**Growth calculation:**
+- Butyrate (31.93 mM) is the most abundant usable carbon source
+- At modest uptake of butyrate (~8 mmol/gDW/h) + acetate (~4 mmol/gDW/h) + formate (~3 mmol/gDW/h), I can acquire ~15 mmol C/gDW/h
+- Growth requires ~41 mmol C/gDW/h, so at 15 mmol C/gDW/h input, I can support growth of roughly: 15/41 ≈ **0.37 /h** if nitrogen is not limiting
+- Nitrogen: I'll take up glycine, cysteine, and other amino acids (~3–4 mmol N/gDW/h total from mixed uptake). This is ~8 mmol N/gDW/h requirement ÷ 4 uptake ≈ **0.18 /h** nitrogen-limited
+- **Realistic growth rate: ~0.18–0.22 /h**, limited by nitrogen availability
+
+## Flux audit (for growth_rate = 0.20 /h)
+
+**Carbon in:**
+- Acetate: -5 mmol/gDW/h → 5 C
+- Butyrate: -8 mmol/gDW/h → 32 C
+- Formate: -3 mmol/gDW/h → 3 C
+- Glycine: -1.5 mmol/gDW/h → 1.5 C
+- Cysteine: -0.8 mmol/gDW/h → 0.8 C
+- **Total C in: 42.3 mmol C/gDW/h**
+
+**Carbon out:**
+- Growth at 0.20 /h: 41 × 0.20 = 8.2 mmol C/gDW/h (into biomass)
+- Fermentation products (butyrate, acetate, CO₂, etc.): ~34.1 mmol C/gDW/h
+- **Total C out: 42.3 mmol C/gDW/h** ✓ Balanced
+
+**Nitrogen in:**
+- Glycine: -1.5 mmol/gDW/h → 1.5 N
+- Cysteine: -0.8 mmol/gDW/h → 0.8 N
+- Aspartate: -0.4 mmol/gDW/h → 0.4 N
+- **Total N in: 2.7 mmol N/gDW/h**
+
+**Nitrogen out:**
+- Growth at 0.20 /h: 8 × 0.20 = 1.6 mmol N/gDW/h
+- Ammonium release: 2.7 - 1.6 = 1.1 mmol N/gDW/h (as NH₄⁺)
+- **Total N out: 2.7 mmol N/gDW/h** ✓ Balanced
+
+This is sustainable and realistic for late stationary phase.
+
+```json
+{
+  "fluxes": {
+    "ac": -5.0,
+    "but": -8.0,
+    "for": -3.0,
+    "gly": -1.5,
+    "cys__L": -0.8,
+    "asp__L": -0.4,
+    "nh4": 1.1,
+    "co2": 2.5
+  },
+  "growth_rate": 0.20,
+  "rationale": "Late stationary phase (40/48 h). Nitrogen is limiting; I'm catabolizing abundant butyrate, acetate, and formate while carefully consuming amino acids for both C and N. Modest growth of 0.20/h is sustainable given amino acid scarcity. Carbon and nitrogen budgets balance.",
+  "confidence": 0.72
+}
+```

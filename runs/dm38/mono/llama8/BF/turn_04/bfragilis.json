@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": 4.0,
+  "arg__L": 2.8,
+  "ac": 1.5,
+  "but": 1.0,
+  "for": 0.5,
+  "h2": 0.5
+ },
+ "growth_rate": 0.022,
+ "rationale": "I'm taking up lactate and arginine at rates that support a growth rate of 0.022/h, and releasing acetate, butyrate, formate, and hydrogen gas as fermentation products. I'm confident in this decision, with a confidence level of 0.97.",
+ "confidence": 0.97
+}

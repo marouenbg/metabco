@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "but": -10.0,
+  "ala__L": -10.0
+ },
+ "growth_rate": 0.476,
+ "confidence": 0.9,
+ "rationale": "Utilizing abundant acetate and butyrate for carbon and L-alanine for nitrogen to support growth. No fermentation products released to maximize carbon retention."
+}

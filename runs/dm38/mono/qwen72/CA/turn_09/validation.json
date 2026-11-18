@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 9,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.0241,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=4 out=4 biomass=1.25"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.101 mmol/gDW/h of pi (declared present in excess)",
+   "N: growth 0.15 -> 0.0241"
+  ],
+  "rationale": "Utilizing abundant acetate and formate for carbon, and L-cysteine and L-serine for nitrogen, while producing butyrate and formate to support moderate growth.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "for": 3.0,
+   "but": 4.0,
+   "cys__L": -2.0,
+   "ser__L": -2.0,
+   "nh4": 4.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "for": 3.0,
+   "but": 4.0,
+   "cys__L": -2.0,
+   "ser__L": -2.0,
+   "nh4": 4.0,
+   "pi": -0.1014
+  }
+ }
+]

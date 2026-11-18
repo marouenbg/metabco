@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 0,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.35,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.46 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.517 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "D. piger oxidizes lactate coupled to sulfate reduction as primary metabolism. Lactate (10 mmol/gDW/h) and amino acid uptake (2.3 mmol N/gDW/h) support growth limited by nitrogen availability at 0.35 /",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "nh4": -2.0,
+   "gly": -0.8,
+   "ala__L": -0.6,
+   "ser__L": -0.5,
+   "so4": -1.5,
+   "co2": 8.0,
+   "h2s": 2.0,
+   "ac": 3.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "nh4": -2.0,
+   "gly": -0.8,
+   "ala__L": -0.6,
+   "ser__L": -0.5,
+   "so4": -2.0166,
+   "co2": 8.0,
+   "h2s": 2.0,
+   "ac": 3.0,
+   "pi": -0.4596
+  }
+ }
+]

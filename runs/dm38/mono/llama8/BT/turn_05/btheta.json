@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -4.17,
+  "arg__L": -0.5,
+  "pi": -0.09
+ },
+ "growth_rate": 0.15,
+ "rationale": "Utilizing D-glucose and Ammonium to meet energy and nitrogen requirements. Producing acetate, butyrate, and propionate as fermentation products.",
+ "confidence": 0.9
+}

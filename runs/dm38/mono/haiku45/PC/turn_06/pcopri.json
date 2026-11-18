@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ac": -12.0,
+  "ppa": -8.0,
+  "for": 1.5,
+  "co2": 3.0,
+  "gln__L": -3.0,
+  "ser__L": -2.0,
+  "ala__L": -1.5,
+  "gly": -1.2,
+  "cys__L": -1.0,
+  "nh4": -0.75
+ },
+ "growth_rate": 0.311,
+ "rationale": "Nitrogen-limited recovery: deaminating amino acids (Gln, Ser, Ala, Gly, Cys) to recover 12.45 mmol N/gDW/h, supporting growth of 0.311 /h. Fermenting acetate and propionate (abundant, 109.77 mM combined) with amino acid catabolism. Carbon balance: 78.9 in, 56 biomass + 22.5 fermentation products. Realistic for anaerobic Prevotella.",
+ "confidence": 0.72
+}

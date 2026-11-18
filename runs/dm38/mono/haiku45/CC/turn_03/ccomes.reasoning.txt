@@ -1,0 +1,80 @@
+# Metabolic decision for Coprococcus comes ATCC 27758, turn 3
+
+## Analysis of my transportome and substrate availability
+
+**Carbon sources I can utilize:**
+- L-lactate: abundant (26.38 mM), I have lactate transporters and can ferment it
+- D-glucose: abundant (23.79 mM), I have hexose transporters
+- L-arabinose: present (21.31 mM), I have pentose transporters
+- Maltose: present (4.382 mM), I have maltose transporters
+- Short-chain fatty acids (acetate, butyrate): present but modest amounts; I can oxidize these
+
+**Carbon sources I likely cannot use efficiently:**
+- Most amino acids require specific transporters; while I can catabolize some, uptake may be limited
+- myo-inositol: I lack the transport and fermentation pathways for this
+
+**Nitrogen sources:**
+- Ammonium (nh4): 8.954 mM, directly assimilable
+- L-arginine: 21.24 mM, I can transport and use
+- L-cysteine: 8.4 mM, usable for sulfur and nitrogen
+- Other amino acids: variable utility depending on my transportome
+
+## Recent metabolic history
+Turns 0–1 showed strong growth (0.7 /h initially), then growth stopped despite continued substrate availability. Turn 2 shows zero growth and no reported fluxes. This suggests I may have encountered:
+- Accumulation of fermentation products inhibiting further growth
+- Depletion of a critical cofactor or micronutrient
+- pH drift or redox stress
+
+The vessel is sealed and anaerobic. At turn 3 (t=12 h), I should resume growth if conditions allow.
+
+## Growth strategy for turn 3
+
+Given the sealed system and my fermentative metabolism, I should:
+1. **Consume lactate and glucose** — my preferred substrates, abundant and well-metabolized
+2. **Use ammonium and arginine** for nitrogen
+3. **Produce short-chain fatty acids** (acetate, butyrate, propionate) as fermentation end products
+4. **Grow at a modest rate** — the system is anaerobic and batch; I cannot sustain 0.7 /h indefinitely
+
+**Growth rate calculation:**
+- Lactate uptake: ~10 mmol/gDW/h (conservative, as I've slowed)
+- Glucose uptake: ~6 mmol/gDW/h (secondary carbon)
+- Arginine uptake: ~3 mmol/gDW/h (nitrogen source and carbon)
+- Ammonium uptake: ~2 mmol/gDW/h (supplemental nitrogen)
+
+**Carbon balance for growth at μ = 0.35 /h:**
+- Uptake: 10 (lactate, 3C) + 6 (glucose, 6C) + 3 (arginine, 6C) = ~37 mmol C/gDW/h
+- Growth cost: 30 mmol C/gDW/h
+- Available for fermentation products: ~7 mmol C/gDW/h
+- Fermentation: acetate + butyrate + CO₂ (typical mixed-acid fermentation)
+
+**Nitrogen balance:**
+- Uptake: 2 (ammonium) + 3 (arginine) = ~5 mmol N/gDW/h
+- Growth cost: 8 mmol N/gDW/h (deficit!)
+
+This is tight. Let me increase arginine uptake to 5 mmol/gDW/h and ammonium to 3 mmol/gDW/h, supporting growth at ~0.30 /h.
+
+**Fermentation products:**
+Coprococcus typically produces acetate and butyrate via mixed-acid fermentation. At this reduced rate, I'll release acetate and butyrate in roughly a 1:1 molar ratio, with some CO₂ and formate.
+
+---
+
+```json
+{
+  "fluxes": {
+    "lac__L": -10.0,
+    "glc__D": -6.0,
+    "arg__L": -5.0,
+    "nh4": -3.0,
+    "cys__L": -2.0,
+    "ac": 6.5,
+    "but": 5.5,
+    "for": 2.0,
+    "co2": 8.0,
+    "pi": -0.40,
+    "so4": -0.12
+  },
+  "growth_rate": 0.30,
+  "rationale": "Resuming growth after turn 2 stasis. Lactate and glucose are abundant primary carbons; arginine and cysteine provide nitrogen and sulfur. Mixed-acid fermentation produces acetate, butyrate, formate, and CO₂. Carbon audit: 10×3 (lactate) + 6×6 (glucose) + 5×6 (arginine) + 2×3 (cysteine) = 97 mmol C in; growth at 0.30/h costs 30 mmol C + 9 mmol net C in products (6.5 + 5.5 + 2.0 + 8.0 − recycled) = 47 mmol C out; balance feasible. Nitrogen: 3 (NH₄) + 5 (Arg) + 2 (Cys) = 10 mmol N in; growth costs 8 mmol N; adequate.",
+  "confidence": 0.62
+}
+```

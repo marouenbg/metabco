@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -5.0,
+  "nh4": -3.5,
+  "but": 7.0,
+  "co2": 1.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Balanced carbon and nitrogen uptake for growth and butyrate production",
+ "confidence": 0.8
+}

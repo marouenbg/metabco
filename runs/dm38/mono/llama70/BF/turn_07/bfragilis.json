@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "arg__L": -2.0,
+  "but": 2.0,
+  "ppa": 1.0
+ },
+ "growth_rate": 0.268,
+ "rationale": "acetate and arginine uptake support growth and fermentation product production",
+ "confidence": 0.8
+}

@@ -1,0 +1,102 @@
+# Metabolic decision for Bifidobacterium adolescentis, turn 1
+
+## Analysis
+
+### Carbon and nitrogen sources available
+
+**Primary carbon sources I can transport:**
+- D-glucose (glc__D): 24.85 mM — I have PTS and other glucose transporters
+- L-lactate (lac__L): 28.46 mM — I encode lactate permeases
+- L-arabinose (arab__L): 21.31 mM — I can ferment pentoses
+- Maltose (malt): 4.382 mM — maltose transporter present
+- myo-inositol (inost): 6.272 mM — I can catabolize this
+
+**Abundant but inaccessible carbon:**
+- Acetate (ac): 0.2546 mM — I lack acetyl-CoA synthetase under these anaerobic conditions; minimal uptake
+- L-arginine (arg__L): I can degrade this, but it's primarily a nitrogen source
+
+**Nitrogen sources:**
+- Ammonium (nh4): 9.304 mM — direct uptake
+- L-arginine (arg__L): 21.79 mM — I can catabolize this for both C and N
+- L-cysteine (cys__L): 8.4 mM — can use for N and S
+- Other amino acids present but lower priority
+
+### Known fermentation strategy
+
+Bifidobacterium adolescentis is a saccharolytic anaerobe. My primary metabolism is:
+- **Fructose-6-phosphate shunt (bifid shunt)**: glucose → fructose-6-phosphate → split into 3-carbon products
+- **Main products**: acetate (major), lactate, formate
+- I produce these in roughly a 3:1:1 molar ratio (acetate:lactate:formate) under glucose fermentation
+- The bifid shunt is more efficient than homolactic fermentation, giving me competitive advantage
+
+### Uptake strategy for this interval
+
+Given my current low biomass (0.002178 gDW/L) and abundant glucose and lactate, I should:
+
+1. **Prioritize glucose** (24.85 mM): This is my preferred fermentable sugar
+2. **Co-utilize lactate** (28.46 mM): I can ferment this as well; it's already partially oxidized
+3. **Use ammonium** (9.304 mM): Direct nitrogen assimilation is efficient
+4. **Consider arginine**: 21.79 mM available; I can catabolize it, but it's less efficient than glucose
+
+### Growth calculation
+
+**Substrate uptake plan:**
+- Glucose: 12 mmol/gDW/h (moderate uptake, sustainable)
+- Lactate: 4 mmol/gDW/h (co-fermentation)
+- Ammonium: 2 mmol/gDW/h (covers ~25% of N need; rest from amino acid degradation)
+- Arginine: 1.5 mmol/gDW/h (provides additional N and C)
+
+**Carbon balance:**
+- Glucose: 12 mmol C/gDW/h × 6 = 72 mmol C/h
+- Lactate: 4 mmol × 3 = 12 mmol C/h
+- Arginine: 1.5 mmol × 6 = 9 mmol C/h
+- **Total C in: 93 mmol/gDW/h**
+
+**Carbon requirements for growth:**
+- Growth rate target: 0.35 /h
+- C needed for biomass: 0.35 × 33 = 11.55 mmol C/gDW/h
+- C lost to fermentation products (bifid shunt efficiency ~85%): 93 × 0.15 = 14 mmol C/h as CO₂ and other losses
+- Fermentation products (acetate, lactate, formate): ~67 mmol C/h
+
+**Nitrogen balance:**
+- Ammonium: 2 mmol/gDW/h
+- Arginine: 1.5 mmol/gDW/h (contributes N)
+- Cysteine: 0.5 mmol/gDW/h (small uptake for S)
+- **Total N in: ~4 mmol/gDW/h (sufficient for 0.35 /h growth requiring ~8 mmol/g)**
+
+Growth rate achievable: **0.35 /h** is sustainable with this uptake profile.
+
+### Product secretion
+
+Based on bifid shunt stoichiometry from glucose and lactate fermentation:
+- Acetate: 8 mmol/gDW/h (major product)
+- Lactate: 2 mmol/gDW/h (net, considering some lactate consumed)
+- Formate: 1.5 mmol/gDW/h
+- CO₂: 3 mmol/gDW/h (from decarboxylation)
+
+### Audit
+- **C in**: 93 mmol/gDW/h
+- **C out as products**: 8×2 (ac) + 2×3 (lac) + 1.5×1 (for) + 3×1 (co2) = 16 + 6 + 1.5 + 3 = 26.5 mmol/h
+- **C for growth**: 11.55 mmol/h
+- **Remaining/buffer**: 93 - 26.5 - 11.55 = 55 mmol/h (conservative; some retained in cellular processes)
+
+This is feasible.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -12.0,
+    "lac__L": -4.0,
+    "nh4": -2.0,
+    "arg__L": -1.5,
+    "cys__L": -0.5,
+    "ac": 8.0,
+    "lac__L": 2.0,
+    "for": 1.5,
+    "co2": 3.0
+  },
+  "growth_rate": 0.35,
+  "rationale": "Bifidobacterium adolescentis preferentially ferments glucose via the bifid shunt, producing acetate as major product with lactate and formate. Abundant glucose and lactate support rapid growth. Ammonium and arginine provide nitrogen. Growth rate of 0.35 /h is supported by available C (93 mmol/h) and N (4 mmol/h) with conservative fermentation stoichiometry.",
+  "confidence": 0.72
+}
+```

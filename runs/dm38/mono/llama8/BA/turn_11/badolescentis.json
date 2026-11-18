@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -5.0,
+  "ser__L": 1.5,
+  "glu__L": 1.5,
+  "for": 5.0,
+  "ac": 5.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing L-lactate as a carbon source and amino acids as nitrogen sources to achieve a growth rate of 0.5/h",
+ "confidence": 0.8
+}

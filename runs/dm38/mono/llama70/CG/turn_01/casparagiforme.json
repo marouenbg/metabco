@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": 3.0,
+  "glc__D": -5.0,
+  "nh4": -4.0,
+  "ac": 5.0
+ },
+ "growth_rate": 0.8,
+ "rationale": "Optimal carbon and nitrogen uptake for growth and maintenance",
+ "confidence": 0.9
+}

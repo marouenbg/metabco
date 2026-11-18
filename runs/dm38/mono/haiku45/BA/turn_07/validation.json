@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 7,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.106 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0329 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Lactate fermentation with glucose and amino acids as secondary C/N sources. Bifid shunt produces lactate and acetate. Growth limited by nitrogen availability (8 mmol/gDW needed). Conservative rate sus",
+  "confidence": 0.65,
+  "fluxes_claimed": {
+   "lac__L": -5.0,
+   "glc__D": -3.0,
+   "arg__L": -5.0,
+   "nh4": -3.0,
+   "ser__L": -2.0,
+   "ac": 10.0,
+   "co2": 10.0
+  },
+  "fluxes_applied": {
+   "lac__L": -5.0,
+   "glc__D": -3.0,
+   "arg__L": -5.0,
+   "nh4": -3.0,
+   "ser__L": -2.0,
+   "ac": 10.0,
+   "co2": 10.0,
+   "pi": -0.1063,
+   "so4": -0.0329
+  }
+ }
+]

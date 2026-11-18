@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 4,
+  "growth_claimed": 0.0,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=4.89 out=7.96 biomass=0"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.65 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.15 mmol/gDW/h of so4 (declared present in excess)",
+   "C: secretions scaled by 0.645"
+  ],
+  "rationale": "I am choosing to take up D-glucose, L-lactate, and Ammonium, and secrete Butyrate, H2, Pi, and Sulfate. This strategy supports a growth rate of 0.000 gDW/h.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -0.56,
+   "lac__L": -0.51,
+   "nh4": -0.15,
+   "but": 1.99,
+   "h2": 0.65,
+   "pi": 0.65,
+   "so4": 0.15
+  },
+  "fluxes_applied": {
+   "glc__D": -0.56,
+   "lac__L": -0.51,
+   "nh4": -0.15,
+   "but": 1.2836,
+   "h2": 0.65,
+   "pi": 0.0,
+   "so4": 0.0
+  }
+ }
+]

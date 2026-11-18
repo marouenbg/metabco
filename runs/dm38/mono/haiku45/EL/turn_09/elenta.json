@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -6.5,
+  "lac__L": -3.5,
+  "arg__L": -3.5,
+  "cys__L": -1.0,
+  "ac": 9.5,
+  "for": 5.0,
+  "co2": 4.5,
+  "nh4": 0.5
+ },
+ "growth_rate": 0.089,
+ "rationale": "Eggerthella lenta sustains mixed-acid fermentation of glucose and lactate with arginine and cysteine co-utilization. This pattern has proven sustainable over 4 turns. Glucose is primary carbon/energy; lactate, arginine, and cysteine provide secondary carbon and essential nitrogen. Acetate and formate are major fermentation products. Ammonium release balances excess nitrogen from amino acid catabolism.",
+ "confidence": 0.72
+}

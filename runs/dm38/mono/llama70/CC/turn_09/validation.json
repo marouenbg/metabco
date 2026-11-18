@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 9,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.168 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0645 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "butyrate and glycine uptake support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": -10.5,
+   "gly": -2.0,
+   "ac": 5.0,
+   "co2": 2.0
+  },
+  "fluxes_applied": {
+   "but": -10.5,
+   "gly": -2.0,
+   "ac": 5.0,
+   "co2": 2.0,
+   "pi": -0.168,
+   "so4": -0.0645
+  }
+ }
+]

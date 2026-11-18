@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "lac__L": -5.0,
+  "nh4": 2.0,
+  "but": -2.0,
+  "h2": -0.5
+ },
+ "growth_rate": 0.15,
+ "rationale": "Based on transport capabilities, fermentation products, and carbon audit",
+ "confidence": 0.9
+}

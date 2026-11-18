@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": -3.0,
+  "co2": -2.0,
+  "arg__L": -0.5,
+  "asn__L": -0.2
+ },
+ "growth_rate": 0.15,
+ "rationale": "Optimizing carbon and nitrogen uptake to support growth and producing fermentation products based on available carbon sources.",
+ "confidence": 0.8
+}

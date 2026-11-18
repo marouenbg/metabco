@@ -1,0 +1,93 @@
+# Metabolic reasoning for Desulfovibrio piger at t=12h
+
+## Assessment of carbon and nitrogen sources
+
+I am a sulfate-reducing bacterium with the following transport and metabolic capabilities:
+
+**Carbon sources I can utilize:**
+- **Lactate** (lac__L): 22.85 mM available. This is my preferred electron donor and carbon source. I have robust lactate transporters and can oxidize it completely.
+- **Glucose** (glc__D): 24.08 mM available. I can ferment this, though lactate is preferred.
+- **Amino acids** (arg, cys, ser, pro, ala, phe, gly, leu, tyr, val, gln, asn, lys, thr, ile, his, met, trp, glu, asp): I can degrade these for both carbon and nitrogen.
+- **Acetate** (ac): 1.191 mM. I can use this but it's nearly depleted from my own secretion.
+
+**Carbon sources I cannot use effectively:**
+- Arabinose, maltose, inositol: I lack the necessary transport and catabolic enzymes for these sugars.
+
+**Nitrogen sources:**
+- **Ammonium** (nh4): 7.539 mM. Primary nitrogen source; I have ammonia transporters.
+- **Amino acids**: Can be used for both carbon and nitrogen via transamination and catabolism.
+- **Arginine** (arg__L): 21.81 mM. Rich nitrogen source; I can transport and degrade this.
+
+## Fermentation strategy
+
+As a sulfate-reducing bacterium, my core metabolism:
+1. **Lactate oxidation coupled to sulfate reduction**: Lactate → Acetate + CO₂, with SO₄²⁻ → H₂S
+2. **Amino acid catabolism**: Deamination and carbon skeleton oxidation
+3. **Fermentation products**: Acetate (primary), CO₂, H₂S, and potentially formate or other organic acids
+
+My recent pattern shows:
+- Lactate uptake: ~10 mmol/gDW/h (consistent across turns)
+- Sulfate reduction: ~2 mmol/gDW/h (stoichiometric with lactate)
+- Acetate production: ~2-3 mmol/gDW/h
+- CO₂ release: 7.5-8 mmol/gDW/h
+- Amino acid uptake: Small amounts (gly, ala) for biosynthesis
+
+## Growth rate calculation
+
+At turn 2, I achieved 0.450 /h with:
+- Lactate: -10 mmol/gDW/h
+- Glucose: -2 mmol/gDW/h
+- Ammonium: -3.50 mmol/gDW/h
+
+**Carbon balance for growth:**
+- Lactate (C₃): 10 mmol × 3 = 30 mmol C/gDW/h
+- Glucose (C₆): 2 mmol × 6 = 12 mmol C/gDW/h
+- **Total C in: 42 mmol/gDW/h**
+
+**Carbon out:**
+- Acetate: 2 mmol C/gDW/h (as acetate, C₂ = 2×2 = 4 mmol C)
+- CO₂: 7.5 mmol C/gDW/h
+- **Total C released: 11.5 mmol C/gDW/h**
+
+**Carbon for biomass:**
+- Available: 42 - 11.5 = 30.5 mmol C/gDW/h
+- Cost: 43 mmol C per gram biomass produced
+- Maximum growth: 30.5/43 = **0.71 /h theoretical maximum**
+
+However, I observed 0.450 /h, suggesting either:
+- Maintenance respiration consuming ~13 mmol C/gDW/h
+- Or my actual uptake rates are lower than stated
+
+**Nitrogen balance:**
+- Ammonium: 3.50 mmol/gDW/h
+- Cost: 10 mmol N per gram biomass
+- From growth at 0.450 /h: 0.450 × 10 = 4.5 mmol N needed
+- Available: 3.50 from NH₄ + amino acid N
+
+This is tight. I should increase amino acid uptake to supplement nitrogen.
+
+## Turn 3 strategy
+
+Lactate is still abundant (22.85 mM). I'll maintain lactate-driven sulfate reduction as my primary metabolism, but increase amino acid uptake to support nitrogen requirements and sustain growth toward 0.45-0.50 /h.
+
+**Proposed fluxes:**
+- Lactate: -10.0 (primary electron donor)
+- Sulfate: -2.0 (electron acceptor, stoichiometric with lactate)
+- Ammonium: -3.5 (primary nitrogen)
+- Arginine: -1.5 (additional nitrogen + carbon; I can deaminate it)
+- Glycine: -1.0 (small biosynthetic amino acid)
+- Alanine: -0.8 (small biosynthetic amino acid)
+- Acetate: +2.5 (fermentation product)
+- CO₂: +7.5 (fermentation product)
+- H₂S: +2.0 (sulfate reduction product)
+
+**Carbon audit:**
+- In: (10 × 3) + (1.5 × 5 for arg) + (1.0 × 2 for gly) + (0.8 × 3 for ala) = 30 + 7.5 + 2 + 2.4 = 41.9 mmol C/gDW/h
+- Out: (2.5 × 2) + 7.5 = 5 + 7.5 = 12.5 mmol C/gDW/h
+- Biomass: 41.9 - 12.5 = 29.4 mmol C → growth = 29.4/43 = **0.68 /h** (theoretical)
+
+This seems high. Adjusting for realistic maintenance (assume ~20% of uptake is respiration overhead):
+
+**Revised growth estimate: 0.48 /h** (conservative, matching observed trend)
+
+{"fluxes": {"lac__L": -10.0, "so4": -2.0, "nh4": -3.5, "arg__L": -1.5, "gly": -1.0, "ala__L": -0.8, "ac": +2.5, "co2": +7.5, "h2s": +2.0}, "growth_rate": 0.48, "rationale": "Lactate-driven sulfate reduction with amino acid catabolism to supplement nitrogen. Acetate and CO₂ are fermentation products; H₂S from sulfate reduction. Carbon balance supports observed growth trajectory.", "confidence": 0.72}

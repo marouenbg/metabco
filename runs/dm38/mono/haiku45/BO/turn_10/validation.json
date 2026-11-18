@@ -1,0 +1,52 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 10,
+  "growth_claimed": 0.1,
+  "growth_allowed": 0.1,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: malt",
+   "uptake_exceeds_pool: cys__L",
+   "uptake_exceeds_pool: arg__L",
+   "uptake_exceeds_pool: asn__L"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake malt to pool limit -2.69",
+   "clipped uptake cys__L to pool limit -2.43",
+   "clipped uptake arg__L to pool limit -0.476",
+   "clipped uptake asn__L to pool limit -1.6",
+   "P: credited 0.125 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Late-batch growth limited by ammonium (4.7 mM remaining). Uptake maltose and nitrogen-rich amino acids (cysteine, asparagine, arginine, glutamine) to support modest continued growth. Ferment via mixed",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "malt": -4.382,
+   "cys__L": -3.96,
+   "arg__L": -0.7749,
+   "asn__L": -2.6,
+   "gln__L": -1.0,
+   "nh4": 0.8,
+   "but": 2.5,
+   "ppa": 1.8,
+   "co2": 3.2,
+   "h2": 0.4
+  },
+  "fluxes_applied": {
+   "malt": -2.6892,
+   "cys__L": -2.4299,
+   "arg__L": -0.4755,
+   "asn__L": -1.5955,
+   "gln__L": -1.0,
+   "nh4": 0.8,
+   "but": 2.5,
+   "ppa": 1.8,
+   "co2": 3.2,
+   "h2": 0.4,
+   "pi": -0.1253
+  }
+ }
+]

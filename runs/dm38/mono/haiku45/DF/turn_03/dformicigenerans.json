@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -12.0,
+  "arg__L": -3.0,
+  "nh4": -2.0,
+  "but": -2.0,
+  "ac": 4.5,
+  "for": 2.5,
+  "co2": 8.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.65,
+ "rationale": "Glucose depleted; shifting to lactate (primary), arginine (C+N), and butyrate (secondary). Mixed-acid fermentation produces acetate, formate, CO\u2082, and H\u2082. Carbon audit: 38 mmol in (12 lactate + 18 arginine + 8 butyrate) = 33 growth + 5 products. Nitrogen: 14 mmol in (12 from arginine + 2 from ammonia) supports 7 mmol growth cost with surplus.",
+ "confidence": 0.72
+}

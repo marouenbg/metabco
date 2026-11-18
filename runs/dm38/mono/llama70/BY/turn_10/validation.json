@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 10,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: nh4",
+   "n_imbalance: in=0.429 out=0 biomass=5.18",
+   "p_imbalance: in=0 out=0 biomass=0.0545"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake nh4 to pool limit -0.429",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.5 -> 0.0435",
+   "P: growth 0.0435 -> 0"
+  ],
+  "rationale": "Prioritizing acetate and propionate uptake to support growth and maintenance",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "ppa": -5.0,
+   "pro__L": 0.0,
+   "succ": 2.0,
+   "nh4": -1.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "ppa": -5.0,
+   "pro__L": 0.0,
+   "succ": 2.0,
+   "nh4": -0.4292,
+   "so4": -0.1309
+  }
+ }
+]

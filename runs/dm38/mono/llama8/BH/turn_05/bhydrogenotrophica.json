@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "co2": 20.0,
+  "lac__L": 15.0,
+  "nh4": 9.042,
+  "ac": 2.63,
+  "for": 2.63
+ },
+ "growth_rate": 0.221,
+ "rationale": "Using CO2, lac__L, and nh4 as primary substrates, and releasing ac and for as fermentation products. Growth rate supported by the available nutrients.",
+ "confidence": 0.9
+}

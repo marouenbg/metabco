@@ -1,0 +1,85 @@
+# Metabolic Decision for Dorea longicatena DSM 13814 — Turn 3
+
+## Analysis
+
+### Available transporters and carbon sources
+Dorea longicatena is a gram-positive anaerobic bacterium from the Lachnospiraceae family. It is a saccharolytic and proteolytic organism with known capacity to ferment sugars and amino acids. Based on genomic and biochemical literature, this species can transport and metabolize:
+
+**Readily available and transportable:**
+- D-glucose (glc__D): 16.4 mM — primary sugar substrate
+- L-lactate (lac__L): 21.38 mM — fermentation product, also usable as carbon source
+- L-arabinose (arab__L): 18.31 mM — pentose sugar
+- L-arginine (arg__L): 17.47 mM — amino acid, also nitrogen source
+- Butyrate (but): 5.626 mM — short-chain fatty acid, can be oxidized
+- L-cysteine (cys__L): 8.4 mM — amino acid with sulfur
+- Amino acids: serine, proline, alanine, glycine, and others
+
+**Limited or absent transport:**
+- Maltose (malt): 4.382 mM — may lack specific maltose transporter
+- Formate (for): 3.657 mM — produced, not typically a primary uptake substrate for this genus
+- Acetate (ac): 4.14 mM — limited uptake; mainly a fermentation product
+
+### Metabolic strategy at turn 3
+I have been growing steadily (0.8 → 0.19 → 0.35 /h over three turns). At t=12h, I have consumed significant glucose, lactate, and arginine while producing butyrate, acetate, and formate. My biomass is now 0.463 gDW/L.
+
+The sealed batch environment means I must be mindful of:
+- Depletion of preferred sugars (glucose down to 16.4 mM from initial ~50 mM)
+- Accumulation of fermentation products (butyrate, acetate, formate)
+- Nitrogen becoming limiting (ammonium down to 7.23 mM)
+
+### Optimal uptake at turn 3
+I will prioritize:
+1. **Glucose** (6.0 mmol/gDW/h): Still abundant, most efficient carbon source
+2. **Lactate** (4.0 mmol/gDW/h): Secondary fermentable sugar
+3. **Arginine** (2.5 mmol/gDW/h): Provides both carbon and nitrogen
+4. **Arabinose** (1.5 mmol/gDW/h): Supplementary pentose
+
+**Fermentation products:** With anaerobic conditions and mixed-acid fermentation typical of this genus:
+- Butyrate, acetate, formate production (continuing pattern)
+- Possibly some lactate recycling or propionate formation
+
+### Growth rate calculation
+Total carbon uptake:
+- Glucose: 6.0 mmol C/gDW/h × 6 C = 36 mmol C
+- Lactate: 4.0 × 3 = 12 mmol C
+- Arginine: 2.5 × 6 = 15 mmol C
+- Arabinose: 1.5 × 5 = 7.5 mmol C
+- **Total: 70.5 mmol C/gDW/h**
+
+Nitrogen uptake:
+- Arginine: 2.5 mmol N/gDW/h × 3 N = 7.5 mmol N
+- Ammonium: 1.5 mmol/gDW/h
+- **Total: 9.0 mmol N/gDW/h**
+
+Growth requirement: ~38 mmol C and ~10 mmol N per gDW.
+With 70.5 mmol C available and 9.0 mmol N available, **nitrogen is limiting**.
+
+Projected growth: 0.9 /h (limited by nitrogen availability; ~90% of theoretical max given N constraint).
+
+Carbon balance:
+- In: 70.5 mmol C
+- Growth cost: 0.9 × 38 = 34.2 mmol C
+- Remaining for fermentation products: 36.3 mmol C
+- Distributed as: butyrate (8 mmol), acetate (4 mmol), formate (3 mmol), CO₂ (21.3 mmol)
+
+This is feasible and conserves mass.
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -6.0,
+    "lac__L": -4.0,
+    "arg__L": -2.5,
+    "arab__L": -1.5,
+    "but": 8.0,
+    "ac": 4.0,
+    "for": 3.0,
+    "co2": 21.3
+  },
+  "growth_rate": 0.90,
+  "rationale": "Dorea longicatena continues saccharolytic and proteolytic fermentation. Glucose, lactate, and arginine are primary substrates; arabinose supplements. Mixed-acid fermentation yields butyrate, acetate, formate, and CO₂. Growth is limited by ammonium and arginine nitrogen availability (~9 mmol N/gDW/h vs. 10 mmol needed), supporting ~0.9 /h. Carbon is conserved: 70.5 mmol in covers 34.2 mmol biomass + 36.3 mmol fermentation products.",
+  "confidence": 0.72
+}
+```

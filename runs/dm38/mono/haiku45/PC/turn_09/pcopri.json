@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": 12.0,
+  "ppa": -3.0,
+  "for": 6.0,
+  "cys__L": -0.5,
+  "ala__L": -0.3,
+  "co2": 7.5
+ },
+ "growth_rate": 0.08,
+ "rationale": "Late-stage batch culture (36/48 h). Nitrogen is limiting; abundant acetate, propionate, and formate remain. Slow fermentation with amino acid supplementation supports modest growth. Carbon budget balances: 29.1 mmol C in \u2192 3.6 (growth) + 25.5 (products) = 29.1 mmol C out.",
+ "confidence": 0.62
+}

@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 6,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=68.5 out=90 biomass=11.8"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.269 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.4 -> 0",
+   "C: secretions scaled by 0.799"
+  ],
+  "rationale": "Glucose depleted; switching to arabinose fermentation with acetate and amino acid catabolism. Mixed-acid fermentation maintains productivity while nitrogen becomes limiting. Carbon and nitrogen balanc",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "arab__L": -8.0,
+   "ac": 8.0,
+   "arg__L": -4.0,
+   "cys__L": -1.5,
+   "nh4": -2.0,
+   "lac__L": 12.0,
+   "but": 6.0,
+   "co2": 12.0,
+   "for": 2.0
+  },
+  "fluxes_applied": {
+   "arab__L": -8.0,
+   "ac": 6.3933,
+   "arg__L": -4.0,
+   "cys__L": -1.5,
+   "nh4": -2.0,
+   "lac__L": 9.59,
+   "but": 4.795,
+   "co2": 9.59,
+   "for": 1.5983,
+   "pi": -0.2689
+  }
+ }
+]

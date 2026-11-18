@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 0,
+  "growth_claimed": 0.81,
+  "growth_allowed": 0.2703,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=30 out=20 biomass=34.5"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 1.06 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 10.2 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 3.09 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.81 -> 0.27"
+  ],
+  "rationale": "I will take up L-lactate and Ammonium as the primary carbon and nitrogen sources, respectively. I will release hydrogen sulfide and acetate as fermentation products. I will also release carbon dioxide",
+  "confidence": null,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "nh4": -5.0,
+   "h2s": 10.0,
+   "ac": 5.0,
+   "co2": 10.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "nh4": -8.0904,
+   "h2s": 10.0,
+   "ac": 5.0,
+   "co2": 10.0,
+   "pi": -1.0636,
+   "so4": -10.212
+  }
+ }
+]

@@ -1,0 +1,57 @@
+# Metabolic decision for Dorea longicatena DSM 13814 — turn 4
+
+## Analysis
+
+**Available transporters and carbon sources:**
+Dorea longicatena is a Gram-positive anaerobic bacterium known to ferment carbohydrates and amino acids. Based on genomic capacity and the pattern of my recent uptake, I can transport:
+- Carbohydrates: D-glucose (glc__D), L-arabinose (arab__L), maltose (malt) — hexose/pentose fermenters
+- Organic acids: lactate (lac__L), butyrate (but), acetate (ac), formate (for)
+- Amino acids: L-arginine (arg__L), and likely serine, proline, and others via amino acid transporters
+
+**Current substrate landscape:**
+- Glucose is depleted (0 mM) — my primary carbon source in early turns is exhausted
+- Arabinose (14.21 mM), maltose (4.38 mM) remain as fermentable carbohydrates
+- Lactate (10.45 mM), butyrate (27.49 mM), acetate (15.07 mM) — mixed-acid fermentation products accumulating
+- Amino acids present in modest amounts (arg 10.64, ser 6.4, pro 5.9, ala 5.3, gly 4.7, etc.)
+- Ammonium (7.23 mM) — adequate nitrogen
+
+**Fermentation strategy:**
+As a facultative anaerobe in anaerobic conditions, I ferment via the butyryl-CoA pathway, producing butyrate, acetate, and formate as end products. My recent history shows:
+- Turns 0–3: mixed consumption of glucose, arabinose, lactate, and arginine
+- Consistent production of butyrate, acetate, formate, and CO₂
+
+**Substrate choice for turn 4:**
+With glucose exhausted, I shift to:
+1. **Arabinose** (14.21 mM available): fermentable pentose, high yield
+2. **Maltose** (4.38 mM): fermentable disaccharide
+3. **Lactate** (10.45 mM): can be oxidized or fermented; supports continued growth
+4. **Amino acids** (arginine, serine, alanine): supplementary nitrogen and carbon
+
+**Growth rate calculation:**
+- Arabinose uptake: ~5.0 mmol/gDW/h (moderate rate, sustainable)
+- Maltose uptake: ~2.0 mmol/gDW/h
+- Lactate uptake: ~3.0 mmol/gDW/h
+- Arginine uptake: ~2.0 mmol/gDW/h (nitrogen + carbon)
+
+Total carbon uptake ≈ (5.0 × 5C) + (2.0 × 12C) + (3.0 × 3C) + (2.0 × 6C) = 25 + 24 + 9 + 12 = 70 mmol C/gDW/h
+
+Growth requirement: 38 mmol C/gDW/h + fermentation overhead
+Expected growth rate: **0.45 /h** (based on carbon availability and biosynthetic efficiency)
+
+**Fermentation products:**
+Butyrate, acetate, formate, CO₂ (consistent with my metabolic pattern)
+
+**Carbon audit:**
+- In: 70 mmol C/gDW/h
+- Growth cost: 38 mmol C/gDW/h
+- Fermentation products (butyrate + acetate + formate + CO₂): ~32 mmol C/gDW/h
+- Total out: 38 + 32 = 70 mmol C/gDW/h ✓
+
+**Nitrogen audit:**
+- Ammonium uptake: ~2.0 mmol/gDW/h
+- Arginine uptake: ~2.0 mmol/gDW/h (provides 1 N per molecule)
+- Total N in: 4.0 mmol/gDW/h
+- Growth cost: 10 mmol N/gDW/h per gram biomass × 0.45 /h ≈ 4.5 mmol N/gDW/h
+- Marginal but sustainable ✓
+
+{"fluxes": {"arab__L": -5.0, "malt": -2.0, "lac__L": -3.0, "arg__L": -2.0, "nh4": -2.0, "but": +8.5, "ac": +5.2, "for": +3.5, "co2": +8.8}, "growth_rate": 0.45, "rationale": "Glucose exhausted; switching to arabinose and maltose as primary fermentable carbohydrates, supplemented with lactate and amino acids. Consistent with butyrate-acetate fermentation pathway. Carbon and nitrogen budgets balance at moderate growth rate given remaining substrate diversity.", "confidence": 0.68}

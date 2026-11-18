@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 0,
+  "growth_claimed": 0.6,
+  "growth_allowed": 0.3326,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=51 out=41 biomass=22.6"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.698 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.6 -> 0.333"
+  ],
+  "rationale": "Fermenting glucose and lactate to produce butyrate and acetate, utilizing amino acids for nitrogen and additional carbon. Adjusted growth rate to balance nitrogen.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": 1.0,
+   "arg__L": -2.0,
+   "cys__L": -2.0,
+   "ser__L": -1.0,
+   "nh4": -1.0,
+   "but": 8.0,
+   "ac": 3.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": 1.0,
+   "arg__L": -2.0,
+   "cys__L": -2.0,
+   "ser__L": -1.0,
+   "nh4": -1.0,
+   "but": 8.0,
+   "ac": 3.0,
+   "h2": 1.0,
+   "pi": -0.6977
+  }
+ }
+]

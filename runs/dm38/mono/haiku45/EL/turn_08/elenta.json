@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -6.5,
+  "lac__L": -3.5,
+  "arg__L": -3.5,
+  "cys__L": -1.0,
+  "nh4": 0.5,
+  "ac": 9.5,
+  "for": 5.0,
+  "co2": 4.5
+ },
+ "growth_rate": 0.089,
+ "rationale": "Eggerthella lenta ferments glucose and lactate via mixed-acid fermentation, using arginine as a co-substrate for energy and nitrogen. Produces acetate, formate, and CO2. Stable pattern observed for 4 turns; continuing with confidence. Carbon and nitrogen audits close.",
+ "confidence": 0.78
+}

@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "gly": -4.7,
+  "ala__L": -1.3,
+  "pro__L": -2.9,
+  "arg__L": -2.9,
+  "cys__L": -4.4,
+  "nh4": -0.5,
+  "ac": 8.0,
+  "but": 5.0,
+  "co2": 12.0,
+  "for": 2.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.015,
+ "rationale": "Shift to amino acid fermentation as carbohydrates depleted. Glycine, alanine, proline, arginine, and cysteine fermented via Stickland and amino acid degradation pathways. Low growth rate reflects stationary-phase kinetics and amino acid limitation. Products are acetate, butyrate, CO\u2082, formate, and H\u2082 typical of Dorea fermentation.",
+ "confidence": 0.45
+}

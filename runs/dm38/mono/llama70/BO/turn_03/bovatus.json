@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -2.38,
+  "ac": 5.0,
+  "ppa": 2.5
+ },
+ "growth_rate": 0.7,
+ "rationale": "Maximizing growth on glucose with ammonium as nitrogen source, producing acetate and propionate",
+ "confidence": 0.8
+}

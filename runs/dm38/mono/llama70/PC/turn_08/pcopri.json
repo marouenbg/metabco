@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "pro__L": -5.0,
+  "gly": -2.5,
+  "cys__L": -1.5,
+  "ac": 2.0,
+  "ppa": 1.0,
+  "nh4": -1.0
+ },
+ "growth_rate": 0.35,
+ "rationale": "Uptake of L-proline, glycine, and L-cysteine to support growth and production of acetate and propionate",
+ "confidence": 0.8
+}

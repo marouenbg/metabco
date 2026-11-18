@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": 5.0,
+  "ser__L": 0.8,
+  "but": 0.4,
+  "ac": 0.4,
+  "h2": 0.1
+ },
+ "growth_rate": 0.13,
+ "rationale": "Taking up L-lactate and L-serine, and releasing butyrate and acetate, with a growth rate of 0.13/h."
+}

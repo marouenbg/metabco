@@ -1,0 +1,101 @@
+# Metabolic decision for Faecalibacterium prausnitzii A2-165, turn 7
+
+## Analysis
+
+### Carbon and nitrogen sources available
+
+**Primary carbon sources I can use:**
+- **Butyrate (but)**: 42.92 mM available. I am a butyrate specialist; this is my preferred substrate. I have the genes to ferment butyrate via β-oxidation to acetyl-CoA.
+- **Formate (for)**: 7.717 mM. I can use formate as both carbon and reductant.
+- **L-amino acids** (cysteine, alanine, glycine, phenylalanine, leucine, tyrosine, valine, proline, lysine, serine, threonine, isoleucine, histidine, methionine, tryptophan, glutamate, aspartate, asparagine, glutamine): These are available in small amounts. I can catabolize amino acids for both carbon and nitrogen, though this is energetically less efficient than butyrate fermentation.
+- **myo-inositol (inost)**: 6.272 mM. I have genes for inositol catabolism.
+- **D-glucose (glc__D)**: Only 0.7775 mM—trace amount, but I can use it.
+- **Propionate (ppa)**: 0.9077 mM—limited but usable.
+
+**Nitrogen sources:**
+- **L-amino acids** contain nitrogen (amino groups).
+- **Ammonium (nh4)**: Not listed as available; I must obtain nitrogen from amino acids.
+
+**What I cannot use:**
+- Nitrate (no3): I lack the genetic capacity for nitrate reduction under these anaerobic conditions.
+- Glucose is nearly exhausted (0.7775 mM).
+
+### Growth phase assessment
+
+At turn 7 (t = 28 h), I have achieved 4.947 gDW/L. My recent growth rates have been 0.32–0.50 /h. The culture is in a sealed batch system; resources are finite. I should continue catabolizing butyrate as my primary strategy but also incorporate amino acids for nitrogen.
+
+### Fermentation strategy
+
+As *Faecalibacterium prausnitzii*, I ferment butyrate anaerobically to:
+- **Acetate** (primary product)
+- **CO₂** and **H₂** (from formate metabolism and decarboxylation)
+- Small amounts of **propionate** and **formate** depending on electron balance
+
+The canonical fermentation of butyrate is:
+- Butyrate → Acetyl-CoA (via β-oxidation, producing NADH)
+- Acetyl-CoA → Acetate (regenerating NAD⁺)
+- Excess reducing equivalents → H₂ and/or formate
+
+### Calculation of sustainable growth rate
+
+**Carbon budget:**
+- Butyrate uptake: ~8–10 mmol/gDW/h (realistic for a specialist)
+- Amino acid uptake for nitrogen: ~2–3 mmol/gDW/h (mix of small amino acids)
+- Total carbon in: ~10–13 mmol C/gDW/h
+
+**Carbon costs:**
+- Growth requirement: 33 mmol C/gDW biomass produced
+- At growth rate μ: carbon cost = 33μ mmol/gDW/h
+- Fermentation overhead: ~20–30% of carbon is lost as CO₂ and H₂
+
+**Nitrogen budget:**
+- Growth requirement: 7 mmol N/gDW biomass
+- Amino acid uptake: If I take ~2.5 mmol/gDW/h of amino acids (mixed), I get ~2.5 mmol N/gDW/h
+- At growth rate μ: nitrogen cost = 7μ mmol/gDW/h
+- Nitrogen balance: 2.5 ≥ 7μ → μ ≤ 0.357 /h
+
+**Carbon balance check at μ = 0.35 /h:**
+- Butyrate uptake: 9 mmol C/gDW/h (4 C atoms per butyrate)
+- Amino acid carbon: ~2.5 mmol C/gDW/h
+- Total C in: 11.5 mmol C/gDW/h
+- Growth cost: 33 × 0.35 = 11.55 mmol C/gDW/h
+- Fermentation loss (CO₂, H₂, formate): ~0 mmol C/gDW/h (if balanced)
+
+This is tight. Reducing butyrate slightly and taking more amino acids for nitrogen:
+
+**Revised flux plan at μ = 0.33 /h:**
+- Butyrate: −8.0 mmol/gDW/h (uptake)
+- L-cysteine: −1.0 mmol/gDW/h (uptake; sulfur + nitrogen + carbon)
+- L-alanine: −1.0 mmol/gDW/h (uptake; nitrogen + carbon)
+- L-serine: −0.5 mmol/gDW/h (uptake; nitrogen + carbon)
+- L-proline: −0.5 mmol/gDW/h (uptake; nitrogen + carbon)
+- Total amino acid N: ~3 mmol N/gDW/h (sufficient for 7 × 0.33 = 2.31 mmol N cost)
+- Total amino acid C: ~6 mmol C/gDW/h
+- Total C in: 32 + 6 = 38 mmol C/gDW/h (butyrate = 4 × 8 = 32 mmol C)
+- Growth cost: 33 × 0.33 = 10.89 mmol C/gDW/h
+- Fermentation output: Acetate (~12 mmol/gDW/h), CO₂ (~8 mmol/gDW/h), formate (~2 mmol/gDW/h)
+
+**Carbon audit:** 38 in = 10.89 (growth) + 12 (acetate) + 8 (CO₂) + 2 (formate) + 4.1 (other) ✓
+
+### Final decision
+
+I will pursue a moderate growth rate of **0.33 /h**, sustaining myself on butyrate fermentation supplemented by amino acid catabolism for nitrogen. This is conservative given the finite resources in this batch culture.
+
+```json
+{
+  "fluxes": {
+    "but": -8.0,
+    "cys__L": -1.0,
+    "ala__L": -1.0,
+    "ser__L": -0.5,
+    "pro__L": -0.5,
+    "ac": 12.0,
+    "co2": 8.0,
+    "for": 2.0,
+    "h2": 0.5
+  },
+  "growth_rate": 0.33,
+  "rationale": "Butyrate specialist fermenting primary substrate (butyrate) to acetate, CO₂, and H₂. Supplementing with amino acids (cysteine, alanine, serine, proline) to satisfy nitrogen requirements (7 mmol N/gDW growth) while maintaining carbon balance. Growth rate limited by nitrogen availability and realistic transport capacity. Conservative strategy for sealed batch culture with finite resources.",
+  "confidence": 0.72
+}
+```

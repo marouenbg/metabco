@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "h2": -1.0,
+  "ac": 2.5,
+  "but": 2.5,
+  "for": 2.0,
+  "ala__L": -2.0,
+  "cys__L": -2.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.0789,
+ "rationale": "Utilizing abundant hydrogen, acetate, butyrate, and formate for energy and carbon. Using alanine and cysteine for nitrogen. Producing acetate, butyrate, formate, and CO2 as fermentation products.",
+ "confidence": 0.9
+}

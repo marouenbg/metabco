@@ -1,0 +1,96 @@
+# Metabolic decision for Coprococcus comes ATCC 27758, turn 9
+
+## Analysis
+
+**What I can transport:**
+Coprococcus comes is a butyrate-producing bacterium. My recent history shows I ferment sugars and amino acids. Looking at my genome's likely transporters:
+- I can use carbohydrates: arabinose, maltose (via PTS or symporters)
+- I can use amino acids: arginine, serine, proline, alanine, lactate (via various transporters)
+- I can use short-chain fatty acids: acetate, butyrate, lactate, formate
+- I likely cannot use glucose directly (no PTS for glucose evident in my recent profile; I may use it via alternative routes but it's not appearing now)
+
+**What I cannot use:**
+- Most amino acids listed (phenylalanine, tyrosine, valine, leucine, etc.) — I lack the necessary transporters
+- Inositol — requires specific transport I don't encode
+- Many vitamins and nucleobases — cofactors, not primary carbon
+
+**Known fermentation products:**
+As a butyrate-producer, I produce: butyrate, acetate, CO₂, formate, and lactate. My recent turns confirm this pattern.
+
+**Current situation (turn 9, t=36h):**
+- I'm at 3.541 gDW/L, well-established
+- Remaining substrates: butyrate (27.92 mM), acetate (21.67 mM), arabinose (17.15 mM), amino acids (sparse)
+- Ammonium is low (4.115 mM) — nitrogen is becoming limiting
+- 12 hours remain; I should maximize remaining growth
+
+**Strategy:**
+I will consume remaining arabinose (a preferred sugar) and butyrate (my own fermentation product, recyclable), using low amino acid uptake for nitrogen. Butyrate oxidation via β-oxidation and fermentation will drive growth.
+
+**Carbon and nitrogen accounting:**
+
+Uptake plan:
+- Arabinose: 8.0 mmol/gDW/h (C₅H₁₀O₅ = 5 C per molecule)
+- Butyrate: 6.0 mmol/gDW/h (C₄H₈O₂ = 4 C per molecule)
+- Arginine: 2.0 mmol/gDW/h (for N; C₆H₁₄N₄O₂ = 6 C, 4 N per molecule)
+- Ammonium: 1.5 mmol/gDW/h
+
+**Carbon in:**
+- Arabinose: 8.0 × 5 = 40 C
+- Butyrate: 6.0 × 4 = 24 C
+- Arginine: 2.0 × 6 = 12 C
+- **Total: 76 C mmol/gDW/h**
+
+**Nitrogen in:**
+- Arginine: 2.0 × 4 = 8 N
+- Ammonium: 1.5 N
+- **Total: 9.5 N mmol/gDW/h**
+
+**Growth calculation:**
+- Growth requires ~30 C and ~8 N per gram biomass
+- N-limited: 9.5 / 8 = 1.19 g/h potential
+- C-limited: 76 / 30 = 2.53 g/h potential
+- **Nitrogen is limiting → growth rate ≈ 0.60 /h**
+
+**Carbon balance (growth = 0.60 g/h):**
+- Carbon for biomass: 0.60 × 30 = 18 C
+- Carbon remaining for fermentation: 76 - 18 = 58 C
+- Fermentation products (acetate + butyrate + CO₂ + formate):
+  - CO₂: 20 C (as CO₂)
+  - Acetate: 18 C (as 2-carbon units)
+  - Butyrate: 16 C (as 4-carbon units)
+  - Formate: 4 C
+  - **Total: 58 C ✓**
+
+**Nitrogen balance:**
+- Nitrogen for biomass: 0.60 × 8 = 4.8 N
+- Nitrogen in products (acetate, butyrate, CO₂, formate): 0 N
+- Excess N released as ammonia: 9.5 - 4.8 = 4.7 N → as NH₄
+- **Total: 9.5 N ✓**
+
+**Fermentation product splits** (typical for Coprococcus):
+- Acetate: +9.0 mmol/gDW/h
+- Butyrate: +4.0 mmol/gDW/h
+- CO₂: +5.0 mmol/gDW/h
+- Formate: +1.0 mmol/gDW/h
+- NH₄ (excess N): +4.7 mmol/gDW/h
+
+---
+
+```json
+{
+  "fluxes": {
+    "arab__L": -8.0,
+    "but": -6.0,
+    "arg__L": -2.0,
+    "nh4": -1.5,
+    "ac": 9.0,
+    "but": 4.0,
+    "co2": 5.0,
+    "for": 1.0,
+    "nh4": 4.7
+  },
+  "growth_rate": 0.60,
+  "rationale": "Consuming remaining arabinose and butyrate with minimal amino acid uptake (N-limited by low ammonium). Fermentation yields acetate, butyrate, CO2, and formate. Carbon and nitrogen balance verified.",
+  "confidence": 0.72
+}
+```

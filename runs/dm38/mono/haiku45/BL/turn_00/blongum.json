@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -12.0,
+  "arg__L": -8.0,
+  "arab__L": -4.0,
+  "nh4": -2.0,
+  "ac": 6.0,
+  "lac__L": 4.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.6,
+ "rationale": "Bifidobacterium longum ferments glucose and arabinose via the bifidogenic pathway to acetate and lactate. Arginine provides both carbon and nitrogen. At t=0 with abundant fresh substrate, I commit to rapid growth (0.6/h) on preferred hexose and pentose sugars plus amino acid co-metabolism. Fermentation products (acetate, lactate, CO\u2082) are released. Carbon and nitrogen balance verified.",
+ "confidence": 0.72
+}

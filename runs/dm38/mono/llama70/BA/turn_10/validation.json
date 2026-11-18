@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 10,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.2,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: tyr__L",
+   "uptake_exceeds_pool: val__L"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake tyr__L to pool limit -0.905",
+   "clipped uptake val__L to pool limit -0.792",
+   "P: credited 0.142 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0439 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing available acetate, formate, and amino acids for growth and fermentation",
+  "confidence": 0.7,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "for": -3.0,
+   "tyr__L": -1.0,
+   "val__L": -1.0,
+   "lac__L": 2.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "for": -3.0,
+   "tyr__L": -0.9051,
+   "val__L": -0.7917,
+   "lac__L": 2.0,
+   "pi": -0.1418,
+   "so4": -0.0439
+  }
+ }
+]

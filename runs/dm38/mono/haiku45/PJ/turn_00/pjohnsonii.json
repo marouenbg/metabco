@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -8.0,
+  "arg__L": -3.0,
+  "cys__L": -1.5,
+  "nh4": -2.0,
+  "ac": 35.0,
+  "ppa": 28.0,
+  "succ": 18.0,
+  "co2": 9.0
+ },
+ "growth_rate": 0.39,
+ "rationale": "Parabacteroides johnsonii is a saccharolytic Bacteroidetes that ferments glucose and lactate to mixed short-chain fatty acids under anaerobic conditions. Uptake of glucose and lactate as primary substrates with arginine and cysteine for nitrogen and growth factors. Fermentation products (acetate, propionate, succinate) regenerate NAD+ and balance redox. Growth rate of 0.39 /h is realistic for anaerobic batch culture with abundant substrates.",
+ "confidence": 0.72
+}

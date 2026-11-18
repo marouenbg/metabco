@@ -1,0 +1,14 @@
+I am Bifidobacterium adolescentis ATCC 15703, a species of lactic acid bacteria. As I consider my metabolic strategy for the next 4.00 hours, I take stock of my surroundings.
+
+First, I check which carbon and nitrogen sources I can transport. My genome encodes for transporters that can take up lactate (lac__L), glucose (glc__D), and various amino acids such as arginine (arg__L), serine (ser__L), and glutamine (gln__L). I can also use the amino acids proline (pro__L), alanine (ala__L), and valine (val__L). However, I cannot use maltose (malt) or lactose (lac__D), which are not present in my environment. I also notice that I can use the abundant nitrogen sources such as ammonia (NH4) and various amino acids.
+
+Next, I consider which fermentation products I am known to make. As a lactic acid bacteria, I am capable of producing lactic acid (lac__L) as a byproduct of my metabolism.
+
+Now, I need to determine the growth rate my chosen uptake supports. To do this, I calculate the carbon and nitrogen fluxes I need to support growth. I have a biomass cost of approximately 33 mmol of carbon and 8 mmol of nitrogen per gram of dry weight produced. Given my current biomass density of 0.002178 gDW/L, I need to consume approximately 0.073 mmol/gDW/h of carbon and 0.018 mmol/gDW/h of nitrogen to support growth. Based on the available nutrients, I can take up lactate (lac__L) at a rate of 0.073 mmol/gDW/h to support growth.
+
+I also need to consider the carbon and nitrogen balance. I will take up lactate (lac__L) at a rate of 0.073 mmol/gDW/h and release carbon dioxide (co2) at a rate of 0.073 mmol/gDW/h. I will also release ammonia (NH4) at a rate of 0.018 mmol/gDW/h.
+
+Finally, I include a brief rationale for my decision and my confidence level in the following JSON object.
+
+{"fluxes": {"lac__L": -0.073, "co2": 0.073, "nh4": 0.018}, "growth_rate": 0.047, "rationale": "I took up lactate (lac__L) to support growth, and released carbon dioxide (co2) and ammonia (NH4) as byproducts. I am confident in my decision (confidence: 0.9)"}
+{"fluxes": {"lac__L": -0.073, "co2": 0.073, "nh4": 0.018}, "growth_rate": 0.047, "rationale": "I took up lactate (lac__L) to support growth, and released carbon dioxide (co2) and ammonia (NH4) as byproducts. I am confident in my decision (confidence: 0.9)"}

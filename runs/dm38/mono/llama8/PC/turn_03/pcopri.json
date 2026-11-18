@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "arab__L": -10.0,
+  "lac__L": -5.0,
+  "for": -2.0,
+  "nh4": -0.5,
+  "ac": 0.939,
+  "h2": 0.5,
+  "h2s": 0,
+  "but": 0,
+  "ppa": 0,
+  "etoh": 0,
+  "co2": 0,
+  "lac__D": 0
+ },
+ "growth_rate": 0.9,
+ "rationale": "I take up L-arabinose, L-lactate, and formate as my primary carbon sources, and ammonium as my primary nitrogen source. I will aim for a growth rate of 0.900/h.",
+ "confidence": 0.9
+}

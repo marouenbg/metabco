@@ -1,0 +1,45 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 10,
+  "growth_claimed": 0.0909,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: pro__L",
+   "c_imbalance: in=12.1 out=19 biomass=3.03"
+  ],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "clipped uptake pro__L to pool limit -0.624",
+   "P: credited 0.0648 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0199 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.0909 -> 0",
+   "C: secretions scaled by 0.67"
+  ],
+  "rationale": "Utilizing acetate, propionate, and amino acids for carbon and nitrogen, producing acetate, propionate, and hydrogen as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": 5.0,
+   "ppa": 3.0,
+   "arg__L": -1.0,
+   "ser__L": -1.0,
+   "pro__L": -1.0,
+   "nh4": -8.0,
+   "h2": 2.0
+  },
+  "fluxes_applied": {
+   "ac": 3.3485,
+   "ppa": 2.0091,
+   "arg__L": -1.0,
+   "ser__L": -1.0,
+   "pro__L": -0.6237,
+   "nh4": -8.0,
+   "h2": 2.0,
+   "pi": -0.0648,
+   "so4": -0.0199
+  }
+ }
+]

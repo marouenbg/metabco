@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 6,
+  "growth_claimed": 0.7,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: but",
+   "p_imbalance: in=0 out=0 biomass=0.499"
+  ],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "clipped uptake but to pool limit -9.19",
+   "S: credited 0.154 mmol/gDW/h of so4 (declared present in excess)",
+   "P: growth 0.7 -> 0"
+  ],
+  "rationale": "Butyrate and amino acid uptake for carbon and nitrogen, producing acetate and propionate",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": -10.0,
+   "arg__L": -2.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "co2": 2.0
+  },
+  "fluxes_applied": {
+   "but": -9.1857,
+   "arg__L": -2.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "co2": 2.0,
+   "so4": -0.1536
+  }
+ }
+]

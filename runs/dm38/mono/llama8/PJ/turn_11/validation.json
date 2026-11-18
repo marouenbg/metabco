@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 11,
+  "growth_claimed": 0.7,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: arab__L",
+   "sugar_export: malt",
+   "c_imbalance: in=0 out=149 biomass=29.5"
+  ],
+  "warnings": [
+   "no_transporter: h2",
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "S: credited 0.183 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.7 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "I've chosen to take up L-arabinose, maltose, and hydrogen to support growth. I'll produce acetate, lactate, and formate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "arab__L": 10.0,
+   "malt": 8.0,
+   "h2": 5.0,
+   "ac": 0.5,
+   "lac__L": 0.5,
+   "for": 0.5
+  },
+  "fluxes_applied": {
+   "arab__L": 0.0,
+   "malt": 0.0,
+   "h2": 5.0,
+   "ac": 0.0,
+   "lac__L": 0.0,
+   "for": 0.0,
+   "so4": -0.1832
+  }
+ }
+]

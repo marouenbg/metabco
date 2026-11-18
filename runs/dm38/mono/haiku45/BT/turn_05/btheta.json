@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -3.0,
+  "nh4": -1.8,
+  "ac": 10.0,
+  "ppa": 4.0,
+  "but": 2.0,
+  "co2": 9.1
+ },
+ "growth_rate": 0.19,
+ "rationale": "Continuing proven mixed fermentation of glucose and lactate with ammonium as nitrogen source. Produces acetate, propionate, butyrate, and CO2 as typical saccharolytic fermentation products. Carbon-limited growth at 0.19/h given 57 mmol C input minus 49.1 mmol C output leaves 7.9 mmol C for biomass (41 mmol C/gDW requirement).",
+ "confidence": 0.75
+}

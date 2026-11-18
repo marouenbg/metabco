@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -6.0,
+  "arg__L": -3.0,
+  "nh4": -2.5,
+  "cys__L": -1.5,
+  "ac": 8.0,
+  "ppa": 4.0,
+  "for": 2.0,
+  "succ": 1.5,
+  "co2": 12.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "Mixed fermentation of glucose, lactate, and amino acids. Arginine provides both carbon and nitrogen. Fermentation yields acetate, propionate, formate, succinate as typical Bacteroides products. Carbon and nitrogen balance both satisfied; growth limited by substrate availability and fermentation stoichiometry.",
+ "confidence": 0.72
+}

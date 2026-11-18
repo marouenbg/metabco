@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -5.0,
+  "nh4": -2.0,
+  "ac": 0.04
+ },
+ "growth_rate": 0.44,
+ "rationale": "Fermentative metabolism using L-lactate and D-glucose as carbon sources and ammonium as nitrogen source",
+ "confidence": 0.8
+}

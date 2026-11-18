@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "lac__L": 15.0,
+  "co2": -10.0,
+  "nh4": -2.0
+ },
+ "growth_rate": 0.42,
+ "rationale": "Utilize lactate and carbon dioxide for growth, and produce lactate as a primary fermentation product.",
+ "confidence": 0.9
+}

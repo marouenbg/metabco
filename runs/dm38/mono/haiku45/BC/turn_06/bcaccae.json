@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -4.0,
+  "arab__L": -2.0,
+  "arg__L": -1.5,
+  "cys__L": -0.5,
+  "nh4": -1.0,
+  "ac": 2.0,
+  "ppa": 0.67,
+  "co2": 3.5,
+  "for": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Lactate and arabinose fermentation with amino acid scavenging. Lactate is the preferred substrate; arabinose provides supplementary carbohydrate. Arginine and cysteine supply nitrogen and additional carbon. Mixed-acid fermentation products (acetate, propionate, CO\u2082, formate) are released. Growth rate of 0.50 /h is supported by C and N availability and is intermediate between observed turns 4 and 5.",
+ "confidence": 0.72
+}

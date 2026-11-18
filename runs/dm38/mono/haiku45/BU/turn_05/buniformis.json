@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -6.0,
+  "arg__L": -3.0,
+  "arab__L": -2.0,
+  "nh4": -2.5,
+  "ac": 2.5,
+  "ppa": 2.0,
+  "for": 1.2,
+  "co2": 1.5,
+  "succ": 0.8
+ },
+ "growth_rate": 0.4,
+ "rationale": "Resuming fermentative growth on glucose, lactate, and arginine after transient pause. Balanced uptake of primary sugars and amino acids supports 0.40 /h growth with nitrogen sufficiency. Fermentation products (acetate, propionate, formate, succinate, CO\u2082) reflect typical Bacteroides mixed-acid fermentation. Carbon and nitrogen budgets close.",
+ "confidence": 0.72
+}

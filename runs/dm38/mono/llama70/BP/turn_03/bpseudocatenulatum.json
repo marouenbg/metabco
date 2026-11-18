@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -4.0,
+  "ac": 5.0,
+  "lac__L": 3.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "D-glucose and ammonium uptake support growth and fermentation product formation",
+ "confidence": 0.8
+}

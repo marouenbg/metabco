@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 2,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.174 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Continuing to utilize D-glucose and L-lactate for carbon, L-arginine and ammonium for nitrogen, and L-cysteine for sulfur. Producing butyrate and acetate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -3.0,
+   "lac__L": -1.0,
+   "but": 3.0,
+   "ac": 1.0,
+   "arg__L": -1.0,
+   "nh4": -0.5,
+   "cys__L": -0.5
+  },
+  "fluxes_applied": {
+   "glc__D": -3.0,
+   "lac__L": -1.0,
+   "but": 3.0,
+   "ac": 1.0,
+   "arg__L": -1.0,
+   "nh4": -0.5,
+   "cys__L": -0.5,
+   "pi": -0.1744
+  }
+ }
+]

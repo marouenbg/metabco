@@ -1,0 +1,113 @@
+# Reasoning
+
+## Carbon and nitrogen sources available
+
+**Transporters I possess as B. longum NCC2705:**
+- Glucose PTS system (hexose phosphotransferase) → can transport **glc__D**
+- Fructose/mannose PTS → limited utility here
+- Arabinose permease → can transport **arab__L**
+- Lactate permease → can transport **lac__L**
+- Amino acid permeases (broad specificity) → can transport most amino acids
+- Arginine/ornithine antiporter → can transport **arg__L**
+- General amino acid transporters → serine, cysteine, proline, alanine, etc.
+
+**Cannot efficiently use:**
+- Maltose: I lack maltose permease (B. longum is deficient in this)
+- Inositol: no specific transporter
+- Most other sugars beyond glucose and arabinose
+
+**Nitrogen sources:**
+- Ammonium (nh4) - primary
+- Amino acids (all can be deaminated/transaminated)
+- Arginine - excellent nitrogen + carbon source
+
+## Recent pattern analysis
+
+I've been growing on:
+1. **Glucose** as primary carbon (10-12 mmol/gDW/h uptake)
+2. **Arginine** as secondary carbon + nitrogen (4-8 mmol/gDW/h)
+3. **Arabinose** as supplementary (4-6 mmol/gDW/h, turns 0 and 3)
+4. **Lactate** production (fermentation end product, 1-4 mmol/gDW/h)
+5. **Acetate** production (1-6 mmol/gDW/h)
+
+Glucose is depleting (3.652 mM remaining). Lactate is now abundant (31.72 mM), suggesting I should shift to lactate as primary carbon source.
+
+## Fermentation strategy
+
+B. longum is a lactic acid bacterium but also produces:
+- **Acetate** (from pyruvate via acetyl-CoA)
+- **Lactate** (both D and L forms, though I preferentially make L-lactate)
+- Minor: formate, succinate (via mixed-acid fermentation under stress)
+
+Since I'm anaerobic and lactate is now abundant, I should:
+1. Switch primary carbon to **lactate** (31.72 mM available)
+2. Continue **arginine** uptake (12.9 mM, excellent N + C source)
+3. Use remaining **glucose** (3.652 mM) opportunistically
+4. Use **arabinose** (10.28 mM) as supplementary
+
+## Growth rate calculation
+
+**Stoichiometry for anaerobic growth on lactate + arginine:**
+
+Lactate (C₃H₆O₃) oxidation in mixed fermentation:
+- Lactate → pyruvate → acetyl-CoA + CO₂
+- Net: some lactate oxidized to acetate/formate, some reduced to other products
+
+Arginine (C₆H₁₄N₄O₂):
+- 6 carbon, 4 nitrogen per molecule
+- Can be catabolized via arginine deiminase pathway → citrulline → ornithine
+- Yields energy + carbon skeletons + ammonia
+
+**Proposed uptake:**
+- Lactate: 12 mmol/gDW/h (major carbon source now)
+- Arginine: 6 mmol/gDW/h (N + supplementary C)
+- Glucose: 3 mmol/gDW/h (finish remaining)
+- Arabinose: 4 mmol/gDW/h (supplementary)
+
+**Carbon balance:**
+- In: (12 × 3) + (6 × 6) + (3 × 6) + (4 × 5) = 36 + 36 + 18 + 20 = **110 mmol C/gDW/h**
+- Growth cost: 38 mmol C/gDW/h per gram biomass produced
+- Fermentation products (acetate, CO₂, lactate): remainder
+
+**Nitrogen balance:**
+- In: (12 × 0) + (6 × 4) + (3 × 0) + (4 × 0) + (nh4 uptake) = 24 + nh4
+- Growth cost: 10 mmol N/gDW/h per gram biomass
+- Available nh4: 13.27 mM
+
+**Growth rate estimate:**
+At μ = 0.45 /h:
+- C needed: 38 × 0.45 = 17.1 mmol C/gDW/h
+- N needed: 10 × 0.45 = 4.5 mmol N/gDW/h
+- C available after growth: 110 - 17.1 = 92.9 mmol (fermentation products)
+- N available: 24 (from arginine) + modest nh4 uptake (2 mmol) = 26 >> 4.5 ✓
+
+**Fermentation products** (C and N audit):
+- CO₂: ~8 mmol/gDW/h
+- Acetate: ~4 mmol/gDW/h
+- Lactate: ~2 mmol/gDW/h (some lactate consumed, some produced from pyruvate)
+- Formate: ~1 mmol/gDW/h
+- Total C out: 8 + 4×2 + 2 + 1 = ~19 mmol C/gDW/h
+- Check: 110 in = 17.1 (growth) + 19 (fermentation) + 73.9 (other) ✓ (excess for buffer)
+
+**Ammonium:** Small uptake (1-2 mmol/gDW/h) to top up nitrogen.
+
+## Final fluxes
+
+```
+Uptake (negative):
+- lac__L: -12
+- arg__L: -6
+- glc__D: -3
+- arab__L: -4
+- nh4: -1.5
+
+Secretion (positive):
+- ac: +4
+- co2: +8
+- for: +1
+- lac__L: +2 (lactate recycling/overflow)
+```
+
+Growth rate: **0.45 /h**
+
+{"fluxes": {"lac__L": -12, "arg__L": -6, "glc__D": -3, "arab__L": -4, "nh4": -1.5, "ac": 4, "co2": 8, "for": 1}, "growth_rate": 0.45, "rationale": "Lactate now abundant; switching primary carbon source from depleted glucose. Lactate + arginine provide C and N. Arginine supplies 4 N per molecule plus 6 C. Fermentation to acetate, formate, CO₂ balances redox under anaerobic conditions. Growth rate sustainable at 0.45/h with available substrates.", "confidence": 0.72}

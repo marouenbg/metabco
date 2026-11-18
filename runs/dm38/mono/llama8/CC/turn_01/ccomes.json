@@ -1,0 +1,20 @@
+{
+ "fluxes": {
+  "glc__D": 2.0,
+  "gln__L": 0.5,
+  "lac__L": 1.5,
+  "ser__L": 1.0,
+  "for": 0.5,
+  "h2": 0.5,
+  "ac": 0.0,
+  "but": 0.0,
+  "ppa": 0.0,
+  "etoh": 0.0,
+  "co2": 0.0,
+  "nh4": 0.0,
+  "h2s": 0.0
+ },
+ "growth_rate": 0.6,
+ "rationale": "taking up glucose and glutamine, secreting formate and hydrogen gas, and supplementing with lactate and serine to address the carbon deficit",
+ "confidence": 0.8
+}

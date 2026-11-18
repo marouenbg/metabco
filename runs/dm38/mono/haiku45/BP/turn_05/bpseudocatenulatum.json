@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "arg__L": -2.0,
+  "nh4": -1.5,
+  "ac": 23.0,
+  "lac__L": 14.0,
+  "co2": 10.0,
+  "for": 1.5
+ },
+ "growth_rate": 0.11,
+ "rationale": "Glucose and arginine provide primary carbon and nitrogen. Nitrogen is limiting (3.5 mmol available vs 8 mmol needed per gDW). Fermentation of glucose via bifid shunt produces acetate and lactate as major products. Conservative growth rate of 0.11/h reflects nitrogen limitation and maintenance costs in anaerobic batch culture.",
+ "confidence": 0.72
+}

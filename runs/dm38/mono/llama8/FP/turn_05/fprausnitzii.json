@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "lac__D": -10.0,
+  "but": 5.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.7,
+ "rationale": "I will take up lactate and D-lactate at a high rate to support growth and release butyrate and formate as fermentation products.",
+ "confidence": 0.8
+}

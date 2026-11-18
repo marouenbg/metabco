@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "co2": 0.125,
+  "lac__L": 0,
+  "nh4": -0.05,
+  "ac": 0.5
+ },
+ "growth_rate": 0.125,
+ "rationale": "I chose to take up carbon dioxide and ammonium to support growth, and released acetate and carbon dioxide as fermentation products. I estimated my growth rate based on the available carbon and nitrogen, and performed an audit of the carbon balance to ensure that the carbon in equals the carbon out plus the biomass cost.",
+ "confidence": 0.9
+}

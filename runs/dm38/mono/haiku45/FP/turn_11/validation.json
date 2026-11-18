@@ -1,0 +1,51 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 11,
+  "growth_claimed": 0.12,
+  "growth_allowed": 0.12,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.112 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Late-stage batch culture (44/48 h). Continuing amino acid and acetate fermentation with mixed-acid end products (butyrate, acetate, formate, H\u2082, CO\u2082). Nitrogen becomes limiting; amino acids provide bo",
+  "confidence": 0.65,
+  "fluxes_claimed": {
+   "leu__L": -0.5,
+   "ile__L": -0.4,
+   "val__L": -0.4,
+   "phe__L": -0.4,
+   "tyr__L": -0.4,
+   "lys__L": -0.3,
+   "cys__L": -0.2,
+   "thr__L": -0.2,
+   "ac": -4.0,
+   "for": -1.0,
+   "nh4": -0.3,
+   "co2": 5.0,
+   "but": 2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "leu__L": -0.5,
+   "ile__L": -0.4,
+   "val__L": -0.4,
+   "phe__L": -0.4,
+   "tyr__L": -0.4,
+   "lys__L": -0.3,
+   "cys__L": -0.2,
+   "thr__L": -0.2,
+   "ac": -4.0,
+   "for": -1.0,
+   "nh4": -0.3,
+   "co2": 5.0,
+   "but": 2.0,
+   "h2": 1.0,
+   "pi": -0.1117
+  }
+ }
+]

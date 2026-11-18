@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": 3.0,
+  "arab__L": -5.0,
+  "arg__L": -2.0,
+  "ac": 5.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing lactate and arabinose as primary carbon sources, arginine as nitrogen source, producing acetate and lactate.",
+ "confidence": 0.8
+}

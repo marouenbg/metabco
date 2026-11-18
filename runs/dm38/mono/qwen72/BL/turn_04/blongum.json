@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arab__L": -10.0,
+  "arg__L": -3.0,
+  "nh4": -7.0,
+  "ac": 5.0,
+  "lac__L": 2.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilize glucose and arabinose for carbon, arginine and ammonium for nitrogen, produce acetate and lactate as fermentation products to support moderate growth.",
+ "confidence": 0.9
+}

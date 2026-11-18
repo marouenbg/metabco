@@ -1,0 +1,52 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 8,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: arg__L",
+   "uptake_exceeds_pool: for",
+   "uptake_exceeds_pool: malt",
+   "uptake_exceeds_pool: glc__D",
+   "p_imbalance: in=0 out=0 biomass=0.467"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake arg__L to pool limit -1.91",
+   "clipped uptake for to pool limit -2.44",
+   "clipped uptake malt to pool limit -1.13",
+   "clipped uptake glc__D to pool limit -0.427",
+   "P: growth 0.4 -> 0"
+  ],
+  "rationale": "Late-stage batch culture; carbohydrates depleted; switch to amino acid fermentation (proline, alanine, arginine, cysteine) with formate as electron sink. Butyrate + acetate fermentation. Growth rate r",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "pro__L": -2.0,
+   "ala__L": -1.5,
+   "arg__L": -2.0,
+   "cys__L": -0.8,
+   "for": -2.5,
+   "malt": -1.5,
+   "glc__D": -0.5,
+   "but": 4.5,
+   "ac": 2.8,
+   "co2": 7.2,
+   "h2": 0.15
+  },
+  "fluxes_applied": {
+   "pro__L": -2.0,
+   "ala__L": -1.5,
+   "arg__L": -1.906,
+   "cys__L": -0.8,
+   "for": -2.4375,
+   "malt": -1.1291,
+   "glc__D": -0.4274,
+   "but": 4.5,
+   "ac": 2.8,
+   "co2": 7.2,
+   "h2": 0.15
+  }
+ }
+]

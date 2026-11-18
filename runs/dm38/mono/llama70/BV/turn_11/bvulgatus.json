@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "but": -10.0,
+  "ac": -5.0,
+  "co2": 5.0,
+  "ppa": 5.0,
+  "tyr__L": -1.0,
+  "cys__L": -1.0,
+  "asn__L": -1.0
+ },
+ "growth_rate": 0.55,
+ "rationale": "Utilizing butyrate and acetate as carbon sources, and amino acids as nitrogen sources, to produce propionate and butyrate as fermentation products",
+ "confidence": 0.8
+}

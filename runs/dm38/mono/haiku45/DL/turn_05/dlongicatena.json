@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "arab__L": -5.0,
+  "arg__L": -2.0,
+  "ser__L": -1.0,
+  "nh4": -1.0,
+  "ac": 8.0,
+  "but": 6.0,
+  "for": 4.0,
+  "co2": 25.0
+ },
+ "growth_rate": 0.35,
+ "rationale": "Glucose depleted; switching to lactate + arabinose + amino acid fermentation. Lactate oxidation and pentose fermentation provide 57 mmol C/gDW/h. Growth at 0.35 /h consumes 13.3 mmol C/gDW/h (38\u00d70.35) and 3.5 mmol N/gDW/h. Remaining 43.7 mmol C/gDW/h released as mixed-acid fermentation products (acetate, butyrate, formate, CO\u2082). Nitrogen balanced via arginine + serine + ammonium.",
+ "confidence": 0.68
+}

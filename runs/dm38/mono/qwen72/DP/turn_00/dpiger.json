@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -0.5,
+  "ac": 5.0,
+  "h2": 2.0,
+  "for": 1.0,
+  "h2s": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Using L-lactate and ammonium for growth, producing acetate, hydrogen, formate, and hydrogen sulfide as byproducts.",
+ "confidence": 0.9
+}

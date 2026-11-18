@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "arg__L": -2.0,
+  "pro__L": -1.5,
+  "ser__L": -1.0,
+  "ac": 3.5,
+  "nh4": 2.0,
+  "ppa": 2.0,
+  "but": 1.5,
+  "for": 1.0,
+  "co2": 5.0
+ },
+ "growth_rate": 0.476,
+ "rationale": "Late-exponential amino acid fermentation phase. Uptaking branched-chain and polar amino acids (arginine, proline, serine) for both carbon and nitrogen, supplemented with acetate uptake to manage accumulation. Fermentation yields acetate, propionate, butyrate, formate, and CO\u2082 as end products with excess ammonia release. Carbon and nitrogen budgets balance; growth rate supported by net 20 mmol C/gDW/h available after fermentation losses.",
+ "confidence": 0.72
+}

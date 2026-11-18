@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -7.8,
+  "arg__L": -1.3,
+  "so4": -2.0,
+  "ac": 4.3,
+  "co2": 3.3,
+  "h2s": 2.0,
+  "nh4": 0.5,
+  "pi": -0.4
+ },
+ "growth_rate": 0.28,
+ "rationale": "Lactate fermentation with sulfate reduction; balanced C and N constraints given arginine and ammonium limitation. Acetate and CO2 are fermentation products consistent with incomplete lactate oxidation.",
+ "confidence": 0.72
+}

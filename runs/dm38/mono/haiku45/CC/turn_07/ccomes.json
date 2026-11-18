@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -4.4,
+  "lac__L": -3.3,
+  "arg__L": -2.2,
+  "ser__L": -1.46,
+  "ala__L": -1.1,
+  "but": 2.9,
+  "ac": 2.55,
+  "co2": 5.8,
+  "for": 0.36,
+  "nh4": 4.56
+ },
+ "growth_rate": 0.85,
+ "rationale": "Glucose and lactate nearly exhausted; switching to mixed carbohydrate + amino acid fermentation. Arginine, serine, and alanine provide gluconeogenic carbon and nitrogen. Butyrate and acetate production via mixed-acid fermentation. Growth rate limited by remaining simple sugars and realistic uptake kinetics.",
+ "confidence": 0.72
+}

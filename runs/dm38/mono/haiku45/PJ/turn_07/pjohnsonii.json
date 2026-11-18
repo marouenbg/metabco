@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -9.5,
+  "lac__L": -6.0,
+  "arab__L": -3.0,
+  "arg__L": -2.5,
+  "nh4": -1.0,
+  "ac": 7.0,
+  "ppa": 4.5,
+  "succ": 2.5,
+  "co2": 5.5
+ },
+ "growth_rate": 0.25,
+ "rationale": "Maintain established fermentative metabolism: glucose + lactate + arabinose as primary fermentable carbons; arginine + ammonium for nitrogen. Produce acetate, propionate, succinate via mixed-acid fermentation. Growth rate 0.25 /h is consistent with turns 5\u20136 and supported by available glucose (18.58 mM) and lactate (24.28 mM). Sealed batch culture approaching halfway point; no accumulation of toxic products yet.",
+ "confidence": 0.68
+}

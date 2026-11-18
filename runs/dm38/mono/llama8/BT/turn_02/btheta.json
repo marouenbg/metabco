@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -1.0,
+  "lac__L": 3.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "ppa": 5.0,
+  "for": 2.0,
+  "succ": 2.0,
+  "etoh": 0.0,
+  "co2": 15.0,
+  "h2": 5.0,
+  "h2s": 0.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "B. thetaiotaomicron utilizes D-glucose and Ammonium as primary carbon and nitrogen sources. I release SCFAs, formate, and succinate as fermentation products, and the total carbon flux covers the carbon cost of growth plus the carbon released as products."
+}

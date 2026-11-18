@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "cys__L": -8.4,
+  "ser__L": -6.4,
+  "pro__L": -5.9,
+  "for": 2.0,
+  "ac": 5.0,
+  "nh4": 1.0
+ },
+ "growth_rate": 0.5175,
+ "confidence": 0.8,
+ "rationale": "Utilizing abundant amino acids and formate for growth, producing acetate and formate as fermentation products."
+}

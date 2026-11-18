@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -4.0,
+  "arab__L": -3.0,
+  "arg__L": -2.0,
+  "nh4": -1.5,
+  "ac": 4.0,
+  "for": 1.5,
+  "ppa": 1.5,
+  "co2": 5.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Glucose depleted; switching to lactate and arabinose as primary carbon sources. Heterofermentative fermentation produces acetate, formate, propionate, and CO\u2082. Arginine and ammonium provide nitrogen. Carbon balance: 27 mmol C in, 9 for biomass, 18 as fermentation products. Nitrogen: 3.5 mmol in, 2.4 for biomass, excess released.",
+ "confidence": 0.72
+}

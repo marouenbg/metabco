@@ -1,0 +1,91 @@
+# Metabolic Decision: Clostridium asparagiforme DSM 15981, t=0 h
+
+## Analysis of available substrates and transport capacity
+
+**Carbon sources available:**
+- L-lactate (28.31 mM) — Clostridium species are classical lactate fermenters; I have lactate transporters
+- D-glucose (24.98 mM) — glucose is a primary hexose; I have PTS or other glucose transporters
+- L-arabinose (21.31 mM) — pentose; I have arabinose transporters
+- Maltose (4.382 mM) — disaccharide; I have maltose transporters
+- CO₂ (47.62 mM) — present but not a primary carbon source for heterotrophic growth; used in anaplerotic reactions
+
+**Nitrogen sources available:**
+- Ammonium (9.347 mM) — direct nitrogen source, excellent
+- L-arginine (21.81 mM) — amino acid, can be catabolized for both C and N
+- L-cysteine (8.4 mM) — contains S and N
+- Multiple other amino acids present but in lower abundance
+
+## Fermentation strategy
+
+Clostridium asparagiforme is an obligate anaerobe that ferments sugars and amino acids. Given the anaerobic conditions and my metabolic capabilities:
+
+1. **Primary carbon/energy source:** I will prioritize **D-glucose** (24.98 mM) as the most readily fermentable sugar, supplemented with **L-lactate** (28.31 mM). Both are abundant and I can ferment them efficiently.
+
+2. **Nitrogen source:** I will use **ammonium** (9.347 mM) as the primary nitrogen source, which is most efficient. I may also catabolize some **L-arginine** (21.81 mM) for additional nitrogen and carbon.
+
+3. **Fermentation products:** Classical Clostridium fermentation produces:
+   - **Acetate** (primary product)
+   - **Butyrate** (secondary product)
+   - **Formate** (minor product)
+   - **H₂** and **CO₂** (from NADH reoxidation)
+   - Possibly small amounts of **ethanol** or other reduced products
+
+## Flux calculation
+
+**Uptake strategy:**
+- Glucose: 12 mmol/gDW/h (moderate, sustainable rate)
+- Lactate: 8 mmol/gDW/h (supplementary)
+- Arginine: 3 mmol/gDW/h (for additional N and C)
+- Ammonium: 4 mmol/gDW/h (primary N source)
+
+**Carbon balance:**
+- Total C in: (12 × 6) + (8 × 3) + (3 × 6) = 72 + 24 + 18 = 114 mmol C/gDW/h
+- Biomass cost: 34 mmol C/gDW/h
+- Available for fermentation products: 114 - 34 = 80 mmol C/gDW/h
+
+**Nitrogen balance:**
+- Total N in: 4 (NH₄) + 3 (Arg) = 7 mmol N/gDW/h
+- Biomass cost: 10 mmol N/gDW/h
+- **Problem:** Insufficient nitrogen! Reducing arginine uptake is insufficient.
+
+**Revised uptake (N-limited):**
+- Glucose: 8 mmol/gDW/h
+- Lactate: 5 mmol/gDW/h
+- Arginine: 6 mmol/gDW/h (increased for N)
+- Ammonium: 4 mmol/gDW/h (saturating)
+- Total N: 4 + 6 = 10 mmol N/gDW/h ✓ (exactly meets biomass demand)
+
+**Carbon balance (revised):**
+- Total C in: (8 × 6) + (5 × 3) + (6 × 6) = 48 + 15 + 36 = 99 mmol C/gDW/h
+- Biomass cost: 34 mmol C/gDW/h
+- Available for fermentation: 99 - 34 = 65 mmol C/gDW/h
+
+**Growth rate:**
+- Growth rate = (C_in - C_fermentation) / 34 = 34/34 = **1.0 /h**
+
+**Fermentation product distribution (65 mmol C/gDW/h):**
+- Acetate: 35 mmol/gDW/h (2 C each = 70 mmol C, but I'll use 17.5 mol acetate = 35 C)
+- Butyrate: 15 mmol/gDW/h (4 C each = 60 mmol C, but I'll use 7.5 mol butyrate = 30 C)
+- Formate: 0 mmol/gDW/h
+- H₂: 2 mmol/gDW/h (reoxidation of NADH)
+- CO₂: 5 mmol/gDW/h (from pyruvate decarboxylation)
+
+Verification: 35 + 30 = 65 mmol C ✓
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -5.0,
+    "arg__L": -6.0,
+    "nh4": -4.0,
+    "ac": 17.5,
+    "but": 7.5,
+    "h2": 2.0,
+    "co2": 5.0
+  },
+  "growth_rate": 1.0,
+  "rationale": "Glucose and lactate are primary fermentable substrates. Arginine provides supplementary nitrogen (6 mmol) combined with ammonium (4 mmol) to meet the 10 mmol/gDW/h biomass nitrogen demand. Remaining carbon is fermented to acetate and butyrate with H₂ and CO₂ release for NADH reoxidation. Growth rate is limited by nitrogen availability and supported by the carbon flux.",
+  "confidence": 0.72
+}
+```

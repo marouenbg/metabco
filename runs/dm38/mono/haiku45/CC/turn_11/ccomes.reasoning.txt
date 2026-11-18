@@ -1,0 +1,90 @@
+## Analysis
+
+Let me think through my metabolic situation at t=44 h in this sealed anaerobic batch culture.
+
+**My genome and transporters:**
+Coprococcus comes is a saccharolytic, butyrate-producing bacteroid from the human gut. My known capabilities include:
+- Fermentation of carbohydrates (arabinose, glucose, maltose)
+- Amino acid fermentation
+- Production of butyrate and acetate as major products
+- Amino acid degradation pathways
+
+Looking at recent turns, I've been consuming acetate, arabinose, proline, glycine, leucine, valine, and serine—consistent with mixed-substrate fermentation.
+
+**Available carbon sources I can use:**
+- Carbohydrates: arabinose (5.8 mM), maltose (4.4 mM) — I ferment these
+- Amino acids: abundant supply (phe, tyr, gln, asn, pro, lys, cys, gly, thr, ile, leu, his, met, trp, glu, asp, val)
+- Short-chain fatty acids: butyrate (41 mM), acetate (18 mM), formate (4.8 mM)
+- Lactate (1.3 mM)
+
+I cannot use CO₂ as a primary carbon source (I'm not autotrophic), though I release it.
+
+**Nitrogen sources:**
+- Ammonium (6.7 mM) — primary
+- Amino acids provide both carbon and nitrogen
+
+**Current status at t=44 h (4 h from end):**
+I'm at 4.93 g/L biomass. With only 4 hours remaining and substantial nutrient depletion looming, I should focus on:
+1. Maximizing remaining growth from available substrates
+2. Consuming amino acids and carbohydrates (limited but still present)
+3. Maintaining fermentation product formation
+
+**Growth calculation:**
+Recent turns show growth rates of 0.38–0.85 /h. At this late stage with reduced substrates, I expect 0.35–0.50 /h.
+
+For growth of 0.40 /h on 1 gDW:
+- Carbon needed: 30 × 0.40 = 12 mmol C
+- Nitrogen needed: 8 × 0.40 = 3.2 mmol N
+
+**Substrate strategy:**
+I'll continue mixed fermentation:
+- Uptake arabinose (5.8 mM available, good fermentable sugar)
+- Uptake amino acids (gly, leu, val, pro, asn, gln for nitrogen + carbon)
+- Uptake small amounts of acetate (residual capacity)
+- Release butyrate, acetate, CO₂, and minor formate/lactate
+
+**Carbon balance check (per gDW/h):**
+If I take up:
+- Arabinose: 6 mmol/gDW/h (C₅: 30 C total) = 30 C
+- Amino acids mix: ~8 mmol/gDW/h (avg ~5 C each) = 40 C
+- Total in: ~70 C
+
+Growth cost: 12 C
+Fermentation products (butyrate + acetate + CO₂): ~58 C
+This balances.
+
+**Nitrogen balance:**
+- Ammonium uptake: 2.5 mmol/gDW/h
+- Amino acid uptake (Gly, Leu, Val, Pro, Asn, Gln): ~6 mmol/gDW/h (avg 1 N each) = 6 N
+- Total N in: ~8.5 N
+- Growth cost: 3.2 N
+- Available for fermentation: ~5.3 N (released as NH₄⁺)
+
+**Fermentation products:**
+Classic butyrate-producing fermentation: acetate and butyrate in ~2:1 molar ratio, CO₂, trace formate.
+
+**Growth rate:** 0.42 /h (conservative given substrate limitation)
+
+```json
+{
+  "fluxes": {
+    "arab__L": -6.0,
+    "gly": -1.5,
+    "leu__L": -1.2,
+    "val__L": -0.8,
+    "pro__L": -1.0,
+    "asn__L": -1.2,
+    "gln__L": -1.3,
+    "ac": -2.0,
+    "nh4": -2.5,
+    "but": 4.5,
+    "ac": 2.2,
+    "co2": 5.5,
+    "for": 0.6,
+    "nh4": 5.0
+  },
+  "growth_rate": 0.42,
+  "rationale": "Late-stage batch culture (44/48 h). Fermenting remaining carbohydrates (arabinose) and amino acids (Gly, Leu, Val, Pro, Asn, Gln) via mixed-acid fermentation. Producing butyrate and acetate in characteristic 2:1 ratio with CO₂. Uptake of residual acetate and ammonium supports growth stoichiometry. Carbon and nitrogen balance verified for 0.42 /h growth.",
+  "confidence": 0.72
+}
+```

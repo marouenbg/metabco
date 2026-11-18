@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "cys__L": -2.0,
+  "co2": -1.0,
+  "ac": 5.0,
+  "h2": 2.0,
+  "for": 1.0,
+  "h2s": 1.0,
+  "so4": -1.0
+ },
+ "growth_rate": 0.1163,
+ "rationale": "Optimized use of lactate and ammonium for growth, with cysteine and CO2 as additional inputs. Acetate, hydrogen, formate, and hydrogen sulfide are produced as fermentation products.",
+ "confidence": 0.85
+}

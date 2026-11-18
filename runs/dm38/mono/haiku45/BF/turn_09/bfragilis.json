@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": -6.0,
+  "nh4": -1.5,
+  "gln__L": -1.2,
+  "asn__L": -1.0,
+  "inost": -1.2,
+  "but": 3.0,
+  "for": 1.0,
+  "co2": 2.2
+ },
+ "growth_rate": 0.22,
+ "rationale": "Nitrogen-limited growth on acetate and amino acids. Fermentation yields butyrate and formate. Carbon and nitrogen balance audited.",
+ "confidence": 0.68
+}

@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 5,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.4,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.465 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.105 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing glucose and arabinose for carbon, and arginine for nitrogen. Acetate is the primary fermentation product. Growth rate is constrained by nitrogen balance.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arab__L": -10.0,
+   "lac__L": -2.0,
+   "arg__L": -3.0,
+   "ac": 5.0,
+   "nh4": 7.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arab__L": -10.0,
+   "lac__L": -2.0,
+   "arg__L": -3.0,
+   "ac": 5.0,
+   "nh4": 7.0,
+   "pi": -0.4651,
+   "so4": -0.1047
+  }
+ }
+]

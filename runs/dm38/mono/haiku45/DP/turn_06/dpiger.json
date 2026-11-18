@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -5.5,
+  "arg__L": -1.3,
+  "cys__L": -1.0,
+  "nh4": -1.2,
+  "so4": -2.0,
+  "pi": -0.4,
+  "lac__L": 3.0,
+  "ac": 1.5,
+  "co2": 2.0,
+  "h2s": 2.0
+ },
+ "growth_rate": 0.019,
+ "rationale": "Sulfate-reducing heterotroph oxidizing glucose and amino acids with sulfate as terminal electron acceptor. Limited by nitrogen availability in late-stage batch culture. Conservative uptake rates maintain stoichiometric balance while supporting slow growth.",
+ "confidence": 0.62
+}

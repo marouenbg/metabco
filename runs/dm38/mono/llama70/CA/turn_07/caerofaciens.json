@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "arab__L": -5.0,
+  "cys__L": -1.0,
+  "nh4": -1.0,
+  "ac": 5.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Limited by nitrogen availability",
+ "confidence": 0.8
+}

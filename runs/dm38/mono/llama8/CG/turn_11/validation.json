@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 11,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.4,
+  "ok": false,
+  "violations": [
+   "unknown_metabolite: but__L",
+   "unknown_metabolite: for__L"
+  ],
+  "warnings": [
+   "no_transporter: h2s"
+  ],
+  "repairs": [],
+  "rationale": "I will take up butyrate, formate, and L-asparagine to support growth. I will release acetate, butyrate, and propionate as fermentation products. This strategy will allow me to grow at a rate of 0.4/h ",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but__L": -12.0,
+   "for__L": -18.0,
+   "arg__L": -2.6,
+   "h2": 1.0,
+   "h2s": 0.0,
+   "pi": -0.52,
+   "so4": -0.13
+  },
+  "fluxes_applied": {
+   "arg__L": -2.6,
+   "h2": 1.0,
+   "h2s": 0.0,
+   "pi": -0.52,
+   "so4": -0.13
+  }
+ }
+]

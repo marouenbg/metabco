@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "lac__D": -10.0,
+  "h2s": 10.0,
+  "co2": 10.0,
+  "nh4": -5.75,
+  "h2": 10.0,
+  "ac": 10.0,
+  "for": 10.0,
+  "cys__L": -5.0,
+  "ser__L": -5.0,
+  "gly": -5.0,
+  "sulfate": -10.07
+ },
+ "growth_rate": 0.5,
+ "rationale": "Based on my metabolic capabilities and the available nutrients, I will consume D-glucose, maltose, and other carbon sources to support growth. I will produce acetate, formate, and hydrogen sulfide as fermentation products and consume sulfate as an electron acceptor.",
+ "confidence": 0.8
+}

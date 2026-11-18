@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "phe__L": -2.0,
+  "cys__L": -1.5,
+  "ac": -1.0,
+  "nh4": -0.5,
+  "but": 1.5,
+  "ppa": 1.0
+ },
+ "growth_rate": 0.05,
+ "rationale": "L-phenylalanine, L-cysteine, and acetate uptake support growth and fermentation product production",
+ "confidence": 0.8
+}

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "h2": -10.0,
+  "co2": 0.0,
+  "ac": 5.0,
+  "for": 10.0,
+  "malt": -2.0,
+  "nh4": -4.0,
+  "lac__L": 0.5,
+  "but": 0.5,
+  "h2s": 0.0
+ },
+ "growth_rate": 0.65,
+ "rationale": "Utilizing formate, acetate, and maltose as primary carbon sources, and releasing a mix of formate, acetate, butyrate, and lactate as products. Growth rate estimated based on available substrates and biomass cost."
+}

@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "gly": -2.0,
+  "h2": -5.0,
+  "co2": 3.0,
+  "h2s": 2.0,
+  "nh4": 1.0
+ },
+ "growth_rate": 0.047,
+ "rationale": "Limited by carbon availability, using acetate and glycine as carbon and nitrogen sources",
+ "confidence": 0.8
+}

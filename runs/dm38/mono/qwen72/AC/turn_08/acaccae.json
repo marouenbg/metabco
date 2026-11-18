@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -2.0,
+  "lac__L": -1.0,
+  "arg__L": -1.0,
+  "nh4": -0.5,
+  "but": 2.0,
+  "ac": 1.0,
+  "co2": 1.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.184,
+ "rationale": "Continuing to utilize D-glucose and L-arginine for energy and nitrogen, producing butyrate and acetate as fermentation products, and balancing redox with hydrogen production.",
+ "confidence": 0.9
+}

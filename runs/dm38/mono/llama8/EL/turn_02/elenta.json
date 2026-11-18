@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "co2": 4.0,
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "arab__L": -5.0,
+  "nh4": -8.0,
+  "ac": 6.0,
+  "but": 3.0,
+  "lac__D": 0.0
+ },
+ "growth_rate": 0.6,
+ "rationale": "Conservative estimate based on available nutrients and transport capabilities.",
+ "confidence": 0.8
+}

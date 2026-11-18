@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -15.0,
+  "arg__L": -5.0,
+  "co2": 10.0,
+  "for": 15.0,
+  "ac": 15.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "Utilizing formate and acetate as primary carbon sinks, with a growth rate supported by the uptake of carbon dioxide, L-lactate, and Ammonium.",
+ "confidence": 0.8
+}

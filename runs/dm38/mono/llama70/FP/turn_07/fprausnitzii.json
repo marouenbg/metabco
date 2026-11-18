@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "but": 3.0,
+  "arg__L": -2.0,
+  "ac": 1.0,
+  "ppa": 0.5
+ },
+ "growth_rate": 0.65,
+ "rationale": "Optimizing carbon and nitrogen uptake to support growth and fermentation product formation",
+ "confidence": 0.8
+}

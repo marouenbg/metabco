@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": 0.17,
+  "lac__L": 0.09,
+  "arg__L": 0.05,
+  "for": 0.5,
+  "h2": 0.5
+ },
+ "growth_rate": 0.75,
+ "rationale": "Balanced uptake of glucose, lactate, and arginine to support growth, with release of formate and hydrogen to maintain a balanced metabolism.",
+ "confidence": 0.9
+}

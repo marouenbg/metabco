@@ -1,0 +1,29 @@
+{
+ "fluxes": {
+  "ac": 3.0,
+  "but": 2.0,
+  "ppa": 1.0,
+  "ala__L": -0.5,
+  "pro__L": -0.5,
+  "phe__L": -0.5,
+  "thr__L": -0.5,
+  "leu__L": -0.5,
+  "ile__L": -0.5,
+  "ser__L": -0.5,
+  "val__L": -0.5,
+  "tyr__L": -0.5,
+  "his__L": -0.5,
+  "gln__L": -0.5,
+  "met__L": -0.5,
+  "trp__L": -0.5,
+  "glu__L": -0.5,
+  "asp__L": -0.5,
+  "lac__L": -0.5,
+  "h2": 2.0,
+  "co2": 2.0,
+  "nh4": 0.5
+ },
+ "growth_rate": 0.1,
+ "rationale": "Maximizing carbon and nitrogen uptake from available sources while producing fermentation products and maintaining a balanced growth rate.",
+ "confidence": 0.9
+}

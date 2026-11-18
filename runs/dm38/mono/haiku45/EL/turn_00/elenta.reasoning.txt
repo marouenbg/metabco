@@ -1,0 +1,88 @@
+# Metabolic Decision for Eggerthella lenta DSM 2243
+
+## Analysis
+
+**Available carbon and nitrogen sources:**
+
+Eggerthella lenta is a gram-positive anaerobe known to ferment carbohydrates and amino acids. Looking at what I can realistically transport:
+
+- **Carbohydrates**: D-glucose (24.98 mM) and L-arabinose (21.31 mM) are primary fermentable sugars. I have PTS and other carbohydrate transporters.
+- **Lactate**: L-lactate (28.31 mM) is abundant and I can both ferment and oxidize it anaerobically.
+- **Amino acids**: L-arginine (21.81 mM), L-cysteine (8.4 mM), L-serine (6.4 mM), and others are present. I can transport and metabolize these.
+- **Nitrogen**: Ammonium (9.347 mM) is the primary inorganic nitrogen source; arginine and other amino acids also provide nitrogen.
+
+**Why not certain sources:**
+- Nitrate (0.11 mM) is present but extremely limited and I lack strong nitrate reduction capacity.
+- Trace vitamins and cofactors are present but not limiting.
+
+**Fermentation strategy:**
+
+Eggerthella lenta typically ferments glucose and other carbohydrates to lactate, acetate, and formate under anaerobic conditions. With lactate already present, I can perform mixed fermentation. The redox potential (-200 mV) supports anaerobic fermentation.
+
+My strategy:
+1. **Uptake glucose** (abundant, easy to ferment): ~8 mmol/gDW/h
+2. **Uptake lactate** (abundant, can be fermented further): ~6 mmol/gDW/h
+3. **Uptake arginine** (good nitrogen source): ~4 mmol/gDW/h
+4. **Uptake ammonium** (primary N source): ~2 mmol/gDW/h
+5. **Uptake cysteine** (sulfur + N + C): ~1 mmol/gDW/h
+
+**Carbon and energy balance:**
+
+- Glucose (C₆): 8 mmol/gDW/h = 48 mmol C/gDW/h
+- Lactate (C₃): 6 mmol/gDW/h = 18 mmol C/gDW/h
+- Arginine (C₆): 4 mmol/gDW/h = 24 mmol C/gDW/h
+- Cysteine (C₃): 1 mmol/gDW/h = 3 mmol C/gDW/h
+- **Total carbon in: 93 mmol C/gDW/h**
+
+**Growth calculation:**
+
+Growth requires ~33 mmol C/gDW and ~8 mmol N/gDW per gram dry weight produced.
+
+Nitrogen available:
+- Arginine: 4 mmol/gDW/h × 4 N atoms = 16 mmol N/gDW/h
+- Ammonium: 2 mmol/gDW/h = 2 mmol N/gDW/h
+- Cysteine: 1 mmol/gDW/h × 1 N = 1 mmol N/gDW/h
+- **Total N in: ~19 mmol N/gDW/h**
+
+Growth rate limited by N: 19 / 8 = **2.375 /h** (unrealistic)
+Growth rate limited by C: 93 / 33 = **2.82 /h** (unrealistic)
+
+These are maximum theoretical rates. Realistic anaerobic growth for Eggerthella is 0.3–0.6 /h. I'll use **0.45 /h**.
+
+**Carbon audit at µ = 0.45 /h:**
+- Carbon in: 93 mmol/gDW/h
+- Carbon for growth: 0.45 × 33 = 14.85 mmol C/gDW/h
+- Carbon for fermentation products: 93 − 14.85 = 78.15 mmol C/gDW/h
+
+**Fermentation products:**
+
+Typical Eggerthella fermentation of glucose + lactate yields acetate, formate, and some lactate recycling:
+- Acetate (C₂): ~30 mmol/gDW/h
+- Formate (C₁): ~25 mmol/gDW/h
+- CO₂ (from decarboxylation): ~15 mmol/gDW/h
+- Remaining as lactate or other: ~8 mmol/gDW/h
+
+This accounts for ~78 mmol C/gDW/h ✓
+
+Nitrogen balance: 19 mmol N in − (0.45 × 8) = 15.4 mmol N excess → release as NH₄ or urea.
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -6.0,
+    "arg__L": -4.0,
+    "nh4": -2.0,
+    "cys__L": -1.0,
+    "ac": 30.0,
+    "for": 25.0,
+    "co2": 15.0,
+    "nh4": 8.0
+  },
+  "growth_rate": 0.45,
+  "rationale": "Eggerthella lenta ferments glucose, arabinose, and lactate anaerobically to acetate, formate, and CO₂. With abundant glucose (25 mM), lactate (28 mM), and arginine (22 mM), I prioritize these substrates. Growth rate of 0.45 /h is realistic for anaerobic fermentation; carbon balance: 93 mmol C in supports 14.85 mmol C for growth + 78 mmol C for fermentation products. Nitrogen from arginine and ammonium supports biosynthesis; excess N released as ammonia.",
+  "confidence": 0.72
+}
+```

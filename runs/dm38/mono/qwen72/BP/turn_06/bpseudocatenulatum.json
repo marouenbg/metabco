@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": 1.0,
+  "nh4": -2.0,
+  "arg__L": -0.5,
+  "ac": 2.0,
+  "for": 1.5,
+  "co2": 0.5
+ },
+ "growth_rate": 0.083,
+ "rationale": "Continuing to utilize D-glucose and L-lactate for carbon, ammonium and L-arginine for nitrogen, and producing acetate, formate, and L-lactate as fermentation products to maintain a balanced metabolism.",
+ "confidence": 0.9
+}

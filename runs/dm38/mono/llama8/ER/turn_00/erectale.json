@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "co2": 10.0,
+  "glc__D": 5.0,
+  "lac__L": 10.0,
+  "ac": 10.0,
+  "lac__D": 10.0,
+  "but": 5.0,
+  "h2": 5.0,
+  "nh4": 1.0
+ },
+ "growth_rate": 0.85,
+ "rationale": "Eubacterium rectale will take up CO2, D-glucose, and L-lactate to meet the carbon requirement. The growth rate of 0.85/h is chosen to balance the carbon and nitrogen uptake rates.",
+ "confidence": 0.9
+}

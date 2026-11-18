@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": 2.0,
+  "ppa": 2.0,
+  "lac__L": -3.0,
+  "nh4": -2.0,
+  "gln__L": -0.5,
+  "glu__L": -0.5,
+  "but": 1.0
+ },
+ "growth_rate": 0.286,
+ "rationale": "Utilizing abundant acetate, propionate, and lactate for carbon and ammonium and amino acids for nitrogen to support growth and produce typical fermentation products.",
+ "confidence": 0.85
+}

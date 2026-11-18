@@ -1,0 +1,112 @@
+# Reasoning
+
+## 1. Carbon and nitrogen sources I can transport
+
+**Clostridium hiranonis** is a strict anaerobe known for saccharolytic and amino acid fermentation. Based on my genome and the literature, I can transport:
+
+**Primary carbon sources:**
+- D-glucose (glc__D): 23.19 mM — readily fermented via glycolysis
+- L-lactate (lac__L): 26.9 mM — can be oxidized or fermented
+- L-arabinose (arab__L): 21.31 mM — pentose fermentation
+- Maltose (malt): 4.382 mM — disaccharide
+- Amino acids as carbon/energy: L-arginine, L-cysteine, L-serine, L-proline, etc.
+
+**Nitrogen sources:**
+- Ammonium (nh4): 8.682 mM — direct assimilation
+- Amino acids: L-arginine (20.9 mM), L-cysteine (8.4 mM), L-serine (6.4 mM), L-proline (5.9 mM), and many others
+
+**Cannot efficiently use:**
+- CO₂ alone (I am not autotrophic; it's a product, not a primary source)
+- Acetate, butyrate, formate at significant rates (these are fermentation end-products I produce, not primary substrates for this species)
+
+## 2. Known fermentation products
+
+*Clostridium hiranonis* performs mixed-acid fermentation of sugars and amino acids, producing:
+- **Acetate** (major)
+- **Butyrate** (major)
+- **Formate** (minor)
+- **CO₂** (from decarboxylation)
+- **H₂** (from pyruvate oxidation and electron disposal)
+- Possibly **lactate** (if glucose is limiting and lactate is regenerated)
+
+## 3. Strategy for this turn
+
+At turn 2 (t = 8 h), I have:
+- Abundant sugars: glucose (23.19), lactate (26.9), arabinose (21.31)
+- Abundant amino acids: arginine (20.9), cysteine (8.4), serine (6.4)
+- Limited ammonium (8.682)
+
+**Carbon limitation:** The sugars are abundant; I should prioritize them. Glucose is the preferred substrate.
+
+**Nitrogen limitation:** Ammonium is limited (8.682 mM). I can use amino acids as both carbon and nitrogen, but I must be careful not to waste them purely for carbon when ammonium is scarce.
+
+**Growth calculation:**
+- Growth requires ~38 mmol C/gDW and ~10 mmol N/gDW
+- Current biomass: 0.1792 gDW/L
+- If I grow at μ = 0.60 /h for 4 h: ΔX = 0.1792 × (e^(0.60×4) − 1) ≈ 0.1792 × 10.0 ≈ 1.79 gDW/L (too high; limited by N)
+
+**Nitrogen audit:**
+- Available NH₄: 8.682 mM
+- For growth: 10 mmol N per gDW; I can support ~0.87 gDW new biomass
+- But I also need to consider amino acid uptake as N sources
+
+**Realistic growth rate:**
+With limited ammonium and abundant carbon, I estimate μ ≈ 0.50 /h is sustainable.
+
+**Carbon audit for μ = 0.50 /h over 4 h:**
+- Current biomass: 0.1792 gDW/L
+- New biomass: 0.1792 × e^(0.50×4) ≈ 0.1792 × 7.39 ≈ 1.32 gDW/L
+- Growth increment: ~1.14 gDW/L
+- Carbon for growth: 1.14 × 38 ≈ 43.3 mmol C
+- Typical fermentation: glucose → acetate + butyrate + CO₂ + H₂ + formate
+  - 1 glucose (180 g/mol, 6 C) → ~2.5 acetate (2.5 × 2 = 5 C) + ~1 butyrate (1 × 4 = 4 C) + ~1 CO₂ (1 C) + formate + H₂
+  - Rough yield: 6 C in → ~11 C out (accounting for recycling and mixed products)
+
+**Uptake plan:**
+- Glucose: 8.0 mmol/gDW/h (sustainable, matches turn 1)
+- Lactate: 4.0 mmol/gDW/h (secondary)
+- Arginine: 2.0 mmol/gDW/h (for N and C)
+- Cysteine: 1.0 mmol/gDW/h (for S and N)
+- Ammonium: 3.0 mmol/gDW/h (primary N)
+
+**Carbon in:** 8×6 + 4×3 + 2×6 + 1×3 = 48 + 12 + 12 + 3 = 75 mmol C/gDW/h
+**Nitrogen in:** 3 (NH₄) + 2 (Arg) + 1 (Cys) = 6 mmol N/gDW/h
+
+For μ = 0.50 /h:
+- Carbon cost: 0.50 × 38 = 19 mmol C/gDW/h
+- Nitrogen cost: 0.50 × 10 = 5 mmol N/gDW/h
+- Net available: 75 − 19 = 56 mmol C/gDW/h for fermentation products
+- Net available: 6 − 5 = 1 mmol N/gDW/h (tight, but OK)
+
+**Secretion plan** (to balance carbon):
+- Acetate: +15.0 mmol/gDW/h (30 C)
+- Butyrate: +6.0 mmol/gDW/h (24 C)
+- CO₂: +2.0 mmol/gDW/h (2 C)
+- Formate: +1.0 mmol/gDW/h (1 C)
+- H₂: +4.0 mmol/gDW/h (0 C, but electron sink)
+
+**Total C out:** 30 + 24 + 2 + 1 = 57 mmol C/gDW/h ≈ 56 (balanced within rounding)
+
+This is consistent with turn 1 behavior and sustainable.
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -4.0,
+    "arg__L": -2.0,
+    "cys__L": -1.0,
+    "nh4": -3.0,
+    "ac": 15.0,
+    "but": 6.0,
+    "co2": 2.0,
+    "for": 1.0,
+    "h2": 4.0
+  },
+  "growth_rate": 0.50,
+  "rationale": "Glucose and lactate are abundant primary substrates. Arginine and cysteine provide supplemental N and C. Ammonium is limited (~8.7 mM) and constrains growth. Mixed-acid fermentation of sugars and amino acids yields acetate, butyrate, formate, CO₂, and H₂. Carbon balance: 75 mmol in − 19 (growth) − 57 (products) ≈ 0. Nitrogen: 6 mmol in − 5 (growth) = 1 mmol margin. Growth rate of 0.50 /h is conservative but sustainable over 4 h in this N-limited batch.",
+  "confidence": 0.68
+}
+```

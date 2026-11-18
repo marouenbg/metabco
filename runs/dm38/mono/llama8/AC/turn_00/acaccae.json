@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": 15.0,
+  "nh4": -5.0,
+  "malt": -5.0,
+  "co2": -10.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "anaerobic fermentation of CO2, maltose, and ammonium, with lactate as the primary fermentation product",
+ "confidence": 0.9
+}

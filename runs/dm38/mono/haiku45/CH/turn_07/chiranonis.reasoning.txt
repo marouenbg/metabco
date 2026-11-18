@@ -1,0 +1,108 @@
+# Reasoning through my metabolic state
+
+## What I can transport and what I cannot
+
+**C. hiranonis** is a strict anaerobe that specializes in degradation of complex carbohydrates and amino acids. My genome encodes:
+- Transporters for sugars (arabinose, maltose, likely glucose via PTS or symporters)
+- Amino acid permeases (broad specificity for branched-chain and aromatic amino acids)
+- Organic acid transporters (acetate, formate, lactate symporters)
+- Likely H₂/formate antiporters
+
+**Cannot use efficiently:**
+- CO₂ directly as a carbon source (I lack RuBisCO; CO₂ is mainly a fermentation product)
+- Butyrate and acetate as primary growth substrates (these are my own fermentation end-products; I can use them only in mixed-acid fermentation contexts, not as main carbon)
+- Inositol (no clear evidence of inositol transporters in my genome)
+
+**Can use:**
+- L-arabinose (21.31 mM) — abundant, fermentable sugar
+- Amino acids (phenylalanine, proline, leucine, tyrosine, cysteine, valine, lysine, threonine, isoleucine, histidine, methionine, tryptophan, glutamate, serine, aspartate, glutamine, asparagine, glycine) — many available
+- Maltose (4.382 mM) — fermentable
+- Formate (8.604 mM) — can be oxidized or used in mixed fermentation
+- Ammonium (4.521 mM) — nitrogen source
+- H₂ (21.81 mM) — can be produced or consumed depending on redox balance
+
+## Known fermentation products
+
+C. hiranonis ferments carbohydrates and amino acids to:
+- **Acetate** (major)
+- **Butyrate** (major, especially from amino acid fermentation)
+- **Formate** (minor)
+- **H₂** (minor, from pyruvate formate-lyase pathway)
+- **CO₂** (from decarboxylation)
+- Trace lactate under certain conditions
+
+## Current growth state and strategy
+
+At turn 7 (28 h), I have biomass (2.582 gDW/L) but recent turns show zero growth. The issue: I've been attempting to grow on fermentation products (acetate, butyrate) which are not primary substrates. My recent fluxes show I'm mostly rearranging the metabolic landscape without net growth.
+
+**Strategy for next 4 h:**
+- Focus on **L-arabinose** (21.31 mM available): abundant, fermentable hexose-equivalent
+- Use amino acids as secondary carbon + nitrogen sources, especially **glycine, serine, aspartate** (low MW, available in reasonable amounts)
+- Consume **ammonium** (4.521 mM) for biomass nitrogen
+- Balance redox by producing H₂ and formate
+
+## Growth calculation
+
+**Arabinose fermentation pathway (simplified):**
+Arabinose → pyruvate → acetate + butyrate + formate + CO₂ + H₂
+
+Assume rough stoichiometry:
+- 1 arabinose (C₅H₁₀O₅, MW 150) yields ~2.5 acetyl units
+- Net: C₅ → 2 Ac (C₂) + products
+- Typical yield: ~0.4 g biomass per g sugar
+
+**Available arabinose:** 21.31 mmol/L = 3.20 g/L (in 1 mL vessel)
+**My current density:** 2.582 gDW/L
+**Arabinose uptake rate:** ~8 mmol/gDW/h (realistic for sugar fermentation)
+
+**Nitrogen requirement:**
+- Growth demand: ~10 mmol N per g biomass
+- Ammonium available: 4.521 mmol/L
+- At 2.582 gDW/L, I need 25.8 mmol N total for 1 g new biomass
+- Ammonium limits severely: only ~0.45 gDW can be made
+
+**Revised uptake plan:**
+- Arabinose: -8 mmol/gDW/h
+- Ammonium: -2.0 mmol/gDW/h (limited)
+- Glycine (cheap N source): -1.5 mmol/gDW/h
+- Serine (N + C): -1.0 mmol/gDW/h
+
+**Carbon balance:**
+- In: 8 Arab (40 C) + 1.5 Gly (3 C) + 1.0 Ser (3 C) = 46 mmol C
+- Biomass cost: 38 mmol C per gDW growth
+- Fermentation product C: 46 - 38 = 8 mmol C (release as acetate, formate, CO₂)
+
+**Growth rate:** 
+- Carbon available for growth: ~46 mmol C / 38 mmol C per gDW = **1.21 gDW possible**
+- But nitrogen limits: 4.521 mmol NH₄ + amino acid N ≈ 6 mmol N total / 10 mmol N per gDW = **0.6 gDW max**
+- Growth rate: 0.6 gDW / 4 h = **0.15 /h** (conservative, accounting for maintenance)
+
+## Audit
+
+**Carbon in (mmol/gDW/h):**
+- Arabinose: 8 × 5 = 40
+- Glycine: 1.5 × 2 = 3
+- Serine: 1.0 × 3 = 3
+- **Total: 46**
+
+**Carbon out (mmol/gDW/h):**
+- Biomass at 0.15 /h growth: 0.15 × 38 = 5.7
+- Fermentation products: 46 - 5.7 = 40.3
+  - Acetate: 18
+  - Formate: 12
+  - CO₂: 10
+- **Total: 46** ✓
+
+**Nitrogen in (mmol/gDW/h):**
+- Ammonium: 2.0
+- Glycine: 1.5 × 1 = 1.5
+- Serine: 1.0 × 1 = 1.0
+- **Total: 4.5**
+
+**Nitrogen out (mmol/gDW/h):**
+- Biomass at 0.15 /h: 0.15 × 10 = 1.5
+- **Total: 1.5** ✓ (excess N remains in solution)
+
+```json
+{"fluxes": {"arab__L": -8.0, "nh4": -2.0, "gly": -1.5, "ser__L": -1.0, "ac": 18.0, "for": 12.0, "co2": 10.0}, "growth_rate": 0.15, "rationale": "Arabinose fermentation to acetate, formate, and CO2 with amino acid co-metabolism. Nitrogen-limited growth constrained by ammonium availability. Balanced redox through H2-formate equilibrium at low pO2.", "confidence": 0.62}
+```

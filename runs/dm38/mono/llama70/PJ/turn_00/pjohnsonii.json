@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "nh4": -2.0,
+  "ac": 10.0,
+  "co2": 10.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "Anaerobic fermentation of glucose to acetate and CO2, with ammonium as a nitrogen source",
+ "confidence": 0.8
+}

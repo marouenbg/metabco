@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -2.0,
+  "arg__L": -1.0,
+  "cys__L": -0.5,
+  "nh4": -0.5,
+  "but": 2.0,
+  "ac": 1.0,
+  "co2": 1.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.2,
+ "rationale": "Utilizing D-glucose and L-arginine for carbon and nitrogen, producing butyrate, acetate, CO2, and H2. Carbon and nitrogen balances support the growth rate.",
+ "confidence": 0.9
+}

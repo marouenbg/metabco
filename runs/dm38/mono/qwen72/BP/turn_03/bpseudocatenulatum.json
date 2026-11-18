@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "ac": 2.0,
+  "lac__L": 1.5,
+  "for": 1.5,
+  "nh4": -2.0
+ },
+ "growth_rate": 0.1,
+ "confidence": 0.9,
+ "rationale": "Utilizing D-glucose for fermentation to produce acetate, lactate, and formate, while using ammonium for nitrogen requirements."
+}

@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 0,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.3,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.203 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0775 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Glucose is the primary fermentable carbon source in excess. Heterofermentative glucose metabolism produces lactate, acetate, and CO2. Growth rate of 0.30/h is supported by 8 mmol/gDW/h glucose uptake ",
+  "confidence": 0.65,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "nh4": -2.5,
+   "lac__L": 6.0,
+   "ac": 3.0,
+   "co2": 12.0
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "nh4": -2.5,
+   "lac__L": 6.0,
+   "ac": 3.0,
+   "co2": 12.0,
+   "pi": -0.2027,
+   "so4": -0.0775
+  }
+ }
+]

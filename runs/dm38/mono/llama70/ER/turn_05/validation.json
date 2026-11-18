@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "erectale",
+  "turn": 5,
+  "growth_claimed": 0.121,
+  "growth_allowed": 0.121,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.113 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0254 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing acetate, butyrate, and L-arginine as primary carbon and nitrogen sources",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "but": -2.0,
+   "arg__L": -1.0,
+   "ppa": 0.0,
+   "co2": 2.0,
+   "nh4": -0.5
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "but": -2.0,
+   "arg__L": -1.0,
+   "ppa": 0.0,
+   "co2": 2.0,
+   "nh4": -0.5,
+   "pi": -0.1126,
+   "so4": -0.0254
+  }
+ }
+]

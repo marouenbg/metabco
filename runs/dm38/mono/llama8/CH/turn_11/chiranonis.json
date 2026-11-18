@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -19.0,
+  "lac__L": -14.0,
+  "nh4": -4.39,
+  "ac": 3.0,
+  "but": 0.5,
+  "for": 0.5,
+  "lac__D": 5.0
+ },
+ "growth_rate": 0.173,
+ "rationale": "Taking up D-glucose, L-lactate, and Ammonium to support growth and producing fermentation products.",
+ "confidence": 0.8
+}

@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "ac": 5,
+  "cys__L": -2,
+  "phe__L": -1,
+  "val__L": -1,
+  "leu__L": -1,
+  "tyr__L": -1,
+  "asn__L": -1,
+  "thr__L": -1,
+  "for": 2,
+  "lac__L": 2,
+  "co2": 2,
+  "h2s": 1
+ },
+ "growth_rate": 0.5,
+ "confidence": 0.8,
+ "rationale": "Utilizing available amino acids and acetate for a moderate growth rate, ensuring efficient carbon and nitrogen use."
+}

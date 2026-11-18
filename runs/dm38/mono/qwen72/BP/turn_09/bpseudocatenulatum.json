@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": -2.0,
+  "nh4": -2.0,
+  "ac": 2.0,
+  "for": 1.5,
+  "co2": 0.5
+ },
+ "growth_rate": 0.083,
+ "rationale": "Utilizing abundant D-glucose and L-lactate for energy, while maintaining a balanced carbon and nitrogen uptake to support growth and fermentation product release.",
+ "confidence": 0.9
+}

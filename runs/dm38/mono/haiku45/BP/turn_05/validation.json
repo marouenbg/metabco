@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 5,
+  "growth_claimed": 0.11,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=60 out=99.5 biomass=3.25"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0739 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0284 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.11 -> 0",
+   "C: secretions scaled by 0.633"
+  ],
+  "rationale": "Glucose and arginine provide primary carbon and nitrogen. Nitrogen is limiting (3.5 mmol available vs 8 mmol needed per gDW). Fermentation of glucose via bifid shunt produces acetate and lactate as ma",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "arg__L": -2.0,
+   "nh4": -1.5,
+   "ac": 23.0,
+   "lac__L": 14.0,
+   "co2": 10.0,
+   "for": 1.5
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "arg__L": -2.0,
+   "nh4": -1.5,
+   "ac": 14.5628,
+   "lac__L": 8.8643,
+   "co2": 6.3317,
+   "for": 0.9497,
+   "pi": -0.0739,
+   "so4": -0.0284
+  }
+ }
+]

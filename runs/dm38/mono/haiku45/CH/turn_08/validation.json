@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 8,
+  "growth_claimed": 0.1,
+  "growth_allowed": 0.1,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: arab__L",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.117 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Fermenting arabinose (primary C source) and scavenging amino acids (N source) under severe N limitation. Growth rate limited by ammonium depletion and residual amino acid N. Fermentation products (ace",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "arab__L": -8.0,
+   "leu__L": -1.5,
+   "pro__L": -1.0,
+   "cys__L": -0.8,
+   "nh4": -0.6,
+   "ac": 3.5,
+   "for": 2.8,
+   "co2": 2.1,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "arab__L": -8.0,
+   "leu__L": -1.5,
+   "pro__L": -1.0,
+   "cys__L": -0.8,
+   "nh4": -0.6,
+   "ac": 3.5,
+   "for": 2.8,
+   "co2": 2.1,
+   "h2": 0.5,
+   "pi": -0.1166
+  }
+ }
+]

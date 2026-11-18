@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "co2": 10.0,
+  "lac__L": 8.0,
+  "nh4": 2.0,
+  "ac": 4.0,
+  "but": 4.0,
+  "for": 4.0,
+  "h2": 0.5,
+  "pi": -0.41
+ },
+ "growth_rate": 0.1955,
+ "rationale": "I chose to take up CO2, L-lactate, and Ammonium at rates of 10 mmol/gDW/h, 8 mmol/gDW/h, and 2 mmol/gDW/h, respectively. I will produce acetate, butyrate, and formate at rates of 4 mmol/gDW/h. The growth rate will be 0.1955 gDW/h.",
+ "confidence": 0.9
+}

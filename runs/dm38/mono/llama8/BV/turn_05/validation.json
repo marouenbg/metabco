@@ -1,0 +1,55 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 5,
+  "growth_claimed": 0.125,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: glc__D",
+   "c_imbalance: in=0 out=70 biomass=5.06"
+  ],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: etoh",
+   "no_transporter: h2s"
+  ],
+  "repairs": [
+   "P: credited 0.114 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0274 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 9.05 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.125 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "D-glucose (glc__D) and Ammonium (nh4) uptake supports growth at 0.125/h, with acetate (ac) release.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": 10.0,
+   "nh4": 8.0,
+   "ac": 5.0,
+   "but": 0.0,
+   "lac__L": 0.0,
+   "for": 0.0,
+   "succ": 0.0,
+   "etoh": 0.0,
+   "co2": 0.0,
+   "h2": 0.0,
+   "h2s": 0.0
+  },
+  "fluxes_applied": {
+   "glc__D": 0.0,
+   "nh4": -1.0546,
+   "ac": 0.0,
+   "but": 0.0,
+   "lac__L": 0.0,
+   "for": 0.0,
+   "succ": 0.0,
+   "etoh": 0.0,
+   "co2": 0.0,
+   "h2": 0.0,
+   "h2s": 0.0,
+   "pi": -0.1136,
+   "so4": -0.0274
+  }
+ }
+]

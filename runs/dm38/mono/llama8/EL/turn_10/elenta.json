@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": -28.49,
+  "for": -23.6,
+  "malt": -4.382,
+  "co2": 92.27,
+  "h2": 0.43,
+  "nh4": 14.27
+ },
+ "growth_rate": 0.75,
+ "rationale": "Utilizing a mix of acetate, formate, and maltose as carbon sources, and releasing carbon dioxide and hydrogen as fermentation products, supports a growth rate of 0.75/h while ensuring mass balance.",
+ "confidence": 0.9
+}

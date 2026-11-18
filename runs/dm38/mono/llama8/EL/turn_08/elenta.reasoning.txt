@@ -1,0 +1,20 @@
+As Eggerthella lenta DSM 2243, I am a gram-positive, facultative anaerobe that thrives in a variety of environments. I have a range of metabolic capabilities, including the ability to utilize various carbon and nitrogen sources, as well as to produce a range of fermentation products.
+
+Given the current environment, I can utilize the following carbon sources: CO2, glucose (via my glucose transporter), arabinose, acetate, cysteine, inositol, proline, serine, alanine, phenylalanine, maltose, leucine, tyrosine, valine, butyrate, asparagine, lysine, threonine, isoleucine, formate, histidine, methionine, tryptophan, glutamate, aspartate, and nitrate. However, I can only utilize a limited subset of these sources through my transporters. Specifically, I can take up CO2, glucose, arabinose, acetate, cysteine, inositol, proline, serine, alanine, phenylalanine, maltose, leucine, tyrosine, valine, butyrate, asparagine, lysine, threonine, isoleucine, formate, histidine, methionine, tryptophan, glutamate, and aspartate.
+
+As for my nitrogen sources, I can utilize ammonia (NH4) and nitrate (NO3), as well as a range of amino acids. However, I can only take up ammonia and nitrate through my transporters.
+
+In terms of fermentation products, I am known to produce a range of compounds, including acetate, butyrate, formate, lactate, and succinate. However, the specific products I produce depend on the carbon source I am utilizing.
+
+Given the current environment, I will choose to take up CO2, glucose, and ammonia, and to produce acetate, formate, and hydrogen. This will allow me to grow at a rate of approximately 0.75 /h, based on the growth costs of carbon and nitrogen.
+
+Here is the audit of my carbon balance:
+
+* Carbon in: CO2 (74.62 mmol/L) x 4.00 h = 298.48 mmol/gDW, glucose (17.37 mmol/L) x 4.00 h = 69.48 mmol/gDW, total carbon in = 367.96 mmol/gDW
+* Carbon out: acetate (5.9 mmol/L) x 4.00 h = 23.60 mmol/gDW, formate (1.08 mmol/L) x 4.00 h = 4.32 mmol/gDW, hydrogen (0.1076 mmol/L) x 4.00 h = 0.43 mmol/gDW, total carbon out = 28.35 mmol/gDW
+* Carbon growth: 33 mmol/gDW/h x 0.75/h = 24.75 mmol/gDW/h
+* Total carbon balance: 367.96 mmol/gDW - 28.35 mmol/gDW - 24.75 mmol/gDW = 314.86 mmol/gDW
+
+Therefore, my chosen exchange fluxes for the next 4.00 h are:
+
+{"fluxes": {"co2": -296.32, "glc__D": -68.98, "nh4": -19.65, "ac": 23.60, "for": 4.32, "h2": 0.43}, "growth_rate": 0.75, "rationale": "I will take up CO2, glucose, and ammonia, and produce acetate, formate, and hydrogen. This will allow me to grow at a rate of approximately 0.75 /h.", "confidence": 0.9}

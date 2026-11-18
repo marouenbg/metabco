@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "but": 3.0,
+  "ppa": 2.0,
+  "arg__L": -2.0,
+  "leu__L": -1.0
+ },
+ "growth_rate": 0.131,
+ "rationale": "Balanced uptake of acetate, butyrate, and propionate for carbon, and L-arginine and L-leucine for nitrogen to support growth and fermentation product release.",
+ "confidence": 0.9
+}

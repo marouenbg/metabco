@@ -1,0 +1,121 @@
+# Metabolic reasoning for Bacteroides vulgatus at t=28h
+
+## Assessment of current state
+I am at 3.708 gDW/L, well-established in this batch culture. The environment shows:
+- Abundant short-chain fatty acids (acetate 54.5, butyrate 15.2, propionate 13.5 mM)
+- Diverse amino acids (phenylalanine, tyrosine, proline, valine, etc.)
+- Some simple sugars (maltose 1.03 mM)
+- Trace vitamins and cofactors
+- Anaerobic conditions (redox -200 mV, O₂ = 0)
+
+## Carbon and nitrogen sources I can transport
+
+**Primary carbon sources (I have transporters for):**
+- **Butyrate, propionate, acetate**: I can ferment these via my metabolic pathways. These are my preferred substrates as a saccharolytic and proteolytic Bacteroides.
+- **Amino acids**: I have broad amino acid transport capacity (evident from turns 5-6 where I consumed cysteine, serine, alanine, glycine). Phenylalanine, tyrosine, proline, valine, leucine, lysine, threonine, etc. are all accessible.
+- **Maltose**: Limited but usable (turn 6 showed -1.50 uptake).
+
+**Nitrogen sources:**
+- **Amino acids themselves** provide nitrogen as I catabolize them
+- **Ammonium (nh4)**: Can be taken up directly
+- **Glutamine, asparagine**: Good N sources
+
+**Sources I cannot use well:**
+- **Nitrate (no3)**: Present but at 0.11 mM; Bacteroides vulgatus lacks robust nitrate reductase pathways in anaerobic conditions
+- **Orotate, nucleobases**: These are salvageable but not primary growth drivers
+
+## Fermentation products this species makes
+B. vulgatus is a saccharolytic and proteolytic anaerobe. Under anaerobic conditions, it ferments:
+- **Acetate** (primary product, already abundant)
+- **Propionate** (secondary, from branched amino acids and odd-chain substrates)
+- **Butyrate** (from acetyl-CoA condensation)
+- **Succinate** (from PEP carboxylase during amino acid fermentation)
+- **Lactate** (from pyruvate, minor)
+- **Formate** (minor, from formate lyase)
+- **CO₂** (from decarboxylation)
+- **H₂** (trace, under low redox)
+
+## Metabolic strategy for next 4 hours
+
+**Current situation:**
+- Acetate/butyrate/propionate are abundant but represent end products; further accumulation suggests I should shift toward amino acid catabolism.
+- Turn 6 showed 0.440 /h growth consuming butyrate, propionate, maltose, and amino acids.
+- I have 20 hours left (28→48h); I need to maximize remaining growth before substrates fully deplete.
+
+**Chosen strategy:**
+1. **Consume butyrate and propionate** (15.2 and 13.5 mM available): These will be fermented to acetate, succinate, and other products.
+2. **Consume amino acids** (especially branched-chain: leucine, isoleucine, valine, and aromatic: phenylalanine, tyrosine): These provide both C and N and are increasingly important as simple sugars decline.
+3. **Consume maltose** (1.03 mM): Residual carbohydrate.
+4. **Release acetate, succinate, and CO₂**: Expected fermentation products.
+
+**Carbon and nitrogen audit:**
+
+Uptake targets:
+- Butyrate: -3.5 mmol/gDW/h (C₄ = 14 C per molecule)
+- Propionate: -2.5 mmol/gDW/h (C₃ = 9 C per molecule)
+- Leucine: -1.0 mmol/gDW/h (C₆ = 6 C, 1 N)
+- Isoleucine: -0.8 mmol/gDW/h (C₆ = 6 C, 1 N)
+- Valine: -0.7 mmol/gDW/h (C₅ = 5 C, 1 N)
+- Phenylalanine: -0.5 mmol/gDW/h (C₉ = 9 C, 1 N)
+- Maltose: -0.5 mmol/gDW/h (C₁₂ = 12 C per molecule)
+- Tyrosine: -0.3 mmol/gDW/h (C₉ = 9 C, 1 N)
+
+**Carbon in:**
+- Butyrate: 3.5 × 14 = 49 mmol C
+- Propionate: 2.5 × 9 = 22.5 mmol C
+- Leucine: 1.0 × 6 = 6 mmol C
+- Isoleucine: 0.8 × 6 = 4.8 mmol C
+- Valine: 0.7 × 5 = 3.5 mmol C
+- Phenylalanine: 0.5 × 9 = 4.5 mmol C
+- Maltose: 0.5 × 12 = 6 mmol C
+- Tyrosine: 0.3 × 9 = 2.7 mmol C
+- **Total C in: 99.0 mmol/gDW/h**
+
+**Nitrogen in:**
+- Leucine + Isoleucine + Valine + Phenylalanine + Tyrosine: (1.0 + 0.8 + 0.7 + 0.5 + 0.3) = 3.3 mmol N/gDW/h
+
+**Growth calculation:**
+- Growth cost: 41 mmol C + 8 mmol N per gDW
+- If growth = μ gDW/h, then:
+  - C needed: 41μ
+  - N needed: 8μ
+  
+From N: 8μ = 3.3 → μ = 0.4125 /h
+From C: 41 × 0.4125 = 16.9 mmol C for growth
+
+**Carbon accounting:**
+- C in: 99.0 mmol
+- C for growth: 16.9 mmol
+- C for fermentation products: 99.0 - 16.9 = 82.1 mmol
+
+**Fermentation products (expected):**
+- Acetate (major): ~40 mmol C (released as ac)
+- Succinate (from amino acid fermentation): ~15 mmol C (released as succ)
+- Propionate (minor recycling): ~8 mmol C (released as ppa)
+- CO₂: ~19 mmol C (released as co2)
+- Total: ~82 mmol C ✓
+
+**Final growth rate: 0.41 /h**
+
+---
+
+```json
+{
+  "fluxes": {
+    "but": -3.5,
+    "ppa": -2.5,
+    "leu__L": -1.0,
+    "ile__L": -0.8,
+    "val__L": -0.7,
+    "phe__L": -0.5,
+    "malt": -0.5,
+    "tyr__L": -0.3,
+    "ac": 40.0,
+    "succ": 15.0,
+    "co2": 19.0
+  },
+  "growth_rate": 0.41,
+  "rationale": "Consuming available butyrate and propionate (abundant SCFAs) along with branched-chain and aromatic amino acids for both C and N. Fermentation yields acetate, succinate, and CO2. Growth rate supported by 3.3 mmol N/gDW/h uptake (8 mmol N per gDW needed). Carbon balance: 99 mmol in = 16.9 (growth) + 82.1 (products).",
+  "confidence": 0.72
+}
+```

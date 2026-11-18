@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": 3.0,
+  "for": 1.0,
+  "ser__L": -1.0,
+  "nh4": -1.0,
+  "lac__L": 1.0,
+  "co2": 1.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.275,
+ "rationale": "acetate and formate uptake support growth and fermentation product production",
+ "confidence": 0.8
+}

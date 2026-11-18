@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 6,
+  "growth_claimed": 0.019,
+  "growth_allowed": 0.019,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: glc__D"
+  ],
+  "repairs": [],
+  "rationale": "Sulfate-reducing heterotroph oxidizing glucose and amino acids with sulfate as terminal electron acceptor. Limited by nitrogen availability in late-stage batch culture. Conservative uptake rates maint",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "glc__D": -5.5,
+   "arg__L": -1.3,
+   "cys__L": -1.0,
+   "nh4": -1.2,
+   "so4": -2.0,
+   "pi": -0.4,
+   "lac__L": 3.0,
+   "ac": 1.5,
+   "co2": 2.0,
+   "h2s": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.5,
+   "arg__L": -1.3,
+   "cys__L": -1.0,
+   "nh4": -1.2,
+   "so4": -2.0,
+   "pi": -0.4,
+   "lac__L": 3.0,
+   "ac": 1.5,
+   "co2": 2.0,
+   "h2s": 2.0
+  }
+ }
+]

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -8.0,
+  "arab__L": -4.0,
+  "arg__L": -3.0,
+  "nh4": -1.0,
+  "ac": 3.0,
+  "but": 2.5,
+  "for": 0.5,
+  "co2": 2.0
+ },
+ "growth_rate": 0.38,
+ "rationale": "Glucose exhausted; switching to lactate and arabinose fermentation with arginine as supplemental N and amino acid substrate. Fermentation yields acetate, butyrate, formate, and CO\u2082. Carbon and nitrogen budgets balance. Growth rate moderately reduced from glucose phase due to substrate shift and accumulated fermentation products.",
+ "confidence": 0.72
+}

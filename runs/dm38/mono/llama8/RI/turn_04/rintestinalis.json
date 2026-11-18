@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -0.56,
+  "lac__L": -0.51,
+  "nh4": -0.15,
+  "but": 1.99,
+  "h2": 0.65,
+  "pi": 0.65,
+  "so4": 0.15
+ },
+ "growth_rate": 0.0,
+ "rationale": "I am choosing to take up D-glucose, L-lactate, and Ammonium, and secrete Butyrate, H2, Pi, and Sulfate. This strategy supports a growth rate of 0.000 gDW/h.",
+ "confidence": 0.9
+}

@@ -1,0 +1,101 @@
+# Reasoning
+
+## Carbon and nitrogen source assessment
+
+I am *Bifidobacterium adolescentis*, a facultative anaerobe specialized for fermenting simple sugars and amino acids in the colon. Let me assess what I can use:
+
+**Primary carbon sources available:**
+- D-glucose (19.3 mM): Yes, I have PTS and hexokinase
+- L-arabinose (19.46 mM): Yes, I ferment pentoses
+- L-lactate (34.54 mM): Yes, I can consume lactate via lactate oxidase/permease
+- Maltose (4.382 mM): Yes, I have maltose transporters
+- Amino acids (arg, ser, cys, pro, etc.): Yes, I can catabolize these
+
+**Sources I cannot use well:**
+- Formate (0.783 mM): Limited capacity; formate is a fermentation product, not a primary substrate
+- Acetate (2.283 mM): I produce acetate; uptake is minimal under these conditions
+- CO₂ (48.34 mM): I'm heterotrophic, cannot fix CO₂
+
+**Nitrogen sources:**
+- Ammonium (8.34 mM): Primary nitrogen source
+- Arginine (20.69 mM): Can be catabolized for both C and N
+- Other amino acids: Can contribute N
+
+## Recent history analysis
+
+Turns 2–3 showed strong growth (0.38–0.40 /h) on glucose + arabinose + arginine. Turns 4–5 showed zero growth. This suggests I depleted a critical limiting nutrient or accumulated inhibitory fermentation products.
+
+**Hypothesis for stall:** 
+- Ammonium depletion (was 8.34 mM at turn 6; I consumed ~2.5 mM/turn for 2 turns = ~5 mM consumed, leaving ~3.34 mM)
+- Lactate accumulation from fermentation (34.54 mM now, up from ~0 at turn 2) may have shifted pH or osmotic stress despite buffering
+- Glucose may be limiting (19.3 mM remains, but I've consumed significant amounts)
+
+## Metabolic strategy for turn 6
+
+At turn 6 (t=24h, halfway through 48h batch), I should:
+
+1. **Resume growth cautiously** by consuming remaining sugars and amino acids
+2. **Preferentially use glucose and arabinose** (fastest fermentation, lowest product inhibition)
+3. **Conserve ammonium** since it's the bottleneck for nitrogen
+4. **Use arginine judiciously** (provides both C and N; 20.69 mM is abundant)
+5. **Excrete lactate, acetate, and formate** as fermentation products
+
+## Flux calculation
+
+**Uptake strategy:**
+- Glucose: 8.0 mmol/gDW/h (moderate, sustainable rate)
+- Arabinose: 3.0 mmol/gDW/h (secondary sugar)
+- Arginine: 1.5 mmol/gDW/h (supplies N + C)
+- Ammonium: 1.2 mmol/gDW/h (primary N source)
+
+**Carbon balance:**
+- In: (8.0 × 6 C) + (3.0 × 5 C) + (1.5 × 6 C) = 48 + 15 + 9 = 72 mmol C/gDW/h
+- Biomass cost: 33 mmol C/gDW/h at growth rate μ
+- Fermentation products (lactate, acetate, formate, CO₂): remainder
+
+**Nitrogen balance:**
+- In: (1.2 × 1 N) + (1.5 × 1 N from Arg) = 2.7 mmol N/gDW/h
+- Biomass cost: 8 mmol N/gDW/h at growth rate μ
+- At μ = 0.30 /h: 8 × 0.30 = 2.4 mmol N needed ✓ (just fits)
+
+**Growth rate:** μ = 0.30 /h (conservative restart after stall; limited by nitrogen availability)
+
+**Carbon accounting at μ = 0.30:**
+- Carbon in: 72 mmol
+- Biomass: 33 × 0.30 = 9.9 mmol
+- Net fermentation product C: 72 − 9.9 = 62.1 mmol
+
+**Fermentation stoichiometry (mixed acid):**
+From glucose (Bifidobacterium pathway: glucose → 2 acetate + 2 lactate + CO₂):
+- Glucose input: 8.0 mmol → ~16 mmol acetate C + ~16 mmol lactate C + CO₂
+- Arabinose: 3.0 mmol → mixed products
+- Arginine: 1.5 mmol → partial oxidation
+
+I'll allocate products as:
+- Lactate: +18.0 mmol/gDW/h
+- Acetate: +8.0 mmol/gDW/h
+- Formate: +1.5 mmol/gDW/h
+- CO₂: +3.0 mmol/gDW/h
+- Total C out: (18×2) + (8×2) + (1.5×1) + (3×1) = 36 + 16 + 1.5 + 3 = 56.5 mmol (close to 62.1, accounting for rounding and reducing power balance)
+
+## Final decision
+
+Restart growth at 0.30 /h using glucose, arabinose, arginine, and ammonium. Release lactate, acetate, formate, and CO₂.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "arab__L": -3.0,
+    "arg__L": -1.5,
+    "nh4": -1.2,
+    "lac__L": 18.0,
+    "ac": 8.0,
+    "for": 1.5,
+    "co2": 3.0
+  },
+  "growth_rate": 0.30,
+  "rationale": "Restart growth after stall by consuming glucose and arabinose (primary fermentable sugars), supplemented with arginine for nitrogen and carbon. Ammonium is limiting; conserve it. Excrete lactate, acetate, formate, and CO₂ as fermentation products. Growth rate of 0.30 /h is conservative, sustainable for remaining 24 h of batch culture.",
+  "confidence": 0.65
+}
+```

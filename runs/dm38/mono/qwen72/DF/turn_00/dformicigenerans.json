@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -2.0,
+  "ac": 5.0,
+  "for": 5.0
+ },
+ "growth_rate": 0.303,
+ "rationale": "Metabolizing lactate as the primary carbon source and ammonium for nitrogen, producing acetate and formate as fermentation products.",
+ "confidence": 0.9
+}

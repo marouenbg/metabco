@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ppa": 1.0,
+  "ac": 2.0,
+  "cys__L": -1.0,
+  "ser__L": -1.0,
+  "ala__L": -1.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "uptake of propionate and acetate supports growth and fermentation product production",
+ "confidence": 0.8
+}

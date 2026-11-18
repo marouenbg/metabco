@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -15.0,
+  "glc__D": -10.0,
+  "nh4": -5.0,
+  "lac__D": 30.0,
+  "h2o": 0.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "Consuming L-lactate, D-glucose, and ammonium to support growth and lactate production.",
+ "confidence": 0.8
+}

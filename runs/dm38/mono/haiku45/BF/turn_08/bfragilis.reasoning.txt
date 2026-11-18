@@ -1,0 +1,103 @@
+# Metabolic reasoning for Bacteroides fragilis at t=32h
+
+## Assessment of carbon and nitrogen availability
+
+**Abundant carbon sources I can transport:**
+- Acetate (32.99 mM): easily transported via acetyl-CoA synthetase
+- Butyrate (24.8 mM): transported and β-oxidized
+- Formate (20.22 mM): used in one-carbon metabolism
+- Short-chain fatty acids: my primary fermentation substrates
+
+**Amino acids available (total ~40 mM):**
+- L-tyrosine, valine, glutamine, asparagine, glycine, lysine, cysteine, phenylalanine, arginine, threonine, isoleucine, serine, histidine, methionine, tryptophan, glutamate, leucine, aspartate
+- These are degradable; Bacteroides fragilis has extensive peptidase and amino acid oxidase systems
+
+**Nitrogen sources:**
+- Ammonium: 1.138 mM (low but present)
+- Amino acids contain nitrogen (roughly 1 N per amino acid residue)
+- Total amino acid N: ~40 mM of N available
+
+**Why I'm not growing (turns 6-7):**
+Previous turns show zero growth despite nutrient uptake. This suggests I hit a limiting nutrient constraint or attempted unsustainable flux. The pattern of amino acid consumption without growth indicates catabolism without biosynthesis.
+
+## Growth calculation
+
+At current biomass (2.698 gDW/L), I need:
+- **Carbon cost**: 41 mmol C per gDW produced
+- **Nitrogen cost**: 8 mmol N per gDW produced
+
+For a 4-hour interval, if I grow at rate μ:
+- Biomass produced = 2.698 × (e^(4μ) - 1) gDW/L ≈ 2.698 × 4μ gDW/L (for small μ)
+- Carbon needed = 2.698 × 4μ × 41 mmol
+- Nitrogen needed = 2.698 × 4μ × 8 mmol
+
+**Nitrogen constraint (most limiting):**
+- Available amino acid N: ~40 mM
+- Ammonium: 1.138 mM
+- Total usable N: ~41 mM
+
+For growth: 2.698 × 4μ × 8 ≤ 41
+- 86.34μ ≤ 41
+- **μ ≤ 0.475 /h**
+
+**Carbon audit at μ = 0.40 /h:**
+- Biomass produced in 4h: 2.698 × 4 × 0.40 = 4.317 gDW
+- Carbon for growth: 4.317 × 41 = 177 mmol C
+- Nitrogen for growth: 4.317 × 8 = 34.5 mmol N
+
+**Carbon sources to uptake:**
+- Acetate: 15 mmol/gDW/h (abundant, ~33 mM available)
+- Butyrate: 8 mmol/gDW/h (abundant, ~25 mM available)
+- Formate: 5 mmol/gDW/h (abundant, ~20 mM available)
+- Amino acids (mixed): 10 mmol C/gDW/h (for both C and N)
+
+Total C uptake: (15 + 8 + 5 + 10) × 2.698 = ~121 mmol C/h from flask
+Over 4h: ~484 mmol C in
+
+**Carbon balance:**
+- In: ~484 mmol C (from ac, but, for, amino acids)
+- Growth cost: 177 mmol C
+- Fermentation products (acetate, butyrate, formate, lactate, CO₂): 484 - 177 = 307 mmol C out
+
+**Nitrogen balance:**
+- In: ~41 mmol N (from amino acids and ammonia)
+- Growth cost: 34.5 mmol N
+- Excess: 6.5 mmol N (released as ammonia or incorporated minimally)
+
+## Fermentation products
+
+Bacteroides fragilis is a Gram-negative obligate anaerobe that produces:
+- Acetate (major)
+- Butyrate (major)
+- Formate
+- Lactate (minor, when stressed)
+- Succinate (minor)
+- CO₂ (from decarboxylations)
+
+## Strategy
+
+Resume growth at **μ = 0.40 /h** by:
+1. Uptaking short-chain acids (acetate, butyrate, formate) for energy and carbon
+2. Degrading amino acids for carbon, nitrogen, and sulfur (cysteine)
+3. Fermenting to acetate, butyrate, formate, and CO₂
+4. Releasing excess ammonia from amino acid deamination
+
+```json
+{
+  "fluxes": {
+    "ac": 3.0,
+    "but": 1.5,
+    "for": 1.2,
+    "arg__L": -2.0,
+    "gly": -1.5,
+    "val__L": -1.2,
+    "cys__L": -0.8,
+    "ser__L": -0.6,
+    "nh4": 1.5,
+    "co2": 2.5
+  },
+  "growth_rate": 0.40,
+  "rationale": "Resuming growth by consuming abundant acetate, butyrate, formate, and amino acids (N and C source). Nitrogen is limiting at ~41 mM total; growth rate constrained to 0.40 /h to stay within N budget. Fermenting to acetate, butyrate, CO₂, and releasing ammonia from amino acid catabolism. Carbon balance maintained: ~484 mmol C in supports 177 mmol growth cost + 307 mmol fermentation products.",
+  "confidence": 0.62
+}
+```

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "ac": 5.0,
+  "but": 3.0,
+  "ppa": 1.75,
+  "nh4": -2.01,
+  "arg__L": -2.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "Continued utilization of D-glucose and L-lactate for carbon and L-arginine and ammonium for nitrogen. Produced acetate, butyrate, and propionate as fermentation products.",
+ "confidence": 0.9
+}

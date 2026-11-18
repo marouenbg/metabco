@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "but": 1.0,
+  "malt": -5.0,
+  "ac": 1.0,
+  "ppa": 1.0,
+  "nh4": -1.0,
+  "h2": 0.5,
+  "co2": 0.5
+ },
+ "growth_rate": 0.171,
+ "rationale": "Utilizing butyrate and maltose for energy, producing acetate, butyrate, and propionate, and releasing hydrogen to balance redox state.",
+ "confidence": 0.9
+}

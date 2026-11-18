@@ -1,0 +1,125 @@
+# Metabolic reasoning for Prevotella copri CB7 DSM 18205 at turn 6
+
+## Assessment of the situation
+
+I am at 3.424 gDW/L after 24 hours. Growth has stalled (turns 4–5 showed zero growth), suggesting a nutritional or energetic constraint. I need to diagnose why and recover growth if possible.
+
+## Carbon and nitrogen sources available
+
+**Carbon sources I can transport:**
+- Acetate (ac): 62.42 mM — excellent, I ferment this routinely
+- Propionate (ppa): 47.35 mM — I produce this, can also consume it
+- Formate (for): 28.23 mM — I produce and consume formate
+- Maltose (malt): 4.382 mM — I have PTS systems for sugars
+- L-arabinose (arab__L): 4.12 mM — fermentable pentose
+- myo-inositol (inost): 6.272 mM — I can ferment this
+- Amino acids (Phe, Ser, Leu, Cys, Tyr, Val, Gln, Asn, Ala, Lys, Thr, Pro, Ile, His, Gly, Met, Trp, Asp): mixed pools; I use these for both carbon and nitrogen
+- CO₂: 103.7 mM — not a carbon source I can fix; it's a product sink
+
+**Carbon sources I likely cannot use:**
+- Glucose (glc__D): I used it in turn 2 but it is now absent; I may have lost the ability or it was exhausted
+- Lactate (lac__L): I catabolized it in turns 3–4 but it is now absent
+
+**Nitrogen sources:**
+- NH₄⁺: 0.7548 mM — very low, likely limiting
+- Amino acids: collectively ~60 mM of amino acid nitrogen; I can deaminate these
+
+## Why growth stopped
+
+At turn 5, I took up nothing and grew zero. The most likely reason: **nitrogen depletion or near-depletion**. Ammonia is nearly exhausted (0.75 mM), and I may have been unable to support growth with only amino acid deamination. Alternatively, a cofactor or vitamin became limiting, or I was in a metabolic dead state.
+
+## Recovery strategy
+
+To restart growth, I must:
+1. **Maximize nitrogen uptake** from amino acids. I will deaminate a substantial amino acid pool (Gln, Asn, Ser, Ala, Gly, etc.) to recover ammonia.
+2. **Use accessible carbon**: acetate and propionate are abundant; I will ferment them.
+3. **Target realistic fluxes**: uptake rates of 5–15 mmol/gDW/h are realistic for a recovering culture.
+
+## Proposed fluxes
+
+I will consume:
+- **Acetate**: −12 mmol/gDW/h (good energy substrate)
+- **Propionate**: −8 mmol/gDW/h (secondary carbon)
+- **L-glutamine**: −3 mmol/gDW/h (nitrogen + carbon)
+- **L-serine**: −2 mmol/gDW/h (nitrogen + carbon)
+- **L-alanine**: −1.5 mmol/gDW/h (nitrogen + carbon)
+- **Glycine**: −1.2 mmol/gDW/h (nitrogen + carbon)
+- **L-cysteine**: −1.0 mmol/gDW/h (nitrogen + sulfur + carbon)
+- **Ammonia (nh4)**: −0.75 mmol/gDW/h (all remaining)
+
+**Total carbon in:**
+- Acetate: 12 × 2 = 24 mmol C
+- Propionate: 8 × 3 = 24 mmol C
+- Gln: 3 × 5 = 15 mmol C
+- Ser: 2 × 3 = 6 mmol C
+- Ala: 1.5 × 3 = 4.5 mmol C
+- Gly: 1.2 × 2 = 2.4 mmol C
+- Cys: 1.0 × 3 = 3 mmol C
+- **Total: 78.9 mmol C/gDW/h**
+
+**Total nitrogen in:**
+- Gln: 3 × 2 = 6 mmol N
+- Ser: 2 × 1 = 2 mmol N
+- Ala: 1.5 × 1 = 1.5 mmol N
+- Gly: 1.2 × 1 = 1.2 mmol N
+- Cys: 1.0 × 1 = 1 mmol N
+- NH₄: 0.75 × 1 = 0.75 mmol N
+- **Total: 12.45 mmol N/gDW/h**
+
+**Growth calculation:**
+- C cost: 45 mmol C/gDW
+- N cost: 10 mmol N/gDW
+- N available: 12.45 mmol N → supports 12.45 / 10 = 1.245 gDW growth
+- C needed: 1.245 × 45 = 56.0 mmol C
+- C available: 78.9 mmol C
+- C surplus: 78.9 − 56.0 = 22.9 mmol C (fermented to acetate, propionate, formate)
+
+**Growth rate: 1.245 / 4 h = 0.311 /h** (conservative, realistic for recovery)
+
+## Fermentation products
+
+I will release:
+- **Acetate (ac)**: +6.0 mmol/gDW/h (main fermentation product)
+- **Propionate (ppa)**: +4.0 mmol/gDW/h (secondary)
+- **Formate (for)**: +2.5 mmol/gDW/h (minor)
+- **CO₂**: +4.0 mmol/gDW/h (from amino acid deamination and carbohydrate fermentation)
+
+**Carbon audit:**
+- In: 78.9 mmol C
+- Out (biomass): 56.0 mmol C
+- Out (acetate): 6.0 × 2 = 12.0 mmol C
+- Out (propionate): 4.0 × 3 = 12.0 mmol C
+- Out (formate): 2.5 × 1 = 2.5 mmol C
+- Out (CO₂): 4.0 × 1 = 4.0 mmol C
+- **Total out: 86.5 mmol C** — *This exceeds input!* Correction needed.
+
+Let me reduce fermentation products:
+- Acetate: +4.5 mmol/gDW/h → 9 mmol C
+- Propionate: +3.0 mmol/gDW/h → 9 mmol C
+- Formate: +1.5 mmol/gDW/h → 1.5 mmol C
+- CO₂: +3.0 mmol/gDW/h → 3 mmol C
+- **Total out: 56 + 9 + 9 + 1.5 + 3 = 78.5 mmol C** ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "ac": 4.5,
+    "ppa": 3.0,
+    "for": 1.5,
+    "co2": 3.0,
+    "ac": -12.0,
+    "ppa": -8.0,
+    "gln__L": -3.0,
+    "ser__L": -2.0,
+    "ala__L": -1.5,
+    "gly": -1.2,
+    "cys__L": -1.0,
+    "nh4": -0.75
+  },
+  "growth_rate": 0.311,
+  "rationale": "Nitrogen-limited recovery: deaminating amino acids (Gln, Ser, Ala, Gly, Cys) to recover 12.45 mmol N/gDW/h, supporting growth of 0.311 /h. Fermenting acetate and propionate (abundant, 109.77 mM combined) with amino acid catabolism. Carbon balance: 78.9 in, 56 biomass + 22.5 fermentation products. Realistic for anaerobic Prevotella.",
+  "confidence": 0.72
+}
+```

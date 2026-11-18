@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "for": 3.0,
+  "but": 4.0,
+  "cys__L": -2.0,
+  "ser__L": -2.0,
+  "nh4": 4.0
+ },
+ "growth_rate": 0.15,
+ "rationale": "Utilizing abundant acetate and formate for carbon, and L-cysteine and L-serine for nitrogen, while producing butyrate and formate to support moderate growth.",
+ "confidence": 0.85
+}

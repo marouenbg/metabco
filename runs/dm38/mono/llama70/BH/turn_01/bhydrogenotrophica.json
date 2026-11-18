@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "co2": -5.0,
+  "nh4": -1.0,
+  "ac": 5.0,
+  "for": 2.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing L-lactate as primary carbon source, with CO2 and amino acids supplementing carbon and nitrogen needs, producing acetate and formate as major products.",
+ "confidence": 0.8
+}

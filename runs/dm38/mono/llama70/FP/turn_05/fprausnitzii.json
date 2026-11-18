@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": -2.5,
+  "nh4": -2.0,
+  "but": 5.0,
+  "co2": 1.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Nitrogen limitation with butyrate production",
+ "confidence": 0.8
+}

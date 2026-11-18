@@ -1,0 +1,34 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 8,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.0175,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=12 out=12 biomass=15.4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.468 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.118 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.45 -> 0.0175"
+  ],
+  "rationale": "Utilizing L-arginine and acetate as carbon and nitrogen sources to support growth",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "co2": 2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "co2": 2.0,
+   "h2": 1.0,
+   "pi": -0.4679,
+   "so4": -0.1178
+  }
+ }
+]

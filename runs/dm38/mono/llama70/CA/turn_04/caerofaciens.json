@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "arg__L": -2.0,
+  "ac": 3.0,
+  "for": 1.0,
+  "lac__L": 1.0
+ },
+ "growth_rate": 0.05,
+ "rationale": "Based on available nutrients and metabolic capabilities",
+ "confidence": 0.8
+}

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -4.0,
+  "lac__L": 2.0,
+  "arg__L": -1.02,
+  "nh4": -0.12,
+  "for": 2.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "based on available nutrients and transport capabilities",
+ "confidence": 0.8
+}

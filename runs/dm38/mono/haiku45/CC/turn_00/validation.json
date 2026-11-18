@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 0,
+  "growth_claimed": 0.7,
+  "growth_allowed": 0.7,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.471 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.181 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Coprococcus comes ferments abundant lactate and glucose anaerobically. Lactate (12 mmol/gDW/h) and glucose (8 mmol/gDW/h) provide 84 mmol C/h. With 30 mmol C/g biomass cost and 8 mmol N/g, ammonium up",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -12.0,
+   "glc__D": -8.0,
+   "nh4": -6.0,
+   "but": 8.5,
+   "ac": 8.5,
+   "co2": 12.0
+  },
+  "fluxes_applied": {
+   "lac__L": -12.0,
+   "glc__D": -8.0,
+   "nh4": -6.0,
+   "but": 8.5,
+   "ac": 8.5,
+   "co2": 12.0,
+   "pi": -0.4705,
+   "so4": -0.1807
+  }
+ }
+]

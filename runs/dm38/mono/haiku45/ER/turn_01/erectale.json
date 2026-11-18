@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "cys__L": -0.8,
+  "ser__L": -0.6,
+  "nh4": -1.5,
+  "ac": 4.5,
+  "but": 2.3,
+  "for": 0.8,
+  "co2": 14.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "E. rectale ferments glucose and lactate via mixed-acid pathway, producing acetate, butyrate, formate, and CO\u2082. Glucose is the preferred substrate; lactate is oxidized as a secondary energy source. Amino acids (cysteine, serine) provide nitrogen and supplementary carbon. Ammonium is the primary nitrogen source. At 0.30 /h growth, carbon balance is maintained: 79.2 mmol C in (glucose, lactate, amino acids) minus 34 mmol C out (fermentation products) minus 9.9 mmol C for biomass = sustainable. Nitrogen: 2.9 mmol in, 2.1 mmol for growth, with small surplus.",
+ "confidence": 0.72
+}

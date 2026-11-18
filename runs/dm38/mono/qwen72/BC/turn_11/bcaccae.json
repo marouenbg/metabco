@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": -3.0,
+  "ppa": -3.0,
+  "but": -1.0,
+  "malt": -0.5,
+  "lac__L": -2.5,
+  "gln__L": -0.3,
+  "co2": 2.0,
+  "nh4": 0.3
+ },
+ "growth_rate": 0.1,
+ "confidence": 0.85,
+ "rationale": "Balanced uptake of acetate, propionate, and lactate for energy and carbon, with moderate growth rate supported by available nutrients."
+}

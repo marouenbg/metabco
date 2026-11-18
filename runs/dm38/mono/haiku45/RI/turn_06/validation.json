@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 6,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.35,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: nh4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake nh4 to pool limit -0.0384"
+  ],
+  "rationale": "Carbohydrates nearly depleted; switching to amino acid catabolism via Stickland fermentation. Glucose and maltose consumption limited by availability. Arginine and cysteine provide additional carbon a",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "glc__D": -2.0,
+   "malt": -3.0,
+   "arg__L": -2.5,
+   "cys__L": -1.5,
+   "ser__L": -1.0,
+   "but": 5.0,
+   "ac": 4.0,
+   "co2": 8.5,
+   "for": 0.8,
+   "h2": 0.3,
+   "nh4": -0.5,
+   "pi": -0.4
+  },
+  "fluxes_applied": {
+   "glc__D": -2.0,
+   "malt": -3.0,
+   "arg__L": -2.5,
+   "cys__L": -1.5,
+   "ser__L": -1.0,
+   "but": 5.0,
+   "ac": 4.0,
+   "co2": 8.5,
+   "for": 0.8,
+   "h2": 0.3,
+   "nh4": -0.0384,
+   "pi": -0.4
+  }
+ }
+]

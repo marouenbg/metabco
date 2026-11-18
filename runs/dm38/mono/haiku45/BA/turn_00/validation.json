@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 0,
+  "growth_claimed": 1.0,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=108 out=194 biomass=33.3"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.709 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.219 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 1 -> 0",
+   "C: secretions scaled by 0.585"
+  ],
+  "rationale": "Bifid fermentation of glucose with arginine as secondary N source. Glucose is preferred hexose; fermentation yields acetate and lactate as major products. Growth rate limited by nitrogen availability ",
+  "confidence": 0.75,
+  "fluxes_claimed": {
+   "glc__D": -15.0,
+   "nh4": -5.0,
+   "arg__L": -3.0,
+   "ac": 50.0,
+   "lac__L": 30.0,
+   "for": 4.0
+  },
+  "fluxes_applied": {
+   "glc__D": -15.0,
+   "nh4": -5.0,
+   "arg__L": -3.0,
+   "ac": 29.2268,
+   "lac__L": 17.5361,
+   "for": 2.3381,
+   "pi": -0.7089,
+   "so4": -0.2194
+  }
+ }
+]

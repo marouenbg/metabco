@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "ac": 5.0,
+  "for": 2.0,
+  "arg__L": -1.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Utilizing L-lactate as primary carbon source, producing acetate and formate, and taking up L-arginine for nitrogen",
+ "confidence": 0.8
+}

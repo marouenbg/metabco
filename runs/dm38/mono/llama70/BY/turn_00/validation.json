@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 0,
+  "growth_claimed": 0.6,
+  "growth_allowed": 0.6,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.752 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.157 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Prioritizing glucose and arginine uptake, producing acetate and propionate, and growing at a moderate rate",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "ac": 3.0,
+   "ppa": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "ac": 3.0,
+   "ppa": 1.0,
+   "pi": -0.7516,
+   "so4": -0.157
+  }
+ }
+]

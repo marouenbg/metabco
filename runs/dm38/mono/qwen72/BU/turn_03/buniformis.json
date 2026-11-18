@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "lac__L": -2.0,
+  "nh4": -1.5,
+  "ac": 3.0,
+  "but": 2.0,
+  "ppa": 1.0,
+  "for": 0.5
+ },
+ "growth_rate": 0.0357,
+ "rationale": "Utilizing abundant glucose and lactate for growth, supplementing nitrogen with ammonium. Producing acetate, butyrate, propionate, and formate as fermentation products.",
+ "confidence": 0.85
+}

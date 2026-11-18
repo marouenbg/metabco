@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 6,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.3,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.279 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.063 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Balancing carbon and nitrogen budgets to support growth and butyrate production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": -2.5,
+   "arg__L": -1.0,
+   "gln__L": -1.0,
+   "but": 5.0,
+   "ac": 2.0,
+   "co2": 1.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": -2.5,
+   "arg__L": -1.0,
+   "gln__L": -1.0,
+   "but": 5.0,
+   "ac": 2.0,
+   "co2": 1.0,
+   "h2": 1.0,
+   "pi": -0.2792,
+   "so4": -0.063
+  }
+ }
+]

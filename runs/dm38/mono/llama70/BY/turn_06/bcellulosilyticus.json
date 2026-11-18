@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "arab__L": -10.0,
+  "arg__L": -2.0,
+  "nh4": -1.0,
+  "ac": 5.0,
+  "ppa": 2.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Optimizing growth and survival by utilizing available carbon and nitrogen sources",
+ "confidence": 0.8
+}

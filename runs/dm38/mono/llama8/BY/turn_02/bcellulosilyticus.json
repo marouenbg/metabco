@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -14.26,
+  "co2": -47.57,
+  "nh4": -21.81,
+  "ac": 0.91,
+  "but": 0.91,
+  "for": 0.91
+ },
+ "growth_rate": 0.91,
+ "rationale": "Selected L-lactate (lac__L), carbon dioxide (co2), and Ammonium (nh4) as primary carbon and nitrogen sources. Released acetate (ac), butyrate (but), and formate (for) as primary fermentation products. Growth rate supported by chosen uptake is approximately 0.91 gDW/h.",
+ "confidence": 0.8
+}

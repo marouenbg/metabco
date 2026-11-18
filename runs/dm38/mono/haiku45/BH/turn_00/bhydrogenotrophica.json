@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -20,
+  "lac__L": -5,
+  "nh4": -3,
+  "ac": 8,
+  "for": 4,
+  "h2": 1.5,
+  "co2": 1.2
+ },
+ "growth_rate": 0.35,
+ "rationale": "Blautia hydrogenotrophica ferments glucose and lactate under anaerobic conditions. Glucose is the preferred substrate (20 mmol/gDW/h uptake). Mixed fermentation yields acetate as the dominant product with formate, H\u2082, and CO\u2082. Growth rate of 0.35/h is supported by 38 mmol C/gDW biomass requirement and adequate nitrogen from ammonium. Carbon balance: 25 C (glucose) + 3 C (lactate) = 28 C in; 13.3 C (biomass) + 14.7 C (products) = 28 C out. Nitrogen: 3 mmol N/gDW/h uptake supports 0.35/h \u00d7 10 mmol N/gDW growth requirement.",
+ "confidence": 0.72
+}

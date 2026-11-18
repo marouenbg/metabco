@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ppa": -10.0,
+  "ac": -5.0,
+  "ala__L": -2.0,
+  "val__L": -1.0,
+  "gln__L": -1.0,
+  "co2": 5.0,
+  "but": 2.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing abundant carbon and nitrogen sources to support growth and produce fermentation products",
+ "confidence": 0.8
+}

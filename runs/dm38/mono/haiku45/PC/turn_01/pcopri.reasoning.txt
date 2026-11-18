@@ -1,0 +1,92 @@
+# Metabolic Decision: Prevotella copri CB7 DSM 18205, Turn 1
+
+## Analysis of available substrates and transport capacity
+
+Prevotella copri is a well-characterized human gut anaerobe with a versatile saccharolytic metabolism. I will assess what I can actually transport and metabolize:
+
+**Primary carbon sources available:**
+- D-glucose (24.72 mM): High abundance, readily transportable via PTS or other glucose permeases. This is a preferred substrate.
+- L-lactate (28.31 mM): Abundant; I possess lactate transporters and can ferment lactate anaerobically.
+- L-arabinose (21.31 mM): Pentose sugar; I have arabinose fermentation capacity.
+- Maltose (4.382 mM): Disaccharide; I can transport and hydrolyze this.
+- Amino acids: Multiple amino acids present at varying concentrations. However, amino acids are primarily nitrogen sources; their carbon skeletons are secondary.
+
+**Nitrogen sources:**
+- Ammonium (9.283 mM): Primary inorganic nitrogen source, readily assimilable.
+- L-arginine (21.69 mM): High abundance; arginine is both a nitrogen and carbon source. I can catabolize arginine via the arginine deiminase pathway and related routes.
+- Other amino acids: Serve as supplementary nitrogen/carbon sources.
+
+**Fermentation products I produce anaerobically:**
+- Acetate (acetic acid)
+- Propionate (propionic acid)
+- Formate
+- Succinate
+- Lactate (can both consume and produce depending on conditions)
+- CO₂ and H₂ (from mixed-acid fermentation)
+
+## Substrate preference and growth calculation
+
+At turn 0, I was growing at 0.600 /h using glucose (8 mmol/gDW/h uptake) and arginine (4 mmol/gDW/h uptake), which is reasonable for a fast-growing anaerobe. Now at t=4h with abundant substrates still available, I should continue mixed fermentation.
+
+**Chosen strategy for turn 1:**
+- Uptake glucose as primary carbon source: 10 mmol/gDW/h (sustainable rate)
+- Uptake arginine for nitrogen and additional carbon: 5 mmol/gDW/h
+- Uptake ammonium: 2.5 mmol/gDW/h (supplementary nitrogen)
+- Uptake L-arabinose: 3 mmol/gDW/h (secondary fermentable sugar)
+
+**Carbon and nitrogen balance:**
+
+*Carbon input:*
+- Glucose: 10 mmol/gDW/h × 6 carbons = 60 mmol C/gDW/h
+- Arginine: 5 mmol/gDW/h × 6 carbons = 30 mmol C/gDW/h
+- Arabinose: 3 mmol/gDW/h × 5 carbons = 15 mmol C/gDW/h
+- **Total C in: 105 mmol C/gDW/h**
+
+*Nitrogen input:*
+- Arginine: 5 mmol/gDW/h × 4 nitrogens = 20 mmol N/gDW/h
+- Ammonium: 2.5 mmol/gDW/h × 1 nitrogen = 2.5 mmol N/gDW/h
+- **Total N in: 22.5 mmol N/gDW/h**
+
+*Growth requirement:*
+At a growth rate of μ = 0.65 /h:
+- Carbon needed: 0.65 × 45 = 29.25 mmol C/gDW/h
+- Nitrogen needed: 0.65 × 10 = 6.5 mmol N/gDW/h
+
+*Carbon available for fermentation products:*
+- 105 − 29.25 = 75.75 mmol C/gDW/h for secretion
+
+*Fermentation products (mixed-acid fermentation from glucose/arabinose):*
+- Acetate: 15 mmol/gDW/h (2 carbons each = 30 C)
+- Propionate: 12 mmol/gDW/h (3 carbons each = 36 C)
+- Formate: 8 mmol/gDW/h (1 carbon each = 8 C)
+- CO₂: 2 mmol/gDW/h (1 carbon each = 2 C)
+- **Total C out (products): 76 mmol C/gDW/h** ✓ Balanced
+
+*Nitrogen balance:*
+- Input: 22.5 mmol N/gDW/h
+- Growth requirement: 6.5 mmol N/gDW/h
+- Excess nitrogen can be released as ammonia or retained; most will be incorporated into biomass or released as ammonia.
+- Ammonia release: ~15 mmol/gDW/h
+
+## Confidence assessment
+
+This is a well-characterized organism with established fermentation pathways. The substrate mix is realistic and based on observed turn 0 behavior. Growth rate of 0.65 /h is slightly higher than turn 0 (0.60 /h) due to increased substrate availability, which is physiologically plausible.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "arg__L": -5.0,
+    "nh4": -2.5,
+    "arab__L": -3.0,
+    "ac": 15.0,
+    "ppa": 12.0,
+    "for": 8.0,
+    "co2": 2.0,
+    "h2": 1.5
+  },
+  "growth_rate": 0.65,
+  "rationale": "Mixed fermentation of glucose, arabinose, and arginine under anaerobic conditions. Glucose and arabinose fermented to acetate, propionate, formate, and CO₂. Arginine serves as nitrogen source and carbon source. Growth rate supported by C/N balance; products match fermentation stoichiometry.",
+  "confidence": 0.78
+}
+```

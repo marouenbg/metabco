@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "gly": -2.0,
+  "ser__L": -1.5,
+  "leu__L": -1.2,
+  "val__L": -1.0,
+  "phe__L": -1.0,
+  "tyr__L": -0.8,
+  "ac": 3.5,
+  "ppa": 2.5,
+  "co2": 1.2,
+  "nh4": 2.0,
+  "h2": 0.3
+ },
+ "growth_rate": 0.38,
+ "rationale": "Late-stage batch culture (36/48 h). Nitrogen is limiting; amino acid fermentation via Stickland pathways yields acetate and propionate. Uptake of 7.5 mmol amino acids/gDW/h (mix of 3\u20135 C atoms, 1 N each) provides 30 mmol C and 7.5 mmol N. Growth at 0.38/h consumes 16 mmol C and 3.8 mmol N; remainder fermented to acetate (3.5), propionate (2.5), CO\u2082 (1.2), and ammonia (2.0) from deamination. Mass balanced; realistic for Bacteroides in amino-acid-rich, carbohydrate-poor anaerobic conditions.",
+ "confidence": 0.72
+}

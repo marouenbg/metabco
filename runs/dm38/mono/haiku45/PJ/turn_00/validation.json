@@ -1,0 +1,45 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 0,
+  "growth_claimed": 0.39,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=106 out=235 biomass=16.4"
+  ],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.489 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.39 -> 0",
+   "C: secretions scaled by 0.476"
+  ],
+  "rationale": "Parabacteroides johnsonii is a saccharolytic Bacteroidetes that ferments glucose and lactate to mixed short-chain fatty acids under anaerobic conditions. Uptake of glucose and lactate as primary subst",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -8.0,
+   "arg__L": -3.0,
+   "cys__L": -1.5,
+   "nh4": -2.0,
+   "ac": 35.0,
+   "ppa": 28.0,
+   "succ": 18.0,
+   "co2": 9.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -8.0,
+   "arg__L": -3.0,
+   "cys__L": -1.5,
+   "nh4": -2.0,
+   "ac": 16.6548,
+   "ppa": 13.3238,
+   "succ": 8.5653,
+   "co2": 4.2827,
+   "pi": -0.4885
+  }
+ }
+]

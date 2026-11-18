@@ -1,0 +1,45 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 6,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4",
+   "n_imbalance: in=0 out=0 biomass=1.81"
+  ],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "S: credited 0.0525 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.25 -> 0"
+  ],
+  "rationale": "Continuing to ferment D-glucose and L-lactate to produce butyrate, acetate, and hydrogen, while consuming ammonium as the nitrogen source, supports a consistent growth rate of 0.250 /h. Carbon and nit",
+  "confidence": 1.0,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "nh4": -7.0,
+   "co2": 6.0,
+   "but": 2.0,
+   "ac": 2.0,
+   "h2": 2.0,
+   "pi": -0.23
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "nh4": 0.0,
+   "co2": 6.0,
+   "but": 2.0,
+   "ac": 2.0,
+   "h2": 2.0,
+   "pi": -0.23,
+   "so4": -0.0525
+  }
+ }
+]

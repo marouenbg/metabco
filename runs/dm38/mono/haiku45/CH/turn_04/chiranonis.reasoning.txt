@@ -1,0 +1,93 @@
+# Reasoning
+
+## My metabolic capabilities
+
+I am *Clostridium hiranonis* TO-931, a strict anaerobe. My genome encodes:
+- **Carbohydrate fermentation**: I can ferment sugars (glucose, arabinose, maltose) and organic acids
+- **Amino acid fermentation**: I can deaminate and ferment amino acids (arginine, serine, proline, etc.)
+- **Bile acid metabolism**: This is my specialty — I deconjugate bile acids, though none are present here
+- **Key transporters**: PTS systems for sugars, amino acid permeases, carboxylate transporters
+
+## Current situation (turn 4, t=16h)
+
+Looking at my recent history: I achieved 0.7 /h growth at turn 1, but growth has declined to 0 /h at turn 3. This suggests I've depleted glucose (my preferred substrate) and am now facing a transition.
+
+**Available carbon sources I can use:**
+- Acetate (49.13 mM) — I can transport via acetate permeases; fermentable
+- Butyrate (21.26 mM) — present but typically a product for me, not a primary substrate
+- L-lactate (13.09 mM) — I can ferment this
+- L-arabinose (21.31 mM) — fermentable via pentose pathways
+- Formate (7.51 mM) — can be metabolized
+- Amino acids (arg, ser, cys, pro, ala, gly, etc.) — I can ferment these via Stickland reactions
+
+**Carbon sources I cannot use:**
+- CO₂ — I'm not autotrophic; I use it as a product, not a substrate
+- H₂ — I lack hydrogenase
+
+**Available nitrogen sources:**
+- L-arginine (14.55 mM) — excellent; I can do Stickland fermentation
+- Other amino acids — provide both C and N
+- Ammonium (trace) — minimal
+- Nitrate — I cannot use (no nitrate reductase in my metabolism)
+
+## Strategy for next interval
+
+At turn 3, I took up glucose and lactate but showed zero growth. This was likely because:
+1. Glucose is depleted or nearly gone
+2. I was transitioning metabolism
+
+Now I should:
+1. **Shift to amino acid fermentation** — arginine is abundant (14.55 mM) and provides both C and N
+2. **Use lactate** as additional carbon (13.09 mM available)
+3. **Use acetate** sparingly if needed, though it's less favorable than amino acids for growth
+
+**Stickland reaction with arginine as electron acceptor:**
+- Arginine can be cleaved to ornithine, ammonia, and CO₂
+- I can couple this with oxidation of other amino acids or lactate
+- This yields ATP and allows growth
+
+**Carbon and nitrogen balance:**
+
+For 0.4 /h growth:
+- C requirement: 0.4 × 38 = 15.2 mmol C/gDW/h
+- N requirement: 0.4 × 10 = 4.0 mmol N/gDW/h
+
+**Proposed uptakes:**
+- L-arginine: -5.0 mmol/gDW/h (provides 5×4=20 mmol C, 5×4=20 mmol N; high N content)
+- L-lactate: -3.0 mmol/gDW/h (provides 9 mmol C, 0 mmol N)
+- L-serine: -2.0 mmol/gDW/h (provides 6 mmol C, 2 mmol N; good for Stickland)
+
+**Carbon accounting:**
+- In: 20 (arg) + 9 (lac) + 6 (ser) = 35 mmol C
+- Growth cost: 15.2 mmol C
+- Available for products: 35 - 15.2 = 19.8 mmol C
+
+**Nitrogen accounting:**
+- In: 20 (arg) + 0 (lac) + 2 (ser) = 22 mmol N
+- Growth cost: 4.0 mmol N
+- Available for urea/ammonia: 18 mmol N
+
+**Products:** I release:
+- CO₂: ~8 mmol/gDW/h (from decarboxylations)
+- NH₄: ~4 mmol/gDW/h (from amino acid deamination)
+- Acetate: ~4 mmol/gDW/h (fermentation end product)
+- H₂: ~2 mmol/gDW/h (from Stickland)
+
+This balances mass and supports **0.40 /h growth**.
+
+```json
+{
+  "fluxes": {
+    "arg__L": -5.0,
+    "lac__L": -3.0,
+    "ser__L": -2.0,
+    "co2": 8.0,
+    "nh4": 4.0,
+    "ac": 4.0,
+    "h2": 2.0
+  },
+  "growth_rate": 0.40,
+  "rationale": "Shift to amino acid fermentation via Stickland reactions. Arginine is abundant and provides both C and N. Lactate and serine support additional carbon. Products are CO₂, NH₄, acetate, and H₂ from fermentation. This strategy exploits available amino acids as the glucose supply is exhausted.",
+  "confidence": 0.62
+}
+```

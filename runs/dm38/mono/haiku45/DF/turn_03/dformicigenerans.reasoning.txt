@@ -1,0 +1,89 @@
+# Metabolic reasoning for Dorea formicigenerans at t=12h
+
+## Assessment of carbon and nitrogen sources
+
+**What I can transport:**
+As a Gram-positive anaerobic bacterium, I have demonstrated consistent uptake of:
+- D-glucose (glc__D) — my preferred substrate, now depleted to trace levels
+- L-lactate (lac__L) — readily fermented, 18.37 mM available
+- L-arginine (arg__L) — 16.86 mM, used for both carbon and nitrogen
+- Butyrate (but) — 27.09 mM, which I am currently *producing*, suggesting I can also consume it
+
+**What I cannot use:**
+- L-arabinose, maltose, and other complex carbohydrates — no evidence of transport in my history
+- Most amino acids beyond arginine — I have not taken them up despite their presence
+- Ammonia is available (4.195 mM) but I have relied on arginine as my primary nitrogen source
+
+**Fermentation products I make:**
+My recent history shows consistent production of:
+- Butyrate (major product, 3.5–12 mmol/gDW/h)
+- Acetate (2–4 mmol/gDW/h)
+- Formate (1–4.1 mmol/gDW/h)
+- CO₂ (2–24 mmol/gDW/h)
+
+This is characteristic of mixed-acid fermentation with butyrate as a key end product.
+
+## Current metabolic strategy
+
+Glucose is now limiting (<0.1 mM). I must shift to secondary carbon sources:
+- **L-lactate** (18.37 mM) — abundant, readily fermentable
+- **L-arginine** (16.86 mM) — provides both carbon and nitrogen
+- **Butyrate** (27.09 mM) — I produce it, so I can likely consume it via β-oxidation under anaerobic conditions
+
+**Nitrogen:** Arginine supplies both carbon and amino groups. Ammonium is available but I have shown preference for arginine-derived nitrogen.
+
+## Growth calculation
+
+**Uptake plan (mmol/gDW/h):**
+- L-lactate: –12 (lactate fermentation is efficient)
+- L-arginine: –3 (provides ~0.9 mmol N/gDW/h; need ~7 mmol N/gDW/h for growth, so arginine alone is limiting)
+- Ammonium: –2 (to supplement nitrogen)
+- Butyrate: –2 (secondary carbon source, slower than lactate)
+
+**Carbon balance:**
+- Lactate in: 12 mmol C/gDW/h (3 carbons per lactate)
+- Arginine in: 3 mmol C/gDW/h (6 carbons per arginine) = 18 mmol C
+- Butyrate in: 2 mmol C/gDW/h (4 carbons) = 8 mmol C
+- **Total C in: 38 mmol/gDW/h**
+
+**Growth cost:** 33 mmol C/gDW/h for biomass synthesis
+**Fermentation products (estimated):**
+- Lactate (3C) → acetate (2C) + formate (1C) + CO₂ + H₂
+- Arginine (6C) → butyrate (4C) + CO₂ + other products
+- Butyrate uptake → acetate + CO₂
+
+Estimated product release: ~15 mmol C/gDW/h (as acetate, butyrate, formate, CO₂)
+
+**Carbon audit:** 38 in = 33 (growth) + 5 (net product release) ✓
+
+**Nitrogen balance:**
+- Arginine: 3 mmol × 4 N/molecule = 12 mmol N
+- Ammonium: 2 mmol N
+- **Total N in: 14 mmol/gDW/h**
+- Growth cost: 7 mmol N/gDW/h
+- Excess: 7 mmol N/gDW/h (released as ammonia or incorporated into overflow products)
+
+**Growth rate:** With 38 mmol C/gDW/h available and 33 mmol C/gDW/h needed, plus adequate nitrogen, growth is limited by the carbon flux divided by the carbon requirement:
+- Growth = 38 mmol C / 33 mmol C per gDW = **1.15 /h** (sustainable)
+
+However, given that my recent growth rates have been 0.57–0.64 /h, and considering the shift away from glucose, I will be more conservative and target **0.65 /h**, which is well-supported by the available carbon and nitrogen.
+
+---
+
+```json
+{
+  "fluxes": {
+    "lac__L": -12.0,
+    "arg__L": -3.0,
+    "nh4": -2.0,
+    "but": -2.0,
+    "ac": 4.5,
+    "for": 2.5,
+    "co2": 8.0,
+    "h2": 1.0
+  },
+  "growth_rate": 0.65,
+  "rationale": "Glucose depleted; shifting to lactate (primary), arginine (C+N), and butyrate (secondary). Mixed-acid fermentation produces acetate, formate, CO₂, and H₂. Carbon audit: 38 mmol in (12 lactate + 18 arginine + 8 butyrate) = 33 growth + 5 products. Nitrogen: 14 mmol in (12 from arginine + 2 from ammonia) supports 7 mmol growth cost with surplus.",
+  "confidence": 0.72
+}
+```

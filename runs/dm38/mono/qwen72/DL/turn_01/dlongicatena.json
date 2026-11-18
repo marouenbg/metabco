@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.263,
+ "rationale": "L-lactate is the primary carbon source, and ammonium is the primary nitrogen source. Acetate and butyrate are produced as fermentation products, with hydrogen as a byproduct. The growth rate is determined by the available carbon and nitrogen.",
+ "confidence": 0.85
+}

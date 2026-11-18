@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 7,
+  "growth_claimed": 1.0,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=42.5 out=42 biomass=42.2",
+   "p_imbalance: in=0 out=0 biomass=0.078"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "S: credited 0.262 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 1 -> 0.0623",
+   "P: growth 0.0623 -> 0"
+  ],
+  "rationale": "Maximizing carbon and nitrogen uptake while producing acetate, propionate, butyrate, and lactate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 2.0,
+   "arg__L": -2.5,
+   "pro__L": -2.5,
+   "ser__L": -2.5,
+   "ala__L": -2.5,
+   "lac__L": 3.0
+  },
+  "fluxes_applied": {
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 2.0,
+   "arg__L": -2.5,
+   "pro__L": -2.5,
+   "ser__L": -2.5,
+   "ala__L": -2.5,
+   "lac__L": 3.0,
+   "so4": -0.2617
+  }
+ }
+]

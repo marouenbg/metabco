@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "nh4": -2.41,
+  "ac": 2.0,
+  "for": 5.0,
+  "h2": 0.5,
+  "pi": -0.78
+ },
+ "growth_rate": -0.238,
+ "rationale": "Based on my transporters, fermentation products, and carbon and nitrogen balances, I have chosen to take up D-glucose (glc__D), L-lactate (lac__L), and Ammonium (nh4), and release Acetate (ac), Formate (for), and Hydrogen (h2).",
+ "confidence": 0.9
+}

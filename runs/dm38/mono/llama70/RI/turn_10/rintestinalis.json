@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "but": -10.0,
+  "ac": -5.0,
+  "for": -3.0,
+  "gly": -2.0,
+  "co2": 5.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Limited by nitrogen availability",
+ "confidence": 0.8
+}

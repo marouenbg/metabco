@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arab__L": -6.0,
+  "arg__L": -4.0,
+  "lac__L": 1.5,
+  "cys__L": -1.0,
+  "nh4": 2.5,
+  "pi": -0.6,
+  "ac": 3.5,
+  "co2": 0.9
+ },
+ "growth_rate": 0.45,
+ "rationale": "Glucose and arabinose are abundant and readily fermented. Arginine provides supplemental nitrogen and carbon. Lactate can be consumed and re-fermented. At 0.45 /h growth, carbon and nitrogen budgets balance: 23 mmol C in minus 17.1 mmol biomass cost leaves 5.9 mmol for fermentation products (acetate, lactate, CO\u2082). Nitrogen: 7 mmol in, 4.5 mmol biomass cost, 2.5 mmol excess released as NH\u2084\u207a.",
+ "confidence": 0.72
+}

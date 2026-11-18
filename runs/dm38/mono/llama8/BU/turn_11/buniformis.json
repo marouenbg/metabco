@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "arab__L": 10.0,
+  "but": 10.0,
+  "arg__L": 1.0,
+  "cys__L": 1.0,
+  "lac__L": 1.0,
+  "lac__D": 1.0,
+  "for": 1.0,
+  "ac": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Support growth by taking up D-glucose, L-arabinose, and butyrate as carbon sources, and L-arginine, L-cysteine, and other amino acids as nitrogen sources. Release acetate, butyrate, formate, and lactate as fermentation products.",
+ "confidence": 0.9
+}

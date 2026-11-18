@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arg__L": -2.0,
+  "ala__L": -1.5,
+  "ac": 5.0,
+  "ppa": 3.0,
+  "nh4": -4.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing glucose and amino acids as carbon and nitrogen sources, producing acetate and propionate as fermentation products, and supporting a moderate growth rate consistent with available nutrients and metabolic capabilities.",
+ "confidence": 0.8
+}

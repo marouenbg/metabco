@@ -1,0 +1,48 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 11,
+  "growth_claimed": 0.875,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: arab__L",
+   "sugar_export: inost",
+   "uptake_exceeds_pool: nh4",
+   "c_imbalance: in=0 out=277 biomass=29.2"
+  ],
+  "warnings": [
+   "no_transporter: arab__L",
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "clipped uptake nh4 to pool limit -3.44",
+   "S: credited 0.192 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.875 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Based on the available carbon and nitrogen sources, I can support a growth rate of 0.875 g/h. I take up CO2, L-arabinose (arab__L), and myo-inositol (inost) as carbon sources and ammonium (nh4) as a n",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "co2": 100.7,
+   "arab__L": 17.37,
+   "inost": 6.272,
+   "nh4": -19.65,
+   "ac": 23.6,
+   "for": 4.32,
+   "h2": 0.43,
+   "h2s": 0.0
+  },
+  "fluxes_applied": {
+   "co2": 0.0,
+   "arab__L": 0.0,
+   "inost": 0.0,
+   "nh4": -3.4413,
+   "ac": 0.0,
+   "for": 0.0,
+   "h2": 0.43,
+   "h2s": 0.0,
+   "so4": -0.192
+  }
+ }
+]

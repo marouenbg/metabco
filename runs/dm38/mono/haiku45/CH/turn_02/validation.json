@@ -1,0 +1,45 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 2,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.583 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Glucose and lactate are abundant primary substrates. Arginine and cysteine provide supplemental N and C. Ammonium is limited (~8.7 mM) and constrains growth. Mixed-acid fermentation of sugars and amin",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -4.0,
+   "arg__L": -2.0,
+   "cys__L": -1.0,
+   "nh4": -3.0,
+   "ac": 15.0,
+   "but": 6.0,
+   "co2": 2.0,
+   "for": 1.0,
+   "h2": 4.0
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -4.0,
+   "arg__L": -2.0,
+   "cys__L": -1.0,
+   "nh4": -3.0,
+   "ac": 15.0,
+   "but": 6.0,
+   "co2": 2.0,
+   "for": 1.0,
+   "h2": 4.0,
+   "pi": -0.5832
+  }
+ }
+]

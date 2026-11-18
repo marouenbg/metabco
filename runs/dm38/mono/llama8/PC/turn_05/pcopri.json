@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -15.0,
+  "etoh": -5.0,
+  "co2": -10.0,
+  "nh4": -0.0,
+  "ala__L": -10.0,
+  "arg__L": -5.0,
+  "h2": -10.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "Based on my genome-encoded transporters and my known fermentation products.",
+ "confidence": 0.8
+}

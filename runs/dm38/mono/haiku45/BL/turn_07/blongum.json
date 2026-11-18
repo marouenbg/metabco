@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "co2": 4.0,
+  "lac__L": -1.0,
+  "for": 0.3,
+  "acetate": -8.0,
+  "inost": -3.0,
+  "ala__L": -2.5,
+  "ser__L": -1.5,
+  "cys__L": -1.0,
+  "nh4": -2.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Nitrogen is limiting (7 mM ammonium for 3 gDW). I catabolize inositol (bifidogenic), acetate (primary energy), and amino acids (C+N sources) to support growth. Ferment to acetate, CO\u2082, and trace lactate/formate per my anaerobic metabolism. Carbon budget balances; nitrogen supports ~0.30/h growth.",
+ "confidence": 0.62
+}

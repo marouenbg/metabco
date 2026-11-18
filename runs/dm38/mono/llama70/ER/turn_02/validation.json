@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "erectale",
+  "turn": 2,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.2,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.186 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.042 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "L-lactate and D-glucose uptake, ammonium as nitrogen source, acetate and propionate production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "nh4": -1.4,
+   "ac": 6.0,
+   "ppa": 3.0,
+   "but": 1.0,
+   "co2": 2.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "nh4": -1.4,
+   "ac": 6.0,
+   "ppa": 3.0,
+   "but": 1.0,
+   "co2": 2.0,
+   "pi": -0.1862,
+   "so4": -0.042
+  }
+ }
+]

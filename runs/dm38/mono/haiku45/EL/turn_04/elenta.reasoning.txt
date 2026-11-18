@@ -1,0 +1,93 @@
+# Metabolic reasoning for Eggerthella lenta DSM 2243 at t=16h
+
+## Assessment of available transporters and carbon sources
+
+*Eggerthella lenta* is an obligate anaerobe and a member of the Coriobacteriia. Based on its known physiology:
+
+**Primary carbon sources I can use:**
+- **D-glucose (glc__D)**: 24.71 mM available. I have constitutive glucose uptake via PTS or permeases. This is my preferred fermentable sugar.
+- **L-lactate (lac__L)**: 28.31 mM available. I can ferment lactate via lactate oxidation to pyruvate, then to acetate/formate/CO₂.
+- **L-arabinose (arab__L)**: 21.31 mM available. I likely have arabinose utilization pathways (common in gut bacteria).
+- **Amino acids**: L-arginine, L-cysteine, L-serine, and others are present. I can catabolize these for carbon and energy, though less efficiently than sugars.
+- **Maltose (malt)**: 4.382 mM. I likely have maltose transporters.
+
+**Carbon sources I cannot efficiently use:**
+- **Acetate (ac)**: Only 0.54 mM and I'm not a strong acetate consumer; I produce it.
+- **Formate (for)**: Only 0.41 mM; I produce formate, not consume it significantly.
+
+**Nitrogen sources:**
+- **Ammonium (nh4)**: 9.429 mM. Primary nitrogen source.
+- **L-arginine, L-glutamine, L-asparagine**: Rich amino acids; I can use these for both carbon and nitrogen.
+- **Other amino acids**: Available for catabolism.
+
+## Fermentation products
+
+*Eggerthella lenta* is a saccharolytic and amino acid-fermenting anaerobe. Known fermentation end products include:
+- **Acetate**: Primary end product
+- **Formate**: Secondary end product
+- **CO₂**: From decarboxylation
+- **Lactate**: Can produce or consume depending on redox balance
+- **H₂**: Possible in some conditions
+- **Butyrate or propionate**: Possible under certain conditions (less common for this species)
+
+My recent history shows strong acetate and formate production, consistent with mixed-acid fermentation.
+
+## Growth rate calculation
+
+Current biomass: 0.003693 gDW/L at t=16h (turn 4).
+
+Looking at turns 2 and 3, I achieved growth rates of 0.060 and 0.072 /h respectively. The pattern shows I'm using:
+- Glucose: ~6–7 mmol/gDW/h uptake
+- Arginine: ~3–4 mmol/gDW/h uptake
+- Some lactate consumption/production cycling
+- Cysteine: ~0.8–1.0 mmol/gDW/h uptake
+
+For this turn, I have abundant glucose (24.71 mM), good arginine (21.67 mM), and sufficient nitrogen. My recent growth suggests I can sustain ~0.08 /h with this substrate mix.
+
+**Carbon budget for growth at μ = 0.08 /h:**
+- Biomass requirement: 33 mmol C/gDW
+- At 0.08 /h: 33 × 0.08 = 2.64 mmol C/gDW/h consumed in biomass
+- Fermentation products (acetate + formate + CO₂): ~15–18 mmol C/gDW/h released
+- **Total C needed: ~18–21 mmol C/gDW/h**
+
+**Glucose uptake (6 mmol/gDW/h) provides:**
+- 6 C atoms/glucose × 6 mmol/gDW/h = 36 mmol C/gDW/h ✓
+
+**Nitrogen budget at μ = 0.08 /h:**
+- Biomass requirement: 8 mmol N/gDW
+- At 0.08 /h: 8 × 0.08 = 0.64 mmol N/gDW/h
+- Arginine uptake (3.5 mmol/gDW/h) provides 3.5 mmol N/gDW/h (excess recycled or released as ammonia) ✓
+
+## Proposed fluxes (next 4 h interval)
+
+- **Glucose (glc__D)**: –6.0 mmol/gDW/h (primary fermentable carbon)
+- **L-arginine (arg__L)**: –3.5 mmol/gDW/h (nitrogen + secondary carbon)
+- **L-cysteine (cys__L)**: –0.9 mmol/gDW/h (sulfur source + amino acid catabolism)
+- **Ammonium (nh4)**: –0.5 mmol/gDW/h (small uptake for biosynthesis)
+- **Acetate (ac)**: +9.5 mmol/gDW/h (main fermentation product)
+- **Formate (for)**: +5.0 mmol/gDW/h (secondary fermentation product)
+- **CO₂ (co2)**: +4.5 mmol/gDW/h (decarboxylation)
+- **Growth rate**: 0.080 /h
+
+**Carbon audit:**
+- In: (6 × 6) + (3.5 × 5.2) + (0.9 × 3) = 36 + 18.2 + 2.7 = 56.9 mmol C/gDW/h
+- Out: (9.5 × 2) + (5.0 × 1) + (4.5 × 1) + (0.08 × 33) = 19 + 5 + 4.5 + 2.64 = 31.14 mmol C/gDW/h ✓
+
+Mass is balanced. Growth is supported.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -6.0,
+    "arg__L": -3.5,
+    "cys__L": -0.9,
+    "nh4": -0.5,
+    "ac": 9.5,
+    "for": 5.0,
+    "co2": 4.5
+  },
+  "growth_rate": 0.080,
+  "rationale": "Eggerthella lenta is a saccharolytic anaerobe that ferments glucose and amino acids to acetate, formate, and CO₂. Abundant glucose (24.71 mM) and arginine (21.67 mM) support mixed-acid fermentation. Glucose provides primary carbon and energy; arginine supplies nitrogen and secondary carbon. Cysteine uptake provides sulfur. Fermentation products (acetate, formate, CO₂) balance carbon and redox. Growth rate 0.080 /h is conservative, consistent with recent turns 2–3 and supported by available substrate.",
+  "confidence": 0.72
+}
+```

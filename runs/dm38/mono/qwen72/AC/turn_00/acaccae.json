@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -5,
+  "lac__L": 1,
+  "arg__L": -2,
+  "cys__L": -2,
+  "ser__L": -1,
+  "nh4": -1,
+  "but": 8,
+  "ac": 3,
+  "h2": 1
+ },
+ "growth_rate": 0.6,
+ "rationale": "Fermenting glucose and lactate to produce butyrate and acetate, utilizing amino acids for nitrogen and additional carbon. Adjusted growth rate to balance nitrogen.",
+ "confidence": 0.9
+}

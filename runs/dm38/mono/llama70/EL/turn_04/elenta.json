@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "arab__L": -10.0,
+  "lac__L": -5.0,
+  "arg__L": -2.0,
+  "gln__L": -1.0,
+  "ac": 5.0,
+  "ppa": 3.0,
+  "but": 2.0,
+  "co2": -5.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Balancing carbon and nitrogen uptake with fermentation products and biomass production",
+ "confidence": 0.8
+}

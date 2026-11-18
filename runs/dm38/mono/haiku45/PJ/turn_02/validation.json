@@ -1,0 +1,47 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 2,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=94 out=149 biomass=10.5"
+  ],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.313 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0654 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.25 -> 0",
+   "C: secretions scaled by 0.662"
+  ],
+  "rationale": "Parabacteroides johnsonii is a saccharolytic anaerobe with mixed-acid fermentation. At 8h, I transition to exponential growth using abundant glucose, lactate, and arginine. Nitrogen is limiting (9.3 m",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -6.0,
+   "arg__L": -3.0,
+   "arab__L": -2.0,
+   "nh4": -2.5,
+   "ac": 18.0,
+   "ppa": 12.0,
+   "succ": 8.0,
+   "co2": 45.0
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -6.0,
+   "arg__L": -3.0,
+   "arab__L": -2.0,
+   "nh4": -2.5,
+   "ac": 11.9235,
+   "ppa": 7.949,
+   "succ": 5.2993,
+   "co2": 29.8087,
+   "pi": -0.3132,
+   "so4": -0.0654
+  }
+ }
+]

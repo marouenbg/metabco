@@ -1,0 +1,24 @@
+{
+ "fluxes": {
+  "but": -5.0,
+  "inost": -2.0,
+  "leu__L": -0.25,
+  "val__L": -0.25,
+  "phe__L": -0.25,
+  "lys__L": -0.2,
+  "cys__L": -0.2,
+  "thr__L": -0.15,
+  "ile__L": -0.1,
+  "his__L": -0.1,
+  "met__L": -0.05,
+  "for": -0.5,
+  "co2": 8.0,
+  "ac": 2.0,
+  "butyrate_out": 3.5,
+  "h2": 0.8,
+  "nh4": 0.45
+ },
+ "growth_rate": 0.15,
+ "rationale": "Amino acids and butyrate are abundant and utilisable. Moderate growth (0.15 /h) is sustainable over remaining 8 h using available C and N. Fermentation to butyrate, acetate, CO\u2082, and H\u2082 balances redox and mass. Confidence tempered by uncertainty in exact transporter complement and product inhibition.",
+ "confidence": 0.62
+}

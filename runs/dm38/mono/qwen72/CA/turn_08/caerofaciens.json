@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": 4.0,
+  "but": -4.0,
+  "nh4": -8.0,
+  "arg__L": -2.0,
+  "for": 3.0
+ },
+ "growth_rate": 0.333,
+ "rationale": "Using acetate and butyrate as primary carbon sources, ammonium and L-arginine for nitrogen, and producing acetate and formate as fermentation products.",
+ "confidence": 0.9
+}

@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "ppa": -3.0,
+  "arg__L": -2.0,
+  "but": 2.0
+ },
+ "growth_rate": 0.27,
+ "rationale": "Utilizing available carbon and nitrogen sources to support growth and produce short-chain fatty acids",
+ "confidence": 0.8
+}

@@ -1,0 +1,49 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 10,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ac",
+   "uptake_exceeds_pool: for",
+   "uptake_exceeds_pool: malt",
+   "c_imbalance: in=105 out=92.3 biomass=25",
+   "n_imbalance: in=0 out=14.3 biomass=4.36"
+  ],
+  "warnings": [
+   "no_transporter: malt"
+  ],
+  "repairs": [
+   "clipped uptake ac to pool limit -26.1",
+   "clipped uptake for to pool limit -4.19",
+   "clipped uptake malt to pool limit -4.01",
+   "P: credited 0.534 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.165 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.75 -> 0.525",
+   "N: growth 0.525 -> 0",
+   "N: secretions scaled by 0"
+  ],
+  "rationale": "Utilizing a mix of acetate, formate, and maltose as carbon sources, and releasing carbon dioxide and hydrogen as fermentation products, supports a growth rate of 0.75/h while ensuring mass balance.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": -28.49,
+   "for": -23.6,
+   "malt": -4.382,
+   "co2": 92.27,
+   "h2": 0.43,
+   "nh4": 14.27
+  },
+  "fluxes_applied": {
+   "ac": -26.0984,
+   "for": -4.1896,
+   "malt": -4.014,
+   "co2": 92.27,
+   "h2": 0.43,
+   "nh4": 0.0,
+   "pi": -0.5344,
+   "so4": -0.1646
+  }
+ }
+]

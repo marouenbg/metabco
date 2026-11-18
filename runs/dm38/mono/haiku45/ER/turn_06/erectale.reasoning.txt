@@ -1,0 +1,78 @@
+# Metabolic reasoning for Eubacterium rectale at t=24h
+
+## Assessment of my capabilities and the environment
+
+**Carbon sources available to me:**
+- Glucose (glc__D): depleted (consumed in turns 2-4)
+- Lactate (lac__L): depleted (consumed in turns 2-5)
+- Arabinose (arab__L): 8.66 mM available — I can ferment this
+- Maltose (malt): 4.382 mM — I have maltose transport and can ferment
+- Acetate (ac): 22.32 mM — present as fermentation product, but I can also catabolize it via acetyl-CoA
+- Butyrate (but): 18.4 mM — present as fermentation product, but I can utilize it
+- Formate (for): 8.325 mM — I can use this
+- Amino acids: abundant (arg, pro, ala, gly, etc.) — I can catabolize these
+
+**Nitrogen sources:**
+- Ammonium (nh4): 3.062 mM — limited but available
+- Amino acids: provide both carbon and nitrogen
+
+**Recent pattern:** I was growing at 0.6 /h in turn 5 by fermenting lactate and arabinose. Now lactate is gone, so I must switch to the remaining carbohydrates and amino acid catabolism.
+
+## Fermentation strategy
+
+As a butyrate-producing bacterium, I typically ferment sugars to butyrate, acetate, formate, and CO₂. With lactate depleted, I should:
+1. Continue fermenting arabinose (8.66 mM available)
+2. Ferment maltose (4.382 mM available)
+3. Catabolize amino acids (especially the abundant ones: arg, pro, ala, gly) for additional carbon and nitrogen
+4. Produce butyrate, acetate, formate, and CO₂
+
+## Growth calculation
+
+**Carbon budget:**
+- Arabinose: 5 carbons/molecule × 6 mM = 30 mmol C
+- Maltose: 12 carbons/molecule × 3 mM = 36 mmol C
+- Amino acids (conservative estimate): arg (5C×2), ala (3C×5), gly (2C×4), pro (5C×5) ≈ 60 mmol C
+- Total available C ≈ 126 mmol C
+
+**Nitrogen budget:**
+- Ammonium: 3.062 mM
+- Amino acids: arg (2N×2), gly (1N×4), ala (1N×5), pro (1N×5) ≈ 20 mmol N
+- Total available N ≈ 23 mmol N
+
+**Growth limitation:** 
+- For growth: need 33 mmol C and 7 mmol N per gDW
+- With 126 mmol C available: 126/33 = 3.8 gDW possible
+- With 23 mmol N available: 23/7 = 3.3 gDW possible
+- Nitrogen is limiting
+
+At current biomass of 2.922 gDW, I can grow to ~6.2 gDW total over 4h, or add ~3.3 gDW.
+Growth rate = 3.3 gDW / (2.922 gDW × 4 h) ≈ 0.28 /h
+
+However, fermentation efficiency and maintenance will reduce this. I'll target **0.35 /h** as sustainable.
+
+## Specific fluxes for next 4 hours
+
+**Uptakes:**
+- Arabinose: -5.0 mmol/gDW/h (primary fermentable sugar)
+- Maltose: -2.5 mmol/gDW/h (secondary fermentable sugar)
+- L-arginine: -1.5 mmol/gDW/h (amino acid catabolism for C and N)
+- L-alanine: -2.0 mmol/gDW/h (abundant amino acid)
+- Glycine: -1.5 mmol/gDW/h (amino acid)
+- L-proline: -1.0 mmol/gDW/h (amino acid)
+- Ammonium: -1.2 mmol/gDW/h (direct N source)
+
+**Secretions (fermentation products):**
+- Butyrate: +3.5 mmol/gDW/h (major product)
+- Acetate: +2.5 mmol/gDW/h (secondary product)
+- Formate: +1.5 mmol/gDW/h (formate production)
+- CO₂: +8.0 mmol/gDW/h (decarboxylation)
+
+**Carbon audit:**
+- In: 5×5 + 12×2.5 + 5×1.5 + 3×2 + 2×1.5 + 5×1 = 25 + 30 + 7.5 + 6 + 3 + 5 = 76.5 mmol C/gDW/h
+- Out (products): 4×3.5 + 2×2.5 + 1×1.5 + 1×8 = 14 + 5 + 1.5 + 8 = 28.5 mmol C/gDW/h
+- Growth cost: 33 × 0.35 = 11.55 mmol C/gDW/h
+- Total out: 28.5 + 11.55 = 40.05 mmol C/gDW/h ✓ (76.5 > 40.05)
+
+```json
+{"fluxes": {"arab__L": -5.0, "malt": -2.5, "arg__L": -1.5, "ala__L": -2.0, "gly": -1.5, "pro__L": -1.0, "nh4": -1.2, "but": 3.5, "ac": 2.5, "for": 1.5, "co2": 8.0}, "growth_rate": 0.35, "rationale": "Lactate exhausted; switching to arabinose and maltose fermentation with amino acid catabolism. Nitrogen-limited growth at 0.35/h supported by ammonium and amino acid nitrogen. Butyrate and acetate production consistent with fermentation metabolism.", "confidence": 0.72}
+```

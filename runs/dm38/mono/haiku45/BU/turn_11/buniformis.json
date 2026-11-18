@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "arg__L": -2.5,
+  "pro__L": -2.0,
+  "cys__L": -1.0,
+  "ser__L": -1.0,
+  "ac": 1.5,
+  "inost": -2.0,
+  "malt": -1.5,
+  "nh4": -2.0,
+  "co2": 2.5,
+  "for": 1.0
+ },
+ "growth_rate": 0.28,
+ "rationale": "Late-stage batch: glucose and lactate exhausted. Switching to amino acids (arg, pro, cys, ser) as dual C/N sources plus acetate and inositol fermentation. Produces CO\u2082, formate, and acetate overflow. Carbon and nitrogen budgets balance for sustained but declining growth.",
+ "confidence": 0.68
+}

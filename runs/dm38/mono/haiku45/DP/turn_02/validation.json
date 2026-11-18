@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 2,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: glc__D"
+  ],
+  "repairs": [
+   "P: credited 0.591 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0178 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Lactate-sulfate reduction with glucose supplementation. Nitrogen-limited by ammonium availability; growth constrained to match available N. Carbon and N budgets balanced; mass conserved.",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -2.0,
+   "nh4": -3.5,
+   "so4": -2.0,
+   "gly": -0.8,
+   "ala__L": -0.6,
+   "ac": 2.0,
+   "co2": 7.5,
+   "h2s": 2.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -2.0,
+   "nh4": -3.5,
+   "so4": -2.0178,
+   "gly": -0.8,
+   "ala__L": -0.6,
+   "ac": 2.0,
+   "co2": 7.5,
+   "h2s": 2.0,
+   "pi": -0.5909
+  }
+ }
+]

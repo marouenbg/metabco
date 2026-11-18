@@ -1,0 +1,74 @@
+# Metabolic Decision for Bacteroides ovatus — Turn 9
+
+## Analysis
+
+**Carbon and nitrogen sources available:**
+
+I am a Gram-negative anaerobic bacterium with a well-characterized saccharolytic metabolism. My genome encodes:
+- Carbohydrate PTS systems and permeases (maltose, arabinose historically used)
+- Amino acid transporters (broad specificity for branched-chain and aromatic amino acids)
+- Organic acid uptake (acetate, propionate, lactate, succinate, formate)
+- Limited capacity for complex polysaccharide degradation in this minimal medium
+
+**Current nutrient status (turn 9, t=36h, 48h total):**
+
+We are 75% through the batch culture. Preferred carbohydrates (maltose 4.4 mM) are nearly exhausted. Amino acids remain abundant (glycine, serine, leucine, valine, phenylalanine, tyrosine all >2.5 mM). Acetate and propionate are present but limited (21.5 and 18 mM respectively). Nitrogen is scarce: no ammonium detected, only amino acids and trace nitrate (0.11 mM).
+
+**Growth strategy:**
+
+At this late stage with limited time remaining (12 h), I should:
+1. Continue consuming available amino acids as both carbon and nitrogen sources
+2. Ferment amino acids via the Stickland reaction (paired oxidation-reduction of amino acids)
+3. Produce short-chain fatty acids (acetate, propionate, butyrate) as primary fermentation products
+4. Maintain modest growth rate while conserving remaining resources
+
+**Amino acid catabolism:**
+
+I will take up glycine, serine, leucine, valine, phenylalanine, and tyrosine. These support both carbon and nitrogen needs. Typical Bacteroides fermentation of amino acids yields:
+- Acetate and propionate (major products)
+- CO₂, H₂ (minor)
+- Ammonia (from deamination)
+
+**Stoichiometry:**
+
+Taking up ~8 mmol amino acids/gDW/h (mix of small and large amino acids, averaging ~4 carbons and ~1 nitrogen per molecule):
+- Carbon in: ~32 mmol C/gDW/h
+- Nitrogen in: ~8 mmol N/gDW/h
+- Growth cost: 42 mmol C + 10 mmol N per gDW produced
+- Feasible growth: limited by nitrogen; 8 mmol N supports ~0.8 gDW growth, but carbon allows only 32/42 ≈ 0.76 gDW
+
+**Realistic growth rate: 0.35–0.40 /h** (supported by amino acid fermentation)
+
+**Carbon audit:**
+- Uptake: 8 mmol amino acids × 4 C/molecule ≈ 32 mmol C/gDW/h
+- Growth: 0.38 gDW/h × 42 mmol C/gDW = 16 mmol C/gDW/h
+- Fermentation products: 32 − 16 = 16 mmol C/gDW/h
+- Allocation: acetate (8 mmol) + propionate (6 mmol) + CO₂ (2 mmol) ✓
+
+**Nitrogen audit:**
+- Uptake: 8 mmol N/gDW/h
+- Growth: 0.38 gDW/h × 10 mmol N/gDW = 3.8 mmol N/gDW/h
+- Overflow: 4.2 mmol N → ammonia (deamination) ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "gly": -2.0,
+    "ser__L": -1.5,
+    "leu__L": -1.2,
+    "val__L": -1.0,
+    "phe__L": -1.0,
+    "tyr__L": -0.8,
+    "ac": 3.5,
+    "ppa": 2.5,
+    "co2": 1.2,
+    "nh4": 2.0,
+    "h2": 0.3
+  },
+  "growth_rate": 0.38,
+  "rationale": "Late-stage batch culture (36/48 h). Nitrogen is limiting; amino acid fermentation via Stickland pathways yields acetate and propionate. Uptake of 7.5 mmol amino acids/gDW/h (mix of 3–5 C atoms, 1 N each) provides 30 mmol C and 7.5 mmol N. Growth at 0.38/h consumes 16 mmol C and 3.8 mmol N; remainder fermented to acetate (3.5), propionate (2.5), CO₂ (1.2), and ammonia (2.0) from deamination. Mass balanced; realistic for Bacteroides in amino-acid-rich, carbohydrate-poor anaerobic conditions.",
+  "confidence": 0.72
+}
+```

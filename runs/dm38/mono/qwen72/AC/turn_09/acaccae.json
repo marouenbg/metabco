@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -2.0,
+  "but": 2.0,
+  "ac": 1.0,
+  "co2": 1.0,
+  "h2": 0.5,
+  "arg__L": -1.0,
+  "nh4": -0.5
+ },
+ "growth_rate": 0.2,
+ "rationale": "Continuing to use glucose and arginine for growth, producing butyrate, acetate, hydrogen, and carbon dioxide, and releasing ammonium as a waste product.",
+ "confidence": 0.9
+}

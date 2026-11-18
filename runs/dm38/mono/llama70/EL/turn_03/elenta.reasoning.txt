@@ -1,0 +1,20 @@
+As Eggerthella lenta DSM 2243, I need to decide on the best metabolic strategy for the next 4 hours. Given the available nutrients, I can see that there are several carbon sources that I can potentially use, including L-lactate, D-glucose, L-arabinose, and L-arginine. However, I need to consider which of these I can actually transport into my cell.
+
+From my genome, I know that I have transporters for L-lactate, D-glucose, and L-arginine. I can use these to take up the necessary carbon and nitrogen for growth. L-lactate and D-glucose are both abundant in the environment, with concentrations of 24.73 mmol/L and 18.06 mmol/L, respectively. L-arginine is also present, but at a lower concentration of 20.41 mmol/L.
+
+In terms of nitrogen sources, I can use L-arginine, as well as ammonium, which is present at a concentration of 8.664 mmol/L. I can also use other amino acids, such as L-glutamate, L-asparagine, and L-glutamine, but these are present at lower concentrations.
+
+As for fermentation products, Eggerthella lenta is known to produce acetate, propionate, and butyrate. I can use these as electron acceptors and to generate energy.
+
+To determine my growth rate, I need to calculate how much carbon and nitrogen I can take up and use for growth. Let's assume that I take up 10 mmol/L of D-glucose and 5 mmol/L of L-lactate per hour, which gives me a total of 15 mmol/L of carbon per hour. I also take up 2 mmol/L of L-arginine and 1 mmol/L of ammonium per hour, which gives me a total of 3 mmol/L of nitrogen per hour.
+
+Using the biomass composition formula, I can calculate that I need approximately 33 mmol of carbon and 8 mmol of nitrogen per gram of dry weight produced. Based on my uptake rates, I can support a growth rate of approximately 0.45 gDW/h.
+
+Now, let's do a carbon audit to make sure that I'm not releasing more carbon than I'm taking in. My total carbon uptake is 15 mmol/L per hour, and I'm using 33 mmol of carbon per gram of dry weight produced. At a growth rate of 0.45 gDW/h, I'm using approximately 14.85 mmol of carbon per hour for growth. This leaves me with 0.15 mmol of carbon per hour that I can use for maintenance and other processes.
+
+As for the fermentation products, I can produce acetate, propionate, and butyrate. Let's assume that I produce 5 mmol/L of acetate, 3 mmol/L of propionate, and 2 mmol/L of butyrate per hour. This gives me a total of 10 mmol of carbon per hour that I'm releasing as fermentation products.
+
+Overall, my carbon audit looks good, and I'm not releasing more carbon than I'm taking in.
+
+Here is my decision:
+{"fluxes": {"glc__D": -10.0, "lac__L": -5.0, "arg__L": -2.0, "nh4": -1.0, "ac": 5.0, "ppa": 3.0, "but": 2.0}, "growth_rate": 0.45, "rationale": "using D-glucose and L-lactate as carbon sources, and L-arginine and ammonium as nitrogen sources", "confidence": 0.8}

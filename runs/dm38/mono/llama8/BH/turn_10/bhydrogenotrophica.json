@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "lac__L": 10.0,
+  "h2": 20.0,
+  "ac": 10.0,
+  "pi": -0.84
+ },
+ "growth_rate": 0.96,
+ "rationale": "Utilizing glucose and lactate to support growth, with hydrogen as a primary energy source.",
+ "confidence": 0.9
+}

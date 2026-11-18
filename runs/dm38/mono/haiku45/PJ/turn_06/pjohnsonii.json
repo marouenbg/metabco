@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -6.0,
+  "arab__L": -3.0,
+  "arg__L": -3.0,
+  "nh4": -2.0,
+  "ac": 8.0,
+  "ppa": 5.0,
+  "succ": 3.0,
+  "co2": 6.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Nitrogen limitation (ammonium + arginine-derived N ~2.5 mmol/gDW/h) restricts growth to ~0.25 /h. Glucose, lactate, and arabinose ferment to acetate, propionate, and succinate via mixed-acid pathways. Arginine provides both C and N. Carbon balance verified: 111 mmol C in \u2212 10.5 (biomass) \u2212 48.5 (products) leaves margin for additional CO\u2082.",
+ "confidence": 0.72
+}

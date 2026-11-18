@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -7.0,
+  "lac__L": 2.5,
+  "arg__L": -2.0,
+  "nh4": -1.8,
+  "pi": -0.2,
+  "so4": -0.08,
+  "ac": 3.5,
+  "for": 1.2,
+  "co2": 1.5
+ },
+ "growth_rate": 0.32,
+ "rationale": "Mixed-acid fermentation of glucose and lactate with amino acid catabolism for nitrogen. Nitrogen-limited growth at ~0.32/h. Carbon and nitrogen budgets balanced. Acetate, lactate, formate, and CO\u2082 are typical fermentation products.",
+ "confidence": 0.72
+}

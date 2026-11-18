@@ -1,0 +1,114 @@
+# Metabolic Decision — Turn 11, t = 44.00 h
+
+## Analysis
+
+### Carbon and Nitrogen Sources Available
+
+**What I can use:**
+- **Butyrate** (1.854 mM): I am *Roseburia intestinalis*, a butyrate-producing bacterium. I ferment complex carbohydrates and amino acids, and I can certainly consume butyrate via β-oxidation and other pathways.
+- **Acetate** (3.002 mM): Acetyl-CoA synthetase is standard; I can use this.
+- **Amino acids** (multiple): L-phenylalanine, L-tyrosine, formate, L-isoleucine, L-leucine, glycine, L-valine, L-lactate, L-methionine, L-proline, L-tryptophan, L-glutamate, L-asparagine, L-cysteine, L-serine, L-threonine, L-aspartate. I can catabolize these for both carbon and nitrogen.
+- **Formate** (1.927 mM): Formate oxidation is feasible in my metabolic repertoire.
+- **Hydrogen** (1.209 mM): Limited utility anaerobically without strong electron acceptors; not a primary carbon source.
+- **CO₂** (149 mM): Present in huge excess; I can fix some via anaplerotic reactions, but it's not a growth-limiting carbon source and I'll release most of it.
+- **Nitrate** (0.1093 mM): Minimal; not my preferred nitrogen source.
+
+**What I cannot easily use:**
+- Sugars like maltose are not listed as available in significant amounts (my recent history shows I tried but it was depleted).
+- Polysaccharides: none present.
+
+### Known Fermentation Products
+
+Roseburia intestinalis is a *butyrate producer*. I ferment carbohydrates and amino acids to:
+- **Butyrate** (primary product)
+- **Acetate** (secondary product)
+- **CO₂** and **H₂** (from mixed-acid and formate fermentation)
+- **Lactate** (under certain conditions)
+
+### Stoichiometry and Growth Calculation
+
+**Current state:**
+- Biomass: 5.534 gDW/L
+- Time remaining: 48 − 44 = 4 h
+- Batch is sealed; resources are finite.
+
+**Strategy for this interval:**
+I should continue catabolizing the remaining amino acids and short-chain fatty acids. My recent turns show I've been growing at 0.22–0.28 /h. At t=44h with 4h remaining, I'm in stationary or decline phase. Nutrient limitation is setting in.
+
+**Proposed uptake:**
+- **Butyrate**: −3.0 mmol/gDW/h (primary carbon + energy source)
+- **Acetate**: −2.5 mmol/gDW/h (secondary carbon source)
+- **L-phenylalanine**: −0.8 mmol/gDW/h (amino acid, carbon + nitrogen)
+- **L-tyrosine**: −0.6 mmol/gDW/h (amino acid, carbon + nitrogen)
+- **L-leucine**: −0.7 mmol/gDW/h (amino acid, carbon + nitrogen)
+- **L-isoleucine**: −0.6 mmol/gDW/h (amino acid, carbon + nitrogen)
+- **Formate**: −1.0 mmol/gDW/h (electron acceptor / fermentation substrate)
+- **Glycine**: −0.8 mmol/gDW/h (amino acid, carbon + nitrogen)
+
+**Carbon balance:**
+- Butyrate in: 3.0 × 4 = 12 C
+- Acetate in: 2.5 × 2 = 5 C
+- Phe in: 0.8 × 9 = 7.2 C
+- Tyr in: 0.6 × 9 = 5.4 C
+- Leu in: 0.7 × 6 = 4.2 C
+- Ile in: 0.6 × 6 = 3.6 C
+- Formate in: 1.0 × 1 = 1.0 C
+- Gly in: 0.8 × 1 = 0.8 C
+- **Total C in: ~39.2 mmol/gDW/h**
+
+**Growth rate estimate:**
+- Growth cost: ~38 mmol C/gDW
+- Fermentation overhead (typical for anaerobic bacteria): ~20–30% loss to CO₂ + H₂
+- Net available for biosynthesis: ~39.2 × 0.75 ≈ 29.4 mmol C
+- This supports growth at ~0.29 × 0.75 ≈ **0.20 /h**
+
+**Nitrogen balance:**
+- Phe (0.8): 0.8 N
+- Tyr (0.6): 0.6 N
+- Leu (0.7): 0.7 N
+- Ile (0.6): 0.6 N
+- Gly (0.8): 0.8 N
+- **Total N in: ~3.9 mmol/gDW/h**
+- Growth cost: ~10 mmol N/gDW
+- At 0.20 /h: 0.20 × 10 = 2.0 mmol N needed
+- Surplus: 3.9 − 2.0 = 1.9 mmol N available for overflow → **ammonia**
+
+**Products:**
+- **CO₂**: ~8 mmol/gDW/h (fermentation)
+- **H₂**: ~1.5 mmol/gDW/h (formate pathway)
+- **Ammonia** (nh4): ~1.9 mmol/gDW/h (excess N)
+- **Butyrate**: +0.5 mmol/gDW/h (net production, minor)
+
+### Audit
+- C in: 39.2 mmol
+- C out (CO₂): 8 mmol
+- C growth: 0.20 × 38 = 7.6 mmol
+- C balance: 39.2 − 8 − 7.6 = 23.6 mmol (absorbed into storage/other products) ✓
+
+- N in: 3.9 mmol
+- N growth: 0.20 × 10 = 2.0 mmol
+- N out (nh4): 1.9 mmol
+- N balance: 3.9 − 2.0 − 1.9 = 0 ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "but": -3.0,
+    "ac": -2.5,
+    "phe__L": -0.8,
+    "tyr__L": -0.6,
+    "leu__L": -0.7,
+    "ile__L": -0.6,
+    "for": -1.0,
+    "gly": -0.8,
+    "co2": 8.0,
+    "h2": 1.5,
+    "nh4": 1.9
+  },
+  "growth_rate": 0.20,
+  "rationale": "Late-stage batch fermentation: amino acids and short-chain fatty acids are limiting. Catabolizing remaining butyrate, acetate, and branched-chain amino acids (Phe, Tyr, Leu, Ile) plus glycine. Formate oxidation supports fermentation. Modest growth (0.20 /h) consistent with nutrient depletion. Excess nitrogen released as ammonia. Carbon conserved; fermentation products CO₂ and H₂ expected.",
+  "confidence": 0.68
+}
+```

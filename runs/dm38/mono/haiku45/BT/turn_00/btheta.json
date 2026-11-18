@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -2.0,
+  "ac": 5.0,
+  "ppa": 3.75,
+  "but": 2.5,
+  "co2": 1.25,
+  "for": 0.25
+ },
+ "growth_rate": 0.25,
+ "rationale": "Glucose is the preferred fermentable substrate; ammonium is the primary nitrogen source. Nitrogen availability (9.347 mM) limits growth to ~0.25 /h. Fermentation yields acetate, propionate, butyrate, and CO\u2082 in typical Bacteroides ratio. Mass balance: 60 mmol C in (10 mmol glucose) \u2192 10.25 mmol C biomass + ~32.75 mmol C products; 2 mmol N in (ammonium) \u2192 0.5 mmol N biomass.",
+ "confidence": 0.72
+}

@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 5,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.3,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.394 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Lactate-sulfate fermentation with amino acid co-utilization. Lactate is preferred carbon/energy source; arginine provides supplemental nitrogen and carbon. Sulfate reduction coupled to lactate oxidati",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -8.0,
+   "arg__L": -1.2,
+   "so4": -1.8,
+   "nh4": -0.5,
+   "ac": 4.0,
+   "co2": 3.5,
+   "h2s": 1.8
+  },
+  "fluxes_applied": {
+   "lac__L": -8.0,
+   "arg__L": -1.2,
+   "so4": -1.8,
+   "nh4": -0.5,
+   "ac": 4.0,
+   "co2": 3.5,
+   "h2s": 1.8,
+   "pi": -0.3939
+  }
+ }
+]

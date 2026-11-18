@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "arg__L": -1.5,
+  "leu__L": -1.0,
+  "pro__L": -0.6,
+  "for": -1.5,
+  "but": 1.8,
+  "ac": 1.2,
+  "co2": 2.0,
+  "nh4": 0.8
+ },
+ "growth_rate": 0.15,
+ "rationale": "Restarting growth after stall by fermenting amino acids (arg, leu, pro) and formate. These are abundant and transport-competent. Fermentation yields butyrate and acetate (my signature products). Amino acid catabolism provides both C and N. Modest growth rate (0.15 /h) reflects late-stage culture and limited simple carbohydrates.",
+ "confidence": 0.68
+}

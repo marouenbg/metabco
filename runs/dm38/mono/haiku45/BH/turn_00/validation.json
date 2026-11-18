@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 0,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.35,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.408 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0916 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 0.42 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Blautia hydrogenotrophica ferments glucose and lactate under anaerobic conditions. Glucose is the preferred substrate (20 mmol/gDW/h uptake). Mixed fermentation yields acetate as the dominant product ",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -20.0,
+   "lac__L": -5.0,
+   "nh4": -3.0,
+   "ac": 8.0,
+   "for": 4.0,
+   "h2": 1.5,
+   "co2": 1.2
+  },
+  "fluxes_applied": {
+   "glc__D": -20.0,
+   "lac__L": -5.0,
+   "nh4": -3.4201,
+   "ac": 8.0,
+   "for": 4.0,
+   "h2": 1.5,
+   "co2": 1.2,
+   "pi": -0.4083,
+   "so4": -0.0916
+  }
+ }
+]

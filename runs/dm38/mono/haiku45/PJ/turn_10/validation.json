@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 10,
+  "growth_claimed": 0.27,
+  "growth_allowed": 0.0261,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=12 out=11.5 biomass=11.4"
+  ],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.338 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0707 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.27 -> 0.0261"
+  ],
+  "rationale": "Lactate and acetate fermentation with ammonium as nitrogen source, supporting sustained growth on remaining abundant organic acids after glucose depletion.",
+  "confidence": 0.65,
+  "fluxes_claimed": {
+   "lac__L": -4.0,
+   "ac": 2.5,
+   "nh4": -2.7,
+   "ppa": 1.5,
+   "co2": 1.5,
+   "for": 0.5
+  },
+  "fluxes_applied": {
+   "lac__L": -4.0,
+   "ac": 2.5,
+   "nh4": -2.7,
+   "ppa": 1.5,
+   "co2": 1.5,
+   "for": 0.5,
+   "pi": -0.3382,
+   "so4": -0.0707
+  }
+ }
+]

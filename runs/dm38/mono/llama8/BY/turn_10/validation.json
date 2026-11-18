@@ -1,0 +1,45 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 10,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=0 out=76.9 biomass=14.8"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.438 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0916 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.35 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Utilizing butyrate as my primary carbon source, with acetate and formate as secondary and tertiary sources, respectively. Producing acetate, butyrate, and formate as fermentation products.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": 10.0,
+   "ac": 10.0,
+   "for": 10.0,
+   "co2": 1.0,
+   "pro__L": 0.5,
+   "ala__L": 0.5,
+   "gly": 0.5,
+   "phe__L": 0.1
+  },
+  "fluxes_applied": {
+   "but": 0.0,
+   "ac": 0.0,
+   "for": 0.0,
+   "co2": 0.0,
+   "pro__L": 0.0,
+   "ala__L": 0.0,
+   "gly": 0.0,
+   "phe__L": 0.0,
+   "pi": -0.4384,
+   "so4": -0.0916
+  }
+ }
+]

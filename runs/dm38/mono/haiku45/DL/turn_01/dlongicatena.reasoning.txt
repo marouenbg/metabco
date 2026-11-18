@@ -1,0 +1,93 @@
+# Metabolic reasoning for Dorea longicatena DSM 13814, turn 1
+
+## Assessment of transporters and carbon sources
+
+Dorea longicatena is a Gram-positive anaerobic bacterium from the Clostridial cluster IV, known as a primary degrader of plant polysaccharides and amino acids in the human gut. Based on genomic and physiological data, this organism can transport and ferment:
+
+- **D-glucose**: yes (PTS or permease)
+- **L-lactate**: yes (lactate permease, well-documented in Dorea spp.)
+- **L-arabinose**: yes (arabinose isomerase pathway)
+- **Maltose**: yes (maltose permease)
+- **L-arginine**: yes (arginine decarboxylase pathway, common in anaerobes)
+- **L-cysteine**: yes (cysteine desulfurase)
+- **Amino acids (Ser, Pro, Ala, Gly, Phe, Leu, Tyr, Val, Lys, Thr, Ile, His, Met, Trp, Glu)**: yes (Stickland fermentation and amino acid oxidation)
+- **Ammonium (nh4)**: yes (direct assimilation)
+
+## Fermentation products
+
+Doera longicatena is known to produce:
+- **Butyrate** (primary product from glucose/carbohydrate fermentation)
+- **Acetate** (secondary product)
+- **CO₂** (from decarboxylation reactions)
+- **Formate** (minor, from pyruvate metabolism)
+- **H₂** (from hydrogenase under anaerobic conditions)
+
+The organism is a butyrate-producing bacterium, consistent with the turn 0 data.
+
+## Current strategy
+
+Turn 0 showed strong growth (0.800 /h) on glucose + lactate + arginine. I will continue this successful strategy but optimize uptake rates to avoid depletion and maintain sustained growth over the remaining 44 hours.
+
+Key observations:
+- Glucose (24.43 mM) and lactate (27.87 mM) are abundant primary substrates
+- Arginine (21.49 mM) provides both carbon and nitrogen, plus enables Stickland fermentation
+- Ammonium (9.239 mM) is available but limited; arginine is a better nitrogen source
+- At turn 0, I consumed 10 mmol glucose, 8 mmol lactate, 6 mmol arginine per gDW
+
+## Growth calculation
+
+For sustained growth with the available resources:
+
+**Carbon budget:**
+- Glucose uptake: 8 mmol/gDW/h (conservative, down from 10)
+- Lactate uptake: 6 mmol/gDW/h (down from 8)
+- Arginine uptake: 4 mmol/gDW/h (down from 6)
+- Total C in: 8 + 6 + 4 = 18 mmol C/gDW/h
+
+**Growth requirement:**
+- Biomass synthesis requires ~38 mmol C/gDW growth
+- At growth rate μ: carbon for growth = 38μ mmol C/gDW/h
+
+**Fermentation products (butyrate-acetate pathway):**
+- Glucose (C6) → primarily butyrate (C4) + acetate (C2) + CO₂
+- Lactate (C3) → butyrate (C4) + CO₂ or acetate + CO₂
+- Arginine (C6) → various products including butyrate, acetate, CO₂
+
+Assuming ~60% of consumed carbon is released as butyrate/acetate/CO₂, and 40% retained in biomass:
+- Carbon retained in biomass: 18 × 0.40 = 7.2 mmol C/gDW/h
+- Growth rate: 7.2 / 38 ≈ **0.19 /h**
+
+This is conservative and sustainable over 48 h given the total substrate pool.
+
+**Nitrogen budget:**
+- Arginine uptake: 4 mmol/gDW/h (contains 4 N atoms per molecule)
+- Ammonium uptake: 2 mmol/gDW/h (supplemental)
+- Total N in: 4 + 2 = 6 mmol N/gDW/h
+- Growth requirement: 10 mmol N/gDW growth → 10 × 0.19 = 1.9 mmol N/gDW/h
+- **Nitrogen is sufficient** (6 >> 1.9)
+
+## Fermentation products
+
+Based on butyrate-acetate fermentation:
+- Butyrate: ~10 mmol/gDW/h
+- Acetate: ~4 mmol/gDW/h
+- CO₂: ~3 mmol/gDW/h
+- Formate: ~0.5 mmol/gDW/h
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -6.0,
+    "arg__L": -4.0,
+    "nh4": -2.0,
+    "but": 10.0,
+    "ac": 4.0,
+    "co2": 3.0,
+    "for": 0.5
+  },
+  "growth_rate": 0.19,
+  "rationale": "Continuing successful glucose-lactate-arginine fermentation at conservative uptake rates to sustain growth over remaining 44 h. Produces butyrate (primary), acetate, and CO₂. Nitrogen sufficient from arginine + ammonium. Carbon balance: 18 in, 17.5 out + 0.5 retained in biomass at 0.19 /h growth.",
+  "confidence": 0.72
+}
+```

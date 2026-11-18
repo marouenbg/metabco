@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": 2.0,
+  "ppa": 1.0,
+  "but": 1.0,
+  "gly": -2.0,
+  "phe__L": -1.0,
+  "leu__L": -1.0
+ },
+ "growth_rate": 0.075,
+ "rationale": "Utilizing available carbon and nitrogen sources to support growth",
+ "confidence": 0.8
+}

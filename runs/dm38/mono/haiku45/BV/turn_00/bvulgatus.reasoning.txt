@@ -1,0 +1,100 @@
+# Metabolic Decision — Bacteroides vulgatus ATCC 8482, t = 0.00 h
+
+## Analysis
+
+### Carbon and nitrogen sources available to me
+
+**Bacteroides vulgatus** is a human gut symbiont with a versatile saccharolytic metabolism. My genome encodes:
+- **Hexose transporters** (glucose, arabinose via PTS and permeases)
+- **Disaccharide transporters** (maltose)
+- **Organic acid transporters** (lactate)
+- **Amino acid transporters** (all common L-amino acids)
+
+Abundant substrates I can use:
+1. **D-glucose** (24.98 mM) — primary preferred carbon source
+2. **L-lactate** (28.31 mM) — secondary, readily fermented
+3. **L-arabinose** (21.31 mM) — fermentable pentose
+4. **Maltose** (4.382 mM) — disaccharide
+5. **L-arginine** (21.81 mM) — amino acid; I can ferment via arginine deiminase pathway
+6. **L-cysteine** (8.4 mM) — contains sulfur; fermentable
+7. Other amino acids in modest amounts
+
+**Nitrogen sources:**
+- **Ammonium** (9.347 mM) — primary inorganic N
+- **Amino acids** — contain bound N
+- **Arginine** especially valuable: both C and N source
+
+### Fermentation strategy
+
+As an obligate anaerobe, I ferment sugars and amino acids to short-chain fatty acids (acetate, propionate, butyrate) and H₂, CO₂. For this early phase with abundant glucose and lactate, my primary strategy:
+
+1. **Glucose fermentation** → acetate + butyrate + CO₂ + H₂
+2. **Lactate co-fermentation** → acetate + propionate + butyrate
+3. **Arginine fermentation** (if N becomes limiting) → citrulline → ornithine + CO₂ + NH₃
+
+### Growth calculation
+
+**Glucose stoichiometry** (simplified fermentation):
+- C₆H₁₂O₆ → products; typical yield ~0.4 g biomass / g glucose
+- At ~180 g/mol glucose, uptaking 1 mmol glucose yields ~0.072 g biomass
+
+**Nitrogen requirement:**
+- Growth costs ~8 mmol N per g dry weight
+- With 9.347 mM NH₄ available and initial biomass 0.002178 gDW/L, I have plenty
+
+**Proposed uptake rates:**
+- Glucose: **15 mmol/gDW/h** (strong preference, not saturating)
+- Lactate: **8 mmol/gDW/h** (secondary, supports growth)
+- Arginine: **3 mmol/gDW/h** (N source; amino acid catabolism)
+- Ammonium: **2 mmol/gDW/h** (direct N assimilation)
+
+**Carbon balance:**
+- In: 15 (glc) + 8 (lac) + 3 (arg, ~5 C per molecule) = 15 + 8 + 15 = **38 mmol C/gDW/h**
+- Growth cost: 41 mmol C/gDW/h per g biomass × growth_rate
+- Fermentation products (acetate, butyrate, propionate, CO₂): remainder
+
+**Nitrogen balance:**
+- In: 2 (NH₄) + 3 (arg, 1 N per molecule) + amino acid N = 2 + 3 = **5 mmol N/gDW/h**
+- Growth cost: 8 mmol N/gDW/h per g biomass × growth_rate
+- Excess N released as NH₃
+
+**Growth rate inference:**
+- If I take 38 mmol C and need 41 per gram biomass, I can produce ~0.93 g/h growth
+- But N limits: 5 mmol N available, 8 needed per g biomass → 5/8 = 0.625 g/h max
+- **Realistic growth rate: ~0.60 /h** (accounting for maintenance and non-growth biosynthesis)
+
+### Fermentation products
+
+With 38 mmol C in and 41×0.60 = 24.6 mmol C for growth:
+- C available for fermentation: 38 - 24.6 = **13.4 mmol C/gDW/h**
+- Typical Bacteroides products: **acetate, butyrate, propionate, CO₂, H₂**
+- Allocate: acetate (7), butyrate (4), propionate (2), CO₂ (5 as dissolved/gas)
+
+### Audit
+- **Carbon in:** 15 + 8 + 15 = 38 mmol/gDW/h ✓
+- **Carbon out (growth + fermentation):** 24.6 + 13.4 = 38 mmol/gDW/h ✓
+- **Nitrogen in:** 2 + 3 = 5 mmol/gDW/h
+- **Nitrogen out (growth + excess):** 8×0.60 + 2.4 = 7.2 mmol/gDW/h (slight deficit; revise growth to 0.55 /h) ✓
+
+**Revised growth rate: 0.55 /h**
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -15.0,
+    "lac__L": -8.0,
+    "arg__L": -3.0,
+    "nh4": -2.0,
+    "ac": 7.0,
+    "but": 4.0,
+    "ppa": 2.0,
+    "co2": 5.0,
+    "h2": 1.5
+  },
+  "growth_rate": 0.55,
+  "rationale": "Bacteroides vulgatus ferments glucose and lactate as primary carbon sources under anaerobiosis. Glucose uptake (15 mmol/gDW/h) is preferred; lactate (8) provides secondary fermentation. Arginine (3) supplies both carbon and nitrogen. Ammonium (2) covers direct N assimilation. Growth at 0.55 /h is limited by nitrogen availability (5 mmol in vs. 8 mmol needed per g biomass). Fermentation yields acetate, butyrate, propionate, CO₂, and H₂. Carbon balance: 38 mmol in = 22.6 (growth) + 15.4 (products). Confidence high; strategy aligns with known Bacteroides metabolism in anaerobic batch culture.",
+  "confidence": 0.78
+}
+```

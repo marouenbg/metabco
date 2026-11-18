@@ -1,0 +1,81 @@
+# Metabolic reasoning for Dorea formicigenerans at turn 11
+
+## Assessment of the situation
+I am at 4.466 gDW/L, deep in stationary phase (44h of 48h total). Nutrients are severely depleted. I need to evaluate what I can actually metabolize.
+
+## Carbon and nitrogen sources available
+**Primary carbon sources I can use:**
+- **Butyrate (60.97 mmol/L)**: Dorea formicigenerans is a butyrate-producing bacterium; it ferments sugars to butyrate. It can also consume butyrate via β-oxidation in anaerobic conditions (acetyl-CoA pathway). This is my most abundant usable carbon source.
+- **Acetate (21.14 mmol/L)**: I can consume acetate, though it's less efficient than butyrate for energy.
+- **Formate (43 mmol/L)**: I can use formate; it's a common fermentation product I can oxidize.
+- **Succinate (4.304 mmol/L)**: Available but limited.
+- **CO₂ (154 mmol/L)**: Abundant but requires autotrophic metabolism; I'm a heterotroph and cannot fix CO₂.
+- **Hydrogen (6.777 mmol/L)**: I lack hydrogenase in my genome for significant H₂ oxidation.
+
+**Amino acids**: Present in small amounts, but at this late stage with severe nitrogen limitation, using them for catabolism rather than biosynthesis would be wasteful.
+
+**Nitrogen sources:**
+- **Ammonium (1.62 mmol/L)**: The only readily usable nitrogen source. Critically limiting.
+- **Nitrate (0.1093 mmol/L)**: Too low; I lack strong nitrate reduction capacity.
+- **Amino acids**: Can be catabolized for nitrogen, but we're in late stationary phase.
+
+## Growth calculation
+At turn 9, I achieved 0.180 /h growth when butyrate was available and ammonium was present. Now ammonium is down to 1.62 mmol/L—severe nitrogen limitation.
+
+For growth, I need:
+- ~33 mmol C per gDW
+- ~7 mmol N per gDW
+
+Current NH₄ availability: 1.62 mmol/L in a 1 mL vessel = 1.62 mmol total.
+At 4.466 gDW/L, this is 1.62 / 4.466 = 0.363 mmol NH₄ per gDW available.
+
+This supports only 0.363 / 7 = **0.052 gDW of new biomass maximum**.
+
+Over 4 hours: maximum growth rate = 0.052 / 4 / 4.466 = **0.003 /h**
+
+This is negligible. I should enter **stationary phase with minimal growth**.
+
+## Fermentation strategy
+With such severe nitrogen limitation, I should:
+1. Continue slow catabolism of available butyrate and acetate
+2. Ferment to formate and acetate (my known products)
+3. Accept near-zero growth
+
+**Uptake plan:**
+- Butyrate: -2.0 mmol/gDW/h (moderate consumption; β-oxidation to acetyl-CoA)
+- Acetate: -0.5 mmol/gDW/h (slow uptake)
+- Ammonium: -0.25 mmol/gDW/h (all available N will be used)
+
+**Output:**
+- CO₂: +1.5 mmol/gDW/h (fermentation decarboxylation)
+- Formate: +0.8 mmol/gDW/h (overflow metabolism)
+- Acetate: +0.5 mmol/gDW/h (partial regeneration)
+
+## Carbon audit
+**In:** 2.0 (but, 4C) + 0.5 (ac, 2C) = 8.0 + 1.0 = 9.0 mmol C/gDW/h
+**Out:** 1.5 (CO₂, 1C) + 0.8 (for, 1C) + 0.5 (ac, 2C) = 1.5 + 0.8 + 1.0 = 3.3 mmol C/gDW/h
+**Growth cost at 0.003 /h:** 33 × 0.003 = 0.099 mmol C/gDW/h
+**Balance:** 9.0 - 3.3 - 0.099 = 5.6 mmol C/gDW/h (surplus acceptable for storage or slower fermentation)
+
+**Nitrogen audit:**
+**In:** 0.25 mmol NH₄/gDW/h
+**Growth cost at 0.003 /h:** 7 × 0.003 = 0.021 mmol N/gDW/h
+**Balance:** 0.25 - 0.021 = 0.229 mmol N/gDW/h (conserved or incorporated into storage)
+
+This is consistent. Very low growth rate due to nitrogen starvation.
+
+```json
+{
+  "fluxes": {
+    "but": -2.0,
+    "ac": -0.5,
+    "nh4": -0.25,
+    "co2": 1.5,
+    "for": 0.8,
+    "ac": 0.5
+  },
+  "growth_rate": 0.003,
+  "rationale": "Severe nitrogen limitation (1.62 mmol/L ammonium in 1 mL vessel) restricts growth to ~0.003/h. Continuing slow fermentation of residual butyrate and acetate via β-oxidation; producing CO2, formate, and acetate as overflow products. Stationary phase maintenance metabolism.",
+  "confidence": 0.42
+}
+```

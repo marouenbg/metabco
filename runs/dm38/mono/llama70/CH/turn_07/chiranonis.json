@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ser__L": -5.0,
+  "ac": 3.0,
+  "co2": 2.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.132,
+ "rationale": "L-serine uptake supports growth and fermentation",
+ "confidence": 0.8
+}

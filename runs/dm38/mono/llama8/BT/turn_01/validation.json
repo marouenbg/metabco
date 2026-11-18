@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 1,
+  "growth_claimed": 0.1,
+  "growth_allowed": 0.1,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: h2s"
+  ],
+  "repairs": [
+   "P: credited 0.0909 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0219 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 0.844 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "I will take up D-glucose to support growth and fermentation, and secrete lactate as a byproduct. I will aim for a moderate growth rate to conserve resources and avoid over-oxidation of the culture.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": 3.0,
+   "lac__D": 0.0,
+   "h2": 0.0,
+   "h2s": 0.0,
+   "nh4": 0.0,
+   "co2": 0.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": 3.0,
+   "lac__D": 0.0,
+   "h2": 0.0,
+   "h2s": 0.0,
+   "nh4": -0.8437,
+   "co2": 0.0,
+   "pi": -0.0909,
+   "so4": -0.0219
+  }
+ }
+]

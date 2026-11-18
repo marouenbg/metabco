@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 10,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=10 out=60 biomass=21.3"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.657 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.5 -> 0",
+   "C: secretions scaled by 0.175"
+  ],
+  "rationale": "Utilizing hydrogen sulfide and carbon dioxide to support growth, while releasing acetate, formate, and lactate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "h2s": -10.0,
+   "co2": -10.0,
+   "ac": 10.0,
+   "for": 10.0,
+   "lac__L": 10.0
+  },
+  "fluxes_applied": {
+   "h2s": -10.0,
+   "co2": -10.0,
+   "ac": 1.75,
+   "for": 1.75,
+   "lac__L": 1.75,
+   "pi": -0.6566
+  }
+ }
+]

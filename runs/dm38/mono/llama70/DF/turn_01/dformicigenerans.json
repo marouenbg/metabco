@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -5.0,
+  "glc__D": -5.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "for": 2.0,
+  "co2": 5.0
+ },
+ "growth_rate": 1.12,
+ "rationale": "Utilizing L-lactate, D-glucose, and L-arginine for growth and production of acetate, formate, and CO2",
+ "confidence": 0.8
+}

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "arab__L": -8.0,
+  "arg__L": -2.5,
+  "but": 3.5,
+  "nh4": -1.0,
+  "ac": 2.0,
+  "for": 1.5,
+  "co2": 4.0,
+  "h2": 0.8
+ },
+ "growth_rate": 0.6,
+ "rationale": "Glucose depleted; shifting to arabinose fermentation with arginine as dual C/N source. Butyrate recycling under N-limitation. Fermentation yields butyrate, acetate, formate, CO\u2082, and H\u2082 consistent with mixed-acid anaerobic metabolism. Carbon and nitrogen balance verified.",
+ "confidence": 0.72
+}

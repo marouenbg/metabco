@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 2,
+  "growth_claimed": 0.37,
+  "growth_allowed": 0.37,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "S: credited 0.0968 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Roseburia intestinalis is a lactate/glucose fermenter producing butyrate and acetate. Lactate and glucose remain abundant (27.31 and 24.18 mM). Continuing established high-rate co-fermentation (10 mmo",
+  "confidence": 0.75,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -8.0,
+   "nh4": -4.0,
+   "pi": -0.43,
+   "but": 5.0,
+   "ac": 3.0,
+   "co2": 8.0,
+   "for": 0.5
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -8.0,
+   "nh4": -4.0,
+   "pi": -0.43,
+   "but": 5.0,
+   "ac": 3.0,
+   "co2": 8.0,
+   "for": 0.5,
+   "so4": -0.0968
+  }
+ }
+]

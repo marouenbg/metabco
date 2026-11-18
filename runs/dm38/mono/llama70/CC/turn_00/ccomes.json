@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "arg__L": -2.0,
+  "gln__L": -1.0,
+  "ac": 2.0,
+  "but": 1.5
+ },
+ "growth_rate": 0.375,
+ "rationale": "Utilizing glucose and lactate as primary carbon sources, with arginine and glutamine as nitrogen sources, and producing acetate and butyrate as fermentation products.",
+ "confidence": 0.8
+}

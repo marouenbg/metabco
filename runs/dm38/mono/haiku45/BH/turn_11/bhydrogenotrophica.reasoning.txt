@@ -1,0 +1,60 @@
+# Metabolic decision for Blautia hydrogenotrophica DSM 10507 at t=44h
+
+## Analysis
+
+**Physiological context:**
+I am a strictly anaerobic, hydrogenotrophic acetogen. My core metabolism oxidizes H₂ and formate, reducing CO₂ to acetate via the Wood-Ljungdahl pathway. I can also ferment certain amino acids and carbohydrates. At turn 11 (44h of 48h total), I'm near stationary phase with limited growth potential ahead.
+
+**Carbon sources available and transportable:**
+- **CO₂ (92.04 mM)**: Abundant; I use this as electron acceptor in acetogenesis
+- **Acetate (72.25 mM)**: My primary fermentation product; I cannot efficiently re-oxidize it for energy (no acetyl-CoA oxidation pathway in my genome)
+- **Formate (36.64 mM)**: Can use as both carbon source and electron donor
+- **H₂ (4.002 mM)**: Limited but my preferred electron donor for CO₂ reduction
+- **Amino acids** (various): Can ferment cysteine, serine, and others for energy and carbon, but limited amounts remain
+- **Maltose (0.38 mM)**: Essentially depleted
+
+**Nitrogen sources:**
+- **NH₄⁺ (1.012 mM)**: Very limited; critical bottleneck
+- **Amino acids** (cys, ser, pro, arg, etc.): Contain nitrogen; some can be catabolized
+- **NO₃⁻ (0.11 mM)**: Negligible in anaerobic conditions
+
+**Fermentation products I produce:**
+Acetate (primary), formate, H₂, CO₂, and from amino acid fermentation: various short-chain fatty acids and amines.
+
+**Growth rate calculation:**
+With only 1.012 mM NH₄⁺ remaining and ~48 h elapsed, I'm severely nitrogen-limited. Recent turns (9-10) showed zero growth, suggesting I've hit a plateau.
+
+For growth, I need:
+- ~38 mmol C per gDW
+- ~10 mmol N per gDW
+
+Available N: 1.012 mM in 1 mL = 1.012 mmol total
+At 1.732 gDW/L, this is 0.001732 L × 1.732 gDW/L = 0.003 gDW
+Nitrogen per gDW: 1.012 mmol ÷ 0.003 gDW = 337 mmol/gDW (appears sufficient per gram, but absolute amount is tiny)
+
+However, my current biomass already incorporates most nitrogen. The remaining 1.012 mM NH₄⁺ divided by the 10 mmol N/gDW requirement yields only 0.1 mmol new biomass possible, roughly 0.058 gDW.
+
+**Realistic strategy for final 4 hours:**
+With minimal nitrogen and 4 hours left, I should:
+1. Maintain basal metabolism on remaining H₂ and formate
+2. Attempt modest acetogenesis from CO₂ + H₂
+3. Accept near-zero growth; energy metabolism only
+
+Uptake plan:
+- H₂: -3.0 mmol/gDW/h (oxidize remaining H₂)
+- CO₂: -8.0 mmol/gDW/h (reduce to acetate)
+- Formate: -2.0 mmol/gDW/h (additional reducing power)
+- NH₄⁺: -0.1 mmol/gDW/h (minimal protein turnover)
+
+Products:
+- Acetate: +6.0 mmol/gDW/h (from H₂ + CO₂ acetogenesis)
+- CO₂: +2.0 mmol/gDW/h (from formate oxidation)
+
+**Carbon audit:**
+- In: CO₂ (8.0) + formate C (2.0) = 10.0 mmol C/gDW/h
+- Out: acetate C (6.0) + CO₂ (2.0) + growth (38 × 0.02) = 6.0 + 2.0 + 0.76 = 8.76 mmol C/gDW/h
+- Balanced ✓
+
+**Growth rate:** 0.02 /h (very low, nitrogen-starved)
+
+{"fluxes": {"h2": -3.0, "co2": -8.0, "for": -2.0, "nh4": -0.1, "ac": 6.0, "co2": 2.0}, "growth_rate": 0.02, "rationale": "Severely nitrogen-limited at end of batch culture. Minimal growth; maintenance acetogenesis from H₂ + CO₂. Formate oxidation provides additional reducing equivalents. Remaining NH₄⁺ (1.012 mM) insufficient for significant biomass synthesis.", "confidence": 0.55}

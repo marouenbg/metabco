@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 11,
+  "growth_claimed": 0.05,
+  "growth_allowed": 0.05,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.0583 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "L-phenylalanine, L-cysteine, and acetate uptake support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "phe__L": -2.0,
+   "cys__L": -1.5,
+   "ac": -1.0,
+   "nh4": -0.5,
+   "but": 1.5,
+   "ppa": 1.0
+  },
+  "fluxes_applied": {
+   "phe__L": -2.0,
+   "cys__L": -1.5,
+   "ac": -1.0,
+   "nh4": -0.5,
+   "but": 1.5,
+   "ppa": 1.0,
+   "pi": -0.0583
+  }
+ }
+]

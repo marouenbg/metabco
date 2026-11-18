@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "nh4": -4.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "ppa": 2.0,
+  "co2": 3.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.4,
+ "confidence": 0.95,
+ "rationale": "Maintain high uptake of D-glucose and L-lactate for carbon, ammonium for nitrogen, and produce acetate, butyrate, propionate, and carbon dioxide as fermentation products. Carbon and nitrogen balances are maintained."
+}

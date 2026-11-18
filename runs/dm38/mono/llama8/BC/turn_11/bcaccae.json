@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "co2": -47.62,
+  "but": 22.5,
+  "succ": 15.62,
+  "ac": 47.62,
+  "cys__L": -8.4,
+  "pro__L": -5.9,
+  "ala__L": -5.3,
+  "gly": -4.7,
+  "nh4": -10
+ },
+ "growth_rate": 0.212,
+ "rationale": "Based on my transport capabilities, I'll take up CO2, butyrate, and succinate. I'll release acetate, butyrate, and succinate as fermentation products. My growth rate is adjusted to account for the available carbon sources.",
+ "confidence": 0.8
+}

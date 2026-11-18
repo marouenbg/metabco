@@ -1,0 +1,88 @@
+# Metabolic reasoning for Bacteroides uniformis at t=12h
+
+## Assessment of available transporters and carbon sources
+
+Bacteroides uniformis is a saccharolytic anaerobe with a well-characterized genome. I can transport and ferment:
+- **D-glucose (glc__D)**: 24.75 mM available — primary preferred substrate
+- **L-lactate (lac__L)**: 28.18 mM available — I can consume lactate via lactate utilization pathways
+- **L-arabinose (arab__L)**: 21.31 mM available — pentose fermentation
+- **Maltose (malt)**: 4.382 mM available — disaccharide
+- **Amino acids**: L-arginine (21.77), L-cysteine (8.4), L-serine (6.4), and others — can be catabolized for carbon and nitrogen
+
+I cannot efficiently use CO₂ as a primary carbon source (it is a fermentation product, not a primary substrate for heterotrophic growth).
+
+## Nitrogen sources
+
+- **Ammonium (nh4)**: 9.292 mM — primary nitrogen source
+- **L-arginine (arg__L)**: 21.77 mM — excellent dual carbon + nitrogen source
+- **L-cysteine (cys__L)**: 8.4 mM — contains nitrogen
+- Other amino acids provide supplementary nitrogen
+
+## Fermentation strategy
+
+As an obligate anaerobe, I ferment sugars and lactate to short-chain fatty acids (acetate, propionate, butyrate, formate) and CO₂. My recent history shows:
+- Turn 0: glucose → acetate, propionate, succinate, CO₂
+- Turn 2: glucose + lactate → acetate, propionate, formate, succinate, CO₂
+
+This pattern is consistent with mixed-acid fermentation typical of Bacteroides.
+
+## Growth calculation
+
+At turn 2, I achieved 0.320 /h growth on mixed substrates. Now I have slightly higher glucose (24.75 vs ~16 mM remaining) and abundant lactate (28.18 mM). 
+
+For sustainable growth, I need:
+- **Carbon requirement**: 42 mmol C per gram biomass
+- **Nitrogen requirement**: 10 mmol N per gram biomass
+
+I will uptake:
+- **D-glucose**: 10 mmol/gDW/h (primary fermentable carbon)
+- **L-lactate**: 6 mmol/gDW/h (secondary fermentable carbon, provides additional reducing power)
+- **L-arginine**: 3 mmol/gDW/h (excellent dual C + N source)
+- **Ammonium**: 2.5 mmol/gDW/h (supplementary nitrogen)
+- **L-cysteine**: 1.5 mmol/gDW/h (additional amino acid catabolism)
+
+**Carbon balance:**
+- Glucose: 10 mmol/gDW/h × 6 C = 60 C
+- Lactate: 6 mmol/gDW/h × 3 C = 18 C
+- Arginine: 3 mmol/gDW/h × 6 C = 18 C
+- Cysteine: 1.5 mmol/gDW/h × 3 C = 4.5 C
+- **Total C in**: 100.5 mmol C/gDW/h
+
+**Growth rate estimation**: With ~100 mmol C/gDW/h available and 42 mmol C needed per gram biomass, plus fermentation losses (typically 30-40% of carbon is lost as CO₂), I estimate growth of **0.45 /h**.
+
+**Nitrogen balance:**
+- Arginine: 3 mmol/gDW/h × 2 N = 6 N
+- Cysteine: 1.5 mmol/gDW/h × 1 N = 1.5 N
+- Ammonium: 2.5 mmol/gDW/h × 1 N = 2.5 N
+- **Total N in**: 10 mmol N/gDW/h (exactly at requirement)
+
+**Fermentation products**: Acetate, propionate, formate, succinate, CO₂, and H₂ (typical Bacteroides mixed-acid fermentation).
+
+Estimated fluxes:
+- Acetate: +8 mmol/gDW/h
+- Propionate: +4 mmol/gDW/h
+- Formate: +2 mmol/gDW/h
+- Succinate: +1.5 mmol/gDW/h
+- CO₂: +12 mmol/gDW/h
+- H₂: +1 mmol/gDW/h
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "lac__L": -6.0,
+    "arg__L": -3.0,
+    "nh4": -2.5,
+    "cys__L": -1.5,
+    "ac": 8.0,
+    "ppa": 4.0,
+    "for": 2.0,
+    "succ": 1.5,
+    "co2": 12.0,
+    "h2": 1.0
+  },
+  "growth_rate": 0.45,
+  "rationale": "Mixed fermentation of glucose, lactate, and amino acids. Arginine provides both carbon and nitrogen. Fermentation yields acetate, propionate, formate, succinate as typical Bacteroides products. Carbon and nitrogen balance both satisfied; growth limited by substrate availability and fermentation stoichiometry.",
+  "confidence": 0.72
+}
+```

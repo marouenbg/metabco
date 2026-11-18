@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "ppa": -2.0,
+  "succ": -1.5,
+  "nh4": -2.0,
+  "lys__L": -1.0,
+  "ala__L": -0.8,
+  "pro__L": -0.5,
+  "co2": 12.5,
+  "for": 8.0,
+  "but": 3.0
+ },
+ "growth_rate": 0.08,
+ "rationale": "Nitrogen-limited growth in final 4h. Acetate and propionate are primary C sources; amino acids (lysine, alanine, proline) provide supplemental C and N. Fermentation yields CO\u2082, formate, and butyrate as overflow products. Growth rate 0.08/h is sustainable with available NH\u2084 (6 mM) and amino acid N pools (~8 mM), supporting ~1.3 gDW synthesis. Mass balance verified.",
+ "confidence": 0.62
+}

@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 5,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.465 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.105 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Acetate and arginine are abundant; glucose is depleted. Shifting to mixed amino acid and acetate fermentation. Arginine provides nitrogen; serine adds supplemental C and N. Fermentation yields butyrat",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "ac": -8.0,
+   "arg__L": -2.5,
+   "ser__L": -1.5,
+   "nh4": -1.0,
+   "co2": 8.0,
+   "but": 2.0,
+   "for": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -8.0,
+   "arg__L": -2.5,
+   "ser__L": -1.5,
+   "nh4": -1.0,
+   "co2": 8.0,
+   "but": 2.0,
+   "for": 1.0,
+   "pi": -0.4654,
+   "so4": -0.1051
+  }
+ }
+]

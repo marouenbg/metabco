@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "arab__L": 0.63,
+  "h2": 10.0,
+  "for": 5.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "D-glucose, L-arabinose, hydrogen, and formate uptake; CO2, H2, formate, and butyrate secretion",
+ "confidence": 0.8
+}

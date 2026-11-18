@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -2.5,
+  "lac__L": -1.0,
+  "arg__L": -1.0,
+  "but": 3.0,
+  "ac": 0.5,
+  "nh4": -0.5
+ },
+ "growth_rate": 0.1,
+ "rationale": "Utilizing D-glucose, L-lactate, and L-arginine to produce butyrate and acetate, supporting a sustainable growth rate of 0.10 /h.",
+ "confidence": 0.85
+}

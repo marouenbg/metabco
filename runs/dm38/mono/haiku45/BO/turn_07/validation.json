@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 7,
+  "growth_claimed": 0.71,
+  "growth_allowed": 0.0462,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=39 out=39 biomass=29.9"
+  ],
+  "warnings": [
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "C: growth 0.71 -> 0.0462"
+  ],
+  "rationale": "Propionate and myo-inositol are abundant and fermentable. Arginine and cysteine provide nitrogen and additional carbon. Fermentation yields acetate, propionate, succinate, CO\u2082, and formate in proporti",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "ppa": 2.0,
+   "inost": -4.0,
+   "arg__L": -2.0,
+   "cys__L": -1.0,
+   "ac": 8.0,
+   "succ": 3.0,
+   "co2": 4.0,
+   "for": 1.0,
+   "nh4": 2.0,
+   "pi": -0.35
+  },
+  "fluxes_applied": {
+   "ppa": 2.0,
+   "inost": -4.0,
+   "arg__L": -2.0,
+   "cys__L": -1.0,
+   "ac": 8.0,
+   "succ": 3.0,
+   "co2": 4.0,
+   "for": 1.0,
+   "nh4": 2.0,
+   "pi": -0.35
+  }
+ }
+]

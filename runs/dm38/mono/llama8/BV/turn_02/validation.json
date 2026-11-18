@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 2,
+  "growth_claimed": 0.125,
+  "growth_allowed": 0.125,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.114 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0274 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing glucose, ammonia, and lactate to support growth, and releasing acetate as a fermentation product.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "nh4": -8.0,
+   "lac__L": -5.0,
+   "ac": 5.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "nh4": -8.0,
+   "lac__L": -5.0,
+   "ac": 5.0,
+   "pi": -0.1136,
+   "so4": -0.0274
+  }
+ }
+]

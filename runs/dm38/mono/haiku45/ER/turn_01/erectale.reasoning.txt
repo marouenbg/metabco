@@ -1,0 +1,111 @@
+# Metabolic reasoning for Eubacterium rectale ATCC 33656 — Turn 1
+
+## Assessment of transporters and carbon sources
+
+*Eubacterium rectale* is a butyrate-producing bacterium from the human gut microbiota. It is a strict anaerobe that ferments carbohydrates and lactate. Based on genomic evidence, this species encodes:
+
+- **Glucose transporters** (PTS and permeases): D-glucose is readily available (24.83 mM) and was consumed at 10 mmol/gDW/h in turn 0. This is a preferred substrate.
+- **Lactate transporters**: L-lactate is abundant (28.23 mM) and was consumed at 5 mmol/gDW/h in turn 0. This is a secondary substrate used in mixed fermentation.
+- **Arabinose and maltose transporters**: Present in moderate amounts; E. rectale can use these but they are lower-affinity substrates.
+- **Amino acids**: Many amino acids are present but are typically used for biosynthesis and nitrogen supply, not primary energy generation.
+
+**Cannot transport efficiently:**
+- CO₂ is present but is primarily a fermentation product, not an energy source for this species.
+- Nitrate is present but E. rectale is not nitrate-reducing.
+
+## Nitrogen and growth requirements
+
+- Ammonium is available (9.317 mM), sufficient for growth.
+- L-cysteine, L-serine, and other amino acids provide both nitrogen and carbon.
+- At turn 0, growth was 0.280 /h with consumption of nh4 at 2.0 mmol/gDW/h.
+
+## Fermentation strategy
+
+E. rectale is a butyrate and acetate producer via mixed-acid fermentation. The canonical pathway:
+- Glucose/lactate → pyruvate → acetyl-CoA and other intermediates
+- Acetyl-CoA → acetate (energy-yielding) or → butyrate (via butyryl-CoA)
+- Formate production from pyruvate decarboxylation
+- Lactate can be oxidized to acetyl-CoA, generating additional reducing equivalents
+
+At turn 0, the organism secreted:
+- Acetate: +4.70 mmol/gDW/h
+- Butyrate: +2.30 mmol/gDW/h
+- Formate: +0.76 mmol/gDW/h
+
+This pattern is consistent with E. rectale's known metabolism.
+
+## Carbon and nitrogen balance for growth
+
+**Growth cost:** ~33 mmol C and 7 mmol N per gram dry weight
+
+**Proposed uptake (mmol/gDW/h):**
+- D-glucose: −10.0 (primary substrate)
+- L-lactate: −5.0 (secondary substrate, oxidizable)
+- L-cysteine: −0.8 (nitrogen + sulfur source)
+- L-serine: −0.6 (nitrogen + carbon source)
+- Ammonium: −1.5 (nitrogen source)
+
+**Carbon accounting:**
+- Glucose (C₆): 10 × 6 = 60 mmol C/gDW/h
+- Lactate (C₃): 5 × 3 = 15 mmol C/gDW/h
+- Cysteine (C₃): 0.8 × 3 = 2.4 mmol C/gDW/h
+- Serine (C₃): 0.6 × 3 = 1.8 mmol C/gDW/h
+- **Total C in: 79.2 mmol/gDW/h**
+
+**Growth rate estimation:**
+At 0.280 /h, biomass production consumes ~33 × 0.280 = 9.24 mmol C/gDW/h
+
+For a similar growth rate (~0.28 /h), fermentation products should be:
+- Acetate + Butyrate + Formate ≈ 50–60 mmol C/gDW/h (typical for mixed fermentation)
+- Remaining C: 79.2 − 9.24 = 69.96 mmol C available for fermentation
+
+**Proposed fermentation products:**
+- Acetate: +4.5 mmol/gDW/h (C₂: 9 mmol C)
+- Butyrate: +2.3 mmol/gDW/h (C₄: 9.2 mmol C)
+- Formate: +0.8 mmol/gDW/h (C₁: 0.8 mmol C)
+- CO₂: +15.0 mmol/gDW/h (15 mmol C, from decarboxylations)
+- **Total C out: 34 mmol C**
+
+**Net C for growth: 79.2 − 34 = 45.2 mmol C/gDW/h**
+**Growth rate: 45.2 / 33 ≈ 1.37 /h** — this is plausible but high; reduce to 0.30 /h to be conservative.
+
+**At 0.30 /h:**
+- Biomass C: 33 × 0.30 = 9.9 mmol C
+- Fermentation C: 79.2 − 9.9 = 69.3 mmol C
+- Adjusted products: Acetate 4.5, Butyrate 2.3, Formate 0.8, CO₂ 14.0 → ~27 mmol C
+- This leaves some slack for other minor products (lactate overflow, etc.)
+
+**Nitrogen accounting:**
+- Ammonium: 1.5 mmol N
+- Cysteine: 0.8 mmol N
+- Serine: 0.6 mmol N
+- **Total N in: 2.9 mmol N/gDW/h**
+- Biomass N cost: 7 × 0.30 = 2.1 mmol N
+- **Surplus: 0.8 mmol N** (acceptable; some overflow or urea/ammonia release)
+
+## Final decision
+
+Maintain a similar strategy to turn 0 with slight adjustments:
+- Sustain high glucose and lactate uptake (primary energy sources)
+- Use amino acids for nitrogen and biosynthesis
+- Produce acetate, butyrate, formate, and CO₂ as fermentation products
+- Growth rate: **0.30 /h** (slightly higher than turn 0 due to abundant substrate)
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "lac__L": -5.0,
+    "cys__L": -0.8,
+    "ser__L": -0.6,
+    "nh4": -1.5,
+    "ac": 4.5,
+    "but": 2.3,
+    "for": 0.8,
+    "co2": 14.0
+  },
+  "growth_rate": 0.30,
+  "rationale": "E. rectale ferments glucose and lactate via mixed-acid pathway, producing acetate, butyrate, formate, and CO₂. Glucose is the preferred substrate; lactate is oxidized as a secondary energy source. Amino acids (cysteine, serine) provide nitrogen and supplementary carbon. Ammonium is the primary nitrogen source. At 0.30 /h growth, carbon balance is maintained: 79.2 mmol C in (glucose, lactate, amino acids) minus 34 mmol C out (fermentation products) minus 9.9 mmol C for biomass = sustainable. Nitrogen: 2.9 mmol in, 2.1 mmol for growth, with small surplus.",
+  "confidence": 0.72
+}
+```

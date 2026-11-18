@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -8.0,
+  "arg__L": -1.5,
+  "so4": -2.0,
+  "ac": 5.0,
+  "co2": 0.5,
+  "h2s": 2.0,
+  "nh4": 1.5,
+  "pi": -0.4
+ },
+ "growth_rate": 0.3,
+ "rationale": "Return to lactate-driven sulfate reduction (turns 4\u20135 strategy), which was highly productive. Lactate (6.6 mM) is abundant and my canonical substrate. Arginine provides nitrogen without depleting scarce amino acids. Sulfate reduction yields H\u2082S and drives energy conservation. Carbon and nitrogen budgets balance. Growth rate 0.30 /h is sustainable and matches prior success.",
+ "confidence": 0.78
+}

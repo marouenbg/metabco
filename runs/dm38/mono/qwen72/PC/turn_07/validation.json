@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 7,
+  "growth_claimed": 0.1333,
+  "growth_allowed": 0.1333,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.182 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0349 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing acetate, propionate, and formate for carbon and ammonium for nitrogen to support growth. Carbon and nitrogen balances support the calculated growth rate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": -3.0,
+   "ppa": -2.0,
+   "for": 1.0,
+   "nh4": -2.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -3.0,
+   "ppa": -2.0,
+   "for": 1.0,
+   "nh4": -2.0,
+   "co2": 1.0,
+   "pi": -0.1817,
+   "so4": -0.0349
+  }
+ }
+]

@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "but": -10.0,
+  "cys__L": -5.0,
+  "ac": 14.75
+ },
+ "growth_rate": 0.25,
+ "rationale": "Utilizing butyrate and L-cysteine as primary carbon and nitrogen sources, respectively, and fermenting to produce acetate",
+ "confidence": 0.8
+}

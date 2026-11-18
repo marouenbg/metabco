@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "but": 2.0,
+  "ppa": -3.0,
+  "arg__L": -2.0,
+  "ac": 3.0,
+  "nh4": -1.0
+ },
+ "growth_rate": 0.099,
+ "rationale": "Uptake of butyrate, propionate, and L-arginine to support growth and production of acetate and butyrate as fermentation products",
+ "confidence": 0.8
+}

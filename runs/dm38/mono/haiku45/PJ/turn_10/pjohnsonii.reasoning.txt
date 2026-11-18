@@ -1,0 +1,98 @@
+# Metabolic reasoning for Parabacteroides johnsonii at t=40h
+
+## Analysis of current state
+I am at 0.4484 gDW/L, and glucose (my preferred substrate) has been exhausted. Turns 8–9 show zero growth, indicating I've been in stationary phase. However, significant organic acids remain available: acetate (36.34 mM), propionate (21.61 mM), lactate (11.56 mM), and succinate (11.45 mM). I have also consumed amino acids in turn 9 (arginine, arabinose), suggesting I can access them.
+
+## Carbon and nitrogen source assessment
+
+**Carbon sources available and transportable:**
+- **Acetate & propionate**: Parabacteroides species encode acetyl-CoA synthetase and propionyl-CoA synthetase; these are standard substrates. Abundant and readily imported.
+- **Lactate**: I have demonstrated uptake in turns 6–7 (−6.00 mmol/gDW/h). Lactate is fermentable to acetate and other products in anaerobic conditions.
+- **Succinate**: I've been releasing it, not taking it up; likely a fermentation product rather than a substrate I preferentially consume.
+- **Arabinose, arginine**: I took these up in turns 6–7, but they are now nearly depleted and less abundant than acetate/lactate.
+- **Amino acids (serine, cysteine, proline, etc.)**: Present but in small amounts; useful for nitrogen but secondary to primary carbon sources.
+
+**Nitrogen sources:**
+- **Ammonium** (5.944 mM): Preferred, readily transported.
+- **Amino acids**: Arginine, serine, and others can be catabolized for both carbon and nitrogen, but ammonium is more efficient.
+
+## Fermentation strategy
+
+As an obligate anaerobe, Parabacteroides ferments via mixed-acid pathways. Expected products include:
+- **Acetate** (major end product)
+- **Propionate** (via succinate pathway)
+- **Succinate** (intermediate, often released)
+- **CO₂** (from decarboxylations)
+- **H₂** (from pyruvate formate-lyase or hydrogenase)
+
+## Growth rate calculation
+
+**Substrate choice:** Lactate + acetate co-fermentation, supplemented by amino acids for nitrogen.
+
+From turn 6–7 pattern:
+- Glucose: −10 mmol/gDW/h → 0.250 /h growth
+- Lactate: −6 mmol/gDW/h (concurrent)
+
+At t=40h with glucose gone, I should switch to lactate (11.56 mM available) as primary substrate plus acetate as secondary.
+
+**Carbon requirement for growth:**
+- 42 mmol C per gram dry weight
+- At 0.25 /h growth: 42 × 0.25 = 10.5 mmol C/gDW/h
+
+**Lactate uptake (C₃ compound):** If I take up 6 mmol lactate/gDW/h, that's 18 mmol C/h.
+- 10.5 mmol C for growth
+- ~7.5 mmol C for fermentation products (acetate, CO₂, etc.)
+
+This is sustainable. Lactate at 11.56 mM ÷ 0.4484 gDW/L = ~25.8 mmol/gDW total available over remaining 8h, supporting ~4 mmol lactate/gDW/h average without depletion.
+
+**Nitrogen requirement:**
+- 10 mmol N per gram dry weight
+- At 0.25 /h: 2.5 mmol N/gDW/h
+- Ammonium available: 5.944 mM ÷ 0.4484 = ~13.3 mmol/gDW
+- Sufficient for entire remaining culture
+
+I will use **4 mmol lactate/gDW/h** and **1.5 mmol ammonium/gDW/h**, with acetate uptake at 2 mmol/gDW/h as a supplementary carbon source.
+
+**Growth rate:** 
+- Lactate (C₃): 4 mmol/h × 3 C = 12 mmol C
+- Acetate (C₂): 2 mmol/h × 2 C = 4 mmol C
+- Total: 16 mmol C/h
+- Growth cost: 42 mmol C/gDW → 16/42 = 0.38 /h growth rate
+
+Adjusting down slightly to be conservative: **0.30 /h**
+
+## Mass audit
+
+**Carbon in:**
+- Lactate: 4 mmol/h × 3 = 12 mmol C/h
+- Acetate: 2 mmol/h × 2 = 4 mmol C/h
+- **Total: 16 mmol C/h**
+
+**Carbon out (at 0.30 /h growth):**
+- Biomass: 0.30 /h × 42 mmol C/gDW = 12.6 mmol C/h
+- Fermentation products: acetate (2.5 mmol/h), propionate (1.5 mmol/h), CO₂ (1.5 mmol/h), formate (0.5 mmol/h) = 5.9 mmol C/h
+- **Total: 18.5 mmol C/h** — slightly over; reduce growth to 0.27 /h or adjust product mix.
+
+**Revised:** Growth at **0.27 /h** requires 11.3 mmol C for biomass; fermentation products ~4.7 mmol C. Total ~16 mmol C. ✓
+
+**Nitrogen in:**
+- Ammonium: 1.5 mmol/h
+- **Total: 1.5 mmol N/h**
+
+**Nitrogen out:**
+- Biomass: 0.27 /h × 10 mmol N/gDW = 2.7 mmol N/h — insufficient!
+
+**Correction:** Increase ammonium to **2.7 mmol/h** to match growth nitrogen demand.
+
+**Final fluxes (0.27 /h growth):**
+- Lactate: −4.0
+- Acetate: −2.0
+- Ammonium: −2.7
+- Acetate (product): +2.5
+- Propionate: +1.5
+- CO₂: +1.5
+- Formate: +0.5
+
+```json
+{"fluxes": {"lac__L": -4.0, "ac": -2.0, "nh4": -2.7, "ac": 2.5, "ppa": 1.5, "co2": 1.5, "for": 0.5}, "growth_rate": 0.27, "rationale": "Lactate and acetate fermentation with ammonium as nitrogen source, supporting sustained growth on remaining abundant organic acids after glucose depletion.", "confidence": 0.65}
+```

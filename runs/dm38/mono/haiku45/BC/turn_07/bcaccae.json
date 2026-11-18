@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "arg__L": -1.5,
+  "ser__L": -1.0,
+  "gly": -1.0,
+  "ac": 2.0,
+  "nh4": -0.5,
+  "ppa": 1.0,
+  "for": 0.5,
+  "co2": 2.0
+ },
+ "growth_rate": 0.38,
+ "rationale": "Fermenting arginine, serine, glycine and acetate; nitrogen-limited by available amino acids and ammonium; producing acetate, propionate, formate and CO2 as end products",
+ "confidence": 0.65
+}

@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 0,
+  "growth_claimed": 0.55,
+  "growth_allowed": 0.55,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.5 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.121 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Bacteroides vulgatus ferments glucose and lactate as primary carbon sources under anaerobiosis. Glucose uptake (15 mmol/gDW/h) is preferred; lactate (8) provides secondary fermentation. Arginine (3) s",
+  "confidence": 0.78,
+  "fluxes_claimed": {
+   "glc__D": -15.0,
+   "lac__L": -8.0,
+   "arg__L": -3.0,
+   "nh4": -2.0,
+   "ac": 7.0,
+   "but": 4.0,
+   "ppa": 2.0,
+   "co2": 5.0,
+   "h2": 1.5
+  },
+  "fluxes_applied": {
+   "glc__D": -15.0,
+   "lac__L": -8.0,
+   "arg__L": -3.0,
+   "nh4": -2.0,
+   "ac": 7.0,
+   "but": 4.0,
+   "ppa": 2.0,
+   "co2": 5.0,
+   "h2": 1.5,
+   "pi": -0.5,
+   "so4": -0.1207
+  }
+ }
+]

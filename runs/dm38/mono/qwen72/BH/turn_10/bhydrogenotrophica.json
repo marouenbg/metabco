@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "h2": 1.0,
+  "for": 1.0,
+  "ac": 1.5,
+  "but": 1.5,
+  "ser__L": -0.5,
+  "cys__L": -0.5
+ },
+ "growth_rate": 0.0,
+ "rationale": "Carbon deficit limits growth; focusing on energy and carbon source uptake to maintain metabolic activity.",
+ "confidence": 0.8
+}

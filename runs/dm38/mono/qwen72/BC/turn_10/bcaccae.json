@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -3.0,
+  "gln__L": -0.5,
+  "glu__L": -0.5,
+  "ac": 1.5,
+  "ppa": 1.5,
+  "but": 0.5
+ },
+ "growth_rate": 0.1,
+ "rationale": "Utilizing lactate for carbon and energy, and glutamine and glutamate for nitrogen. Adjusting growth rate to ensure nitrogen sufficiency.",
+ "confidence": 0.8
+}

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "arab__L": -10.0,
+  "nh4": -2.0,
+  "but": 5.0,
+  "ac": 5.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.244,
+ "rationale": "I chose to take up L-arabinose (arab__L) as my carbon source and Ammonium (nh4) as my nitrogen source, and release butyrate (but), acetate (ac), and hydrogen (h2) as my products.",
+ "confidence": 0.8
+}

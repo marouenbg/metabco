@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 9,
+  "growth_claimed": 0.18,
+  "growth_allowed": 0.18,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.168 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0378 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Nitrogen-limited growth in stationary phase. Fermenting butyrate and acetate with amino acid supplementation. Releasing acetate, formate, and CO2 as overflow. Nitrogen availability constrains growth t",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "but": -4.0,
+   "ac": 2.0,
+   "nh4": -2.2,
+   "phe__L": -0.8,
+   "leu__L": -0.6,
+   "for": 1.2,
+   "co2": 3.5,
+   "h2": 0.1
+  },
+  "fluxes_applied": {
+   "but": -4.0,
+   "ac": 2.0,
+   "nh4": -2.2,
+   "phe__L": -0.8,
+   "leu__L": -0.6,
+   "for": 1.2,
+   "co2": 3.5,
+   "h2": 0.1,
+   "pi": -0.1675,
+   "so4": -0.0378
+  }
+ }
+]

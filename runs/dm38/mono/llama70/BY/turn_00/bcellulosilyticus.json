@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "arg__L": -2.0,
+  "ac": 3.0,
+  "ppa": 1.0
+ },
+ "growth_rate": 0.6,
+ "rationale": "Prioritizing glucose and arginine uptake, producing acetate and propionate, and growing at a moderate rate",
+ "confidence": 0.8
+}

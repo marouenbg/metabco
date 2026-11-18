@@ -1,0 +1,66 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 10,
+  "growth_claimed": 0.69,
+  "growth_allowed": 0.69,
+  "ok": false,
+  "violations": [
+   "unknown_metabolite: lys",
+   "uptake_exceeds_pool: asp__L",
+   "uptake_absent: nh4"
+  ],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: inost",
+   "no_transporter: etoh"
+  ],
+  "repairs": [
+   "clipped uptake asp__L to pool limit -0.632",
+   "zeroed uptake of absent nh4",
+   "P: credited 0.864 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Balanced carbon and nitrogen intake to support moderate growth while producing fermentation products.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "but": -10.0,
+   "for": -5.0,
+   "inost": -2.0,
+   "gly": -2.0,
+   "ala__L": -1.0,
+   "lys": -1.0,
+   "thr__L": -1.0,
+   "ile__L": -1.0,
+   "his__L": -1.0,
+   "met__L": -1.0,
+   "trp__L": -1.0,
+   "glu__L": -1.0,
+   "asp__L": -1.0,
+   "nh4": -1.0,
+   "ppa": 2.0,
+   "etoh": 2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "but": -10.0,
+   "for": -5.0,
+   "inost": -2.0,
+   "gly": -2.0,
+   "ala__L": -1.0,
+   "thr__L": -1.0,
+   "ile__L": -1.0,
+   "his__L": -1.0,
+   "met__L": -1.0,
+   "trp__L": -1.0,
+   "glu__L": -1.0,
+   "asp__L": -0.6321,
+   "nh4": 0.0,
+   "ppa": 2.0,
+   "etoh": 2.0,
+   "h2": 1.0,
+   "pi": -0.8643
+  }
+ }
+]

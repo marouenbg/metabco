@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 6,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.033,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=72 out=74.5 biomass=9.99"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.213 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0658 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.3 -> 0.033"
+  ],
+  "rationale": "Restart growth after stall by consuming glucose and arabinose (primary fermentable sugars), supplemented with arginine for nitrogen and carbon. Ammonium is limiting; conserve it. Excrete lactate, acet",
+  "confidence": 0.65,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "arab__L": -3.0,
+   "arg__L": -1.5,
+   "nh4": -1.2,
+   "lac__L": 18.0,
+   "ac": 8.0,
+   "for": 1.5,
+   "co2": 3.0
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "arab__L": -3.0,
+   "arg__L": -1.5,
+   "nh4": -1.2,
+   "lac__L": 18.0,
+   "ac": 8.0,
+   "for": 1.5,
+   "co2": 3.0,
+   "pi": -0.2127,
+   "so4": -0.0658
+  }
+ }
+]

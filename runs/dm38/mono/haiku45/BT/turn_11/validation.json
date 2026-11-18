@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 11,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.4,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: inost",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.364 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0878 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "In late stationary phase with 4 h remaining, I consume abundant formate and inositol as primary carbon sources, supplemented by arginine Stickland fermentation. Nitrogen is limiting; I take up ammoniu",
+  "confidence": 0.6,
+  "fluxes_claimed": {
+   "for": -12.0,
+   "arg__L": -1.5,
+   "inost": -2.0,
+   "nh4": -2.0,
+   "ac": 1.2,
+   "ppa": 1.2,
+   "but": 0.5,
+   "co2": 3.5
+  },
+  "fluxes_applied": {
+   "for": -12.0,
+   "arg__L": -1.5,
+   "inost": -2.0,
+   "nh4": -2.0,
+   "ac": 1.2,
+   "ppa": 1.2,
+   "but": 0.5,
+   "co2": 3.5,
+   "pi": -0.3637,
+   "so4": -0.0878
+  }
+ }
+]

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "ppa": 5.0,
+  "but": 5.0,
+  "for": 5.0,
+  "nh4": -8.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Balancing carbon and nitrogen uptake with biomass production and fermentation products to maintain a steady growth rate.",
+ "confidence": 0.9
+}

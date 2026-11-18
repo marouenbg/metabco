@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arg__L": -3.0,
+  "nh4": -1.0,
+  "ac": 5.0,
+  "lac__L": 2.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Utilizing glucose and arginine for growth, producing acetate and lactate as fermentation products.",
+ "confidence": 0.85
+}

@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "ppa": -4.0,
+  "but": -2.0,
+  "arab__L": -4.0,
+  "arg__L": -1.5,
+  "cys__L": -0.8,
+  "nh4": 0.5,
+  "co2": 10.0,
+  "for": 1.5
+ },
+ "growth_rate": 0.22,
+ "rationale": "Sustained catabolism of abundant acetate, propionate, butyrate, and arabinose with amino acid co-metabolism (arginine, cysteine) for nitrogen. Carbon and nitrogen budgets balance. Growth rate reflects nutrient depletion at 32 h in a 48 h batch; slower than earlier turns but realistic for anaerobic fermentation.",
+ "confidence": 0.72
+}

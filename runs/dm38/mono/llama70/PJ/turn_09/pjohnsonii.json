@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ppa": -10.0,
+  "ac": -5.0,
+  "ser__L": -2.0,
+  "succ": 2.0,
+  "nh4": -1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing available carbon and nitrogen sources to support growth and maintain energy balance",
+ "confidence": 0.8
+}

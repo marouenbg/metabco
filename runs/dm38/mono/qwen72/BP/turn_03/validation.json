@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 3,
+  "growth_claimed": 0.1,
+  "growth_allowed": 0.1,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0672 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0258 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing D-glucose for fermentation to produce acetate, lactate, and formate, while using ammonium for nitrogen requirements.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "ac": 2.0,
+   "lac__L": 1.5,
+   "for": 1.5,
+   "nh4": -2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "ac": 2.0,
+   "lac__L": 1.5,
+   "for": 1.5,
+   "nh4": -2.0,
+   "pi": -0.0672,
+   "so4": -0.0258
+  }
+ }
+]

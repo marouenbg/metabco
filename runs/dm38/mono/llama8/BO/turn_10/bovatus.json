@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "arab__L": -10.0,
+  "ser__L": -6.325,
+  "but": 5.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing L-arabinose and L-serine as primary carbon and nitrogen sources, and releasing butyrate and hydrogen as byproducts.",
+ "confidence": 1.0
+}

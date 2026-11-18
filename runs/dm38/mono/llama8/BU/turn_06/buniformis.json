@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "co2": 30,
+  "lac__L": 5,
+  "arg__L": -5,
+  "cys__L": -5,
+  "ser__L": -5,
+  "but": 10,
+  "for": 5,
+  "nh4": -20
+ },
+ "growth_rate": 0.87,
+ "rationale": "I will take up CO2 and lac__L as my primary carbon sources, with a combined uptake rate of 61.67 mmol/gDW/h. I will also secrete butyrate, formate, and lactate into the environment. My chosen uptake will support a growth rate of 0.87/h.",
+ "confidence": 0.9
+}

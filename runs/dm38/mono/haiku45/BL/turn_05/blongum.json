@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -14.0,
+  "arab__L": -4.0,
+  "arg__L": -4.0,
+  "nh4": -2.0,
+  "ac": 9.0,
+  "co2": 9.0,
+  "for": 0.5
+ },
+ "growth_rate": 0.6,
+ "rationale": "Lactate is now the dominant fermentable carbon source; arabinose and arginine provide supplementary C and N. Ammonium is available for N. Growth is N-limited at 0.60/h. Fermentation yields acetate and CO2 as major products, consistent with Bifidobacterium heterofermentation.",
+ "confidence": 0.72
+}

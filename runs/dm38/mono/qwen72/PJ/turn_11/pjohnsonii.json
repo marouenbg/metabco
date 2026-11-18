@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": 1.5,
+  "malt": -2.0,
+  "leu__L": -1.0,
+  "tyr__L": -1.0,
+  "but": 1.0,
+  "ppa": 1.0,
+  "h2": 1.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.5177,
+ "confidence": 0.85,
+ "rationale": "Balanced uptake of acetate and maltose for carbon, and L-leucine and L-tyrosine for nitrogen, with production of acetate, butyrate, propionate, hydrogen, and carbon dioxide to support growth."
+}

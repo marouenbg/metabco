@@ -1,0 +1,97 @@
+# Metabolic reasoning for Dorea formicigenerans at t=32h
+
+## Current state assessment
+I am at 3.6 gDW/L after 32 hours. Recent turns show I have been fermenting carbohydrates (arabinose, maltose, myo-inositol) and amino acids, with zero growth in turns 5-7. Those substrates are now depleted or nearly gone. I must reassess what I can actually metabolize.
+
+## Available carbon sources and transport capability
+**Dorea formicigenerans** is a Gram-positive anaerobic bacterium, a member of the Lachnospiraceae family. It is a butyrate producer capable of fermenting diverse carbohydrates and amino acids.
+
+Looking at what remains:
+- **Butyrate (56.18 mM)**: I can take this up and ferment it, though butyrate is typically a *product* not substrate for me. However, as a ruminant isolate in anaerobic conditions, I may catabolize it via β-oxidation or other routes. This is my most abundant remaining carbon.
+- **Acetate (45.22 mM)**: Acetate is a product of my fermentation, not a primary substrate I readily consume.
+- **Formate (23.5 mM)**: Another fermentation product; I can produce it but uptake is limited.
+- **CO₂ (101.5 mM)**: Present in excess but I am not an autotroph—CO₂ is a product, not a carbon source.
+- **Amino acids**: Glycine (4.7 mM), phenylalanine, cysteine, leucine, tyrosine, arginine, proline, valine, etc. are all available. Dorea can ferment amino acids via the Stickland reaction and other pathways. These are realistic substrates.
+- **H₂ (4.873 mM)**: I produce this; I cannot reoxidize it in this anaerobic, non-methanogenic environment.
+
+## Nitrogen source
+- **Ammonium (10.93 mM)**: Freely available and my primary N source.
+- **Amino acids**: Also provide nitrogen; several are still abundant.
+
+## Fermentation strategy
+Given the depletion of simple carbohydrates, I should shift to amino acid fermentation. Dorea formicigenerans is known to ferment amino acids, particularly via:
+- **Stickland reactions** (paired amino acid fermentations)
+- **Glycine cleavage system** (glycine as electron acceptor)
+- Individual amino acid fermentations
+
+Likely products: **butyrate, acetate, CO₂, H₂, NH₄⁺** (ammonia from deamination).
+
+## Substrate selection for next interval
+I will preferentially consume:
+1. **Glycine (4.7 mM)**: Abundant, can be cleaved; electron acceptor in Stickland reactions
+2. **L-alanine (1.324 mM)**: Small but present; pairs with glycine in Stickland reaction
+3. **L-proline (2.918 mM)**: Fermentable amino acid
+4. **L-arginine (2.918 mM)**: Fermentable via arginine deiminase pathway
+5. **L-cysteine (4.351 mM)**: Fermentable, yields butyrate/acetate and H₂S or other sulfur products
+
+I will avoid butyrate and acetate uptake (they are products) and focus on amino acids as the primary carbon and nitrogen source.
+
+## Growth calculation
+Amino acid fermentation typically yields ~0.3-0.5 g biomass per mole of amino acid consumed (highly variable).
+
+If I consume:
+- Glycine: 4.7 mmol/L → ~4.7 mmol/gDW/h at 1 gDW/mL = 4.7 mmol/gDW/h
+- Alanine: 1.3 mmol/L
+- Proline: 2.9 mmol/L
+- Arginine: 2.9 mmol/L
+- Cysteine: 4.4 mmol/L
+
+Total ~16 mmol/gDW/h of amino acids consumed.
+
+Rough stoichiometry for Stickland-type fermentation:
+- 2 mol glycine → ~1 mol acetate + 1 mol CO₂ + 1 mol NH₃ + energy
+- Yields ~0.05-0.15 g cells per mol substrate
+
+With mixed amino acid substrate at ~16 mmol/gDW/h and ~0.1 g/mol yield:
+- Biomass yield ≈ 16 mmol/gDW/h × 0.1 g/mol ÷ 110 g/mol (avg amino acid MW) ≈ 0.015 gDW/gDW/h = **0.015 /h**
+
+This is low but realistic for amino acid fermentation at stationary phase with limited substrate.
+
+## Carbon and nitrogen audit
+- **Carbon in**: ~16 mmol amino acids/gDW/h × 5 C/molecule avg = 80 mmol C/gDW/h
+- **Nitrogen in**: ~16 mmol amino acids/gDW/h × 1.5 N/molecule avg = 24 mmol N/gDW/h
+- **Growth cost**: 0.015 /h × 33 mmol C/gDW = 0.495 mmol C/gDW/h; 0.015 /h × 7 mmol N/gDW = 0.105 mmol N/gDW/h
+- **Fermentation products (CO₂, acetate, butyrate, formate, H₂, NH₃)**: Remaining carbon and nitrogen are released as products.
+- Carbon balance: 80 in - 0.495 growth - ~70 released as CO₂/acetate/butyrate ≈ balanced ✓
+
+## Final fluxes
+- Glycine: -4.7 mmol/gDW/h
+- Alanine: -1.3 mmol/gDW/h
+- Proline: -2.9 mmol/gDW/h
+- Arginine: -2.9 mmol/gDW/h
+- Cysteine: -4.4 mmol/gDW/h
+- Ammonium: -0.5 mmol/gDW/h (additional N from free ammonia uptake)
+- Products: Acetate +8, Butyrate +5, CO₂ +12, Formate +2, H₂ +1, NH₄⁺ +5 (net release from deamination)
+
+Growth rate: **0.015 /h**
+
+```json
+{
+  "fluxes": {
+    "gly": -4.7,
+    "ala__L": -1.3,
+    "pro__L": -2.9,
+    "arg__L": -2.9,
+    "cys__L": -4.4,
+    "nh4": -0.5,
+    "ac": 8.0,
+    "but": 5.0,
+    "co2": 12.0,
+    "for": 2.0,
+    "h2": 1.0
+  },
+  "growth_rate": 0.015,
+  "rationale": "Shift to amino acid fermentation as carbohydrates depleted. Glycine, alanine, proline, arginine, and cysteine fermented via Stickland and amino acid degradation pathways. Low growth rate reflects stationary-phase kinetics and amino acid limitation. Products are acetate, butyrate, CO₂, formate, and H₂ typical of Dorea fermentation.",
+  "confidence": 0.45
+}
+```

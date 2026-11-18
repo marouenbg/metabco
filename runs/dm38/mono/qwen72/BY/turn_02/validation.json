@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 2,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.188 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0393 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Balanced carbon and nitrogen uptake with reduced formate production to support growth.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -18.0,
+   "lac__L": -5.0,
+   "nh4": -5.0,
+   "ac": 12.0,
+   "but": 12.0,
+   "for": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -18.0,
+   "lac__L": -5.0,
+   "nh4": -5.0,
+   "ac": 12.0,
+   "but": 12.0,
+   "for": 2.0,
+   "pi": -0.1879,
+   "so4": -0.0393
+  }
+ }
+]

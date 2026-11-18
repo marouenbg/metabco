@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 10,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "N: credited 3.52 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "I can take up lactate, glucose, and ammonium, and release formate, lactate, and acetate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": 2.0,
+   "glc__D": -15.0,
+   "nh4": -0.61,
+   "for": 5.0,
+   "ac": 2.0,
+   "co2": 2.0,
+   "pi": -0.34,
+   "so4": -0.13
+  },
+  "fluxes_applied": {
+   "lac__L": 2.0,
+   "glc__D": -15.0,
+   "nh4": -4.1272,
+   "for": 5.0,
+   "ac": 2.0,
+   "co2": 2.0,
+   "pi": -0.34,
+   "so4": -0.13
+  }
+ }
+]

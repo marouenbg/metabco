@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 0,
+  "growth_claimed": 0.11,
+  "growth_allowed": 0.11,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.114 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0288 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing glucose and lactate for carbon, ammonium for nitrogen, and producing acetate, butyrate, and ethanol as fermentation products to support a growth rate of 0.11 gDW/h.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -2.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "etoh": 5.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -2.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "etoh": 5.0,
+   "pi": -0.1144,
+   "so4": -0.0288
+  }
+ }
+]

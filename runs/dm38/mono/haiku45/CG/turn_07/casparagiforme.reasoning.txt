@@ -1,0 +1,105 @@
+# Metabolic reasoning for Clostridium asparagiforme DSM 15981 at t=28h
+
+## Assessment of available resources and capabilities
+
+**Carbon sources available:**
+- Acetate (74.07 mM) — abundant, can ferment
+- Butyrate (50.13 mM) — abundant, can ferment
+- CO₂ (141.6 mM) — present but not a primary carbon source for heterotrophic growth
+- L-arabinose (10.1 mM) — sugar, likely transportable
+- Maltose (4.382 mM) — sugar
+- D-glucose (1.582 mM) — very low, nearly depleted
+- Various amino acids present but at low concentrations
+
+**Nitrogen sources:**
+- Ammonium (4.314 mM) — still available but limited
+- Amino acids (tyrosine, phenylalanine, asparagine, lysine, etc.) — can be catabolized for both C and N
+
+**Metabolic capacity:**
+As a Clostridium species, I am an obligate anaerobe capable of:
+- Fermenting sugars to acetate, butyrate, CO₂, and H₂
+- Amino acid fermentation (Stickland reactions and other pathways)
+- Utilizing acetate and butyrate as carbon/energy sources in mixed-acid fermentation
+- Producing formate, lactate, and other organic acids
+
+**Recent pattern analysis:**
+- Turn 3: Net production of acetate/butyrate from amino acid catabolism; no growth (likely establishing metabolism)
+- Turn 4: Growth at 0.4 /h; consumed arabinose, serine, proline, alanine
+- Turn 5: Minimal growth (0.142 /h); mixed substrate utilization
+- Turn 6: No growth; substrate rearrangement with arabinose consumption
+
+At turn 7, I have:
+- Residual glucose and arabinose (though amounts are declining)
+- Adequate acetate and butyrate (fermentation products accumulating)
+- Limited but present ammonium and amino acids
+- Anaerobic conditions maintained
+
+## Growth calculation
+
+**Limiting factors:**
+- Ammonium at 4.314 mM is becoming constraining
+- Glucose nearly depleted (1.582 mM)
+- Arabinose still available at 10.1 mM
+
+**Strategy:**
+I will prioritize:
+1. Uptake of remaining glucose (limited but immediate energy source)
+2. Uptake of arabinose (fermentable sugar, ~10 mM available)
+3. Uptake of amino acids for both C and N (especially those with N: asparagine, glutamine, lysine)
+4. Catabolism via mixed-acid fermentation
+
+**Carbon balance:**
+- Glucose (1.582 mM) = 6 C per molecule = 9.5 mmol C
+- Arabinose (uptake ~8 mM) = 5 C per molecule = 40 mmol C
+- Amino acids (net ~5 mmol): ~50 mmol C
+- Total available C uptake: ~100 mmol C
+
+**Nitrogen balance:**
+- Ammonium: 4.314 mmol
+- Asparagine (2.6 mM): 1 N per molecule = 2.6 mmol N
+- Glutamine (2.7 mM): 1 N per molecule = 2.7 mmol N
+- Other amino acids (lysine, histidine, etc.): ~3 mmol N
+- Total available N: ~13 mmol N
+
+**Growth rate calculation:**
+- Growth requires 34 mmol C and 10 mmol N per gram dry weight
+- Available N (~13 mmol) / 10 = 1.3 gDW potential
+- Available C (~100 mmol) / 34 = 2.9 gDW potential
+- Nitrogen is limiting
+- Over 4 hours: growth = 1.3 gDW / 1.603 gDW (current) = 0.81 gDW
+- Growth rate ≈ 0.81 / 4 ≈ **0.20 /h**
+
+This is conservative and accounts for maintenance respiration and fermentation overhead.
+
+## Proposed fluxes (mmol/gDW/h)
+
+**Uptakes:**
+- D-glucose: -1.5 (remaining glucose, quick energy)
+- arab__L: -2.0 (arabinose fermentation)
+- asn__L: -1.0 (asparagine: C and N source)
+- gln__L: -1.0 (glutamine: C and N source)
+- lys__L: -0.8 (lysine: C and N source)
+- nh4: -1.2 (residual ammonium uptake)
+
+**Fermentation products (mixed-acid fermentation):**
+- ac: +3.5 (acetate)
+- but: +2.0 (butyrate)
+- co2: +4.0 (CO₂ from decarboxylation)
+- h2: +1.5 (H₂ from formate pathway)
+- for: +0.8 (formate)
+- lac__L: +0.5 (lactate)
+
+**Carbon audit:**
+- In: 1.5(6) + 2.0(5) + 1.0(3) + 1.0(4) + 0.8(6) + 1.2(0) = 9 + 10 + 3 + 4 + 4.8 = 30.8 mmol C
+- Growth cost: 0.20 × 34 = 6.8 mmol C
+- Out (fermentation): 3.5 + 2.0 + 4.0 + 1.5(2) + 0.8 + 0.5 = 3.5 + 2 + 4 + 3 + 0.8 + 0.5 = 13.8 mmol C
+- Total out: 6.8 + 13.8 = 20.6 mmol C ✓ (within 30.8 available)
+
+**Nitrogen audit:**
+- In: 1.0 + 1.0 + 0.8 + 1.2 = 4.0 mmol N
+- Growth cost: 0.20 × 10 = 2.0 mmol N
+- Remaining: 2.0 mmol N (acceptable margin) ✓
+
+```json
+{"fluxes": {"glc__D": -1.5, "arab__L": -2.0, "asn__L": -1.0, "gln__L": -1.0, "lys__L": -0.8, "nh4": -1.2, "ac": 3.5, "but": 2.0, "co2": 4.0, "h2": 1.5, "for": 0.8, "lac__L": 0.5}, "growth_rate": 0.20, "rationale": "Nitrogen-limited growth phase; consuming remaining glucose and arabinose with amino acid catabolism (asparagine, glutamine, lysine) for both C and N; mixed-acid fermentation producing acetate, butyrate, CO2, H2, formate, and lactate. Conservative estimate accounting for maintenance and fermentation efficiency.", "confidence": 0.62}
+```

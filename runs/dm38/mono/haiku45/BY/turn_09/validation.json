@@ -1,0 +1,48 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 9,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.35,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.438 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Nitrogen limitation (4.5 mmol N available vs. 10 mmol N needed per gDW) restricts growth to 0.35 /h. Co-fermentation of abundant acetate (8 mmol/gDW/h) with N-rich amino acids (serine, alanine, cystei",
+  "confidence": 0.65,
+  "fluxes_claimed": {
+   "ac": -8.0,
+   "ser__L": -1.5,
+   "ala__L": -1.5,
+   "cys__L": -1.0,
+   "nh4": -0.5,
+   "malt": -0.5,
+   "ppa": 1.8,
+   "but": 1.0,
+   "for": 0.5,
+   "lac__L": 0.4,
+   "co2": 0.2,
+   "h2": 0.1
+  },
+  "fluxes_applied": {
+   "ac": -8.0,
+   "ser__L": -1.5,
+   "ala__L": -1.5,
+   "cys__L": -1.0,
+   "nh4": -0.5,
+   "malt": -0.5,
+   "ppa": 1.8,
+   "but": 1.0,
+   "for": 0.5,
+   "lac__L": 0.4,
+   "co2": 0.2,
+   "h2": 0.1,
+   "pi": -0.4384
+  }
+ }
+]

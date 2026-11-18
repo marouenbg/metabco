@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ac": 2.0,
+  "succ": -1.5,
+  "ppa": 0.5,
+  "but": 0.5,
+  "gln__L": -1.5,
+  "asn__L": -1.0,
+  "gly": -0.8,
+  "ser__L": -0.6,
+  "co2": 8.0,
+  "h2": 0.1
+ },
+ "growth_rate": 0.3,
+ "rationale": "Resuming growth after turn 7 stall by consuming abundant acetate, succinate, and amino acids (glutamine, asparagine) as N source. Fermentation to acetate, propionate, butyrate, and CO\u2082 maintains redox balance under anaerobic conditions. Growth limited by available nitrogen but supported by carbon balance.",
+ "confidence": 0.62
+}

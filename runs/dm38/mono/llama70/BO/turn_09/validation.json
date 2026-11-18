@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 9,
+  "growth_claimed": 0.065,
+  "growth_allowed": 0.065,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: inost"
+  ],
+  "warnings": [
+   "no_transporter: inost",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake inost to pool limit -4.29",
+   "P: credited 0.0814 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.017 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Carbon and nitrogen sources available, growth rate limited by nitrogen uptake",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "inost": -5.0,
+   "ala__L": -2.0,
+   "arg__L": -1.0,
+   "ac": 2.0,
+   "ppa": 1.0,
+   "but": 1.0,
+   "nh4": 1.0
+  },
+  "fluxes_applied": {
+   "inost": -4.2914,
+   "ala__L": -2.0,
+   "arg__L": -1.0,
+   "ac": 2.0,
+   "ppa": 1.0,
+   "but": 1.0,
+   "nh4": 1.0,
+   "pi": -0.0814,
+   "so4": -0.017
+  }
+ }
+]

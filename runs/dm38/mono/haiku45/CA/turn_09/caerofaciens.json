@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ac": 0.5,
+  "for": -3.0,
+  "ala__L": -1.5,
+  "ser__L": -1.0,
+  "pro__L": -0.8,
+  "gly": -0.6,
+  "cys__L": -0.3,
+  "co2": 2.0,
+  "ppa": 1.5,
+  "lac__L": 0.8
+ },
+ "growth_rate": 0.2,
+ "rationale": "Nitrogen limitation from amino acid depletion drives lower growth. Acetate and formate remain abundant and are efficiently catabolized. Amino acids provide both nitrogen and carbon; propionate and lactate are overflow fermentation products. Carbon balance verified.",
+ "confidence": 0.65
+}

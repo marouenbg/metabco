@@ -1,0 +1,102 @@
+# Metabolic Decision for Faecalibacterium prausnitzii A2-165 — Turn 8
+
+## Analysis
+
+### Carbon and Nitrogen Sources Available
+
+**Abundant carbon sources I can use:**
+- Acetate (49.66 mM): I have acetyl-CoA synthetase and can ferment acetate
+- Butyrate (9.817 mM): I can β-oxidize this to acetyl-CoA
+- Formate (15.99 mM): I can oxidize via formate dehydrogenase
+- Propionate (0.908 mM): I can metabolize via propionyl-CoA pathway
+- Amino acids (glycine, phenylalanine, cysteine, leucine, tyrosine, valine, etc.): These are available and I can catabolize them for both carbon and nitrogen
+
+**Carbon sources I cannot use:**
+- Glucose (0.7775 mM): F. prausnitzii lacks the glucose transporters and glycolytic machinery; this is a known limitation of this saccharolytic-deficient strain
+- myo-inositol (6.272 mM): I lack inositol permeases and the degradation pathway
+
+**Nitrogen sources:**
+- Amino acids provide both carbon and nitrogen
+- Glycine (4.7 mM), glutamine (2.7 mM), asparagine (2.6 mM), and others are available
+- Ammonium is not currently listed as available (it was consumed in earlier turns)
+
+### Fermentation Products
+
+F. prausnitzii is a butyrate producer. My known fermentation products are:
+- **Butyrate** (primary product)
+- **Acetate** (secondary)
+- **Formate** (secondary)
+- **CO₂** (from decarboxylation)
+- **H₂** (from anaerobic metabolism)
+
+### Growth Rate Calculation
+
+Current biomass: 6.282 gDW/L
+
+**Strategy:** I will primarily consume:
+- Acetate (major carbon source, abundant)
+- Amino acids (especially glycine and others for both C and N)
+- Formate (oxidizable)
+
+**Carbon budget for growth:**
+- Growth requires ~33 mmol C per gram dry weight
+- At a target growth rate of ~0.30 /h on 6.282 gDW/L, I need: 6.282 × 0.30 × 33 = 62.3 mmol C/L for growth
+- Plus maintenance and fermentation product synthesis
+
+**Proposed uptake:**
+- Acetate: -12.0 mmol/gDW/h (carbon source, abundant)
+- Glycine: -2.0 mmol/gDW/h (amino acid, C and N source)
+- L-cysteine: -0.8 mmol/gDW/h (amino acid, provides S and N)
+- L-alanine: -0.5 mmol/gDW/h (amino acid)
+- L-serine: -0.5 mmol/gDW/h (amino acid)
+- Formate: -1.5 mmol/gDW/h (oxidizable)
+
+**Carbon accounting:**
+- Acetate uptake: 12.0 mmol C (2 carbons per acetate)
+- Glycine uptake: 2.0 mmol C (2 carbons per glycine)
+- Cysteine uptake: 0.8 mmol C (3 carbons)
+- Alanine uptake: 0.5 mmol C (3 carbons)
+- Serine uptake: 0.5 mmol C (3 carbons)
+- Formate uptake: 1.5 mmol C (1 carbon)
+- **Total carbon in: 24.0 + 2.0 + 2.4 + 1.5 + 1.5 + 1.5 = 32.9 mmol C/gDW/h**
+
+**Growth rate:** 32.9 mmol C / 33 mmol C per gDW = ~0.30 /h (reasonable, matches recent trend)
+
+**Nitrogen accounting:**
+- Glycine: 2.0 mmol N
+- Cysteine: 0.8 mmol N
+- Alanine: 0.5 mmol N
+- Serine: 0.5 mmol N
+- Total: 3.8 mmol N
+- Needed for 0.30 /h growth on 6.282 gDW/L: 6.282 × 0.30 × 7 = 13.2 mmol N/L needed
+- Per gDW/h: 13.2 / 6.282 / 4 = ~0.52 mmol N/gDW/h
+- **Actual N available: 3.8 mmol/gDW/h — sufficient**
+
+**Fermentation products (stoichiometric release):**
+- Butyrate: +6.0 mmol/gDW/h (main product)
+- Acetate: +2.0 mmol/gDW/h (secondary product, some recycling)
+- CO₂: +4.0 mmol/gDW/h (from decarboxylation)
+- H₂: +1.0 mmol/gDW/h (from anaerobic fermentation)
+
+This maintains redox balance and is consistent with my known physiology.
+
+---
+
+```json
+{
+  "fluxes": {
+    "ac": -12.0,
+    "gly": -2.0,
+    "cys__L": -0.8,
+    "ala__L": -0.5,
+    "ser__L": -0.5,
+    "for": -1.5,
+    "but": 6.0,
+    "co2": 4.0,
+    "h2": 1.0
+  },
+  "growth_rate": 0.30,
+  "rationale": "Acetate is abundant and my preferred substrate; amino acids provide both carbon and nitrogen. Fermentation produces butyrate (my signature product), acetate, CO₂, and H₂. Growth rate is constrained by nitrogen availability from amino acids and matches recent metabolic trend (turns 6-7 at 0.30-0.32 /h). Carbon balance: 32.9 mmol C in supports 0.30 /h growth (33 mmol C/gDW) with fermentation products. Nitrogen balance: 3.8 mmol N in supports growth at this rate.",
+  "confidence": 0.72
+}
+```

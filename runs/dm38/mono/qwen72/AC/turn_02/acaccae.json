@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -3.0,
+  "lac__L": -1.0,
+  "but": 3.0,
+  "ac": 1.0,
+  "arg__L": -1.0,
+  "nh4": -0.5,
+  "cys__L": -0.5
+ },
+ "growth_rate": 0.15,
+ "rationale": "Continuing to utilize D-glucose and L-lactate for carbon, L-arginine and ammonium for nitrogen, and L-cysteine for sulfur. Producing butyrate and acetate as fermentation products.",
+ "confidence": 0.9
+}

@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 3,
+  "growth_claimed": 0.27,
+  "growth_allowed": 0.27,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.338 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0707 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Nitrogen becoming limiting (8.47 mM NH\u2084 remaining). Maintaining moderate growth on glucose and lactate with arginine supplementation. Fermentation yields acetate, propionate, butyrate, and CO\u2082 consist",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -6.0,
+   "lac__L": -5.0,
+   "arg__L": -1.5,
+   "nh4": -1.8,
+   "ac": 3.5,
+   "ppa": 2.5,
+   "but": 1.2,
+   "co2": 8.0
+  },
+  "fluxes_applied": {
+   "glc__D": -6.0,
+   "lac__L": -5.0,
+   "arg__L": -1.5,
+   "nh4": -1.8,
+   "ac": 3.5,
+   "ppa": 2.5,
+   "but": 1.2,
+   "co2": 8.0,
+   "pi": -0.3382,
+   "so4": -0.0707
+  }
+ }
+]

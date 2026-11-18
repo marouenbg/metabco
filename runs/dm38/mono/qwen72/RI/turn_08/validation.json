@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 8,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.2,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "S: credited 0.0523 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing to utilize D-glucose and L-lactate for growth and production of butyrate and acetate, with ammonium as the nitrogen source. Carbon and nitrogen balances are maintained.",
+  "confidence": 0.95,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": -5.0,
+   "but": 2.5,
+   "ac": 2.5,
+   "nh4": -2.0,
+   "co2": 1.0,
+   "pi": -0.23
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": -5.0,
+   "but": 2.5,
+   "ac": 2.5,
+   "nh4": -2.0,
+   "co2": 1.0,
+   "pi": -0.23,
+   "so4": -0.0523
+  }
+ }
+]

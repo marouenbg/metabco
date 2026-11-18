@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -7.0,
+  "lac__L": -2.0,
+  "arg__L": -4.0,
+  "cys__L": -1.0,
+  "nh4": 3.5,
+  "ac": 9.0,
+  "for": 5.0,
+  "co2": 4.0
+ },
+ "growth_rate": 0.072,
+ "rationale": "Eggerthella lenta ferments glucose and amino acids anaerobically. Increasing glucose and arginine uptake to sustain growth at 0.072 /h on abundant substrates. Major products are acetate, formate, and CO\u2082. Excess ammonia released from amino acid catabolism. Carbon and nitrogen budgets balance.",
+ "confidence": 0.68
+}

@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 4,
+  "growth_claimed": 0.42,
+  "growth_allowed": 0.3083,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=60 out=50 biomass=17.7"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.526 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.11 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.42 -> 0.308"
+  ],
+  "rationale": "Balanced carbon audit and growth rate supported by D-glucose, L-lactate, and Ammonium.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": -10.0,
+   "nh4": -5.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "succ": 5.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": -10.0,
+   "nh4": -5.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "succ": 5.0,
+   "pi": -0.5261,
+   "so4": -0.1099
+  }
+ }
+]

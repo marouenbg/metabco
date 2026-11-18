@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -12,
+  "arg__L": -6,
+  "glc__D": -3,
+  "arab__L": -4,
+  "nh4": -1.5,
+  "ac": 4,
+  "co2": 8,
+  "for": 1
+ },
+ "growth_rate": 0.45,
+ "rationale": "Lactate now abundant; switching primary carbon source from depleted glucose. Lactate + arginine provide C and N. Arginine supplies 4 N per molecule plus 6 C. Fermentation to acetate, formate, CO\u2082 balances redox under anaerobic conditions. Growth rate sustainable at 0.45/h with available substrates.",
+ "confidence": 0.72
+}

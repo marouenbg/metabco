@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arab__L": -10.0,
+  "ac": 5.0,
+  "lac__L": 2.0,
+  "nh4": -7.0,
+  "arg__L": -3.0,
+  "pi": -0.15
+ },
+ "growth_rate": 0.12,
+ "rationale": "Continuing to ferment glucose and arabinose for energy and carbon, using ammonium and arginine for nitrogen, and producing acetate and lactate as fermentation products.",
+ "confidence": 0.9
+}

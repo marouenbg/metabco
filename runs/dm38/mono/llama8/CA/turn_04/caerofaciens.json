@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": 2.5,
+  "glc__D": 5.0,
+  "arg__L": 5.0,
+  "nh4": 2.08,
+  "ac": 5.0,
+  "for": 5.0,
+  "succ": 2.5,
+  "etoh": 2.5,
+  "co2": 25.0
+ },
+ "growth_rate": 0.115,
+ "rationale": "Based on my transport capabilities, the available nutrients, and my recent behavior, I will take up L-lactate, L-glucose, and L-arginine, and release acetate, formate, lactate, succinate, ethanol, and CO2.",
+ "confidence": 0.9
+}

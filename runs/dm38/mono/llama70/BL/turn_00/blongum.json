@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "glc__D": -15.0,
+  "arg__L": -3.0,
+  "ac": 10.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "Optimizing carbon and nitrogen uptake for growth and acetate production",
+ "confidence": 0.8
+}

@@ -1,0 +1,109 @@
+# Metabolic reasoning for Bacteroides uniformis ATCC 8492, turn 1
+
+## Assessment of transporters and available substrates
+
+Bacteroides uniformis is a saccharolytic anaerobe with a large, flexible polysaccharide utilization locus (PUL) system. Based on genomic and phenotypic data:
+
+**Primary carbon sources I can transport:**
+- D-glucose (glc__D): 24.88 mM — excellent, constitutive uptake
+- L-lactate (lac__L): 28.25 mM — excellent, I ferment lactate
+- L-arabinose (arab__L): 21.31 mM — good, pentose utilization
+- Maltose (malt): 4.382 mM — yes, via PUL systems
+- Amino acids (arg, cys, ser, pro, ala, gly, phe, leu, tyr, val, etc.): limited uptake; I can catabolize these but they are secondary
+
+**Abundant carbons I likely CANNOT efficiently use:**
+- myo-inositol: Bacteroides can use it, but slowly; not a preferred substrate
+- Most amino acids beyond arginine: I have limited amino acid oxidation capacity
+
+**Nitrogen sources:**
+- Ammonium (nh4): 9.326 mM — primary nitrogen source
+- L-arginine (arg__L): 21.79 mM — high; I can use this for both carbon and nitrogen
+- Other amino acids provide nitrogen but are not my primary sink
+
+## Fermentation strategy
+
+At t=0, I already committed to a mixed fermentation: glucose and lactate uptake, producing acetate, propionate, and succinate. This is consistent with my known metabolism. I will continue this strategy.
+
+**Expected fermentation products from glucose and lactate:**
+- Acetate (ac)
+- Propionate (ppa)
+- Succinate (succ)
+- Formate (for) — possible
+- Small amounts of lactate if not all consumed
+
+## Growth calculation
+
+**Carbon budget:**
+- Glucose: 6 carbons per molecule
+- Lactate: 3 carbons per molecule
+- Arginine: 6 carbons per molecule
+
+Assuming I take up:
+- Glucose: ~8 mmol/gDW/h (moderate rate, not maximal)
+- Lactate: ~6 mmol/gDW/h
+- Arginine: ~2 mmol/gDW/h (supplementary)
+
+Total carbon in: (8×6) + (6×3) + (2×6) = 48 + 18 + 12 = 78 mmol C/gDW/h
+
+**Growth biomass requirement:** 42 mmol C/gDW/h for 1 gDW produced per hour.
+
+**Fermentation product release (carbon out):**
+- From mixed-acid fermentation of glucose + lactate, typical yields:
+  - Acetate: ~1.5 mmol per mmol glucose
+  - Propionate: ~1.0 mmol per mmol glucose
+  - Succinate: ~0.7 mmol per mmol glucose
+  - Formate: ~0.3 mmol per mmol glucose
+
+For 8 mmol glucose: acetate ~12, propionate ~8, succinate ~5.6, formate ~2.4 = ~28 mmol C out
+For 6 mmol lactate: acetate ~6, propionate ~3, formate ~1.5 = ~10.5 mmol C out
+Total fermentation products: ~38.5 mmol C/gDW/h
+
+**Nitrogen budget:**
+- Ammonium uptake: ~3 mmol/gDW/h
+- Arginine: ~2 mmol/gDW/h (6 carbons, 1 nitrogen)
+- Total N in: ~5 mmol/gDW/h
+
+Growth requirement: 10 mmol N/gDW/h for 1 gDW produced.
+Available N: 5 mmol/gDW/h → supports ~0.5 gDW/h growth
+
+**Carbon check:**
+- In: 78 mmol C
+- Out (fermentation): 38.5 mmol C
+- Growth (0.5 /h): 42 × 0.5 = 21 mmol C
+- Total out: 38.5 + 21 = 59.5 mmol C ✓ (within budget)
+
+**Revised growth rate:** Nitrogen is limiting. With 5 mmol N available and 10 mmol N needed per gDW:
+**Growth rate = 0.5 /h**
+
+This is realistic for Bacteroides in a nutrient-rich but N-limited batch culture.
+
+## Flux decision
+
+- glc__D: -8.0 (uptake)
+- lac__L: -6.0 (uptake)
+- arg__L: -2.0 (uptake)
+- nh4: -3.0 (uptake)
+- ac: +12.0 (acetate production)
+- ppa: +8.0 (propionate production)
+- succ: +5.6 (succinate production)
+- for: +3.9 (formate production)
+- co2: +2.0 (minor CO₂ from decarboxylation)
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -6.0,
+    "arg__L": -2.0,
+    "nh4": -3.0,
+    "ac": +12.0,
+    "ppa": +8.0,
+    "succ": +5.6,
+    "for": +3.9,
+    "co2": +2.0
+  },
+  "growth_rate": 0.5,
+  "rationale": "Mixed-acid fermentation of glucose and lactate with arginine supplementation. Nitrogen (ammonium + arginine) is limiting; 5 mmol N/gDW/h supports 0.5 /h growth. Carbon balance verified: 78 in, 59.5 out (fermentation + biomass).",
+  "confidence": 0.72
+}
+```

@@ -1,0 +1,56 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 9,
+  "growth_claimed": 0.85,
+  "growth_allowed": 0.0309,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=2.5 out=0 biomass=32.1",
+   "n_imbalance: in=0.3 out=0 biomass=0.709"
+  ],
+  "warnings": [
+   "no_transporter: arab__L",
+   "no_transporter: lac__L",
+   "no_transporter: but",
+   "no_transporter: h2",
+   "no_transporter: h2s"
+  ],
+  "repairs": [
+   "P: credited 0.992 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.222 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.85 -> 0.0695",
+   "N: growth 0.0695 -> 0.0309"
+  ],
+  "rationale": "producing acetate and butyrate, taking up L-arabinose, L-glutamine, and ammonium",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "arab__L": -0.4,
+   "gln__L": -0.1,
+   "nh4": -0.1,
+   "lac__L": 0.0,
+   "for": 0.0,
+   "but": 0.0,
+   "ac": 0.0,
+   "h2": 0.0,
+   "h2s": 0.0,
+   "etoh": 0.0,
+   "co2": 0.0
+  },
+  "fluxes_applied": {
+   "arab__L": -0.4,
+   "gln__L": -0.1,
+   "nh4": -0.1,
+   "lac__L": 0.0,
+   "for": 0.0,
+   "but": 0.0,
+   "ac": 0.0,
+   "h2": 0.0,
+   "h2s": 0.0,
+   "etoh": 0.0,
+   "co2": 0.0,
+   "pi": -0.9915,
+   "so4": -0.2225
+  }
+ }
+]

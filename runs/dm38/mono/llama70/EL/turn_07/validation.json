@@ -1,0 +1,19 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 7,
+  "growth_claimed": 0.0,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "no_answer": true,
+  "violations": [
+   "no_answer"
+  ],
+  "warnings": [],
+  "repairs": [],
+  "rationale": "",
+  "confidence": null,
+  "fluxes_claimed": {},
+  "fluxes_applied": {}
+ }
+]

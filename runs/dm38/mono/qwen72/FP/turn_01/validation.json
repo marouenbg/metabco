@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 1,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.233 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0525 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing to utilize D-glucose and L-lactate for growth, producing butyrate and acetate. Ammonium is sufficient for nitrogen requirements.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "nh4": -7.0,
+   "but": 2.0,
+   "ac": 2.0,
+   "h2": 2.0,
+   "co2": 6.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "nh4": -7.0,
+   "but": 2.0,
+   "ac": 2.0,
+   "h2": 2.0,
+   "co2": 6.0,
+   "pi": -0.2327,
+   "so4": -0.0525
+  }
+ }
+]

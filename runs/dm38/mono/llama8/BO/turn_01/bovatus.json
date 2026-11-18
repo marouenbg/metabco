@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "arg__L": 10.0,
+  "lac__L": 50.0,
+  "ac": 30.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "I take up glucose and arginine to support growth. I release lactate and acetate as fermentation products.",
+ "confidence": 0.9
+}

@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "succ": 5.0
+ },
+ "growth_rate": 0.42,
+ "rationale": "Balanced carbon audit and growth rate supported by D-glucose, L-lactate, and Ammonium.",
+ "confidence": 0.8
+}

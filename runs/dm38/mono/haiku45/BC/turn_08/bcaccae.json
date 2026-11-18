@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": -8.0,
+  "arg__L": -1.5,
+  "ser__L": -1.0,
+  "pro__L": -1.0,
+  "ppa": 0.6,
+  "for": 0.2,
+  "co2": 1.5,
+  "nh4": 5.5
+ },
+ "growth_rate": 0.25,
+ "rationale": "Resuming acetate + amino acid co-fermentation after zero growth at turn 7. Acetate (8 mmol/gDW/h) provides primary energy; arginine, serine, and proline supply secondary carbon and excess nitrogen (released as ammonia). Growth limited by available carbon; products (propionate, formate, CO\u2082) account for residual carbon after biosynthesis.",
+ "confidence": 0.72
+}

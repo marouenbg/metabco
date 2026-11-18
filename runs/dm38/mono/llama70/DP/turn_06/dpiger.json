@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "arab__L": -10.0,
+  "cys__L": -2.0,
+  "h2": -5.0,
+  "ac": 2.5,
+  "co2": 5.0,
+  "h2s": 5.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Limited by carbon and nitrogen availability, using L-arabinose and L-cysteine as primary sources",
+ "confidence": 0.8
+}

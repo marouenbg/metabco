@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "co2": 16.31,
+  "nh4": 6.95,
+  "lac__L": 0.0,
+  "for": 7.44,
+  "ac": 7.44,
+  "succ": 7.44
+ },
+ "growth_rate": 0.341,
+ "rationale": "I choose to take up carbon dioxide (co2) and ammonium (nh4) to support my growth. I will also release formate (for), acetate (ac), and succinate (succ) as my fermentation products.",
+ "confidence": 0.8
+}

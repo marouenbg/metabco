@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "ppa": -2.0,
+  "but": -1.0,
+  "nh4": -1.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.125,
+ "rationale": "Nitrogen limitation with carbon sources from short-chain fatty acids",
+ "confidence": 0.8
+}

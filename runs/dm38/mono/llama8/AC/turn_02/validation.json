@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 2,
+  "growth_claimed": -0.8,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: glc__D",
+   "negative_growth: -0.8",
+   "c_imbalance: in=0 out=126 biomass=0"
+  ],
+  "warnings": [],
+  "repairs": [
+   "N: credited 12 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Based on my transport capabilities, available nutrients, and fermentation products, I will take up L-lactate, D-glucose, and L-serine, and secrete lactate, ethanol, and acetate as fermentation product",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": 20.0,
+   "glc__D": 5.0,
+   "ser__L": 2.0,
+   "etoh": 10.0,
+   "ac": 5.0,
+   "nh4": 10.0
+  },
+  "fluxes_applied": {
+   "lac__L": 0.0,
+   "glc__D": 0.0,
+   "ser__L": 0.0,
+   "etoh": 0.0,
+   "ac": 0.0,
+   "nh4": -2.0
+  }
+ }
+]

@@ -1,0 +1,13 @@
+As Bacteroides thetaiotaomicron VPI-5482, I must carefully consider my metabolic strategy for the next 4 hours. I have a relatively low biomass concentration of 0.005942 gDW/L, so I need to focus on taking up nutrients and growing at a decent rate.
+
+First, I check which carbon and nitrogen sources I can actually transport. My genome encodes transporters for L-lactate (lac__L), D-glucose (glc__D), L-arginine (arg__L), L-asparagine (asn__L), and Ammonium (nh4). These are the primary carbon and nitrogen sources I can utilize. I also notice that some of these nutrients are present in relatively high concentrations, making them suitable for uptake.
+
+Next, I consider which fermentation products this species is known to make. Bacteroides thetaiotaomicron is known to produce acetate (ac), butyrate (but), propionate (ppa), and lactate (lac__L) as byproducts of fermentation. I can secrete these products into the environment.
+
+To determine the growth rate my chosen uptake supports, I'll use the rough estimates provided in the rules of the world. I need to consume approximately 41 mmol of carbon and 8 mmol of nitrogen per gram of dry weight produced. Based on my current biomass concentration, I estimate I need to take up about 0.24 mmol/gDW/h of carbon and 0.05 mmol/gDW/h of nitrogen to support growth.
+
+Now, I perform an audit of the carbon mass balance. I take up carbon from the available sources, which includes CO2, glucose, lactate, and other carbon-containing compounds. I also need to account for the carbon used in biomass synthesis. Based on my growth rate, I estimate I'll consume about 0.24 mmol/gDW/h of carbon from these sources. I'll release acetate, butyrate, propionate, and lactate as byproducts of fermentation.
+
+Here is my decision in JSON format:
+
+{"fluxes": {"lac__L": -5.0, "glc__D": -5.0, "arg__L": -0.5, "asn__L": -0.2, "nh4": -0.8, "ac": 3.99, "but": 3.99, "ppa": 3.99, "lac__D": 2.39}, "growth_rate": 0.150 /h, "rationale": "I'm taking up lactate, glucose, arginine, asparagine, and ammonium to support growth. I'm secreting acetate, butyrate, propionate, and lactate as byproducts of fermentation. I estimate I'll grow at a rate of 0.150 /h.", "confidence": 0.9}

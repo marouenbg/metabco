@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 5,
+  "growth_claimed": 0.337,
+  "growth_allowed": 0.337,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.306 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0739 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing to utilize abundant glucose and lactate for fermentation, producing acetate, propionate, butyrate, and formate, with arginine as the nitrogen source.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 5.0,
+   "nh4": 2.0,
+   "for": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 5.0,
+   "nh4": 2.0,
+   "for": 2.0,
+   "pi": -0.3064,
+   "so4": -0.0739
+  }
+ }
+]

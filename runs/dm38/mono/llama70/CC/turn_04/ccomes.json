@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": -2.0,
+  "arg__L": -1.0,
+  "ac": 3.0,
+  "but": 1.5,
+  "h2": 1.0
+ },
+ "growth_rate": 0.35,
+ "rationale": "Balancing carbon budget and energy yield from available substrates",
+ "confidence": 0.8
+}

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -2.0,
+  "ac": 5.0,
+  "for": 5.0,
+  "co2": 5.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Lactate fermentation under anaerobic conditions with moderate growth",
+ "confidence": 0.8
+}

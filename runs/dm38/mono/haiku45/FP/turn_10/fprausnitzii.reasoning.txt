@@ -1,0 +1,121 @@
+# Metabolic Decision for Faecalibacterium prausnitzii A2-165 — Turn 10
+
+## Analysis
+
+**Current state:** I am at 6.282 gDW/L, 40 hours into a 48-hour batch culture. I have been growing intermittently (turns 6–7 showed growth; turns 8–9 showed zero growth). I must assess what I can metabolise and whether growth is sustainable.
+
+**Carbon sources available and transportable:**
+
+F. prausnitzii is a strict anaerobe specialising in fermenting plant polysaccharides and amino acids. My genome encodes:
+- **Butyrate (24.89 mM)**: I can ferment this via β-oxidation and other pathways. This is abundant.
+- **Acetate (19.5 mM)**: I can use this, though it is a poor growth substrate without co-fermentation.
+- **Formate (12.22 mM)**: Utilisable in mixed fermentation.
+- **Amino acids (L-Phe, L-Leu, L-Tyr, L-Val, L-Gln, L-Asn, L-Lys, L-Cys, L-Thr, L-Ile, L-His, L-Met, L-Trp, L-Glu, L-Asp, L-Pro)**: F. prausnitzii catabolises amino acids extensively. These are present in moderate quantities.
+- **Glucose (0.78 mM)**: Very low; not a primary substrate.
+- **myo-Inositol (6.27 mM)**: F. prausnitzii can ferment inositol via the myo-inositol operon.
+- **CO₂ (174.7 mM)**: Available as a terminal electron acceptor in some pathways and for biosynthesis.
+
+**Nitrogen sources:**
+- Multiple amino acids provide nitrogen directly.
+- Nitrate (0.1 mM): Very low; not limiting.
+- Ammonia would be ideal but is not listed; I must rely on amino acid deamination.
+
+**Why I grew in turns 6–7 but not 8–9:**
+
+In turn 8, I consumed acetate (−12 mM/gDW/h) but produced butyrate (+6). This is characteristic of acetate reassimilation during fermentation, but the flux imbalance and zero growth suggest I was in a starvation phase or metabolic bottleneck. Turn 9 showed no activity, indicating depletion of readily utilisable substrates or accumulation of inhibitory products.
+
+**Fermentation products F. prausnitzii produces:**
+- **Butyrate** (primary): via acetyl-CoA condensation and reduction.
+- **Acetate**: overflow or incomplete oxidation.
+- **Formate**: from pyruvate formate-lyase.
+- **CO₂** and **H₂**: from mixed-acid fermentation.
+- Minor: lactate, succinate (under specific conditions).
+
+**Sustainable growth strategy for remaining 8 hours:**
+
+I have 8 hours left (40–48 h). The biomass is now 6.282 gDW/L. To grow, I need:
+- **Carbon:** ~33 mmol C per gram of new biomass.
+- **Nitrogen:** ~7 mmol N per gram of new biomass.
+
+**Available carbon (rough estimate):**
+- Butyrate: 24.89 mM × 4 C/molecule = 99.56 mmol C
+- Acetate: 19.5 mM × 2 C = 39 mmol C
+- Amino acids (total ~35 amino acids, average ~5 C each): ~175 mmol C
+- Inositol: 6.27 mM × 6 C = 37.6 mmol C
+- Formate: 12.22 mM × 1 C = 12.22 mmol C
+- **Total: ~363 mmol C available**
+
+**Available nitrogen:**
+- Amino acids: ~35 mM total, each with ≥1 N: ~35 mmol N
+- Nitrate: 0.11 mM (negligible)
+- **Total: ~35 mmol N**
+
+**Growth potential:** 35 mmol N ÷ 7 mmol N per gDW = **5 gDW maximum new biomass**. This is plausible.
+
+**Uptake strategy:**
+
+I will prioritise:
+1. **Amino acids** (preferred, provide both C and N; limited but high-value).
+2. **Butyrate** (abundant C source; can be oxidised or fermented).
+3. **Inositol** (fermentable; abundant).
+
+A modest growth rate of **0.15 /h** is sustainable:
+- New biomass per hour: 0.15 gDW/gDW/h
+- Carbon cost: 0.15 × 33 = 4.95 mmol C/gDW/h
+- Nitrogen cost: 0.15 × 7 = 1.05 mmol N/gDW/h
+
+**Uptake fluxes (mmol/gDW/h):**
+- **Butyrate:** −5.0 (fermentation/oxidation)
+- **Inositol:** −2.0 (fermentation)
+- **Amino acids (mixed):** −1.5 (L-Leu, L-Val, L-Phe, L-Lys, L-Cys, L-Thr, others: ~0.2 each)
+- **Formate:** −0.5 (co-fermentation)
+
+**Carbon balance:**
+- Uptake: 5.0×4 + 2.0×6 + 1.5×4.5 + 0.5×1 = 20 + 12 + 6.75 + 0.5 = 39.25 mmol C/gDW/h
+- Growth cost: 0.15 × 33 = 4.95 mmol C/gDW/h
+- Fermentation products (butyrate, acetate, CO₂, formate): 39.25 − 4.95 ≈ 34.3 mmol C/gDW/h
+
+**Release fluxes:**
+- **Butyrate:** +3.5 (net fermentation product)
+- **Acetate:** +2.0 (overflow)
+- **CO₂:** +8.0 (decarboxylation)
+- **Formate:** +1.0 (formate lyase)
+- **H₂:** +0.8 (hydrogenase)
+
+**Nitrogen balance:**
+- Uptake: 1.5 mmol N/gDW/h (from amino acids)
+- Growth cost: 0.15 × 7 = 1.05 mmol N/gDW/h
+- Excess released as ammonia: 1.5 − 1.05 = 0.45 mmol N/gDW/h → **NH₄:** +0.45
+
+**Final audit:**
+- C in: 39.25; C out (products + growth): 34.3 + 4.95 = 39.25 ✓
+- N in: 1.5; N out (growth + ammonia): 1.05 + 0.45 = 1.5 ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "but": -5.0,
+    "inost": -2.0,
+    "leu__L": -0.25,
+    "val__L": -0.25,
+    "phe__L": -0.25,
+    "lys__L": -0.2,
+    "cys__L": -0.2,
+    "thr__L": -0.15,
+    "ile__L": -0.1,
+    "his__L": -0.1,
+    "met__L": -0.05,
+    "for": -0.5,
+    "co2": 8.0,
+    "ac": 2.0,
+    "butyrate_out": 3.5,
+    "h2": 0.8,
+    "nh4": 0.45
+  },
+  "growth_rate": 0.15,
+  "rationale": "Amino acids and butyrate are abundant and utilisable. Moderate growth (0.15 /h) is sustainable over remaining 8 h using available C and N. Fermentation to butyrate, acetate, CO₂, and H₂ balances redox and mass. Confidence tempered by uncertainty in exact transporter complement and product inhibition.",
+  "confidence": 0.62
+}
+```

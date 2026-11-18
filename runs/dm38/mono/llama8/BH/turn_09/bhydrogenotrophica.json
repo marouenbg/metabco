@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "h2": 10.0,
+  "arg__L": -2.5,
+  "ac": 2.5,
+  "nh4": 0.5,
+  "co2": -7.5
+ },
+ "growth_rate": 0.72,
+ "rationale": "Prioritize hydrogen gas as the primary carbon source, use L-arginine as the primary nitrogen source, and produce acetate as the primary fermentation product.",
+ "confidence": 0.9
+}

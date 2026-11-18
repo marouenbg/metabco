@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 5,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.291 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0654 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Anaerostipes caccae ferments arabinose and arginine via mixed-acid fermentation, producing butyrate, acetate, formate, and CO\u2082. Growth is declining due to glucose depletion and accumulation of organic",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "arab__L": -5.0,
+   "arg__L": -2.0,
+   "ser__L": -1.0,
+   "but": 2.5,
+   "ac": 2.0,
+   "for": 1.5,
+   "co2": 2.0,
+   "nh4": 6.5
+  },
+  "fluxes_applied": {
+   "arab__L": -5.0,
+   "arg__L": -2.0,
+   "ser__L": -1.0,
+   "but": 2.5,
+   "ac": 2.0,
+   "for": 1.5,
+   "co2": 2.0,
+   "nh4": 6.5,
+   "pi": -0.2907,
+   "so4": -0.0654
+  }
+ }
+]

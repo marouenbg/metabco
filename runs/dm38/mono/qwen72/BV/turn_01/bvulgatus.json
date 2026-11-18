@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "ac": 5.0,
+  "ppa": 5.0,
+  "but": 5.0,
+  "for": 2.0,
+  "arg__L": -2.0,
+  "nh4": 2.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Utilizing glucose and lactate for energy and carbon, and arginine for nitrogen. Supporting growth with a focus on efficient fermentation products.",
+ "confidence": 0.85
+}

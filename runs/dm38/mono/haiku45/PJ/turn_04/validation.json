@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 4,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.2,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.251 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0523 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Sustained mixed-acid fermentation of glucose, lactate, and arabinose with ammonium and arginine as nitrogen sources. Growth rate conservative to avoid nutrient depletion over remaining 32 h. Carbon an",
+  "confidence": 0.65,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -6.0,
+   "arab__L": -3.0,
+   "arg__L": -2.5,
+   "nh4": -1.5,
+   "ac": 7.0,
+   "ppa": 4.0,
+   "succ": 2.0,
+   "co2": 0.5
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -6.0,
+   "arab__L": -3.0,
+   "arg__L": -2.5,
+   "nh4": -1.5,
+   "ac": 7.0,
+   "ppa": 4.0,
+   "succ": 2.0,
+   "co2": 0.5,
+   "pi": -0.2505,
+   "so4": -0.0523
+  }
+ }
+]

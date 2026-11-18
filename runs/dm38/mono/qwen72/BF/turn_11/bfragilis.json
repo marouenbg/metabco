@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": -3.0,
+  "but": -2.0,
+  "ppa": -1.0,
+  "ala__L": -0.5,
+  "pro__L": -0.5,
+  "co2": 2.0,
+  "h2": 2.0,
+  "nh4": 0.5
+ },
+ "growth_rate": 0.375,
+ "rationale": "Utilizing acetate, butyrate, and propionate for carbon and energy, and amino acids for nitrogen. Growth rate is nitrogen-limited.",
+ "confidence": 0.9
+}

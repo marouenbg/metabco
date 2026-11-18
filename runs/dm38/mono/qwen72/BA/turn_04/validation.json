@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 4,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_absent: arg__L",
+   "n_imbalance: in=0 out=0 biomass=2.07"
+  ],
+  "warnings": [],
+  "repairs": [
+   "zeroed uptake of absent arg__L",
+   "N: growth 0.25 -> 0"
+  ],
+  "rationale": "Utilizing lactate and arabinose as primary carbon sources, and arginine for nitrogen. Producing acetate, formate, and CO2 as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "arab__L": -5.0,
+   "arg__L": -8.0,
+   "ac": 5.0,
+   "for": 2.0,
+   "co2": 1.0,
+   "pi": -0.21,
+   "so4": -0.07
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "arab__L": -5.0,
+   "arg__L": 0.0,
+   "ac": 5.0,
+   "for": 2.0,
+   "co2": 1.0,
+   "pi": -0.21,
+   "so4": -0.07
+  }
+ }
+]

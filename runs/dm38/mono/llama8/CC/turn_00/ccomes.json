@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": 10,
+  "arg__L": -5,
+  "for": 5,
+  "etoh": 5
+ },
+ "growth_rate": 0.5,
+ "rationale": "Take up lactate and arginine, release lactate and fermentation products",
+ "confidence": 0.8
+}

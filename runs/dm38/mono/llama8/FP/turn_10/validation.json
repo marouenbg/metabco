@@ -1,0 +1,51 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 10,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: arab__L",
+   "c_imbalance: in=0 out=137 biomass=16.6"
+  ],
+  "warnings": [
+   "no_transporter: h2",
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.465 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.105 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.5 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "based on carbon and nitrogen costs of growth",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "but": 15.0,
+   "h2": 10.0,
+   "arab__L": 5.0,
+   "gln__L": 3.5,
+   "lac__L": 5.0,
+   "h2s": 0.0,
+   "ac": 5.0,
+   "for": 5.0,
+   "co2": 4.5,
+   "nh4": 0.0
+  },
+  "fluxes_applied": {
+   "but": 0.0,
+   "h2": 10.0,
+   "arab__L": 0.0,
+   "gln__L": 0.0,
+   "lac__L": 0.0,
+   "h2s": 0.0,
+   "ac": 0.0,
+   "for": 0.0,
+   "co2": 0.0,
+   "nh4": 0.0,
+   "pi": -0.4654,
+   "so4": -0.1051
+  }
+ }
+]

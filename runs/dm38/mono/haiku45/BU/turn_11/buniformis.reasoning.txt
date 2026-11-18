@@ -1,0 +1,75 @@
+# Metabolic decision for Bacteroides uniformis at t=44h
+
+## Analysis
+
+**Current state:** I am at 2.998 gDW/L in a sealed anaerobic batch culture with 4 hours remaining (48h total). Nutrient depletion is advancing—glucose and lactate are already exhausted from my recent history. I must assess what I can still metabolize.
+
+**Carbon sources available:**
+- Acetate (19.6 mM): I can transport and ferment this via acetyl-CoA pathways
+- Formate (9.41 mM): Usable; oxidizes to CO₂
+- Propionate (6.478 mM): I can take up and catabolize
+- Amino acids (proline, arginine, serine, cysteine, etc.): These are excellent carbon *and* nitrogen sources for a Bacteroides. I have multiple amino acid permeases
+- myo-inositol (6.272 mM): Fermentable carbohydrate
+- Maltose (4.382 mM): I have maltose transporters
+- CO₂ (59.3 mM): Available but I'm heterotrophic; CO₂ is primarily a product, not a primary carbon source
+
+**Nitrogen sources:**
+- Ammonium (10.52 mM): Direct uptake via standard transporters
+- Amino acids themselves provide nitrogen; arginine, proline, glutamine, etc. are rich nitrogen sources
+
+**Fermentation products I produce:**
+As a saccharolytic/proteolytic Bacteroides, I typically produce: acetate, propionate, formate, succinate, and sometimes lactate and butyrate from mixed substrate fermentation.
+
+**Growth calculation:**
+- Growth requires ~42 mmol C/gDW and ~10 mmol N/gDW
+- At realistic uptake rates (5-15 mmol/gDW/h for mixed substrates in late batch), I expect modest growth: ~0.2-0.4 /h
+- With 4 hours left and nutrients still present, I should maintain measurable growth
+
+**Strategy:**
+I will prioritize:
+1. **Amino acids** (arginine, proline, cysteine, serine) as dual carbon/nitrogen sources—these are protein precursors and readily metabolized
+2. **Acetate** as a reliable fermentation substrate
+3. **myo-inositol** and **maltose** as carbohydrate backups
+4. **Ammonium** for nitrogen assimilation
+
+I'll avoid over-committing uptake (mass balance risk in a closed system).
+
+**Carbon audit for proposed fluxes:**
+- Uptake: arg (2.5) + pro (2.0) + cys (1.0) + ser (1.0) + ac (3.0) + inost (2.0) + malt (1.5) = ~12.5 mmol C/gDW/h
+- Growth at 0.30 /h consumes: 0.30 × 42 = 12.6 mmol C/gDW/h
+- Secretion (acetate overflow, formate, CO₂): ~2.5 mmol C/gDW/h
+- Total C out: 12.6 + 2.5 = 15.1 mmol C/gDW/h
+- This requires ~15 mmol C in; I'm proposing ~12.5 in amino acids + acetate. Adjust upward slightly: increase acetate uptake to 4.0.
+
+**Revised carbon in:** 2.5 + 2.0 + 1.0 + 1.0 + 4.0 + 2.0 + 1.5 = 14 mmol C/gDW/h → supports ~0.28 /h growth + ~2 mmol overflow.
+
+**Nitrogen audit:**
+- Uptake: arg (2.5 mmol, ~1 N), pro (2.0, ~1 N), cys (1.0, ~1 N), ser (1.0, ~1 N), nh4 (2.0) = ~6 mmol N/gDW/h
+- Growth at 0.28 /h requires: 0.28 × 10 = 2.8 mmol N/gDW/h
+- Residual: 6 − 2.8 = 3.2 mmol N released (as nh4 or amino compounds)
+- This is feasible.
+
+**Growth rate:** 0.28 /h is conservative and realistic for late-stage batch growth on mixed amino acid/organic acid substrates.
+
+---
+
+```json
+{
+  "fluxes": {
+    "arg__L": -2.5,
+    "pro__L": -2.0,
+    "cys__L": -1.0,
+    "ser__L": -1.0,
+    "ac": -4.0,
+    "inost": -2.0,
+    "malt": -1.5,
+    "nh4": -2.0,
+    "co2": 2.5,
+    "for": 1.0,
+    "ac": 1.5
+  },
+  "growth_rate": 0.28,
+  "rationale": "Late-stage batch: glucose and lactate exhausted. Switching to amino acids (arg, pro, cys, ser) as dual C/N sources plus acetate and inositol fermentation. Produces CO₂, formate, and acetate overflow. Carbon and nitrogen budgets balance for sustained but declining growth.",
+  "confidence": 0.68
+}
+```

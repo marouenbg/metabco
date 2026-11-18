@@ -1,0 +1,48 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 6,
+  "growth_claimed": 0.311,
+  "growth_allowed": 0.311,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: gln__L",
+   "uptake_exceeds_pool: gly",
+   "uptake_exceeds_pool: nh4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake gln__L to pool limit -1.97",
+   "clipped uptake gly to pool limit -0.694",
+   "clipped uptake nh4 to pool limit -0.551",
+   "P: credited 0.424 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Nitrogen-limited recovery: deaminating amino acids (Gln, Ser, Ala, Gly, Cys) to recover 12.45 mmol N/gDW/h, supporting growth of 0.311 /h. Fermenting acetate and propionate (abundant, 109.77 mM combin",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "ac": -12.0,
+   "ppa": -8.0,
+   "for": 1.5,
+   "co2": 3.0,
+   "gln__L": -3.0,
+   "ser__L": -2.0,
+   "ala__L": -1.5,
+   "gly": -1.2,
+   "cys__L": -1.0,
+   "nh4": -0.75
+  },
+  "fluxes_applied": {
+   "ac": -12.0,
+   "ppa": -8.0,
+   "for": 1.5,
+   "co2": 3.0,
+   "gln__L": -1.9714,
+   "ser__L": -2.0,
+   "ala__L": -1.5,
+   "gly": -0.6939,
+   "cys__L": -1.0,
+   "nh4": -0.5511,
+   "pi": -0.424
+  }
+ }
+]

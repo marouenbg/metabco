@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 11,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.3,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: cys__L",
+   "uptake_exceeds_pool: gln__L",
+   "uptake_exceeds_pool: val__L"
+  ],
+  "warnings": [
+   "no_transporter: h2s"
+  ],
+  "repairs": [
+   "clipped uptake cys__L to pool limit -1.15",
+   "clipped uptake gln__L to pool limit -0.712",
+   "clipped uptake val__L to pool limit -0.663",
+   "P: credited 0.213 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Balanced carbon and nitrogen uptake with production of fermentation products to support moderate growth.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "for": -2.0,
+   "h2s": 1.0,
+   "co2": 1.0,
+   "cys__L": -2.0,
+   "gln__L": -1.0,
+   "val__L": -1.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "for": -2.0,
+   "h2s": 1.0,
+   "co2": 1.0,
+   "cys__L": -1.1466,
+   "gln__L": -0.7116,
+   "val__L": -0.6631,
+   "pi": -0.2127
+  }
+ }
+]

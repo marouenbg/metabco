@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 0,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=25 out=36 biomass=30.4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.682 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.165 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 4.23 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.75 -> 0",
+   "C: secretions scaled by 0.729"
+  ],
+  "rationale": "I will take up carbon dioxide, L-lactate, and ammonium to support growth. I will produce lactate, formate, and succinate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "co2": -10.0,
+   "lac__L": -5.0,
+   "nh4": -2.0,
+   "lac__D": 10.0,
+   "for": 2.0,
+   "succ": 1.0
+  },
+  "fluxes_applied": {
+   "co2": -10.0,
+   "lac__L": -5.0,
+   "nh4": -6.2277,
+   "lac__D": 7.2917,
+   "for": 1.4583,
+   "succ": 0.7292,
+   "pi": -0.6819,
+   "so4": -0.1646
+  }
+ }
+]

@@ -1,0 +1,96 @@
+# Metabolic decision for Parabacteroides johnsonii DSM 18315, turn 8
+
+## Analysis of available resources and constraints
+
+**Carbon sources I can access:**
+- D-glucose (8.344 mM): primary preferred substrate; I have active glucose transporters
+- L-arabinose (16.18 mM): fermentable pentose sugar; I can transport this
+- L-lactate (17.81 mM): I can consume this via lactate oxidation pathways
+- Acetate (12.94 mM): I can use this as a carbon source, though less preferred than sugars
+- Propionate (8.241 mM): I can metabolize this
+- Succinate (4.766 mM): I can use this
+- Maltose (4.382 mM): I have maltose transporters
+
+**Nitrogen sources:**
+- L-arginine (17.22 mM): excellent nitrogen source; I can ferment this
+- Ammonium (6.987 mM): available but limited
+- L-cysteine (8.387 mM): nitrogen source
+- L-serine (6.362 mM): nitrogen source
+- Other amino acids present but in lower quantities
+
+**What I cannot use:**
+- Nitrate: I lack nitrate reductase (anaerobic, and not encoded in my genome)
+- Hydrogen: I lack hydrogenase
+
+## Fermentation strategy
+
+As an obligate anaerobe, I ferment sugars and amino acids. My typical fermentation products are:
+- Acetate (primary)
+- Propionate (secondary)
+- Succinate
+- CO₂
+- Lactate (under certain conditions)
+- Formate (trace)
+
+## Current status assessment
+
+At t=32h (turn 8 of 48h total), I have 16 hours remaining. I'm at 0.448 gDW/L with steady growth at 0.25 /h over the last three turns. My recent pattern shows:
+- Consuming ~10 mmol/gDW/h of glucose when available
+- Consuming ~3 mmol/gDW/h of arabinose
+- Consuming ~2.5-3 mmol/gDW/h of arginine for nitrogen
+- Producing acetate, propionate, succinate, CO₂
+
+## Resource depletion analysis
+
+Glucose is nearly depleted (8.344 mM). At my current consumption of ~10 mmol/gDW/h and biomass of 0.448 gDW/L, I can consume ~3.8 mmol total remaining glucose. I need to transition to alternative carbon sources.
+
+L-arabinose is abundant (16.18 mM) and I can ferment it. L-lactate is also abundant (17.81 mM). I should shift to mixed fermentation of arabinose and lactate, supplemented by arginine fermentation.
+
+## Growth rate calculation
+
+For sustainable growth with remaining resources:
+- Arabinose uptake: 8 mmol/gDW/h (primary sugar)
+- Lactate uptake: 4 mmol/gDW/h (secondary)
+- Arginine uptake: 2.5 mmol/gDW/h (nitrogen + carbon)
+- Glucose: 2 mmol/gDW/h (residual)
+
+Carbon balance:
+- Arabinose: 8 mmol × 5C = 40 mmol C in
+- Lactate: 4 mmol × 2C = 8 mmol C in
+- Arginine: 2.5 mmol × 6C = 15 mmol C in
+- Glucose: 2 mmol × 6C = 12 mmol C in
+- **Total: 75 mmol C in**
+
+Growth requirement: 42 mmol C per gDW
+Fermentation products (estimated ~50% carbon recovery as products): 75 × 0.50 = 37.5 mmol C out
+
+Net carbon for growth: 75 - 37.5 = 37.5 mmol C available
+**Growth rate: 37.5 / 42 ≈ 0.22 /h**
+
+Nitrogen check:
+- Arginine: 2.5 mmol/gDW/h provides 2 N atoms = 5 mmol N
+- Growth needs: 10 mmol N per gDW at 0.22 /h = 2.2 mmol N needed
+- Sufficient nitrogen available ✓
+
+## Metabolite fluxes
+
+Based on fermentation stoichiometry for mixed substrate fermentation:
+
+```json
+{
+  "fluxes": {
+    "glc__D": -2.0,
+    "arab__L": -8.0,
+    "lac__L": -4.0,
+    "arg__L": -2.5,
+    "ac": +6.5,
+    "ppa": +3.5,
+    "succ": +2.0,
+    "co2": +5.0,
+    "nh4": -0.5
+  },
+  "growth_rate": 0.22,
+  "rationale": "Transitioning from glucose-limited phase to mixed arabinose-lactate fermentation. Glucose nearly depleted (8.3 mM); shifting to abundant pentose and lactate. Arginine provides nitrogen and additional carbon. Fermentation yields acetate, propionate, and succinate as primary products. Conservative growth rate reflects resource limitation in final 16 hours of batch culture.",
+  "confidence": 0.68
+}
+```

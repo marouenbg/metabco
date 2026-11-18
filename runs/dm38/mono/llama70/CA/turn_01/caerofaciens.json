@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -4.0,
+  "arg__L": -2.0,
+  "ac": 2.0,
+  "lac__L": 1.5,
+  "for": 1.0
+ },
+ "growth_rate": 0.171,
+ "rationale": "D-glucose and L-arginine uptake support fermentation and growth",
+ "confidence": 0.8
+}

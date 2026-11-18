@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "arg__L": -2.0,
+  "ac": 3.0,
+  "for": 1.0,
+  "lac__L": 1.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Prioritizing glucose as a carbon source, arginine for nitrogen, and producing acetate, formate, and lactate as fermentation products under anaerobic conditions.",
+ "confidence": 0.7
+}

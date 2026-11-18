@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": 5.0,
+  "for": 5.0,
+  "h2s": -5.0,
+  "ac": 5.0,
+  "h2": 5.0,
+  "co2": 10.0,
+  "nh4": -5.75
+ },
+ "growth_rate": 0.5,
+ "rationale": "I will take up glucose, lactate, formate, and hydrogen sulfide to support my growth. I will release sulfate, lactate, formate, and acetate as byproducts of my metabolism.",
+ "confidence": 0.8
+}

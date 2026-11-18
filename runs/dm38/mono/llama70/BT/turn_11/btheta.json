@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "ppa": -2.5,
+  "succ": -1.0,
+  "leu__L": -1.0,
+  "tyr__L": -0.5,
+  "cys__L": -0.5,
+  "co2": 2.0
+ },
+ "growth_rate": 0.35,
+ "rationale": "Optimal carbon and nitrogen uptake for growth",
+ "confidence": 0.8
+}

@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 10,
+  "growth_claimed": 0.23,
+  "growth_allowed": 0.23,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.214 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Utilizing acetate and butyrate as carbon sources, and L-cysteine and L-proline as nitrogen sources, to produce butyrate and acetate as fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "but": -2.0,
+   "cys__L": -1.0,
+   "pro__L": -1.0,
+   "co2": 1.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "but": -2.0,
+   "cys__L": -1.0,
+   "pro__L": -1.0,
+   "co2": 1.0,
+   "h2": 1.0,
+   "pi": -0.2141
+  }
+ }
+]

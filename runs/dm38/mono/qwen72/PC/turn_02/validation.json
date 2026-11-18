@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 2,
+  "growth_claimed": 0.067,
+  "growth_allowed": 0.067,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0913 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0175 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Maximizing use of abundant carbon and nitrogen sources to support growth while producing fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": -5.0,
+   "arg__L": -2.0,
+   "nh4": -2.0,
+   "ac": 3.0,
+   "ppa": 2.0,
+   "for": 1.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": -5.0,
+   "arg__L": -2.0,
+   "nh4": -2.0,
+   "ac": 3.0,
+   "ppa": 2.0,
+   "for": 1.0,
+   "co2": 1.0,
+   "pi": -0.0913,
+   "so4": -0.0175
+  }
+ }
+]

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "h2s": -10.0,
+  "co2": -10.0,
+  "ac": 10.0,
+  "for": 10.0,
+  "lac__L": 10.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing hydrogen sulfide and carbon dioxide to support growth, while releasing acetate, formate, and lactate as fermentation products.",
+ "confidence": 0.9
+}

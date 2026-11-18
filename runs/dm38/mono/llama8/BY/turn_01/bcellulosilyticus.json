@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": 28.26,
+  "glc__D": 8.0,
+  "arab__L": 6.0,
+  "nh4": 4.0,
+  "so4": 2.0,
+  "pi": 1.0,
+  "ac": 21.31
+ },
+ "growth_rate": 0.7,
+ "rationale": "Based on my growth requirements and the available nutrients, I'll choose a growth rate of 0.7 /h and take up L-lactate, glucose, arabinose, ammonium, sulfate, and hydrogenphosphate to produce hydrogen gas and hydrogen sulfide. I'll also secrete lactate and acetate as fermentation products.",
+ "confidence": 0.9
+}

@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -4.0,
+  "ac": 5.0,
+  "lac__L": 3.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Continued glucose consumption and ammonium uptake, producing acetate and lactate as fermentation products, supporting moderate growth.",
+ "confidence": 0.7
+}

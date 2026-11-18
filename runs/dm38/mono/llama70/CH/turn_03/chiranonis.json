@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "arg__L": -4.0,
+  "ac": 4.0,
+  "co2": 4.0
+ },
+ "growth_rate": 0.263,
+ "rationale": "Balanced carbon and nitrogen uptake to support growth, with moderate confidence in the metabolic strategy",
+ "confidence": 0.6
+}

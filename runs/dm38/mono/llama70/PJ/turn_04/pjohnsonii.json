@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "ppa": 3.0,
+  "nh4": -1.5
+ },
+ "growth_rate": 0.45,
+ "rationale": "Glucose and lactate as primary carbon sources, arginine as nitrogen source, producing acetate and propionate",
+ "confidence": 0.8
+}

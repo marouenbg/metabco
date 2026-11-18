@@ -1,0 +1,48 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 6,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": false,
+  "violations": [
+   "uptake_absent: lac__D"
+  ],
+  "warnings": [],
+  "repairs": [
+   "zeroed uptake of absent lac__D",
+   "P: credited 0.657 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Based on my metabolic capabilities and the available nutrients, I will consume D-glucose, maltose, and other carbon sources to support growth. I will produce acetate, formate, and hydrogen sulfide as ",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "lac__D": -10.0,
+   "h2s": 10.0,
+   "co2": 10.0,
+   "nh4": -5.75,
+   "h2": 10.0,
+   "ac": 10.0,
+   "for": 10.0,
+   "cys__L": -5.0,
+   "ser__L": -5.0,
+   "gly": -5.0,
+   "so4": -10.07
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "lac__D": 0.0,
+   "h2s": 10.0,
+   "co2": 10.0,
+   "nh4": -5.75,
+   "h2": 10.0,
+   "ac": 10.0,
+   "for": 10.0,
+   "cys__L": -5.0,
+   "ser__L": -5.0,
+   "gly": -5.0,
+   "so4": -10.07,
+   "pi": -0.6566
+  }
+ }
+]

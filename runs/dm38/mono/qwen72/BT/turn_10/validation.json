@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 10,
+  "growth_claimed": 0.131,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=16 out=24 biomass=5.31"
+  ],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: etoh"
+  ],
+  "repairs": [
+   "P: credited 0.119 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.131 -> 0",
+   "C: secretions scaled by 0.7"
+  ],
+  "rationale": "Utilizing abundant acetate, butyrate, and propionate for carbon and glycine, cysteine, and phenylalanine for nitrogen. This supports a growth rate of 0.131 /h, similar to previous turns.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": 3.0,
+   "but": 2.0,
+   "ppa": 1.5,
+   "gly": -2.0,
+   "cys__L": -1.0,
+   "phe__L": -1.0,
+   "etoh": 1.0,
+   "lac__L": 1.0,
+   "for": 0.5
+  },
+  "fluxes_applied": {
+   "ac": 2.1,
+   "but": 1.4,
+   "ppa": 1.05,
+   "gly": -2.0,
+   "cys__L": -1.0,
+   "phe__L": -1.0,
+   "etoh": 0.7,
+   "lac__L": 0.7,
+   "for": 0.35,
+   "pi": -0.1191
+  }
+ }
+]

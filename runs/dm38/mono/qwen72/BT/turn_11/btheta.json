@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "ac": 2.0,
+  "but": 1.0,
+  "ppa": 0.0,
+  "lac__L": 0.0,
+  "cys__L": -1.0,
+  "tyr__L": -1.0,
+  "phe__L": -1.0,
+  "etoh": 0.5,
+  "for": 0.5
+ },
+ "growth_rate": 0.15,
+ "rationale": "Balanced carbon and nitrogen uptake to support growth and fermentation product release.",
+ "confidence": 0.9
+}

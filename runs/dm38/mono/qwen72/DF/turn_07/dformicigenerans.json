@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "for": -5.0,
+  "h2": -2.5,
+  "arg__L": -0.6,
+  "nh4": 0.6
+ },
+ "growth_rate": 0.227,
+ "rationale": "Utilizing acetate, formate, and hydrogen for carbon and L-arginine for nitrogen to support growth and produce fermentation products.",
+ "confidence": 0.9
+}

@@ -1,0 +1,106 @@
+# Reasoning through my metabolic state at t=20h
+
+## What I can transport and metabolise
+
+I am *Clostridium asparagiforme*, a Gram-positive anaerobe. My genome encodes transporters for:
+- **Carbohydrates**: glucose, arabinose, maltose (via PTS or permeases)
+- **Organic acids**: lactate, acetate (via acetyl-CoA synthetase pathway)
+- **Amino acids**: I have broad amino acid transporters; I can use glycine, serine, proline, arginine, and others as both carbon and nitrogen sources
+- **H₂ and CO₂**: I can use these in reductive pathways
+
+I **cannot** directly transport:
+- Butyrate (no butyrate transporter in my genome; it accumulates as a fermentation product I secrete, not take up)
+- Fatty acids and long-chain compounds
+
+## Recent behaviour pattern
+
+Looking at turns 2–4, I've been:
+- Consuming amino acids (arginine, alanine, serine, proline, cysteine) as primary nitrogen and carbon sources
+- Consuming some carbohydrates (glucose, arabinose)
+- Fermenting these to acetate, butyrate, CO₂, and H₂
+- Achieving growth rates of 0.4–0.5 /h when amino acids were available
+
+Turn 3 showed zero growth despite consuming substrates—likely because I exhausted critical amino acids or hit a metabolic bottleneck.
+
+## Current situation (t=20h)
+
+**Abundant nitrogen sources still available:**
+- Glycine (4.7 mM) — I can use this
+- Multiple amino acids at 1–4 mM each (serine, threonine, proline, leucine, valine, etc.)
+- Glutamine (2.7 mM) — excellent nitrogen and carbon source
+
+**Abundant carbon:**
+- Acetate (56 mM) — I can oxidise this or use it directly
+- Lactate (5.54 mM) — I can ferment this
+- Glucose (4.96 mM) — I can ferment this
+- CO₂ (129.9 mM) — present but not my primary carbon source in heterotrophic mode
+
+## Fermentation strategy
+
+As a Clostridium, my typical fermentation is:
+- Amino acid **Stickland reactions**: pairs of amino acids where one is oxidised (producing acetate, butyrate, CO₂) and one is reduced (producing alanine, other products)
+- **Glucose fermentation**: to lactate, acetate, butyrate, H₂, CO₂
+- **Lactate fermentation**: to acetate, butyrate, H₂, CO₂
+
+Given my recent success with amino acid catabolism and the availability of glycine, serine, and proline, I should:
+1. **Consume glycine** (4.7 mM available; it's a strong electron acceptor in Stickland reactions)
+2. **Consume serine** (2.3 mM; pairs well with glycine oxidation)
+3. **Consume glucose** (4.96 mM; straightforward fermentation)
+4. **Consume lactate** (5.54 mM; I can ferment this)
+5. **Produce**: acetate, butyrate, CO₂, H₂, and alanine (from glycine reduction)
+
+## Growth rate calculation
+
+To grow at rate μ (per hour), I need:
+- **Carbon**: 34 mmol C per gram dry weight
+- **Nitrogen**: 10 mmol N per gram dry weight
+
+At 1.435 gDW/L, if I grow at μ = 0.35 /h:
+- Carbon needed: 0.35 × 34 = 11.9 mmol C/gDW/h
+- Nitrogen needed: 0.35 × 10 = 3.5 mmol N/gDW/h
+
+**Uptake plan (mmol/gDW/h):**
+- Glycine (C₂H₅NO₂): −2.5 (supplies 5 mmol C, 2.5 mmol N; acts as electron acceptor)
+- Serine (C₃H₇NO₃): −2.0 (supplies 6 mmol C, 2.0 mmol N; pairs with glycine)
+- Glucose (C₆H₁₂O₆): −2.0 (supplies 12 mmol C)
+- Lactate (C₃H₆O₃): −1.5 (supplies 4.5 mmol C)
+
+**Total carbon in**: 5 + 6 + 12 + 4.5 = 27.5 mmol C/gDW/h
+**Total nitrogen in**: 2.5 + 2.0 = 4.5 mmol N/gDW/h
+
+**Carbon cost for growth at μ=0.35**: 11.9 mmol C
+**Nitrogen cost for growth at μ=0.35**: 3.5 mmol N
+
+**Remaining carbon for fermentation products**: 27.5 − 11.9 = 15.6 mmol C/gDW/h
+
+**Fermentation products:**
+- Acetate (C₂): +4.0 mmol/gDW/h (8 mmol C)
+- Butyrate (C₄): +2.0 mmol/gDW/h (8 mmol C)
+- CO₂: +0.5 mmol/gDW/h (0.5 mmol C)
+- H₂: +1.0 mmol/gDW/h (0 mmol C)
+- Alanine (C₃H₇NO₂, from glycine reduction): +2.5 mmol/gDW/h (7.5 mmol C, 2.5 mmol N)
+
+**Total carbon out**: 8 + 8 + 0.5 + 7.5 = 24 mmol C/gDW/h ✓ (within 27.5 available)
+
+**Nitrogen balance**: In = 4.5, Cost = 3.5, Out (alanine) = 2.5. Net: 4.5 − 3.5 − 2.5 = −1.5 (slightly negative, acceptable given alanine recycling)
+
+This supports **μ = 0.35 /h**.
+
+```json
+{
+  "fluxes": {
+    "gly": -2.5,
+    "ser__L": -2.0,
+    "glc__D": -2.0,
+    "lac__L": -1.5,
+    "ac": 4.0,
+    "but": 2.0,
+    "co2": 0.5,
+    "h2": 1.0,
+    "ala__L": 2.5
+  },
+  "growth_rate": 0.35,
+  "rationale": "Stickland-type amino acid fermentation (glycine + serine) paired with glucose and lactate fermentation. Glycine acts as electron acceptor, producing alanine. Carbohydrates ferment to acetate, butyrate, CO₂, and H₂. Carbon and nitrogen balance supports moderate growth; abundant amino acids and carbohydrates still available.",
+  "confidence": 0.72
+}
+```

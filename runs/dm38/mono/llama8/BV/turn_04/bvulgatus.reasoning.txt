@@ -1,0 +1,54 @@
+The carbon and nitrogen sources I can actually transport are L-lactate (lac__L), D-glucose (glc__D), L-arginine (arg__L), L-arabinose (arab__L), Ammonium (nh4), L-cysteine (cys__L), L-serine (ser__L), myo-inositol (inost), L-proline (pro__L), L-alanine (ala__L), Glycine (gly), L-phenylalanine (phe__L), Maltose (malt), L-leucine (leu__L), L-tyrosine (tyr__L), L-valine (val__L), L-glutamine (gln__L), L-asparagine (asn__L), L-lysine (lys__L), L-threonine (thr__L), L-isoleucine (ile__L), L-histidine (his__L), L-methionine (met__L), L-tryptophan (trp__L), L-glutamate (glu__L), L-aspartate (asp__L), Acetate (ac), Butyrate (but), Formate (for), Succinate (succ), Hydrogen (h2), and Hydrogen sulfide (h2s). However, I can only use transporters my genome encodes, and Bacteroides vulgatus ATCC 8482's genome encodes transporters for L-lactate (lac__L), D-glucose (glc__D), Ammonium (nh4), L-cysteine (cys__L), L-serine (ser__L), myo-inositol (inost), L-proline (pro__L), L-alanine (ala__L), Glycine (gly), Maltose (malt), and Acetate (ac).
+
+This species is known to produce L-lactate (lac__L), Formate (for), Succinate (succ), Acetate (ac), Butyrate (but), Hydrogen (h2), and Hydrogen sulfide (h2s) as fermentation products.
+
+To derive the growth rate my chosen uptake supports, I will use the rough estimate that growth costs carbon and nitrogen. I can take up 47.53 mmol/L of Carbon dioxide (co2) and 8.999 mmol/L of Ammonium (nh4). The biomass cost is 41 mmol of carbon and 8 mmol of nitrogen per gram of dry weight produced. Let's assume I will take up all the available carbon and nitrogen sources. The total carbon uptake is 47.53 mmol/L of Carbon dioxide (co2) + 28.27 mmol/L of L-lactate (lac__L) + 24.78 mmol/L of D-glucose (glc__D) = 100.58 mmol/L. The total nitrogen uptake is 8.999 mmol/L of Ammonium (nh4). The carbon and nitrogen balances are 100.58 mmol/L (carbon in) - 41 mmol/gDW (carbon out) - 8 mmol/gDW (nitrogen out) = 51.58 mmol/gDW (carbon surplus). The growth rate is 0.000 /h + 51.58 mmol/gDW / (41 mmol/gDW /h) = 1.26 /h.
+
+Audit: Carbon in (47.53 mmol/L + 28.27 mmol/L + 24.78 mmol/L) = 100.58 mmol/L. Carbon out (41 mmol/gDW) = 41 mmol/gDW. Carbon surplus (51.58 mmol/gDW) > Carbon out (41 mmol/gDW), which means I can support the growth rate of 1.26 /h.
+
+{
+  "fluxes": {
+    "co2": -47.53,
+    "lac__L": -28.27,
+    "glc__D": -24.78,
+    "nh4": -8.999,
+    "lac__D": 0,
+    "lac__L": 0,
+    "for": 0,
+    "succ": 0,
+    "ac": 0,
+    "but": 0,
+    "h2": 0,
+    "h2s": 0,
+    "co2": 0,
+    "h2": 0,
+    "h2s": 0,
+    "nh4": 0,
+    "inost": 0,
+    "pro__L": 0,
+    "ala__L": 0,
+    "gly": 0,
+    "phe__L": 0,
+    "malt": 0,
+    "leu__L": 0,
+    "tyr__L": 0,
+    "val__L": 0,
+    "gln__L": 0,
+    "asn__L": 0,
+    "lys__L": 0,
+    "thr__L": 0,
+    "ile__L": 0,
+    "his__L": 0,
+    "met__L": 0,
+    "trp__L": 0,
+    "glu__L": 0,
+    "asp__L": 0,
+    "cys__L": 0,
+    "ser__L": 0,
+    "arg__L": 0,
+    "arab__L": 0,
+    "cbl1": 0
+  },
+  "growth_rate": 1.26,
+  "rationale": "I chose to take up all the available carbon and nitrogen sources. I can support the growth rate of 1.26 /h.",
+  "confidence": 1.0

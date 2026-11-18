@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -4.0,
+  "lac__L": -2.0,
+  "nh4": -1.02,
+  "ac": 4.0,
+  "for": 2.0,
+  "pi": -0.12
+ },
+ "growth_rate": 0.0,
+ "rationale": "I took up D-glucose, L-lactate, and Ammonium, and released acetate, formate, and hydrogenphosphate. I calculated a growth rate of 0.000 /h, which means I will not grow in this interval. The carbon and nitrogen fluxes are balanced.",
+ "confidence": 0.8
+}

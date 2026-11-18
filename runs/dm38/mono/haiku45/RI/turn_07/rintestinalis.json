@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "but": -5.0,
+  "ac": -4.0,
+  "arg__L": -2.5,
+  "cys__L": -1.0,
+  "ser__L": -0.8,
+  "inost": -1.5,
+  "co2": 8.0,
+  "for": 0.4
+ },
+ "products": {
+  "but": 5.0,
+  "ac": 3.5
+ },
+ "growth_rate": 0.5,
+ "rationale": "I consume butyrate and acetate via \u03b2-oxidation, paired with amino acid catabolism (arginine, cysteine, serine) for nitrogen and additional carbon. Inositol provides fermentable hexose. Fermentation yields butyrate, acetate, and CO\u2082 as end products. Carbon balance: 57.4 in \u2212 35.4 products = 22 mmol C for biomass at 38 mmol C/g = 0.58 /h; conservatively report 0.50 /h. Nitrogen: 6.8 mmol N in supports this growth rate.",
+ "confidence": 0.72
+}

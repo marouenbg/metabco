@@ -1,0 +1,495 @@
+{
+ "note": "Minimal pan-roster gap fill: reactions absent from a stuck reconstruction but present in sibling gut anaerobes, pruned to the smallest set that restores growth on DM38. Clark measured all 25 species growing in this medium.",
+ "per_species": {
+  "DF": {
+   "species_id": "dformicigenerans",
+   "added": [
+    "F6PE4PL"
+   ]
+  },
+  "CG": {
+   "species_id": "casparagiforme",
+   "added": [
+    "PGMT"
+   ]
+  },
+  "BA": {
+   "species_id": "badolescentis",
+   "added": [
+    "KAS14",
+    "ACOATA",
+    "C180SN"
+   ]
+  },
+  "BC": {
+   "species_id": "bcaccae",
+   "added": [
+    "UAGDP",
+    "G1PACT"
+   ]
+  },
+  "EL": {
+   "species_id": "elenta",
+   "added": [
+    "GRTT",
+    "DMATT",
+    "sink_gthrd(c)",
+    "r0392",
+    "CAt4i",
+    "SPTc",
+    "TRSARr",
+    "HPYRI"
+   ]
+  },
+  "DP": {
+   "species_id": "dpiger",
+   "added": [
+    "KDOPP",
+    "GLYDy",
+    "SPTc"
+   ]
+  }
+ },
+ "reactions": {
+  "ACOATA": {
+   "stoich": {
+    "ACP[c]": -1.0,
+    "accoa[c]": -1.0,
+    "acACP[c]": 1.0,
+    "coa[c]": 1.0
+   },
+   "bounds": [
+    -1000.0,
+    1000.0
+   ],
+   "name": "Acetyl Coenzyme A Acp Transacylase"
+  },
+  "DMATT": {
+   "stoich": {
+    "dmpp[c]": -1.0,
+    "ipdp[c]": -1.0,
+    "grdp[c]": 1.0,
+    "ppi[c]": 1.0
+   },
+   "bounds": [
+    0.0,
+    1000.0
+   ],
+   "name": "Dimethylallyltranstransferase"
+  },
+  "G1PACT": {
+   "stoich": {
+    "accoa[c]": -1.0,
+    "gam1p[c]": -1.0,
+    "acgam1p[c]": 1.0,
+    "coa[c]": 1.0,
+    "h[c]": 1.0
+   },
+   "bounds": [
+    0.0,
+    1000.0
+   ],
+   "name": "glucosamine-1-phosphate N-acetyltransferase"
+  },
+  "GRTT": {
+   "stoich": {
+    "grdp[c]": -1.0,
+    "ipdp[c]": -1.0,
+    "frdp[c]": 1.0,
+    "ppi[c]": 1.0
+   },
+   "bounds": [
+    0.0,
+    1000.0
+   ],
+   "name": "Geranyltranstransferase"
+  },
+  "KAS14": {
+   "stoich": {
+    "acACP[c]": -1.0,
+    "h[c]": -1.0,
+    "malACP[c]": -1.0,
+    "ACP[c]": 1.0,
+    "actACP[c]": 1.0,
+    "co2[c]": 1.0
+   },
+   "bounds": [
+    0.0,
+    1000.0
+   ],
+   "name": "beta-ketoacyl-ACP synthase"
+  },
+  "PGMT": {
+   "stoich": {
+    "g1p[c]": -1.0,
+    "g6p[c]": 1.0
+   },
+   "bounds": [
+    -1000.0,
+    1000.0
+   ],
+   "name": "Phosphoglucomutase"
+  },
+  "UAGDP": {
+   "stoich": {
+    "acgam1p[c]": -1.0,
+    "h[c]": -1.0,
+    "utp[c]": -1.0,
+    "ppi[c]": 1.0,
+    "uacgam[c]": 1.0
+   },
+   "bounds": [
+    0.0,
+    1000.0
+   ],
+   "name": "UDP-N-Acetylglucosamine Diphosphorylase"
+  },
+  "r0392": {
+   "stoich": {
+    "glyald[c]": -1.0,
+    "h2o[c]": -1.0,
+    "nad[c]": -1.0,
+    "glyc_R[c]": 1.0,
+    "h[c]": 2.0,
+    "nadh[c]": 1.0
+   },
+   "bounds": [
+    -1000.0,
+    1000.0
+   ],
+   "name": "D-Glyceraldehyde:NAD+ Oxidoreductase Ec:1.2.1.3"
+  },
+  "CAt4i": {
+   "stoich": {
+    "ca2[e]": -1.0,
+    "h[c]": -1.0,
+    "ca2[c]": 1.0,
+    "h[e]": 1.0
+   },
+   "bounds": [
+    0.0,
+    1000.0
+   ],
+   "name": "Calcium transport via proton antiport, irreversible"
+  },
+  "sink_gthrd(c)": {
+   "stoich": {
+    "gthrd[c]": -1.0
+   },
+   "bounds": [
+    -1.0,
+    1000.0
+   ],
+   "name": "sink reaction for reduced glutathione"
+  },
+  "F6PE4PL": {
+   "stoich": {
+    "f6p[c]": -1.0,
+    "pi[c]": -1.0,
+    "actp[c]": 1.0,
+    "e4p[c]": 1.0,
+    "h2o[c]": 1.0
+   },
+   "bounds": [
+    0.0,
+    1000.0
+   ],
+   "name": "D-Fructose-6-phosphate D-erythrose-4-phosphate-lyase"
+  },
+  "SPTc": {
+   "stoich": {
+    "pyr[c]": -1.0,
+    "ser_L[c]": -1.0,
+    "ala_L[c]": 1.0,
+    "hpyr[c]": 1.0
+   },
+   "bounds": [
+    -1000.0,
+    1000.0
+   ],
+   "name": "serine-pyruvate aminotransferase"
+  },
+  "KDOPP": {
+   "stoich": {
+    "h2o[c]": -1.0,
+    "kdo8p[c]": -1.0,
+    "kdo[c]": 1.0,
+    "pi[c]": 1.0
+   },
+   "bounds": [
+    0.0,
+    1000.0
+   ],
+   "name": "3-deoxy-manno-octulosonate-8-phosphatase"
+  },
+  "C180SN": {
+   "stoich": {
+    "actACP[c]": -1.0,
+    "h[c]": -23.0,
+    "malACP[c]": -7.0,
+    "nadph[c]": -16.0,
+    "ACP[c]": 7.0,
+    "co2[c]": 7.0,
+    "h2o[c]": 8.0,
+    "nadp[c]": 16.0,
+    "ocdcaACP[c]": 1.0
+   },
+   "bounds": [
+    0.0,
+    1000.0
+   ],
+   "name": "Fatty acid biosynthesis (n-C18:0)"
+  },
+  "TRSARr": {
+   "stoich": {
+    "2h3oppan[c]": -1.0,
+    "h[c]": -1.0,
+    "nadh[c]": -1.0,
+    "glyc_R[c]": 1.0,
+    "nad[c]": 1.0
+   },
+   "bounds": [
+    -1000.0,
+    1000.0
+   ],
+   "name": "tartronate semialdehyde reductase"
+  },
+  "GLYDy": {
+   "stoich": {
+    "h[c]": -1.0,
+    "hpyr[c]": -1.0,
+    "nadph[c]": -1.0,
+    "glyc_R[c]": 1.0,
+    "nadp[c]": 1.0
+   },
+   "bounds": [
+    -1000.0,
+    1000.0
+   ],
+   "name": "Glycerate dehydrogenase (NADP)"
+  },
+  "HPYRI": {
+   "stoich": {
+    "hpyr[c]": -1.0,
+    "2h3oppan[c]": 1.0
+   },
+   "bounds": [
+    -1000.0,
+    1000.0
+   ],
+   "name": "hydroxypyruvate isomerase"
+  }
+ },
+ "metabolites": {
+  "h[c]": {
+   "formula": "H",
+   "charge": 1,
+   "name": "proton"
+  },
+  "ppi[c]": {
+   "formula": "HO7P2",
+   "charge": -3,
+   "name": "Diphosphate"
+  },
+  "h2o[c]": {
+   "formula": "H2O",
+   "charge": 0,
+   "name": "Water"
+  },
+  "e4p[c]": {
+   "formula": "C4H7O7P",
+   "charge": -2,
+   "name": "D-Erythrose 4-phosphate"
+  },
+  "ala_L[c]": {
+   "formula": "C3H7NO2",
+   "charge": 0,
+   "name": "L-alanine"
+  },
+  "coa[c]": {
+   "formula": "C21H32N7O16P3S",
+   "charge": -4,
+   "name": "Coenzyme A"
+  },
+  "gam1p[c]": {
+   "formula": "C6H13NO8P",
+   "charge": -1,
+   "name": "D-Glucosamine 1-phosphate"
+  },
+  "ca2[e]": {
+   "formula": "Ca",
+   "charge": 2,
+   "name": "calcium(2+)"
+  },
+  "nadh[c]": {
+   "formula": "C21H27N7O14P2",
+   "charge": -2,
+   "name": "Nicotinamide adenine dinucleotide - reduced"
+  },
+  "malACP[c]": {
+   "formula": "C14H22N2O10PRS",
+   "charge": -2,
+   "name": "Malonyl-[acyl-carrier protein]"
+  },
+  "g1p[c]": {
+   "formula": "C6H11O9P",
+   "charge": -2,
+   "name": "D-Glucose 1-phosphate"
+  },
+  "ocdcaACP[c]": {
+   "formula": "C29H55N2O8PRS",
+   "charge": -1,
+   "name": "Octadecanoyl-ACP (n-C18:0ACP)"
+  },
+  "glyc_R[c]": {
+   "formula": "C3H5O4",
+   "charge": -1,
+   "name": "D-glycerate"
+  },
+  "ipdp[c]": {
+   "formula": "C5H9O7P2",
+   "charge": -3,
+   "name": "Isopentenyl diphosphate"
+  },
+  "utp[c]": {
+   "formula": "C9H11N2O15P3",
+   "charge": -4,
+   "name": "UTP"
+  },
+  "kdo8p[c]": {
+   "formula": "C8H12O11P",
+   "charge": -3,
+   "name": "3-Deoxy-D-manno-octulosonate 8-phosphate"
+  },
+  "frdp[c]": {
+   "formula": "C15H25O7P2",
+   "charge": -3,
+   "name": "Farnesyl diphosphate"
+  },
+  "uacgam[c]": {
+   "formula": "C17H25N3O17P2",
+   "charge": -2,
+   "name": "UDP-N-acetyl-alpha-D-glucosamine(2-)"
+  },
+  "f6p[c]": {
+   "formula": "C6H11O9P",
+   "charge": -2,
+   "name": "D-Fructose 6-phosphate"
+  },
+  "actp[c]": {
+   "formula": "C2H3O5P",
+   "charge": -2,
+   "name": "Acetyl phosphate"
+  },
+  "ser_L[c]": {
+   "formula": "C3H7NO3",
+   "charge": 0,
+   "name": "L-serine"
+  },
+  "gthrd[c]": {
+   "formula": "C10H16N3O6S",
+   "charge": -1,
+   "name": "Reduced glutathione"
+  },
+  "acACP[c]": {
+   "formula": "C13H23N2O8PRS",
+   "charge": -1,
+   "name": "Acetyl-ACP"
+  },
+  "grdp[c]": {
+   "formula": "C10H17O7P2",
+   "charge": -3,
+   "name": "Geranyl diphosphate"
+  },
+  "nad[c]": {
+   "formula": "C21H26N7O14P2",
+   "charge": -1,
+   "name": "Nicotinamide adenine dinucleotide"
+  },
+  "acgam1p[c]": {
+   "formula": "C8H14NO9P",
+   "charge": -2,
+   "name": "N-Acetyl-D-glucosamine 1-phosphate"
+  },
+  "nadp[c]": {
+   "formula": "C21H25N7O17P3",
+   "charge": -3,
+   "name": "Nicotinamide adenine dinucleotide phosphate"
+  },
+  "actACP[c]": {
+   "formula": "C15H25N2O9PRS",
+   "charge": -1,
+   "name": "Acetoacetyl-ACP"
+  },
+  "dmpp[c]": {
+   "formula": "C5H9O7P2",
+   "charge": -3,
+   "name": "Dimethylallyl diphosphate"
+  },
+  "h[e]": {
+   "formula": "H",
+   "charge": 1,
+   "name": "proton"
+  },
+  "g6p[c]": {
+   "formula": "C6H11O9P",
+   "charge": -2,
+   "name": "D-Glucose 6-phosphate"
+  },
+  "kdo[c]": {
+   "formula": "C8H13O8",
+   "charge": -1,
+   "name": "3-Deoxy-D-manno-2-octulosonate"
+  },
+  "ca2[c]": {
+   "formula": "Ca",
+   "charge": 2,
+   "name": "calcium(2+)"
+  },
+  "nadph[c]": {
+   "formula": "C21H26N7O17P3",
+   "charge": -4,
+   "name": "Nicotinamide adenine dinucleotide phosphate - reduced"
+  },
+  "glyald[c]": {
+   "formula": "C3H6O3",
+   "charge": 0,
+   "name": "D-Glyceraldehyde"
+  },
+  "2h3oppan[c]": {
+   "formula": "C3H3O4",
+   "charge": -1,
+   "name": "2-Hydroxy-3-oxopropanoate"
+  },
+  "pyr[c]": {
+   "formula": "C3H3O3",
+   "charge": -1,
+   "name": "Pyruvate"
+  },
+  "ACP[c]": {
+   "formula": "C11H21N2O7PRS",
+   "charge": -1,
+   "name": "acyl carrier protein"
+  },
+  "accoa[c]": {
+   "formula": "C23H34N7O17P3S",
+   "charge": -4,
+   "name": "Acetyl-CoA"
+  },
+  "pi[c]": {
+   "formula": "HO4P",
+   "charge": -2,
+   "name": "hydrogenphosphate"
+  },
+  "hpyr[c]": {
+   "formula": "C3H3O4",
+   "charge": -1,
+   "name": "3-hydroxypyruvate"
+  },
+  "co2[c]": {
+   "formula": "CO2",
+   "charge": 0,
+   "name": "Carbon dioxide"
+  }
+ }
+}

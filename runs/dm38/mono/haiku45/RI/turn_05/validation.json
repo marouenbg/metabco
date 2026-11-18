@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 5,
+  "growth_claimed": 0.48,
+  "growth_allowed": 0.48,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0559 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.126 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Lactate depleted; switch to abundant L-arabinose (pentose fermentation) with arginine as nitrogen source. Ferment to butyrate, acetate, CO2, formate via mixed-acid pathway. Arabinose at 15 mmol/gDW/h ",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "arab__L": -15.0,
+   "arg__L": -2.5,
+   "pi": -0.48,
+   "but": 5.0,
+   "ac": 4.5,
+   "co2": 8.0,
+   "for": 0.5,
+   "h2": 0.2
+  },
+  "fluxes_applied": {
+   "arab__L": -15.0,
+   "arg__L": -2.5,
+   "pi": -0.5359,
+   "but": 5.0,
+   "ac": 4.5,
+   "co2": 8.0,
+   "for": 0.5,
+   "h2": 0.2,
+   "so4": -0.1256
+  }
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 7,
+  "growth_claimed": 0.368,
+  "growth_allowed": 0.368,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: malt",
+   "uptake_exceeds_pool: arg__L",
+   "uptake_exceeds_pool: nh4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake malt to pool limit -3.23",
+   "clipped uptake arg__L to pool limit -3.85",
+   "clipped uptake nh4 to pool limit -1.62",
+   "P: credited 0.428 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0963 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing maltose and acetate for carbon, L-arginine and ammonium for nitrogen, producing acetate, formate, and lactate as fermentation products to support a moderate growth rate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "malt": -4.0,
+   "ac": 5.0,
+   "arg__L": -5.0,
+   "nh4": -5.0,
+   "for": 2.0,
+   "lac__L": 2.0
+  },
+  "fluxes_applied": {
+   "malt": -3.2309,
+   "ac": 5.0,
+   "arg__L": -3.8528,
+   "nh4": -1.6199,
+   "for": 2.0,
+   "lac__L": 2.0,
+   "pi": -0.4279,
+   "so4": -0.0963
+  }
+ }
+]

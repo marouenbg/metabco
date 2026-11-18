@@ -1,0 +1,95 @@
+# Metabolic reasoning for Clostridium hiranonis TO-931 at t=32h
+
+## Assessment of my capabilities and situation
+
+I am a strict anaerobic Gram-positive bacterium. My genome encodes transporters for:
+- Carbohydrates (arabinose, maltose, and likely other sugars)
+- Amino acids (especially branched-chain and aromatic ones)
+- Organic acids (acetate, butyrate, formate, lactate)
+- Inorganic nitrogen (ammonium)
+- Gases (H₂, CO₂)
+
+I **cannot** use:
+- Nitrate (no3) — I lack nitrate reductase (strict anaerobe, not a denitrifier)
+- Sulfate (so4) — I lack sulfate reduction pathways
+- Most vitamins listed — these are cofactors, not energy sources
+
+## Current nutrient status
+
+At 32h into a 48h batch culture, I have consumed substantial substrate. Remaining supplies show:
+- **Abundant**: CO₂ (94.65), acetate (87.48), butyrate (27.91), formate (18.19)
+- **Moderate**: H₂ (21.81), arabinose (13.05), inositol (6.27)
+- **Limiting**: amino acids (all <5 mM), ammonium (2.456 mM)
+
+My recent history (turns 4–7) shows I've been fermenting carbohydrates and amino acids, producing acetate, formate, butyrate, and CO₂. I grew only at turn 4 (0.4 /h), then stalled—likely due to nitrogen limitation as ammonium was depleted.
+
+## Nitrogen constraint
+
+Ammonium is critically low (2.456 mM). To grow at rate μ gDW⁻¹h⁻¹, I need ~10 mmol N per gram of biomass. At 2.582 gDW/L, even modest growth (0.1 /h for 4h) would require:
+- ΔN = 2.582 × 0.1 × 4 × 10 ≈ 10.3 mmol/L
+
+I have only 2.456 mmol/L ammonium left. I can supplement with amino acids (each contains 1 N), but supplies are scarce. Total free amino acid N ≈ 60 mmol/L (rough sum), but most are in short supply individually.
+
+## Carbon balance and fermentation strategy
+
+I will ferment **arabinose** (13.05 mM, readily transportable) as my primary carbon source. Arabinose (C₅H₁₀O₅) ferments via the pentose phosphate pathway and glycolysis to acetate, formate, and CO₂ (mixed-acid fermentation typical of Clostridium).
+
+Stoichiometry (simplified):
+- C₅H₁₀O₅ → 2.5 acetate + 0.5 formate + 1.5 CO₂ + H₂O (approximate)
+- Or: C₅H₁₀O₅ → 1.67 acetate + 1.67 formate + 0.67 CO₂ (alternative balance)
+
+I'll also scavenge **amino acids** for both carbon and nitrogen. L-cysteine, L-proline, and L-leucine are good targets (they support both growth and fermentation).
+
+## Growth rate calculation
+
+With 2.456 mmol/L ammonium and ~60 mmol/L amino acid N:
+- Usable N ≈ 2.456 + ~10 (conservative estimate from amino acids) ≈ 12.5 mmol/L
+- At 2.582 gDW/L, this supports: Δbiomass = 12.5 / 10 ≈ 1.25 gDW/L over 4h
+- Growth rate: μ = ln(2.582 + 1.25) / ln(2.582) / 4 ≈ 0.08–0.12 /h
+
+I'll target **μ = 0.10 /h** (conservative, nitrogen-limited).
+
+## Carbon audit
+
+Uptake:
+- Arabinose: 8 mmol/gDW/h × 2.582 gDW/L = ~20.7 mmol/L/h → 82.8 mmol over 4h (C: 414 mmol)
+- Amino acids (N-source): ~3 mmol/gDW/h → ~12 mmol over 4h (C: ~60 mmol, rough)
+- **Total C in: ~474 mmol**
+
+Output:
+- Biomass: 1.25 gDW × 38 mmol C/gDW = 47.5 mmol C
+- Fermentation products (acetate, formate, CO₂): ~426.5 mmol C
+- **Total C out: ~474 mmol** ✓ Balanced
+
+## Fluxes (mmol/gDW/h)
+
+- **arab__L**: −8.0 (primary carbon/energy)
+- **leu__L**: −1.5 (amino acid, N-source)
+- **pro__L**: −1.0 (amino acid, N-source)
+- **cys__L**: −0.8 (amino acid, N-source, sulfur)
+- **nh4**: −0.6 (residual ammonium uptake)
+- **ac**: +3.5 (acetate fermentation product)
+- **for**: +2.8 (formate fermentation product)
+- **co2**: +2.1 (CO₂ fermentation product)
+- **h2**: +0.5 (minor H₂ from fermentation)
+
+---
+
+```json
+{
+  "fluxes": {
+    "arab__L": -8.0,
+    "leu__L": -1.5,
+    "pro__L": -1.0,
+    "cys__L": -0.8,
+    "nh4": -0.6,
+    "ac": 3.5,
+    "for": 2.8,
+    "co2": 2.1,
+    "h2": 0.5
+  },
+  "growth_rate": 0.10,
+  "rationale": "Fermenting arabinose (primary C source) and scavenging amino acids (N source) under severe N limitation. Growth rate limited by ammonium depletion and residual amino acid N. Fermentation products (acetate, formate, CO₂) balance carbon budget.",
+  "confidence": 0.62
+}
+```

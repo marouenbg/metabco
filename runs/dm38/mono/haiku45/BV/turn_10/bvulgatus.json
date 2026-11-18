@@ -1,0 +1,20 @@
+{
+ "fluxes": {
+  "ac": -12.0,
+  "phe__L": -0.8,
+  "tyr__L": -0.7,
+  "cys__L": -0.6,
+  "gly": -0.5,
+  "ser__L": -0.4,
+  "val__L": -0.4,
+  "thr__L": -0.3,
+  "succ": -1.0,
+  "no3": -0.3,
+  "but": 1.5,
+  "co2": 3.0,
+  "h2": 0.1
+ },
+ "growth_rate": 0.25,
+ "rationale": "Late-stage batch: acetate is abundant and my primary C source. Amino acids provide both C and N for biosynthesis. Succinate supports anaplerotic reactions. Fermentation to butyrate and CO\u2082 regenerates NAD\u207a under anaerobic conditions. Growth limited by N availability and C overflow balance.",
+ "confidence": 0.62
+}

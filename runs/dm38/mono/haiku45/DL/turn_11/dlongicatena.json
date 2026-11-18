@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "malt": -2.0,
+  "arab__L": -1.5,
+  "leu__L": -0.4,
+  "gln__L": -0.3,
+  "asp__L": -0.1,
+  "ac": 4.5,
+  "but": 3.0,
+  "for": 1.5,
+  "h2": 0.8,
+  "co2": 2.2
+ },
+ "growth_rate": 0.06,
+ "rationale": "Final 4 h of batch culture. Consumed remaining fermentable carbohydrates (maltose, arabinose) and amino acids (leucine, glutamine, aspartate) to support modest growth. Fermentation produces acetate, butyrate, formate, H\u2082, and CO\u2082. Carbon balance audited: ~23 mmol C in supports ~2.3 mmol C biosynthesis + ~20.7 mmol C fermentation products. Nitrogen from glutamine and aspartate covers biosynthetic demand (~0.6 mmol N/gDW/h).",
+ "confidence": 0.52
+}

@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "ac": 5.0,
+  "ppa": 5.0,
+  "but": 2.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing abundant D-glucose and L-lactate for carbon, and ammonium for nitrogen to support growth and production of acetate, propionate, and butyrate.",
+ "confidence": 0.9
+}

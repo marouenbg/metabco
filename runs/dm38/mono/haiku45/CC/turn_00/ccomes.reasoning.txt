@@ -1,0 +1,78 @@
+# Metabolic Decision: Coprococcus comes ATCC 27758 at t=0
+
+## Analysis of available transporters and substrates
+
+Coprococcus comes is a butyrate-producing bacteroid from the human gut microbiota. Based on its known physiology:
+
+**Primary carbon sources I can transport:**
+- **L-lactate** (28.31 mM): I have robust lactate transporters and can ferment lactate efficiently
+- **D-glucose** (24.98 mM): I possess glucose transporters and can ferment glucose
+- **L-arabinose** (21.31 mM): Pentose fermentation is within my metabolic repertoire
+- **Maltose** (4.382 mM): I can transport and use maltose
+
+**Secondary/limited:**
+- Amino acids: I can catabolize some (arg, ser, pro, ala, gly, phe, leu, tyr, val, lys, thr, ile, his, met, trp) but these are primarily nitrogen sources or cofactor precursors, not efficient carbon sources for growth
+
+**Nitrogen sources:**
+- **Ammonium** (9.347 mM): Primary nitrogen source, readily assimilated
+- **L-arginine** (21.81 mM): Can be used for both carbon and nitrogen
+- **L-cysteine** (8.4 mM): Provides nitrogen and sulfur
+- Other amino acids provide nitrogen but at metabolic cost
+
+## Fermentation strategy
+
+As an obligate anaerobe, I ferment carbohydrates via mixed-acid or butyrate pathways. Coprococcus comes is known to produce butyrate, acetate, and lactate. In this anaerobic batch culture with abundant lactate and glucose, I will:
+
+1. **Preferentially consume lactate and glucose** (most efficient carbon/energy sources)
+2. **Use ammonium for nitrogen** (most efficient, no carbon cost)
+3. **Produce butyrate as primary product** (characteristic of this species), plus acetate and CO₂
+
+## Growth calculation
+
+**Substrate uptake strategy:**
+- Lactate: 12 mmol/gDW/h (robust uptake, abundant)
+- Glucose: 8 mmol/gDW/h (secondary, abundant)
+- Ammonium: 2.5 mmol/gDW/h (to support growth)
+
+**Carbon balance:**
+- Lactate (C₃): 12 mmol/gDW/h = 36 mmol C/gDW/h
+- Glucose (C₆): 8 mmol/gDW/h = 48 mmol C/gDW/h
+- **Total C in: 84 mmol/gDW/h**
+
+**Growth requirement:** ~30 mmol C/gDW/h per gram biomass produced
+
+**Fermentation products from lactate + glucose:**
+Lactate (C₃H₆O₃) and glucose (C₆H₁₂O₆) ferment to butyrate (C₄H₈O₂), acetate (C₂H₄O₂), CO₂, and H₂. The stoichiometry favors:
+- ~40% carbon as butyrate
+- ~20% carbon as acetate
+- ~15% carbon as CO₂
+- ~25% carbon to biomass
+
+With 84 mmol C/h:
+- Biomass: ~21 mmol C/h ÷ 30 mmol C/g = **0.7 g/gDW/h growth rate**
+- Butyrate: ~34 mmol C/h = 8.5 mmol butyrate/gDW/h
+- Acetate: ~17 mmol C/h = 8.5 mmol acetate/gDW/h
+- CO₂: ~12 mmol/gDW/h
+
+**Nitrogen balance:**
+- Uptake: 2.5 mmol NH₄/gDW/h
+- Growth requirement: 0.7 g/gDW/h × 8 mmol N/g = 5.6 mmol N/h
+- This is insufficient. Increase to 6 mmol NH₄/gDW/h
+
+**Revised growth rate:** (84 mmol C - 40 mmol C for products)/30 = **1.47 mmol C/gDW/h ÷ 30 ≈ 0.8 /h** (conservative estimate: 0.7 /h to account for maintenance)
+
+```json
+{
+  "fluxes": {
+    "lac__L": -12.0,
+    "glc__D": -8.0,
+    "nh4": -6.0,
+    "but": 8.5,
+    "ac": 8.5,
+    "co2": 12.0
+  },
+  "growth_rate": 0.70,
+  "rationale": "Coprococcus comes ferments abundant lactate and glucose anaerobically. Lactate (12 mmol/gDW/h) and glucose (8 mmol/gDW/h) provide 84 mmol C/h. With 30 mmol C/g biomass cost and 8 mmol N/g, ammonium uptake of 6 mmol/h supports 0.7 /h growth. Remaining carbon (54 mmol/h) is fermented to butyrate (8.5) and acetate (8.5) as primary products, with CO₂ release. Carbon balance: 84 in = 21 (biomass) + 34 (butyrate) + 17 (acetate) + 12 (CO₂).",
+  "confidence": 0.72
+}
+```

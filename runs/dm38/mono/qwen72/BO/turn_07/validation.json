@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 7,
+  "growth_claimed": 0.071,
+  "growth_allowed": 0.071,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "S: credited 0.0186 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing efficient fermentation of D-glucose to produce acetate, butyrate, and formate, while consuming L-lactate and ammonium to support growth.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "ac": 7.0,
+   "but": 5.0,
+   "lac__L": -5.0,
+   "nh4": -1.0,
+   "for": 1.0,
+   "pi": -0.09
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "ac": 7.0,
+   "but": 5.0,
+   "lac__L": -5.0,
+   "nh4": -1.0,
+   "for": 1.0,
+   "pi": -0.09,
+   "so4": -0.0186
+  }
+ }
+]

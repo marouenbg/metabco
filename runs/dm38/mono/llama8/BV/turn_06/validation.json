@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 6,
+  "growth_claimed": 0.244,
+  "growth_allowed": 0.244,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.222 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0535 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "I chose to take up L-arabinose (arab__L) as my carbon source and Ammonium (nh4) as my nitrogen source, and release butyrate (but), acetate (ac), and hydrogen (h2) as my products.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arab__L": -10.0,
+   "nh4": -2.0,
+   "but": 5.0,
+   "ac": 5.0,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "arab__L": -10.0,
+   "nh4": -2.0,
+   "but": 5.0,
+   "ac": 5.0,
+   "h2": 0.5,
+   "pi": -0.2218,
+   "so4": -0.0535
+  }
+ }
+]

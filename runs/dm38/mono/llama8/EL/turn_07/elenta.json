@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "arab__L": 10.0,
+  "nh4": 4.0,
+  "malt": 5.0,
+  "co2": 5.0,
+  "ac": 5.0,
+  "for": 0.0,
+  "h2": 0.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "growth supported by L-arabinose and Ammonium uptake, with some Maltose and Carbon dioxide taken up to support growth, and acetate production as a fermentation product.",
+ "confidence": 0.8
+}

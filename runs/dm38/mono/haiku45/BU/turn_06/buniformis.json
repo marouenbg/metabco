@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -6.0,
+  "arab__L": -2.0,
+  "arg__L": -2.5,
+  "nh4": -2.0,
+  "ac": 2.5,
+  "ppa": 2.0,
+  "for": 1.5,
+  "co2": 1.5,
+  "succ": 0.5
+ },
+ "growth_rate": 0.25,
+ "rationale": "Continuing mixed-acid fermentation of glucose and lactate with arabinose supplementation. Nitrogen from ammonium and arginine. Fermentation products (acetate, propionate, formate, succinate) balance carbon budget while supporting growth at 0.25/h with positive nitrogen balance.",
+ "confidence": 0.85
+}

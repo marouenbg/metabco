@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 7,
+  "growth_claimed": 0.289,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4",
+   "c_imbalance: in=0 out=20 biomass=10.9"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "P: credited 0.337 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0756 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.289 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Utilizing acetate and hydrogen for energy and carbon, ammonium for nitrogen. Producing acetate, butyrate, hydrogen, and formate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": 5.0,
+   "h2": 5.0,
+   "nh4": -3.0,
+   "but": 2.0,
+   "for": 2.0
+  },
+  "fluxes_applied": {
+   "ac": 0.0,
+   "h2": 5.0,
+   "nh4": 0.0,
+   "but": 0.0,
+   "for": 0.0,
+   "pi": -0.3371,
+   "so4": -0.0756
+  }
+ }
+]

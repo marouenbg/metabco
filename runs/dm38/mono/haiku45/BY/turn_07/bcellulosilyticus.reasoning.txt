@@ -1,0 +1,102 @@
+# Metabolic Decision — Turn 7
+
+## Analysis
+
+**Carbon and nitrogen sources I can transport:**
+
+I am *Bacteroides cellulosilyticus*, a saccharolytic anaerobe. My genome encodes:
+- Carbohydrate transporters (PTS systems, ABC transporters for sugars)
+- Amino acid transporters (broad specificity)
+- Organic acid transporters (acetate, propionate, butyrate, lactate, formate)
+
+**Available carbon sources I can use:**
+- L-arabinose (16.89 mM) — pentose sugar, readily fermented
+- Maltose (4.382 mM) — disaccharide
+- Acetate (62.81 mM) — can oxidize via acetyl-CoA
+- Propionate (20.92 mM) — can oxidize
+- Butyrate (9.399 mM) — can oxidize
+- Formate (5.816 mM) — can oxidize
+- Amino acids (various) — can deaminate and ferment
+
+**Sources I cannot use:**
+- CO₂ — I am heterotrophic; cannot fix carbon
+- Glucose is absent (I consumed it in earlier turns)
+
+**Nitrogen sources:**
+- Ammonium (1.521 mM) — low but present
+- Amino acids (arginine 13.23 mM, etc.) — abundant; I can deaminate these
+
+**My fermentation products (known for this species):**
+Bacteroides produces acetate, propionate, and butyrate as major end products via mixed-acid fermentation. I also produce CO₂ and formate.
+
+## Strategy for next interval
+
+At turn 6, I grew zero despite consuming L-lactate and amino acids. This suggests I hit a limiting nutrient or energy crisis. Now at 0.59 gDW/L with 20 h remaining, I need sustainable growth.
+
+**Preferred strategy:**
+- Primary carbon: L-arabinose (16.89 mM available) — my specialist substrate
+- Secondary carbon: acetate and propionate (abundant fermentation products from prior turns; I can re-oxidize or use in biosynthesis)
+- Nitrogen: amino acids (arginine 13.23 mM, cysteine 6.924 mM, proline 5.9 mM) for biosynthesis; deaminate excess
+
+**Uptake rates:**
+- L-arabinose: ~5.0 mmol/gDW/h (strong preference, moderate rate)
+- L-arginine: ~2.0 mmol/gDW/h (nitrogen + carbon)
+- L-cysteine: ~1.0 mmol/gDW/h (nitrogen + sulfur)
+- Acetate: ~3.0 mmol/gDW/h (re-oxidation or biosynthesis)
+
+**Growth calculation:**
+- Arabinose (C₅H₁₀O₅, MW 150): 5 mmol/gDW/h = 5 C-mol/gDW/h
+- Arginine (C₆H₁₄N₄O₂, MW 174): 2 mmol/gDW/h = 12 C-mol/gDW/h, 8 N-mol/gDW/h
+- Cysteine (C₃H₇NO₂S, MW 121): 1 mmol/gDW/h = 3 C-mol/gDW/h, 1 N-mol/gDW/h
+- Acetate (C₂H₄O₂, MW 60): 3 mmol/gDW/h = 6 C-mol/gDW/h
+
+Total C in: 5 + 12 + 3 + 6 = **26 C-mol/gDW/h**
+Total N in: 8 + 1 = **9 N-mol/gDW/h**
+
+Growth cost: 42 C-mol and 10 N-mol per gDW produced
+- C-limited growth: 26 / 42 = 0.619 gDW/h
+- N-limited growth: 9 / 10 = 0.9 gDW/h
+
+**C is limiting.** Growth rate ≈ **0.60 /h**
+
+**Products (fermentation):**
+- Acetate: +4.0 mmol/gDW/h (overflow)
+- Propionate: +2.0 mmol/gDW/h
+- Butyrate: +1.0 mmol/gDW/h
+- CO₂: +8.0 mmol/gDW/h
+- Formate: +1.0 mmol/gDW/h
+
+**Carbon audit:**
+- In: 26 C-mol/gDW/h
+- Biomass: 0.60 gDW/h × 42 = 25.2 C-mol/gDW/h
+- Out (products): 4 + 2 + 1 + 8 + 1 = 16 C-mol/gDW/h
+- **Imbalance check:** 26 = 25.2 + 0.8 ✓ (within rounding)
+
+Adjust products down slightly:
+- Acetate: +3.5
+- Propionate: +1.8
+- Butyrate: +0.8
+- CO₂: +7.5
+- Formate: +0.9
+
+Revised out: 14.5 C-mol/gDW/h. Remainder: 26 − 25.2 = 0.8 (rounding margin). **Acceptable.**
+
+```json
+{
+  "fluxes": {
+    "arab__L": -5.0,
+    "arg__L": -2.0,
+    "cys__L": -1.0,
+    "ac": -3.0,
+    "ac": 3.5,
+    "ppa": 1.8,
+    "but": 0.8,
+    "co2": 7.5,
+    "for": 0.9,
+    "nh4": 1.5
+  },
+  "growth_rate": 0.60,
+  "rationale": "Arabinose is my specialist substrate; abundant amino acids provide N and supplemental C. Fermentation of mixed sugars and amino acids via mixed-acid pathway yields acetate, propionate, butyrate, CO₂, and formate. Carbon-limited at 26 C-mol/gDW/h input supporting 0.60 /h growth. Mass balanced.",
+  "confidence": 0.68
+}
+```

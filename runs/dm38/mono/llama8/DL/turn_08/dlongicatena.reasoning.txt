@@ -1,0 +1,11 @@
+I am Dorea longicatena DSM 13814, and I will decide on my metabolic strategy for the next 4 hours. I will take up the following metabolites: Carbon dioxide (co2), D-glucose (glc__D), L-arabinose (arab__L), L-cysteine (cys__L), L-serine (ser__L), and Hydrogen (h2). I will release Carbon dioxide (co2), Formate (for), Acetate (ac), Lactate (lac__L), and Ammonium (nh4).
+
+First, I consider which carbon and nitrogen sources I can transport. I can use the available carbon sources, including D-glucose (glc__D) and L-arabinose (arab__L), as well as the abundant carbon dioxide (co2). I can also transport the available nitrogen sources, including L-cysteine (cys__L), L-serine (ser__L), and Ammonium (nh4).
+
+As for the fermentation products, Dorea longicatena DSM 13814 is known to produce Formate (for), Acetate (ac), Lactate (lac__L), and Succinate (succ). I will take up Hydrogen (h2) to support the production of these products.
+
+The growth rate supported by my chosen uptake can be calculated as follows: I take up 10 mmol of D-glucose (glc__D) per gram dry weight per hour, which supports a growth rate of 0.5 /h. I also take up 1 mmol of L-cysteine (cys__L) and 1 mmol of L-serine (ser__L) per gram dry weight per hour, which supports an additional growth rate of 0.25 /h. Therefore, my total growth rate is 0.75 /h.
+
+An audit of the carbon in and out reveals that I take in 10 mmol of carbon from D-glucose (glc__D) and 1 mmol of carbon from L-cysteine (cys__L) per gram dry weight per hour, which is sufficient to cover the carbon out of 0.5 mmol of Carbon dioxide (co2) and 0.5 mmol of Lactate (lac__L) per gram dry weight per hour, as well as the biomass cost of 38 mmol of carbon per gram dry weight per hour.
+
+{"fluxes": {"co2": 0.5, "glc__D": 10, "arab__L": 0.63, "cys__L": 1, "ser__L": 1, "h2": 10}, "growth_rate": 0.75, "rationale": "Taking up D-glucose, L-arabinose, L-cysteine, L-serine, and hydrogen to support growth and production of fermentation products." , "confidence": 0.9}

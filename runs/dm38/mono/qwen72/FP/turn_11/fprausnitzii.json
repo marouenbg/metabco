@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "but": 2.0,
+  "ac": 2.0,
+  "leu__L": -1.0,
+  "tyr__L": -1.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.5,
+ "confidence": 0.8,
+ "rationale": "Utilizing butyrate and acetate for carbon and energy, and leucine and tyrosine for nitrogen. Producing butyrate, acetate, and hydrogen. The strategy supports a moderate growth rate while maintaining a positive carbon balance and a slightly negative nitrogen balance, which is manageable."
+}

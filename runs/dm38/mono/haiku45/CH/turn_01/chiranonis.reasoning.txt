@@ -1,0 +1,118 @@
+# Metabolic decision for Clostridium hiranonis TO-931
+
+## Analysis
+
+**What I can transport and what I cannot:**
+
+C. hiranonis is a Gram-positive anaerobe known to ferment carbohydrates and amino acids. Looking at the abundant substrates:
+- **D-glucose (24.86 mM)**: I have PTS or general hexose transporters. Readily available, excellent carbon source.
+- **L-lactate (28.15 mM)**: I can ferment lactate via lactate dehydrogenase. Major substrate.
+- **L-arginine (21.73 mM)**: I possess arginine deiminase pathway (ADI), a key feature of Clostridium species. Excellent nitrogen and carbon source.
+- **L-arabinose (21.31 mM)**: Pentose fermentation is feasible but less efficient than glucose.
+- **L-serine (6.4 mM)**, **L-cysteine (8.4 mM)**: Amino acids I can deaminate and ferment.
+- **Ammonium (9.307 mM)**: Direct nitrogen source, always available.
+
+**Known fermentation products:**
+C. hiranonis ferments via mixed-acid fermentation, producing:
+- **Butyrate** (primary product from glucose/lactate fermentation)
+- **Acetate** (secondary product)
+- **Formate** (minor)
+- **H₂** (from formate lyase or direct hydrogenase)
+- **CO₂** (from pyruvate decarboxylation)
+
+The turn 0 data confirms this pattern: glucose and lactate uptake yielding acetate, butyrate, formate, H₂, and CO₂.
+
+**Substrate choice and stoichiometry:**
+
+At turn 0 (t=0), I grew at 0.403 /h. Now at t=4h with 0.0109 gDW/L, I should continue aggressive fermentation while abundant substrate remains.
+
+My primary strategy: co-ferment **glucose + lactate + arginine**.
+
+**Glucose fermentation (C₆H₁₂O₆ → products):**
+- Glucose (6 C) → typically 2 acetyl-CoA + 2 pyruvate
+- Under anaerobic conditions: pyruvate → acetate + formate + H₂, or → butyrate
+- Net: ~3 mol acetate + 1 mol butyrate per glucose (rough estimate for Clostridium)
+
+**Lactate fermentation (C₃H₆O₃ → products):**
+- Lactate (3 C) → pyruvate → acetate + formate + H₂, or mixed products
+- ~1.5 mol acetate + 0.5 mol butyrate per lactate
+
+**Arginine fermentation via ADI (C₆H₁₄N₄O₂):**
+- Arginine → citrulline + NH₃ (ADI)
+- Citrulline → ornithine + CO₂ (carbamate kinase)
+- Ornithine further catabolized
+- Net: yields ATP, NH₃ (nitrogen), and carbon skeleton for fermentation
+- ~2-3 mol C products per arginine
+
+**Growth rate calculation:**
+
+Assume uptake rates (conservative, realistic for batch):
+- Glucose: 8 mmol/gDW/h
+- Lactate: 6 mmol/gDW/h
+- Arginine: 4 mmol/gDW/h
+- Ammonium: 2 mmol/gDW/h (supplemental)
+
+Total C in: (8 × 6) + (6 × 3) + (4 × 6) + (2 × 0) = 48 + 18 + 24 = 90 mmol C/gDW/h
+
+Fermentation products (rough stoichiometry for mixed-acid fermentation):
+- Glucose (8 C) → ~2 acetate (4 C) + 1 butyrate (4 C) = 8 C ✓
+- Lactate (6 C) → ~1.5 acetate (3 C) + 1 formate (1 C) + H₂ = 4 C (+ 2 C to CO₂/other)
+- Arginine (4 C) → ~2 acetate (4 C) + CO₂ + products
+
+Estimated products:
+- Acetate: ~6 mmol/gDW/h
+- Butyrate: ~2 mmol/gDW/h
+- Formate: ~2 mmol/gDW/h
+- CO₂: ~3 mmol/gDW/h
+- H₂: ~2 mmol/gDW/h
+
+C out: (6 × 2) + (2 × 4) + (2 × 1) + (3 × 1) = 12 + 8 + 2 + 3 = 25 mmol C/gDW/h
+
+**Biomass requirement:** 38 mmol C/gDW for growth
+
+C available for growth: 90 − 25 = 65 mmol C/gDW/h
+Growth rate: 65 / 38 ≈ **1.71 /h** — but this exceeds realistic max (~1.5 /h).
+
+Revise downward: target **growth ≈ 0.8 /h** (sustainable in batch).
+Then: C for growth = 0.8 × 38 = 30.4 mmol C/gDW/h
+C available for fermentation products: 90 − 30.4 = 59.6 mmol C/gDW/h
+
+**Nitrogen audit:**
+- Arginine uptake: 4 mmol/gDW/h (provides 4 N)
+- Ammonium uptake: 2 mmol/gDW/h (provides 2 N)
+- Total N in: 6 mmol/gDW/h
+- Growth requirement: 0.8 × 10 = 8 mmol N/gDW/h
+
+Shortfall! Increase ammonium or reduce growth. Adjust:
+- Ammonium: 3 mmol/gDW/h → 7 N total
+- Growth: 0.7 /h → 7 mmol N required ✓
+
+Revise final uptakes:
+- Glucose: 8 mmol/gDW/h
+- Lactate: 6 mmol/gDW/h
+- Arginine: 4 mmol/gDW/h
+- Ammonium: 3 mmol/gDW/h
+- Growth: **0.7 /h**
+
+C audit: (8×6) + (6×3) + (4×6) = 90 C in; (0.7×38) = 26.6 C for growth; 90 − 26.6 = 63.4 C for products ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -6.0,
+    "arg__L": -4.0,
+    "nh4": -3.0,
+    "ac": 6.0,
+    "but": 2.0,
+    "for": 2.0,
+    "co2": 3.5,
+    "h2": 2.0
+  },
+  "growth_rate": 0.7,
+  "rationale": "Co-ferment glucose, lactate, and arginine (via ADI pathway) with ammonium as supplemental nitrogen. Mixed-acid fermentation yields acetate, butyrate, formate, CO₂, and H₂. Carbon and nitrogen budgets balanced; growth sustainable at 0.7 /h in early-to-mid batch phase.",
+  "confidence": 0.72
+}
+```

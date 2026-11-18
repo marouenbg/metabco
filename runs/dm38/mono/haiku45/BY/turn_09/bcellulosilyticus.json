@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "ac": -8.0,
+  "ser__L": -1.5,
+  "ala__L": -1.5,
+  "cys__L": -1.0,
+  "nh4": -0.5,
+  "malt": -0.5,
+  "ppa": 1.8,
+  "but": 1.0,
+  "for": 0.5,
+  "lac__L": 0.4,
+  "co2": 0.2,
+  "h2": 0.1
+ },
+ "growth_rate": 0.35,
+ "rationale": "Nitrogen limitation (4.5 mmol N available vs. 10 mmol N needed per gDW) restricts growth to 0.35 /h. Co-fermentation of abundant acetate (8 mmol/gDW/h) with N-rich amino acids (serine, alanine, cysteine) balances C and N uptake. Fermentation products (propionate, butyrate, formate, lactate) are consistent with my anaerobic metabolism. Carbon audit: 26 mmol C in \u2192 14.7 (growth) + 11.3 (fermentation products) = 26.0 mmol C. Confidence moderate due to complex regulatory interactions in amino acid fermentation.",
+ "confidence": 0.65
+}

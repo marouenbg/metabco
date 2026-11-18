@@ -1,0 +1,90 @@
+# Reasoning through my metabolic strategy
+
+## Available carbon and nitrogen sources I can use
+
+As *Bifidobacterium longum*, I am a facultative anaerobe with a well-characterized genome. My key transporters and metabolic capabilities:
+
+**Primary carbon sources I can access:**
+- **Acetate** (21.79 mM): I can transport and metabolize this via acetyl-CoA. This is abundant.
+- **L-lactate** (7.079 mM): I have lactate transporters and can ferment lactate.
+- **Amino acids** (phenylalanine, proline, tyrosine, glycine, glutamine, asparagine, cysteine, lysine, threonine, leucine, valine, histidine, methionine, tryptophan, etc.): I can transport many amino acids and catabolize them.
+- **Formate** (3.867 mM): I can use formate as a carbon source.
+- **Maltose** (0.4147 mM): I have maltose transporters but this is nearly depleted.
+
+**Nitrogen sources:**
+- Amino acids contain nitrogen (all the L-amino acids listed)
+- **Ammonia/ammonium** (not currently listed but I can produce it from amino acid deamination)
+- Nitrate (0.1093 mM): I likely cannot use this anaerobically
+
+**Sources I cannot use:**
+- CO₂ alone (I'm not autotrophic; I use CO₂ for biosynthesis, not energy)
+- Vitamins and cofactors (too dilute; used catalytically)
+
+## Recent metabolic pattern and current constraints
+
+Looking at my recent history (turns 6-9):
+- I've been switching between growth phases and stationary phases
+- Turn 9 shows modest growth (0.079/h) on acetate + amino acid catabolism
+- I'm producing lactate and formate as fermentation products
+- The culture is now at 40h of 48h total (8h remaining)
+
+At turn 10, I have:
+- Abundant acetate (21.79 mM) — my preferred carbon source
+- Moderate amino acids for nitrogen and additional carbon
+- Limited time remaining (8 hours)
+
+## Fermentation products I produce
+
+As a bifidobacterium, my characteristic fermentation is the **fructose-6-phosphate shunt**, producing:
+- **Acetate** (primary)
+- **Lactate** (primary)
+- **Formate** (minor)
+
+I do not produce butyrate or propionate under normal conditions.
+
+## Growth calculation
+
+**Carbon budget:**
+- Uptake: Acetate (21.79 mM available; I'll take ~8 mmol/gDW/h to be conservative)
+- Amino acids as co-substrates: glycine, serine, proline, leucine (~3-4 mmol/gDW/h total)
+- Total carbon uptake: ~11-12 mmol C/gDW/h
+
+**Carbon costs:**
+- Growth at rate μ: requires 38 mmol C/gDW/h per unit growth rate
+- If μ = 0.25 /h: 38 × 0.25 = 9.5 mmol C/gDW/h for biomass
+- Fermentation products (lactate, formate, CO₂): ~2-3 mmol C/gDW/h
+
+**Nitrogen budget:**
+- Amino acid uptake provides nitrogen; I'll take ~2.5 mmol N/gDW/h from amino acids
+- Growth requires 10 mmol N/gDW/h per unit growth rate
+- At μ = 0.25 /h: 10 × 0.25 = 2.5 mmol N/gDW/h
+- This balances with amino acid uptake
+
+**Feasible growth rate: 0.25 /h** (conservative, sustainable over 4 hours with available resources)
+
+## Metabolic strategy for next 4 hours
+
+I will:
+1. **Uptake acetate** at 8 mmol/gDW/h (primary energy and carbon)
+2. **Uptake amino acids** (glycine -1.2, serine -0.8, proline -0.6, leucine -0.4) at ~3 mmol/gDW/h total for nitrogen and auxiliary carbon
+3. **Release lactate** at +3.5 mmol/gDW/h (primary fermentation product)
+4. **Release acetate** at +1.0 mmol/gDW/h (overflow)
+5. **Release formate** at +0.5 mmol/gDW/h (minor product)
+6. **Release CO₂** at +2.0 mmol/gDW/h (decarboxylation)
+
+**Carbon audit:**
+- In: 8 (acetate) + 1.2 (gly) + 0.8 (ser) + 0.6 (pro) + 0.4 (leu) = 11.0 mmol C/gDW/h
+- Out (biomass): 38 × 0.25 = 9.5 mmol C/gDW/h
+- Out (products): 3.5 (lac) + 1.0 (ac) + 0.5 (for) + 2.0 (CO₂) = 7.0 mmol C/gDW/h
+- Total out: 16.5 mmol C/gDW/h
+
+This exceeds input, so I must reduce uptake or growth. Let me recalculate:
+- Growth μ = 0.20 /h requires 38 × 0.20 = 7.6 mmol C/gDW/h
+- With 11.0 in and 7.6 for growth, I have 3.4 for products
+- Products: lactate 2.5 + acetate 0.6 + formate 0.3 = 3.4 ✓
+
+**Revised: growth rate 0.20 /h**
+
+```json
+{"fluxes": {"ac": -8.0, "gly": -1.2, "ser__L": -0.8, "pro__L": -0.6, "leu__L": -0.4, "lac__L": 2.5, "for": 0.3, "co2": 1.6}, "growth_rate": 0.20, "rationale": "Acetate is abundant and my preferred carbon source; amino acids provide nitrogen for growth. Fermentation to lactate and formate is my characteristic metabolism. Growth rate 0.20/h is sustainable given remaining time (8h) and nutrient availability; carbon budget balances at 11.0 mmol in vs 7.6 (growth) + 3.4 (products) out.", "confidence": 0.68}
+```

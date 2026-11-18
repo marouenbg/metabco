@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": -8.0,
+  "but": 12.0,
+  "for": 8.0,
+  "val__L": -0.5,
+  "gln__L": -0.5,
+  "co2": 15.0,
+  "succ": 3.0,
+  "nh4": 0.3
+ },
+ "growth_rate": 0.1,
+ "rationale": "Nitrogen severely limiting at 40h; growth constrained by amino acid availability. Fermenting acetate and butyrate anaerobically to CO\u2082, formate, butyrate, and succinate. Minimal amino acid uptake to preserve nitrogen pool. Carbon and nitrogen balanced.",
+ "confidence": 0.62
+}

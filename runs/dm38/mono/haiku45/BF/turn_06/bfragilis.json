@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ac": 4.5,
+  "but": 3.0,
+  "ala__L": -2.5,
+  "cys__L": -1.5,
+  "gly": -1.0,
+  "ser__L": -1.0,
+  "inost": -1.5,
+  "for": 2.0,
+  "co2": 8.0,
+  "nh4": 1.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "Bacteroides fragilis continues saccharolytic and proteolytic fermentation. Acetate and butyrate are abundant and well-utilized; amino acids provide limiting nitrogen (6 mmol/gDW/h in, 8 needed for growth). Growth is N-limited at 0.75 /h. Carbon balance: 62 mmol in, 30.75 for biomass, 31.25 for catabolic products (acetate, butyrate, formate, CO\u2082). Ammonium released from amino acid deamination.",
+ "confidence": 0.72
+}

@@ -1,0 +1,16 @@
+As Bacteroides ovatus ATCC 8483, I'm a Gram-negative, anaerobic bacterium that thrives in the human gut. I'm a facultative anaerobe, meaning I can grow with or without oxygen, but I'm more efficient without it. I have a range of transporters that allow me to take up various nutrients and metabolites.
+
+Looking at the available nutrients, I can transport and utilize CO2, L-lactate, D-glucose, L-arginine, L-arabinose, Ammonium (NH4), L-cysteine, L-serine, myo-inositol, L-proline, L-alanine, Glycine, L-phenylalanine, Maltose, L-leucine, L-tyrosine, L-valine, L-glutamine, L-asparagine, L-lysine, L-threonine, L-isoleucine, L-histidine, L-methionine, L-tryptophan, L-glutamate, L-aspartate, and Nitrate (NO3). I can also make use of the abundant ions, like Calcium (Ca2+), Chloride (Cl), Potassium (K), Magnesium (Mg2), and Sodium (Na1).
+
+As a bacterium, I'm a bit of a scavenger, and I can make use of a wide range of metabolites. I can produce acetate, butyrate, formate, succinate, ethanol, hydrogen (H2), and CO2 as byproducts of my metabolism. I can also utilize the abundant ions, like Iron (Fe2+ and Fe3+), Manganese (Mn2+), and Zinc (Zn2+).
+
+Now, let's talk about growth. As I grow, I need to consume carbon and nitrogen to produce biomass. I need approximately 42 mmol of carbon and 10 mmol of nitrogen per gram of dry weight produced. I'll take up some of the available nutrients to support my growth.
+
+I'll take up L-glucose (glc__D) at a rate of 2.5 mmol/gDW/h, as it's a readily available energy source. I'll also take up Ammonium (NH4) at a rate of 0.5 mmol/gDW/h, as it's a key nitrogen source. I'll take up L-aspartate (asp__L) at a rate of 0.2 mmol/gDW/h, as it's a good source of nitrogen and carbon. I'll also take up Maltose (malt) at a rate of 1 mmol/gDW/h, as it's a readily available energy source.
+
+As for the products, I'll release acetate (ac) at a rate of 1.5 mmol/gDW/h, as it's a common byproduct of my metabolism. I'll also release hydrogen (h2) at a rate of 0.5 mmol/gDW/h, as it's a byproduct of my metabolism.
+
+Audit: I'll take in 2.5 mmol of carbon from glucose, 0.5 mmol of nitrogen from Ammonium, 0.2 mmol of carbon from L-aspartate, and 1 mmol of carbon from Maltose. I'll produce 1.5 mmol of carbon from acetate and 0.5 mmol of hydrogen from hydrogen. My growth rate will be approximately 0.35/h, based on the carbon and nitrogen requirements.
+
+Here's my decision:
+{"fluxes": {"glc__D": 2.5, "nh4": 0.5, "asp__L": 0.2, "malt": 1, "ac": 1.5, "h2": 0.5}, "growth_rate": 0.35, "rationale": "Utilizing glucose, Ammonium, L-aspartate, and Maltose as energy sources and taking in nitrogen. Releasing acetate and hydrogen as byproducts of metabolism.", "confidence": 0.8}

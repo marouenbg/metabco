@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "arab__L": -10.0,
+  "lac__L": -5.0,
+  "arg__L": -2.0,
+  "nh4": -1.0,
+  "ac": 5.0,
+  "ppa": 2.0,
+  "but": 1.0
+ },
+ "growth_rate": 0.27,
+ "rationale": "Utilizing available carbon and nitrogen sources to support growth and fermentation",
+ "confidence": 0.8
+}

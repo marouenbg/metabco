@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 1,
+  "growth_claimed": 1.2,
+  "growth_allowed": 1.2,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 1.09 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.263 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Bacteroides vulgatus ferments abundant glucose and lactate anaerobically to acetate and butyrate. Arginine and serine provide limiting nitrogen (15 mmol N/gDW/h supports ~1.2 /h growth at 8 mmol N/g b",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -14.0,
+   "lac__L": -8.0,
+   "arg__L": -3.0,
+   "ser__L": -1.5,
+   "nh4": -1.5,
+   "ac": 6.5,
+   "but": 3.0,
+   "ppa": 1.5,
+   "co2": 4.5
+  },
+  "fluxes_applied": {
+   "glc__D": -14.0,
+   "lac__L": -8.0,
+   "arg__L": -3.0,
+   "ser__L": -1.5,
+   "nh4": -1.5,
+   "ac": 6.5,
+   "but": 3.0,
+   "ppa": 1.5,
+   "co2": 4.5,
+   "pi": -1.091,
+   "so4": -0.2633
+  }
+ }
+]

@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "co2": -103.45,
+  "lac__L": -61.77,
+  "arg__L": -10.0,
+  "lac__D": 20.0,
+  "ac": 10.0,
+  "succ": 5.0,
+  "for": 5.0,
+  "etoh": 0.0,
+  "h2": 0.0,
+  "h2s": 0.0,
+  "nh4": 0.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "I will take up CO2, L-lactate, and L-arginine, and release lactate, acetate, and succinate as fermentation products. I can support a growth rate of 0.5/h.",
+ "confidence": 0.8
+}

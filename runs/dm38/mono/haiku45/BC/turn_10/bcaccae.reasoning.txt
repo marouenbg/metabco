@@ -1,0 +1,92 @@
+# Metabolic decision for Bacteroides caccae ATCC 43185 — turn 10
+
+## Analysis of my situation
+
+**Time context:** I am at t = 40 h in a 48 h batch. I have 8 hours remaining. My biomass is 4.461 gDW/L. The culture is sealed, anaerobic, and nutrients are depleting.
+
+**Carbon sources available and transportable:**
+- Propionate (10.73 mM): I can ferment this via propionyl-CoA → succinate/acetate pathways
+- Formate (8.826 mM): I can use formate dehydrogenase anaerobically
+- Acetate (8.769 mM): I can activate and use acetyl-CoA
+- myo-inositol (6.272 mM): I have inositol monophosphatase; can ferment
+- Maltose (2.598 mM): I have maltose transporters and can ferment
+- L-arabinose (1.729 mM): I can ferment via pentose pathways
+- Butyrate (1.127 mM): I can activate via butyryl-CoA synthetase
+- CO₂ (86.54 mM): Present but not a net carbon source for heterotrophic growth
+
+**Nitrogen sources:**
+- Ammonium (19.96 mM): Primary nitrogen source, abundant
+- Nitrate (0.1093 mM): Trace; anaerobic nitrate reduction possible but limited
+- Amino acids in recent secretions suggest I can catabolize amino acids for both C and N
+
+**Recent metabolic pattern:**
+My recent fluxes show I oscillate between:
+- Carbohydrate fermentation (arabinose, inositol) → acetate + CO₂ + formate
+- Amino acid catabolism (arginine, serine, proline, cysteine, alanine, phenylalanine, leucine) → acetate + ammonia
+- Propionate consumption and production
+
+This suggests I'm a saccharolytic-proteolytic generalist, adapting to what's available.
+
+**Current strategy:**
+With 8 hours left and declining simple sugars, I should:
+1. Consume remaining carbohydrates (maltose, arabinose, inositol) — these are preferred
+2. Use propionate and butyrate as secondary carbon sources
+3. Consume ammonium for biosynthesis
+4. Ferment to acetate, formate, CO₂, and possibly succinate
+
+**Growth rate calculation:**
+If I consume:
+- Maltose: 2.0 mmol/gDW/h (realistic for a Bacteroides)
+- Arabinose: 1.5 mmol/gDW/h
+- Inositol: 1.0 mmol/gDW/h
+- Propionate: 2.0 mmol/gDW/h (secondary)
+- Ammonium: 2.5 mmol/gDW/h
+
+Total C uptake ≈ (2.0×6 + 1.5×5 + 1.0×6 + 2.0×3) = 12 + 7.5 + 6 + 6 = 31.5 mmol C/gDW/h
+
+For growth at μ g/h:
+- C needed for biomass: 42μ mmol/gDW/h
+- N needed for biomass: 10μ mmol/gDW/h
+- Remaining C for fermentation products: 31.5 - 42μ
+
+N constraint: 2.5 mmol NH₄/gDW/h available → μ ≤ 2.5/10 = 0.25 /h
+
+C constraint: 31.5 - 42(0.25) = 31.5 - 10.5 = 21 mmol/gDW/h for products ✓ (feasible)
+
+**Growth rate: 0.25 /h** (limited by nitrogen availability)
+
+**Fermentation products:**
+With 21 mmol C/gDW/h to dispose of, I'll produce:
+- Acetate: ~10 mmol/gDW/h
+- Formate: ~5 mmol/gDW/h
+- CO₂: ~6 mmol/gDW/h
+
+**Carbon audit:**
+- In: 31.5 mmol C/gDW/h
+- Biomass: 42 × 0.25 = 10.5 mmol C/gDW/h
+- Out (acetate 10 + formate 5 + CO₂ 6): 21 mmol C/gDW/h
+- Total out: 10.5 + 21 = 31.5 ✓
+
+**Nitrogen audit:**
+- In: 2.5 mmol N/gDW/h (ammonium)
+- Biomass: 10 × 0.25 = 2.5 mmol N/gDW/h
+- Out: 0 (no amino acid secretion planned)
+- Total: 2.5 = 2.5 ✓
+
+```json
+{
+  "fluxes": {
+    "malt": -2.0,
+    "arab__L": -1.5,
+    "inost": -1.0,
+    "ppa": -2.0,
+    "nh4": -2.5,
+    "ac": 10.0,
+    "for": 5.0,
+    "co2": 6.0
+  },
+  "growth_rate": 0.25,
+  "rationale": "Consuming remaining carbohydrates (maltose, arabinose, inositol) as preferred substrates, supplemented by propionate. Nitrogen-limited growth at 0.25 /h (ammonium constraint). Fermentation to acetate, formate, and CO₂ balances carbon. All constraints satisfied.",
+  "confidence": 0.72
+}
+```

@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -1.5,
+  "malt": -3.5,
+  "arg__L": -2.0,
+  "ser__L": -1.0,
+  "ac": 8.0,
+  "nh4": 7.74,
+  "ppa": 5.0,
+  "but": 2.0,
+  "co2": 43.98
+ },
+ "growth_rate": 0.22,
+ "rationale": "Glucose depleted; pivoting to maltose and amino acid fermentation. Arginine and serine provide both carbon and nitrogen. Ferment to acetate, propionate, butyrate, and CO\u2082. Sustainable growth rate given 12 h remaining in batch culture.",
+ "confidence": 0.72
+}

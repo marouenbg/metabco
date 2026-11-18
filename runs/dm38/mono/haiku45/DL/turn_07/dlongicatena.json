@@ -1,0 +1,20 @@
+{
+ "fluxes": {
+  "arab__L": -5.0,
+  "arg__L": -2.0,
+  "ser__L": -1.0,
+  "leu__L": -0.8,
+  "val__L": -0.6,
+  "pro__L": -0.5,
+  "ala__L": -0.4,
+  "nh4": -0.3,
+  "co2": 15.0,
+  "but": 4.0,
+  "ac": 6.0,
+  "for": 4.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Arabinose and amino acids (arginine, serine, leucine, valine, proline) are abundant and transportable. Mixed-acid fermentation yields butyrate, acetate, formate, CO\u2082, and H\u2082. Carbon balance: 43 mmol C/gDW/h in \u2192 9.5 (biomass) + 33.5 (products) = 43 \u2713. Nitrogen: 11 mmol/gDW/h in \u2192 2.5 (biomass) + 8.5 (products/overflow) \u2713. Growth rate 0.25 /h is sustainable mid-exponential phase.",
+ "confidence": 0.72
+}

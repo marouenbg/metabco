@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 5,
+  "growth_claimed": 0.119,
+  "growth_allowed": 0.119,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.149 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0311 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Glucose becoming limiting; shift to lactate fermentation. Maintain arginine uptake for nitrogen. Ferment to acetate, propionate, butyrate. Growth limited by remaining glucose (8.4 mM) and lactate avai",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": -6.0,
+   "arg__L": -1.5,
+   "nh4": -1.5,
+   "ac": 12.0,
+   "ppa": 4.0,
+   "but": 2.0,
+   "co2": 8.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": -6.0,
+   "arg__L": -1.5,
+   "nh4": -1.5,
+   "ac": 12.0,
+   "ppa": 4.0,
+   "but": 2.0,
+   "co2": 8.0,
+   "pi": -0.1491,
+   "so4": -0.0311
+  }
+ }
+]

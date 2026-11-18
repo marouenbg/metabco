@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "erectale",
+  "turn": 7,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.1127,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=15 out=12 biomass=6.65"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.186 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.042 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.2 -> 0.113"
+  ],
+  "rationale": "Balanced carbon and nitrogen fluxes to support growth while producing butyrate and acetate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -5.0,
+   "nh4": -2.5,
+   "but": 2.0,
+   "ac": 1.0,
+   "co2": 2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -5.0,
+   "nh4": -2.5,
+   "but": 2.0,
+   "ac": 1.0,
+   "co2": 2.0,
+   "h2": 1.0,
+   "pi": -0.1862,
+   "so4": -0.042
+  }
+ }
+]

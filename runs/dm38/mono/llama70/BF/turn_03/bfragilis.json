@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -3.0,
+  "ac": 4.0,
+  "ppa": 1.5,
+  "arg__L": -1.5,
+  "nh4": -1.0
+ },
+ "growth_rate": 0.292,
+ "rationale": "Adjusted growth rate and fermentation product formation to balance carbon budget",
+ "confidence": 0.8
+}

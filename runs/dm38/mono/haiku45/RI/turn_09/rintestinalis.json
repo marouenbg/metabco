@@ -1,0 +1,21 @@
+{
+ "fluxes": {
+  "gly": -2.0,
+  "ala__L": -1.5,
+  "ser__L": -1.0,
+  "leu__L": -1.2,
+  "val__L": -1.0,
+  "pro__L": -0.8,
+  "thr__L": -0.8,
+  "lys__L": -1.5,
+  "his__L": -0.8,
+  "but": -2.5,
+  "ac": 2.0,
+  "for": 1.5,
+  "lac__L": 0.5,
+  "co2": 3.0
+ },
+ "growth_rate": 0.22,
+ "rationale": "Nitrogen-limited growth on amino acid + butyrate mix. Amino acids provide both C and N; butyrate adds energy. Fermentation to acetate, formate, lactate balances redox. Remaining 12 h of batch culture; conservative estimate given substrate depletion risk.",
+ "confidence": 0.62
+}

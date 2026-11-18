@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": -3.0,
+  "ppa": -2.0,
+  "for": 1.0,
+  "nh4": -2.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.1333,
+ "rationale": "Utilizing acetate, propionate, and formate for carbon and ammonium for nitrogen to support growth. Carbon and nitrogen balances support the calculated growth rate.",
+ "confidence": 0.9
+}

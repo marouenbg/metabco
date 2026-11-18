@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ppa": 2.0,
+  "inost": -4.0,
+  "arg__L": -2.0,
+  "cys__L": -1.0,
+  "ac": 8.0,
+  "succ": 3.0,
+  "co2": 4.0,
+  "for": 1.0,
+  "nh4": 2.0,
+  "pi": -0.35
+ },
+ "growth_rate": 0.71,
+ "rationale": "Propionate and myo-inositol are abundant and fermentable. Arginine and cysteine provide nitrogen and additional carbon. Fermentation yields acetate, propionate, succinate, CO\u2082, and formate in proportions consistent with Bacteroides mixed-acid fermentation. Carbon and nitrogen budgets balance; growth rate supported by available amino acid nitrogen.",
+ "confidence": 0.72
+}

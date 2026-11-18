@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 1,
+  "growth_claimed": 0.238,
+  "growth_allowed": 0.238,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.298 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.3 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 1.41 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing glucose, lactate, and ammonium as primary carbon and nitrogen sources, and producing acetate, formate, and hydrogen as fermentation products to support growth.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -1.0,
+   "ac": 0.238,
+   "for": 0.238,
+   "h2": 0.238,
+   "h2s": 0.238
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -2.4145,
+   "ac": 0.238,
+   "for": 0.238,
+   "h2": 0.238,
+   "h2s": 0.238,
+   "pi": -0.2981,
+   "so4": -0.3003
+  }
+ }
+]

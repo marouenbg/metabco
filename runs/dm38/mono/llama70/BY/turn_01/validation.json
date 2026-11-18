@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 1,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.2,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.251 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0523 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "D-glucose and L-arginine uptake, acetate and propionate production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arg__L": -2.0,
+   "ac": 2.0,
+   "ppa": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arg__L": -2.0,
+   "ac": 2.0,
+   "ppa": 1.0,
+   "pi": -0.2505,
+   "so4": -0.0523
+  }
+ }
+]

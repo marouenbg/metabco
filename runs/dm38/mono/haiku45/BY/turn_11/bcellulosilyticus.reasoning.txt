@@ -1,0 +1,107 @@
+# Metabolic reasoning for *Bacteroides cellulosilyticus* at t=44h
+
+## Assessment of situation
+I am at 2.669 gDW/L in a sealed 1 mL batch culture. I have been growing intermittently; turn 10 showed zero growth, suggesting I may have depleted or misallocated resources. I have 4 hours remaining in a 48-hour experiment. I need to commit to a sustainable strategy.
+
+## Available carbon and nitrogen sources I can use
+
+**Primary carbon sources:**
+- **Acetate (74.26 mM)**: I encode acetyl-CoA synthetase and can use this readily. This is my most abundant fermentable substrate.
+- **Propionate (35.6 mM)**: I can metabolize via propionyl-CoA pathways (methylmalonyl-CoA route).
+- **Butyrate (18.07 mM)**: Metabolizable to acetyl-CoA and other intermediates.
+- **Formate (12.61 mM)**: Can be oxidized or used in one-carbon metabolism.
+- **Maltose (3.69 mM)**: I possess PTS and maltose-metabolizing enzymes.
+- **Amino acids (glycine, phenylalanine, leucine, tyrosine, valine, etc.)**: These are catabolizable for both carbon and nitrogen.
+
+**Nitrogen sources:**
+- **Ammonium (12.37 mM)**: Direct incorporation via GS/GOGAT.
+- **Amino acids**: All listed amino acids can be deaminated or transaminated for nitrogen and carbon skeletons.
+
+**Sources I cannot use effectively:**
+- Nitrate: I lack nitrate reductase (anaerobic nitrate reduction is not my primary pathway).
+- Sugars beyond maltose: I lack transporters for most polysaccharides in this environment (cellulose would require cellulases on solid substrate, not applicable here).
+
+## Fermentation products I produce
+*Bacteroides cellulosilyticus* is a saccharolytic anaerobe. Under anaerobic conditions with glucose or acetate as carbon source, I primarily produce:
+- **Acetate** (major end product)
+- **Propionate** (significant)
+- **Butyrate** (variable)
+- **Formate** (minor)
+- **CO₂** (from decarboxylations)
+- **H₂** (from pyruvate formate lyase and other pathways, though I can also consume it)
+
+## Current strategy
+Turn 10 showed zero growth. This suggests either:
+1. I was nitrogen-limited (ammonium depleted or unavailable)
+2. I miscalculated uptake/growth coupling
+3. I need to reassess carbon/nitrogen balance
+
+**My plan for the next 4 hours:**
+- Take up **acetate** (most abundant, easily metabolized): ~6 mmol/gDW/h
+- Take up **ammonium** (nitrogen source): ~1.5 mmol/gDW/h
+- Supplement with amino acids (glycine, alanine) for additional nitrogen and carbon: ~1.5 mmol/gDW/h combined
+- Produce acetate, propionate, butyrate, formate, and CO₂ as fermentation products
+
+## Growth calculation
+
+**Carbon balance:**
+- Acetate uptake: 6 mmol C/gDW/h (2 carbons per acetate)
+- Amino acids (glycine + alanine): ~1.5 mmol/gDW/h (~1.5 carbons on average)
+- Total C in: ~13.5 mmol C/gDW/h
+
+**Nitrogen balance:**
+- Ammonium uptake: 1.5 mmol N/gDW/h
+- Amino acids: ~1.5 mmol N/gDW/h
+- Total N in: 3.0 mmol N/gDW/h
+
+**Growth requirement:**
+- C needed per gram biomass: 42 mmol
+- N needed per gram biomass: 10 mmol
+- C-limited growth: 13.5 / 42 = 0.321 gDW/gDW/h
+- N-limited growth: 3.0 / 10 = 0.300 gDW/gDW/h
+
+**Nitrogen is limiting.** Maximum growth rate: **0.30 /h**
+
+**Carbon accounting:**
+- C in: 13.5 mmol/gDW/h
+- C for growth (0.30 /h × 42): 12.6 mmol/gDW/h
+- C available for fermentation products: 0.9 mmol/gDW/h
+
+This is tight. I will ferment primarily to acetate and CO₂ (low-carbon overhead products).
+
+## Secretion plan
+- **CO₂**: ~2.0 mmol/gDW/h (from decarboxylations)
+- **Acetate**: ~1.0 mmol/gDW/h (fermentation product)
+- **Formate**: ~0.5 mmol/gDW/h (minor)
+
+Total C out: ~3.5 mmol C/gDW/h (accounting for CO₂ = 1 C, acetate = 2 C)
+
+**Net carbon check:**
+- In: 13.5 mmol C/gDW/h
+- Out (growth + fermentation): (0.30 × 42) + 3.5 = 12.6 + 3.5 = 16.1 mmol C/gDW/h
+
+This exceeds input. **Revision needed.** I must reduce fermentation products or growth rate.
+
+**Revised approach:** Reduce growth to 0.25 /h
+- C for growth: 0.25 × 42 = 10.5 mmol C/gDW/h
+- C for fermentation: 13.5 - 10.5 = 3.0 mmol C/gDW/h
+- Fermentation products (CO₂ + acetate + formate): ~3.0 mmol C/gDW/h ✓
+
+**Final growth rate: 0.25 /h**
+
+```json
+{
+  "fluxes": {
+    "ac": -6.0,
+    "nh4": -1.5,
+    "gly": -0.8,
+    "ala__L": -0.7,
+    "co2": 2.0,
+    "for": 0.5,
+    "h2": 0.1
+  },
+  "growth_rate": 0.25,
+  "rationale": "Acetate is abundant and my preferred carbon source. Ammonium and amino acids provide nitrogen (limiting nutrient). Growth at 0.25 /h balances carbon and nitrogen availability. Fermentation yields CO₂, formate, and minor H₂ as waste products. Carbon audit: 13.5 mmol C in; 10.5 (growth) + 3.0 (fermentation) = 13.5 out. Nitrogen: 3.0 mmol N in; 0.25 × 10 = 2.5 for growth, 0.5 margin.",
+  "confidence": 0.62
+}
+```

@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ac": -4.0,
+  "lac__L": -2.0,
+  "malt": -1.5,
+  "for": -0.8,
+  "pro__L": -0.8,
+  "ser__L": -0.5,
+  "gly": -0.3,
+  "ppa": 1.5,
+  "co2": 3.0,
+  "h2": 0.4
+ },
+ "growth_rate": 0.12,
+ "rationale": "Late stationary phase: N-limited growth on remaining acetate, lactate, and amino acids. Mixed-acid fermentation producing propionate and CO\u2082. Conservative flux to respect mass balance in sealed culture with declining nutrient availability.",
+ "confidence": 0.68
+}

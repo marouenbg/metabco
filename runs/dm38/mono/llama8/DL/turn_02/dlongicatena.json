@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "co2": -15.0,
+  "lac__L": 5.0,
+  "arg__L": -2.0,
+  "ser__L": -10.0,
+  "lac__D": 5.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "I'll take up carbon dioxide and L-arginine to support my growth. I'll also take up L-serine to provide additional nitrogen. I'll release lactic acid as a fermentation product.",
+ "confidence": 0.8
+}

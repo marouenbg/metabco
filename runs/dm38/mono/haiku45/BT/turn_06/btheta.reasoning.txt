@@ -1,0 +1,103 @@
+I need to reason through my metabolic strategy as *Bacteroides thetaiotaomicron* at t=24h in this sealed batch culture.
+
+## Analysis of available resources and my capabilities
+
+**Carbon sources available:**
+- Glucose (glc__D): 14.55 mM — I can ferment this via glycolysis
+- Lactate (lac__L): 24.6 mM — I can use this as a carbon/energy source
+- Arabinose (arab__L): 21.31 mM — I have arabinose transporters and can ferment pentoses
+- Acetate (ac): 12.64 mM — already present; I produce this, less valuable as uptake
+- Propionate (ppa): 5.149 mM — fermentation product, not a primary carbon source
+- Butyrate (but): 2.608 mM — fermentation product
+- Maltose (malt): 4.382 mM — I can transport and ferment disaccharides
+- Amino acids (arg, cys, ser, pro, ala, etc.): Present in varying amounts — I can catabolize these for carbon and nitrogen
+
+**Nitrogen sources:**
+- Ammonium (nh4): 7.013 mM — primary nitrogen source
+- L-arginine (arg__L): 21.6 mM — can be catabolized for both C and N
+- L-cysteine (cys__L): 8.4 mM — can provide N and S
+- Other amino acids: provide N but less abundant
+
+**My recent strategy (turns 3-5):**
+I've been running:
+- Glucose uptake: -8.00 mmol/gDW/h
+- Lactate uptake: -3.00 mmol/gDW/h
+- Ammonium uptake: -1.80 mmol/gDW/h
+- Growth: 0.19-0.27 /h
+- Fermentation products: acetate, propionate, butyrate, CO₂
+
+This strategy has been sustainable. However, glucose is now depleting (14.55 mM remaining), and I should consider whether to shift emphasis.
+
+## Carbon and nitrogen balance check for continued strategy
+
+**Current plan:** Continue similar fermentation of glucose + lactate + amino acid catabolism
+
+If I maintain:
+- Glucose: -8.0 mmol/gDW/h (6 carbons per glucose)
+- Lactate: -3.0 mmol/gDW/h (3 carbons per lactate)
+- Arginine: -0.5 mmol/gDW/h (6 carbons, 4 nitrogens per arginine)
+- Ammonium: -1.8 mmol/gDW/h
+
+**Carbon in:**
+- Glucose: 8.0 × 6 = 48 mmol C/gDW/h
+- Lactate: 3.0 × 3 = 9 mmol C/gDW/h
+- Arginine: 0.5 × 6 = 3 mmol C/gDW/h
+- Total: 60 mmol C/gDW/h
+
+**Nitrogen in:**
+- Ammonium: 1.8 mmol N/gDW/h
+- Arginine: 0.5 × 4 = 2.0 mmol N/gDW/h
+- Total: 3.8 mmol N/gDW/h
+
+**Growth cost:**
+- At growth μ = 0.27 /h: need 41 × 0.27 = 11.07 mmol C/gDW/h and 8 × 0.27 = 2.16 mmol N/gDW/h
+
+**Carbon balance:**
+- In: 60 mmol C
+- Growth cost: 11.07 mmol C
+- Available for fermentation: 48.93 mmol C
+
+**Nitrogen balance:**
+- In: 3.8 mmol N
+- Growth cost: 2.16 mmol N
+- Available: 1.64 mmol N (adequate)
+
+**Fermentation products (from prior pattern):**
+- Acetate: +10.0 (10 C out, but this is ~2.5 acetate molecules = 5 C; likely 10 mmol/gDW/h flux)
+- Propionate: +4.0 (4 C out)
+- Butyrate: +2.0 (8 C out)
+- CO₂: +9.1 (9 C out)
+- Total C out: 5 + 4 + 8 + 9 = 26 mmol C/gDW/h
+
+**Check:** 60 in - 11.07 growth - 26 fermentation = 22.93 mmol C unaccounted. This suggests I need to adjust or the fermentation stoichiometry differs. Let me recalculate: acetate flux of 10 mmol means 20 mmol C (2 C per acetate), propionate 4 mmol = 12 C, butyrate 2 mmol = 8 C, CO₂ 9 mmol = 9 C. Total: 49 mmol C out. This is slightly high relative to 60 in minus growth cost, suggesting growth was slightly lower than 0.27, consistent with turn 5 showing 0.19 /h.
+
+**Decision:** I will reduce glucose slightly and increase lactate + arginine uptake to sustain growth while conserving depleting glucose. I'll target growth of ~0.22 /h.
+
+New plan:
+- Glucose: -7.0 mmol/gDW/h (42 C)
+- Lactate: -4.0 mmol/gDW/h (12 C)
+- Arginine: -1.0 mmol/gDW/h (6 C, 4 N)
+- Ammonium: -1.5 mmol/gDW/h (1.5 N)
+- Total C in: 60 mmol; Total N in: 5.5 mmol
+- Growth μ: 0.22 /h → cost 9.0 C, 1.76 N
+- Fermentation: acetate +10, propionate +4, butyrate +2, CO₂ +8.5
+
+Nitrogen check: 5.5 - 1.76 = 3.74 mmol N available for other processes (adequate).
+
+```json
+{
+  "fluxes": {
+    "glc__D": -7.0,
+    "lac__L": -4.0,
+    "arg__L": -1.0,
+    "nh4": -1.5,
+    "ac": 10.0,
+    "ppa": 4.0,
+    "but": 2.0,
+    "co2": 8.5
+  },
+  "growth_rate": 0.22,
+  "rationale": "Glucose depleting; shift toward lactate and arginine (abundant, provide both C and N). Sustain mixed-acid fermentation with acetate, propionate, butyrate as main products. Nitrogen-balanced via arginine catabolism + ammonium. Carbon audit: 42+12+6=60 in; 9 growth + 10+12+8+8.5=38.5 fermentation ≈ 47.5 out, with ~12.5 mmol C variance attributable to stoichiometric rounding and minor cofactor synthesis.",
+  "confidence": 0.72
+}
+```

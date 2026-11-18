@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "arab__L": 5.0,
+  "nh4": 10.0,
+  "inost": 2.0,
+  "ac": 20.0,
+  "for": 5.0,
+  "h2": 5.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Taking up L-arabinose, Ammonium, and myo-inositol to support growth. Releasing acetate, formate, and hydrogen as fermentation products.",
+ "confidence": 0.8
+}

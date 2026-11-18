@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 3,
+  "growth_claimed": 0.56,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=0 out=43.3 biomass=21.1"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.653 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.147 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 11.4 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.56 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Based on my transport capabilities, growth requirements, and carbon mass balance.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": 10.0,
+   "nh4": 5.72,
+   "but": 3.33,
+   "h2": 0.65
+  },
+  "fluxes_applied": {
+   "lac__L": 0.0,
+   "nh4": -5.7121,
+   "but": 0.0,
+   "h2": 0.65,
+   "pi": -0.6532,
+   "so4": -0.1466
+  }
+ }
+]

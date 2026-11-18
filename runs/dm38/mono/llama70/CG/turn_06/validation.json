@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 6,
+  "growth_claimed": 0.275,
+  "growth_allowed": 0.1558,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: nh4",
+   "c_imbalance: in=30 out=24 biomass=9.42",
+   "n_imbalance: in=1.51 out=0 biomass=2.23"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake nh4 to pool limit -1.51",
+   "P: credited 0.286 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.072 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.275 -> 0.219",
+   "N: growth 0.219 -> 0.156"
+  ],
+  "rationale": "L-lactate fermentation with butyrate and acetate production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "nh4": -2.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "co2": 2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "nh4": -1.5133,
+   "ac": 5.0,
+   "but": 3.0,
+   "co2": 2.0,
+   "h2": 1.0,
+   "pi": -0.2859,
+   "so4": -0.072
+  }
+ }
+]

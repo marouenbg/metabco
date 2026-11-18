@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": 0.0,
+  "glc__D": 0.0,
+  "arg__L": 0.0,
+  "cys__L": 0.0,
+  "ser__L": 0.0,
+  "for": 0.0,
+  "but": 0.0,
+  "lac__D": 0.0,
+  "etoh": 3.13
+ },
+ "growth_rate": 5.425,
+ "rationale": "I will take up lactate, glucose, arginine, cysteine, serine, formate, and butyrate, and release formate, butyrate, ethanol, and acetate. The growth rate supported by my chosen uptake is 5.425 /h.",
+ "confidence": 0.8
+}

@@ -1,0 +1,30 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 5,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.583 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 2.48 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Utilize L-lactate and ammonium to meet carbon and nitrogen requirements, and produce lactate to accumulate in the environment.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "nh4": -2.5
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "nh4": -4.9751,
+   "pi": -0.5832,
+   "so4": -0.1309
+  }
+ }
+]

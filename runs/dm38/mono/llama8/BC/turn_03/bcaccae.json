@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -20.0,
+  "nh4": -10.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "succ": 5.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.42,
+ "rationale": "To achieve a growth rate of 0.42/h, I will take up D-glucose, L-lactate, and Ammonium, and release acetate, butyrate, and succinate. I will also release hydrogen as a byproduct of my metabolism.",
+ "confidence": 0.8
+}

@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "erectale",
+  "turn": 1,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=120 out=150 biomass=16.6"
+  ],
+  "warnings": [],
+  "repairs": [
+   "S: credited 0.105 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 10.6 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.5 -> 0",
+   "C: secretions scaled by 0.84"
+  ],
+  "rationale": "I will take up glucose to produce lactic acid and support growth. I will also take up ammonia to provide the nitrogen needed for growth. The growth rate supported by my chosen uptake is 0.5/h.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "nh4": 7.0,
+   "lac__L": 10.0,
+   "h2": 5.0,
+   "pi": -0.79,
+   "co2": -60.0,
+   "ac": 60.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "nh4": -3.6271,
+   "lac__L": 8.4,
+   "h2": 5.0,
+   "pi": -0.79,
+   "co2": -60.0,
+   "ac": 50.4,
+   "so4": -0.1051
+  }
+ }
+]

@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 0,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.1895,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=72 out=70 biomass=14.8"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.338 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.129 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.5 -> 0.19"
+  ],
+  "rationale": "Utilizing glucose and lactate for carbon, arginine for nitrogen. Producing acetate, butyrate, lactate, and formate as fermentation products. Growth rate adjusted to balance nitrogen uptake.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": 10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "for": 10.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": 10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "for": 10.0,
+   "pi": -0.3379,
+   "so4": -0.1291
+  }
+ }
+]

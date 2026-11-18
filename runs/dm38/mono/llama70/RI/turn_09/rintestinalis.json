@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "but": 2.5,
+  "ala__L": -2.0,
+  "ac": 1.25
+ },
+ "growth_rate": 0.145,
+ "rationale": "Butyrate and L-alanine uptake, butyrate and acetate production",
+ "confidence": 0.8
+}

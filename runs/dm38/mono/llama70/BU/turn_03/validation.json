@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "buniformis",
+  "turn": 3,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.564 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.118 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "glucose and amino acid uptake support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arg__L": -2.0,
+   "ala__L": -1.5,
+   "ac": 5.0,
+   "ppa": 3.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arg__L": -2.0,
+   "ala__L": -1.5,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "pi": -0.5637,
+   "so4": -0.1178
+  }
+ }
+]

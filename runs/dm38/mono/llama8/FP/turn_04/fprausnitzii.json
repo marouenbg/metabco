@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "but": 14.11,
+  "nh4": 7.35,
+  "ac": 5
+ },
+ "growth_rate": 0.59,
+ "rationale": "Butyrate uptake is supported by the available butyrate concentration, and the growth rate is limited by the butyrate availability. Ammonium is taken up to support nitrogen requirement.",
+ "confidence": 0.8
+}

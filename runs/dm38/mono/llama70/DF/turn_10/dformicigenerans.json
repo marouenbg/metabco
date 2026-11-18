@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "pro__L": -2.0,
+  "gly": -1.0,
+  "phe__L": -1.0,
+  "for": 2.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "acetate and amino acid uptake, formate and acetate production",
+ "confidence": 0.6
+}

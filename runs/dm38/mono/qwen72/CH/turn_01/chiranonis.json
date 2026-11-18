@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -3.5,
+  "lac__L": -3.5,
+  "nh4": -2.63,
+  "ac": 5.0,
+  "but": 3.0,
+  "co2": 1.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Reduced carbon uptake to balance the carbon deficit and maintain a sustainable growth rate.",
+ "confidence": 0.8
+}

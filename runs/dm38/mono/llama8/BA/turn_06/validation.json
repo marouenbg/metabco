@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 6,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.75,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "P: credited 0.532 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "I'll take up L-lactate, D-glucose, myo-inositol, L-serine, L-cysteine, L-arginine, L-glutamine, and L-asparagine for growth. I'll release lactate, acetate, and formate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": 10.0,
+   "glc__D": -5.0,
+   "inost": -2.0,
+   "ser__L": -5.0,
+   "cys__L": -2.0,
+   "arg__L": -5.0,
+   "gln__L": -2.0,
+   "asn__L": -2.0,
+   "ac": 5.0,
+   "for": 2.0
+  },
+  "fluxes_applied": {
+   "lac__L": 10.0,
+   "glc__D": -5.0,
+   "inost": -2.0,
+   "ser__L": -5.0,
+   "cys__L": -2.0,
+   "arg__L": -5.0,
+   "gln__L": -2.0,
+   "asn__L": -2.0,
+   "ac": 5.0,
+   "for": 2.0,
+   "pi": -0.5317
+  }
+ }
+]

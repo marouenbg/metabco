@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": 10.0,
+  "nh4": 10.0,
+  "glc__D": 0.25,
+  "co2": -33.0,
+  "lac__D": 10.0,
+  "ac": 5.0,
+  "for": 5.0,
+  "h2": -0.5,
+  "h2s": -0.5
+ },
+ "growth_rate": 0.75,
+ "rationale": "Moderate growth on lactate and ammonium, with a small amount of glucose to meet biomass cost. Fermentation products are lactate, acetate, and formate.",
+ "confidence": 0.8
+}

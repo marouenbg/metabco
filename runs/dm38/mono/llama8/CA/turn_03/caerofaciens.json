@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -0.107,
+  "arg__L": -0.107,
+  "nh4": -0.107,
+  "lac__D": 0.107,
+  "ac": 0.107,
+  "for": 0.107
+ },
+ "growth_rate": 0.058,
+ "rationale": "Collinsella aerofaciens will take up lactate and release lactate and acetate to support a growth rate of 0.058 mmol of carbon per gram dry weight per hour.",
+ "confidence": 0.9
+}

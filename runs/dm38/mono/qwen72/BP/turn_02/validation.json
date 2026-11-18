@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 2,
+  "growth_claimed": 0.11,
+  "growth_allowed": 0.11,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0739 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0284 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Balanced carbon and nitrogen uptake and production to support a growth rate of 0.11 /h.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "nh4": -2.0,
+   "ac": 0.1,
+   "for": 0.5,
+   "lac__L": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "nh4": -2.0,
+   "ac": 0.1,
+   "for": 0.5,
+   "lac__L": 1.0,
+   "pi": -0.0739,
+   "so4": -0.0284
+  }
+ }
+]

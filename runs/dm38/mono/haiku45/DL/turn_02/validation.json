@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 2,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.35,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.408 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0916 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Moderate mixed-substrate fermentation of glucose, lactate, arabinose, and arginine; declining growth rate reflects depletion of preferred substrates and transition to secondary carbon sources. Ferment",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "glc__D": -6.0,
+   "lac__L": -5.0,
+   "arab__L": -3.0,
+   "arg__L": -3.0,
+   "nh4": -1.5,
+   "but": 1.78,
+   "ac": 2.65,
+   "for": 3.53,
+   "co2": 1.78
+  },
+  "fluxes_applied": {
+   "glc__D": -6.0,
+   "lac__L": -5.0,
+   "arab__L": -3.0,
+   "arg__L": -3.0,
+   "nh4": -1.5,
+   "but": 1.78,
+   "ac": 2.65,
+   "for": 3.53,
+   "co2": 1.78,
+   "pi": -0.4083,
+   "so4": -0.0916
+  }
+ }
+]

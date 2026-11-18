@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 1,
+  "growth_claimed": 0.758,
+  "growth_allowed": 0.496,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=30 out=15 biomass=25.2"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.706 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.159 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 3.29 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.758 -> 0.496"
+  ],
+  "rationale": "Ferment L-lactate to produce formate and acetate, maintaining a growth rate of 0.758 /h.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "ac": 5.0,
+   "for": 5.0,
+   "nh4": -2.1
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "ac": 5.0,
+   "for": 5.0,
+   "nh4": -5.3918,
+   "pi": -0.7055,
+   "so4": -0.1593
+  }
+ }
+]

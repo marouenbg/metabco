@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "malt": -4.382,
+  "cys__L": -3.96,
+  "arg__L": -0.7749,
+  "asn__L": -2.6,
+  "gln__L": -1.0,
+  "nh4": 0.8,
+  "but": 2.5,
+  "ppa": 1.8,
+  "co2": 3.2,
+  "h2": 0.4
+ },
+ "growth_rate": 0.1,
+ "rationale": "Late-batch growth limited by ammonium (4.7 mM remaining). Uptake maltose and nitrogen-rich amino acids (cysteine, asparagine, arginine, glutamine) to support modest continued growth. Ferment via mixed-acid pathway to butyrate and propionate, primary Bacteroides products. Carbon and nitrogen balanced; growth rate reflects N limitation in sealed vessel.",
+ "confidence": 0.62
+}

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "arab__L": -5.0,
+  "arg__L": -2.0,
+  "ser__L": -1.0,
+  "but": 2.5,
+  "ac": 2.0,
+  "for": 1.5,
+  "co2": 2.0,
+  "nh4": 6.5
+ },
+ "growth_rate": 0.25,
+ "rationale": "Anaerostipes caccae ferments arabinose and arginine via mixed-acid fermentation, producing butyrate, acetate, formate, and CO\u2082. Growth is declining due to glucose depletion and accumulation of organic acids. Arabinose and arginine remain abundant and are metabolised at realistic rates. Nitrogen from arginine deamination is released as ammonium. Carbon and nitrogen budgets balance.",
+ "confidence": 0.72
+}

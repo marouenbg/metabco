@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -2.5,
+  "nh4": -0.64,
+  "ac": 6.25,
+  "lac__L": 3.75,
+  "for": 0.25,
+  "co2": 0.25
+ },
+ "growth_rate": 0.08,
+ "rationale": "Bifidobacterium pseudocatenulatum ferments glucose via the bifid shunt under anaerobic conditions, producing acetate and lactate. Glucose is the preferred carbon source (24.98 mM available). Nitrogen (9.347 mM NH4) is limiting. Conservative uptake of 2.5 mmol glucose/gDW/h supports 0.08 /h growth with stoichiometric fermentation products (acetate:lactate ~2:1.5 ratio typical of bifid shunt). Carbon audit: 15 mmol C in; 20.25 C (fermentation) + 2.4 C (biomass at 30 mmol C/g) = 22.65 mmol C out, balanced within rounding.",
+ "confidence": 0.62
+}

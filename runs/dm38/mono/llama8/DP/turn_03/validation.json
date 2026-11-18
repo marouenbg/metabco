@@ -1,0 +1,80 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 3,
+  "growth_claimed": 0.55,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=0 out=10 biomass=23.4"
+  ],
+  "warnings": [
+   "no_transporter: malt"
+  ],
+  "repairs": [
+   "P: credited 0.722 mmol/gDW/h of pi (declared present in excess)",
+   "N: credited 10.7 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.55 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Prioritizing sulfate utilization and hydrogen sulfide production, taking up carbon dioxide and ammonium for growth.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "co2": 10.0,
+   "lac__L": 0.0,
+   "nh4": 5.0,
+   "h2s": 10.0,
+   "so4": -10.07,
+   "cys__L": 0.0,
+   "ser__L": 0.0,
+   "pro__L": 0.0,
+   "ala__L": 0.0,
+   "gly": 0.0,
+   "phe__L": 0.0,
+   "malt": 0.0,
+   "leu__L": 0.0,
+   "tyr__L": 0.0,
+   "val__L": 0.0,
+   "gln__L": 0.0,
+   "asn__L": 0.0,
+   "lys__L": 0.0,
+   "thr__L": 0.0,
+   "h2": 0.0,
+   "for": 0.0,
+   "ac": 0.0,
+   "met__L": 0.0,
+   "trp__L": 0.0,
+   "glu__L": 0.0,
+   "cbl1": 0.0
+  },
+  "fluxes_applied": {
+   "co2": 0.0,
+   "lac__L": 0.0,
+   "nh4": -5.6632,
+   "h2s": 10.0,
+   "so4": -10.07,
+   "cys__L": 0.0,
+   "ser__L": 0.0,
+   "pro__L": 0.0,
+   "ala__L": 0.0,
+   "gly": 0.0,
+   "phe__L": 0.0,
+   "malt": 0.0,
+   "leu__L": 0.0,
+   "tyr__L": 0.0,
+   "val__L": 0.0,
+   "gln__L": 0.0,
+   "asn__L": 0.0,
+   "lys__L": 0.0,
+   "thr__L": 0.0,
+   "h2": 0.0,
+   "for": 0.0,
+   "ac": 0.0,
+   "met__L": 0.0,
+   "trp__L": 0.0,
+   "glu__L": 0.0,
+   "cbl1": 0.0,
+   "pi": -0.7222
+  }
+ }
+]

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "nh4": 8.0,
+  "lac__L": 15.0,
+  "for": 0.5,
+  "h2": 0.5
+ },
+ "growth_rate": 0.55,
+ "rationale": "Utilizing D-glucose (glc__D) and Ammonium (nh4) for growth, releasing L-lactate (lac__L) and Formate (for) as products.",
+ "confidence": 0.9
+}

@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 3,
+  "growth_claimed": 0.42,
+  "growth_allowed": 0.42,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.526 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.11 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "To achieve a growth rate of 0.42/h, I will take up D-glucose, L-lactate, and Ammonium, and release acetate, butyrate, and succinate. I will also release hydrogen as a byproduct of my metabolism.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -20.0,
+   "nh4": -10.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "succ": 5.0,
+   "h2": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -20.0,
+   "nh4": -10.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "succ": 5.0,
+   "h2": 2.0,
+   "pi": -0.5261,
+   "so4": -0.1099
+  }
+ }
+]

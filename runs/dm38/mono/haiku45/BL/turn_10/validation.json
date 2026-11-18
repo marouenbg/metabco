@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 10,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.2,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ser__L"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake ser__L to pool limit -0.391",
+   "P: credited 0.233 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0523 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Acetate is abundant and my preferred carbon source; amino acids provide nitrogen for growth. Fermentation to lactate and formate is my characteristic metabolism. Growth rate 0.20/h is sustainable give",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "ac": -8.0,
+   "gly": -1.2,
+   "ser__L": -0.8,
+   "pro__L": -0.6,
+   "leu__L": -0.4,
+   "lac__L": 2.5,
+   "for": 0.3,
+   "co2": 1.6
+  },
+  "fluxes_applied": {
+   "ac": -8.0,
+   "gly": -1.2,
+   "ser__L": -0.391,
+   "pro__L": -0.6,
+   "leu__L": -0.4,
+   "lac__L": 2.5,
+   "for": 0.3,
+   "co2": 1.6,
+   "pi": -0.2326,
+   "so4": -0.0523
+  }
+ }
+]

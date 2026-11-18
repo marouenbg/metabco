@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -12.0,
+  "arab__L": -4.0,
+  "arg__L": -6.0,
+  "nh4": -2.0,
+  "ac": 1.5,
+  "but": 1.2,
+  "for": 0.5,
+  "ppa": 0.3,
+  "co2": 2.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Sustained mixed-acid fermentation of glucose, arabinose, and arginine. Arginine provides both carbon and nitrogen (4 N per molecule). Fermentation products (acetate, butyrate, formate, propionate, CO\u2082) balance carbon budget. Growth rate conservative relative to turn 0 to account for sealed batch depletion over 48 h.",
+ "confidence": 0.72
+}

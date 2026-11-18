@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ppa": -10.0,
+  "but": -5.0,
+  "ac": 3.0,
+  "phe__L": -2.0,
+  "leu__L": -1.5,
+  "tyr__L": -1.5,
+  "val__L": -1.0,
+  "pro__L": -0.5,
+  "h2": 2.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.137,
+ "rationale": "Utilizing available propionate and butyrate for carbon, and a mix of amino acids for nitrogen to support growth and produce fermentation products.",
+ "confidence": 0.8
+}

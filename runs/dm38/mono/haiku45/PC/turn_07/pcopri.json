@@ -1,0 +1,20 @@
+{
+ "fluxes": {
+  "malt": -4.0,
+  "arab__L": -3.0,
+  "leu__L": -2.0,
+  "val__L": -1.5,
+  "ile__L": -1.0,
+  "ser__L": -1.5,
+  "cys__L": -0.8,
+  "ac": 8.0,
+  "ppa": 5.5,
+  "for": 3.0,
+  "lac__L": 4.0,
+  "co2": 3.5,
+  "h2": 0.3
+ },
+ "growth_rate": 0.35,
+ "rationale": "Consuming remaining carbohydrates (maltose, arabinose) and branched-chain amino acids for rapid fermentation. Fermentation products (acetate, propionate, formate, lactate) are released to balance redox. Amino acid nitrogen supports growth at 0.35/h. Carbon budget: 142.8 mmol in supports 15.75 mmol biomass C and ~127 mmol fermentation products.",
+ "confidence": 0.72
+}

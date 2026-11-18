@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "lac__L": -2.0,
+  "arg__L": -1.5,
+  "ala__L": -1.5,
+  "ser__L": -1.0,
+  "ac": 3.5,
+  "ppa": 1.2,
+  "co2": 2.0,
+  "succ": 0.8
+ },
+ "growth_rate": 0.8,
+ "rationale": "Resuming fermentation after turn 3 zero-growth anomaly. Using abundant glucose and lactate as primary C sources; arginine, alanine, serine for N. Ferment to acetate, propionate, succinate, CO2. Carbon balance: 48 mmol C in (glucose 36 + lactate 6 + arginine 6) minus 8 mmol C out (products) leaves 40 mmol C for ~0.95 g biomass; nitrogen available (8 mmol N) limits to 0.8 /h growth.",
+ "confidence": 0.65
+}

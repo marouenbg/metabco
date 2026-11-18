@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 3,
+  "growth_claimed": 0.65,
+  "growth_allowed": 0.65,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.605 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.137 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Glucose depleted; shifting to lactate (primary), arginine (C+N), and butyrate (secondary). Mixed-acid fermentation produces acetate, formate, CO\u2082, and H\u2082. Carbon audit: 38 mmol in (12 lactate + 18 arg",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -12.0,
+   "arg__L": -3.0,
+   "nh4": -2.0,
+   "but": -2.0,
+   "ac": 4.5,
+   "for": 2.5,
+   "co2": 8.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -12.0,
+   "arg__L": -3.0,
+   "nh4": -2.0,
+   "but": -2.0,
+   "ac": 4.5,
+   "for": 2.5,
+   "co2": 8.0,
+   "h2": 1.0,
+   "pi": -0.605,
+   "so4": -0.1366
+  }
+ }
+]

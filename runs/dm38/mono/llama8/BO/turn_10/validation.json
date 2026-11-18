@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 10,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.626 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing L-arabinose and L-serine as primary carbon and nitrogen sources, and releasing butyrate and hydrogen as byproducts.",
+  "confidence": 1.0,
+  "fluxes_claimed": {
+   "arab__L": -10.0,
+   "ser__L": -6.325,
+   "but": 5.0,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "arab__L": -10.0,
+   "ser__L": -6.325,
+   "but": 5.0,
+   "h2": 0.5,
+   "pi": -0.6263,
+   "so4": -0.1309
+  }
+ }
+]

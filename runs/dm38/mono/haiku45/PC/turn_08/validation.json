@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 8,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=28 out=44.5 biomass=11.2"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.341 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0654 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.25 -> 0",
+   "C: secretions scaled by 0.661"
+  ],
+  "rationale": "Resuming mixed-acid fermentation on acetate and propionate with amino acid co-fermentation for nitrogen. Nitrogen-limited conditions require careful amino acid uptake. Producing formate and acetate as",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "ac": 14.75,
+   "ppa": -5.0,
+   "lys__L": -1.5,
+   "thr__L": -1.0,
+   "for": 15.0
+  },
+  "fluxes_applied": {
+   "ac": 9.7449,
+   "ppa": -5.0,
+   "lys__L": -1.5,
+   "thr__L": -1.0,
+   "for": 9.9101,
+   "pi": -0.3408,
+   "so4": -0.0654
+  }
+ }
+]

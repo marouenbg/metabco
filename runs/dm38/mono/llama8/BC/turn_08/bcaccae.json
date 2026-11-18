@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "h2": -5.0,
+  "ac": 10.0,
+  "but": 5.0
+ },
+ "growth_rate": 0.46,
+ "rationale": "I will take up lactate and hydrogen to support growth and fermentation product formation. The growth rate is supported by the available carbon sources."
+}

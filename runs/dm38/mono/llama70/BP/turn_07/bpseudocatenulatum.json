@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "malt": -5.0,
+  "cys__L": -1.0,
+  "ser__L": -1.0,
+  "ac": 2.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Balanced carbon and nitrogen uptake for growth and fermentation",
+ "confidence": 0.8
+}

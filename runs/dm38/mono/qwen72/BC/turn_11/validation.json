@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 11,
+  "growth_claimed": 0.1,
+  "growth_allowed": 0.0319,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: lac__L",
+   "n_imbalance: in=0.6 out=0.3 biomass=1.04"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake lac__L to pool limit -2.17",
+   "P: credited 0.125 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0262 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.1 -> 0.0319"
+  ],
+  "rationale": "Balanced uptake of acetate, propionate, and lactate for energy and carbon, with moderate growth rate supported by available nutrients.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "ac": -3.0,
+   "ppa": -3.0,
+   "but": -1.0,
+   "malt": -0.5,
+   "lac__L": -2.5,
+   "gln__L": -0.3,
+   "co2": 2.0,
+   "nh4": 0.3
+  },
+  "fluxes_applied": {
+   "ac": -3.0,
+   "ppa": -3.0,
+   "but": -1.0,
+   "malt": -0.5,
+   "lac__L": -2.1734,
+   "gln__L": -0.3,
+   "co2": 2.0,
+   "nh4": 0.3,
+   "pi": -0.1253,
+   "so4": -0.0262
+  }
+ }
+]

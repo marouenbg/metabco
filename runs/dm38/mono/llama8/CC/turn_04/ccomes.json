@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -6.99,
+  "h2": 10.0,
+  "for": 8.0,
+  "etoh": 6.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "Utilizing lactate as a carbon source, ammonium as a nitrogen source, and producing formate, ethanol, and lactate as fermentation products in an anaerobic environment.",
+ "confidence": 0.9
+}

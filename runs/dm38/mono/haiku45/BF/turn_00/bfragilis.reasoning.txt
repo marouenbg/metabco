@@ -1,0 +1,84 @@
+# Metabolic decision for Bacteroides fragilis NCTC 9343 at t=0
+
+## Analysis of available transporters and substrates
+
+Bacteroides fragilis is a Gram-negative anaerobic bacterium with a rich metabolic repertoire. I can transport and metabolize:
+
+**Primary carbon sources available:**
+- D-glucose (glc__D): 24.98 mM — excellent substrate, I have PTS and other glucose transporters
+- L-lactate (lac__L): 28.31 mM — I can use lactate via lactate oxidation pathways
+- L-arabinose (arab__L): 21.31 mM — I have arabinose transporters and can ferment it
+- Maltose (malt): 4.382 mM — I have maltose PTS
+- Many amino acids (arg, cys, ser, pro, ala, phe, leu, tyr, val, etc.) — I can catabolize these
+
+**Nitrogen sources:**
+- Ammonium (nh4): 9.347 mM — primary nitrogen source, readily transportable
+- L-arginine (arg__L): 21.81 mM — can use for both carbon and nitrogen
+- Other amino acids provide nitrogen but are secondary
+
+## Metabolic strategy
+
+As a saccharolytic and proteolytic anaerobe in a sealed batch culture, my strategy is:
+
+1. **Prioritize glucose and arabinose** — these are abundant simple sugars that support rapid fermentation
+2. **Use arginine** — abundant (21.81 mM) and provides both carbon and nitrogen; I have the arginine deiminase pathway
+3. **Fermentation products** — as an obligate anaerobe, I ferment carbohydrates to acetate, propionate, butyrate, formate, and succinate. Given my metabolic capabilities, I'll produce primarily **acetate, butyrate, and formate** from glucose fermentation
+4. **Nitrogen balance** — ammonium + arginine will support growth
+
+## Flux calculation
+
+**Carbon uptake plan:**
+- Glucose: 12 mmol/gDW/h (aggressive but realistic for Bacteroides on preferred sugar)
+- Arabinose: 6 mmol/gDW/h (secondary sugar)
+- Arginine: 8 mmol/gDW/h (provides ~6 mmol C and ~1.5 mmol N per mmol)
+- **Total C in: ~12 + 6 + 8 = 26 mmol C/gDW/h**
+
+**Nitrogen uptake:**
+- Ammonium: 3 mmol/gDW/h
+- Arginine: 8 mmol/gDW/h (provides ~1.5 mmol N/mmol arginine)
+- **Total N in: ~3 + 12 = ~15 mmol N/gDW/h**
+
+**Growth calculation:**
+- C requirement: 41 mmol C/g DW
+- N requirement: 8 mmol N/g DW
+- With 26 mmol C/h and 15 mmol N/h available:
+  - C-limited growth: 26/41 = 0.634 /h
+  - N-limited growth: 15/8 = 1.875 /h
+  - **Growth limited by carbon: ~0.55 /h** (accounting for fermentation inefficiency)
+
+**Carbon balance for fermentation:**
+- C in: 26 mmol/gDW/h
+- C for growth: 41 × 0.55 = 22.55 mmol/gDW/h
+- C for fermentation products: 26 - 22.55 = 3.45 mmol/gDW/h
+
+From glucose/arabinose fermentation, I produce acetate, butyrate, formate, and some CO₂. A mixed fermentation yields roughly:
+- Acetate: 1.5 mmol/gDW/h
+- Butyrate: 1.2 mmol/gDW/h
+- Formate: 0.5 mmol/gDW/h
+- CO₂: 0.25 mmol/gDW/h (from decarboxylation)
+
+This balances the 3.45 mmol C for fermentation products.
+
+## Audit
+- **C in:** 12 (glc) + 6 (arab) + 8 (arg) = 26 mmol C/gDW/h ✓
+- **C out:** 22.55 (growth) + 1.5 (acetate) + 1.2 (butyrate) + 0.5 (formate) + 0.25 (CO₂) = 26 mmol C/gDW/h ✓
+- **N in:** 3 (NH₄) + 12 (arg) = 15 mmol N/gDW/h ✓
+- **N out:** 8 (growth) + 7 (excess, released as NH₄ from arginine catabolism) ✓
+
+```json
+{
+  "fluxes": {
+    "glc__D": -12.0,
+    "arab__L": -6.0,
+    "arg__L": -8.0,
+    "nh4": -3.0,
+    "ac": 1.5,
+    "but": 1.2,
+    "for": 0.5,
+    "co2": 0.25
+  },
+  "growth_rate": 0.55,
+  "rationale": "Bacteroides fragilis ferments abundant glucose and arabinose with arginine as a supplementary carbon and nitrogen source. Fermentation of these sugars under anaerobic conditions yields acetate, butyrate, and formate as major products. Growth is limited by available carbon at ~0.55 /h, with nitrogen in excess. The carbon balance is conserved: 26 mmol in supports 22.55 mmol for biomass plus 3.45 mmol for fermentation products.",
+  "confidence": 0.72
+}
+```

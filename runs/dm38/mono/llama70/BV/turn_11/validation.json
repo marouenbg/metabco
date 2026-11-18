@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 11,
+  "growth_claimed": 0.55,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: but",
+   "n_imbalance: in=4 out=0 biomass=4.64",
+   "p_imbalance: in=0 out=0 biomass=0.453"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake but to pool limit -9.87",
+   "N: growth 0.55 -> 0.498",
+   "P: growth 0.498 -> 0"
+  ],
+  "rationale": "Utilizing butyrate and acetate as carbon sources, and amino acids as nitrogen sources, to produce propionate and butyrate as fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": -10.0,
+   "ac": -5.0,
+   "co2": 5.0,
+   "ppa": 5.0,
+   "tyr__L": -1.0,
+   "cys__L": -1.0,
+   "asn__L": -1.0
+  },
+  "fluxes_applied": {
+   "but": -9.8688,
+   "ac": -5.0,
+   "co2": 5.0,
+   "ppa": 5.0,
+   "tyr__L": -1.0,
+   "cys__L": -1.0,
+   "asn__L": -1.0
+  }
+ }
+]

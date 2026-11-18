@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -3.0,
+  "arg__L": -0.5,
+  "ser__L": -0.2,
+  "pro__L": -0.1,
+  "gly": -0.08,
+  "phe__L": -0.05,
+  "but": 2.0,
+  "ppa": 1.5,
+  "ac": 1.0,
+  "for": 0.5,
+  "nh4": -0.5
+ },
+ "growth_rate": 0.15,
+ "rationale": "I've chosen a growth rate of 0.150 /h, which is consistent with my previous growth rates. I'll take up D-glucose (glc__D), L-lactate (lac__L), L-arginine (arg__L), and other amino acids. I'll release butyrate (but), propionate (ppa), and acetate (ac) as SCFAs. I'll also release formate (for) as a byproduct of fermentation. Based on the given conditions, I'll take up the following fluxes.",
+ "confidence": 0.8
+}

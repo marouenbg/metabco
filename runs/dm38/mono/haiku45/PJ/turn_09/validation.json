@@ -1,0 +1,47 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 9,
+  "growth_claimed": 0.9,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=105 out=172 biomass=38"
+  ],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 1.13 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.236 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.9 -> 0",
+   "C: secretions scaled by 0.641"
+  ],
+  "rationale": "Nitrogen-limited growth using arginine as dual C/N source to recover from turn 8 arrest. Mixed fermentation of glucose, lactate, and arabinose with acetate, propionate, and succinate as products. Argi",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -6.0,
+   "arg__L": -4.0,
+   "arab__L": -3.0,
+   "nh4": -1.0,
+   "ac": 35.0,
+   "ppa": 20.0,
+   "succ": 10.0,
+   "co2": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -6.0,
+   "arg__L": -4.0,
+   "arab__L": -3.0,
+   "nh4": -1.0,
+   "ac": 22.4346,
+   "ppa": 12.8198,
+   "succ": 6.4099,
+   "co2": 1.282,
+   "pi": -1.1273,
+   "so4": -0.2356
+  }
+ }
+]

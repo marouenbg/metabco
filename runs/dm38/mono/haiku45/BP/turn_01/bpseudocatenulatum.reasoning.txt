@@ -1,0 +1,94 @@
+# Reasoning
+
+## Assessment of Carbon and Nitrogen Sources
+
+**Transporters I encode (Bifidobacterium pseudocatenulatum):**
+As a bifid, I have:
+- Excellent glucose and fructose transporters (PTS systems)
+- Lactate transporters
+- Amino acid permeases for most proteinogenic amino acids
+- Limited capacity for complex carbohydrates (arabinose, maltose)
+- Arginine and other amino acid catabolism pathways
+
+**Abundant but inaccessible:**
+- CO₂ (47.62 mM): I cannot fix CO₂ autotrophically; I only use it as an overflow product
+- Nitrate (0.11 mM): I lack nitrate reductase; cannot use it
+
+**Optimal strategy at t=4h:**
+I should prioritize:
+1. **D-glucose (24.96 mM)**: My preferred fermentable sugar, high energy yield
+2. **L-lactate (28.33 mM)**: Excellent secondary carbon source; I can ferment it
+3. **L-arginine (21.81 mM)**: Rich in N and C; I can catabolize it via arginine deiminase pathway
+4. **Amino acids**: Supplementary N and C when needed
+
+**Fermentation products I produce:**
+- Lactate (primary end product)
+- Acetate (major product)
+- Formate (minor overflow)
+- Small amounts of ethanol or CO₂ under certain conditions
+
+## Growth Calculation
+
+**Current biomass:** 0.002178 gDW/L
+
+**Uptake strategy for next 4 hours:**
+- Glucose: primary fermentation substrate
+- Lactate: secondary fermentation substrate  
+- Arginine: amino acid N source and C supplement
+- Ammonium: direct N source
+
+**Carbon balance:**
+- Glucose uptake: ~8 mmol/gDW/h × 6 C/molecule = 48 C mmol/gDW/h
+- Lactate uptake: ~3 mmol/gDW/h × 3 C/molecule = 9 C mmol/gDW/h
+- Arginine uptake: ~2 mmol/gDW/h × 6 C/molecule = 12 C mmol/gDW/h
+- **Total C in:** ~69 C mmol/gDW/h
+
+**Growth requirement:**
+- For μ = 0.40 /h: need 30 × 0.40 = 12 C mmol/gDW/h
+- Remaining for fermentation products: 69 - 12 = 57 C mmol/gDW/h
+
+**Nitrogen balance:**
+- Arginine: 2 mmol/gDW/h × 1 N = 2 N mmol/gDW/h
+- Ammonium: 1.5 mmol/gDW/h = 1.5 N mmol/gDW/h
+- **Total N in:** ~3.5 N mmol/gDW/h
+- Growth requirement: 8 × 0.40 = 3.2 N mmol/gDW/h
+- Remaining: 0.3 N mmol/gDW/h (minimal overflow)
+
+**Fermentation stoichiometry:**
+Bifid fermentation of glucose typically yields:
+- 1 glucose → ~1.5 lactate + 0.5 acetate (+ CO₂, formate)
+
+With mixed substrate fermentation (glucose + lactate), I'll produce:
+- Acetate: ~25 C mmol/gDW/h
+- Lactate: ~28 C mmol/gDW/h
+- Formate: ~4 C mmol/gDW/h
+
+**Audit:**
+- C in: 69 mmol/gDW/h
+- C out (products): 25 + 28 + 4 = 57 mmol/gDW/h
+- C in biomass: 12 mmol/gDW/h
+- Total: 57 + 12 = 69 ✓ **Balanced**
+
+- N in: 3.5 mmol/gDW/h
+- N in biomass: 3.2 mmol/gDW/h
+- N out: 0.3 mmol/gDW/h ✓ **Balanced**
+
+**Growth rate: μ = 0.40 /h** (conservative, realistic for bifid on mixed substrates)
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -3.0,
+    "arg__L": -2.0,
+    "nh4": -1.5,
+    "ac": 25.0,
+    "lac__L": 28.0,
+    "for": 4.0,
+    "co2": 2.0
+  },
+  "growth_rate": 0.40,
+  "rationale": "Bifid fermentation of glucose + lactate + arginine catabolism. Primary products: lactate and acetate. N from arginine + ammonium covers growth demand. C balance: 69 in = 57 products + 12 biomass. Realistic bifid growth on mixed fermentables in anaerobic batch.",
+  "confidence": 0.72
+}
+```

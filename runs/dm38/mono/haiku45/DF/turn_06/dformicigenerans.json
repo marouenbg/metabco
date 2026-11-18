@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "malt": -7.5,
+  "inost": -5.5,
+  "arg__L": -2.4,
+  "cys__L": -2.8,
+  "but": 26.0,
+  "ac": 16.0,
+  "for": 9.0,
+  "co2": 32.0,
+  "h2": 1.2
+ },
+ "growth_rate": 0.5,
+ "rationale": "Dorea formicigenerans ferments available carbohydrates (maltose, inositol) and amino acids (arginine for N; cysteine for C/N). Fermentation yields butyrate, acetate, formate, CO\u2082, and H\u2082. Carbon balance: 156 mmol in (malt 90 + inost 33 + arg 14.4 + cys 8.4) covers 16.5 mmol growth + ~139 mmol fermentation products. Nitrogen: 12 mmol in covers 3.5 mmol growth + amino acid catabolism. Growth rate 0.50 /h is conservative, consistent with substrate limitation and prior turns 4\u20135 pattern.",
+ "confidence": 0.62
+}

@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 7,
+  "growth_claimed": 0.44,
+  "growth_allowed": 0.44,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: inost",
+   "uptake_exceeds_pool: malt"
+  ],
+  "warnings": [
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "clipped uptake inost to pool limit -7.12",
+   "clipped uptake malt to pool limit -4.98",
+   "P: credited 0.6 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Utilizing myo-inositol and maltose as carbon sources, with L-cysteine as a nitrogen source, to produce acetate and propionate as fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "inost": -10.0,
+   "malt": -10.0,
+   "cys__L": -5.0,
+   "ac": 5.0,
+   "ppa": 2.5
+  },
+  "fluxes_applied": {
+   "inost": -7.1214,
+   "malt": -4.9755,
+   "cys__L": -5.0,
+   "ac": 5.0,
+   "ppa": 2.5,
+   "pi": -0.5998
+  }
+ }
+]

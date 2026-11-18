@@ -1,0 +1,79 @@
+# Metabolic decision for Bacteroides ovatus ATCC 8483 — turn 1
+
+## Analysis
+
+**Available carbon sources and transport capacity:**
+
+Bacteroides ovatus is a saccharolytic anaerobe with a versatile degradative capacity. I can access:
+- D-glucose (glc__D): 24.75 mM — excellent primary substrate
+- L-lactate (lac__L): 28.24 mM — readily fermented
+- L-arabinose (arab__L): 21.31 mM — accessible via PTS or permeases
+- Maltose (malt): 4.382 mM — via maltose PTS
+- myo-inositol (inost): 6.272 mM — via inositol utilization pathways
+
+I cannot efficiently use the abundant amino acids as primary carbon sources (they are present in excess as nitrogen sources and co-factors, not as major fermentation substrates for this species). Acetate is too depleted to be useful.
+
+**Nitrogen sources:**
+
+- Ammonium (nh4): 9.291 mM — preferred
+- Amino acids: L-arginine (21.77 mM), L-cysteine (8.4 mM), and others — can be deaminated or transaminated
+
+**Fermentation strategy:**
+
+As an obligate anaerobe, I ferment sugars and lactate to short-chain fatty acids (acetate, propionate, butyrate) and CO₂. My recent behaviour shows I produced acetate, propionate, and succinate from glucose and lactate. This is consistent with mixed-acid fermentation typical of Bacteroides.
+
+**Growth calculation:**
+
+From turn 0, I grew at 0.550 /h while consuming 8.0 mmol/gDW/h glucose and 2.5 mmol/gDW/h lactate, using 2.0 mmol/gDW/h ammonium.
+
+For turn 1, I will maintain a similar but slightly elevated strategy:
+- Glucose uptake: 7.5 mmol/gDW/h
+- Lactate uptake: 2.5 mmol/gDW/h
+- Ammonium uptake: 2.0 mmol/gDW/h
+- Arabinose uptake: 1.5 mmol/gDW/h (to diversify substrate use)
+
+**Carbon audit:**
+
+Carbon in:
+- Glucose: 7.5 × 6 = 45.0 mmol C
+- Lactate: 2.5 × 3 = 7.5 mmol C
+- Arabinose: 1.5 × 5 = 7.5 mmol C
+- Total: 60.0 mmol C
+
+Carbon out (at growth rate μ = 0.55 /h):
+- Biomass: 0.55 × 42 = 23.1 mmol C
+- Fermentation products (acetate, propionate, succinate, CO₂): ~36.9 mmol C
+
+This balances well. Projected growth rate: **0.55 /h**
+
+**Nitrogen audit:**
+
+Nitrogen in: 2.0 mmol/gDW/h (ammonium)
+Nitrogen out: 0.55 × 10 = 5.5 mmol/gDW/h (biomass requirement)
+
+The ammonium uptake is insufficient. I should increase it or use amino acid deamination:
+- Revised ammonium uptake: 3.0 mmol/gDW/h
+- Revised growth: 0.60 /h (slightly higher due to additional N availability)
+
+**Final flux decision:**
+
+Uptakes (negative): glucose, lactate, arabinose, ammonium
+Secretions (positive): acetate, propionate, CO₂, succinate
+
+```json
+{
+  "fluxes": {
+    "glc__D": -7.5,
+    "lac__L": -2.5,
+    "arab__L": -1.5,
+    "nh4": -3.0,
+    "ac": 4.8,
+    "ppa": 2.5,
+    "co2": 3.2,
+    "succ": 1.5
+  },
+  "growth_rate": 0.58,
+  "rationale": "Mixed-acid fermentation of glucose, lactate, and arabinose under anaerobic conditions. Glucose is primary carbon source; lactate and arabinose are co-fermented. Ammonium satisfies nitrogen demand. Products are acetate, propionate, succinate, and CO₂—typical fermentation end products for Bacteroides. Carbon and nitrogen budgets balanced.",
+  "confidence": 0.72
+}
+```

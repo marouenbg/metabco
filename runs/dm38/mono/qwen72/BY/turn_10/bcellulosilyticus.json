@@ -1,0 +1,25 @@
+{
+ "fluxes": {
+  "ac": -10,
+  "but": -10,
+  "for": -5,
+  "inost": -2,
+  "gly": -2,
+  "ala__L": -1,
+  "lys": -1,
+  "thr__L": -1,
+  "ile__L": -1,
+  "his__L": -1,
+  "met__L": -1,
+  "trp__L": -1,
+  "glu__L": -1,
+  "asp__L": -1,
+  "nh4": -1,
+  "ppa": 2,
+  "etoh": 2,
+  "h2": 1
+ },
+ "growth_rate": 0.69,
+ "confidence": 0.85,
+ "rationale": "Balanced carbon and nitrogen intake to support moderate growth while producing fermentation products."
+}

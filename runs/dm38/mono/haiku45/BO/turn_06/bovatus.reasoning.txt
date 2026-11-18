@@ -1,0 +1,90 @@
+# Metabolic Decision — Turn 6, t = 24.00 h
+
+## Analysis
+
+**Current status:** I am at 2.902 gDW/L, 24 h into a 48 h batch culture. Glucose has been depleted (my primary carbon source in early turns). I must now shift to alternative substrates.
+
+**Available carbon sources I can transport:**
+- **Acetate (ac):** 24.95 mM — abundant, I can ferment this via acetyl-CoA pathways
+- **Propionate (ppa):** 10.01 mM — present, I can metabolise short-chain fatty acids
+- **L-lactate (lac__L):** 7.66 mM — I have shown consistent uptake; lactate can be oxidised or fermented
+- **Succinate (succ):** 3.66 mM — TCA cycle intermediate, usable
+- **Maltose (malt):** 4.382 mM — I have shown no uptake pattern; likely no transporter
+- **myo-inositol (inost):** 6.272 mM — complex carbohydrate; uncertain transportability
+- **Amino acids:** Present in modest quantities; can be catabolised for carbon and nitrogen simultaneously
+
+**Nitrogen sources:**
+- **L-arginine (arg__L):** 9.832 mM — I consistently take this up; provides both C and N
+- **L-cysteine (cys__L):** 8.4 mM — provides C, N, and S; I can use this
+- **Other amino acids:** Various small amounts; L-alanine, L-serine, L-proline all available
+- **Ammonium (nh4):** Not listed as available (depleted from earlier turns)
+
+**Fermentation strategy for Bacteroides ovatus:**
+As a strict anaerobe and obligate fermenter, I produce:
+- **Acetate & propionate:** primary fermentation end products
+- **Succinate:** secondary product
+- **Formate, H₂:** minor products
+- **Lactate:** can be consumed or produced depending on redox balance
+
+**Growth calculation:**
+At turn 4, I achieved 0.800 /h growth on glucose + arginine. Now glucose is gone. I must rely on acetate, lactate, and amino acids.
+
+Realistic uptake rates for acetate-based growth in Bacteroides: 8–12 mmol/gDW/h
+Realistic uptake rates for lactate: 3–5 mmol/gDW/h
+Realistic uptake rates for arginine (mixed C/N): 2–3 mmol/gDW/h
+
+**Proposed strategy:**
+- Uptake acetate: **-10.0** mmol/gDW/h (abundant, primary carbon)
+- Uptake lactate: **-4.0** mmol/gDW/h (secondary carbon, reduces redox stress)
+- Uptake L-arginine: **-2.0** mmol/gDW/h (provides N; ~0.4 mmol N per mmol)
+- Uptake L-cysteine: **-1.5** mmol/gDW/h (additional N source; provides S for metabolism)
+
+**Carbon audit:**
+- Acetate in: 10.0 mmol C (2 C per acetate)
+- Lactate in: 4.0 mmol C (3 C per lactate)
+- Arginine in: 2.0 mmol C (6 C per arginine)
+- Cysteine in: 1.5 mmol C (3 C per cysteine)
+- **Total C in: 20 + 12 + 12 + 4.5 = 48.5 mmol C/gDW/h**
+
+**Growth rate derivation:**
+- Growth cost: ~42 mmol C/gDW
+- Fermentation products (acetate, propionate, succinate, formate): ~70% of C returns as products
+- Net C available for growth: 48.5 × 0.30 ≈ 14.6 mmol C/gDW/h
+- Growth rate: 14.6 / 42 ≈ **0.35 /h** (conservative, realistic for mixed substrate)
+
+**Nitrogen audit:**
+- Arginine: 2.0 mmol × (2 N per arginine) = 4.0 mmol N
+- Cysteine: 1.5 mmol × (1 N per cysteine) = 1.5 mmol N
+- **Total N in: 5.5 mmol N/gDW/h**
+- Growth cost: ~10 mmol N/gDW
+- Growth rate: 5.5 / 10 = **0.55 /h**
+
+**Limiting factor:** Carbon is limiting. Growth rate = **0.35 /h**
+
+**Secretion products:**
+- Acetate: +3.5 mmol/gDW/h (fermentation product)
+- Propionate: +1.2 mmol/gDW/h (fermentation product)
+- Succinate: +0.8 mmol/gDW/h (fermentation product)
+- CO₂: +2.0 mmol/gDW/h (decarboxylation)
+- H₂: +0.3 mmol/gDW/h (minor product)
+
+---
+
+```json
+{
+  "fluxes": {
+    "ac": 3.5,
+    "ppa": 1.2,
+    "succ": 0.8,
+    "co2": 2.0,
+    "h2": 0.3,
+    "ac": -10.0,
+    "lac__L": -4.0,
+    "arg__L": -2.0,
+    "cys__L": -1.5
+  },
+  "growth_rate": 0.35,
+  "rationale": "Glucose depleted; switching to acetate and lactate as primary carbon sources with arginine and cysteine for nitrogen. Carbon-limited growth on mixed fermentation substrates yields ~0.35 /h. Fermentation products (acetate, propionate, succinate) reflect Bacteroides metabolism of short-chain fatty acids and amino acids under anaerobic conditions.",
+  "confidence": 0.68
+}
+```

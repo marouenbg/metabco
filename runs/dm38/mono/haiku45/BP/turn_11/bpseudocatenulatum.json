@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "arg__L": -1.8,
+  "nh4": -1.2,
+  "ser__L": -0.5,
+  "ac": 16.0,
+  "lac__L": 8.0,
+  "for": 2.0,
+  "co2": 1.3
+ },
+ "growth_rate": 0.4,
+ "rationale": "Continued mixed-acid fermentation of glucose with arginine and ammonium co-utilization. Glucose supports primary ATP and reducing power; arginine provides supplemental C and essential N. Acetate and lactate are major fermentation products. Growth rate 0.40 /h is sustainable by available N (3.5 mmol N in vs 3.2 mmol cost) and C balance (60.3 in vs 12 growth + 48.3 products).",
+ "confidence": 0.72
+}

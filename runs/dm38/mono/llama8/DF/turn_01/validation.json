@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 1,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=0 out=46 biomass=9.98"
+  ],
+  "warnings": [],
+  "repairs": [
+   "C: growth 0.3 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "growth supported by uptake of L-lactate and Ammonium, with secretion of lactic acid, formate, and acetate.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": 10.0,
+   "nh4": -5.34,
+   "for": 5.34,
+   "ac": 5.34,
+   "pi": -0.7,
+   "so4": -0.16
+  },
+  "fluxes_applied": {
+   "lac__L": 0.0,
+   "nh4": -5.34,
+   "for": 0.0,
+   "ac": 0.0,
+   "pi": -0.7,
+   "so4": -0.16
+  }
+ }
+]

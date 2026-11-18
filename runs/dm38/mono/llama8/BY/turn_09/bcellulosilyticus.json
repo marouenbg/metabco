@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "but": -10.53,
+  "ac": -10.53,
+  "for": -10.53,
+  "no3": -3.12,
+  "co2": 31.59,
+  "h2": 0,
+  "h2s": 0,
+  "nh4": 0,
+  "lac__L": 0,
+  "lac__D": 0,
+  "succ": 0,
+  "etoh": 0,
+  "ppa": 0
+ },
+ "growth_rate": 0.15,
+ "rationale": "Bacteroides cellulosilyticus DSM 14838 will take up butyrate, acetate, and formate to support growth, and release CO2 as a byproduct. The growth rate supported by these fluxes is 0.15 gDW/h."
+}

@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arg__L": -10.0,
+  "ac": 50.0,
+  "for": 40.0
+ },
+ "growth_rate": 0.208,
+ "rationale": "taking up glucose and arginine, secreting acetate and formate, and growing at a rate of 0.208 gDW/h",
+ "confidence": 0.8
+}

@@ -1,0 +1,52 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 11,
+  "growth_claimed": 0.24,
+  "growth_allowed": 0.24,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: tyr__L",
+   "uptake_exceeds_pool: his__L"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake tyr__L to pool limit -0.617",
+   "clipped uptake his__L to pool limit -0.481",
+   "P: credited 0.218 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Acetate and amino acid catabolism support moderate growth in late stationary phase. Fermentation products (butyrate, formate, CO\u2082) balance carbon. Nitrogen from amino acids meets biosynthetic demand.",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "ac": -12.0,
+   "ppa": -1.5,
+   "phe__L": -0.8,
+   "tyr__L": -0.7,
+   "his__L": -0.5,
+   "met__L": -0.4,
+   "trp__L": -0.3,
+   "val__L": -0.3,
+   "leu__L": -0.2,
+   "co2": 3.5,
+   "but": 1.0,
+   "for": 0.5
+  },
+  "fluxes_applied": {
+   "ac": -12.0,
+   "ppa": -1.5,
+   "phe__L": -0.8,
+   "tyr__L": -0.6165,
+   "his__L": -0.4805,
+   "met__L": -0.4,
+   "trp__L": -0.3,
+   "val__L": -0.3,
+   "leu__L": -0.2,
+   "co2": 3.5,
+   "but": 1.0,
+   "for": 0.5,
+   "pi": -0.2182
+  }
+ }
+]

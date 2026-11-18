@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -6.0,
+  "arg__L": -4.0,
+  "nh4": -1.0,
+  "but": 20.0,
+  "ac": 25.0,
+  "co2": 15.0,
+  "pi": -0.45,
+  "so4": -0.18
+ },
+ "growth_rate": 0.65,
+ "rationale": "Coprococcus thrives on lactate and glucose in anaerobic conditions, using arginine as a key N+C source. Fermentation yields butyrate and acetate as primary products. Substrate remains abundant; growth is N-replete and C-replete. Rate sustained at 0.65 /h with robust carbon and nitrogen accounting.",
+ "confidence": 0.72
+}

@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -15.0,
+  "nh4": -5.0,
+  "ac": 20.0,
+  "but": 10.0,
+  "h2": 5.0
+ },
+ "growth_rate": 0.096,
+ "rationale": "I've taken up glucose and lactate at moderate rates, and released acetate, butyrate, and hydrogen gas as byproducts of fermentation. I've also taken up ammonium at a rate that's less than the maximum to ensure I'm not over-reliant on a single nitrogen source.",
+ "confidence": 0.8
+}

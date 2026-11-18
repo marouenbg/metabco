@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "ppa": 2.0,
+  "co2": 1.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.5,
+ "rationale": "Carbon and nitrogen sources support moderate growth rate",
+ "confidence": 0.8
+}

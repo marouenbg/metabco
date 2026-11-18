@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 11,
+  "growth_claimed": 0.173,
+  "growth_allowed": 0.173,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: glc__D"
+  ],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but",
+   "no_transporter: lac__D"
+  ],
+  "repairs": [
+   "clipped uptake glc__D to pool limit -15.1",
+   "P: credited 0.202 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0453 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Taking up D-glucose, L-lactate, and Ammonium to support growth and producing fermentation products.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -19.0,
+   "lac__L": -14.0,
+   "nh4": -4.39,
+   "ac": 3.0,
+   "but": 0.5,
+   "for": 0.5,
+   "lac__D": 5.0
+  },
+  "fluxes_applied": {
+   "glc__D": -15.0667,
+   "lac__L": -14.0,
+   "nh4": -4.39,
+   "ac": 3.0,
+   "but": 0.5,
+   "for": 0.5,
+   "lac__D": 5.0,
+   "pi": -0.2018,
+   "so4": -0.0453
+  }
+ }
+]

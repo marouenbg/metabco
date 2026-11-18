@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": 5,
+  "for": 2,
+  "arg__L": -1.5,
+  "nh4": -0.5,
+  "co2": 5
+ },
+ "growth_rate": 0.17,
+ "rationale": "acetate, formate, and L-arginine uptake, with acetate, formate, and carbon dioxide production",
+ "confidence": 0.8
+}

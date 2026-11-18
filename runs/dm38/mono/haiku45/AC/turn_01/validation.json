@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 1,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.523 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.118 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Glucose and lactate fermentation with amino acid Stickland reactions (arginine + serine). Butyrate is the primary fermentation end product. Nitrogen from amino acids and trace ammonium. Carbon balance",
+  "confidence": 0.78,
+  "fluxes_claimed": {
+   "glc__D": -14.0,
+   "lac__L": -3.0,
+   "arg__L": -2.5,
+   "ser__L": -1.5,
+   "nh4": -0.5,
+   "but": 8.0,
+   "ac": 5.5,
+   "for": 2.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -14.0,
+   "lac__L": -3.0,
+   "arg__L": -2.5,
+   "ser__L": -1.5,
+   "nh4": -0.5,
+   "but": 8.0,
+   "ac": 5.5,
+   "for": 2.0,
+   "co2": 1.0,
+   "pi": -0.5233,
+   "so4": -0.1178
+  }
+ }
+]

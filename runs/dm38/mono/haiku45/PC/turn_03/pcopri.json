@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "lac__L": -8.0,
+  "arab__L": -2.5,
+  "arg__L": -3.0,
+  "gly": -1.5,
+  "ser__L": -1.0,
+  "nh4": -1.0,
+  "co2": 4.0,
+  "ac": 8.0,
+  "ppa": 5.0,
+  "for": 3.0
+ },
+ "growth_rate": 0.48,
+ "rationale": "Lactate and arabinose are primary fermentable substrates; arginine + glycine Stickland reaction provides carbon and nitrogen. Fermentation yields acetate, propionate, formate, and CO\u2082. Carbon budget: 60.5 in, 38 out, ~22.5 for growth (~0.5 gDW); nitrogen marginal at 9.5 mmol. Growth rate limited by nitrogen availability.",
+ "confidence": 0.72
+}

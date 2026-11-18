@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -8.0,
+  "arg__L": -3.0,
+  "nh4": -1.5,
+  "pi": -0.43,
+  "but": 5.0,
+  "ac": 3.0,
+  "co2": 8.0,
+  "for": 0.5
+ },
+ "growth_rate": 0.45,
+ "rationale": "Continuing lactate and glucose fermentation while introducing arginine to offset declining ammonium. Growth limited by nitrogen availability; revised to 0.45 /h to balance 4.5 mmol N/gDW/h intake against 10 mmol/g biomass cost. Carbon budget closed via butyrate, acetate, CO\u2082, and formate production.",
+ "confidence": 0.68
+}

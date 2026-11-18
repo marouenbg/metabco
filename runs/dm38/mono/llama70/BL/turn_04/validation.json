@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 4,
+  "growth_claimed": 0.158,
+  "growth_allowed": 0.158,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.184 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0414 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Balanced carbon and nitrogen uptake, considering maintenance and biomass production costs",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arab__L": -6.0,
+   "lac__L": 2.0,
+   "arg__L": -1.5,
+   "nh4": -1.5,
+   "ac": 4.0
+  },
+  "fluxes_applied": {
+   "arab__L": -6.0,
+   "lac__L": 2.0,
+   "arg__L": -1.5,
+   "nh4": -1.5,
+   "ac": 4.0,
+   "pi": -0.1837,
+   "so4": -0.0414
+  }
+ }
+]

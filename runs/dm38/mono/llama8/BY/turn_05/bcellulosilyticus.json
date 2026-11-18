@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -22.96,
+  "glc__D": -14.26,
+  "malt": -2.589,
+  "cys__L": -8.4,
+  "ser__L": -6.4,
+  "gln__L": -2.7,
+  "ac": 42,
+  "but": 42,
+  "for": 42
+ },
+ "growth_rate": 0.289,
+ "rationale": "I will consume L-lactate, D-glucose, and maltose to support my growth, and produce acetate, butyrate, and formate as fermentation products.",
+ "confidence": 0.9
+}

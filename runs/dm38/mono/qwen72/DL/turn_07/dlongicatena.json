@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.04,
+ "rationale": "Continuing the established metabolic strategy of fermenting L-lactate and ammonium to produce acetate, butyrate, and hydrogen. This supports the current growth rate and maintains a balanced carbon and nitrogen intake and output.",
+ "confidence": 0.95
+}

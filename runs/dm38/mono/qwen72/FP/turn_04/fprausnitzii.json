@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "nh4": -7.0,
+  "co2": 6.0,
+  "but": 2.0,
+  "ac": 2.0,
+  "h2": 2.0,
+  "pi": -0.23
+ },
+ "growth_rate": 0.25,
+ "rationale": "Continuing to use glucose and lactate for growth and fermentation to produce butyrate, acetate, and hydrogen. Carbon and nitrogen balance supports the chosen growth rate.",
+ "confidence": 0.95
+}

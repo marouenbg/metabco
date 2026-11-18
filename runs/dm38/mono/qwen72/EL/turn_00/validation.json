@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 0,
+  "growth_claimed": 0.375,
+  "growth_allowed": 0.375,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: glc__D",
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.267 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0823 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing abundant lactate and glucose for carbon, and arginine and ammonium for nitrogen. Producing acetate and propionate as fermentation products. Growth rate is limited by nitrogen uptake.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "ppa": 3.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "pi": -0.2672,
+   "so4": -0.0823
+  }
+ }
+]

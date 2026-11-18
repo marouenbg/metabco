@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 6,
+  "growth_claimed": 0.85,
+  "growth_allowed": 0.85,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.988 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.222 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "I have chosen to take up D-lactate and L-lactate as my primary carbon sources, and L-arginine and L-glutamine as my primary nitrogen sources. I will support a growth rate of 0.85 /h based on my chosen",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__D": -10.0,
+   "lac__L": -10.0,
+   "arg__L": -5.0,
+   "gln__L": -5.0,
+   "ac": 18.0
+  },
+  "fluxes_applied": {
+   "lac__D": -10.0,
+   "lac__L": -10.0,
+   "arg__L": -5.0,
+   "gln__L": -5.0,
+   "ac": 18.0,
+   "pi": -0.9884,
+   "so4": -0.2225
+  }
+ }
+]

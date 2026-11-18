@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 2,
+  "growth_claimed": 0.147,
+  "growth_allowed": 0.147,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "S: credited 0.0385 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing to utilize D-glucose and ammonium, producing acetate, butyrate, and ethanol. Growth rate is supported by carbon and nitrogen balance.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": 0.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "etoh": 5.0,
+   "nh4": -2.0,
+   "pi": -0.147
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": 0.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "etoh": 5.0,
+   "nh4": -2.0,
+   "pi": -0.147,
+   "so4": -0.0385
+  }
+ }
+]

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__D": 10.0,
+  "lac__L": 10.0,
+  "malt": 5.0,
+  "ac": -13.35,
+  "succ": 10.0,
+  "for": 5.0,
+  "nh4": 15.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "Utilizing D-lactate, L-lactate, and Maltose for growth, and producing acetate, succinate, and formate as fermentation products.",
+ "confidence": 0.9
+}

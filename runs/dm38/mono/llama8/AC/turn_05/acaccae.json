@@ -1,0 +1,23 @@
+{
+ "fluxes": {
+  "lac__D": 30.0,
+  "lac__L": 15.0,
+  "glc__D": -10.0,
+  "glu__L": 5.0,
+  "nh4": -5.0,
+  "h2s": 0.0,
+  "etoh": 0.0,
+  "for": 0.0,
+  "ac": 0.0,
+  "but": 0.0,
+  "ppa": 0.0,
+  "succ": 0.0,
+  "h2": 0.0,
+  "co2": 0.0,
+  "h": 0.0,
+  "nh3": 0.0
+ },
+ "growth_rate": 0.537,
+ "rationale": "I prioritized taking up D-lactate (lac__D) and L-lactate (lac__L) as my primary carbon sources, and L-glutamate (glu__L) as my primary nitrogen source. I calculated my growth rate based on the available nutrients and the fact that growth costs approximately 38 mmol of carbon and 10 mmol of nitrogen per gram of dry weight produced.",
+ "confidence": 0.9
+}

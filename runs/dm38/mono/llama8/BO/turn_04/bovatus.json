@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "ser__L": -2.0,
+  "ac": 5.0
+ },
+ "growth_rate": 0.7,
+ "rationale": "Utilizing L-lactate as primary carbon source, taking up Ammonium for nitrogen, and releasing acetate as a fermentation product.",
+ "confidence": 0.9
+}

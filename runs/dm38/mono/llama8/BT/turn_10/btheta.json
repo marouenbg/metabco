@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "lac__L": 5.0,
+  "but": 1.0,
+  "arg__L": 4.0,
+  "ac": 1.0,
+  "for": 0.5
+ },
+ "growth_rate": 0.24,
+ "rationale": "I have chosen to take up D-glucose, L-lactate, and butyrate as my primary carbon sources. I will also take up ammonium as my nitrogen source. I will release acetate, butyrate, and formate as byproducts of my metabolism.",
+ "confidence": 0.8
+}

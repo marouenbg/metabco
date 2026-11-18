@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "ac": -12.0,
+  "gly": -2.0,
+  "cys__L": -0.8,
+  "ala__L": -0.5,
+  "ser__L": -0.5,
+  "for": -1.5,
+  "but": 6.0,
+  "co2": 4.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Acetate is abundant and my preferred substrate; amino acids provide both carbon and nitrogen. Fermentation produces butyrate (my signature product), acetate, CO\u2082, and H\u2082. Growth rate is constrained by nitrogen availability from amino acids and matches recent metabolic trend (turns 6-7 at 0.30-0.32 /h). Carbon balance: 32.9 mmol C in supports 0.30 /h growth (33 mmol C/gDW) with fermentation products. Nitrogen balance: 3.8 mmol N in supports growth at this rate.",
+ "confidence": 0.72
+}

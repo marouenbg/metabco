@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 6,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.313 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0654 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Nitrogen limitation (ammonium + arginine-derived N ~2.5 mmol/gDW/h) restricts growth to ~0.25 /h. Glucose, lactate, and arabinose ferment to acetate, propionate, and succinate via mixed-acid pathways.",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -6.0,
+   "arab__L": -3.0,
+   "arg__L": -3.0,
+   "nh4": -2.0,
+   "ac": 8.0,
+   "ppa": 5.0,
+   "succ": 3.0,
+   "co2": 6.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -6.0,
+   "arab__L": -3.0,
+   "arg__L": -3.0,
+   "nh4": -2.0,
+   "ac": 8.0,
+   "ppa": 5.0,
+   "succ": 3.0,
+   "co2": 6.0,
+   "pi": -0.3132,
+   "so4": -0.0654
+  }
+ }
+]

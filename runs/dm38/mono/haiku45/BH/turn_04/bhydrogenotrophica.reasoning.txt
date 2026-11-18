@@ -1,0 +1,93 @@
+# Metabolic reasoning for Blautia hydrogenotrophica at turn 4
+
+## Assessment of available resources and transport capacity
+
+Looking at my genome and physiology:
+- **B. hydrogenotrophica** is a strictly anaerobic, Gram-positive bacterium known for **homoacetogenic** metabolism
+- I can ferment sugars (glucose, arabinose, maltose) and organic acids (lactate)
+- I possess the Wood-Ljungdahl pathway, enabling CO₂ fixation and H₂ oxidation
+- I can catabolize amino acids (arginine, serine, proline, etc.)
+
+## Carbon sources I can access
+
+**Primary substrates:**
+- D-glucose (glc__D): 22.84 mM available — I have glucose transporters
+- L-lactate (lac__L): 27.7 mM available — I ferment lactate actively
+- L-arabinose (arab__L): 21.31 mM — pentose fermentation
+- Amino acids (arg__L, ser__L, pro__L, etc.) — amino acid catabolism
+
+**Abundant but inaccessible:**
+- CO₂ is present (49.74 mM), but I use it as a terminal electron acceptor in the Wood-Ljungdahl pathway, not as a primary carbon source for growth
+
+## Nitrogen sources
+
+- Ammonium (nh4): 8.972 mM — my primary nitrogen source
+- Amino acids provide both C and N
+
+## Fermentation products
+
+As a homoacetogen, I produce:
+- **Acetate** (primary product)
+- **Formate** (from pyruvate oxidation)
+- **CO₂** (from decarboxylation and respiration)
+- **H₂** (from NADH reoxidation; used in autotrophic CO₂ reduction)
+
+My recent history shows this pattern clearly: glucose/lactate → acetate + formate + CO₂ + H₂.
+
+## Growth calculation
+
+At turn 3, I achieved 0.450 /h growth. The vessel is now at 16 h, with nutrients still abundant.
+
+**Carbon audit for proposed strategy:**
+
+I will use:
+- D-glucose: 15 mmol/gDW/h (moderate rate, sustainable)
+- L-lactate: 8 mmol/gDW/h (co-fermentation)
+- L-arginine: 3 mmol/gDW/h (amino acid catabolism; provides N and C)
+- Ammonium: 2.5 mmol/gDW/h (primary N assimilation)
+
+**Carbon balance:**
+- Glucose C: 15 × 6 = 90 mmol C/gDW/h
+- Lactate C: 8 × 3 = 24 mmol C/gDW/h
+- Arginine C: 3 × 6 = 18 mmol C/gDW/h
+- **Total C in: 132 mmol/gDW/h**
+
+**Carbon out (at μ = 0.45 /h):**
+- Biomass: 0.45 × 38 = 17.1 mmol C/gDW/h
+- Acetate: ~45 mmol C/gDW/h (major product)
+- Formate: ~25 mmol C/gDW/h
+- CO₂: ~40 mmol C/gDW/h
+- **Total C out: ~127 mmol C/gDW/h** ✓ (balanced within margin)
+
+**Nitrogen balance:**
+- NH₄ uptake: 2.5 mmol/gDW/h
+- Arginine N: 3 × 2 = 6 mmol N/gDW/h
+- Biomass need: 0.45 × 10 = 4.5 mmol N/gDW/h
+- **Total N in: 8.5 mmol; need: 4.5 mmol** ✓ (sufficient)
+
+## Growth rate justification
+
+Given glucose and lactate availability remain high, and nitrogen is adequate, I can sustain **μ = 0.45 /h**, matching turn 3 performance. This is realistic for a fast-growing anaerobe in batch culture with abundant fermentable substrates.
+
+## Final decision
+
+Maintain active heterotrophic fermentation with moderate amino acid catabolism.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -15.0,
+    "lac__L": -8.0,
+    "arg__L": -3.0,
+    "nh4": -2.5,
+    "ac": 45.0,
+    "for": 25.0,
+    "co2": 40.0,
+    "h2": 2.0,
+    "pi": -0.41
+  },
+  "growth_rate": 0.45,
+  "rationale": "Homoacetogenic fermentation of glucose and lactate with amino acid co-catabolism. Acetate is the major product. Carbon and nitrogen budgets balance. Nutrients remain abundant; growth rate sustained from turn 3.",
+  "confidence": 0.78
+}
+```

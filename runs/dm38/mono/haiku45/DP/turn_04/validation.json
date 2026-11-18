@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 4,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.328 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Lactate oxidation coupled to sulfate reduction, the canonical metabolism of D. piger. Lactate (8 mmol/gDW/h) is oxidized incompletely to acetate and CO2, with sulfate as terminal acceptor producing H2",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -8.0,
+   "nh4": -2.5,
+   "so4": -2.0,
+   "ac": 3.0,
+   "co2": 7.0,
+   "h2s": 2.0
+  },
+  "fluxes_applied": {
+   "lac__L": -8.0,
+   "nh4": -2.5,
+   "so4": -2.0,
+   "ac": 3.0,
+   "co2": 7.0,
+   "h2s": 2.0,
+   "pi": -0.3283
+  }
+ }
+]

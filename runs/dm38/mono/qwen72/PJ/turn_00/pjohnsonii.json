@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -10,
+  "lac__L": -10,
+  "nh4": -2.5,
+  "ac": 5,
+  "but": 5,
+  "ppa": 2,
+  "co2": 3,
+  "h2": 2
+ },
+ "growth_rate": 0.4,
+ "rationale": "Utilizing glucose and lactate for fermentation, producing acetate, butyrate, and propionate. Growth rate is balanced with carbon and nitrogen uptake.",
+ "confidence": 0.9
+}

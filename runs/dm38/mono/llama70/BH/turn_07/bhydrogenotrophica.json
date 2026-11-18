@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "for": -5.0,
+  "nh4": -2.0,
+  "h2": 5.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Hydrogenotrophic metabolism with acetate and formate uptake",
+ "confidence": 0.8
+}

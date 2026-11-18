@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "arg__L": -3.0,
+  "pro__L": -2.0,
+  "ala__L": -2.0,
+  "ser__L": -2.0,
+  "but": 2.0,
+  "ac": 2.0,
+  "h2": 2.0,
+  "co2": 6.0
+ },
+ "growth_rate": 0.848,
+ "rationale": "Utilizing L-lactate for carbon and L-arginine, L-proline, L-alanine, and L-serine for nitrogen to support growth and produce characteristic fermentation products.",
+ "confidence": 0.9
+}

@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -4.0,
+  "arg__L": -3.0,
+  "arab__L": -2.0,
+  "nh4": -2.0,
+  "ac": 3.0,
+  "but": 3.0,
+  "for": 10.0,
+  "co2": 10.0
+ },
+ "growth_rate": 0.42,
+ "rationale": "Shifting from glucose-dominant to mixed lactate/glucose/arginine strategy as glucose depletes. Lactate is abundant and fermentable. Arginine provides both C and N. Maintaining anaerobic fermentation to acetate, butyrate, formate, and CO\u2082. Growth rate declining as preferred substrates (glucose) become limiting; N-limited by ammonium availability.",
+ "confidence": 0.68
+}

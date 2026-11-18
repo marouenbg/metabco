@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ppa": -5.0,
+  "ser__L": -1.0,
+  "pro__L": -1.0,
+  "ac": 2.0,
+  "but": 1.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "Prioritizing propionate and utilizing available nitrogen sources to support growth and fermentation product production",
+ "confidence": 0.8
+}

@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "h2": -5.0,
+  "pro__L": -2.0,
+  "gly": -1.0,
+  "but": 5.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.33,
+ "rationale": "Utilizing abundant acetate and hydrogen for energy and carbon, and amino acids for nitrogen. Producing acetate, butyrate, and formate as fermentation products to support growth.",
+ "confidence": 0.9
+}

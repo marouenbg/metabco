@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 3,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.3,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [],
+  "rationale": "Resuming growth after turn 2 stasis. Lactate and glucose are abundant primary carbons; arginine and cysteine provide nitrogen and sulfur. Mixed-acid fermentation produces acetate, butyrate, formate, a",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -6.0,
+   "arg__L": -5.0,
+   "nh4": -3.0,
+   "cys__L": -2.0,
+   "ac": 6.5,
+   "but": 5.5,
+   "for": 2.0,
+   "co2": 8.0,
+   "pi": -0.4,
+   "so4": -0.12
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -6.0,
+   "arg__L": -5.0,
+   "nh4": -3.0,
+   "cys__L": -2.0,
+   "ac": 6.5,
+   "but": 5.5,
+   "for": 2.0,
+   "co2": 8.0,
+   "pi": -0.4,
+   "so4": -0.12
+  }
+ }
+]

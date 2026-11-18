@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": 2,
+  "glc__D": -5,
+  "nh4": -1.5,
+  "arg__L": -0.5,
+  "ac": 4,
+  "for": 2
+ },
+ "growth_rate": 0.067,
+ "confidence": 0.9,
+ "rationale": "Utilizing abundant lactate and glucose for energy, producing acetate, formate, and lactate as fermentation products. Growth rate is limited by carbon availability."
+}

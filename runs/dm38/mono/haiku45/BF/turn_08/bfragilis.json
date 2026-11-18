@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ac": 3.0,
+  "but": 1.5,
+  "for": 1.2,
+  "arg__L": -2.0,
+  "gly": -1.5,
+  "val__L": -1.2,
+  "cys__L": -0.8,
+  "ser__L": -0.6,
+  "nh4": 1.5,
+  "co2": 2.5
+ },
+ "growth_rate": 0.4,
+ "rationale": "Resuming growth by consuming abundant acetate, butyrate, formate, and amino acids (N and C source). Nitrogen is limiting at ~41 mM total; growth rate constrained to 0.40 /h to stay within N budget. Fermenting to acetate, butyrate, CO\u2082, and releasing ammonia from amino acid catabolism. Carbon balance maintained: ~484 mmol C in supports 177 mmol growth cost + 307 mmol fermentation products.",
+ "confidence": 0.62
+}

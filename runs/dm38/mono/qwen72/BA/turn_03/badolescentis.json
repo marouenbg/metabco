@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "arab__L": -5.0,
+  "arg__L": -8.0,
+  "ac": 5.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Utilizing L-lactate and L-arabinose for carbon and L-arginine for nitrogen. Producing acetate and formate as fermentation products to support growth.",
+ "confidence": 0.9
+}

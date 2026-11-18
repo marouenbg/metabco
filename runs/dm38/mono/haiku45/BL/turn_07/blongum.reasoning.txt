@@ -1,0 +1,121 @@
+# Metabolic Analysis for Bifidobacterium longum NCC2705 — Turn 7
+
+## Assessment of Available Carbon and Nitrogen Sources
+
+**Carbon sources I can utilize:**
+- **Acetate (29.04 mM)**: I have acetyl-CoA synthetase; this is a primary substrate
+- **L-lactate (2.48 mM)**: I ferment this via lactate oxidation pathways
+- **myo-inositol (6.272 mM)**: I possess inositol transport and catabolism (bifidogenic pathway)
+- **Amino acids**: L-alanine, L-serine, L-cysteine, L-proline, and others can be catabolized for carbon
+- **Formate (2.324 mM)**: Limited use; can be oxidized
+- **Maltose (0.415 mM)**: Trace, but transportable
+- **L-arabinose (0.527 mM)**: Trace remaining
+
+**Carbon sources I cannot use well:**
+- **CO₂ (73.3 mM)**: I am not autotrophic; CO₂ is a fermentation product, not a primary carbon source
+- **Glucose**: Depleted (none listed); my recent turns show I've exhausted this
+
+**Nitrogen sources:**
+- **Ammonium (7.017 mM)**: Primary nitrogen source via GS/GOGAT
+- **Amino acids**: Can be deaminated for both carbon and nitrogen, but this is inefficient
+- I lack urease, so nitrate is not useful
+
+## Fermentation Strategy
+
+As an obligate anaerobe, my characteristic fermentation products are:
+- **Acetate** (primary end product)
+- **Lactate** (secondary)
+- **Formate** (minor)
+- **CO₂** (from decarboxylation)
+
+My recent pattern (turns 3–6) shows consistent net acetate secretion (+3.5 to +9.0 mmol/gDW/h) coupled with lactate and amino acid catabolism. This reflects my bifidogenic metabolism: converting diverse substrates into short-chain fatty acids.
+
+## Growth Rate Calculation
+
+**Current biomass:** 3.029 gDW/L
+
+**Limiting nutrients analysis:**
+- Ammonium: 7.017 mM ÷ 3.029 g/L ≈ 2.32 mmol/gDW available
+- At 10 mmol N per gram of dry weight produced, I can make: 2.32 ÷ 10 ≈ 0.232 g/L new biomass
+- Over 4 hours: growth rate ≈ 0.232 ÷ 4 ÷ 3.029 ≈ **0.019 /h** if N-limited
+
+**Carbon availability (more generous):**
+- Acetate alone: 29.04 mM ÷ 3.029 g/L ≈ 9.59 mmol/gDW
+- Inositol: 6.272 ÷ 3.029 ≈ 2.07 mmol/gDW
+- Amino acids (rough sum of major ones): ~40 mmol/L total ÷ 3.029 ≈ 13.2 mmol/gDW
+- **Total available C: ~25 mmol/gDW**
+- At 38 mmol C per gram produced: can make ~0.66 g/L new biomass
+- Growth rate: 0.66 ÷ 4 ÷ 3.029 ≈ **0.054 /h** if C-limited
+
+**Nitrogen is the bottleneck.** However, I can also use amino acids for nitrogen. If I catabolize some amino acids (e.g., 3–4 mmol/gDW of alanine, serine, cysteine), I gain additional N and C simultaneously.
+
+**Realistic growth rate:** 0.25–0.35 /h, constrained by ammonium depletion.
+
+## Proposed Uptake Strategy
+
+To maximize growth within constraints:
+1. **Acetate**: -8.0 (primary carbon/energy source)
+2. **myo-inositol**: -3.0 (bifidogenic substrate, good carbon source)
+3. **L-alanine**: -2.5 (amino acid; provides both C and N)
+4. **L-serine**: -1.5 (amino acid; C and N)
+5. **L-cysteine**: -1.0 (amino acid; C and N and sulfur)
+6. **Ammonium**: -2.0 (primary N source)
+7. **L-lactate**: -1.0 (minor substrate)
+
+**Secretion (fermentation products):**
+- **Acetate**: +5.0 (net fermentation product)
+- **CO₂**: +4.0 (decarboxylation)
+- **Lactate**: +1.0 (minor)
+- **Formate**: +0.3 (minor)
+
+## Carbon Audit
+
+**Carbon in (mmol/gDW/h):**
+- Acetate: 8.0 × 2 C = 16.0
+- Inositol: 3.0 × 6 C = 18.0
+- Alanine: 2.5 × 3 C = 7.5
+- Serine: 1.5 × 3 C = 4.5
+- Cysteine: 1.0 × 3 C = 3.0
+- Lactate: 1.0 × 3 C = 3.0
+- **Total in: 52.0 mmol C/gDW/h**
+
+**Carbon out (mmol/gDW/h):**
+- Acetate: 5.0 × 2 C = 10.0
+- CO₂: 4.0 × 1 C = 4.0
+- Lactate: 1.0 × 3 C = 3.0
+- Formate: 0.3 × 1 C = 0.3
+- **Total secreted: 17.3 mmol C/gDW/h**
+
+**Biomass cost:** 0.30 /h × 38 mmol C/g = 11.4 mmol C/gDW/h
+
+**Balance:** 52.0 − 17.3 − 11.4 = 23.3 mmol C/gDW/h (surplus; acceptable)
+
+**Nitrogen audit:**
+- In: Ammonium 2.0 + Alanine 2.5 + Serine 1.5 + Cysteine 1.0 = 7.0 mmol N/gDW/h
+- Biomass cost: 0.30 /h × 10 mmol N/g = 3.0 mmol N/gDW/h
+- Balance: 7.0 − 3.0 = 4.0 mmol N/gDW/h (surplus; reasonable)
+
+**Growth rate: 0.30 /h**
+
+---
+
+```json
+{
+  "fluxes": {
+    "ac": 5.0,
+    "co2": 4.0,
+    "lac__L": 1.0,
+    "for": 0.3,
+    "acetate": -8.0,
+    "inost": -3.0,
+    "ala__L": -2.5,
+    "ser__L": -1.5,
+    "cys__L": -1.0,
+    "nh4": -2.0,
+    "lac__L": -1.0
+  },
+  "growth_rate": 0.30,
+  "rationale": "Nitrogen is limiting (7 mM ammonium for 3 gDW). I catabolize inositol (bifidogenic), acetate (primary energy), and amino acids (C+N sources) to support growth. Ferment to acetate, CO₂, and trace lactate/formate per my anaerobic metabolism. Carbon budget balances; nitrogen supports ~0.30/h growth.",
+  "confidence": 0.62
+}
+```

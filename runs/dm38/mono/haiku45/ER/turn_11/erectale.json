@@ -1,0 +1,20 @@
+{
+ "fluxes": {
+  "phe__L": -2.0,
+  "tyr__L": -1.5,
+  "lys__L": -1.2,
+  "gly": -1.0,
+  "ser__L": -0.8,
+  "val__L": -0.6,
+  "ile__L": -0.5,
+  "pro__L": -0.4,
+  "ac": 4.0,
+  "but": 3.0,
+  "for": 1.5,
+  "co2": 2.0,
+  "nh4": 0.8
+ },
+ "growth_rate": 0.06,
+ "rationale": "N-limited growth on amino acid fermentation. Oxidize branched and aromatic amino acids (Phe, Tyr, Val, Ile) and reduce small amino acids (Gly, Ser, Lys) via Stickland pathways, producing acetate, butyrate, formate, and CO\u2082. Ammonium release from deamination. Acetate co-uptake for energy. Growth constrained by NH\u2084\u207a (1.2 mM) and amino acid depletion.",
+ "confidence": 0.55
+}

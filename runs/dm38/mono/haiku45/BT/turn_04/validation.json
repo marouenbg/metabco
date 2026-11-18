@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 4,
+  "growth_claimed": 0.27,
+  "growth_allowed": 0.27,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.00397 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0592 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continued mixed glucose\u2013lactate fermentation with arginine supplementation. Carbon and nitrogen balance satisfied; realistic anaerobic fermentation stoichiometry (acetate, propionate, butyrate, format",
+  "confidence": 0.82,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -3.0,
+   "arg__L": -0.5,
+   "nh4": -1.8,
+   "pi": -0.23,
+   "ac": 10.0,
+   "ppa": 4.0,
+   "but": 2.0,
+   "for": 0.25,
+   "co2": 9.1
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -3.0,
+   "arg__L": -0.5,
+   "nh4": -1.8,
+   "pi": -0.234,
+   "ac": 10.0,
+   "ppa": 4.0,
+   "but": 2.0,
+   "for": 0.25,
+   "co2": 9.1,
+   "so4": -0.0592
+  }
+ }
+]

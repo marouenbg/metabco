@@ -1,0 +1,48 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 11,
+  "growth_claimed": 0.08,
+  "growth_allowed": 0.0485,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=32.9 out=32.5 biomass=3.37"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.1 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0209 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.08 -> 0.0485"
+  ],
+  "rationale": "Nitrogen-limited growth in final 4h. Acetate and propionate are primary C sources; amino acids (lysine, alanine, proline) provide supplemental C and N. Fermentation yields CO\u2082, formate, and butyrate a",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "ppa": -2.0,
+   "succ": -1.5,
+   "nh4": -2.0,
+   "lys__L": -1.0,
+   "ala__L": -0.8,
+   "pro__L": -0.5,
+   "co2": 12.5,
+   "for": 8.0,
+   "but": 3.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "ppa": -2.0,
+   "succ": -1.5,
+   "nh4": -2.0,
+   "lys__L": -1.0,
+   "ala__L": -0.8,
+   "pro__L": -0.5,
+   "co2": 12.5,
+   "for": 8.0,
+   "but": 3.0,
+   "pi": -0.1002,
+   "so4": -0.0209
+  }
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 11,
+  "growth_claimed": 0.05,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4",
+   "c_imbalance: in=0 out=35 biomass=1.89"
+  ],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "P: credited 0.0583 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0131 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.05 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Balanced uptake of acetate, butyrate, and carbon dioxide to support moderate growth while releasing fermentation products.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": 5.0,
+   "but": 5.0,
+   "co2": 5.0,
+   "nh4": -10.0,
+   "h2": 5.0
+  },
+  "fluxes_applied": {
+   "ac": 0.0,
+   "but": 0.0,
+   "co2": 0.0,
+   "nh4": 0.0,
+   "h2": 5.0,
+   "pi": -0.0583,
+   "so4": -0.0131
+  }
+ }
+]

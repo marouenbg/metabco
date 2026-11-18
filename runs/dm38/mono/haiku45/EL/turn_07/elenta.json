@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -6.5,
+  "lac__L": -3.5,
+  "arg__L": -3.5,
+  "cys__L": -1.0,
+  "nh4": -0.5,
+  "ac": 9.5,
+  "for": 5.0,
+  "co2": 4.5
+ },
+ "growth_rate": 0.09,
+ "rationale": "Continuing established mixed-acid fermentation strategy on glucose, lactate, and amino acids. Substrate availability remains high; growth rate incrementally increased from 0.088 to 0.090 /h. Carbon and nitrogen budgets balanced; products consistent with E. lenta metabolism.",
+ "confidence": 0.78
+}

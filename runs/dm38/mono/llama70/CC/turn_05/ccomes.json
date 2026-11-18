@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -5.0,
+  "arg__L": -2.0,
+  "arab__L": -1.0,
+  "nh4": -2.0,
+  "ac": 3.0,
+  "but": 1.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Fermentation of L-lactate and L-arginine to produce acetate and butyrate",
+ "confidence": 0.8
+}

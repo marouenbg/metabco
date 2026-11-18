@@ -1,0 +1,45 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 7,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.227 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0549 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Lactate and arabinose are now abundant primary substrates; glucose depleted. Amino acid catabolism provides limiting nitrogen. Mixed-acid fermentation products balance carbon and support growth at ~0.",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -8.0,
+   "arab__L": -6.0,
+   "arg__L": -1.5,
+   "ala__L": -1.0,
+   "nh4": -0.8,
+   "ac": 8.0,
+   "ppa": 4.5,
+   "but": 2.0,
+   "for": 1.5,
+   "co2": 10.0
+  },
+  "fluxes_applied": {
+   "lac__L": -8.0,
+   "arab__L": -6.0,
+   "arg__L": -1.5,
+   "ala__L": -1.0,
+   "nh4": -0.8,
+   "ac": 8.0,
+   "ppa": 4.5,
+   "but": 2.0,
+   "for": 1.5,
+   "co2": 10.0,
+   "pi": -0.2273,
+   "so4": -0.0549
+  }
+ }
+]

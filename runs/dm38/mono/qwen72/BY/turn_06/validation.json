@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 6,
+  "growth_claimed": 0.13,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=21 out=25 biomass=5.48"
+  ],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.163 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.034 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.13 -> 0",
+   "C: secretions scaled by 0.882"
+  ],
+  "rationale": "Optimized use of available lactate, acetate, and arginine for growth, with efficient production of acetate, butyrate, and formate.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -5.0,
+   "ac": 4.0,
+   "arg__L": -1.0,
+   "nh4": -0.3,
+   "but": 4.0,
+   "for": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -5.0,
+   "ac": 3.528,
+   "arg__L": -1.0,
+   "nh4": -0.3,
+   "but": 3.528,
+   "for": 0.882,
+   "pi": -0.1628,
+   "so4": -0.034
+  }
+ }
+]

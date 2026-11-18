@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "buniformis",
+  "turn": 4,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.2964,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=30 out=19 biomass=19"
+  ],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.564 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.118 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 0.46 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.45 -> 0.296"
+  ],
+  "rationale": "Lactate and ammonium uptake support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "nh4": -4.0,
+   "ac": 5.0,
+   "ppa": 3.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "nh4": -4.4597,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "pi": -0.5637,
+   "so4": -0.1178
+  }
+ }
+]

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "for": -8.0,
+  "h2": -2.0,
+  "nh4": -0.8,
+  "co2": 6.0,
+  "but": 2.96,
+  "ppa": 0.0
+ },
+ "growth_rate": 0.08,
+ "rationale": "Nitrogen (ammonium) is now severely limiting; only 3.2 mM remains for 4 hours, supporting ~0.08 /h max. Ferment abundant acetate and formate anaerobically via Wood-Ljungdahl and \u03b2-oxidation pathways, releasing CO\u2082, acetate, formate, and butyrate as products. H\u2082 uptake supports CO\u2082 reduction. Carbon balance closed; nitrogen-limited growth rate conservative and realistic.",
+ "confidence": 0.72
+}

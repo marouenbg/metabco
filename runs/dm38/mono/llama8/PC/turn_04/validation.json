@@ -1,0 +1,52 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 4,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: malt",
+   "uptake_exceeds_pool: gln__L",
+   "uptake_exceeds_pool: nh4",
+   "p_imbalance: in=0 out=0 biomass=1.02"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "clipped uptake malt to pool limit -5.6",
+   "clipped uptake gln__L to pool limit -3.45",
+   "clipped uptake nh4 to pool limit -0.902",
+   "P: growth 0.75 -> 0"
+  ],
+  "rationale": "Based on transport capabilities, available nutrients, and fermentation products. Carbon mass balance audit performed.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "co2": -15.0,
+   "malt": -10.0,
+   "arg__L": -10.0,
+   "cys__L": -5.0,
+   "gln__L": -5.0,
+   "nh4": -2.5,
+   "for": 10.0,
+   "ac": 15.0,
+   "succ": 5.0,
+   "h2": 10.0,
+   "lac__L": 5.0
+  },
+  "fluxes_applied": {
+   "co2": -15.0,
+   "malt": -5.6023,
+   "arg__L": -10.0,
+   "cys__L": -5.0,
+   "gln__L": -3.4518,
+   "nh4": -0.9022,
+   "for": 10.0,
+   "ac": 15.0,
+   "succ": 5.0,
+   "h2": 10.0,
+   "lac__L": 5.0
+  }
+ }
+]

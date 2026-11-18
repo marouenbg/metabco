@@ -1,0 +1,93 @@
+# Metabolic Decision — Turn 3, t=12h
+
+Let me reason through my situation as *Prevotella copri*.
+
+## Carbon and Nitrogen Sources Available
+
+**Carbon sources I can use:**
+- **Glucose** (glc__D): I've been fermenting this heavily in prior turns — it's my preferred substrate. However, I see it's NOT listed in the current environment report. This suggests glucose has been depleted or was only transiently available. I cannot take up what isn't present.
+- **Acetate** (ac): 35.58 mM — abundant. I can ferment this via acetyl-CoA pathways.
+- **Propionate** (ppa): 29.37 mM — abundant. I can metabolize this.
+- **L-lactate** (lac__L): 28.31 mM — high concentration. As a saccharolytic bacterium, I can ferment lactate.
+- **Formate** (for): 17.99 mM — available. I can use formate.
+- **L-arabinose** (arab__L): 10.37 mM — I've been taking this up. Fermentable sugar.
+- **Amino acids** (arg, ser, pro, ala, etc.): Multiple available. I can use these as carbon and nitrogen sources via Stickland reactions and transamination.
+
+**Nitrogen sources:**
+- **Ammonium** (nh4): 4.624 mM — limited but present.
+- **Amino acids**: Multiple sources of amino-N (arginine, serine, proline, alanine, etc.). Arginine is particularly valuable as a Stickland substrate.
+
+## Fermentation Strategy
+
+As an anaerobic Gram-negative bacterium, I ferment carbohydrates and amino acids. My known products include:
+- **Acetate** (already abundant; I produce more)
+- **Propionate** (already abundant; I produce more)
+- **Formate** (already present; I produce more)
+- **Lactate** (present; I can produce or consume depending on redox state)
+- **CO₂** (from decarboxylation reactions)
+- **H₂** (from formate or pyruvate metabolism under low redox)
+
+## Substrate Prioritization
+
+Given that glucose is gone and I'm at 2.117 gDW/L at t=12h:
+1. **Lactate** (28.31 mM): High concentration, readily fermentable to acetate + formate or propionate. This is a premium substrate now.
+2. **Arabinose** (10.37 mM): I've been using this; it's still available and fermentable.
+3. **Arginine** (7.499 mM): Valuable for both carbon and nitrogen via Stickland reactions (arginine + glycine → acetate + alanine + CO₂ + NH₃). Glycine is also present (4.7 mM).
+4. **Acetate/Propionate**: These are products I've been making; I can recycle them if needed, but they're less efficient than fresh carbohydrate.
+
+## Growth Calculation
+
+For sustained growth at this stage:
+- **Carbon requirement**: ~45 mmol C/gDW
+- **Nitrogen requirement**: ~10 mmol N/gDW
+- Current biomass: 2.117 gDW/L
+
+**Proposed uptake strategy for next 4h interval:**
+
+| Substrate | Uptake (mmol/gDW/h) | Rationale |
+|-----------|---------------------|-----------|
+| L-lactate | -8.0 | Primary fermentable sugar; high concentration |
+| L-arabinose | -2.5 | Secondary fermentable sugar |
+| L-arginine | -3.0 | Stickland reaction with glycine; carbon + nitrogen |
+| Glycine | -1.5 | Stickland partner; minor nitrogen source |
+| L-serine | -1.0 | Additional amino acid for catabolism |
+| Ammonium | -1.0 | Nitrogen for biosynthesis |
+| CO₂ | +4.0 | Fermentation product (lactate → acetate/formate + CO₂) |
+| Acetate | +8.0 | Fermentation product |
+| Propionate | +5.0 | Fermentation product |
+| Formate | +3.0 | Fermentation product |
+
+**Carbon audit:**
+- **In**: 8.0 (lac, 3C) + 2.5 (arab, 5C) + 3.0 (arg, 6C) + 1.5 (gly, 2C) + 1.0 (ser, 3C) = 8×3 + 2.5×5 + 3×6 + 1.5×2 + 1×3 = 24 + 12.5 + 18 + 3 + 3 = **60.5 mmol C/gDW**
+- **Out (fermentation)**: 4.0 (CO₂) + 8.0 (ac, 2C) + 5.0 (ppa, 3C) + 3.0 (for, 1C) = 4 + 16 + 15 + 3 = **38 mmol C/gDW**
+- **Growth requirement**: ~45 mmol C/gDW for growth
+- **Balance**: 60.5 − 38 = 22.5 available for growth. This supports **~0.5 gDW/L growth**, or **μ ≈ 0.50 /h** over 4h.
+
+**Nitrogen audit:**
+- **In**: 1.0 (nh4) + 3.0 (arg, 2N) + 1.5 (gly, 1N) + 1.0 (ser, 1N) = 1 + 6 + 1.5 + 1 = **9.5 mmol N/gDW**
+- **Growth requirement**: ~10 mmol N/gDW
+- This is marginal but feasible.
+
+**Growth rate**: Given carbon and nitrogen constraints, I estimate **μ = 0.48 /h** (conservative).
+
+---
+
+```json
+{
+  "fluxes": {
+    "lac__L": -8.0,
+    "arab__L": -2.5,
+    "arg__L": -3.0,
+    "gly": -1.5,
+    "ser__L": -1.0,
+    "nh4": -1.0,
+    "co2": 4.0,
+    "ac": 8.0,
+    "ppa": 5.0,
+    "for": 3.0
+  },
+  "growth_rate": 0.48,
+  "rationale": "Lactate and arabinose are primary fermentable substrates; arginine + glycine Stickland reaction provides carbon and nitrogen. Fermentation yields acetate, propionate, formate, and CO₂. Carbon budget: 60.5 in, 38 out, ~22.5 for growth (~0.5 gDW); nitrogen marginal at 9.5 mmol. Growth rate limited by nitrogen availability.",
+  "confidence": 0.72
+}
+```

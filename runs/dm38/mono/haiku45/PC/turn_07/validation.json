@@ -1,0 +1,56 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 7,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: malt",
+   "uptake_exceeds_pool: arab__L",
+   "uptake_exceeds_pool: ser__L",
+   "p_imbalance: in=0 out=0 biomass=0.477"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "clipped uptake malt to pool limit -2.83",
+   "clipped uptake arab__L to pool limit -2.66",
+   "clipped uptake ser__L to pool limit -0.749",
+   "P: growth 0.35 -> 0"
+  ],
+  "rationale": "Consuming remaining carbohydrates (maltose, arabinose) and branched-chain amino acids for rapid fermentation. Fermentation products (acetate, propionate, formate, lactate) are released to balance redo",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "malt": -4.0,
+   "arab__L": -3.0,
+   "leu__L": -2.0,
+   "val__L": -1.5,
+   "ile__L": -1.0,
+   "ser__L": -1.5,
+   "cys__L": -0.8,
+   "ac": 8.0,
+   "ppa": 5.5,
+   "for": 3.0,
+   "lac__L": 4.0,
+   "co2": 3.5,
+   "h2": 0.3
+  },
+  "fluxes_applied": {
+   "malt": -2.8254,
+   "arab__L": -2.6562,
+   "leu__L": -2.0,
+   "val__L": -1.5,
+   "ile__L": -1.0,
+   "ser__L": -0.7486,
+   "cys__L": -0.8,
+   "ac": 8.0,
+   "ppa": 5.5,
+   "for": 3.0,
+   "lac__L": 4.0,
+   "co2": 3.5,
+   "h2": 0.3
+  }
+ }
+]

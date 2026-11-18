@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -8.0,
+  "nh4": -4.0,
+  "pi": -0.43,
+  "but": 5.0,
+  "ac": 3.0,
+  "co2": 8.0,
+  "for": 0.5
+ },
+ "growth_rate": 0.37,
+ "rationale": "Roseburia ferments lactate and glucose anaerobically to butyrate, acetate, formate, and CO\u2082. This strategy has sustained 0.370 /h growth over three turns. Substrates remain abundant (lactate 23.73 mM, glucose 21.32 mM); nitrogen is adequate. Continuing the proven metabolic pattern.",
+ "confidence": 0.72
+}

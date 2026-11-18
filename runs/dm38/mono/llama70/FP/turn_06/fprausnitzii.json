@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": -2.5,
+  "arg__L": -1.0,
+  "gln__L": -1.0,
+  "but": 5.0,
+  "ac": 2.0,
+  "co2": 1.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Balancing carbon and nitrogen budgets to support growth and butyrate production",
+ "confidence": 0.8
+}

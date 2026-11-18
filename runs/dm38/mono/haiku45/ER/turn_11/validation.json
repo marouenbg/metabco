@@ -1,0 +1,60 @@
+[
+ {
+  "species_id": "erectale",
+  "turn": 11,
+  "growth_claimed": 0.06,
+  "growth_allowed": 0.06,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: phe__L",
+   "uptake_exceeds_pool: tyr__L",
+   "uptake_exceeds_pool: lys__L",
+   "uptake_exceeds_pool: gly",
+   "uptake_exceeds_pool: ser__L"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake phe__L to pool limit -1.28",
+   "clipped uptake tyr__L to pool limit -0.941",
+   "clipped uptake lys__L to pool limit -1.01",
+   "clipped uptake gly to pool limit -0.499",
+   "clipped uptake ser__L to pool limit -0.221",
+   "P: credited 0.0558 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0126 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "N-limited growth on amino acid fermentation. Oxidize branched and aromatic amino acids (Phe, Tyr, Val, Ile) and reduce small amino acids (Gly, Ser, Lys) via Stickland pathways, producing acetate, buty",
+  "confidence": 0.55,
+  "fluxes_claimed": {
+   "phe__L": -2.0,
+   "tyr__L": -1.5,
+   "lys__L": -1.2,
+   "gly": -1.0,
+   "ser__L": -0.8,
+   "val__L": -0.6,
+   "ile__L": -0.5,
+   "pro__L": -0.4,
+   "ac": 4.0,
+   "but": 3.0,
+   "for": 1.5,
+   "co2": 2.0,
+   "nh4": 0.8
+  },
+  "fluxes_applied": {
+   "phe__L": -1.2842,
+   "tyr__L": -0.941,
+   "lys__L": -1.0123,
+   "gly": -0.4994,
+   "ser__L": -0.2209,
+   "val__L": -0.6,
+   "ile__L": -0.5,
+   "pro__L": -0.4,
+   "ac": 4.0,
+   "but": 3.0,
+   "for": 1.5,
+   "co2": 2.0,
+   "nh4": 0.8,
+   "pi": -0.0558,
+   "so4": -0.0126
+  }
+ }
+]

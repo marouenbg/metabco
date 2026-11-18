@@ -1,0 +1,47 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 5,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: lac__L",
+   "uptake_exceeds_pool: etoh",
+   "uptake_exceeds_pool: ala__L",
+   "p_imbalance: in=0 out=0 biomass=1.02"
+  ],
+  "warnings": [
+   "no_transporter: etoh",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "clipped uptake lac__L to pool limit -5",
+   "clipped uptake etoh to pool limit -0.0486",
+   "clipped uptake ala__L to pool limit -6.78",
+   "S: credited 0.196 mmol/gDW/h of so4 (declared present in excess)",
+   "P: growth 0.75 -> 0"
+  ],
+  "rationale": "Based on my genome-encoded transporters and my known fermentation products.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -15.0,
+   "etoh": -5.0,
+   "co2": -10.0,
+   "nh4": 0.0,
+   "ala__L": -10.0,
+   "arg__L": -5.0,
+   "h2": -10.0
+  },
+  "fluxes_applied": {
+   "lac__L": -5.0,
+   "etoh": -0.0486,
+   "co2": -10.0,
+   "nh4": 0.0,
+   "ala__L": -6.7757,
+   "arg__L": -5.0,
+   "h2": -10.0,
+   "so4": -0.1963
+  }
+ }
+]

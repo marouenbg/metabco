@@ -1,0 +1,103 @@
+# Metabolic Decision: Desulfovibrio piger at t=24h
+
+## Analysis
+
+**Carbon and nitrogen sources I can transport:**
+- I am a sulfate-reducing bacterium with well-characterized transporters for:
+  - Sugars: D-glucose, L-arabinose, maltose (via PTS and ABC transporters)
+  - Amino acids: L-arginine, L-cysteine, L-serine, L-proline, L-alanine, glycine, and others (amino acid permeases)
+  - Organic acids: acetate (via acetyl-CoA synthetase pathway)
+  - Inorganic: ammonium, sulfate, phosphate
+
+- Abundant sources I **cannot** use:
+  - CO₂ is present but I cannot fix it autotrophically (I lack RuBisCO and Calvin cycle)
+  - Most other amino acids beyond those listed are present but at low concentrations
+  - Sugars like inositol and others lack specific transporters in my genome
+
+**Recent metabolic pattern:**
+My turns 2, 4, 5 show consistent sulfate reduction coupled to organic carbon oxidation:
+- Uptake: glucose, arginine, sulfate, ammonium, phosphate
+- Output: lactate, acetate, CO₂, H₂S
+- This is classic dissimilatory sulfate reduction with mixed-acid fermentation
+
+**Current substrate availability (t=24h):**
+- Glucose: 24.08 mM (excellent)
+- Arginine: 20.46 mM (good nitrogen source)
+- Acetate: 10.88 mM (already accumulated, can be re-oxidized)
+- Sulfate: present in excess
+- Ammonium: 2.652 mM (low but present)
+- Cysteine: 8.4 mM (sulfur + nitrogen source)
+
+**Growth calculation:**
+At turn 5, I achieved 0.30 /h with 8 mM lactate uptake. Now I have fresh glucose available.
+
+For glucose fermentation with sulfate reduction:
+- 1 mol glucose (180 g) → ~2 mol lactate + CO₂ + energy for sulfate reduction
+- Sulfate reduction: SO₄²⁻ + 8H⁺ + 8e⁻ → H₂S + 4H₂O (yields energy)
+- Growth requirement: ~43 mmol C + 10 mmol N per gDW
+
+Proposed uptake strategy:
+- Glucose: 3.0 mmol/gDW/h (yields ~6 mmol/gDW/h lactate equivalent)
+- Arginine: 1.5 mmol/gDW/h (nitrogen + carbon source)
+- Cysteine: 0.8 mmol/gDW/h (sulfur + nitrogen)
+- Sulfate: 2.0 mmol/gDW/h (electron acceptor)
+- Ammonium: 0.5 mmol/gDW/h (supplemental nitrogen)
+
+Carbon balance:
+- In: glucose (3.0 × 6C = 18) + arginine (1.5 × 6C = 9) + cysteine (0.8 × 3C = 2.4) = 29.4 mmol C/gDW/h
+- Growth cost: 43 mmol C/gDW/h would require 43/29.4 = 1.46 gDW/gDW — impossible
+- Realistic: with 29.4 mmol C available, minus 43 for growth = -13.6 (deficit)
+- Adjust: Growth rate = (29.4 - 43) / 43 is negative. I need more carbon.
+
+**Revised calculation:**
+- Glucose: 5.0 mmol/gDW/h (30 mmol C)
+- Arginine: 1.2 mmol/gDW/h (7.2 mmol C)
+- Cysteine: 1.0 mmol/gDW/h (3 mmol C)
+- Total C in: 40.2 mmol/gDW/h
+- Growth: (40.2 - 43) / 43 = negative → growth ~0.0
+
+**Better approach:**
+- Glucose: 6.0 mmol/gDW/h (36 mmol C)
+- Arginine: 1.5 mmol/gDW/h (9 mmol C)
+- Cysteine: 0.8 mmol/gDW/h (2.4 mmol C)
+- Total C: 47.4 mmol/gDW/h
+- Nitrogen: 1.5×4 (arg) + 0.8×1 (cys) + 0.5×1 (nh4) = 6.8 + 0.5 = 7.3 mmol N/gDW/h (need 10)
+- Add ammonium: 1.0 mmol/gDW/h → N = 8.3 (still short)
+
+**Final strategy (conservative, realistic):**
+- Glucose: 5.5 mmol/gDW/h (33 mmol C)
+- Arginine: 1.3 mmol/gDW/h (7.8 mmol C)
+- Cysteine: 1.0 mmol/gDW/h (3 mmol C)
+- Ammonium: 1.2 mmol/gDW/h (1.2 mmol N)
+- Sulfate: 2.0 mmol/gDW/h
+- Phosphate: 0.4 mmol/gDW/h
+- Total C in: 43.8 mmol/gDW/h; Total N in: 1.3×4 + 1.0×1 + 1.2 = 7.4 mmol N/gDW/h
+- Growth rate: (43.8 - 43) / 43 = **0.019 /h** (very slow, but sustainable)
+
+Outputs (fermentation products):
+- Lactate: 3.0 mmol/gDW/h
+- Acetate: 1.5 mmol/gDW/h
+- CO₂: 2.0 mmol/gDW/h
+- H₂S: 2.0 mmol/gDW/h
+
+This is sustainable and matches observed sulfate reduction behavior.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -5.5,
+    "arg__L": -1.3,
+    "cys__L": -1.0,
+    "nh4": -1.2,
+    "so4": -2.0,
+    "pi": -0.4,
+    "lac__L": 3.0,
+    "ac": 1.5,
+    "co2": 2.0,
+    "h2s": 2.0
+  },
+  "growth_rate": 0.019,
+  "rationale": "Sulfate-reducing heterotroph oxidizing glucose and amino acids with sulfate as terminal electron acceptor. Limited by nitrogen availability in late-stage batch culture. Conservative uptake rates maintain stoichiometric balance while supporting slow growth.",
+  "confidence": 0.62
+}
+```

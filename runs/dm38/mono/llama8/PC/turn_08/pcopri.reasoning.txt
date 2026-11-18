@@ -1,0 +1,19 @@
+As Prevotella copri CB7 DSM 18205, I'm a gram-positive, anaerobic bacterium that thrives in the human gut. My metabolic strategy is to maximize my growth rate while minimizing the amount of carbon and nitrogen I consume. I can transport and utilize a variety of carbon sources, including acetate, succinate, formate, and glycine. I'm also capable of transporting and metabolizing certain amino acids, such as glycine and L-phenylalanine.
+
+In terms of fermentation products, I'm known to produce acetate, formate, and succinate. To achieve optimal growth, I'll choose a combination of carbon and nitrogen sources that will support a growth rate of 0.1/h. This growth rate is derived from the fact that I'll be taking up 45 mmol of carbon and 10 mmol of nitrogen per gram of dry weight produced, and I'll be consuming a total of 1.995 gDW/L in the flask compartment.
+
+Here's a breakdown of my audit:
+
+* Carbon in: Acetate (ac) - 20 mmol/gDW/h, Succinate (succ) - 6.426 mmol/L x 1.995 gDW/L = 12.65 mmol/gDW/h, Formate (for) - 5.657 mmol/L x 1.995 gDW/L = 11.28 mmol/gDW/h = 43.95 mmol/gDW/h
+* Carbon out: Acetate (ac) + 20 mmol/gDW/h, Succinate (succ) + 5 mmol/gDW/h, Formate (for) + 10 mmol/gDW/h = 35 mmol/gDW/h
+* Carbon balance: 43.95 mmol/gDW/h - 35 mmol/gDW/h = 8.95 mmol/gDW/h
+* Nitrogen in: Glycine (gly) - 4.7 mmol/L x 1.995 gDW/L = 9.32 mmol/gDW/h
+* Nitrogen out: Acetate (ac) + 20 mmol/gDW/h, Succinate (succ) + 5 mmol/gDW/h, Formate (for) + 10 mmol/gDW/h = 35 mmol/gDW/h
+* Nitrogen balance: 9.32 mmol/gDW/h - 35 mmol/gDW/h = -25.68 mmol/gDW/h (this is a negative value, indicating that I'll need to take up more nitrogen to achieve a positive balance)
+
+To achieve a positive nitrogen balance, I'll need to take up more nitrogen than I'm currently consuming. I'll choose to take up 35 mmol of nitrogen per gram of dry weight per hour, which will support a growth rate of 0.1/h.
+
+Based on my audit, I'm 95% confident that my chosen fluxes will support my growth rate.
+
+Here's my JSON object:
+{"fluxes": {"ac": 20.0, "co2": -10.0, "h2": 10.0, "succ": 5.0, "for": -5.0, "gly": 35.0, "growth_rate": 0.1, "rationale": "maximizing growth rate while minimizing carbon and nitrogen consumption", "confidence": 0.95}

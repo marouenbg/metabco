@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "d_glucose__D": -10.0,
+  "ammonium": -5.0,
+  "h2": 1.0,
+  "ac": 5.0,
+  "but": 1.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "I am taking up D-glucose, Ammonium, and hydrogen gas to support my growth. I am also releasing acetate, butyrate, and formate as fermentation products. Based on the abundance of the available carbon and nitrogen sources, I estimate that the correct growth rate is around 0.5 /h.",
+ "confidence": 0.8
+}

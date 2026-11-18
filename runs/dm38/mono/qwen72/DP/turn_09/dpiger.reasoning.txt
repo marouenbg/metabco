@@ -1,0 +1,47 @@
+As Desulfovibrio piger ATCC 29098, my primary metabolic strategy revolves around sulfate reduction and fermentation, utilizing available substrates to support my growth and survival. Given the current environment, I will focus on the substrates that are abundant and can be effectively metabolized by my species.
+
+### Carbon and Nitrogen Sources:
+- **Carbon Dioxide (CO2)**: Present in high concentration, but not a primary substrate for growth. It can be used in certain metabolic pathways but is not a significant carbon source.
+- **Acetate (ac)**: Abundant and a primary substrate for growth and energy production. I can utilize acetate through fermentation and sulfate reduction.
+- **Hydrogen (H2)**: Present in moderate concentration and can be used in conjunction with sulfate reduction to produce energy.
+- **L-Cysteine (cys__L)**: Present and can be used as a sulfur source for sulfate reduction.
+- **Ammonium (NH4)**: Present and can serve as a nitrogen source for biomass synthesis.
+
+### Fermentation Products:
+- **Acetate (ac)**: Can be produced, but I will primarily use it as a substrate.
+- **Hydrogen Sulfide (H2S)**: A byproduct of sulfate reduction, which I will produce.
+- **Formate (for)**: Can be produced during fermentation.
+- **Hydrogen (H2)**: Can be produced during fermentation and sulfate reduction.
+
+### Growth Rate Calculation:
+- **Carbon Balance**: I will primarily use acetate as my carbon source. Each gram of dry weight requires 43 mmol of carbon. If I take up 5 mmol/gDW/h of acetate, I will use 5 mmol/gDW/h of carbon.
+- **Nitrogen Balance**: I will use ammonium as my nitrogen source. Each gram of dry weight requires 10 mmol of nitrogen. If I take up 5 mmol/gDW/h of ammonium, I will use 5 mmol/gDW/h of nitrogen.
+- **Biomass Production**: Given the uptake rates, I can support a growth rate of 0.10 /h, as this is a realistic rate given the available substrates and my metabolic capabilities.
+
+### Audit:
+- **Carbon In**: 5 mmol/gDW/h (from acetate)
+- **Carbon Out**: 0 mmol/gDW/h (no additional carbon products)
+- **Biomass Carbon Cost**: 43 mmol/gDW * 0.10 gDW/h = 4.3 mmol/gDW/h
+- **Net Carbon Balance**: 5 mmol/gDW/h (in) - 4.3 mmol/gDW/h (biomass) = 0.7 mmol/gDW/h (surplus)
+
+- **Nitrogen In**: 5 mmol/gDW/h (from ammonium)
+- **Nitrogen Out**: 0 mmol/gDW/h (no additional nitrogen products)
+- **Biomass Nitrogen Cost**: 10 mmol/gDW * 0.10 gDW/h = 1 mmol/gDW/h
+- **Net Nitrogen Balance**: 5 mmol/gDW/h (in) - 1 mmol/gDW/h (biomass) = 4 mmol/gDW/h (surplus)
+
+### Decision:
+I will take up acetate and ammonium, release hydrogen sulfide and formate, and maintain a growth rate of 0.10 /h.
+
+```json
+{
+  "fluxes": {
+    "ac": -5.00,
+    "nh4": -5.00,
+    "h2s": 1.00,
+    "for": 1.00
+  },
+  "growth_rate": 0.10,
+  "rationale": "Utilizing acetate and ammonium for growth, producing hydrogen sulfide and formate as byproducts.",
+  "confidence": 0.8
+}
+```

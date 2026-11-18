@@ -1,0 +1,34 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 10,
+  "growth_claimed": 0.44,
+  "growth_allowed": 0.44,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: arg__L"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake arg__L to pool limit -1.92",
+   "P: credited 0.296 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.114 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "butyrate and acetate uptake, L-arginine as nitrogen source, producing acetate and CO2",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": -10.0,
+   "ac": -5.0,
+   "arg__L": -2.0,
+   "co2": 10.0
+  },
+  "fluxes_applied": {
+   "but": -10.0,
+   "ac": -5.0,
+   "arg__L": -1.9239,
+   "co2": 10.0,
+   "pi": -0.2958,
+   "so4": -0.1136
+  }
+ }
+]

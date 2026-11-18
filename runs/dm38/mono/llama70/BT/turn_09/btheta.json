@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "ppa": 2.0,
+  "inost": -2.0,
+  "pro__L": -1.0,
+  "gly": -1.0,
+  "phe__L": -1.0
+ },
+ "growth_rate": 0.244,
+ "rationale": "Utilizing available carbon and nitrogen sources to support growth and fermentation product production",
+ "confidence": 0.8
+}

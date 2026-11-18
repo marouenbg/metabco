@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -3.0,
+  "lac__L": -4.0,
+  "arg__L": -1.5,
+  "nh4": -1.0,
+  "ac": 3.0,
+  "ppa": 1.5,
+  "for": 0.8,
+  "co2": 1.2
+ },
+ "growth_rate": 0.6,
+ "rationale": "Shift from glucose-only to mixed substrate fermentation: lactate (abundant, fermentable), remaining glucose, and arginine (carbon + nitrogen source). Fermentation yields acetate, propionate, formate, and CO\u2082. Carbon balance: 39 in \u2212 12.5 out = 26.5 for biomass at \u03bc=0.60/h. Nitrogen: 7 mmol available, 6.3 needed. Recovery from turn 3 crisis via secondary substrates.",
+ "confidence": 0.72
+}

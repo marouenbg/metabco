@@ -1,0 +1,34 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 3,
+  "growth_claimed": 0.7,
+  "growth_allowed": 0.2413,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=2.38 out=0 biomass=7.25"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.877 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.183 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.7 -> 0.241"
+  ],
+  "rationale": "Maximizing growth on glucose with ammonium as nitrogen source, producing acetate and propionate",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "nh4": -2.38,
+   "ac": 5.0,
+   "ppa": 2.5
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "nh4": -2.38,
+   "ac": 5.0,
+   "ppa": 2.5,
+   "pi": -0.8768,
+   "so4": -0.1832
+  }
+ }
+]

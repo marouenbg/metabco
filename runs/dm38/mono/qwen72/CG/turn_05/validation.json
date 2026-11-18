@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 5,
+  "growth_claimed": 0.12,
+  "growth_allowed": 0.12,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "S: credited 0.0314 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Maintaining a steady uptake of D-glucose and L-lactate for carbon, and ammonium for nitrogen, while producing acetate, butyrate, and ethanol to balance redox and energy production.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "etoh": 5.0,
+   "nh4": -2.0,
+   "pi": -0.12
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "etoh": 5.0,
+   "nh4": -2.0,
+   "pi": -0.12,
+   "so4": -0.0314
+  }
+ }
+]

@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -3.5,
+  "lac__L": -3.5,
+  "arg__L": -1.0,
+  "ac": 5.0,
+  "but": 3.0,
+  "nh4": -3.0,
+  "co2": 2.0,
+  "h2": 1.0,
+  "pi": -0.15
+ },
+ "growth_rate": 0.15,
+ "rationale": "Utilizing D-glucose and L-lactate for growth and fermentation, producing acetate and butyrate while maintaining carbon and nitrogen balance.",
+ "confidence": 0.8
+}

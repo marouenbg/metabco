@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 2,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.583 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 1.95 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Fermentative metabolism using glucose and lactate as carbon sources",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -3.0,
+   "ac": 5.0,
+   "co2": 5.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -4.9501,
+   "ac": 5.0,
+   "co2": 5.0,
+   "pi": -0.5832,
+   "so4": -0.1309
+  }
+ }
+]

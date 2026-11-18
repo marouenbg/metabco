@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "co2": 10.0,
+  "nh4": 5.0,
+  "but": 5.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.5,
+ "rationale": "growth supported by available carbon and nitrogen sources, with butyrate and hydrogen secretion",
+ "confidence": 0.8
+}

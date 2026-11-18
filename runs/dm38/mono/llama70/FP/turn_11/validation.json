@@ -1,0 +1,49 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 11,
+  "growth_claimed": 0.24,
+  "growth_allowed": 0.1447,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: inost",
+   "n_imbalance: in=1 out=0 biomass=1.74"
+  ],
+  "warnings": [
+   "no_transporter: inost",
+   "no_transporter: lac__L",
+   "no_transporter: ppa",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "clipped uptake inost to pool limit -3.88",
+   "P: credited 0.223 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0504 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.24 -> 0.145"
+  ],
+  "rationale": "Optimal carbon and nitrogen source utilization",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "inost": -5.0,
+   "lac__L": -2.0,
+   "ala__L": -1.0,
+   "but": 2.0,
+   "ac": 1.0,
+   "ppa": 0.5,
+   "h2": 1.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "inost": -3.8827,
+   "lac__L": -2.0,
+   "ala__L": -1.0,
+   "but": 2.0,
+   "ac": 1.0,
+   "ppa": 0.5,
+   "h2": 1.0,
+   "co2": 1.0,
+   "pi": -0.2234,
+   "so4": -0.0504
+  }
+ }
+]

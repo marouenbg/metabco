@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": 2.0,
+  "but": 3.0,
+  "h2": 1.0,
+  "arg__L": -1.0,
+  "ser__L": -0.5,
+  "nh4": 1.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.0263,
+ "rationale": "Utilizing acetate, butyrate, and hydrogen for carbon and L-arginine and L-serine for nitrogen. Growth rate is limited by carbon balance.",
+ "confidence": 0.9
+}

@@ -1,0 +1,85 @@
+# Internal metabolic reasoning
+
+## Situation assessment
+I am at 1.401 gDW/L after 12 hours of growth. The culture is anaerobic, sealed, and heading toward nutrient limitation. I have consumed most of the readily available lactate (which I was fermenting in earlier turns), and glucose is now also depleted. I need to pivot my metabolic strategy.
+
+## Transporters and available carbon sources
+As *Faecalibacterium prausnitzii*, I am a butyrate-producing, obligate anaerobe with a relatively specialized metabolic repertoire. I can transport:
+- **L-arabinose** (21.31 mM) — I have arabinose permeases; this is a primary fermentation substrate
+- **D-glucose** (6.1 mM) — nearly depleted, but still present
+- **L-arginine** (16.57 mM) — I can use this for both carbon and nitrogen
+- **Butyrate** (16.16 mM) — I produce this, but can also consume it via β-oxidation if needed
+- **Acetate** (13.36 mM) — I can consume acetate via acetyl-CoA pathways
+- **L-serine, L-cysteine, L-proline** — amino acid catabolism is available
+- **Formate** (2.07 mM) — I can oxidize formate
+
+I **cannot** efficiently use:
+- Maltose, myo-inositol — I lack the necessary permeases
+- Most other amino acids at significant rates without dedicated pathways
+
+## Fermentation strategy
+My known fermentation products are **butyrate** and **acetate** (with minor formate and CO₂). I do not produce lactate; that was consumed from the environment. My core metabolism converts sugars and amino acids to acetyl-CoA, then to butyrate via the butyryl-CoA pathway.
+
+## Optimal substrate choice
+**L-arabinose** is abundant (21.31 mM) and a preferred fermentable sugar for me. I should prioritize this. I will also continue modest uptake of **L-arginine** for nitrogen and additional carbon, and consume remaining **D-glucose**.
+
+## Growth calculation
+At turn 2, I was growing at 0.500 /h on lactate + glucose. Now, with arabinose as primary substrate:
+- Arabinose fermentation: C₅H₁₀O₅ → butyrate + acetate + CO₂ (stoichiometry varies; typical yield ~0.3 mol butyrate + 0.2 mol acetate per mol arabinose)
+- L-arginine (C₆H₁₄N₄O₂): can yield ~1.5 mol acetyl-CoA equivalents per molecule, plus 1 N
+
+**Uptake plan:**
+- L-arabinose: 12 mmol/gDW/h (high, substrate-level limited)
+- D-glucose: 3 mmol/gDW/h (residual, nearly depleted)
+- L-arginine: 2 mmol/gDW/h (for nitrogen + carbon)
+- Ammonium: 1.5 mmol/gDW/h (supplemental nitrogen)
+
+**Carbon budget:**
+- Arabinose: 12 × 5 = 60 C
+- Glucose: 3 × 6 = 18 C
+- Arginine: 2 × 6 = 12 C
+- **Total in: 90 C**
+
+**Growth requirement:** 0.45 /h × 33 = 14.85 C (and 0.45 × 7 = 3.15 N)
+**Available for fermentation:** 90 − 14.85 = 75.15 C
+
+**Fermentation products** (approximate stoichiometry for mixed-acid fermentation of arabinose):
+- Butyrate (C₄): ~11 mmol/gDW/h → 44 C
+- Acetate (C₂): ~8 mmol/gDW/h → 16 C
+- Formate (C₁): ~2 mmol/gDW/h → 2 C
+- CO₂: ~15 mmol/gDW/h → 15 C
+- **Total out: 77 C** (close to budget; acceptable given redox balance)
+
+**Nitrogen budget:**
+- Arginine: 2 mmol × 4 N = 8 N
+- Ammonium: 1.5 mmol = 1.5 N
+- **Total in: 9.5 N**
+- Growth cost: 3.15 N
+- Remaining: 6.35 N → release as ammonia or retain in amino acid synthesis
+
+**Growth rate:** 0.45 /h is sustainable on this substrate mix.
+
+## Final check
+- Carbon: 90 in, 77 out (fermentation) + 14.85 (growth) ≈ 91.85 (within 2%, acceptable)
+- Nitrogen: 9.5 in, 3.15 (growth), ~6.35 retained or released
+- Redox: mixed-acid fermentation is redox-balanced under anaerobic conditions
+
+---
+
+```json
+{
+  "fluxes": {
+    "arab__L": -12.0,
+    "glc__D": -3.0,
+    "arg__L": -2.0,
+    "nh4": -1.5,
+    "but": 11.0,
+    "ac": 8.0,
+    "for": 2.0,
+    "co2": 15.0
+  },
+  "growth_rate": 0.45,
+  "rationale": "Pivoting to arabinose as primary fermentable carbon source (abundant, 21.31 mM). Supplementing with residual glucose and arginine for nitrogen and additional carbon. Fermentation yields butyrate, acetate, formate, and CO₂ via mixed-acid pathway. Growth rate 0.45 /h is supported by carbon and nitrogen balance; conserves mass.",
+  "confidence": 0.72
+}
+```

@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 3,
+  "growth_claimed": 0.212,
+  "growth_allowed": 0.212,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.197 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0446 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Fermenting L-arabinose and D-glucose with ammonium and L-arginine as nitrogen sources",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arab__L": -5.0,
+   "glc__D": -2.0,
+   "nh4": -1.0,
+   "arg__L": -1.0,
+   "for": 2.0,
+   "ac": 3.0
+  },
+  "fluxes_applied": {
+   "arab__L": -5.0,
+   "glc__D": -2.0,
+   "nh4": -1.0,
+   "arg__L": -1.0,
+   "for": 2.0,
+   "ac": 3.0,
+   "pi": -0.1973,
+   "so4": -0.0446
+  }
+ }
+]

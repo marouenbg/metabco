@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 10,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=0 out=50 biomass=16.2"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.364 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0878 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.4 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Balancing carbon and nitrogen uptake with biomass production and fermentation products to maintain a steady growth rate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 5.0,
+   "for": 5.0,
+   "nh4": -8.0
+  },
+  "fluxes_applied": {
+   "ac": 0.0,
+   "ppa": 0.0,
+   "but": 0.0,
+   "for": 0.0,
+   "nh4": -8.0,
+   "pi": -0.3637,
+   "so4": -0.0878
+  }
+ }
+]

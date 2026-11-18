@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "but": -5.0,
+  "pro__L": -2.0,
+  "ac": 5.0
+ },
+ "growth_rate": 0.15,
+ "rationale": "Butyrate and L-proline uptake support growth and acetate production",
+ "confidence": 0.8
+}

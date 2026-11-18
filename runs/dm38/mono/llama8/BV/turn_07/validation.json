@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 7,
+  "growth_claimed": 0.096,
+  "growth_allowed": 0.096,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.0873 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0211 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "I've taken up glucose and lactate at moderate rates, and released acetate, butyrate, and hydrogen gas as byproducts of fermentation. I've also taken up ammonium at a rate that's less than the maximum ",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -15.0,
+   "nh4": -5.0,
+   "ac": 20.0,
+   "but": 10.0,
+   "h2": 5.0
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -15.0,
+   "nh4": -5.0,
+   "ac": 20.0,
+   "but": 10.0,
+   "h2": 5.0,
+   "pi": -0.0873,
+   "so4": -0.0211
+  }
+ }
+]

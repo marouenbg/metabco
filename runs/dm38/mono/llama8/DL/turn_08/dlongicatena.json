@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "co2": 0.5,
+  "glc__D": 10,
+  "arab__L": 0.63,
+  "cys__L": 1,
+  "ser__L": 1,
+  "h2": 10
+ },
+ "growth_rate": 0.75,
+ "rationale": "Taking up D-glucose, L-arabinose, L-cysteine, L-serine, and hydrogen to support growth and production of fermentation products.",
+ "confidence": 0.9
+}

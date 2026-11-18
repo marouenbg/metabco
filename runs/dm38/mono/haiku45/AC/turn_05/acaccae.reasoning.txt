@@ -1,0 +1,97 @@
+# Metabolic Decision for Anaerostipes caccae DSM 14662 — Turn 5, t=20h
+
+## Analysis
+
+### Available Carbon and Nitrogen Sources
+
+**Carbon sources I can transport and metabolise:**
+- L-arabinose (arab__L): 9.567 mM — I ferment this to butyrate, acetate, formate
+- L-lactate (lac__L): not present now, but was in earlier turns
+- Butyrate (but): 10.92 mM — present from my own secretion; I can consume it via β-oxidation or other pathways
+- Acetate (ac): 7.067 mM — can be reassimilated
+- Formate (for): 4.839 mM — can be oxidised or incorporated
+- Maltose (malt): 4.334 mM — I have α-glucosidase; can ferment
+- Amino acids: L-arginine, L-serine, L-proline, etc. — I can deaminate and ferment these
+
+**Abundant sources I cannot use:**
+- D-glucose (glc__D): 0 mM now (exhausted by turn 4)
+- CO₂: I produce it, not consume it as a primary carbon source (I'm not autotrophic)
+
+**Nitrogen sources:**
+- L-arginine (arg__L): 14.22 mM — excellent; arginine is both carbon and nitrogen
+- Ammonium (nh4): 0.7362 mM — very low
+- Other amino acids provide nitrogen via deamination
+
+### Metabolic Strategy
+
+I am *Anaerostipes caccae*, a butyrate-producing anaerobe. My known fermentation products are **butyrate, acetate, and formate** from carbohydrate fermentation. I can also perform amino acid fermentation (Stickland reactions).
+
+**Primary substrates at this turn:**
+1. **L-arabinose** (9.567 mM) — my preferred fermentable sugar
+2. **L-arginine** (14.22 mM) — abundant amino acid; can use in Stickland reactions or direct fermentation
+3. **Maltose** (4.334 mM) — secondary carbohydrate
+
+**Growth calculation:**
+- To produce 1 gDW of biomass: ~38 mmol C, ~10 mmol N
+- Current biomass: 1.67 gDW/L
+- Over 4 h at growth rate μ: ΔX = 1.67 × (e^(μ×4) − 1) ≈ 1.67 × 4μ for small μ
+
+Let me target a sustainable growth rate of **0.25 /h** (declining from earlier turns as resources deplete and fermentation products accumulate).
+
+### Carbon and Nitrogen Audit
+
+**Uptake plan:**
+- L-arabinose: 5.0 mmol/gDW/h (C₅H₁₀O₅ = 5 C per molecule)
+  - Carbon in: 5.0 × 5 = 25 mmol C/gDW/h
+  - Nitrogen: 0
+- L-arginine: 2.0 mmol/gDW/h (C₆H₁₄N₄O₂ = 6 C, 4 N per molecule)
+  - Carbon in: 2.0 × 6 = 12 mmol C/gDW/h
+  - Nitrogen in: 2.0 × 4 = 8 mmol N/gDW/h
+- L-serine: 1.0 mmol/gDW/h (C₃H₇NO₃ = 3 C, 1 N)
+  - Carbon in: 1.0 × 3 = 3 mmol C/gDW/h
+  - Nitrogen in: 1.0 × 1 = 1 mmol N/gDW/h
+
+**Total carbon in: 40 mmol C/gDW/h**
+**Total nitrogen in: 9 mmol N/gDW/h**
+
+**Growth at μ = 0.25 /h:**
+- Biomass cost: 0.25 × 38 = 9.5 mmol C/gDW/h
+- Biomass N cost: 0.25 × 10 = 2.5 mmol N/gDW/h
+
+**Available for fermentation products:**
+- Carbon: 40 − 9.5 = 30.5 mmol C/gDW/h
+- Nitrogen: 9 − 2.5 = 6.5 mmol N/gDW/h (mostly as NH₄ from deamination)
+
+**Fermentation products (typical butyrate fermentation):**
+- Butyrate (C₄): ~2.5 mmol/gDW/h (10 C)
+- Acetate (C₂): ~2.0 mmol/gDW/h (4 C)
+- Formate (C₁): ~1.5 mmol/gDW/h (1.5 C)
+- CO₂: ~2.0 mmol/gDW/h (2 C)
+- H₂: trace (negligible C)
+- NH₄: ~6.5 mmol/gDW/h (from deamination)
+
+**Carbon balance check:** 10 + 4 + 1.5 + 2 = 17.5 mmol C out (fermentation products) + 9.5 (biomass) = 27 mmol C accounted for. This is within 40 mmol available. ✓
+
+**Nitrogen balance:** 6.5 mmol NH₄ released (from deamination). ✓
+
+### Confidence and Rationale
+
+This organism is well-adapted to carbohydrate and amino acid fermentation in anaerobic conditions. The declining growth rate reflects substrate depletion and product accumulation. The strategy balances continued growth with realistic metabolic constraints.
+
+```json
+{
+  "fluxes": {
+    "arab__L": -5.0,
+    "arg__L": -2.0,
+    "ser__L": -1.0,
+    "but": 2.5,
+    "ac": 2.0,
+    "for": 1.5,
+    "co2": 2.0,
+    "nh4": 6.5
+  },
+  "growth_rate": 0.25,
+  "rationale": "Anaerostipes caccae ferments arabinose and arginine via mixed-acid fermentation, producing butyrate, acetate, formate, and CO₂. Growth is declining due to glucose depletion and accumulation of organic acids. Arabinose and arginine remain abundant and are metabolised at realistic rates. Nitrogen from arginine deamination is released as ammonium. Carbon and nitrogen budgets balance.",
+  "confidence": 0.72
+}
+```

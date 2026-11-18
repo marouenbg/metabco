@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "co2": 2.0,
+  "cys__L": -2.0
+ },
+ "growth_rate": 0.235,
+ "rationale": "Utilizing acetate and CO2 as primary carbon sources and amino acids as nitrogen sources",
+ "confidence": 0.8
+}

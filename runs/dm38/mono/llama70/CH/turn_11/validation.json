@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 11,
+  "growth_claimed": 0.126,
+  "growth_allowed": 0.126,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.147 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.033 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "acetate, glycine, and phenylalanine uptake support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "gly": -2.0,
+   "phe__L": -1.0,
+   "co2": 1.0,
+   "but": 1.0,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "gly": -2.0,
+   "phe__L": -1.0,
+   "co2": 1.0,
+   "but": 1.0,
+   "h2": 0.5,
+   "pi": -0.147,
+   "so4": -0.033
+  }
+ }
+]

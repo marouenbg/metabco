@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 4,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: glc__D",
+   "c_imbalance: in=41.4 out=22.5 biomass=21.3",
+   "n_imbalance: in=2 out=0 biomass=5.08",
+   "p_imbalance: in=0 out=0 biomass=0.268"
+  ],
+  "warnings": [
+   "no_transporter: glc__D"
+  ],
+  "repairs": [
+   "clipped uptake glc__D to pool limit -6.9",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.5 -> 0.494",
+   "N: growth 0.494 -> 0.204",
+   "P: growth 0.204 -> 0"
+  ],
+  "rationale": "D-glucose and ammonium uptake, acetate and carbon dioxide production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -15.0,
+   "nh4": -2.0,
+   "ac": 7.5,
+   "co2": 7.5
+  },
+  "fluxes_applied": {
+   "glc__D": -6.9038,
+   "nh4": -2.0,
+   "ac": 7.5,
+   "co2": 7.5,
+   "so4": -0.1309
+  }
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 9,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.0541,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=16 out=15 biomass=6.65"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.186 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.042 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.2 -> 0.0541"
+  ],
+  "rationale": "Utilizing CO2 and H2 for formate and acetate production, and L-arginine and ammonium for nitrogen, supports a sustainable growth rate of 0.2 /h.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "co2": -10.0,
+   "h2": -5.0,
+   "arg__L": -1.0,
+   "nh4": 0.5,
+   "for": 5.0,
+   "ac": 5.0
+  },
+  "fluxes_applied": {
+   "co2": -10.0,
+   "h2": -5.0,
+   "arg__L": -1.0,
+   "nh4": 0.5,
+   "for": 5.0,
+   "ac": 5.0,
+   "pi": -0.1862,
+   "so4": -0.042
+  }
+ }
+]

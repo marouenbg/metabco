@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -12.0,
+  "arab__L": -6.0,
+  "arg__L": -8.0,
+  "nh4": -3.0,
+  "ac": 1.5,
+  "but": 1.2,
+  "for": 0.5,
+  "co2": 0.25
+ },
+ "growth_rate": 0.55,
+ "rationale": "Bacteroides fragilis ferments abundant glucose and arabinose with arginine as a supplementary carbon and nitrogen source. Fermentation of these sugars under anaerobic conditions yields acetate, butyrate, and formate as major products. Growth is limited by available carbon at ~0.55 /h, with nitrogen in excess. The carbon balance is conserved: 26 mmol in supports 22.55 mmol for biomass plus 3.45 mmol for fermentation products.",
+ "confidence": 0.72
+}

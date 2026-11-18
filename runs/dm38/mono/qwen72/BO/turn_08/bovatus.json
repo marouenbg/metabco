@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "nh4": -1.0,
+  "ac": 7.0,
+  "but": 5.0,
+  "for": 1.0
+ },
+ "growth_rate": 0.1,
+ "rationale": "Continuing to utilize abundant glucose and lactate for energy, with ammonium as the primary nitrogen source. Growth is limited by nitrogen availability.",
+ "confidence": 0.9
+}

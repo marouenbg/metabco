@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -5.0,
+  "arg__L": -2.0,
+  "nh4": -1.0,
+  "ac": 5.0,
+  "ppa": 3.0
+ },
+ "growth_rate": 0.375,
+ "rationale": "Utilizing abundant lactate and glucose for carbon, and arginine and ammonium for nitrogen. Producing acetate and propionate as fermentation products. Growth rate is limited by nitrogen uptake.",
+ "confidence": 0.9
+}

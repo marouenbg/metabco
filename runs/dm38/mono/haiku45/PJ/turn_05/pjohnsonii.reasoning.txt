@@ -1,0 +1,87 @@
+# Metabolic Decision for Parabacteroides johnsonii DSM 18315 — Turn 5
+
+## Analysis
+
+### Carbon and Nitrogen Sources Available
+I have robust access to:
+- **D-glucose** (glc__D): 24.01 mM — my preferred fermentable carbohydrate
+- **L-lactate** (lac__L): 27.68 mM — excellent anaerobic substrate
+- **L-arabinose** (arab__L): 21.04 mM — fermentable pentose
+- **L-arginine** (arg__L): 21.54 mM — provides both carbon and nitrogen
+- **Ammonium** (nh4): 9.149 mM — primary nitrogen source
+
+My recent history shows consistent uptake of glucose, lactate, arabinose, and arginine with simultaneous growth. This validates my metabolic capacity.
+
+### Fermentation Strategy
+As a Bacteroides species in anaerobic conditions, I ferment carbohydrates and organic acids via the Embden-Meyerhof pathway and related routes, producing:
+- **Acetate** (primary fermentation product)
+- **Propionate** (secondary product from lactate/succinate pathway)
+- **Succinate** (intermediate, often accumulated then re-fermented)
+- **CO₂** (from decarboxylation reactions)
+
+My previous turns confirm this pattern consistently.
+
+### Growth Rate Calculation
+At turn 4, I achieved 0.200 /h growth with:
+- Glucose uptake: 10 mmol/gDW/h
+- Lactate uptake: 6 mmol/gDW/h
+- Arabinose uptake: 3 mmol/gDW/h
+- Arginine uptake: 2.5 mmol/gDW/h
+- Ammonium uptake: 1.5 mmol/gDW/h
+
+Total carbon uptake ≈ 10 + 6 + 3 + 2.5 = 21.5 mmol C/gDW/h
+
+For 0.200 /h growth:
+- Carbon needed for biomass: 0.200 × 42 = 8.4 mmol C/gDW/h
+- Nitrogen needed for biomass: 0.200 × 10 = 2.0 mmol N/gDW/h
+- Available nitrogen: 2.5 (arg) + 1.5 (nh4) = 4.0 mmol N/gDW/h ✓
+
+This suggests nitrogen is not limiting. I can sustain or slightly increase growth. Given remaining substrate abundance and 28 hours remaining, I'll target **0.25 /h** growth.
+
+### Carbon Audit for Proposed Fluxes
+Proposed uptake:
+- Glucose: -10 mmol/gDW/h (10 C)
+- Lactate: -7 mmol/gDW/h (7 C, 7 × 2 = 14 C total)
+- Arabinose: -3 mmol/gDW/h (5 C)
+- Arginine: -3 mmol/gDW/h (6 C)
+- Ammonium: -2 mmol/gDW/h (0 C, but provides N)
+
+**Total C in: 10 + 14 + 5 + 6 = 35 mmol C/gDW/h**
+
+For 0.25 /h growth:
+- Biomass C cost: 0.25 × 42 = 10.5 mmol C/gDW/h
+- Biomass N cost: 0.25 × 10 = 2.5 mmol N/gDW/h (supplied by 3 arg + 2 nh4)
+
+Fermentation products (typical stoichiometry for mixed-acid fermentation):
+- Acetate + Propionate + CO₂ ≈ 35 - 10.5 = 24.5 mmol C/gDW/h
+
+Allocating conservatively:
+- Acetate: +8 mmol/gDW/h (8 C)
+- Propionate: +5 mmol/gDW/h (6 C)
+- Succinate: +3 mmol/gDW/h (4 C)
+- CO₂: +5.5 mmol/gDW/h (5.5 C)
+
+**Total C out: 8 + 6 + 4 + 5.5 + 10.5 = 34 mmol C/gDW/h** ✓ Balanced
+
+Nitrogen check: 3 (arg) + 2 (nh4) = 5 mmol N in; 2.5 (biomass) leaves 2.5 mmol N excess (likely incorporated into fermentation byproducts or retained). ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "lac__L": -7.0,
+    "arab__L": -3.0,
+    "arg__L": -3.0,
+    "nh4": -2.0,
+    "ac": 8.0,
+    "ppa": 5.0,
+    "succ": 3.0,
+    "co2": 5.5
+  },
+  "growth_rate": 0.25,
+  "rationale": "Parabacteroides johnsonii ferments glucose, lactate, and arabinose via mixed-acid fermentation in anaerobic conditions. Previous turns validate this strategy. Nitrogen from arginine and ammonium supports 0.25 /h growth. Carbon balance: 35 mmol C in → 10.5 (biomass) + 24.5 (fermentation products). Abundant substrates remain; vessel pH buffered.",
+  "confidence": 0.78
+}
+```

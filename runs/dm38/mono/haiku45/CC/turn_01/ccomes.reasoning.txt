@@ -1,0 +1,98 @@
+# Reasoning through this metabolic decision
+
+## What I can transport and metabolise
+
+As *Coprococcus comes*, I am a Gram-positive anaerobic bacterium from the human gut microbiota. My genome encodes:
+- **Carbohydrate transporters**: I can use glucose, arabinose, maltose (via PTS or permeases)
+- **Organic acid transporters**: I can ferment lactate robustly — this is a signature trait
+- **Amino acid transporters**: I have broad amino acid uptake capacity (arginine, serine, cysteine, etc.)
+- **Limitations**: I cannot use nitrate (no nitrate reductase); I cannot fix nitrogen
+
+## Carbon and nitrogen sources available
+
+**Primary carbon sources I will use:**
+- L-lactate (27.81 mM): abundant, preferred fermentation substrate
+- D-glucose (24.65 mM): readily fermented
+- L-arginine (21.81 mM): excellent dual C+N source; I can deaminate and ferment the carbon skeleton
+
+**Amino acids as N sources:**
+- Arginine is my best choice: it provides both carbon (from the α-ketoglutarate backbone after deamination) and nitrogen (from the guanidinium group)
+- Ammonium (9.1 mM) is available but I prefer amino acids when abundant
+
+**Why I avoid some substrates:**
+- Butyrate production (not consumption) is my fermentation signature
+- I cannot efficiently use nitrate in anaerobic conditions
+
+## Fermentation strategy
+
+From my last turn, I was growing at 0.700 /h. I should sustain or slightly increase this given abundant substrates remain.
+
+**My fermentation products:**
+- Butyrate (major): from lactate and glucose fermentation via the butyryl-CoA pathway
+- Acetate (co-product): from mixed-acid fermentation
+- CO₂: from decarboxylation reactions
+- Small amounts of formate or succinate may occur
+
+## Growth rate calculation
+
+**Substrate uptake plan:**
+- Lactate: 10 mmol/gDW/h (robust fermentation)
+- Glucose: 6 mmol/gDW/h (secondary, spare capacity)
+- Arginine: 4 mmol/gDW/h (for nitrogen + supplemental C)
+- Ammonium: 1 mmol/gDW/h (fill remaining N demand)
+
+**Carbon balance:**
+- Lactate C: 10 × 3 = 30 mmol C
+- Glucose C: 6 × 6 = 36 mmol C
+- Arginine C: 4 × 6 = 24 mmol C
+- **Total C in: 90 mmol/gDW**
+
+**Nitrogen balance:**
+- Arginine N: 4 × 4 = 16 mmol N
+- Ammonium N: 1 mmol N
+- **Total N in: 17 mmol/gDW**
+
+**Growth cost:**
+- C cost: 30 mmol/gDW per gram biomass produced
+- N cost: 8 mmol/gDW per gram biomass produced
+- Max growth from C: 90 / 30 = 3.0 gDW/gDW (nonsensical; this is per hour rate)
+- Max growth from N: 17 / 8 = 2.125 /h (also high; N is not limiting)
+
+**Realistic growth rate:** Given substrate abundance and my metabolic capacity, **μ = 0.65 /h** is sustainable (slightly below the prior 0.700 to account for substrate depletion over 4 h).
+
+**Carbon accounting for growth at 0.65 /h:**
+- Biomass produced: 0.65 gDW/gDW/h
+- C for growth: 0.65 × 30 = 19.5 mmol C
+- C for fermentation products: 90 − 19.5 = 70.5 mmol C
+- Fermentation yields: lactate + glucose → butyrate + acetate + CO₂
+  - Lactate (3C) → typically 1.5 acetate (2C) + 0.5 butyrate (4C) + CO₂
+  - Glucose (6C) → 2 acetate + butyrate + CO₂ (various ratios)
+  - Approximate: 70.5 mmol C → ~20 mmol butyrate (80 C) + ~25 mmol acetate (50 C) + ~15 mmol CO₂
+
+This is consistent with observed fermentation patterns.
+
+## Nitrogen audit
+- N in: 17 mmol
+- N for growth at 0.65 /h: 0.65 × 8 = 5.2 mmol
+- N excess: 11.8 mmol (will accumulate as amino groups, released as NH₄ or incorporated into overflow amino acids)
+
+---
+
+```json
+{
+  "fluxes": {
+    "lac__L": -10.0,
+    "glc__D": -6.0,
+    "arg__L": -4.0,
+    "nh4": -1.0,
+    "but": 20.0,
+    "ac": 25.0,
+    "co2": 15.0,
+    "pi": -0.45,
+    "so4": -0.18
+  },
+  "growth_rate": 0.65,
+  "rationale": "Coprococcus thrives on lactate and glucose in anaerobic conditions, using arginine as a key N+C source. Fermentation yields butyrate and acetate as primary products. Substrate remains abundant; growth is N-replete and C-replete. Rate sustained at 0.65 /h with robust carbon and nitrogen accounting.",
+  "confidence": 0.72
+}
+```

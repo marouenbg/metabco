@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "gly": -2.0,
+  "for": 2.0,
+  "co2": 2.5,
+  "nh4": -1.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "acetate and glycine uptake, acetate and formate production",
+ "confidence": 0.8
+}

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "h2": 10.0,
+  "for": 10.0,
+  "lac__L": 5.0,
+  "nh4": 10.0,
+  "co2": -5.0,
+  "gln__L": -10.0,
+  "gly": 8.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing available sugars and organic acids, and taking in ammonium as a nitrogen source. Audit shows that growth rate is supported by available nutrients.",
+ "confidence": 0.9
+}

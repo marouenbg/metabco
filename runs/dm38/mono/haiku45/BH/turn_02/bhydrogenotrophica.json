@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -12.0,
+  "lac__L": 10.5,
+  "arg__L": -1.5,
+  "nh4": -2.5,
+  "ac": 40.0,
+  "for": 20.0,
+  "co2": 25.0,
+  "h2": 0.8
+ },
+ "growth_rate": 0.25,
+ "rationale": "Fermentation of abundant glucose and lactate under strict anaerobic conditions, producing acetate, formate, CO\u2082, and H\u2082. Mixed-acid fermentation is characteristic of this species. Nitrogen from ammonium and arginine supports growth at moderate rate consistent with substrate availability.",
+ "confidence": 0.68
+}

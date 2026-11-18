@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "ala__L": -2.0,
+  "gly": -1.0,
+  "gln__L": -1.0,
+  "nh4": -1.0,
+  "lac__L": 2.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.132,
+ "confidence": 0.8,
+ "rationale": "Balanced uptake of acetate, amino acids, and ammonium to support growth and produce fermentation products."
+}

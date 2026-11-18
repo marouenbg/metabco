@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -26.55,
+  "arg__L": -18.04,
+  "co2": 26.55,
+  "nh4": 18.04
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing lactate and arginine as primary carbon and nitrogen sources to support growth",
+ "confidence": 0.9
+}

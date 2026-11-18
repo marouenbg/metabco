@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 4,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.302 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.616 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Based on the available nutrients and the costs associated with growth, I have chosen to take up glucose and arginine to support my growth and produce lactate to cover the biomass cost and the carbon r",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arg__L": -5.0,
+   "lac__L": 15.0,
+   "for": 0.5,
+   "h2": 0.5,
+   "h2s": 0.5
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arg__L": -5.0,
+   "lac__L": 15.0,
+   "for": 0.5,
+   "h2": 0.5,
+   "h2s": 0.5,
+   "pi": -0.3025,
+   "so4": -0.6162
+  }
+ }
+]

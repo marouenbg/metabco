@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -10,
+  "glc__D": -5,
+  "but": 20,
+  "for": 10,
+  "etoh": 5,
+  "co2": 0.5,
+  "h2": 0,
+  "ac": 0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Bacteroides uniformis ATCC 8492 growth strategy based on available nutrients and known metabolic capabilities.",
+ "confidence": 0.8
+}

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "lac__L": 5.0,
+  "arg__L": 2.0,
+  "ac": 5.0,
+  "but": 0.5,
+  "h2": 0.5,
+  "nh4": 0.5
+ },
+ "growth_rate": 0.75,
+ "rationale": "I will take up D-glucose, L-lactate, and L-arginine to support a growth rate of 0.75 gDW/h. I will also release acetate, butyrate, and hydrogen gas as fermentation products. I will release nitrogen gas as a byproduct of L-arginine degradation.",
+ "confidence": 0.9
+}

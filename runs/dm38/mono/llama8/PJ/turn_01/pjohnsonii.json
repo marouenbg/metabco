@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "nh4": -1.0,
+  "ac": 0.238,
+  "for": 0.238,
+  "h2": 0.238,
+  "h2s": 0.238
+ },
+ "growth_rate": 0.238,
+ "rationale": "Utilizing glucose, lactate, and ammonium as primary carbon and nitrogen sources, and producing acetate, formate, and hydrogen as fermentation products to support growth.",
+ "confidence": 0.9
+}

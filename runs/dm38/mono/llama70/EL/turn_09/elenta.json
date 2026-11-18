@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "inost": -5.0,
+  "nh4": -1.0,
+  "ac": 2.0,
+  "ppa": 1.0,
+  "but": 1.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing myo-inositol as a primary carbon source, with ammonium as a nitrogen source, and producing typical fermentation products.",
+ "confidence": 0.7
+}

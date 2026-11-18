@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -5.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "ppa": 3.0,
+  "but": 2.0
+ },
+ "growth_rate": 0.32,
+ "rationale": "Utilizing lactate and glucose as primary carbon sources, and arginine as a nitrogen source, to support growth and produce fermentation products",
+ "confidence": 0.8
+}

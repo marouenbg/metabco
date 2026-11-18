@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 11,
+  "growth_claimed": 0.125,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4",
+   "n_imbalance: in=0 out=0 biomass=1.04"
+  ],
+  "warnings": [
+   "no_transporter: ppa",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "P: credited 0.0891 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0274 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.125 -> 0"
+  ],
+  "rationale": "Nitrogen limitation with carbon sources from short-chain fatty acids",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "ppa": -2.0,
+   "but": -1.0,
+   "nh4": -1.0,
+   "co2": 2.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "ppa": -2.0,
+   "but": -1.0,
+   "nh4": 0.0,
+   "co2": 2.0,
+   "pi": -0.0891,
+   "so4": -0.0274
+  }
+ }
+]

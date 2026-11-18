@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "gln__L": -5.0,
+  "nh4": -5.0,
+  "co2": 23.81,
+  "ac": 5.0,
+  "for": 2.0,
+  "h2": 1.0,
+  "but": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "growth rate of 0.5 /h, accounting for carbon and nitrogen fluxes, and available nutrients",
+ "confidence": 0.8
+}

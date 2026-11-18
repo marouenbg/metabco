@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "h2": 5.0,
+  "nh4": -3.0,
+  "but": 2.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.289,
+ "rationale": "Utilizing acetate and hydrogen for energy and carbon, ammonium for nitrogen. Producing acetate, butyrate, hydrogen, and formate as fermentation products.",
+ "confidence": 0.9
+}

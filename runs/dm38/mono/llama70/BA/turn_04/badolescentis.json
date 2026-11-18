@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "arab__L": -5.0,
+  "arg__L": -2.0,
+  "lac__L": 10.0,
+  "for": 5.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Utilizing arabinose and arginine as carbon and nitrogen sources, producing lactate and formate as fermentation products",
+ "confidence": 0.8
+}

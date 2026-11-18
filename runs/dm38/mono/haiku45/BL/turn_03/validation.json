@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 3,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [],
+  "rationale": "Glucose and arabinose are abundant and readily fermented. Arginine provides supplemental nitrogen and carbon. Lactate can be consumed and re-fermented. At 0.45 /h growth, carbon and nitrogen budgets b",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arab__L": -6.0,
+   "arg__L": -4.0,
+   "lac__L": 1.5,
+   "cys__L": -1.0,
+   "nh4": 2.5,
+   "pi": -0.6,
+   "ac": 3.5,
+   "co2": 0.9
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arab__L": -6.0,
+   "arg__L": -4.0,
+   "lac__L": 1.5,
+   "cys__L": -1.0,
+   "nh4": 2.5,
+   "pi": -0.6,
+   "ac": 3.5,
+   "co2": 0.9
+  }
+ }
+]

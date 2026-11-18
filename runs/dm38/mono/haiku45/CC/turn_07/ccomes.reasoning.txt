@@ -1,0 +1,124 @@
+# Metabolic reasoning for Coprococcus comes ATCC 27758 at t=28h
+
+## Assessment of my transporters and capabilities
+
+Coprococcus comes is a butyrate-producing bacterium (Firmicutes, Lachnospiraceae). My genome encodes transporters for:
+- **Carbohydrates**: glucose, arabinose, maltose (PTS or permeases)
+- **Organic acids**: lactate, acetate, butyrate (symporters/antiporters)
+- **Amino acids**: serine, arginine, cysteine, proline, and other proteinogenic amino acids (various transporters)
+- **CO₂**: via carbonic anhydrase and bicarbonate symporters
+
+I **cannot** directly use:
+- Inositol (requires specific PTS absent in my genome)
+- Phenylalanine, tyrosine, tryptophan (aromatic amino acids; limited uptake capacity)
+
+## Recent metabolic pattern
+
+Turns 3–5 show a consistent strategy: fermenting glucose and lactate to butyrate and acetate (mixed-acid fermentation with butyrate dominance). Turn 6 shows a switch to arabinose when glucose/lactate became limiting, with zero growth—suggesting arabinose alone is insufficient for growth at my current biomass density.
+
+## Current situation (turn 7)
+
+- Glucose: 7.96 mM (limited)
+- Lactate: 4.994 mM (limited)
+- Arabinose: 17.15 mM (abundant)
+- Acetate: 26.73 mM (abundant, but typically a fermentation product, not a preferred substrate for growth)
+- Butyrate: 20.41 mM (abundant, my main product)
+- Amino acids: multiple available (Arg, Ser, Pro, Ala, Gly, etc.)
+
+## Strategy for next interval
+
+Given that:
+1. Glucose and lactate are nearly depleted—my preferred substrates
+2. Arabinose alone did not support growth in turn 6
+3. I have abundant amino acids available
+4. I am a saccharolytic organism that can ferment mixed substrates
+
+I will **combine limited glucose + lactate with amino acid catabolism** to generate growth:
+
+**Uptake plan:**
+- Glucose: 6.0 mmol/gDW/h (nearly all remaining, ~8 mM over 4 h in 1 mL)
+- Lactate: 4.5 mmol/gDW/h (nearly all remaining)
+- L-arginine: 3.0 mmol/gDW/h (gluconeogenic, provides C and N)
+- L-serine: 2.0 mmol/gDW/h (glycolytic, N source)
+- L-alanine: 1.5 mmol/gDW/h (pyruvate precursor, N source)
+
+**Fermentation products:**
+- Butyrate: +4.0 mmol/gDW/h (my dominant product)
+- Acetate: +3.5 mmol/gDW/h (co-product)
+- CO₂: +8.0 mmol/gDW/h (decarboxylation)
+- Formate: +0.5 mmol/gDW/h (minor product)
+- Ammonium: -2.5 mmol/gDW/h (net, from amino acid catabolism; negative = uptake of amino group, release of ammonia is net negative uptake)
+
+Actually, let me reconsider: ammonium release should be positive if I'm catabolizing amino acids and releasing their amino groups as NH₄⁺.
+
+**Revised:**
+- Ammonium (nh4): +2.0 mmol/gDW/h (released from amino acid deamination)
+
+## Carbon audit
+
+**Carbon in (mmol C/gDW/h):**
+- Glucose: 6.0 × 6 = 36.0
+- Lactate: 4.5 × 3 = 13.5
+- Arginine: 3.0 × 6 = 18.0
+- Serine: 2.0 × 3 = 6.0
+- Alanine: 1.5 × 3 = 4.5
+- **Total in: 78.0 mmol C/gDW/h**
+
+**Carbon out (mmol C/gDW/h):**
+- Butyrate: 4.0 × 4 = 16.0
+- Acetate: 3.5 × 2 = 7.0
+- CO₂: 8.0 × 1 = 8.0
+- Formate: 0.5 × 1 = 0.5
+- **Total released: 31.5 mmol C/gDW/h**
+
+**Carbon for growth:**
+- 78.0 − 31.5 = 46.5 mmol C/gDW/h
+- At 30 mmol C/gDW of biomass: growth = 46.5 / 30 = **1.55 /h**
+
+This exceeds realistic maximum (~1.0–1.2 /h). Let me scale back.
+
+**Revised uptake for growth = 0.85 /h:**
+- Carbon needed for growth: 0.85 × 30 = 25.5 mmol C/gDW/h
+- Carbon for fermentation products: 31.5 mmol C/gDW/h
+- **Total carbon needed: 57.0 mmol C/gDW/h**
+
+Scale all uptakes proportionally: factor = 57.0 / 78.0 = 0.73
+
+**Final fluxes:**
+- Glucose: 6.0 × 0.73 = 4.4 mmol/gDW/h
+- Lactate: 4.5 × 0.73 = 3.3 mmol/gDW/h
+- Arginine: 3.0 × 0.73 = 2.2 mmol/gDW/h
+- Serine: 2.0 × 0.73 = 1.46 mmol/gDW/h
+- Alanine: 1.5 × 0.73 = 1.1 mmol/gDW/h
+- Butyrate: +2.9 mmol/gDW/h
+- Acetate: +2.55 mmol/gDW/h
+- CO₂: +5.8 mmol/gDW/h
+- Formate: +0.36 mmol/gDW/h
+- NH₄⁺: +1.45 mmol/gDW/h
+
+**Nitrogen audit:**
+- In: Arg (2.2 × 4 N) + Ser (1.46 × 1 N) + Ala (1.1 × 1 N) = 8.8 + 1.46 + 1.1 = 11.36 mmol N/gDW/h
+- Growth cost: 0.85 × 8 = 6.8 mmol N/gDW/h
+- Released as NH₄⁺: 11.36 − 6.8 = 4.56 mmol N/gDW/h ✓
+
+This is consistent.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -4.4,
+    "lac__L": -3.3,
+    "arg__L": -2.2,
+    "ser__L": -1.46,
+    "ala__L": -1.1,
+    "but": 2.9,
+    "ac": 2.55,
+    "co2": 5.8,
+    "for": 0.36,
+    "nh4": 4.56
+  },
+  "growth_rate": 0.85,
+  "rationale": "Glucose and lactate nearly exhausted; switching to mixed carbohydrate + amino acid fermentation. Arginine, serine, and alanine provide gluconeogenic carbon and nitrogen. Butyrate and acetate production via mixed-acid fermentation. Growth rate limited by remaining simple sugars and realistic uptake kinetics.",
+  "confidence": 0.72
+}
+```

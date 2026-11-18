@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 0,
+  "growth_claimed": 0.045,
+  "growth_allowed": 0.045,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0525 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0118 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "glucose and ammonium uptake, acetate and carbon dioxide production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -7.5,
+   "nh4": -1.875,
+   "ac": 7.5,
+   "co2": 3.75
+  },
+  "fluxes_applied": {
+   "glc__D": -7.5,
+   "nh4": -1.875,
+   "ac": 7.5,
+   "co2": 3.75,
+   "pi": -0.0525,
+   "so4": -0.0118
+  }
+ }
+]

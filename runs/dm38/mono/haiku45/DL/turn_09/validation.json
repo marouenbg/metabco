@@ -1,0 +1,26 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 9,
+  "growth_claimed": 0.0,
+  "growth_allowed": 0.0,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [],
+  "rationale": "Nitrogen (ammonium + amino acids) is severely limiting at turn 9. Acetate and formate are abundant but fermentation cannot support growth without sufficient N for protein synthesis. I maintain catabol",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "ac": -2.0,
+   "for": -1.5,
+   "co2": 2.5,
+   "h2": 0.8
+  },
+  "fluxes_applied": {
+   "ac": -2.0,
+   "for": -1.5,
+   "co2": 2.5,
+   "h2": 0.8
+  }
+ }
+]

@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ppa": 3.0,
+  "ac": 5.0,
+  "cys__L": -1.0,
+  "succ": 2.0
+ },
+ "growth_rate": 0.35,
+ "rationale": "Balanced uptake and production of fermentation products to support growth",
+ "confidence": 0.8
+}

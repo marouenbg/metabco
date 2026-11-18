@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -15.0,
+  "nh4": -5.0,
+  "ac": 10.0,
+  "ppa": 5.0,
+  "but": 2.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "L-lactate and ammonium uptake support growth and fermentation product secretion",
+ "confidence": 0.8
+}

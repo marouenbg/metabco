@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "lac__L": -2.0,
+  "nh4": -1.5,
+  "ac": 3.0,
+  "but": 2.0,
+  "ppa": 1.0,
+  "for": 0.5
+ },
+ "growth_rate": 0.15,
+ "rationale": "Continuing glucose and lactate fermentation to produce acetate, butyrate, propionate, and formate, supporting growth with available ammonium.",
+ "confidence": 0.95
+}

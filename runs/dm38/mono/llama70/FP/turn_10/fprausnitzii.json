@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "but": -2.0,
+  "cys__L": -1.0,
+  "pro__L": -1.0,
+  "co2": 1.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.23,
+ "rationale": "Utilizing acetate and butyrate as carbon sources, and L-cysteine and L-proline as nitrogen sources, to produce butyrate and acetate as fermentation products",
+ "confidence": 0.8
+}

@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "H2S": 10.0,
+  "ac": 5.0,
+  "co2": 10.0
+ },
+ "growth_rate": 0.81,
+ "rationale": "I will take up L-lactate and Ammonium as the primary carbon and nitrogen sources, respectively. I will release hydrogen sulfide and acetate as fermentation products. I will also release carbon dioxide as a byproduct of respiration."
+}

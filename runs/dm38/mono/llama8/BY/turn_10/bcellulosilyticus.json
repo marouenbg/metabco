@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "but": 10.0,
+  "ac": 10.0,
+  "for": 10.0,
+  "co2": 1.0,
+  "pro__L": 0.5,
+  "ala__L": 0.5,
+  "gly": 0.5,
+  "phe__L": 0.1
+ },
+ "growth_rate": 0.35,
+ "rationale": "Utilizing butyrate as my primary carbon source, with acetate and formate as secondary and tertiary sources, respectively. Producing acetate, butyrate, and formate as fermentation products.",
+ "confidence": 0.8
+}

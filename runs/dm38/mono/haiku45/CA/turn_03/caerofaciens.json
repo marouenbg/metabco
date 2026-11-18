@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -7.0,
+  "arg__L": -2.0,
+  "ser__L": -0.5,
+  "nh4": -2.0,
+  "pi": -0.22,
+  "ac": 4.0,
+  "lac__L": 2.0,
+  "co2": 5.0,
+  "for": 1.0
+ },
+ "growth_rate": 0.32,
+ "rationale": "Sustained mixed-acid fermentation of glucose and arginine; acetate and lactate are major products; ammonium and amino acids supply nitrogen; growth rate limited by N availability (~8.9 mM nh4 remaining)",
+ "confidence": 0.72
+}

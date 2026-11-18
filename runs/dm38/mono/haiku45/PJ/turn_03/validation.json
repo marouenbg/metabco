@@ -1,0 +1,48 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 3,
+  "growth_claimed": 0.8,
+  "growth_allowed": 0.3818,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=110 out=99.4 biomass=33.7"
+  ],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 1 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.209 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.8 -> 0.382"
+  ],
+  "rationale": "Mixed fermentation of glucose, lactate, arabinose, and arginine. Nitrogen limitation (8 mmol available vs 10 mmol needed per g) constrains growth to 0.8/h. Carbon balanced: 101 in, 33.6 for biomass, 6",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -6.0,
+   "arab__L": -4.0,
+   "arg__L": -3.0,
+   "nh4": -3.0,
+   "ser__L": -2.0,
+   "ac": 15.0,
+   "ppa": 10.0,
+   "succ": 8.0,
+   "co2": 7.4
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -6.0,
+   "arab__L": -4.0,
+   "arg__L": -3.0,
+   "nh4": -3.0,
+   "ser__L": -2.0,
+   "ac": 15.0,
+   "ppa": 10.0,
+   "succ": 8.0,
+   "co2": 7.4,
+   "pi": -1.0021,
+   "so4": -0.2094
+  }
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 10,
+  "growth_claimed": 1.5,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: glc__D",
+   "c_imbalance: in=0 out=277 biomass=56.6"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 1.75 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.393 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 1.5 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "I chose to take up D-glucose (glc__D) and L-lactate (lac__L) as my primary carbon sources, L-glutamine (gln__L) as my primary nitrogen source, and release butyrate (but) as my primary fermentation pro",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": 10.0,
+   "lac__L": 5.0,
+   "gln__L": 10.0,
+   "but": 38.0,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "glc__D": 0.0,
+   "lac__L": 0.0,
+   "gln__L": 0.0,
+   "but": 0.0,
+   "h2": 0.5,
+   "pi": -1.7497,
+   "so4": -0.3926
+  }
+ }
+]

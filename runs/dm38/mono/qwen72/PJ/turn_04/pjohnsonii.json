@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "lac__L": -4.0,
+  "arg__L": -4.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "ppa": 2.0,
+  "nh4": -4.0,
+  "co2": 3.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Utilizing glucose, lactate, and arginine for energy and biomass production, with acetate, butyrate, and propionate as fermentation products. Carbon and nitrogen requirements are met.",
+ "confidence": 0.9
+}

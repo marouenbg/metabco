@@ -1,0 +1,86 @@
+# Metabolic decision for Collinsella aerofaciens, turn 5
+
+## Analysis of available transporters and substrates
+
+*Collinsella aerofaciens* is a strict anaerobe and obligate heterofermentative bacterium. Based on genomic capability and my recent metabolic history, I can transport and ferment:
+
+**Primary carbon sources I'm using:**
+- D-glucose (glc__D): I've consistently consumed this at ~7 mmol/gDW/h over turns 1–4. This is my primary substrate.
+- L-lactate (lac__L): I've alternated between uptake and production. At this point (19.86 mM available), I can use it as a secondary carbon source.
+- L-arabinose (arab__L): Used in turn 4 at 3 mmol/gDW/h; available at 13.64 mM.
+- Acetate (ac): I've consistently produced it, not consumed it beyond trace amounts.
+
+**Nitrogen sources:**
+- L-arginine (arg__L): Consistently consumed at ~2 mmol/gDW/h; available at 14.77 mM. Essential for my proteolytic metabolism.
+- Ammonium (nh4): Available at 2.84 mM; I've taken 1.5–2.0 mmol/gDW/h.
+
+**Why I cannot use some abundant substrates:**
+- Maltose (malt): No α-glucosidase or maltose transporter in my genome.
+- myo-inositol (inost): No inositol dehydrogenase pathway.
+- Most other amino acids: I lack specific transporters for phenylalanine, leucine, tyrosine, valine, etc., even though they're present.
+
+## Fermentation strategy
+
+As a heterofermentative lactic acid bacterium, I perform mixed-acid fermentation:
+- Glucose → pyruvate (Embden–Meyerhof–Parnas pathway)
+- Pyruvate → lactate, formate, acetate, propionate, CO₂
+
+My observed products: acetate, formate, propionate, CO₂, and lactate (when I'm not consuming it).
+
+## Growth calculation
+
+**Substrate availability check:**
+- Glucose: essentially depleted (turns 1–4 consumed 7 mmol/gDW/h each; I've been at 1.21 gDW/L for a while, so cumulative consumption is substantial).
+- L-lactate: 19.86 mM available; can consume at ~4 mmol/gDW/h.
+- L-arabinose: 13.64 mM available; can consume at ~3 mmol/gDW/h.
+- L-arginine: 14.77 mM available; can consume at ~2 mmol/gDW/h.
+- Ammonium: 2.84 mM available; limited.
+
+**Proposed uptake:**
+- Lactate: –4.0 mmol/gDW/h (primary carbon/energy source)
+- Arabinose: –3.0 mmol/gDW/h (secondary carbon source)
+- L-arginine: –2.0 mmol/gDW/h (nitrogen + amino acid catabolism)
+- Ammonium: –1.5 mmol/gDW/h (nitrogen supplementation)
+
+**Carbon balance:**
+- Carbon in: (4.0 × 3 C/lactate) + (3.0 × 5 C/arabinose) = 12 + 15 = **27 mmol C/gDW/h**
+- Carbon out (biomass): 30 mmol C/gDW/h growth requires ~30 mmol C/gDW/h
+- Carbon out (products): Need to ferment ~27 mmol C into formate, acetate, propionate, CO₂
+
+This is tight. At μ = 0.30 /h:
+- Biomass cost: 0.30 × 30 = 9 mmol C/gDW/h
+- Fermentation products: 27 – 9 = 18 mmol C/gDW/h
+
+**Nitrogen balance:**
+- N in: (2.0 × 1 N/arg) + (1.5 × 1 N/nh4) = 3.5 mmol N/gDW/h
+- N for biomass at μ = 0.30: 0.30 × 8 = 2.4 mmol N/gDW/h
+- Excess N: 3.5 – 2.4 = 1.1 mmol N/gDW/h (released as ammonia or incorporated into products)
+
+**Growth rate:** μ = **0.30 /h** is sustainable.
+
+## Product release
+Fermentation of 18 mmol C/gDW/h as mixed acids:
+- Acetate: +4.0 mmol/gDW/h
+- Formate: +1.5 mmol/gDW/h
+- Propionate: +1.5 mmol/gDW/h
+- CO₂: +5.0 mmol/gDW/h (from decarboxylation)
+
+Total C released: (4.0 × 2) + (1.5 × 1) + (1.5 × 1) + (5.0 × 1) = 8 + 1.5 + 1.5 + 5 = 16 mmol C/gDW/h ✓
+
+```json
+{
+  "fluxes": {
+    "lac__L": -4.0,
+    "arab__L": -3.0,
+    "arg__L": -2.0,
+    "nh4": -1.5,
+    "ac": 4.0,
+    "for": 1.5,
+    "ppa": 1.5,
+    "co2": 5.0
+  },
+  "growth_rate": 0.30,
+  "rationale": "Glucose depleted; switching to lactate and arabinose as primary carbon sources. Heterofermentative fermentation produces acetate, formate, propionate, and CO₂. Arginine and ammonium provide nitrogen. Carbon balance: 27 mmol C in, 9 for biomass, 18 as fermentation products. Nitrogen: 3.5 mmol in, 2.4 for biomass, excess released.",
+  "confidence": 0.72
+}
+```

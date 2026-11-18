@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 6,
+  "growth_claimed": 0.1773,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=0 out=87.7 biomass=6.69"
+  ],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.207 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0464 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 11.8 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.177 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "L-lactate and Ammonium uptake supports growth at 0.1773 /h, with carbon and nitrogen balances met.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": 20.0,
+   "nh4": 10.0,
+   "ac": 5.09,
+   "but": 3.51,
+   "for": 3.51
+  },
+  "fluxes_applied": {
+   "lac__L": 0.0,
+   "nh4": -1.8085,
+   "ac": 0.0,
+   "but": 0.0,
+   "for": 0.0,
+   "pi": -0.2068,
+   "so4": -0.0464
+  }
+ }
+]

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "but": 2.0,
+  "lac__L": -1.0,
+  "ac": 1.0,
+  "arg__L": -1.0,
+  "nh4": -0.5,
+  "co2": 1.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.28,
+ "rationale": "Utilizing butyrate, lactate, acetate, and arginine to support growth while maintaining a balance of carbon and nitrogen.",
+ "confidence": 0.9
+}

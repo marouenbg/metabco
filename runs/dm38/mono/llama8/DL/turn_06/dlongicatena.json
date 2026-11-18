@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "co2": 15.0,
+  "glc__D": 5.0,
+  "arab__L": 1.0,
+  "lac__L": -10.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "I'll take up CO2, glucose, and arabinose to support lactate production and growth. I'll produce lactate as a fermentation product.",
+ "confidence": 0.8
+}

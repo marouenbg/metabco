@@ -1,0 +1,95 @@
+# Metabolic reasoning for Bifidobacterium adolescentis at t=36h
+
+## Assessment of my transporters and available carbon/nitrogen sources
+
+I am a bifidus bacterium with a relatively constrained metabolic toolkit. My key transporters include:
+- **Carbohydrate transporters**: glucose, arabinose, maltose (PTS-type systems typical of bifidobacteria)
+- **Organic acid transporters**: lactate, acetate (monocarboxylate transporters)
+- **Amino acid transporters**: broad specificity for amino acids via various permeases
+- **Formate/CO₂**: limited capacity
+
+## Inventory analysis at t=36h
+
+**Abundant carbon sources still present:**
+- Acetate: 50.65 mM (highly available, easily transported)
+- CO₂: 82.64 mM (available but requires fixing capacity I have limited)
+- L-arabinose: 16.91 mM (fermentable)
+- L-lactate: 6.975 mM (fermentable, but I've been consuming this)
+- Maltose: 4.382 mM (fermentable)
+- D-glucose: 1.5 mM (low, nearly depleted)
+
+**Nitrogen sources:**
+- Multiple amino acids present (cysteine 8.2 mM, arginine 6.0 mM, proline 5.9 mM, etc.)
+- Ammonium is not explicitly listed as available (likely depleted from earlier turns)
+- I must rely on amino acid catabolism for nitrogen
+
+## Known fermentation strategy
+
+Bifidobacterium adolescentis is an obligate anaerobe that primarily produces:
+- **Acetic acid** (major product, typically 2.5:1 ratio acetate:lactate)
+- **Lactic acid** (minor product)
+- Small amounts of **formate**
+- Trace **CO₂**
+
+The bifid shunt (fructose-6-phosphate → erythrose-4-phosphate + acetyl-CoA) is my signature pathway, yielding high acetate:lactate ratios.
+
+## Current metabolic state
+
+I've been growing steadily (0.35 /h at turn 8), consuming lactate and glucose preferentially while using amino acids for nitrogen. Acetate accumulation indicates I'm in active fermentation. At 1.334 gDW/L, I have reasonable biomass.
+
+## Strategy for next interval
+
+Given:
+- Low glucose remaining (1.5 mM) — nearly exhausted
+- Moderate lactate (6.975 mM) — still usable
+- Abundant acetate (50.65 mM) — can be fermented via reverse β-oxidation if needed, but not preferred
+- Good amino acid pool for nitrogen
+
+**Primary strategy:**
+- Consume remaining **lactate** (high-yield fermentation)
+- Consume **arabinose** (fermentable via pentose pathway)
+- Consume **amino acids** for nitrogen and secondary carbon (arginine, cysteine, serine preferred due to abundance)
+- Produce **acetate** and **lactate** as fermentation products
+- Modest CO₂ release from decarboxylation
+
+**Growth rate calculation:**
+- Lactate uptake: ~8 mmol/gDW/h (lactate → pyruvate → acetyl-CoA)
+- Arabinose uptake: ~5 mmol/gDW/h
+- Amino acid uptake: ~4 mmol/gDW/h (arginine + cysteine + serine)
+- Total carbon in: ~17 mmol/gDW/h
+- Carbon for growth at 0.30 /h: 33 × 0.30 = 9.9 mmol/gDW/h
+- Carbon for fermentation products: 17 - 9.9 = 7.1 mmol/gDW/h (released as acetate, lactate, CO₂)
+- Nitrogen for growth at 0.30 /h: 8 × 0.30 = 2.4 mmol/gDW/h
+- Amino acid N available from 4 mmol uptake: ~4 mmol/gDW/h (sufficient)
+
+**Growth rate: 0.30 /h** is sustainable.
+
+## Carbon audit
+- **In:** 8 (lactate) + 5 (arabinose) + 4 (amino acids) = 17 mmol C/gDW/h
+- **Growth cost:** 33 × 0.30 = 9.9 mmol C/gDW/h
+- **Net for fermentation:** 17 - 9.9 = 7.1 mmol C/gDW/h
+- **Out (acetate + lactate + CO₂):** ~7.1 mmol C/gDW/h ✓
+
+Nitrogen audit:
+- **In:** ~4 mmol N/gDW/h (amino acids)
+- **Growth cost:** 8 × 0.30 = 2.4 mmol N/gDW/h
+- **Net available:** 4 - 2.4 = 1.6 mmol N/gDW/h (catabolized) ✓
+
+```json
+{
+  "fluxes": {
+    "lac__L": -8.0,
+    "arab__L": -5.0,
+    "arg__L": -2.5,
+    "cys__L": -1.5,
+    "ser__L": -1.0,
+    "ac": 5.0,
+    "for": 1.5,
+    "co2": 1.0,
+    "nh4": 1.6
+  },
+  "growth_rate": 0.30,
+  "rationale": "Bifid fermentation of lactate and arabinose with amino acid-derived nitrogen. High acetate production via bifid shunt. Lactate and arabinose are preferred fermentable substrates; glucose nearly depleted. Amino acids provide both carbon and nitrogen for growth.",
+  "confidence": 0.72
+}
+```

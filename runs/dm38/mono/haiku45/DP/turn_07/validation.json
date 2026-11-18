@@ -1,0 +1,34 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 7,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.3,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [],
+  "rationale": "Return to lactate-driven sulfate reduction (turns 4\u20135 strategy), which was highly productive. Lactate (6.6 mM) is abundant and my canonical substrate. Arginine provides nitrogen without depleting scar",
+  "confidence": 0.78,
+  "fluxes_claimed": {
+   "lac__L": -8.0,
+   "arg__L": -1.5,
+   "so4": -2.0,
+   "ac": 5.0,
+   "co2": 0.5,
+   "h2s": 2.0,
+   "nh4": 1.5,
+   "pi": -0.4
+  },
+  "fluxes_applied": {
+   "lac__L": -8.0,
+   "arg__L": -1.5,
+   "so4": -2.0,
+   "ac": 5.0,
+   "co2": 0.5,
+   "h2s": 2.0,
+   "nh4": 1.5,
+   "pi": -0.4
+  }
+ }
+]

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "arg__L": -10.0,
+  "glc__D": -10.0,
+  "arab__L": -10.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "succ": 5.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.243,
+ "rationale": "growth supported by uptake of L-arginine, D-glucose, and L-arabinose, with release of acetate, butyrate, and succinate as primary fermentation products.",
+ "confidence": 0.8
+}

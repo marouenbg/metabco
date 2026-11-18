@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": 5.0,
+  "arg__L": -2.0,
+  "glu__L": -2.0,
+  "inost": -3.0,
+  "ac": 15.0,
+  "for": 10.0,
+  "but": 5.0,
+  "nh4": 10.0
+ },
+ "growth_rate": 0.85,
+ "rationale": "utilizing glucose and lactate for growth, producing acetate, formate, and butyrate as major products, and taking up arginine and glutamate to support growth",
+ "confidence": 0.9
+}

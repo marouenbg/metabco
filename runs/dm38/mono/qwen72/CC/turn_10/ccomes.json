@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "ac": 1.0,
+  "but": 2.0,
+  "nh4": 0.5
+ },
+ "growth_rate": 0.2,
+ "rationale": "Reduced acetate and butyrate uptake to ensure a positive carbon balance and moderate growth rate.",
+ "confidence": 0.85
+}

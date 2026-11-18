@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 7,
+  "growth_claimed": 0.227,
+  "growth_allowed": 0.227,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.211 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0477 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing acetate, formate, and hydrogen for carbon and L-arginine for nitrogen to support growth and produce fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "for": -5.0,
+   "h2": -2.5,
+   "arg__L": -0.6,
+   "nh4": 0.6
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "for": -5.0,
+   "h2": -2.5,
+   "arg__L": -0.6,
+   "nh4": 0.6,
+   "pi": -0.2113,
+   "so4": -0.0477
+  }
+ }
+]

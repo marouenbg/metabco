@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 3,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: glc__D",
+   "sugar_export: malt",
+   "c_imbalance: in=0 out=30.8 biomass=14.8"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.438 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0916 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 4.32 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.35 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Utilizing glucose, Ammonium, L-aspartate, and Maltose as energy sources and taking in nitrogen. Releasing acetate and hydrogen as byproducts of metabolism.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": 2.5,
+   "nh4": 0.5,
+   "asp__L": 0.2,
+   "malt": 1.0,
+   "ac": 1.5,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "glc__D": 0.0,
+   "nh4": -3.8242,
+   "asp__L": 0.0,
+   "malt": 0.0,
+   "ac": 0.0,
+   "h2": 0.5,
+   "pi": -0.4384,
+   "so4": -0.0916
+  }
+ }
+]

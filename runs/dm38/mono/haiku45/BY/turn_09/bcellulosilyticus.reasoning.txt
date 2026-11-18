@@ -1,0 +1,140 @@
+## Reasoning through my metabolic state
+
+**Time and depletion context:**
+I am at t = 36 h of a 48 h batch culture. I have 12 hours remaining. My recent history shows alternating growth and stasis phases. Most notably:
+- Turn 7: strong growth (0.427 /h) on L-arabinose fermentation
+- Turns 6 & 8: zero growth despite taking up substrates
+
+This suggests I deplete key substrates cyclically or encounter inhibition.
+
+**Available carbon sources and transport capacity:**
+I am *Bacteroides cellulosilyticus*, a saccharolytic anaerobe specializing in plant polysaccharide degradation. My genome encodes:
+- PULs (polysaccharide utilization loci) for cellulose, hemicellulose, pectin, starch
+- Transporters for simple sugars (glucose, arabinose, xylose, maltose)
+- Amino acid permeases
+- Organic acid uptake systems
+
+Current abundant substrates I **can** use:
+- **Acetate (85.33 mM)**: I have acetyl-CoA synthetase; can ferment this
+- **Propionate (33.11 mM)**: Propionyl-CoA synthetase present; can use
+- **Butyrate (16.69 mM)**: Can activate and ferment
+- **Formate (11.91 mM)**: Formate dehydrogenase available
+- **Maltose (4.382 mM)**: Maltose PTS system present
+- **Amino acids (various)**: Serine, alanine, leucine, cysteine, etc. — I have permeases and can perform Stickland reactions
+
+Substrates I **cannot** use:
+- **CO₂ (143.7 mM)**: I am heterotrophic, not autotrophic. CO₂ is a product, not a fuel.
+- **myo-inositol**: No inositol-specific PUL; cannot transport efficiently
+- **Nitrate (0.1093 mM)**: I am an obligate anaerobe; no nitrate reductase in my genome
+
+**Nitrogen availability:**
+- Ammonium: 13.06 mM (sufficient)
+- Amino acids: ~50 mM total (excellent source of both C and N)
+
+**Fermentation strategy:**
+At turn 7, I grew rapidly on L-arabinose. Now that is depleted. I must switch to the abundant short-chain fatty acids and amino acids. My fermentation products are:
+- **Acetate** (from pyruvate via acetyl-CoA)
+- **Propionate** (from succinate/oxaloacetate via methylmalonyl-CoA)
+- **Butyrate** (from acetyl-CoA condensation)
+- **Formate** (from pyruvate via formate lyase)
+- **Lactate** (from pyruvate via lactate dehydrogenase)
+- **Succinate** (from amino acid oxidation via TCA intermediates)
+- **CO₂** (from decarboxylation)
+- **H₂** (from formate or pyruvate fermentation)
+
+**Growth calculation:**
+I will co-ferment **acetate** and **amino acids** (serine, alanine, leucine, cysteine) since:
+1. Acetate is abundant (85 mM)
+2. Amino acids provide both C and N, reducing my need to split acetate for biosynthesis
+3. Stickland-type reactions (oxidation-reduction of amino acid pairs) yield ATP and reduced cofactors
+
+Uptake plan (per gDW/h):
+- **Acetate**: 8.0 mmol (abundant, slow fermentation)
+- **L-serine**: 1.5 mmol (N-rich, fermentable)
+- **L-alanine**: 1.5 mmol (N-rich)
+- **L-cysteine**: 1.0 mmol (S-containing, energy source)
+- **Ammonium**: 0.5 mmol (supplemental N)
+- **Maltose**: 0.5 mmol (residual sugar utilization)
+
+**Carbon balance:**
+- Acetate in: 8.0 mmol C
+- Serine in: 1.5 × 3 = 4.5 mmol C
+- Alanine in: 1.5 × 3 = 4.5 mmol C
+- Cysteine in: 1.0 × 3 = 3.0 mmol C
+- Maltose in: 0.5 × 12 = 6.0 mmol C
+- **Total C in: 26.0 mmol C**
+
+**Nitrogen balance:**
+- Serine: 1.5 mmol N
+- Alanine: 1.5 mmol N
+- Cysteine: 1.0 mmol N
+- Ammonium: 0.5 mmol N
+- **Total N in: 4.5 mmol N**
+
+**Growth cost:** 
+For growth rate μ (per gDW/h), I need:
+- 42 × μ mmol C for biomass
+- 10 × μ mmol N for biomass
+
+With 26.0 mmol C and 4.5 mmol N available:
+- C-limited: μ ≤ 26.0 / 42 ≈ 0.62 /h
+- N-limited: μ ≤ 4.5 / 10 = 0.45 /h
+
+**Nitrogen is the bottleneck.** Maximum μ = **0.40 /h** (conservative, accounting for maintenance and fermentation overhead).
+
+**Secretion:**
+Fermentation of acetate + amino acids yields:
+- Propionate: 2.5 mmol (from amino acid fermentation)
+- Butyrate: 1.5 mmol (from acetate condensation)
+- Formate: 1.0 mmol (from pyruvate)
+- Lactate: 0.8 mmol (from pyruvate)
+- CO₂: 3.2 mmol (from decarboxylation of amino acids and acetyl-CoA)
+- H₂: 0.5 mmol (from formate lyase)
+
+**Audit (26.0 mmol C in):**
+- Growth: 0.40 × 42 = 16.8 mmol C
+- Propionate: 2.5 × 3 = 7.5 mmol C
+- Butyrate: 1.5 × 4 = 6.0 mmol C
+- Formate: 1.0 × 1 = 1.0 mmol C
+- Lactate: 0.8 × 3 = 2.4 mmol C
+- CO₂: 3.2 × 1 = 3.2 mmol C
+- **Total C out: 16.8 + 7.5 + 6.0 + 1.0 + 2.4 + 3.2 = 36.9 mmol C**
+
+This exceeds input. Adjust downward: reduce secretion.
+
+**Revised plan:**
+- Growth: 0.35 /h
+- C cost: 0.35 × 42 = 14.7 mmol C
+- Available for fermentation: 26.0 − 14.7 = 11.3 mmol C
+
+Fermentation products:
+- Propionate: 1.8 mmol (5.4 mmol C)
+- Butyrate: 1.0 mmol (4.0 mmol C)
+- Formate: 0.5 mmol (0.5 mmol C)
+- Lactate: 0.4 mmol (1.2 mmol C)
+- CO₂: 0.2 mmol (0.2 mmol C)
+- **Total: 11.3 mmol C** ✓
+
+This balances.
+
+```json
+{
+  "fluxes": {
+    "ac": -8.0,
+    "ser__L": -1.5,
+    "ala__L": -1.5,
+    "cys__L": -1.0,
+    "nh4": -0.5,
+    "malt": -0.5,
+    "ppa": 1.8,
+    "but": 1.0,
+    "for": 0.5,
+    "lac__L": 0.4,
+    "co2": 0.2,
+    "h2": 0.1
+  },
+  "growth_rate": 0.35,
+  "rationale": "Nitrogen limitation (4.5 mmol N available vs. 10 mmol N needed per gDW) restricts growth to 0.35 /h. Co-fermentation of abundant acetate (8 mmol/gDW/h) with N-rich amino acids (serine, alanine, cysteine) balances C and N uptake. Fermentation products (propionate, butyrate, formate, lactate) are consistent with my anaerobic metabolism. Carbon audit: 26 mmol C in → 14.7 (growth) + 11.3 (fermentation products) = 26.0 mmol C. Confidence moderate due to complex regulatory interactions in amino acid fermentation.",
+  "confidence": 0.65
+}
+```

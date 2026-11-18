@@ -1,0 +1,55 @@
+[
+ {
+  "species_id": "buniformis",
+  "turn": 8,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but",
+   "no_transporter: etoh",
+   "no_transporter: h2s"
+  ],
+  "repairs": [],
+  "rationale": "Based on available carbon and nitrogen sources and the rules of the world",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "but": 5.0,
+   "arg__L": -5.0,
+   "cys__L": -5.0,
+   "ser__L": -5.0,
+   "for": 3.0,
+   "lac__D": 3.5,
+   "co2": 5.0,
+   "pi": -0.63,
+   "so4": -0.13,
+   "ac": 5.0,
+   "etoh": 0.0,
+   "h2": 0.0,
+   "h2s": 0.0,
+   "nh4": 0.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "but": 5.0,
+   "arg__L": -5.0,
+   "cys__L": -5.0,
+   "ser__L": -5.0,
+   "for": 3.0,
+   "lac__D": 3.5,
+   "co2": 5.0,
+   "pi": -0.63,
+   "so4": -0.13,
+   "ac": 5.0,
+   "etoh": 0.0,
+   "h2": 0.0,
+   "h2s": 0.0,
+   "nh4": 0.0
+  }
+ }
+]

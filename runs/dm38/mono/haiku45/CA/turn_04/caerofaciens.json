@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -7.0,
+  "lac__L": -4.0,
+  "arab__L": -3.0,
+  "arg__L": -2.0,
+  "nh4": -1.8,
+  "cys__L": -0.5,
+  "co2": 5.0,
+  "ac": 4.0,
+  "for": 1.0,
+  "ppa": 1.5
+ },
+ "growth_rate": 0.32,
+ "rationale": "Continuing stable mixed-substrate fermentation on glucose, lactate, and arabinose with arginine co-uptake for nitrogen. Overflow metabolism produces acetate, formate, and propionate as typical for anaerobic Collinsella. Carbon and nitrogen budgets balance; growth rate matches observed trajectory.",
+ "confidence": 0.78
+}

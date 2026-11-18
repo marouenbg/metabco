@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 11,
+  "growth_claimed": 0.125,
+  "growth_allowed": 0.103,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=1 out=0 biomass=1.27"
+  ],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.145 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0327 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.125 -> 0.103"
+  ],
+  "rationale": "Butyrate and propionate uptake for energy and carbon, L-serine for nitrogen, producing acetate and butyrate",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": -5.0,
+   "ppa": -2.0,
+   "ser__L": -1.0,
+   "ac": 5.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "but": -5.0,
+   "ppa": -2.0,
+   "ser__L": -1.0,
+   "ac": 5.0,
+   "h2": 1.0,
+   "pi": -0.1454,
+   "so4": -0.0327
+  }
+ }
+]

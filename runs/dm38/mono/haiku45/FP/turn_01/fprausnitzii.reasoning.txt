@@ -1,0 +1,96 @@
+# Reasoning
+
+## Available transporters and carbon sources
+
+As *Faecalibacterium prausnitzii*, I have well-characterized fermentative metabolism. My genome encodes transporters for:
+- **Lactate** (lac__L): primary substrate, abundant at 27.87 mM
+- **Glucose** (glc__D): fermentable, abundant at 24.69 mM
+- **Arabinose** (arab__L): fermentable, 21.31 mM
+- **Amino acids**: arginine, cysteine, serine, proline, and others (Stickland reactions)
+- **Maltose** (malt): some strains transport this, 4.38 mM
+
+I cannot transport:
+- **Inositol** (inost): no transporter
+- **Phenylalanine, tyrosine, leucine, valine, isoleucine**: limited or absent transporters for these branched/aromatic amino acids at meaningful rates
+
+## Nitrogen sources
+
+- **Ammonium** (nh4): 9.274 mM — excellent, direct uptake
+- **Arginine** (arg__L): 21.7 mM — can use via Stickland fermentation (arginine → citrulline → ornithine + CO₂ + NH₃ + NADH)
+- **Cysteine** (cys__L): can deaminate and use the carbon skeleton
+- Other amino acids: available but lower priority
+
+## Fermentation strategy
+
+My turn 0 behavior shows the expected pattern:
+- Lactate and glucose uptake → butyrate and acetate production
+- Net CO₂ release from fermentation
+- Formate as a minor product
+
+For turn 1, I will continue mixed-acid fermentation, prioritizing:
+1. **Lactate** (27.87 mM remaining) — my preferred substrate
+2. **Glucose** (24.69 mM) — secondary fermentable
+3. **Arginine** (21.7 mM) — Stickland fermentation for additional energy and nitrogen
+
+## Growth rate calculation
+
+**Carbon budget:**
+- Lactate uptake: 12 mmol/gDW/h (continuing turn 0 rate)
+- Glucose uptake: 8 mmol/gDW/h (continuing turn 0 rate)
+- Arginine uptake: 3 mmol/gDW/h (continuing turn 0 rate; 4 carbons per arginine)
+- Total C in: 12 + 8 + (3 × 4) = 32 mmol C/gDW/h
+
+**Nitrogen budget:**
+- Ammonium uptake: 2 mmol/gDW/h (continuing turn 0 rate)
+- Arginine uptake: 3 mmol/gDW/h (1 N per arginine)
+- Total N in: 2 + 3 = 5 mmol N/gDW/h
+
+**Biomass requirement:**
+- Growth rate × 33 mmol C/gDW = carbon for growth
+- Growth rate × 7 mmol N/gDW = nitrogen for growth
+
+If growth rate = 0.65 /h:
+- C needed: 0.65 × 33 = 21.45 mmol C/gDW
+- N needed: 0.65 × 7 = 4.55 mmol N/gDW
+- N available: 5 mmol → sufficient (4.55 < 5) ✓
+- C available for fermentation products: 32 − 21.45 = 10.55 mmol C/gDW
+
+**Fermentation products (turn 0 pattern):**
+- Butyrate: 4 mmol/gDW/h (4 carbons)
+- Acetate: 3 mmol/gDW/h (2 carbons)
+- Formate: 1 mmol/gDW/h (1 carbon)
+- CO₂: 2 mmol/gDW/h (1 carbon each)
+- Total C out: (4 × 4) + (3 × 2) + (1 × 1) + (2 × 1) = 16 + 6 + 1 + 2 = 25 mmol C/gDW
+
+**Audit:** 32 in − 25 out − 21.45 growth = −14.45 (imbalance suggests overestimate)
+
+Recalculating: If I use 32 mmol C in and need 21.45 for growth, I have 10.55 for products. Scaling fermentation products proportionally:
+- Scale factor: 10.55 / 25 ≈ 0.42
+
+Revised products:
+- Butyrate: 4 × 0.42 = 1.68 mmol/gDW/h
+- Acetate: 3 × 0.42 = 1.26 mmol/gDW/h
+- Formate: 1 × 0.42 = 0.42 mmol/gDW/h
+- CO₂: 2 × 0.42 = 0.84 mmol/gDW/h
+
+Check: 1.68×4 + 1.26×2 + 0.42 + 0.84 = 6.72 + 2.52 + 0.42 + 0.84 = 10.5 ✓
+
+**Growth rate: 0.65 /h** (consistent with turn 0, substrate still abundant)
+
+```json
+{
+  "fluxes": {
+    "lac__L": -12.0,
+    "glc__D": -8.0,
+    "arg__L": -3.0,
+    "nh4": -2.0,
+    "but": 1.68,
+    "ac": 1.26,
+    "for": 0.42,
+    "co2": 0.84
+  },
+  "growth_rate": 0.65,
+  "rationale": "Continuing mixed-acid fermentation on lactate, glucose, and arginine. Lactate is the preferred substrate; arginine provides additional energy and nitrogen via Stickland fermentation. Carbon and nitrogen budgets balance: 32 mmol C in supports 21.45 mmol C for biomass growth at 0.65/h plus 10.5 mmol C in fermentation products. Nitrogen (5 mmol) exceeds requirement (4.55 mmol). Fermentation product mix reflects typical F. prausnitzii metabolism: butyrate as major product, acetate and formate as minor products.",
+  "confidence": 0.72
+}
+```

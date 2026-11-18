@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "arab__L": -8.0,
+  "leu__L": -1.5,
+  "pro__L": -1.0,
+  "cys__L": -0.8,
+  "nh4": -0.6,
+  "ac": 3.5,
+  "for": 2.8,
+  "co2": 2.1,
+  "h2": 0.5
+ },
+ "growth_rate": 0.1,
+ "rationale": "Fermenting arabinose (primary C source) and scavenging amino acids (N source) under severe N limitation. Growth rate limited by ammonium depletion and residual amino acid N. Fermentation products (acetate, formate, CO\u2082) balance carbon budget.",
+ "confidence": 0.62
+}

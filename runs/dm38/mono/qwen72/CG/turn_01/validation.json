@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 1,
+  "growth_claimed": 0.1,
+  "growth_allowed": 0.1,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.104 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0262 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Limited by nitrogen availability, continuing to ferment glucose and lactate to produce acetate, butyrate, and ethanol",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "etoh": 5.0,
+   "nh4": -2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "etoh": 5.0,
+   "nh4": -2.0,
+   "pi": -0.104,
+   "so4": -0.0262
+  }
+ }
+]

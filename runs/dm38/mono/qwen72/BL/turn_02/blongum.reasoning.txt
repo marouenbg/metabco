@@ -1,0 +1,45 @@
+As Bifidobacterium longum NCC2705, I have a preference for various carbohydrates and amino acids, which I can metabolize to support my growth and energy needs. From the available nutrients, I can efficiently utilize D-glucose (glc__D) as my primary carbon source and L-arginine (arg__L) and ammonium (nh4) as nitrogen sources. I can also utilize L-lactate (lac__L) to some extent, but it will be a secondary carbon source due to the higher availability and yield from glucose.
+
+I am known to produce acetate (ac) and lactate (lac__L) as major fermentation products. Given the availability of glucose and the need to maintain a balanced metabolism, I will continue to produce acetate and lactate, while also taking up arginine and ammonia to support protein synthesis and growth.
+
+### Carbon In:
+- D-glucose (glc__D) uptake: 10.00 mmol/gDW/h
+- L-lactate (lac__L) uptake: 2.00 mmol/gDW/h
+
+### Carbon Out:
+- Acetate (ac) production: 5.00 mmol/gDW/h
+- L-lactate (lac__L) production: 2.00 mmol/gDW/h
+
+### Nitrogen In:
+- L-arginine (arg__L) uptake: 3.00 mmol/gDW/h
+- Ammonium (nh4) uptake: 1.00 mmol/gDW/h
+
+### Growth Rate Calculation:
+- Carbon requirement for growth: 38 mmol/gDW (for 1 gDW produced)
+- Nitrogen requirement for growth: 10 mmol/gDW (for 1 gDW produced)
+
+### Total Carbon In:
+- 10.00 (glucose) + 2.00 (lactate) = 12.00 mmol/gDW/h
+
+### Total Carbon Out:
+- 5.00 (acetate) + 2.00 (lactate) = 7.00 mmol/gDW/h
+
+### Net Carbon Available for Growth:
+- 12.00 - 7.00 = 5.00 mmol/gDW/h
+
+### Growth Rate:
+- 5.00 mmol/gDW/h / 38 mmol/gDW = 0.132 /h
+
+### Nitrogen Balance:
+- Total Nitrogen In: 3.00 (arginine) + 1.00 (ammonium) = 4.00 mmol/gDW/h
+- Nitrogen for Growth: 0.132 gDW/h * 10 mmol/gDW = 1.32 mmol/gDW/h
+- Nitrogen Balance: 4.00 - 1.32 = 2.68 mmol/gDW/h (excess nitrogen can be stored or used for other biosynthetic processes)
+
+### Audit:
+- Carbon In: 12.00 mmol/gDW/h
+- Carbon Out: 7.00 mmol/gDW/h
+- Carbon for Growth: 0.132 gDW/h * 38 mmol/gDW = 5.00 mmol/gDW/h
+- Total Carbon: 12.00 = 7.00 + 5.00 (balanced)
+
+### JSON Output:
+{"fluxes": {"glc__D": -10.00, "lac__L": -2.00, "ac": 5.00, "lac__L": 2.00, "arg__L": -3.00, "nh4": -1.00}, "growth_rate": 0.132, "rationale": "Utilizing glucose and lactate for carbon, arginine and ammonium for nitrogen, producing acetate and lactate as fermentation products.", "confidence": 0.9}

@@ -1,0 +1,111 @@
+# Metabolic reasoning for Clostridium asparagiforme DSM 15981, turn 10
+
+## Assessment of available transporters and carbon sources
+
+As a Clostridium species, I possess:
+- Carbohydrate transporters (PTS, permeases) for sugars
+- Amino acid transporters (broad specificity)
+- Organic acid transporters (acetate, butyrate, lactate, formate)
+- Amino group transporters (ammonium)
+
+**Abundant carbon sources I can use:**
+- **Acetate** (76.74 mM): readily transported via acetyl-CoA synthetase
+- **Butyrate** (58.06 mM): transported and β-oxidized
+- **Maltose** (4.382 mM): fermentable via PTS
+- **L-lactate** (3.263 mM): can be oxidized or fermented
+- **Amino acids** (various): can be catabolized for C and N
+- **Formate** (5.092 mM): can be oxidized
+
+**Carbon sources I cannot efficiently use:**
+- **CO₂** (161.4 mM): I am not autotrophic; CO₂ is a product, not a primary substrate
+- **H₂** (18.93 mM): I lack hydrogenase for H₂ oxidation in energy generation
+
+**Nitrogen sources:**
+- **Ammonium** (2.649 mM): primary N source via GS/GOGAT
+- **Amino acids** (multiple): can be deaminated for N and C skeletons
+
+## Recent metabolic pattern analysis
+
+My recent turns show:
+- **Turn 7**: Growth at 0.200 /h on glucose and asparagine (amino acid catabolism)
+- **Turn 9**: Growth at 0.150 /h on acetate and glutamine
+- **Turns 6, 8**: Zero growth despite uptake—these were fermentation-only phases
+
+The pattern suggests I grow when I have both **readily oxidizable C and available N**. Acetate and amino acids are my preferred substrates.
+
+## Fermentation products and energy strategy
+
+As a strict anaerobe, I produce:
+- **Acetate** (from pyruvate via acetyl-CoA)
+- **Butyrate** (from acetyl-CoA condensation)
+- **Formate** (from pyruvate formate-lyase)
+- **Lactate** (from pyruvate LDH, minor)
+- **H₂** and **CO₂** (from various fermentation pathways)
+
+Currently at 2.006 gDW/L with 8 hours remaining (48 h total, at turn 10 = 40 h elapsed).
+
+## Substrate selection for next 4 hours
+
+Given the high acetate concentration (76.74 mM) and moderate amino acid pool, I will:
+
+1. **Uptake acetate** as primary C source: ~8 mmol/gDW/h (realistic for acetate in batch)
+2. **Uptake amino acids** (leucine, valine, tyrosine, phenylalanine) for both C and N: ~2 mmol/gDW/h mixed
+3. **Uptake ammonium** for additional N: ~0.5 mmol/gDW/h
+4. **Release formate, acetate, butyrate, H₂, CO₂** as fermentation products
+
+## Growth rate calculation
+
+**Carbon budget:**
+- Acetate uptake: 8 mmol C/gDW/h
+- Amino acids (assume average 5 C each): ~10 mmol C/gDW/h from amino acids
+- **Total C in: ~18 mmol C/gDW/h**
+
+**Growth cost:** 34 mmol C/gDW per gram biomass produced
+- At growth rate μ: μ × 34 = C for growth
+- Remaining C for fermentation: 18 - 34μ
+
+**Nitrogen budget:**
+- Ammonium: 0.5 mmol N/gDW/h
+- Amino acids (~2 mmol uptake, avg 1 N per aa): ~2 mmol N/gDW/h
+- **Total N in: ~2.5 mmol N/gDW/h**
+
+**Growth cost:** 10 mmol N/gDW per gram biomass
+- At growth rate μ: μ × 10 = N for growth
+- Maximum μ from N: 2.5 / 10 = **0.25 /h**
+
+**Carbon constraint check:**
+- At μ = 0.25: C for growth = 0.25 × 34 = 8.5 mmol C/gDW/h
+- C remaining for fermentation: 18 - 8.5 = 9.5 mmol C/gDW/h (feasible)
+
+**Selected growth rate: 0.25 /h** (N-limited, realistic for late batch phase)
+
+## Mass balance audit
+
+**Carbon in:** 8 (acetate) + 10 (amino acids) = 18 mmol C/gDW/h
+**Carbon out (growth + fermentation):** 8.5 (growth) + 9.5 (fermentation as acetate/formate/butyrate/CO₂) = 18 ✓
+
+**Nitrogen in:** 0.5 (NH₄) + 2 (amino acids) = 2.5 mmol N/gDW/h
+**Nitrogen out (growth):** 0.25 × 10 = 2.5 ✓
+
+Balanced.
+
+```json
+{
+  "fluxes": {
+    "ac": -8.0,
+    "leu__L": -0.8,
+    "val__L": -0.6,
+    "tyr__L": -0.4,
+    "phe__L": -0.3,
+    "nh4": -0.5,
+    "ac": 3.5,
+    "for": 2.0,
+    "but": 2.5,
+    "co2": 1.5,
+    "h2": 0.5
+  },
+  "growth_rate": 0.25,
+  "rationale": "Late-stage batch culture (40/48 h). Acetate is abundant and accessible; amino acids provide both C and N. N-limitation is primary constraint (2.5 mmol N available supports max 0.25 /h growth). Fermentation via acetate/formate/butyrate/H₂/CO₂ balances remaining C. Mass audit passes.",
+  "confidence": 0.68
+}
+```

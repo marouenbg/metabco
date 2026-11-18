@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 6,
+  "growth_claimed": 0.375,
+  "growth_allowed": 0.1263,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: inost",
+   "n_imbalance: in=1 out=0 biomass=3.12"
+  ],
+  "warnings": [
+   "no_transporter: inost",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "clipped uptake inost to pool limit -3.18",
+   "P: credited 0.252 mmol/gDW/h of pi (declared present in excess)",
+   "N: growth 0.375 -> 0.126"
+  ],
+  "rationale": "myo-inositol and L-cysteine uptake, acetate and lactate production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "inost": -5.0,
+   "cys__L": -1.0,
+   "ac": 2.5,
+   "lac__L": 1.5,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "inost": -3.1832,
+   "cys__L": -1.0,
+   "ac": 2.5,
+   "lac__L": 1.5,
+   "h2": 0.5,
+   "pi": -0.2521
+  }
+ }
+]

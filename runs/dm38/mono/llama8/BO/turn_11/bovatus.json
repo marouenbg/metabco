@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "co2": 10.0,
+  "ac": 5.0,
+  "but": 3.75,
+  "lac__L": 0.5,
+  "h2": 0.5,
+  "nh4": 2.34
+ },
+ "growth_rate": 0.75,
+ "rationale": "utilizing CO2, acetate, and butyrate as primary carbon sources, and secreting hydrogen and ammonium as byproducts",
+ "confidence": 0.9
+}

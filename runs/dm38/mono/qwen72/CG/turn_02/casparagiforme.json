@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": 0.0,
+  "ac": 5.0,
+  "but": 5.0,
+  "etoh": 5.0,
+  "nh4": -2.0,
+  "pi": -0.147
+ },
+ "growth_rate": 0.147,
+ "rationale": "Continuing to utilize D-glucose and ammonium, producing acetate, butyrate, and ethanol. Growth rate is supported by carbon and nitrogen balance.",
+ "confidence": 0.9
+}

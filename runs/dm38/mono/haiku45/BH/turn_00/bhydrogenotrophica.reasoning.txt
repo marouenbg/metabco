@@ -1,0 +1,96 @@
+# Metabolic decision for Blautia hydrogenotrophica DSM 10507 at t=0
+
+## Analysis of available transporters and substrates
+
+*Blautia hydrogenotrophica* is a obligate anaerobe specializing in hydrogenotrophic metabolism (H₂ + CO₂ → acetate), but it also ferments sugars and amino acids. Let me assess what I can actually use:
+
+**Carbon sources I can transport:**
+- **Lactate** (28.31 mM): Yes — I have lactate transporters and can ferment lactate to acetate + H₂/CO₂
+- **Glucose** (24.98 mM): Yes — Embden-Meyerhof pathway; abundant and high-quality
+- **Arabinose** (21.31 mM): Yes — pentose fermentation pathways present
+- **Maltose** (4.382 mM): Yes — can be hydrolyzed and fermented
+- **Amino acids**: I can catabolize many (arginine, serine, proline, etc.) but these are secondary; glucose and lactate are superior
+
+**Carbon sources I cannot efficiently use:**
+- **CO₂ alone**: I lack the Wood-Ljungdahl pathway genes for true autotrophy; the hydrogenotrophic label refers to my ability to use H₂ as electron donor with CO₂, but this requires H₂ which is only present in trace amounts (below 0.11 mM)
+- **Inositol, vitamins, nucleobases**: Not primary fermentation substrates
+
+**Nitrogen sources:**
+- **Ammonium** (9.347 mM): Primary — I will assimilate this
+- **Amino acids**: Available as both C and N sources (arginine, serine, etc.)
+
+## Fermentation strategy
+
+Given anaerobic conditions and abundant fermentable substrates, my strategy:
+1. **Primary substrate: glucose** — fastest growth, well-characterized Embden-Meyerhof fermentation
+2. **Secondary substrate: lactate** — also readily fermented
+3. **Products**: acetate (main), formate, H₂, CO₂ (typical Blautia fermentation signature)
+
+Glucose fermentation stoichiometry (simplified):
+- C₆H₁₂O₆ → 2 C₂H₅COOH (ethanol) or → 3 CH₃COOH (acetate) or mixed
+- Mixed fermentation typically yields ~2 mol acetate + formate/H₂ per glucose
+
+## Growth rate calculation
+
+**Carbon budget:**
+- Glucose uptake: 20 mmol/gDW/h (realistic maximum for a fast fermenter)
+- Glucose = 6 carbons; uptake = 120 mmol C/gDW/h
+
+**Carbon allocation:**
+- Biomass cost: 38 mmol C/gDW growth
+- If growth rate = μ /h, then C for biomass = 38μ mmol C/gDW/h
+- Remaining for fermentation products: 120 - 38μ mmol C/gDW/h
+
+**Nitrogen budget:**
+- Ammonium available: 9.347 mM in 1 mL = 9.347 mmol total
+- Current biomass: 0.002178 gDW
+- Biomass N requirement: 10 mmol N/gDW growth
+- For sustainable growth over 48 h with ~0.002 gDW starting: need to be conservative
+
+At μ = 0.35 /h:
+- C for biomass: 38 × 0.35 = 13.3 mmol C/gDW/h
+- C for products: 120 - 13.3 = 106.7 mmol C/gDW/h
+- This is stoichiometrically feasible (glucose fermentation)
+
+**Nitrogen check:**
+- Uptake ammonium: 3 mmol/gDW/h
+- Growth N cost: 10 × 0.35 = 3.5 mmol N/gDW/h
+- Slightly tight but feasible; I'll use amino acids as supplementary N source
+
+## Metabolite fluxes
+
+**Uptake:**
+- `glc__D`: -20 mmol/gDW/h (primary substrate)
+- `nh4`: -3 mmol/gDW/h (nitrogen)
+- `lac__L`: -5 mmol/gDW/h (secondary, helps balance)
+
+**Secretion (fermentation products):**
+- Glucose (25 C) + Lactate (3 C) = 28 C in
+- Biomass: 0.35 growth × 38 = 13.3 C out
+- Products: 28 - 13.3 = 14.7 C as fermentation products
+- Typical split: acetate (main) + formate + H₂ + CO₂
+- `ac` (acetate): +8 mmol/gDW/h
+- `for` (formate): +4 mmol/gDW/h
+- `h2`: +1.5 mmol/gDW/h
+- `co2`: +1.2 mmol/gDW/h
+
+**Growth rate:** μ = 0.35 /h
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -20,
+    "lac__L": -5,
+    "nh4": -3,
+    "ac": 8,
+    "for": 4,
+    "h2": 1.5,
+    "co2": 1.2
+  },
+  "growth_rate": 0.35,
+  "rationale": "Blautia hydrogenotrophica ferments glucose and lactate under anaerobic conditions. Glucose is the preferred substrate (20 mmol/gDW/h uptake). Mixed fermentation yields acetate as the dominant product with formate, H₂, and CO₂. Growth rate of 0.35/h is supported by 38 mmol C/gDW biomass requirement and adequate nitrogen from ammonium. Carbon balance: 25 C (glucose) + 3 C (lactate) = 28 C in; 13.3 C (biomass) + 14.7 C (products) = 28 C out. Nitrogen: 3 mmol N/gDW/h uptake supports 0.35/h × 10 mmol N/gDW growth requirement.",
+  "confidence": 0.72
+}
+```

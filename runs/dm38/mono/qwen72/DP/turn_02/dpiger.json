@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "ac": 5.0,
+  "h2": 2.0,
+  "for": 1.0,
+  "so4": -1.0,
+  "h2s": 1.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Fermenting L-lactate to produce acetate, hydrogen, formate, and reducing sulfate to hydrogen sulfide. Growth rate is nitrogen-limited.",
+ "confidence": 0.9
+}

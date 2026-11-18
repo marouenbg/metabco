@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 2,
+  "growth_claimed": 0.32,
+  "growth_allowed": 0.32,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.00626 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Mixed-acid fermentation of glucose and lactate with amino acid catabolism for nitrogen. Nitrogen-limited growth at ~0.32/h. Carbon and nitrogen budgets balanced. Acetate, lactate, formate, and CO\u2082 are",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -7.0,
+   "lac__L": 2.5,
+   "arg__L": -2.0,
+   "nh4": -1.8,
+   "pi": -0.2,
+   "so4": -0.08,
+   "ac": 3.5,
+   "for": 1.2,
+   "co2": 1.5
+  },
+  "fluxes_applied": {
+   "glc__D": -7.0,
+   "lac__L": 2.5,
+   "arg__L": -2.0,
+   "nh4": -1.8,
+   "pi": -0.2063,
+   "so4": -0.08,
+   "ac": 3.5,
+   "for": 1.2,
+   "co2": 1.5
+  }
+ }
+]

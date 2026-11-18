@@ -1,0 +1,51 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 11,
+  "growth_claimed": 0.303,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: arg__L",
+   "uptake_exceeds_pool: ser__L",
+   "uptake_absent: pro__L",
+   "c_imbalance: in=2.06 out=21 biomass=10.1"
+  ],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "clipped uptake arg__L to pool limit -0.271",
+   "clipped uptake ser__L to pool limit -0.143",
+   "zeroed uptake of absent pro__L",
+   "P: credited 0.216 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0665 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.303 -> 0",
+   "C: secretions scaled by 0.103"
+  ],
+  "rationale": "Utilizing acetate and propionate for carbon, ammonium and amino acids for nitrogen, and producing acetate, propionate, hydrogen, and carbon dioxide.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": 5.0,
+   "ppa": 3.0,
+   "co2": 2.0,
+   "nh4": -8.0,
+   "arg__L": -1.0,
+   "ser__L": -1.0,
+   "pro__L": -0.62,
+   "h2": 2.0
+  },
+  "fluxes_applied": {
+   "ac": 0.5139,
+   "ppa": 0.3083,
+   "co2": 0.2056,
+   "nh4": -8.0,
+   "arg__L": -0.2709,
+   "ser__L": -0.1434,
+   "pro__L": 0.0,
+   "h2": 2.0,
+   "pi": -0.2159,
+   "so4": -0.0665
+  }
+ }
+]

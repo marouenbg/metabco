@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "co2": 20.0,
+  "ac": 10.0,
+  "but": 10.0,
+  "succ": 10.0,
+  "cys__L": 5.0,
+  "glu__L": 5.0,
+  "nh4": -5.0,
+  "h2": -2.0,
+  "pi": -0.5,
+  "so4": -0.11
+ },
+ "growth_rate": 0.5,
+ "rationale": "Moderate growth rate supported by taking up CO2, acetate, butyrate, succinate, L-cysteine, and L-glutamate, and releasing acetate, butyrate, and succinate as fermentation products.",
+ "confidence": 0.8
+}

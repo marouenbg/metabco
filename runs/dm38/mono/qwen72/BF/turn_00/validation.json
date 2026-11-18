@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 0,
+  "growth_claimed": 1.0,
+  "growth_allowed": 1.0,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.909 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.219 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Maximizing growth by utilizing abundant glucose and lactate, and producing acetate, propionate, and butyrate. Nitrogen is balanced with arginine and ammonium.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "arg__L": -5.0,
+   "nh4": -3.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "but": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "arg__L": -5.0,
+   "nh4": -3.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "but": 2.0,
+   "pi": -0.9091,
+   "so4": -0.2194
+  }
+ }
+]

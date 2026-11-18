@@ -1,0 +1,83 @@
+# Metabolic reasoning for Roseburia intestinalis L1-82
+
+## Available carbon and nitrogen sources
+
+**Primary carbon sources I can transport:**
+- **D-glucose (24.98 mM)**: abundant, readily fermented by Roseburia
+- **L-lactate (28.31 mM)**: very abundant; Roseburia is a lactate consumer and converter
+- **L-arabinose (21.31 mM)**: pentose sugar, fermentable
+- **Maltose (4.382 mM)**: disaccharide, fermentable
+- **L-arginine (21.81 mM)**: can be fermented via arginine deiminase pathway
+- **Other amino acids**: present but secondary; Roseburia preferentially uses sugars and lactate
+
+**Nitrogen sources:**
+- **Ammonium (9.347 mM)**: primary inorganic nitrogen source
+- **L-arginine (21.81 mM)**: dual carbon+nitrogen source
+- **Other amino acids**: contribute nitrogen but less efficient than ammonium for growth
+
+## Known fermentation products of Roseburia intestinalis
+
+Roseburia is a butyrate producer. Key pathways:
+- Glucose/arabinose → pyruvate → acetyl-CoA → butyrate (via butyrate kinase)
+- Lactate → pyruvate → acetyl-CoA → butyrate
+- Also produces: acetate, formate, hydrogen (anaerobic)
+- The species is characterized by efficient butyrate production from carbohydrates and lactate
+
+## Strategy for this turn
+
+Given the sealed batch culture with abundant lactate and glucose:
+1. **Co-consume lactate and glucose** as primary carbon sources (high concentration, rapid fermentation)
+2. **Use ammonium** as primary nitrogen source (abundant, 9.347 mM)
+3. **Ferment to butyrate** as the main product (Roseburia's signature)
+4. **Produce minor acetate and formate** as byproducts
+
+## Growth rate calculation
+
+**Carbon budget:**
+- Glucose (24.98 mM) + lactate (28.31 mM) = ~53 mmol C/L available
+- At realistic uptake rates: glucose ~8 mmol/gDW/h, lactate ~10 mmol/gDW/h (both are preferred)
+- Combined: ~18 mmol C/gDW/h uptake
+
+**Nitrogen budget:**
+- Ammonium: 9.347 mM available
+- Growth requires ~10 mmol N/g biomass produced
+- Uptake at ~4 mmol NH4/gDW/h is sustainable
+
+**Growth rate derivation:**
+- 38 mmol C needed per gram biomass
+- 10 mmol N needed per gram biomass
+- At 18 mmol C/gDW/h uptake and ~4 mmol N/gDW/h uptake:
+  - C-limited: 18/38 = 0.47 g/g/h
+  - N-limited: 4/10 = 0.40 g/g/h
+  - **Growth rate ≈ 0.35–0.40 /h** (conservative, accounting for maintenance and fermentation overhead)
+
+**Carbon audit:**
+- Uptake: 8 (glucose) + 10 (lactate) = 18 mmol C/gDW/h
+- Growth cost: 0.37 g/g/h × 38 mmol C/g = 14.1 mmol C/gDW/h
+- Fermentation output: 18 - 14.1 = 3.9 mmol C/gDW/h to release as butyrate, acetate, formate, CO2
+- Butyrate (4C): ~0.8 mmol/gDW/h, Acetate (2C): ~0.5 mmol/gDW/h, Formate (1C): ~0.3 mmol/gDW/h, CO2: minor
+- **Balanced.** ✓
+
+**Nitrogen audit:**
+- Uptake: 4 mmol NH4/gDW/h
+- Growth cost: 0.37 g/g/h × 10 mmol N/g = 3.7 mmol N/gDW/h
+- Excess: 0.3 mmol N/gDW/h (minor, acceptable leakage or retained as storage)
+- **Balanced.** ✓
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -10.0,
+    "nh4": -4.0,
+    "but": 0.8,
+    "ac": 0.5,
+    "for": 0.3,
+    "co2": 0.4,
+    "h2": 0.2
+  },
+  "growth_rate": 0.37,
+  "rationale": "Roseburia intestinalis ferments glucose and lactate (both abundant) to butyrate as primary product, with acetate and formate as minor byproducts. Ammonium supports growth. Carbon and nitrogen budgets balance; growth rate limited by nitrogen availability at current uptake rates.",
+  "confidence": 0.72
+}
+```

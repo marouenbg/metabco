@@ -1,0 +1,94 @@
+# Reasoning
+
+## Available substrates and transport capability
+I am *Bacteroides thetaiotaomicron*, a saccharolytic and amino-acid fermenting anaerobe with a large glycoside hydrolase repertoire. Let me assess what I can use:
+
+**Carbon sources I can transport and ferment:**
+- **D-glucose (glc__D)**: 1.733 mM — I have PTS and can ferment this, but supply is now very low
+- **L-arabinose (arab__L)**: 21.31 mM — I have arabinose transporters and can ferment this
+- **Acetate (ac)**: 30.95 mM — present in high concentration; I can use this as a carbon source
+- **L-lactate (lac__L)**: 17.27 mM — I can ferment lactate anaerobically
+- **Propionate (ppa)**: 12.47 mM — I can use this
+- **Butyrate (but)**: 6.269 mM — I can ferment this
+- **Maltose (malt)**: 4.382 mM — I have maltose transporters
+- **myo-inositol (inost)**: 6.272 mM — I can ferment this
+
+**Amino acids for nitrogen and carbon:**
+- L-arginine, L-cysteine, L-serine, L-proline, L-alanine, glycine, and others are available. I can catabolize amino acids for both carbon and nitrogen.
+
+**Nitrogen sources:**
+- Ammonium (nh4): 4.267 mM — low but present
+- Multiple amino acids provide nitrogen
+
+## Strategy at turn 7 (t=28h, halfway through 48h run)
+
+My recent history shows I've been sustaining ~0.22 /h growth by fermenting glucose (now depleted to 1.7 mM) and lactate, with acetate, propionate, and butyrate as products. 
+
+At this point:
+- Glucose is nearly exhausted (1.7 mM remaining)
+- Lactate is still available (17.27 mM)
+- Arabinose is abundant (21.31 mM)
+- Amino acids provide both C and N
+
+I should shift to **lactate + arabinose fermentation** as primary carbon sources, supplemented by amino acid catabolism for nitrogen.
+
+## Growth calculation
+
+**Carbon uptake plan:**
+- L-lactate: 8.0 mmol/gDW/h (lactate fermentation)
+- L-arabinose: 6.0 mmol/gDW/h (pentose fermentation)
+- L-arginine: 1.5 mmol/gDW/h (for nitrogen + some carbon)
+- L-alanine: 1.0 mmol/gDW/h (supplemental C and N)
+
+**Total C in:** 
+- Lactate (C₃): 8.0 × 3 = 24.0 mmol C/gDW/h
+- Arabinose (C₅): 6.0 × 5 = 30.0 mmol C/gDW/h
+- Arginine (C₆): 1.5 × 6 = 9.0 mmol C/gDW/h
+- Alanine (C₃): 1.0 × 3 = 3.0 mmol C/gDW/h
+- **Total: 66.0 mmol C/gDW/h**
+
+**Nitrogen uptake:**
+- Arginine: 1.5 × 4 = 6.0 mmol N/gDW/h
+- Alanine: 1.0 × 1 = 1.0 mmol N/gDW/h
+- Ammonium: 0.8 mmol N/gDW/h
+- **Total: 7.8 mmol N/gDW/h**
+
+**Growth cost:** 41 mmol C + 8 mmol N per gDW produced
+- **Growth rate:** Limited by nitrogen: 7.8 / 8 ≈ **0.97 /h** (but check C balance)
+- C needed for growth at 0.97 /h: 0.97 × 41 = 39.8 mmol C/gDW/h
+- C available for fermentation products: 66.0 − 39.8 = 26.2 mmol C/gDW/h
+
+This is reasonable. I'll set growth at **0.25 /h** to be conservative given declining substrate availability and to match recent observed rates.
+
+**Fermentation products (mixed acid fermentation):**
+- Acetate: +8.0 mmol/gDW/h
+- Propionate: +4.5 mmol/gDW/h
+- Butyrate: +2.0 mmol/gDW/h
+- Formate: +1.5 mmol/gDW/h
+- CO₂: +10.0 mmol/gDW/h
+
+**Carbon audit:**
+- In: 66.0 mmol C
+- Out in products: (8.0×2) + (4.5×3) + (2.0×4) + (1.5×1) + (10.0×1) = 16 + 13.5 + 8 + 1.5 + 10 = 49.0 mmol C
+- Growth: 0.25 × 41 = 10.3 mmol C
+- Total out: 49.0 + 10.3 = 59.3 mmol C ✓ (within budget)
+
+```json
+{
+  "fluxes": {
+    "lac__L": -8.0,
+    "arab__L": -6.0,
+    "arg__L": -1.5,
+    "ala__L": -1.0,
+    "nh4": -0.8,
+    "ac": 8.0,
+    "ppa": 4.5,
+    "but": 2.0,
+    "for": 1.5,
+    "co2": 10.0
+  },
+  "growth_rate": 0.25,
+  "rationale": "Lactate and arabinose are now abundant primary substrates; glucose depleted. Amino acid catabolism provides limiting nitrogen. Mixed-acid fermentation products balance carbon and support growth at ~0.25/h, consistent with recent observations as nutrient complexity increases.",
+  "confidence": 0.72
+}
+```

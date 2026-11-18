@@ -1,0 +1,82 @@
+# Metabolic decision for Roseburia intestinalis L1-82, turn 1
+
+## Assessment of available substrates
+
+**Carbon sources I can use:**
+- L-lactate (28.12 mM): Roseburia is a butyrate producer classically; lactate fermentation is a core metabolic capability
+- D-glucose (24.83 mM): hexose fermentation via glycolysis
+- L-arabinose (21.31 mM): pentose fermentation
+- Maltose (4.382 mM): disaccharide, fermentable
+- Amino acids present in abundance (arg, ser, ala, gly, phe, etc.): can be catabolized for both carbon and nitrogen
+
+**Nitrogen sources:**
+- Ammonium (9.273 mM): primary preferred nitrogen source
+- L-arginine (21.81 mM): can be deaminated and catabolized
+- Other amino acids: all carry nitrogen
+
+**What I cannot access:**
+- Nitrate (0.1093 mM): Roseburia lacks nitrate reductase (obligate anaerobe, no molybdenum-dependent nitrate reduction in this species)
+- Most vitamins and cofactors: already present in trace amounts; not rate-limiting
+
+## Fermentation strategy
+
+Roseburia intestinalis is a saccharolytic and proteolytic anaerobe that produces butyrate as a major product. The classic fermentation pattern is:
+- Lactate + glucose → butyrate + acetate + CO₂ (mixed-acid fermentation)
+- Can also ferment amino acids, especially arginine (via arginine dihydrolase pathway)
+
+From the previous turn, I was already growing at 0.370 /h on lactate (10 mmol/gDW/h) and glucose (8 mmol/gDW/h), producing butyrate and acetate. This is sustainable and efficient.
+
+## Flux calculation
+
+**Carbon budget:**
+- Lactate uptake: 10 mmol/gDW/h (3 carbons each = 30 C)
+- Glucose uptake: 8 mmol/gDW/h (6 carbons each = 48 C)
+- **Total C in: 78 mmol/gDW/h**
+
+**Growth requirement at 0.37 /h:**
+- Biomass C: 0.37 /h × 38 mmol C/g = 14.06 mmol C/gDW/h
+- Biomass N: 0.37 /h × 10 mmol N/g = 3.7 mmol N/gDW/h
+
+**Nitrogen budget:**
+- Ammonium uptake: 4 mmol/gDW/h (from previous turn; sufficient for growth + some amino acid synthesis)
+- This provides 4 mmol N/gDW/h, which exceeds growth demand (3.7 mmol N/gDW/h)
+
+**Carbon available for fermentation products:**
+- 78 C in − 14.06 C for growth = 63.94 mmol C/gDW/h to distribute as products
+
+**Fermentation stoichiometry (lactate + glucose → butyrate + acetate + CO₂):**
+- Typical Roseburia fermentation: ~1 butyrate (4C) + ~0.5 acetate (2C) + CO₂ per ~2-3 glucose
+- Conservative estimate: produce butyrate at 5 mmol/gDW/h, acetate at 3 mmol/gDW/h, CO₂ at 8 mmol/gDW/h
+- Carbon check: 5×4 + 3×2 + 8×1 = 20 + 6 + 8 = 34 mmol C/gDW/h produced
+- This is sustainable from the 63.94 available for fermentation
+
+**Nitrogen check:**
+- No amino acids being catabolized for nitrogen (using ammonium instead)
+- Nitrogen balance: 4 in − 3.7 growth = 0.3 mmol/gDW/h excess (acceptable, may accumulate slightly or be used for non-essential synthesis)
+
+## Final fluxes
+
+I will maintain the successful previous strategy with minor adjustment for continued growth:
+
+```
+Uptake:
+- lac__L: -10.0
+- glc__D: -8.0
+- nh4: -4.0
+
+Secretion:
+- but: +5.0
+- ac: +3.0
+- co2: +8.0
+- for: +0.5 (minor formate, typical of mixed fermentation)
+```
+
+Carbon audit:
+- In: 10×3 + 8×6 + = 78 mmol C
+- Out (products): 5×4 + 3×2 + 8 + 0.5 = 35.5 mmol C
+- Growth: 14.06 mmol C
+- Total out: 35.5 + 14.06 = 49.56 mmol C ✓ (within 78)
+
+Growth rate: **0.37 /h** (same as previous, conditions stable)
+
+{"fluxes": {"lac__L": -10.0, "glc__D": -8.0, "nh4": -4.0, "but": 5.0, "ac": 3.0, "co2": 8.0, "for": 0.5}, "growth_rate": 0.37, "rationale": "Roseburia intestinalis ferments lactate and glucose to butyrate and acetate under anaerobic conditions. Abundant lactate and glucose support continued saccharolytic fermentation. Ammonium provides nitrogen. This flux pattern is consistent with previous successful growth and respects mass balance constraints.", "confidence": 0.78}

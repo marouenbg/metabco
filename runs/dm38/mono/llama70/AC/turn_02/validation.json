@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 2,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.523 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.118 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Balanced carbon and nitrogen uptake to support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "ppa": 4.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "ppa": 4.0,
+   "pi": -0.5233,
+   "so4": -0.1178
+  }
+ }
+]

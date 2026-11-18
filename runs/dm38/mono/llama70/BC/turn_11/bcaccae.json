@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "ser__L": -5.0,
+  "for": 5.0,
+  "co2": 5.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilizing acetate and L-serine as primary carbon and nitrogen sources, producing formate and carbon dioxide as fermentation products",
+ "confidence": 0.8
+}

@@ -1,0 +1,34 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 1,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.523 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.118 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 0.178 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "based on available nutrients and transport capabilities",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -4.0,
+   "lac__L": 2.0,
+   "arg__L": -1.02,
+   "nh4": -0.12,
+   "for": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -4.0,
+   "lac__L": 2.0,
+   "arg__L": -1.02,
+   "nh4": -0.2985,
+   "for": 2.0,
+   "pi": -0.5233,
+   "so4": -0.1178
+  }
+ }
+]

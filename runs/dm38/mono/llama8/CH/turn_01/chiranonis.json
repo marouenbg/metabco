@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "ac": 8.0,
+  "but": 8.0,
+  "co2": 1.5,
+  "h2": 0.0,
+  "h2s": 0.0,
+  "for": 0.0,
+  "succ": 0.0,
+  "etoh": 0.0,
+  "pi": 0.0,
+  "so4": 0.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "Utilizing L-lactate and ammonium for growth, producing acetate and butyrate as primary fermentation products.",
+ "confidence": 0.8
+}

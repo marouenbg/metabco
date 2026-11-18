@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -2.5,
+  "arg__L": -2.0,
+  "nh4": -6.0,
+  "ac": 4.5,
+  "ppa": 2.0,
+  "succ": 1.2,
+  "co2": 2.5
+ },
+ "growth_rate": 0.55,
+ "rationale": "Mixed-acid fermentation of glucose and lactate with arginine catabolism. Carbon and nitrogen budgets balanced: 67.5 mmol C in supports 42 mmol biomass C + 22.5 mmol fermentation products C; 10 mmol N from ammonium and arginine deaminase meets growth requirement. Fluxes consistent with prior turns and known Bacteroides metabolism.",
+ "confidence": 0.72
+}

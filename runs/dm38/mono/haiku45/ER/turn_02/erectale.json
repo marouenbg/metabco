@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "cys__L": -0.8,
+  "nh4": -1.5,
+  "ac": 4.5,
+  "but": 2.3,
+  "for": 0.8,
+  "co2": 14.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Continuing glucose + lactate co-fermentation with amino acid catabolism. Carbon: 75 in (60 from glucose, 15 from lactate), 42.9 out (growth 9.9 + products 33), balanced. Nitrogen: 2.3 in (ammonium + cysteine), 2.1 for growth, balanced. Butyrate-producing Firmicute strategy confirmed by prior turns.",
+ "confidence": 0.82
+}

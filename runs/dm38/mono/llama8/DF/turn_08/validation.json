@@ -1,0 +1,56 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 8,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.75,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__D",
+   "no_transporter: h2s",
+   "no_transporter: but",
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.698 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.158 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "I take up glucose and arginine, and release formate, acetate, and CO2. I can support a growth rate of 0.75 /h with this uptake.",
+  "confidence": 1.0,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arg__L": -5.0,
+   "for": 15.0,
+   "lac__L": 0.0,
+   "lac__D": 0.0,
+   "ac": 15.0,
+   "co2": 10.0,
+   "h2": 0.0,
+   "h2s": 0.0,
+   "nh4": 0.0,
+   "but": 0.0,
+   "ppa": 0.0,
+   "succ": 0.0,
+   "etoh": 0.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arg__L": -5.0,
+   "for": 15.0,
+   "lac__L": 0.0,
+   "lac__D": 0.0,
+   "ac": 15.0,
+   "co2": 10.0,
+   "h2": 0.0,
+   "h2s": 0.0,
+   "nh4": 0.0,
+   "but": 0.0,
+   "ppa": 0.0,
+   "succ": 0.0,
+   "etoh": 0.0,
+   "pi": -0.6981,
+   "so4": -0.1576
+  }
+ }
+]

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": -6.0,
+  "gly": -1.2,
+  "ser__L": -0.8,
+  "ala__L": -0.5,
+  "lac__L": 4.0,
+  "for": 0.3,
+  "co2": 2.5
+ },
+ "growth_rate": 0.2,
+ "rationale": "At t=36h in stationary phase, I'm conserving resources. Acetate remains the primary carbon source; I supplement with amino acids for nitrogen and biosynthetic precursors (glycine, serine, alanine are abundant and easily transaminated). Bifidus fermentation produces lactate and acetate; modest CO\u2082 and formate reflect partial oxidation. Growth is limited by nitrogen availability and accumulated fermentation products; I estimate 0.20/h based on declining trend from earlier turns and the zero-growth signal at turn 8.",
+ "confidence": 0.6
+}

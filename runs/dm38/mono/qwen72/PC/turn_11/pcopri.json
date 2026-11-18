@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ppa": 2.0,
+  "ac": 3.0,
+  "co2": 1.0,
+  "nh4": -2.0,
+  "for": 1.0
+ },
+ "growth_rate": 0.1,
+ "rationale": "Balanced uptake and release of carbon and nitrogen sources to sustain growth while conserving resources.",
+ "confidence": 0.9
+}

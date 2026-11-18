@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "nh4": -2.0,
+  "co2": 5.0,
+  "h2": 5.0
+ },
+ "growth_rate": 0.233,
+ "rationale": "Uptake of acetate and ammonium supports growth and maintenance",
+ "confidence": 0.8
+}

@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arab__L": -10.0,
+  "lac__L": -2.0,
+  "arg__L": -3.0,
+  "ac": 5.0,
+  "nh4": 7.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Utilizing glucose and arabinose for carbon, and arginine for nitrogen. Acetate is the primary fermentation product. Growth rate is constrained by nitrogen balance.",
+ "confidence": 0.85
+}

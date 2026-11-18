@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "h2": -50.72,
+  "ac": 10,
+  "for": -5,
+  "pro__L": -5,
+  "cys__L": -5,
+  "asn__L": -5,
+  "lys__L": -5,
+  "thr__L": -5,
+  "ile__L": -5,
+  "arg__L": -5,
+  "pi": -0.06,
+  "nh4": 19.95
+ },
+ "growth_rate": 0.182,
+ "rationale": "The growth rate is limited by the available nitrogen source.",
+ "confidence": 0.9
+}

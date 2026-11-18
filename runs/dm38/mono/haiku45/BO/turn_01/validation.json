@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 1,
+  "growth_claimed": 0.58,
+  "growth_allowed": 0.58,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.727 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.152 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 2.86 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Mixed-acid fermentation of glucose, lactate, and arabinose under anaerobic conditions. Glucose is primary carbon source; lactate and arabinose are co-fermented. Ammonium satisfies nitrogen demand. Pro",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -7.5,
+   "lac__L": -2.5,
+   "arab__L": -1.5,
+   "nh4": -3.0,
+   "ac": 4.8,
+   "ppa": 2.5,
+   "co2": 3.2,
+   "succ": 1.5
+  },
+  "fluxes_applied": {
+   "glc__D": -7.5,
+   "lac__L": -2.5,
+   "arab__L": -1.5,
+   "nh4": -5.8559,
+   "ac": 4.8,
+   "ppa": 2.5,
+   "co2": 3.2,
+   "succ": 1.5,
+   "pi": -0.7265,
+   "so4": -0.1518
+  }
+ }
+]

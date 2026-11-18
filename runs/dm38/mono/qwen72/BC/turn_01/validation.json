@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 1,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.564 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.118 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing abundant carbon sources (D-glucose and L-lactate) and nitrogen sources (ammonium and L-arginine) to support growth and produce fermentation products (acetate, propionate, butyrate).",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "nh4": -5.0,
+   "arg__L": -2.5,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "nh4": -5.0,
+   "arg__L": -2.5,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 2.0,
+   "pi": -0.5637,
+   "so4": -0.1178
+  }
+ }
+]

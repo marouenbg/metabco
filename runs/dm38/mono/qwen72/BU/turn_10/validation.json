@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "buniformis",
+  "turn": 10,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "S: credited 0.0393 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing previous metabolic strategy with D-glucose, L-lactate, and L-arginine as primary carbon sources and ammonium as the nitrogen source. Producing acetate, butyrate, propionate, and formate as ",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -6.0,
+   "lac__L": -2.0,
+   "arg__L": -1.0,
+   "ac": 3.0,
+   "but": 2.0,
+   "ppa": 1.0,
+   "for": 0.5,
+   "nh4": -1.5,
+   "pi": -0.19
+  },
+  "fluxes_applied": {
+   "glc__D": -6.0,
+   "lac__L": -2.0,
+   "arg__L": -1.0,
+   "ac": 3.0,
+   "but": 2.0,
+   "ppa": 1.0,
+   "for": 0.5,
+   "nh4": -1.5,
+   "pi": -0.19,
+   "so4": -0.0393
+  }
+ }
+]

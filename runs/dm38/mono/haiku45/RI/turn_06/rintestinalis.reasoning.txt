@@ -1,0 +1,108 @@
+# Metabolic reasoning for Roseburia intestinalis L1-82, turn 6
+
+## Assessment of available carbon sources
+
+Looking at the nutrient inventory at t=24h:
+
+**Primary fermentable substrates:**
+- Butyrate: 21.18 mM (abundant)
+- Acetate: 14.84 mM (abundant)
+- L-arabinose: absent (was used turns 4-5)
+- D-glucose: 2.332 mM (low)
+- Maltose: 4.382 mM (moderate)
+- Formate: 2.122 mM (low)
+
+**Amino acids available for catabolism:**
+- L-arginine: 15.85 mM (abundant)
+- L-cysteine: 8.4 mM
+- L-serine: 6.4 mM
+- L-proline: 5.9 mM
+- And various others
+
+## Metabolic capability assessment
+
+Roseburia intestinalis is a butyrate-producing bacterium from the Faecalibacterium cluster. It is a strict anaerobe that:
+- Ferments carbohydrates (glucose, arabinose, maltose) via mixed acid fermentation
+- Can catabolize amino acids, particularly via the Stickland reaction
+- Produces butyrate as a major end product (which it also consumes when needed)
+- Cannot utilize formate or acetate as primary growth substrates under normal conditions
+- Cannot consume CO₂ anaerobically without H₂ (which is minimal at 0.31 mM)
+
+## Current situation
+
+At t=24h, I've been growing steadily at 0.37-0.48 /h by consuming glucose and arabinose (both now depleted or nearly so). The vessel is halfway through its 48h run. Carbohydrate sources are now scarce.
+
+**Key constraints:**
+- Glucose: 2.332 mM remaining (very limited)
+- Maltose: 4.382 mM (limited fermentable carbohydrate)
+- Amino acids abundant but require more complex catabolism
+- Butyrate present at 21.18 mM—this is a product I make, but I can also consume it via β-oxidation coupled to fermentation
+
+## Strategy for next interval
+
+Given carbohydrate depletion, I should:
+
+1. **Consume remaining glucose** (2.332 mM) at modest rate
+2. **Consume maltose** (4.382 mM) as secondary carbohydrate
+3. **Consume amino acids** for additional carbon and nitrogen, particularly:
+   - L-arginine (abundant, 15.85 mM) via Stickland fermentation
+   - L-cysteine (8.4 mM) for sulfur and carbon
+4. **Produce fermentation products**: butyrate, acetate, CO₂, formate, H₂, and potentially lactate
+
+## Growth calculation
+
+Assuming mixed substrate utilization:
+- Glucose uptake: ~2.0 mmol/gDW/h (limited by availability)
+- Maltose uptake: ~3.0 mmol/gDW/h
+- L-arginine uptake: ~2.5 mmol/gDW/h (Stickland with glycine or other partners)
+- L-cysteine uptake: ~1.5 mmol/gDW/h
+
+Total carbon from these sources: ~2.0 + 3.0×2 + 2.5 + 1.5 = ~12 mmol C/gDW/h
+
+Nitrogen from arginine and cysteine: ~2.5 + 1.5 = 4.0 mmol N/gDW/h
+
+Growth rate supported: 
+- Carbon constraint: 12 mmol C needed for 38 mmol C per gram = 0.32 g/h, but accounting for fermentation products (which recycle carbon), effective growth ~0.35 /h
+- Nitrogen constraint: 4.0 mmol N for 10 mmol N per gram = 0.40 g/h
+
+Conservative estimate: **0.35 /h growth rate**
+
+## Carbon audit
+
+**Carbon in:**
+- Glucose: 2.0 × 6 = 12 mmol C
+- Maltose: 3.0 × 12 = 36 mmol C
+- Arginine: 2.5 × 6 = 15 mmol C
+- Cysteine: 1.5 × 3 = 4.5 mmol C
+- **Total: 67.5 mmol C/gDW/h**
+
+**Carbon out (at 0.35 /h growth):**
+- Biomass: 0.35 × 38 = 13.3 mmol C
+- Fermentation products (butyrate, acetate, formate, CO₂): ~54 mmol C
+- **Total: ~67.3 mmol C/gDW/h** ✓
+
+This balances.
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -2.0,
+    "malt": -3.0,
+    "arg__L": -2.5,
+    "cys__L": -1.5,
+    "ser__L": -1.0,
+    "but": 5.0,
+    "ac": 4.0,
+    "co2": 8.5,
+    "for": 0.8,
+    "h2": 0.3,
+    "nh4": -0.5,
+    "pi": -0.40
+  },
+  "growth_rate": 0.35,
+  "rationale": "Carbohydrates nearly depleted; switching to amino acid catabolism via Stickland fermentation. Glucose and maltose consumption limited by availability. Arginine and cysteine provide additional carbon and nitrogen. Fermentation yields butyrate, acetate, CO₂, and formate as end products. Growth rate constrained by nitrogen availability and remaining carbohydrate.",
+  "confidence": 0.62
+}
+```

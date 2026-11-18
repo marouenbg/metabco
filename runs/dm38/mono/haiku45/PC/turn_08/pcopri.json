@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": 14.75,
+  "ppa": -5.0,
+  "lys__L": -1.5,
+  "thr__L": -1.0,
+  "for": 15.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Resuming mixed-acid fermentation on acetate and propionate with amino acid co-fermentation for nitrogen. Nitrogen-limited conditions require careful amino acid uptake. Producing formate and acetate as fermentation end-products, consistent with Prevotella metabolism in anaerobic conditions.",
+ "confidence": 0.62
+}

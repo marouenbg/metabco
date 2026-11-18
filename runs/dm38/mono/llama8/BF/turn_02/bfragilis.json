@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -4.0,
+  "glc__D": -4.0,
+  "arg__L": -2.82,
+  "ac": 1.5,
+  "but": 1.5,
+  "for": 1.5,
+  "h2": 0.5,
+  "co2": 0.2,
+  "pi": -0.41
+ },
+ "growth_rate": 0.047,
+ "rationale": "I will take up L-lactate and D-glucose as my primary sources of carbon, and L-arginine as a source of nitrogen. I will release acetate, butyrate, formate, hydrogen gas, and carbon dioxide as my fermentation products.",
+ "confidence": 0.8
+}

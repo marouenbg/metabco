@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 11,
+  "growth_claimed": 0.02,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=2 out=14 biomass=0.755"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0233 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.00523 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 0.099 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.02 -> 0",
+   "C: secretions scaled by 0.15"
+  ],
+  "rationale": "Severely nitrogen-limited at end of batch culture. Minimal growth; maintenance acetogenesis from H\u2082 + CO\u2082. Formate oxidation provides additional reducing equivalents. Remaining NH\u2084\u207a (1.012 mM) insuffi",
+  "confidence": 0.55,
+  "fluxes_claimed": {
+   "h2": -3.0,
+   "co2": 2.0,
+   "for": -2.0,
+   "nh4": -0.1,
+   "ac": 6.0
+  },
+  "fluxes_applied": {
+   "h2": -3.0,
+   "co2": 0.3,
+   "for": -2.0,
+   "nh4": -0.199,
+   "ac": 0.9,
+   "pi": -0.0233,
+   "so4": -0.0052
+  }
+ }
+]

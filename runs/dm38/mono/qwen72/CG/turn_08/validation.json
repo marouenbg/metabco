@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 8,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "S: credited 0.0393 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing to metabolize D-glucose and L-lactate for carbon and L-arginine for nitrogen, producing acetate, butyrate, and ethanol as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "etoh": 5.0,
+   "arg__L": -2.0,
+   "nh4": -2.0,
+   "pi": -0.15
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "etoh": 5.0,
+   "arg__L": -2.0,
+   "nh4": -2.0,
+   "pi": -0.15,
+   "so4": -0.0393
+  }
+ }
+]

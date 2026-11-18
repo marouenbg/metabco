@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -6.0,
+  "arg__L": -4.0,
+  "arab__L": -3.0,
+  "nh4": -1.0,
+  "ac": 35.0,
+  "ppa": 20.0,
+  "succ": 10.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.9,
+ "rationale": "Nitrogen-limited growth using arginine as dual C/N source to recover from turn 8 arrest. Mixed fermentation of glucose, lactate, and arabinose with acetate, propionate, and succinate as products. Arginine catabolism provides critical nitrogen for biosynthesis.",
+ "confidence": 0.72
+}

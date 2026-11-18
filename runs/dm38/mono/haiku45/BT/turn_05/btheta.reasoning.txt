@@ -1,0 +1,71 @@
+# Metabolic reasoning for Bacteroides thetaiotaomicron at t=20h
+
+## Current state assessment
+I am at 0.1395 gDW/L in a sealed anaerobic batch culture. I have been growing steadily at 0.27 /h for the last two turns, consuming glucose and lactate while fermenting to short-chain fatty acids (acetate, propionate, butyrate). This is consistent with my known metabolism as a saccharolytic anaerobe.
+
+## Available carbon and nitrogen sources
+
+**Primary carbon sources I can use:**
+- D-glucose (glc__D): 20.99 mM — my preferred substrate, readily transported and fermented
+- L-lactate (lac__L): 27.01 mM — I can consume this (demonstrated in turns 3–4)
+- L-arabinose (arab__L): 21.31 mM — I have arabinose utilization genes
+- Acetate (ac): 4.595 mM — I produce this, can also consume it if needed
+- Maltose (malt): 4.382 mM — I can ferment disaccharides
+
+**Nitrogen sources:**
+- Ammonium (nh4): 8.462 mM — primary inorganic nitrogen, readily used
+- L-arginine (arg__L): 21.6 mM — I can catabolize this for both carbon and nitrogen
+- L-cysteine (cys__L): 8.4 mM — contains nitrogen and sulfur
+- Other amino acids present in smaller amounts
+
+## Fermentation strategy
+
+My demonstrated fermentation pattern (turns 3–4) shows:
+- Glucose uptake: ~8 mmol/gDW/h
+- Lactate uptake: ~3 mmol/gDW/h (co-fermentation)
+- Products: acetate (~10), propionate (~4), butyrate (~2), CO₂ (~9.1) mmol/gDW/h
+
+This mixed-substrate fermentation is efficient and sustainable given the nutrient profile. I should continue this strategy.
+
+## Growth rate calculation
+
+From turn 3–4 pattern:
+- Glucose consumed: 8 mmol C/gDW/h (6 carbons per glucose = 48 mmol C)
+- Lactate consumed: 3 mmol C/gDW/h (3 carbons per lactate = 9 mmol C)
+- Total carbon in: 57 mmol C/gDW/h
+
+Products released:
+- Acetate: 10 mmol/gDW/h (2 C each = 20 mmol C)
+- Propionate: 4 mmol/gDW/h (3 C each = 12 mmol C)
+- Butyrate: 2 mmol/gDW/h (4 C each = 8 mmol C)
+- CO₂: 9.1 mmol/gDW/h (1 C each = 9.1 mmol C)
+- Total carbon out: 49.1 mmol C/gDW/h
+
+Carbon available for growth: 57 − 49.1 = 7.9 mmol C/gDW/h
+
+Growth requirement: 41 mmol C per gram dry weight
+Growth rate: 7.9 / 41 = **0.193 /h**
+
+Nitrogen check:
+- Ammonium uptake: 1.8 mmol N/gDW/h
+- Growth requirement: 8 mmol N per gram dry weight
+- Nitrogen-supported growth: 1.8 / 8 = 0.225 /h
+
+**Limiting factor: carbon** → growth rate = **0.19 /h**
+
+This is slightly lower than the observed 0.27 /h, suggesting I may be running additional amino acid catabolism or achieving higher glucose uptake. However, given nutrient depletion over 20 hours, a conservative rate is appropriate.
+
+## Carbon audit
+- In: 57 mmol C
+- Out (products): 49.1 mmol C
+- Growth: 0.19 gDW/h × 41 mmol C/gDW = 7.79 mmol C
+- Balance: 57 − 49.1 − 7.79 = 0.11 mmol C ✓ (within rounding)
+
+## Confidence
+I am moderately confident (0.75) because:
+- My recent pattern is consistent and reproducible
+- Glucose and lactate remain abundant
+- Nitrogen (ammonium) is still available
+- However, I may be able to sustain slightly higher growth by incorporating amino acid catabolism or additional arabinose fermentation
+
+{"fluxes": {"glc__D": -8.0, "lac__L": -3.0, "nh4": -1.8, "ac": 10.0, "ppa": 4.0, "but": 2.0, "co2": 9.1}, "growth_rate": 0.19, "rationale": "Continuing proven mixed fermentation of glucose and lactate with ammonium as nitrogen source. Produces acetate, propionate, butyrate, and CO2 as typical saccharolytic fermentation products. Carbon-limited growth at 0.19/h given 57 mmol C input minus 49.1 mmol C output leaves 7.9 mmol C for biomass (41 mmol C/gDW requirement).", "confidence": 0.75}

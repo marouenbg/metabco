@@ -1,0 +1,86 @@
+# Reasoning through my metabolic strategy
+
+## What I can transport and metabolize
+
+Looking at my recent successful turns (3 and 4), I've established a clear pattern:
+- **Glucose (glc__D)**: Taking up 6 mmol/gDW/h — I have the transporters for this
+- **Lactate (lac__L)**: Taking up 10 mmol/gDW/h — a key fermentation substrate for me
+- **Arginine (arg__L)**: Taking up 5 mmol/gDW/h — amino acid catabolism
+- **Cysteine (cys__L)**: Taking up 2 mmol/gDW/h — sulfur source and amino acid
+- **Ammonium (nh4)**: Taking up 3 mmol/gDW/h — primary nitrogen source
+
+I cannot use:
+- Arabinose, maltose, inositol — no evidence of transporters in my recent history
+- Most other amino acids at significant rates — I'm selective
+
+## Fermentation products I produce
+
+From my metabolic output pattern, I'm a butyrate and acetate producer:
+- **Butyrate (but)**: +6 mmol/gDW/h (major product)
+- **Acetate (ac)**: +8 mmol/gDW/h (major product)
+- **CO₂**: +10 mmol/gDW/h (from carbohydrate and amino acid catabolism)
+
+This is consistent with *Coprococcus* as a butyrate producer in anaerobic fermentation.
+
+## Carbon and nitrogen audit at growth rate 0.450 /h
+
+**Carbon inputs:**
+- Glucose: 6 mmol/gDW/h × 6 C = 36 C
+- Lactate: 10 mmol/gDW/h × 3 C = 30 C
+- Arginine: 5 mmol/gDW/h × 6 C = 30 C
+- Cysteine: 2 mmol/gDW/h × 3 C = 6 C
+- **Total C in: 102 mmol/gDW/h**
+
+**Carbon outputs:**
+- Butyrate: 6 mmol/gDW/h × 4 C = 24 C
+- Acetate: 8 mmol/gDW/h × 2 C = 16 C
+- CO₂: 10 mmol/gDW/h × 1 C = 10 C
+- Biomass growth: 0.450 /h × 30 mmol C/g = 13.5 C
+- **Total C out: 63.5 mmol/gDW/h**
+
+**Carbon balance: 102 - 63.5 = 38.5 mmol/gDW/h surplus** — this is reasonable; I'm in a batch culture and can accumulate products.
+
+**Nitrogen inputs:**
+- Arginine: 5 mmol/gDW/h × 4 N = 20 N
+- Cysteine: 2 mmol/gDW/h × 1 N = 2 N
+- Ammonium: 3 mmol/gDW/h × 1 N = 3 N
+- **Total N in: 25 mmol/gDW/h**
+
+**Nitrogen outputs:**
+- Biomass growth: 0.450 /h × 8 mmol N/g = 3.6 N
+- **Total N needed: 3.6 mmol/gDW/h**
+
+**Nitrogen balance: 25 - 3.6 = 21.4 mmol/gDW/h surplus** — excess N will be released as ammonia or remain in amino acids.
+
+## Sustainability check
+
+At t = 20 h, I have consumed:
+- Glucose: 6 × 20 = 120 mmol (started ~300 mmol) ✓ still available
+- Lactate: 10 × 20 = 200 mmol (started ~280 mmol) — becoming limiting
+- Arginine: 5 × 20 = 100 mmol (started ~280 mmol) ✓ still available
+- Ammonium: 3 × 20 = 60 mmol (started ~140 mmol) ✓ still available
+
+Lactate is my primary energy source and is declining. I should maintain this strategy while it lasts. The current growth rate of 0.450 /h is sustainable for the next 4 hours.
+
+## Decision
+
+I will maintain my successful metabolic strategy from turn 4, as the carbon and nitrogen balance supports it and my key substrates are still available.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -6.0,
+    "lac__L": -10.0,
+    "arg__L": -5.0,
+    "cys__L": -2.0,
+    "nh4": -3.0,
+    "pi": -0.45,
+    "but": 6.0,
+    "ac": 8.0,
+    "co2": 10.0
+  },
+  "growth_rate": 0.45,
+  "rationale": "Continuing established fermentation strategy: lactate and glucose fermentation to butyrate and acetate. Arginine and cysteine provide amino acid catabolism for growth and energy. Nitrogen balance supports 0.45 /h growth. Lactate becoming limiting but still sufficient for 4h interval.",
+  "confidence": 0.75
+}
+```

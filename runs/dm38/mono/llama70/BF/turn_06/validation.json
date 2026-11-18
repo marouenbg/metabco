@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 6,
+  "growth_claimed": 0.6,
+  "growth_allowed": 0.6,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.545 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Moderate uptake of acetate, propionate, and amino acids, with production of acetate, propionate, and butyrate",
+  "confidence": 0.7,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "ppa": -3.0,
+   "arg__L": -2.0,
+   "cys__L": -1.0,
+   "ser__L": -1.0,
+   "nh4": -1.5,
+   "but": 2.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "ppa": -3.0,
+   "arg__L": -2.0,
+   "cys__L": -1.0,
+   "ser__L": -1.0,
+   "nh4": -1.5,
+   "but": 2.0,
+   "co2": 1.0,
+   "pi": -0.5455
+  }
+ }
+]

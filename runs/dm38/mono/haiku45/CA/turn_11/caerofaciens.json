@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ac": -4.0,
+  "for": -1.5,
+  "cys__L": -0.8,
+  "malt": -0.5,
+  "ser__L": -0.05,
+  "lac__L": 3.2,
+  "ppa": 1.5,
+  "co2": 2.1,
+  "nh4": 0.05,
+  "h2": 0.0
+ },
+ "growth_rate": 0.1,
+ "rationale": "Late stationary phase (44/48h). Acetate and formate remain abundant; cysteine provides dual C/N. Fermentation yields lactate and propionate as end products. Growth limited by nitrogen availability and accumulated metabolic byproducts. Conservative growth rate reflects nutrient scarcity and pH stress from organic acids.",
+ "confidence": 0.68
+}

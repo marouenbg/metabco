@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 2,
+  "growth_claimed": 0.333,
+  "growth_allowed": 0.333,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.224 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.086 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Adjusted metabolism to balance carbon and nitrogen uptake with biomass production and fermentation products.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "nh4": -4.0,
+   "ac": 3.0,
+   "but": 2.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "nh4": -4.0,
+   "ac": 3.0,
+   "but": 2.0,
+   "pi": -0.2238,
+   "so4": -0.086
+  }
+ }
+]

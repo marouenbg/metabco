@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 3,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.2,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.135 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0516 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing to utilize D-glucose and L-lactate as primary carbon sources, and ammonium and L-arginine as nitrogen sources. Producing acetate, butyrate, formate, and L-lactate as fermentation products. ",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": 5.0,
+   "nh4": -8.0,
+   "arg__L": -2.0,
+   "ac": 4.0,
+   "but": 4.0,
+   "for": 3.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": 5.0,
+   "nh4": -8.0,
+   "arg__L": -2.0,
+   "ac": 4.0,
+   "but": 4.0,
+   "for": 3.0,
+   "pi": -0.1352,
+   "so4": -0.0516
+  }
+ }
+]

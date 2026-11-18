@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 5,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.75,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: glc__D"
+  ],
+  "warnings": [
+   "no_transporter: glc__D"
+  ],
+  "repairs": [
+   "clipped uptake glc__D to pool limit -25.4",
+   "P: credited 0.534 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.165 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "I will take up D-glucose (glc__D), L-arginine (arg__L), and L-serine (ser__L) to support growth and fermentation. I will release lactate (lac__L) and acetate (ac) as fermentation products. I will also",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -33.0,
+   "arg__L": -8.0,
+   "ser__L": -2.0,
+   "lac__L": 5.0,
+   "ac": 3.0,
+   "h2": 0.2
+  },
+  "fluxes_applied": {
+   "glc__D": -25.4238,
+   "arg__L": -8.0,
+   "ser__L": -2.0,
+   "lac__L": 5.0,
+   "ac": 3.0,
+   "h2": 0.2,
+   "pi": -0.5344,
+   "so4": -0.1646
+  }
+ }
+]

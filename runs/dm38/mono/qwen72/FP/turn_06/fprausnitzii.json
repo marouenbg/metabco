@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "nh4": -7.0,
+  "co2": 6.0,
+  "but": 2.0,
+  "ac": 2.0,
+  "h2": 2.0,
+  "pi": -0.23
+ },
+ "growth_rate": 0.25,
+ "confidence": 1.0,
+ "rationale": "Continuing to ferment D-glucose and L-lactate to produce butyrate, acetate, and hydrogen, while consuming ammonium as the nitrogen source, supports a consistent growth rate of 0.250 /h. Carbon and nitrogen audits confirm the sustainability of this metabolic strategy."
+}

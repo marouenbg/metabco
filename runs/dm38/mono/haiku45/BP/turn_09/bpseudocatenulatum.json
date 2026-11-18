@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -3.0,
+  "arg__L": -2.0,
+  "nh4": -1.5,
+  "ser__L": -0.5,
+  "ac": 4.0,
+  "co2": 1.2,
+  "for": 0.3
+ },
+ "growth_rate": 0.3,
+ "rationale": "Glucose and lactate fermentation via bifid shunt; arginine catabolism for C and N; ammonium assimilation. Nitrogen-limited growth. Products: acetate (primary), CO\u2082, formate. Conservative rate given recent stasis.",
+ "confidence": 0.62
+}

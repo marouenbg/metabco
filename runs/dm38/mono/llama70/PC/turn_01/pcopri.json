@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arg__L": -5.0,
+  "nh4": -2.0,
+  "ac": 0.5,
+  "ppa": 0.25
+ },
+ "growth_rate": 0.2,
+ "rationale": "Based on available carbon and nitrogen sources, and fermentation product formation",
+ "confidence": 0.8
+}

@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 5,
+  "growth_claimed": 0.19,
+  "growth_allowed": 0.19,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.173 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0417 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing proven mixed fermentation of glucose and lactate with ammonium as nitrogen source. Produces acetate, propionate, butyrate, and CO2 as typical saccharolytic fermentation products. Carbon-lim",
+  "confidence": 0.75,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -3.0,
+   "nh4": -1.8,
+   "ac": 10.0,
+   "ppa": 4.0,
+   "but": 2.0,
+   "co2": 9.1
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -3.0,
+   "nh4": -1.8,
+   "ac": 10.0,
+   "ppa": 4.0,
+   "but": 2.0,
+   "co2": 9.1,
+   "pi": -0.1727,
+   "so4": -0.0417
+  }
+ }
+]

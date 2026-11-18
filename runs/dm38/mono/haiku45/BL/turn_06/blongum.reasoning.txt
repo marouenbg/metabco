@@ -1,0 +1,87 @@
+# Metabolic Decision - Turn 6, t = 24 h
+
+## Analysis
+
+**Current state:** I am at 2.48 gDW/L, 24 h into a 48 h batch culture. I have consumed most primary carbohydrates (glucose, arabinose exhausted or nearly so) and am now in the secondary phase, relying on lactate fermentation and amino acid catabolism.
+
+**Available carbon sources I can transport:**
+- **Acetate (ac)**: 24.08 mM — I can take this up; it's a product I've been releasing and can re-assimilate
+- **Maltose (malt)**: 4.382 mM — I have maltose transporters (as a Bifidobacterium with fructose-6-phosphate shunt)
+- **Formate (for)**: 1.828 mM — can be oxidized anaerobically
+- **Amino acids**: Multiple present (cys, ser, pro, ala, gly, phe, leu, tyr, val, etc.) — I can catabolize these for carbon and nitrogen
+
+**Amino acids I cannot efficiently transport or metabolize in large quantities:** Most branched-chain and aromatic amino acids require specific permeases; I will focus on those I've successfully used: arginine, cysteine, serine, and others with clear metabolic routes.
+
+**Known fermentation products for B. longum:**
+- Acetate (major)
+- Lactate (major)
+- Formate
+- Succinate
+- Small amounts of butyrate, propionate
+
+**Nitrogen sources:**
+- Ammonium (nh4): 9.001 mM — excellent
+- Amino acids provide both C and N
+
+## Metabolic Strategy for Next 4 h
+
+At this stage (24 h), I am transitioning from rapid early growth. My recent turns show growth rates of 0.45–0.60 /h. I should:
+
+1. **Continue lactate fermentation** if available (not listed now, but I may have some residual)
+2. **Consume remaining maltose** (4.382 mM is modest but useful)
+3. **Catabolize amino acids** selectively: arginine, cysteine, serine, proline (all present in useful quantities)
+4. **Re-uptake acetate** produced in earlier turns to conserve carbon
+5. **Use ammonium** for amino acid synthesis
+
+**Growth rate estimate:**
+- Maltose: ~4 mmol/L × 6 carbons = 24 mmol C
+- Acetate re-uptake: ~8 mmol/L × 2 carbons = 16 mmol C
+- Amino acid catabolism (arg, cys, ser, pro): ~15 mmol × avg 4 C/amino acid ≈ 60 mmol C
+- **Total C available: ~100 mmol/L**
+
+For growth at 0.50 /h over 4 h on 1 mL (1 g total):
+- Biomass production: 0.50 × 4 × 1 g = 2 g additional DW
+- C needed: 2 g × 38 mmol/g = 76 mmol C
+- N needed: 2 g × 10 mmol/g = 20 mmol N
+
+Available N: nh4 (9 mM) + amino acids (net ~15 mmol from catabolism) = 24 mmol — sufficient.
+
+**Carbon audit:**
+- In: 100 mmol C
+- Biomass: 76 mmol C
+- Fermentation products (acetate, formate, lactate, CO₂): ~24 mmol C
+- **Balanced.**
+
+## Fluxes (mmol/gDW/h)
+
+- Maltose: -4.0 (uptake)
+- Acetate: -8.0 (uptake, reabsorption)
+- L-arginine: -3.0 (uptake)
+- L-cysteine: -2.0 (uptake)
+- L-serine: -1.5 (uptake)
+- L-proline: -1.5 (uptake)
+- Ammonium: -2.0 (uptake)
+- **Products:** Acetate +5.0, Lactate +2.5, Formate +0.5, CO₂ +3.0
+
+**Growth rate:** 0.50 /h
+
+```json
+{
+  "fluxes": {
+    "malt": -4.0,
+    "ac": -8.0,
+    "arg__L": -3.0,
+    "cys__L": -2.0,
+    "ser__L": -1.5,
+    "pro__L": -1.5,
+    "nh4": -2.0,
+    "ac": 5.0,
+    "lac__L": 2.5,
+    "for": 0.5,
+    "co2": 3.0
+  },
+  "growth_rate": 0.50,
+  "rationale": "Secondary phase metabolism: consuming residual maltose and amino acids (arg, cys, ser, pro), re-assimilating acetate from earlier fermentation, and maintaining steady-state fermentation to lactate, acetate, and formate. Nitrogen from ammonium and amino acid catabolism supports continued biomass synthesis.",
+  "confidence": 0.72
+}
+```

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": 10,
+  "glc__D": -5,
+  "arg__L": -5,
+  "ac": 10,
+  "for": 0,
+  "etoh": 0,
+  "nh4": 0,
+  "co2": 0
+ },
+ "growth_rate": 0.01,
+ "rationale": "I will take up D-glucose, L-arginine, and ammonium to support growth. I will release lactate, acetate, formate, and ethanol as fermentation products. I will take up maltose through the malt transporter. I will grow at a rate of 0.01 gDW/h.",
+ "confidence": 0.8
+}

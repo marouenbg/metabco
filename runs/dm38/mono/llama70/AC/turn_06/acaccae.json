@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "arg__L": -2.0,
+  "but": 1.55,
+  "ac": 3.1,
+  "co2": 3.1
+ },
+ "growth_rate": 0.225,
+ "rationale": "butyrate-producing bacterium fermenting D-glucose and utilizing L-arginine as nitrogen source",
+ "confidence": 0.8
+}

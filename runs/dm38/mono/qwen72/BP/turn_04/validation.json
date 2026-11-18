@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 4,
+  "growth_claimed": 0.083,
+  "growth_allowed": 0.083,
+  "ok": false,
+  "violations": [
+   "unknown_metabolite: lac__L_secreted"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0558 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0214 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Balanced carbon and nitrogen intake to support growth while producing typical fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "arg__L": -0.5,
+   "lac__L": -2.0,
+   "ac": 2.0,
+   "for": 1.5,
+   "lac__L_secreted": 1.5,
+   "nh4": -1.5
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "arg__L": -0.5,
+   "lac__L": -2.0,
+   "ac": 2.0,
+   "for": 1.5,
+   "nh4": -1.5,
+   "pi": -0.0558,
+   "so4": -0.0214
+  }
+ }
+]

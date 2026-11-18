@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "ac": 5.0,
+  "for": 5.0,
+  "nh4": -2.1
+ },
+ "growth_rate": 0.758,
+ "rationale": "Ferment L-lactate to produce formate and acetate, maintaining a growth rate of 0.758 /h.",
+ "confidence": 0.9
+}

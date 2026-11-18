@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 9,
+  "growth_claimed": 0.235,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=6 out=12 biomass=8.87"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.274 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.235 -> 0",
+   "C: secretions scaled by 0.525"
+  ],
+  "rationale": "Utilizing acetate and CO2 as primary carbon sources and amino acids as nitrogen sources",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": 5.0,
+   "co2": 2.0,
+   "cys__L": -2.0
+  },
+  "fluxes_applied": {
+   "ac": 2.625,
+   "co2": 1.05,
+   "cys__L": -2.0,
+   "pi": -0.2741
+  }
+ }
+]

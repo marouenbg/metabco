@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 9,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.1078,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=2 out=1 biomass=2.04"
+  ],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.233 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0523 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.2 -> 0.108"
+  ],
+  "rationale": "Utilizing available short-chain fatty acids and amino acids to support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "ppa": -5.0,
+   "pro__L": -2.0,
+   "but": 5.0,
+   "nh4": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "ppa": -5.0,
+   "pro__L": -2.0,
+   "but": 5.0,
+   "nh4": 1.0,
+   "pi": -0.2333,
+   "so4": -0.0523
+  }
+ }
+]

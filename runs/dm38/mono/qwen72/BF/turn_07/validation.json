@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 7,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.0622,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=0.5 out=0 biomass=1.27"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.136 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0329 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.15 -> 0.0622"
+  ],
+  "rationale": "Utilizing abundant butyrate and acetate for energy and carbon, producing butyrate, acetate, and propionate. Ammonium is used for nitrogen, and hydrogen and carbon dioxide are produced as byproducts.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "but": -5.0,
+   "ac": -5.0,
+   "ppa": 1.0,
+   "nh4": -0.5,
+   "h2": 0.5,
+   "co2": 0.5
+  },
+  "fluxes_applied": {
+   "but": -5.0,
+   "ac": -5.0,
+   "ppa": 1.0,
+   "nh4": -0.5,
+   "h2": 0.5,
+   "co2": 0.5,
+   "pi": -0.1364,
+   "so4": -0.0329
+  }
+ }
+]

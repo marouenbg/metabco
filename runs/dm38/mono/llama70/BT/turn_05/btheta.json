@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "arab__L": -10.0,
+  "arg__L": -2.0,
+  "ac": 3.0,
+  "ppa": 2.0,
+  "h2": 0.0,
+  "nh4": 0.0
+ },
+ "growth_rate": 0.36,
+ "rationale": "Balanced carbon and nitrogen uptake and production rates, with modest growth rate",
+ "confidence": 0.8
+}

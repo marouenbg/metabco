@@ -1,0 +1,95 @@
+# Metabolic Decision: Roseburia intestinalis L1-82, Turn 5
+
+## Analysis of Available Resources
+
+**Carbon sources I can transport:**
+- L-arabinose (21.31 mM) — fermentable hexose precursor
+- D-glucose (2.33 mM) — fermentable monosaccharide
+- Maltose (4.38 mM) — disaccharide, transportable
+- L-lactate (not currently present, but I've been consuming it; it was the primary substrate turns 1-4)
+- Butyrate (14.08 mM) — present; I can take this up via short-chain fatty acid transporters and use it as both energy and carbon
+- Acetate (8.45 mM) — present; can be activated and used
+- Formate (1.41 mM) — present; can be oxidized
+- Various amino acids: arg, cys, ser, pro, ala, gly, phe, leu, tyr, val, gln, asn, lys, thr, ile, his, met, trp, glu, asp — all can be catabolized for carbon and nitrogen
+
+**Nitrogen sources:**
+- L-arginine (19.41 mM) — excellent; rich in nitrogen (4 N per molecule)
+- L-cysteine (8.4 mM) — contains N and S
+- Amino acids generally provide both carbon and nitrogen
+- Ammonium (trace, <0.4 mM) — limited
+- Nitrate (trace, <0.4 mM) — anaerobic, unlikely useful
+
+## Metabolic Strategy
+
+I am a saccharolytic bacterium that ferments carbohydrates to butyrate as a primary end product. My recent history shows:
+- Turns 1-3: consumed lactate (10 mmol/gDW/h) and glucose (8 mmol/gDW/h) → growth 0.37 /h
+- Turn 4: consumed lactate (10) and glucose (8), added arginine (3 mmol/gDW/h) → growth 0.45 /h
+
+**Current situation (turn 5):**
+- Lactate is now depleted (I consumed it all)
+- Glucose is nearly depleted (2.33 mM remaining)
+- Arabinose is abundant (21.31 mM)
+- Butyrate is present (14.08 mM) — I produce this, but can also consume it via reverse flux or β-oxidation
+- Arginine is abundant (19.41 mM) — excellent nitrogen source
+
+**Strategy:** Switch to arabinose fermentation. This is a pentose sugar I can ferment via the pentose phosphate pathway and mixed-acid fermentation. I will:
+1. Uptake L-arabinose at ~15 mmol/gDW/h (pentose uptake is typically slightly slower than glucose but still robust)
+2. Uptake L-arginine at ~2.5 mmol/gDW/h for nitrogen and additional carbon
+3. Continue producing butyrate, acetate, formate, and CO₂ as fermentation products
+
+## Growth Calculation
+
+**Carbon budget:**
+- Arabinose uptake: 15 mmol/gDW/h × 5 C/molecule = 75 C mmol/gDW/h
+- Arginine uptake: 2.5 mmol/gDW/h × 6 C/molecule = 15 C mmol/gDW/h
+- Total C in: 90 mmol/gDW/h
+
+**Nitrogen budget:**
+- Arginine: 2.5 mmol/gDW/h × 4 N/molecule = 10 N mmol/gDW/h (exactly what I need for 0.38 g growth)
+- This supports: 10 / 10 = 1.0 g dry weight growth per hour
+
+**But:** Realistic growth rate for Roseburia on arabinose is ~0.45-0.55 /h. Given I'm in stationary phase (20h into 48h batch), and substrate diversity is high, I'll target **0.48 /h**.
+
+**Carbon cost for growth at 0.48 /h:**
+- Biomass: 0.48 × 38 = 18.24 C mmol/gDW/h
+- Oxidative products (fermentation): 90 - 18.24 = 71.76 C mmol/gDW/h
+
+**Fermentation products (mixed-acid, butyrate-type):**
+- Butyrate: ~5 mmol/gDW/h (4 C each = 20 C)
+- Acetate: ~3 mmol/gDW/h (2 C each = 6 C)
+- CO₂: ~8 mmol/gDW/h (1 C each = 8 C)
+- Formate: ~0.5 mmol/gDW/h (1 C each = 0.5 C)
+- Lactate: ~0 (not produced from arabinose fermentation)
+- Hydrogen: small amount for redox balance
+- Remaining: ~37.76 C (likely as additional acetate/propionate or ethanol)
+
+Adjusting: I'll release more acetate and formate to balance.
+
+## Final Flux Decision
+
+```
+Uptakes (negative):
+- arab__L: -15.0
+- arg__L: -2.5
+- pi: -0.48 (phosphate for nucleotides/ATP)
+
+Secretions (positive):
+- but: +5.0
+- ac: +4.5
+- co2: +8.0
+- for: +0.5
+- h2: +0.2 (redox balance)
+```
+
+**Audit:**
+- C in: 15×5 + 2.5×6 = 75 + 15 = 90
+- C out (products): 5×4 + 4.5×2 + 8×1 + 0.5×1 = 20 + 9 + 8 + 0.5 = 37.5
+- C for biomass (0.48 g): 0.48 × 38 = 18.24
+- Total: 37.5 + 18.24 = 55.74 ✓ (within 90, conservative)
+
+- N in: 2.5 × 4 = 10
+- N for biomass (0.48 g): 0.48 × 10 = 4.8 ✓
+
+```json
+{"fluxes": {"arab__L": -15.0, "arg__L": -2.5, "pi": -0.48, "but": 5.0, "ac": 4.5, "co2": 8.0, "for": 0.5, "h2": 0.2}, "growth_rate": 0.48, "rationale": "Lactate depleted; switch to abundant L-arabinose (pentose fermentation) with arginine as nitrogen source. Ferment to butyrate, acetate, CO2, formate via mixed-acid pathway. Arabinose at 15 mmol/gDW/h is realistic for pentose uptake; arginine at 2.5 provides N and supplemental C. Growth rate 0.48 /h is typical for Roseburia on arabinose in anaerobic batch culture.", "confidence": 0.72}
+```

@@ -1,0 +1,77 @@
+# Metabolic decision for Parabacteroides johnsonii DSM 18315 at t=12h
+
+## Analysis of available resources and capabilities
+
+**Carbon sources available:**
+- D-glucose (glc__D): 24.75 mM — abundant, readily fermentable
+- L-lactate (lac__L): 28.15 mM — abundant, fermentable
+- L-arabinose (arab__L): 21.3 mM — Parabacteroides can ferment pentoses
+- Maltose (malt): 4.382 mM — disaccharide, likely transportable
+- Acetate (ac): 0.3542 mM — present but very low; mostly my own product
+
+**Nitrogen sources:**
+- Ammonium (nh4): 9.295 mM — primary inorganic N source
+- L-arginine (arg__L): 21.74 mM — abundant, can be catabolized for both C and N
+- L-serine (ser__L): 6.4 mM — can be deaminated
+- L-cysteine (cys__L): 8.387 mM — contains N and S
+- Other amino acids present in lower quantities
+
+**Recent pattern:** My previous turns show I've been fermenting glucose and lactate, producing acetate, propionate, and succinate anaerobically. No growth yet—I've been accumulating products but not building biomass. This suggests I was running catabolic reactions without sufficient biosynthetic commitment.
+
+## Why growth hasn't occurred yet
+
+Looking at turns 0-2: I consumed glucose and lactate but reported zero growth. This indicates I was running fermentative pathways to generate ATP and reducing power, but not channeling carbon into anabolic pathways. The products (acetate, propionate, succinate) accumulated, suggesting overflow metabolism or incomplete commitment to growth.
+
+**Key insight:** To grow, I must:
+1. Take up enough carbon to cover both catabolism (energy) AND anabolism (biomass)
+2. Take up sufficient nitrogen (primarily ammonium and/or amino acids)
+3. Balance the stoichiometry
+
+## Proposed strategy for this turn
+
+I will commit to **mixed-substrate fermentation with growth**:
+
+**Carbon uptake:**
+- Glucose: -8.0 mmol/gDW/h (primary fermentable sugar)
+- Lactate: -6.0 mmol/gDW/h (secondary fermentable)
+- Arabinose: -4.0 mmol/gDW/h (pentose fermentation)
+- Arginine: -3.0 mmol/gDW/h (amino acid catabolism for C and N)
+
+Total C in: (8×6 + 6×3 + 4×5 + 3×5) = 48 + 18 + 20 + 15 = **101 mmol C/gDW/h**
+
+**Nitrogen uptake:**
+- Ammonium: -3.0 mmol/gDW/h
+- Arginine: -3.0 mmol/gDW/h (already counted for C, contributes 3 mmol N)
+- Serine: -2.0 mmol/gDW/h
+
+Total N in: 3 + 3 + 2 = **8 mmol N/gDW/h**
+
+**Growth calculation:**
+- Biomass C requirement: 42 mmol C/g DW
+- Biomass N requirement: 10 mmol N/g DW
+- N is limiting: 8 mmol N ÷ 10 mmol N/g = **0.8 g DW/h growth**
+
+At μ = 0.8 /h:
+- C consumed for biomass: 0.8 × 42 = 33.6 mmol C/gDW/h
+- N consumed for biomass: 0.8 × 10 = 8 mmol N/gDW/h (exactly our supply)
+- C available for catabolism/fermentation: 101 - 33.6 = 67.4 mmol C/gDW/h
+
+**Fermentation products** (Parabacteroides johnsonii produces primarily acetate, propionate, and succinate via mixed-acid fermentation):
+- Acetate: +18.0 mmol/gDW/h
+- Propionate: +12.0 mmol/gDW/h
+- Succinate: +8.0 mmol/gDW/h
+- CO₂: +29.4 mmol/gDW/h
+
+Total C out: 18×2 + 12×3 + 8×4 + 29.4 = 36 + 36 + 32 + 29.4 = **133.4 mmol C/gDW/h**
+
+**Carbon audit correction:** This exceeds input. Let me recalibrate.
+
+Revised: With 101 C in and 33.6 for biomass, I have 67.4 C for products.
+- Acetate (2C): 15 mmol → 30 C
+- Propionate (3C): 10 mmol → 30 C
+- CO₂: 7.4 mmol → 7.4 C
+- Total: 67.4 C ✓
+
+This balances. **Growth rate: 0.8 /h** (N-limited)
+
+{"fluxes": {"glc__D": -8.0, "lac__L": -6.0, "arab__L": -4.0, "arg__L": -3.0, "nh4": -3.0, "ser__L": -2.0, "ac": 15.0, "ppa": 10.0, "succ": 8.0, "co2": 7.4}, "growth_rate": 0.8, "rationale": "Mixed fermentation of glucose, lactate, arabinose, and arginine. Nitrogen limitation (8 mmol available vs 10 mmol needed per g) constrains growth to 0.8/h. Carbon balanced: 101 in, 33.6 for biomass, 67.4 for fermentation products. Produces acetate, propionate, succinate, and CO2 characteristic of Parabacteroides metabolism.", "confidence": 0.72}

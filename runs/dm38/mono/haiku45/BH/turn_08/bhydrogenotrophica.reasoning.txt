@@ -1,0 +1,64 @@
+# Metabolic decision for Blautia hydrogenotrophica DSM 10507, turn 8
+
+## Analysis of transport capability and substrate availability
+
+Blautia hydrogenotrophica is a hydrogenotrophic bacterium known to use H₂ and CO₂ as primary energy and carbon sources, but it is also a facultative heterotroph capable of fermenting various organic substrates. My genome encodes:
+- H₂/CO₂ utilization (Wood-Ljungdahl pathway)
+- Carbohydrate transporters (glucose, arabinose noted in recent history)
+- Amino acid transporters (arginine, serine, proline, etc.)
+- Organic acid transporters (lactate, formate, acetate)
+
+## Available carbon sources and constraints
+
+**Abundant but cannot use:**
+- Maltose (4.38 mM): no maltose transporter in this strain
+- Most amino acids in excess: while I can transport some (arg, ser, pro, ala, etc.), they are poor sole carbon sources for growth; amino acids are better used as nitrogen sources
+
+**Can use effectively:**
+- **H₂ (6.225 mM) + CO₂ (81.59 mM)**: Primary autotrophic pathway via Wood-Ljungdahl
+- **Lactate (4.002 mM)**: fermentable, known substrate
+- **Acetate (43.57 mM)**: already accumulated from my own fermentation; can reassimilate
+- **Formate (13.55 mM)**: fermentable, known substrate
+- **Arginine (13.53 mM)**: can be used for both carbon and nitrogen via arginine fermentation
+
+**Nitrogen sources:**
+- NH₄⁺ (1.567 mM): severely depleted
+- Arginine (13.53 mM): excellent dual-purpose source (carbon + nitrogen)
+- Other amino acids: present but lower priority
+
+## Recent metabolic pattern
+
+Turns 5-7 show I was growing on glucose/arabinose (now exhausted) while fermenting to acetate, lactate, and formate. I accumulated H₂ production. Now glucose is gone, so I must switch strategy.
+
+## Optimal strategy for remaining 16 hours
+
+With H₂ at 6.225 mM and CO₂ abundant, I should activate autotrophic hydrogenotrophic growth. This is energetically favorable and conserves limited nitrogen. Simultaneously, I'll use arginine (abundant, dual C/N source) to meet nitrogen demand and supplement carbon.
+
+**Growth calculation:**
+- H₂ uptake: ~8 mmol/gDW/h (realistic for hydrogenotrophic metabolism)
+- CO₂ uptake: ~20 mmol/gDW/h (stoichiometric to H₂)
+- Arginine uptake: ~2.5 mmol/gDW/h (nitrogen + supplementary carbon)
+- Biomass requirement: 38 mmol C/g + 10 mmol N/g
+
+From H₂/CO₂ autotrophy alone at these rates:
+- CO₂ uptake of 20 mmol/gDW/h provides ~20 mmol C/gDW/h
+- With arginine at 2.5 mmol/gDW/h (~1.5 mmol C/gDW/h net after N extraction), total C input ≈ 21.5 mmol C/gDW/h
+- Growth rate: ~0.55 /h (21.5 / 38 ≈ 0.56, limited by C availability)
+
+**Nitrogen audit:**
+- Arginine at 2.5 mmol/gDW/h provides ~2.5 mmol N/gDW/h
+- Growth at 0.55 /h requires 10 × 0.55 = 5.5 mmol N/gDW/h
+- Shortfall: need additional NH₄⁺ (~3 mmol/gDW/h), but only 1.567 mM available total
+
+Revised: uptake arginine at ~3 mmol/gDW/h (provides ~3 mmol N), supplement with NH₄⁺ at ~2 mmol/gDW/h (depleting available pool). Growth rate: ~0.45 /h.
+
+**Carbon balance check:**
+- CO₂: -20 mmol in
+- Arginine: -3 mmol in (≈1.8 mmol C equivalent)
+- Total C in: 21.8 mmol
+- Growth at 0.45 /h: 38 × 0.45 = 17.1 mmol C out
+- Remaining: 4.7 mmol C → release as acetate/formate
+
+Fermentation products: acetate and formate (known products; H₂ may also be released if reducing power exceeds demand).
+
+{"fluxes": {"h2": -8.0, "co2": -20.0, "arg__L": -3.0, "nh4": -2.0, "ac": 2.5, "for": 2.2}, "growth_rate": 0.45, "rationale": "Activated hydrogenotrophic autotrophy with H₂ and CO₂ as primary energy/carbon source, supplemented by arginine for nitrogen and additional carbon. Remaining carbon released as acetate and formate. Limited by nitrogen availability (NH₄⁺ depleted); arginine provides dual C/N support.", "confidence": 0.68}

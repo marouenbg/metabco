@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -4.0,
+  "arab__L": -3.0,
+  "arg__L": -2.0,
+  "ac": 4.0,
+  "for": 1.5,
+  "ppa": 1.5,
+  "co2": 5.0,
+  "nh4": 0.5
+ },
+ "growth_rate": 0.3,
+ "rationale": "Glucose depleted; switching to lactate and arabinose fermentation with arginine as nitrogen source. Mixed-acid fermentation under anaerobic conditions produces acetate, formate, and propionate. Carbon balance: 35 mmol in (8+15+12) minus 9 mmol for growth minus ~12 mmol for fermentation products = sustainable. Nitrogen from arginine covers biosynthetic demand with minor recycling.",
+ "confidence": 0.72
+}

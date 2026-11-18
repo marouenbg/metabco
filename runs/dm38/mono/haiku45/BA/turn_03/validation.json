@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 3,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.4,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.284 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Glucose remains abundant; continuing fermentation to lactate with arginine-driven nitrogen uptake. Growth limited by nitrogen availability (~5 mmol/h supports 0.40 /h). Carbon balance: 107 mmol in, 13",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -12.0,
+   "arab__L": -4.0,
+   "arg__L": -2.5,
+   "nh4": -2.0,
+   "cys__L": -0.5,
+   "lac__L": 16.0,
+   "ac": 4.5,
+   "for": 2.0,
+   "co2": 1.5
+  },
+  "fluxes_applied": {
+   "glc__D": -12.0,
+   "arab__L": -4.0,
+   "arg__L": -2.5,
+   "nh4": -2.0,
+   "cys__L": -0.5,
+   "lac__L": 16.0,
+   "ac": 4.5,
+   "for": 2.0,
+   "co2": 1.5,
+   "pi": -0.2836
+  }
+ }
+]

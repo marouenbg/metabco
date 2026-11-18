@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "arg__L": -2.0,
+  "lac__L": -10.0,
+  "ac": 5.0,
+  "ppa": 3.0,
+  "co2": 2.0,
+  "h2": 1.0,
+  "nh4": -5.0
+ },
+ "growth_rate": 0.125,
+ "rationale": "Utilizing glucose, arginine, and lactate for growth while producing acetate, propionate, CO2, and H2. Adjusted ammonium intake to cover biomass nitrogen cost.",
+ "confidence": 0.9
+}

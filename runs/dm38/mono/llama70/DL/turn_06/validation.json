@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 6,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.583 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing L-arginine and ammonium for growth, producing acetate and propionate",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arg__L": -10.0,
+   "nh4": -5.0,
+   "ac": 10.0,
+   "ppa": 5.0
+  },
+  "fluxes_applied": {
+   "arg__L": -10.0,
+   "nh4": -5.0,
+   "ac": 10.0,
+   "ppa": 5.0,
+   "pi": -0.5832,
+   "so4": -0.1309
+  }
+ }
+]

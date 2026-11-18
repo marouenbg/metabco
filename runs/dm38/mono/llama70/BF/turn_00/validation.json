@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 0,
+  "growth_claimed": 0.366,
+  "growth_allowed": 0.366,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.333 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0803 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Optimizing carbon and nitrogen uptake for maximum growth rate while satisfying carbon and nitrogen balances",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "ppa": 3.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "pi": -0.3327,
+   "so4": -0.0803
+  }
+ }
+]

@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 11,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=0 out=3.5 biomass=3.63"
+  ],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.465 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.105 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.5 -> 0",
+   "N: secretions scaled by 0"
+  ],
+  "rationale": "Utilizing butyrate as primary carbon and nitrogen source, with secondary production of acetate and ammonia.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "but": -16.5,
+   "lac__L": -3.5,
+   "h2": -20.0,
+   "ac": 8.5,
+   "nh4": 3.5
+  },
+  "fluxes_applied": {
+   "but": -16.5,
+   "lac__L": -3.5,
+   "h2": -20.0,
+   "ac": 8.5,
+   "nh4": 0.0,
+   "pi": -0.4654,
+   "so4": -0.1051
+  }
+ }
+]

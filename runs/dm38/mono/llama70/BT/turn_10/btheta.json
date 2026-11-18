@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "ppa": -2.5,
+  "gln__L": -0.5,
+  "co2": 2.0,
+  "succ": 1.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Balanced carbon and nitrogen intake for growth",
+ "confidence": 0.8
+}

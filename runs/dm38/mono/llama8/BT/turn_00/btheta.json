@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "glc__D": -0.054,
+  "gln__L": -0.0059,
+  "h2": -0.0009
+ },
+ "growth_rate": 0.0009,
+ "rationale": "growth requirements",
+ "confidence": 0.8
+}

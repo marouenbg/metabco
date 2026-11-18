@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "nh4": -7.0,
+  "but": 2.0,
+  "ac": 2.0,
+  "h2": 2.0,
+  "co2": 6.0
+ },
+ "growth_rate": 0.25,
+ "confidence": 1.0,
+ "rationale": "Continuing with the same metabolic strategy as previous turns, which has been successful. The available nutrients support the chosen growth rate and product formation."
+}

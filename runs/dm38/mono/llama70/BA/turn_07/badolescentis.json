@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "for": -5.0,
+  "ac": -5.0,
+  "cys__L": -2.0,
+  "ser__L": -1.0,
+  "lac__L": 2.0,
+  "nh4": -1.5
+ },
+ "growth_rate": 0.3,
+ "rationale": "Balancing carbon and nitrogen budgets to support growth",
+ "confidence": 0.8
+}

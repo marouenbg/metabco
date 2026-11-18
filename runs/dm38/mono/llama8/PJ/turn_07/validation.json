@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 7,
+  "growth_claimed": 0.8,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: inost",
+   "c_imbalance: in=0 out=40 biomass=33.7"
+  ],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: h2",
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "C: growth 0.8 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Formate, L-arabinose, and L-lactate are abundant carbon sources that I can utilize. I'll take up hydrogen as a reducing equivalent. I'll prioritize making formate as a fermentation product. Based on t",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "for": 4.0,
+   "lac__L": 10.0,
+   "h2": 1.0,
+   "cys__L": 1.0,
+   "inost": 0.5
+  },
+  "fluxes_applied": {
+   "for": 0.0,
+   "lac__L": 0.0,
+   "h2": 1.0,
+   "cys__L": 0.0,
+   "inost": 0.0
+  }
+ }
+]

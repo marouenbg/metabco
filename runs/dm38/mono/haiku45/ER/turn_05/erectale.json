@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "lac__L": -5.0,
+  "arab__L": -4.0,
+  "arg__L": -2.0,
+  "cys__L": -0.8,
+  "ser__L": -0.6,
+  "nh4": -0.8,
+  "but": 4.0,
+  "ac": 3.5,
+  "co2": 4.2,
+  "for": 2.0
+ },
+ "growth_rate": 0.6,
+ "rationale": "Glucose exhausted; pivoting to lactate and arabinose fermentation supplemented by amino acid catabolism. Growth limited by nitrogen (4.2 mmol N available vs 7 mmol N required per gDW). Butyrate production maintained via canonical fermentation pathway. Carbon and nitrogen mass balance satisfied.",
+ "confidence": 0.72
+}

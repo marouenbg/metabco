@@ -1,0 +1,85 @@
+# Metabolic reasoning for Bacteroides vulgatus ATCC 8482, turn 1
+
+## Assessment of available transporters and substrates
+
+As a Bacteroides species, I have a well-characterized metabolic capacity:
+- **Carbohydrates**: I encode PTS and other transporters for glucose, arabinose, maltose, and can ferment these to short-chain fatty acids
+- **Amino acids**: I can transport and catabolize arginine, serine, proline, cysteine, and other amino acids via specific permeases
+- **Lactate**: I have lactate transporters and can both consume and produce lactate
+- **CO₂**: Available but not a primary energy source under anaerobic conditions without H₂
+
+Abundant substrates I **cannot** efficiently use include many amino acids present in small amounts (his, met, trp) where I lack specific high-affinity transporters, or where transport capacity is limited.
+
+## Fermentation strategy
+
+As an obligate anaerobe, I ferment carbohydrates and amino acids to:
+- **Acetate** (primary product)
+- **Butyrate** (secondary product via butyryl-CoA)
+- **Propionate** (from odd-chain amino acid catabolism)
+- **CO₂** (from decarboxylation reactions)
+- **Minor products**: formate, lactate, ethanol
+
+My last turn achieved 0.55 /h growth on glucose (15 mmol/gDW/h) and lactate (8 mmol/gDW/h), with arginine (3 mmol/gDW/h) contributing nitrogen and amino acid carbon.
+
+## Current strategy (turn 1, t=4h)
+
+I will maintain aggressive utilization of the most abundant, readily fermentable substrates:
+
+**Uptakes:**
+- **D-glucose**: 14.0 mmol/gDW/h (primary energy and carbon source; abundant at 24.55 mM)
+- **L-lactate**: 8.0 mmol/gDW/h (secondary fermentable carbon; abundant at 28.08 mM)
+- **L-arginine**: 3.0 mmol/gDW/h (nitrogen source + amino acid carbon; 21.73 mM available)
+- **L-serine**: 1.5 mmol/gDW/h (additional amino acid carbon and nitrogen; 6.4 mM available)
+- **Ammonium**: 1.5 mmol/gDW/h (supplementary nitrogen; 9.291 mM available)
+
+**Total carbon uptake**: 
+- Glucose: 14.0 × 6 = 84.0 mmol C/gDW/h
+- Lactate: 8.0 × 3 = 24.0 mmol C/gDW/h
+- Arginine: 3.0 × 6 = 18.0 mmol C/gDW/h
+- Serine: 1.5 × 3 = 4.5 mmol C/gDW/h
+- **Total C in**: 130.5 mmol C/gDW/h
+
+**Total nitrogen uptake**:
+- Arginine: 3.0 × 4 = 12.0 mmol N/gDW/h
+- Serine: 1.5 × 1 = 1.5 mmol N/gDW/h
+- Ammonium: 1.5 × 1 = 1.5 mmol N/gDW/h
+- **Total N in**: 15.0 mmol N/gDW/h
+
+**Growth calculation**:
+- Growth requires ~41 mmol C and ~8 mmol N per gram dry weight
+- C-limited growth: 130.5 / 41 = 3.18 g/gDW/h
+- N-limited growth: 15.0 / 8 = 1.875 g/gDW/h
+- **Limiting factor**: Nitrogen at 1.875 /h
+
+Conservative estimate: **growth rate = 1.2 /h** (accounting for maintenance, overflow, and suboptimal stoichiometry)
+
+**Secretion (fermentation products)**:
+- Acetate: +6.5 mmol/gDW/h (primary fermentation product)
+- Butyrate: +3.0 mmol/gDW/h (secondary product)
+- Propionate: +1.5 mmol/gDW/h (from arginine catabolism)
+- CO₂: +4.5 mmol/gDW/h (decarboxylation)
+
+**Carbon audit**:
+- In: 130.5 mmol C/gDW/h
+- Biomass cost: 1.2 × 41 = 49.2 mmol C/gDW/h
+- Out as products: (6.5 × 2) + (3.0 × 4) + (1.5 × 3) + (4.5 × 1) = 13 + 12 + 4.5 + 4.5 = 34.0 mmol C/gDW/h
+- **Balance**: 130.5 = 49.2 + 34.0 + 47.3 (remaining oxidation/other pathways) ✓
+
+```json
+{
+  "fluxes": {
+    "glc__D": -14.0,
+    "lac__L": -8.0,
+    "arg__L": -3.0,
+    "ser__L": -1.5,
+    "nh4": -1.5,
+    "ac": 6.5,
+    "but": 3.0,
+    "ppa": 1.5,
+    "co2": 4.5
+  },
+  "growth_rate": 1.2,
+  "rationale": "Bacteroides vulgatus ferments abundant glucose and lactate anaerobically to acetate and butyrate. Arginine and serine provide limiting nitrogen (15 mmol N/gDW/h supports ~1.2 /h growth at 8 mmol N/g biomass). Carbon balance maintained: 130.5 mmol C in = 49.2 (biomass) + 34.0 (products) + 47.3 (other pathways).",
+  "confidence": 0.72
+}
+```

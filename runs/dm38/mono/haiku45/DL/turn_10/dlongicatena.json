@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "gly": -0.5,
+  "thr__L": -0.3,
+  "asp__L": -0.2,
+  "glu__L": -0.2,
+  "for": 0.8,
+  "h2": 0.3,
+  "co2": 0.2
+ },
+ "growth_rate": 0.0,
+ "rationale": "Nitrogen severely limiting (0.77 mM NH\u2084\u207a remaining for 2.42 gDW culture). Cannot support growth. Entering stationary phase. Slow amino acid catabolism for maintenance ATP only.",
+ "confidence": 0.72
+}

@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": 2.5,
+  "nh4": 0.5,
+  "asp__L": 0.2,
+  "malt": 1,
+  "ac": 1.5,
+  "h2": 0.5
+ },
+ "growth_rate": 0.35,
+ "rationale": "Utilizing glucose, Ammonium, L-aspartate, and Maltose as energy sources and taking in nitrogen. Releasing acetate and hydrogen as byproducts of metabolism.",
+ "confidence": 0.8
+}

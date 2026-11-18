@@ -1,0 +1,48 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 8,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.1591,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=20.9 out=15.5 biomass=12.2"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.273 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0658 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.3 -> 0.159"
+  ],
+  "rationale": "Resuming growth after turn 7 stall by consuming abundant acetate, succinate, and amino acids (glutamine, asparagine) as N source. Fermentation to acetate, propionate, butyrate, and CO\u2082 maintains redox",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "ac": 2.0,
+   "succ": -1.5,
+   "ppa": 0.5,
+   "but": 0.5,
+   "gln__L": -1.5,
+   "asn__L": -1.0,
+   "gly": -0.8,
+   "ser__L": -0.6,
+   "co2": 8.0,
+   "h2": 0.1
+  },
+  "fluxes_applied": {
+   "ac": 2.0,
+   "succ": -1.5,
+   "ppa": 0.5,
+   "but": 0.5,
+   "gln__L": -1.5,
+   "asn__L": -1.0,
+   "gly": -0.8,
+   "ser__L": -0.6,
+   "co2": 8.0,
+   "h2": 0.1,
+   "pi": -0.2727,
+   "so4": -0.0658
+  }
+ }
+]

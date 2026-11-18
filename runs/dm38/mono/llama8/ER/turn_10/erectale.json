@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -6.17,
+  "ac": 8.3
+ },
+ "growth_rate": 0.25,
+ "rationale": "I will take up D-glucose (glc__D) and Ammonium (nh4) as my primary carbon and nitrogen sources. I will also release acetate (ac) as a fermentation product.",
+ "confidence": 0.8
+}

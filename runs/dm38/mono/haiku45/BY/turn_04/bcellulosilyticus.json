@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "lac__L": -5.0,
+  "arab__L": -3.0,
+  "arg__L": -1.5,
+  "nh4": -2.0,
+  "cys__L": -1.0,
+  "ac": 18.0,
+  "ppa": 8.0,
+  "but": 2.0,
+  "for": 1.0,
+  "co2": 12.0
+ },
+ "growth_rate": 0.29,
+ "rationale": "Glucose, lactate, and arabinose are my primary fermentable sugars; arginine and cysteine provide nitrogen and additional carbon. This mixture supports ~0.29 /h growth with 42 mmol C and 10 mmol N per gram biomass. Main fermentation products are acetate and propionate; CO2 released from decarboxylation. Substrate levels remain adequate but declining.",
+ "confidence": 0.72
+}

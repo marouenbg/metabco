@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arg__L": -5.0,
+  "pro__L": -3.0,
+  "lac__L": -4.0,
+  "nh4": -5.0,
+  "ac": 40.0,
+  "but": 25.0,
+  "ppa": 20.0,
+  "co2": 17.65,
+  "h2": 0.0
+ },
+ "growth_rate": 0.35,
+ "rationale": "Stickland fermentation (arginine + proline) coupled with glucose and lactate fermentation to balance redox and sustain growth. Amino acid pairing avoids redox overflow that caused turn 2 stall. Carbon and nitrogen budgets close with conservative growth rate.",
+ "confidence": 0.65
+}

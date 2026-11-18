@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 2,
+  "growth_claimed": 0.56,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=8 out=62 biomass=21.1"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 1.3 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.297 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 11.2 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.56 -> 0",
+   "C: secretions scaled by 0.135"
+  ],
+  "rationale": "I'll take up lactate and ammonia to support growth and biomass production. I'll also take up hydrogenphosphate and sulfate to meet the biomass cost. I'll release butyrate as a fermentation product.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": 10.0,
+   "nh4": 5.46,
+   "pi": 0.65,
+   "so4": 0.15,
+   "co2": -8.0,
+   "h2": -0.65,
+   "but": 8.0
+  },
+  "fluxes_applied": {
+   "lac__L": 1.3548,
+   "nh4": -5.7121,
+   "pi": -0.6532,
+   "so4": -0.1466,
+   "co2": -8.0,
+   "h2": -0.65,
+   "but": 1.0839
+  }
+ }
+]

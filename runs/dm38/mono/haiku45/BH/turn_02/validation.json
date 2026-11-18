@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 2,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=81 out=156 biomass=9.44"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.292 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0654 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.25 -> 0",
+   "C: secretions scaled by 0.543"
+  ],
+  "rationale": "Fermentation of abundant glucose and lactate under strict anaerobic conditions, producing acetate, formate, CO\u2082, and H\u2082. Mixed-acid fermentation is characteristic of this species. Nitrogen from ammoni",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "glc__D": -12.0,
+   "lac__L": 10.5,
+   "arg__L": -1.5,
+   "nh4": -2.5,
+   "ac": 40.0,
+   "for": 20.0,
+   "co2": 25.0,
+   "h2": 0.8
+  },
+  "fluxes_applied": {
+   "glc__D": -12.0,
+   "lac__L": 5.7062,
+   "arg__L": -1.5,
+   "nh4": -2.5,
+   "ac": 21.738,
+   "for": 10.869,
+   "co2": 13.5863,
+   "h2": 0.8,
+   "pi": -0.2916,
+   "so4": -0.0654
+  }
+ }
+]

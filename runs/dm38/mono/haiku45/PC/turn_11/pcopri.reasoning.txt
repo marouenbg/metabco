@@ -1,0 +1,107 @@
+# Metabolic Decision for Prevotella copri CB7 DSM 18205 — Turn 11
+
+## Analysis of available resources and metabolic capacity
+
+**Time remaining:** 48 h - 44 h = 4 h left in batch culture. This is the final phase.
+
+**Carbon sources assessment:**
+- **Acetate (63.12 mM):** I can transport and ferment this via acetyl-CoA pathways. This is a primary substrate.
+- **Formate (59.23 mM):** I can use this; it enters central metabolism via formate-tetrahydrofolate ligase.
+- **Propionate (31.86 mM):** I can ferment this through propionyl-CoA pathways.
+- **Lactate (6.204 mM):** I can oxidize this anaerobically via lactate dehydrogenase.
+- **Amino acids (phe, tyr, pro, his, met, trp, leu, val, asp, thr, cys, ile, glu):** I possess peptide and amino acid transporters and can catabolize these for both carbon and nitrogen.
+- **myo-inositol (6.272 mM):** Limited transport capacity; not a priority given abundant alternatives.
+- **CO₂ (117.2 mM):** I'm not a strict autotroph; this is primarily a waste product sink.
+
+**Nitrogen sources:**
+- **Nitrate (0.1093 mM):** Very limited; I have nitrate reductase but this is scarce.
+- **Amino acids:** Multiple amino acids present (phe, tyr, pro, his, met, trp, leu, val, asp, thr, cys, ile, glu) provide both carbon and nitrogen. These are my primary nitrogen source given the low nitrate.
+
+**Recent metabolic pattern (turns 7-10):**
+- Turns 7-9: Zero growth; I was accumulating fermentation products (acetate, propionate, formate). This suggests I was recycling fermentation intermediates or in a transition phase.
+- Turn 10: Growth resumed at 0.130 /h when I took up acetate at -10 mmol/gDW/h and consumed asparagine (-1.50). This signals I've transitioned to active growth.
+
+**Fermentation strategy:**
+As a Prevotella species (obligate anaerobe), I ferment mixed substrates to acetate, propionate, formate, and succinate. Given I'm at high cell density (4.108 gDW/L) in a sealed system with limited time, I should:
+1. Maximize carbon uptake from the most abundant sources (acetate, formate, propionate).
+2. Use amino acids strategically for nitrogen and additional carbon.
+3. Continue growth at a sustainable rate given the small remaining time window.
+
+## Growth rate calculation
+
+**Biomass cost:** ~45 mmol C/g DW and ~10 mmol N/g DW produced.
+
+**Proposed uptake:**
+- Acetate: -12 mmol/gDW/h (abundant, primary fermentable substrate)
+- Formate: -5 mmol/gDW/h (secondary substrate)
+- Propionate: -4 mmol/gDW/h (available, fermentable)
+- L-glutamate: -0.5 mmol/gDW/h (nitrogen + carbon)
+- L-aspartate: -0.3 mmol/gDW/h (nitrogen + carbon)
+- L-leucine: -0.2 mmol/gDW/h (amino acid)
+
+**Carbon balance:**
+- Uptake: 12 (acetate) + 5 (formate) + 4 (propionate) + 0.5×5 (Glu, ~5C) + 0.3×4 (Asp, ~4C) + 0.2×6 (Leu, ~6C) 
+  = 12 + 5 + 4 + 2.5 + 1.2 + 1.2 = **25.9 mmol C/gDW/h in**
+
+**Growth:** At 0.18 /h, I need 45 × 0.18 = **8.1 mmol C/gDW/h** for biomass.
+
+**Fermentation products (anaerobic):** Remaining carbon (25.9 - 8.1 = 17.8 mmol/gDW/h) is released as acetate, propionate, formate, succinate, and CO₂. I'll assume mixed acid fermentation with CO₂ and organic acids as primary products.
+
+**Nitrogen balance:**
+- Uptake: 0.5 (Glu) + 0.3 (Asp) + 0.2 (Leu) = **1.0 mmol N/gDW/h**
+- Growth need: 10 × 0.18 = **1.8 mmol N/gDW/h**
+
+This is insufficient. I need to increase amino acid uptake or reduce growth rate.
+
+**Revised uptake:**
+- Acetate: -10 mmol/gDW/h
+- Formate: -4 mmol/gDW/h
+- Propionate: -3 mmol/gDW/h
+- L-glutamate: -0.8 mmol/gDW/h
+- L-aspartate: -0.5 mmol/gDW/h
+- L-leucine: -0.3 mmol/gDW/h
+- L-threonine: -0.2 mmol/gDW/h
+
+**Carbon in:** 10 + 4 + 3 + 4 + 3.2 + 1.8 + 1.4 = **27.4 mmol C/gDW/h**
+**Growth rate:** 0.16 /h → 45 × 0.16 = 7.2 mmol C out
+**Carbon for fermentation:** 27.4 - 7.2 = 20.2 mmol C/gDW/h (released as ac, ppa, for, succ, co2)
+
+**Nitrogen in:** 0.8 + 0.5 + 0.3 + 0.2 = **1.8 mmol N/gDW/h** ✓
+**Nitrogen for growth:** 10 × 0.16 = 1.6 mmol N/gDW/h ✓ (slight excess tolerable)
+
+This is balanced. Growth rate: **0.16 /h**
+
+## Fermentation product allocation
+
+I release the 20.2 mmol C/gDW/h as:
+- Acetate: +6.0 mmol/gDW/h
+- Propionate: +5.5 mmol/gDW/h
+- Formate: +4.0 mmol/gDW/h
+- Succinate: +3.0 mmol/gDW/h
+- CO₂: +1.7 mmol/gDW/h
+
+**Total C out:** 6 + 5.5 + 4 + 3 + 1.7 = 20.2 ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "ac": -10.0,
+    "for": -4.0,
+    "ppa": -3.0,
+    "glu__L": -0.8,
+    "asp__L": -0.5,
+    "leu__L": -0.3,
+    "thr__L": -0.2,
+    "ac": 6.0,
+    "ppa": 5.5,
+    "for": 4.0,
+    "succ": 3.0,
+    "co2": 1.7
+  },
+  "growth_rate": 0.16,
+  "rationale": "At turn 11 with 4 h remaining, I'm in stationary-phase growth. I maximize uptake of abundant fermentable substrates (acetate, formate, propionate) while drawing nitrogen from available amino acids (glutamate, aspartate, leucine, threonine). This supports moderate growth (0.16 /h) while maintaining carbon and nitrogen balance. Fermentation products (acetate, propionate, formate, succinate, CO₂) are released as typical Prevotella mixed-acid fermentation end products. The low growth rate reflects the high cell density and limited remaining time.",
+  "confidence": 0.68
+}
+```

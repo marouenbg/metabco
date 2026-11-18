@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 4,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.626 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing abundant D-glucose and L-lactate for carbon, and ammonium for nitrogen to support growth and production of acetate, propionate, and butyrate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "nh4": -5.0,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "nh4": -5.0,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 2.0,
+   "pi": -0.6263,
+   "so4": -0.1309
+  }
+ }
+]

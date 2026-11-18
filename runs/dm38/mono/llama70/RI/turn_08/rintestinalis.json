@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "but": 10.0,
+  "inost": -5.0,
+  "pro__L": -2.0,
+  "ac": 5.0,
+  "for": 5.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Carbon and nitrogen uptake support growth and fermentation product production",
+ "confidence": 0.8
+}

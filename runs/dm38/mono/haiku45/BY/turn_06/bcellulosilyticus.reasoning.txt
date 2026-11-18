@@ -1,0 +1,96 @@
+# Metabolic reasoning for Bacteroides cellulosilyticus at turn 6 (t=24h)
+
+## Substrate assessment
+
+I am a specialist cellulose degrader, but glucose has been depleted (it was my primary carbon source in earlier turns). Looking at what remains:
+
+**Carbon sources I can use:**
+- **Lactate** (lac__L): 4.356 mM — I have lactate dehydrogenase and can ferment this anaerobically
+- **Acetate** (ac): 56.29 mM — I can activate and use this via acetyl-CoA pathways
+- **Propionate** (ppa): 22 mM — I can metabolize via propionyl-CoA
+- **Butyrate** (but): 7.771 mM — I can β-oxidize this
+- **Arabinose** (arab__L): 16.89 mM — I have pentose transporters and can ferment this
+- **Amino acids**: arg, cys, ser, pro, ala, gly, phe, leu, tyr, val, gln, asn, lys, thr, ile, his, met, trp — I can deaminate and ferment these
+
+**Carbon sources I cannot efficiently use:**
+- Maltose, myo-inositol — I lack specific transporters for these
+- CO₂ — I'm heterotrophic, not autotrophic
+
+## Nitrogen sources
+
+Ammonium is nearly depleted (1.521 mM). I have abundant amino acids that serve dual purposes: nitrogen source and carbon source. L-arginine is particularly valuable as it provides both.
+
+## Growth status and strategy
+
+At 0.5909 gDW/L, I'm in mid-exponential phase. My recent growth rates have been 0.021–0.270 /h, declining as glucose became limiting. Now I must pivot to mixed fermentation of lactate, amino acids, and short-chain fatty acids.
+
+**Fermentation strategy:**
+- Lactate fermentation: lactate → pyruvate → acetate + formate (or butyrate)
+- Amino acid catabolism: deamination → organic acids → fermentation products
+- Acetate activation and reoxidation to balance redox
+- Propionate and butyrate as secondary carbon sources
+
+## Flux calculation
+
+**Uptake plan (for 4 h interval):**
+- Lactate: 6.0 mmol/gDW/h (primary fermentable carbon; 4.356 mM available)
+- L-arginine: 2.5 mmol/gDW/h (N source + C source; 15.04 mM available)
+- L-alanine: 2.0 mmol/gDW/h (C + N)
+- L-serine: 1.5 mmol/gDW/h (C + N)
+- Acetate: 3.0 mmol/gDW/h (additional C; abundant)
+- Propionate: 1.5 mmol/gDW/h (secondary C)
+
+**Carbon audit:**
+- Lactate (C₃): 6.0 × 3 = 18.0 mmol C/gDW/h
+- Arginine (C₆N₄O₂): 2.5 × 6 = 15.0 mmol C/gDW/h
+- Alanine (C₃N): 2.0 × 3 = 6.0 mmol C/gDW/h
+- Serine (C₃NO₂): 1.5 × 3 = 4.5 mmol C/gDW/h
+- Acetate (C₂): 3.0 × 2 = 6.0 mmol C/gDW/h
+- Propionate (C₃): 1.5 × 3 = 4.5 mmol C/gDW/h
+- **Total C in: 54.0 mmol C/gDW/h**
+
+**Nitrogen audit:**
+- Arginine: 2.5 × 4 = 10.0 mmol N/gDW/h
+- Alanine: 2.0 × 1 = 2.0 mmol N/gDW/h
+- Serine: 1.5 × 1 = 1.5 mmol N/gDW/h
+- **Total N in: 13.5 mmol N/gDW/h**
+
+**Growth rate calculation:**
+- C requirement: 42 mmol C/gDW of biomass
+- N requirement: 10 mmol N/gDW of biomass
+- C-limited: 54.0 / 42 = 1.29 /h
+- N-limited: 13.5 / 10 = 1.35 /h
+- **Limiting: C → growth = 1.29 /h** (but this is unrealistically high for batch culture at this density)
+
+Adjusting conservatively: **growth rate = 0.18 /h** (accounting for maintenance, overflow metabolism, and realistic kinetics in stationary phase approach)
+
+**Carbon balance:**
+- In: 54.0 mmol C/gDW/h
+- Biomass: 0.18 × 42 = 7.56 mmol C/gDW/h
+- Fermentation products (acetate, formate, butyrate): 54.0 − 7.56 = 46.44 mmol C/gDW/h
+
+**Secretion (fermentation products):**
+- Acetate: +12.0 mmol/gDW/h
+- Formate: +8.0 mmol/gDW/h
+- Butyrate: +3.0 mmol/gDW/h
+- CO₂: +23.44 mmol/gDW/h (from decarboxylation)
+
+```json
+{
+  "fluxes": {
+    "lac__L": -6.0,
+    "arg__L": -2.5,
+    "ala__L": -2.0,
+    "ser__L": -1.5,
+    "ac": -3.0,
+    "ppa": -1.5,
+    "ac": 12.0,
+    "for": 8.0,
+    "but": 3.0,
+    "co2": 23.44
+  },
+  "growth_rate": 0.18,
+  "rationale": "Glucose depleted; pivoting to mixed fermentation of lactate, amino acids (arg, ala, ser), and short-chain fatty acids. Lactate and amino acids provide primary fermentable carbon and nitrogen. Fermentation yields acetate, formate, and butyrate as overflow products. Growth limited by carbon availability in batch culture approaching stationary phase.",
+  "confidence": 0.62
+}
+```

@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 5,
+  "growth_claimed": 1.48,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: glc__D",
+   "c_imbalance: in=0 out=100 biomass=62.4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 1.85 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.387 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 35.3 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 1.48 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "B. ovatus takes up glucose and arginine to support growth, and secretes acetate and hydrogen to maintain the redox potential and pH.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": 10.0,
+   "arg__L": 5.0,
+   "ac": 5.0,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "glc__D": 0.0,
+   "arg__L": 0.0,
+   "ac": 0.0,
+   "h2": 0.5,
+   "pi": -1.8539,
+   "so4": -0.3874,
+   "nh4": -35.3253
+  }
+ }
+]

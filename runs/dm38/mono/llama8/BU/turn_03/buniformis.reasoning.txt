@@ -1,0 +1,29 @@
+As Bacteroides uniformis ATCC 8492, I sense my immediate chemical surroundings and commit to a metabolic strategy. I am currently in a sealed batch culture with a pH of 7.00, a temperature of 37 C, and an anaerobic environment.
+
+I notice that the available nutrients are diverse, with various carbon and nitrogen sources present. I can transport and utilize the following carbon sources: lactate (lac__L), glucose (glc__D), and butyrate (but). However, I can only use these sources because they are present in the environment, and I have the necessary transporters to take them up.
+
+I am aware that this species is known to produce butyrate, ethanol, formate, and acetate as fermentation products. I can secrete these products into the environment.
+
+To determine the growth rate supported by my chosen uptake, I calculate the carbon and nitrogen fluxes. I will take up 10 mmol/L of lactate, 5 mmol/L of glucose, and 10 mmol/L of butyrate. This translates to a carbon uptake of 25 mmol/gDW/h (10 lac__L + 5 glc__D + 10 but) and a nitrogen uptake of 0.5 mmol/gDW/h (from lac__L and glc__D). Considering the growth cost, I will require an additional 17 mmol/gDW/h of carbon (42 mmol/gDW/h growth cost - 25 mmol/gDW/h carbon uptake) and 4 mmol/gDW/h of nitrogen (10 mmol/gDW/h growth cost - 0.5 mmol/gDW/h nitrogen uptake). This gives me a growth rate of 0.5/h (17 carbon flux + 4 nitrogen flux).
+
+To audit the mass, I will take in 25 mmol/gDW/h of carbon (from lactate, glucose, and butyrate) and 0.5 mmol/gDW/h of nitrogen (from lactate and glucose). I will release 20 mmol/gDW/h of butyrate, 10 mmol/gDW/h of formate, and 5 mmol/gDW/h of ethanol.
+
+I choose to release the following metabolites: butyrate (but), formate (for), ethanol (etoh), carbon dioxide (co2), hydrogen (h2), and acetate (ac). I am confident that this strategy will support my growth, considering the available nutrients and my species' known metabolic capabilities.
+
+Here is the JSON object with my decision:
+{
+"fluxes": {
+"lac__L": -10,
+"glc__D": -5,
+"but": -10,
+"but": 20,
+"for": 10,
+"etoh": 5,
+"co2": 0.5,
+"h2": 0,
+"ac": 0
+},
+"growth_rate": 0.5,
+"rationale": "Bacteroides uniformis ATCC 8492 growth strategy based on available nutrients and known metabolic capabilities.",
+"confidence": 0.8
+}

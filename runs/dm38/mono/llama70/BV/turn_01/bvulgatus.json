@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -2.0,
+  "ac": 5.0,
+  "but": 3.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "Utilizing glucose as primary carbon source with ammonium as nitrogen source, producing acetate and butyrate as fermentation products",
+ "confidence": 0.8
+}

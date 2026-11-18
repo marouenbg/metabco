@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "lac__L": -0.69,
+  "nh4": 0.12,
+  "for": 0.07
+ },
+ "growth_rate": 0.5,
+ "rationale": "Bifidobacterium adolescentis ATCC 15703 will take up L-lactate (lac__L) and ammonium (nh4) as primary carbon and nitrogen sources, respectively. It will release lactate (lac__L) and formate (for) as primary fermentation products. A growth rate of 0.5/h is supported.",
+ "confidence": 0.9
+}

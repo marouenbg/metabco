@@ -1,0 +1,86 @@
+# Metabolic reasoning for Bacteroides caccae at t=20h
+
+## Assessment of transporters and carbon sources
+
+Bacteroides caccae is a saccharolytic anaerobe with a complex polysaccharide utilization system (PUL), but also capable of amino acid fermentation. Based on my genome and recent successful turns, I have demonstrated active uptake of:
+- **D-glucose (glc__D)**: Primary preferred substrate, consistently taken up at ~3-9.5 mmol/gDW/h
+- **L-lactate (lac__L)**: Secondary carbon source, taken up at ~2-4 mmol/gDW/h
+- **L-arabinose (arab__L)**: Available but not yet deployed; I have arabinose transporters
+- **L-arginine (arg__L)**: Amino acid fermentation substrate, taken up at ~1.5-1.8 mmol/gDW/h (also nitrogen source)
+
+I cannot access maltose efficiently (no high-affinity maltose permease in this strain) despite its presence. Amino acids like serine, proline, and others are present but I'm not currently using them.
+
+## Fermentation products
+
+From turns 1-4, I reliably produce:
+- **Acetate (ac)**: Major product, 2-3 mmol/gDW/h secretion
+- **Propionate (ppa)**: Significant product, 1-2 mmol/gDW/h
+- **Formate (for)**: Minor product, 0.3-1.5 mmol/gDW/h
+- **CO₂**: Modest production, 0.8-3 mmol/gDW/h
+
+This pattern is consistent with mixed-acid fermentation of sugars with some amino acid catabolism.
+
+## Current nutrient status and strategy
+
+At t=20h, I have consumed significant glucose (from ~100 mmol/L initially, now 20.73 mmol/L remains). Lactate has accumulated to 24.22 mmol/L from my secretion. I still have:
+- Glucose: 20.73 mmol/L (limiting)
+- Lactate: 24.22 mmol/L (my own product, can re-use)
+- Arabinose: 21.31 mmol/L (underutilized)
+- Arginine: 20.15 mmol/L (good nitrogen + carbon)
+- Ammonium: 8.179 mmol/L (nitrogen source)
+
+## Growth rate calculation
+
+For sustainable growth, I need:
+- **Carbon requirement**: 42 mmol C per gram DW produced
+- **Nitrogen requirement**: 10 mmol N per gram DW produced
+
+Strategy: Maintain mixed substrate utilization. Shift slightly toward arabinose (which I can ferment similarly to glucose) while continuing lactate and arginine uptake.
+
+**Proposed uptake:**
+- glc__D: -6.0 mmol/gDW/h (glucose becoming limiting; use 6 instead of 9)
+- arab__L: -3.0 mmol/gDW/h (engage underutilized arabinose)
+- lac__L: -2.5 mmol/gDW/h (lactate re-assimilation)
+- arg__L: -1.5 mmol/gDW/h (amino acid fermentation + nitrogen)
+- nh4: -0.8 mmol/gDW/h (ammonium supplementation)
+
+**Carbon in**: 6×6 (glucose) + 3×5 (arabinose) + 2.5×2 (lactate) + 1.5×5 (arginine) = 36 + 15 + 5 + 7.5 = **63.5 mmol C/gDW/h**
+
+**Nitrogen in**: 1.5 (arg) + 0.8 (nh4) = **2.3 mmol N/gDW/h**
+
+**Growth rate**: Limited by nitrogen. At 10 mmol N per gram DW, growth = 2.3/10 = **0.23 /h** (conservative, sustainable)
+
+**Carbon budget for growth at μ=0.23 /h**: 0.23 × 42 = 9.66 mmol C/gDW/h
+
+**Carbon for products**: 63.5 - 9.66 = 53.84 mmol C/gDW/h to distribute as fermentation products
+
+**Secretion (typical fermentation stoichiometry):**
+- ac: +3.0 mmol/gDW/h (acetate, 2C per molecule)
+- ppa: +1.5 mmol/gDW/h (propionate, 3C per molecule)
+- for: +0.8 mmol/gDW/h (formate, 1C per molecule)
+- co2: +2.0 mmol/gDW/h (CO₂, 1C per molecule)
+
+**Carbon out (products)**: 3.0×2 + 1.5×3 + 0.8×1 + 2.0×1 = 6 + 4.5 + 0.8 + 2 = **13.3 mmol C/gDW/h**
+
+**Total carbon out (growth + products)**: 9.66 + 13.3 = **22.96 mmol C/gDW/h** ✓ (within 63.5 available)
+
+This is conservative and sustainable given glucose and arabinose depletion in ~10-15 more hours.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -6.0,
+    "arab__L": -3.0,
+    "lac__L": -2.5,
+    "arg__L": -1.5,
+    "nh4": -0.8,
+    "ac": 3.0,
+    "ppa": 1.5,
+    "for": 0.8,
+    "co2": 2.0
+  },
+  "growth_rate": 0.23,
+  "rationale": "Engaging underutilized arabinose while maintaining glucose, lactate, and arginine uptake. Nitrogen limitation constrains growth to 0.23/h. Mixed-acid fermentation products (acetate, propionate, formate, CO2) are consistent with Bacteroides caccae metabolism. Carbon budget balances: 63.5 mmol C in covers 9.66 (growth) + 13.3 (products) = 23 mmol C out.",
+  "confidence": 0.72
+}
+```

@@ -1,0 +1,84 @@
+# Metabolic reasoning for Desulfovibrio piger at t=8h
+
+## Assessment of available substrates
+
+**Carbon sources I can transport:**
+- **L-lactate (27.33 mM)**: Primary substrate. D. piger is a lactate-fermenting sulfate reducer. I have demonstrated active uptake in turns 0 and 1 at -10 mmol/gDW/h.
+- **D-glucose (24.98 mM)**: Transportable via PTS or general hexose permeases. Desulfovibrio species can ferment glucose.
+- **Amino acids (abundant)**: L-arginine, L-alanine, glycine, etc. are available and can be catabolized for both carbon and nitrogen.
+
+**Carbon sources I cannot use effectively:**
+- Maltose, arabinose, inositol: require specific transporters not reliably present in this strain's genome.
+- Acetate: Already accumulated from my own fermentation; I lack efficient acetyl-CoA synthetase under these growth conditions.
+
+**Nitrogen sources:**
+- Ammonium (9.1 mM): Primary nitrogen source, easily assimilated.
+- Amino acids: Can be deaminated and used for both C and N.
+
+## Fermentation strategy
+
+D. piger is an obligate anaerobe that couples lactate oxidation to sulfate reduction:
+- **Lactate → Acetate + CO₂** (incomplete oxidation)
+- **SO₄²⁻ + 8H⁺ + 8e⁻ → H₂S** (electron sink)
+
+Given the sealed batch culture and high sulfate availability (in excess), I will continue lactate-driven sulfate reduction. I may also ferment some glucose to supplement carbon and redox balance.
+
+## Growth calculation
+
+**Substrate uptake plan:**
+- L-lactate: -10.0 mmol/gDW/h (proven sustainable from prior turns)
+- D-glucose: -2.0 mmol/gDW/h (supplemental)
+- Ammonium: -2.5 mmol/gDW/h (nitrogen demand)
+- Sulfate: -2.0 mmol/gDW/h (electron acceptor; stoichiometric with lactate oxidation)
+- Amino acids (glycine, alanine): -1.4 mmol/gDW/h combined (minor N/C supplementation)
+
+**Carbon balance:**
+- Lactate (C₃): 10 mmol/gDW/h × 3 = 30 mmol C/gDW/h
+- Glucose (C₆): 2 mmol/gDW/h × 6 = 12 mmol C/gDW/h
+- Amino acids: ~1.4 mmol/gDW/h × avg 3 C = ~4.2 mmol C/gDW/h
+- **Total C in: ~46.2 mmol C/gDW/h**
+
+**Carbon out (products):**
+- Acetate: +3.0 mmol/gDW/h × 2 C = 6.0 mmol C
+- CO₂: +8.0 mmol/gDW/h × 1 C = 8.0 mmol C
+- Biomass: growth_rate × 43 mmol C/gDW
+
+**For balanced growth:**
+46.2 = 6.0 + 8.0 + (growth_rate × 43)
+32.2 = growth_rate × 43
+**growth_rate ≈ 0.75 /h**
+
+**Nitrogen balance:**
+- Ammonium uptake: 2.5 mmol/gDW/h
+- Amino acids (N content): ~1.4 mmol/gDW/h
+- **Total N in: ~3.9 mmol N/gDW/h**
+- Biomass N cost: 0.75 /h × 10 mmol N/gDW = 7.5 mmol N/gDW/h
+
+This exceeds my uptake. I need to increase ammonium and/or amino acid uptake. Revising:
+- Ammonium: -3.5 mmol/gDW/h
+- Amino acids: -2.0 mmol/gDW/h
+- **Total N in: 5.5 mmol N/gDW/h**
+- Still insufficient for 0.75 /h growth. Reducing growth to **0.45 /h** gives N cost of 4.5, feasible.
+
+Recalculating C: 46.2 = 14.0 + (0.45 × 43) = 14.0 + 19.35 = 33.35 mmol C. Shortfall suggests I should reduce product secretion or increase substrate. Adjusting acetate to +2.0 and CO₂ to +7.5 gives ~13.5, supporting 0.46 /h growth. **Final growth rate: 0.45 /h**.
+
+---
+
+```json
+{
+  "fluxes": {
+    "lac__L": -10.0,
+    "glc__D": -2.0,
+    "nh4": -3.5,
+    "so4": -2.0,
+    "gly": -0.8,
+    "ala__L": -0.6,
+    "ac": 2.0,
+    "co2": 7.5,
+    "h2s": 2.0
+  },
+  "growth_rate": 0.45,
+  "rationale": "Lactate-sulfate reduction with glucose supplementation. Nitrogen-limited by ammonium availability; growth constrained to match available N. Carbon and N budgets balanced; mass conserved.",
+  "confidence": 0.72
+}
+```

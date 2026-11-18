@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 6,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.227 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0549 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Using L-arabinose and L-arginine for carbon and nitrogen, producing acetate, propionate, butyrate, and formate. Adjusting growth rate to maintain balance.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "arab__L": -10.0,
+   "arg__L": -2.0,
+   "nh4": 2.0,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 5.0,
+   "for": 2.0
+  },
+  "fluxes_applied": {
+   "arab__L": -10.0,
+   "arg__L": -2.0,
+   "nh4": 2.0,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 5.0,
+   "for": 2.0,
+   "pi": -0.2273,
+   "so4": -0.0549
+  }
+ }
+]

@@ -1,0 +1,96 @@
+# Metabolic reasoning for Dorea formicigenerans at turn 2
+
+## Available transporters and carbon sources
+
+*Dorea formicigenerans* is a Gram-positive, obligately anaerobic bacterium from the Lachnospiraceae family. As a butyrate producer, it ferments carbohydrates and amino acids. Based on my genomic capabilities:
+
+**Carbohydrates I can transport:**
+- D-glucose (glc__D): 21.15 mM available — excellent substrate
+- L-arabinose (arab__L): 21.31 mM available — fermentable pentose
+- Maltose (malt): 4.382 mM available — disaccharide
+- L-lactate (lac__L): 26.83 mM available — lactate is a known substrate
+
+**Amino acids I can transport and ferment:**
+- L-arginine (arg__L): 21.09 mM — high concentration, fermentable
+- L-cysteine (cys__L): 8.383 mM — sulfur source and energy source
+- L-serine (ser__L), L-alanine (ala__L), L-proline (pro__L), glycine (gly) — all fermentable
+
+**Nitrogen sources:**
+- Ammonium (nh4): 8.424 mM — primary inorganic nitrogen
+- Amino acids provide both carbon and nitrogen
+
+**What I cannot use effectively:**
+- Vitamins, cofactors, nucleobases — these are already present in sufficient amounts for biosynthesis
+- Minerals — in excess
+
+## Fermentation strategy
+
+*Dorea formicigenerans* is a classic butyrate and acetate producer via the acetyl-CoA pathway. Under anaerobic conditions, I ferment glucose and other substrates to:
+- **Butyrate** (primary product)
+- **Acetate** (secondary product)
+- **CO₂** and **H₂** (minor products)
+- **Formate** (minor product)
+
+My recent behavior shows this pattern: consuming glucose and lactate, producing butyrate, acetate, CO₂, and formate.
+
+## Growth rate calculation
+
+At turn 1, I achieved 0.640 /h with:
+- Glucose uptake: -8.00 mmol/gDW/h
+- Lactate uptake: -3.00 mmol/gDW/h
+- Arginine uptake: -1.50 mmol/gDW/h
+- Ammonium uptake: -2.00 mmol/gDW/h
+
+Total carbon consumed: 8 (glucose, 6C) + 3 (lactate, 3C) + 1.5 (arginine, 6C) = 8 + 3 + 9 = 20 mmol C/gDW/h
+
+With growth at 0.640 /h:
+- Carbon cost for growth: 33 × 0.640 = 21.12 mmol C/gDW/h
+- Nitrogen cost for growth: 7 × 0.640 = 4.48 mmol N/gDW/h
+
+This is unsustainable as written — I'm claiming more carbon output than input. Let me recalculate based on available nutrients and realistic stoichiometry.
+
+For sustainable growth, if I consume:
+- Glucose: -10 mmol/gDW/h (6C each = 60 mmol C)
+- Lactate: -4 mmol/gDW/h (3C each = 12 mmol C)
+- Arginine: -2 mmol/gDW/h (6C each = 12 mmol C)
+- Ammonium: -2 mmol/gDW/h (0C, 1N each = 2 mmol N)
+
+**Total carbon in:** 60 + 12 + 12 = 84 mmol C/gDW/h
+**Total nitrogen in:** 2 (from ammonium) + 2 (from arginine) = 4 mmol N/gDW/h
+
+**Growth rate:** Limited by nitrogen: 4 / 7 ≈ 0.57 /h
+**Carbon for growth:** 33 × 0.57 = 18.81 mmol C/gDW/h
+**Remaining carbon for fermentation:** 84 - 18.81 = 65.19 mmol C/gDW/h
+
+**Fermentation products** (maintaining redox balance and mass conservation):
+- Butyrate production: ~25 mmol/gDW/h (4C each = 100 mmol C)
+- Acetate production: ~8 mmol/gDW/h (2C each = 16 mmol C)
+- CO₂ production: ~5 mmol/gDW/h (1C each = 5 mmol C)
+- Formate production: ~2 mmol/gDW/h (1C each = 2 mmol C)
+
+**Total carbon out:** 100 + 16 + 5 + 2 = 123 mmol C — this exceeds input. Reduce fermentation products proportionally.
+
+Scaling down: if I produce butyrate at 12 mmol/gDW/h, acetate at 4 mmol/gDW/h, CO₂ at 3 mmol/gDW/h, formate at 1 mmol/gDW/h:
+- Carbon out: 48 + 8 + 3 + 1 = 60 mmol C/gDW/h
+- Plus growth: 18.81 mmol C/gDW/h
+- **Total: 78.81 mmol C/gDW/h** ✓ Feasible from 84 mmol C/gDW/h input
+
+**Growth rate: 0.57 /h**
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "lac__L": -4.0,
+    "arg__L": -2.0,
+    "nh4": -2.0,
+    "but": 12.0,
+    "ac": 4.0,
+    "co2": 3.0,
+    "for": 1.0
+  },
+  "growth_rate": 0.57,
+  "rationale": "Dorea ferments glucose and lactate as primary carbon sources, with arginine as supplementary substrate. Nitrogen is limiting (4 mmol/gDW/h available supports ~0.57 /h growth). Fermentation produces butyrate, acetate, CO₂, and formate. Carbon balance: 84 mmol C in (60 from glucose + 12 from lactate + 12 from arginine); 78.81 mmol C out (60 fermentation + 18.81 growth). Nitrogen balance: 4 mmol N in supports 4.48 mmol N needed for growth at 0.57 /h.",
+  "confidence": 0.72
+}
+```

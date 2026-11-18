@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "lac__L": -6.0,
+  "glc__D": -4.0,
+  "arg__L": -4.0,
+  "cys__L": -2.0,
+  "nh4": -2.0,
+  "ac": 10.0,
+  "but": 8.0,
+  "co2": 20.0,
+  "h2": 2.0,
+  "ala__L": 2.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "Fermenting lactate, glucose, and arginine (Stickland) under anaerobic conditions. Arginine provides both C and N. Products are acetate, butyrate, CO\u2082, and H\u2082 typical of mixed-acid fermentation. Growth rate supports biomass synthesis (~15 mmol C) with remaining carbon flowing to fermentation products. Nitrogen balance maintained via arginine, cysteine, and ammonium uptake.",
+ "confidence": 0.72
+}

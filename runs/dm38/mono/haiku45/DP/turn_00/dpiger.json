@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -2.0,
+  "gly": -0.8,
+  "ala__L": -0.6,
+  "ser__L": -0.5,
+  "so4": -1.5,
+  "co2": 8.0,
+  "h2s": 2.0,
+  "ac": 3.0
+ },
+ "growth_rate": 0.35,
+ "rationale": "D. piger oxidizes lactate coupled to sulfate reduction as primary metabolism. Lactate (10 mmol/gDW/h) and amino acid uptake (2.3 mmol N/gDW/h) support growth limited by nitrogen availability at 0.35 /h. Carbon balance: 30 mmol C input minus 15 mmol C biomass leaves 15 mmol C for fermentation products (CO\u2082, H\u2082S, acetate). Sulfate reduction is energetically favorable in anaerobic conditions.",
+ "confidence": 0.72
+}

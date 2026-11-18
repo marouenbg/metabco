@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "ac": 5.0,
+  "h2": 2.0,
+  "for": 1.0,
+  "cys__L": -2.0,
+  "h2s": 1.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.093,
+ "confidence": 0.9,
+ "rationale": "Utilizing L-lactate and ammonium as primary carbon and nitrogen sources, maintaining consistent production of acetate, hydrogen, formate, and hydrogen sulfide. Adjusted growth rate to balance carbon and nitrogen uptake."
+}

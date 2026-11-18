@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 2,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4",
+   "n_imbalance: in=0 out=0 biomass=2.49"
+  ],
+  "warnings": [],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "P: credited 0.213 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0658 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.3 -> 0"
+  ],
+  "rationale": "Balanced carbon and nitrogen uptake to support sustainable growth and fermentation product production.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "nh4": -8.0,
+   "lac__L": 3.0,
+   "ac": 3.0,
+   "for": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "nh4": 0.0,
+   "lac__L": 3.0,
+   "ac": 3.0,
+   "for": 2.0,
+   "pi": -0.2127,
+   "so4": -0.0658
+  }
+ }
+]

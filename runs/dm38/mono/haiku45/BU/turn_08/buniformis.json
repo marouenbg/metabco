@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -6.0,
+  "arg__L": -2.5,
+  "nh4": -2.0,
+  "arab__L": -2.0,
+  "ac": 2.5,
+  "ppa": 2.0,
+  "for": 1.5,
+  "co2": 1.5
+ },
+ "growth_rate": 1.0,
+ "rationale": "Resuming fermentation of glucose, lactate, and amino acids (arginine, arabinose) with ammonium. Nitrogen is limiting (12 mmol N available supports max 1.2 /h growth); carbon is in excess. Growth at 1.0 /h consumes 42 mmol C and 10 mmol N; remaining 49 mmol C is fermented to acetate, propionate, formate, and CO\u2082. Substrates are abundant and my transporters support all uptakes.",
+ "confidence": 0.72
+}

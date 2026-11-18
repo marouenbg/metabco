@@ -1,0 +1,58 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 9,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: glc__D",
+   "c_imbalance: in=0 out=40 biomass=19.1",
+   "s_imbalance: in=0 out=10 biomass=0"
+  ],
+  "warnings": [
+   "no_transporter: glc__D",
+   "no_transporter: but",
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.591 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.45 -> 0",
+   "C: secretions scaled by 0",
+   "S: secretions scaled by 0"
+  ],
+  "rationale": "I will take up glucose at a rate of 5 mmol/gDW/h, which will support a growth rate of approximately 0.45/h. I will also release formate and hydrogen sulfide at rates of 10 mmol/gDW/h each.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": 5.0,
+   "co2": 0.0,
+   "h2": 0.0,
+   "h2s": 10.0,
+   "for": 10.0,
+   "ac": 0.0,
+   "nh4": 0.0,
+   "lac__L": 0.0,
+   "lac__D": 0.0,
+   "but": 0.0,
+   "ppa": 0.0,
+   "succ": 0.0,
+   "etoh": 0.0
+  },
+  "fluxes_applied": {
+   "glc__D": 0.0,
+   "co2": 0.0,
+   "h2": 0.0,
+   "h2s": 0.0,
+   "for": 0.0,
+   "ac": 0.0,
+   "nh4": 0.0,
+   "lac__L": 0.0,
+   "lac__D": 0.0,
+   "but": 0.0,
+   "ppa": 0.0,
+   "succ": 0.0,
+   "etoh": 0.0,
+   "pi": -0.5909
+  }
+ }
+]

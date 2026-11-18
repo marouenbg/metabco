@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 10,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ser__L",
+   "uptake_absent: nh4"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake ser__L to pool limit -4.3",
+   "zeroed uptake of absent nh4",
+   "P: credited 0.156 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0393 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing L-serine as primary carbon and nitrogen source, producing acetate and CO2 as fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ser__L": -5.0,
+   "ac": 2.0,
+   "co2": 1.0,
+   "nh4": -1.0
+  },
+  "fluxes_applied": {
+   "ser__L": -4.2951,
+   "ac": 2.0,
+   "co2": 1.0,
+   "nh4": 0.0,
+   "pi": -0.156,
+   "so4": -0.0393
+  }
+ }
+]

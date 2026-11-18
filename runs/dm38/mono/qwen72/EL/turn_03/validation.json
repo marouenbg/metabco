@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 3,
+  "growth_claimed": 0.152,
+  "growth_allowed": 0.152,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: glc__D",
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.108 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0334 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Maintaining a steady metabolic strategy with D-glucose, L-lactate, and L-arginine as primary carbon and nitrogen sources, producing acetate and propionate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": -10.0,
+   "arg__L": -2.0,
+   "nh4": -2.0,
+   "ac": 5.0,
+   "ppa": 3.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": -10.0,
+   "arg__L": -2.0,
+   "nh4": -2.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "pi": -0.1083,
+   "so4": -0.0334
+  }
+ }
+]

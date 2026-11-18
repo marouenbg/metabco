@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "arab__L": -3.0,
+  "lac__L": -2.5,
+  "arg__L": -1.5,
+  "nh4": -0.8,
+  "ac": 3.0,
+  "ppa": 1.5,
+  "for": 0.8,
+  "co2": 2.0
+ },
+ "growth_rate": 0.23,
+ "rationale": "Engaging underutilized arabinose while maintaining glucose, lactate, and arginine uptake. Nitrogen limitation constrains growth to 0.23/h. Mixed-acid fermentation products (acetate, propionate, formate, CO2) are consistent with Bacteroides caccae metabolism. Carbon budget balances: 63.5 mmol C in covers 9.66 (growth) + 13.3 (products) = 23 mmol C out.",
+ "confidence": 0.72
+}

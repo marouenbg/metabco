@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": 10.0,
+  "co2": 5.0,
+  "h2": 5.0,
+  "gly": 2.0,
+  "for": 5.0,
+  "succ": 5.0
+ },
+ "growth_rate": 0.82,
+ "rationale": "Utilizing acetate, carbon dioxide, and hydrogen as primary carbon sources, with glycine as a nitrogen source. Producing formate and succinate as primary fermentation products.",
+ "confidence": 0.8
+}

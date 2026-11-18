@@ -1,0 +1,93 @@
+# Metabolic decision for Prevotella copri CB7 DSM 18205 — turn 0
+
+## Analysis
+
+### Carbon and nitrogen sources available
+
+**Primary carbon sources I can use:**
+- D-glucose (glc__D): 24.98 mM — excellent, Prevotella are saccharolytic
+- L-lactate (lac__L): 28.31 mM — I can ferment this
+- L-arabinose (arab__L): 21.31 mM — pentose, usable
+- Maltose (malt): 4.382 mM — disaccharide, usable
+- myo-inositol (inost): 6.272 mM — can be fermented
+
+**Amino acids as carbon/nitrogen sources:**
+- L-arginine (arg__L): 21.81 mM — both C and N; arginine fermentation is a known Prevotella pathway
+- L-serine, L-alanine, L-proline, glycine, etc. — all potentially usable, but less efficient than sugars
+
+**Nitrogen sources:**
+- Ammonium (nh4): 9.347 mM — preferred inorganic source
+- L-arginine: provides both C and N
+- Other amino acids: provide N but less efficiently
+
+**Cannot use efficiently:**
+- CO₂: only as a sink or minor pathway; not a primary growth substrate under anaerobic conditions
+
+### Fermentation strategy
+
+As an anaerobic bacteroid (Prevotella are common in the human microbiome and rumen), I ferment carbohydrates and amino acids to short-chain fatty acids and lactate. Known products:
+- **Acetate** (ac) — major end product
+- **Propionate** (ppa) — major end product  
+- **Lactate** (lac__L) — can produce or consume depending on conditions
+- **Succinate** (succ) — intermediate
+- **Formate** (for) — minor
+- **CO₂** — from decarboxylation pathways
+
+### Growth calculation
+
+I will prioritize glucose (most efficient) and arginine (dual C+N source), with ammonium as additional N.
+
+**Substrate choice:**
+- Glucose: ~6 carbons per molecule, high energy yield
+- Arginine: ~6 carbons, 2 nitrogens per molecule
+- Ammonium: pure N source
+
+**Rough stoichiometry for mixed substrate fermentation:**
+
+Taking up glucose and arginine, fermenting to acetate and propionate:
+
+For 1 mole of glucose (6C):
+- Fermentation to ~2 acetate (4C) + propionate (3C) + CO₂ (1C) + formate/other
+- Rough yield: ~0.25-0.35 g biomass per g glucose under anaerobic conditions
+
+For arginine (6C, 2N):
+- Can be fermented to acetate, propionate, or citrulline pathway
+- Provides both C and N
+
+**Biomass requirement:** 45 mmol C and 10 mmol N per gram dry weight
+
+**Proposed uptake rates (mmol/gDW/h):**
+- Glucose: -8.0 (moderate, not maximal to preserve substrate)
+- Arginine: -4.0 (provides supplemental C and N)
+- Ammonium: -2.0 (supplemental N; 8 mmol N from glucose+arginine uptake at above rates covers ~16 mmol N needed per g biomass)
+
+**Carbon balance:**
+- In: 8.0 × 6 (glucose) + 4.0 × 6 (arginine) = 48 + 24 = 72 mmol C/gDW/h
+- Biomass cost: 45 mmol C/gDW/h per gram produced
+- Available for fermentation products: 72 - 45 = 27 mmol C/gDW/h
+- Growth rate: 45 mmol C needed per g × growth_rate = portion of 72 mmol C
+  - If growth_rate = µ g/h, then 45µ + 27 (fermentation) = 72
+  - This doesn't quite work; let me recalculate.
+
+**Corrected approach:**
+- Glucose uptake: 8 mmol/gDW/h = 8/180 = 0.0444 g glucose/gDW/h
+- Arginine uptake: 4 mmol/gDW/h = 4/174 = 0.0230 g arginine/gDW/h
+- Total carbon in: 48 + 24 = 72 mmol C/gDW/h
+- Growth rate µ requires 45µ mmol C and 10µ mmol N
+- Nitrogen in: 4 mmol N (from arginine) + 2 mmol N (from ammonium) = 6 mmol N/gDW/h
+- Max growth: 6/10 = 0.6 /h (limited by N)
+
+At µ = 0.6 /h:
+- Carbon needed: 45 × 0.6 = 27 mmol C
+- Carbon released: 72 - 27 = 45 mmol C as fermentation products
+- Nitrogen needed: 10 × 0.6 = 6 mmol N ✓
+
+**Fermentation products (45 mmol C/gDW/h):**
+- Acetate: ~20 mmol C/gDW/h (2 carbons each = 10 mmol acetate)
+- Propionate: ~18 mmol C/gDW/h (3 carbons each = 6 mmol propionate)
+- Formate: ~5 mmol C/gDW/h (1 carbon each = 5 mmol formate)
+- CO₂: ~2 mmol C/gDW/h
+
+---
+
+{"fluxes": {"glc__D": -8.0, "arg__L": -4.0, "nh4": -2.0, "ac": 10.0, "ppa": 6.0, "for": 5.0, "co2": 2.0}, "growth_rate": 0.6, "rationale": "Prevotella copri is saccharolytic and amino-acid fermenting. Glucose and arginine are preferred substrates; uptake rates chosen to support ~0.6/h growth (N-limited by available ammonium + arginine N). Fermentation to acetate, propionate, and formate is consistent with known Prevotella metabolism. Carbon balance: 72 mmol C in, 27 for biomass, 45 for products.", "confidence": 0.65}

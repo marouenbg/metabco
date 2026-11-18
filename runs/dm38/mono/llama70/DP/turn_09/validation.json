@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 9,
+  "growth_claimed": 0.047,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ac",
+   "s_imbalance: in=0 out=2 biomass=0.0123"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake ac to pool limit -5.72",
+   "P: credited 0.0617 mmol/gDW/h of pi (declared present in excess)",
+   "S: growth 0.047 -> 0",
+   "S: secretions scaled by 0"
+  ],
+  "rationale": "Limited by carbon availability, using acetate and glycine as carbon and nitrogen sources",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "gly": -2.0,
+   "h2": -5.0,
+   "co2": 3.0,
+   "h2s": 2.0,
+   "nh4": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -5.718,
+   "gly": -2.0,
+   "h2": -5.0,
+   "co2": 3.0,
+   "h2s": 0.0,
+   "nh4": 1.0,
+   "pi": -0.0617
+  }
+ }
+]

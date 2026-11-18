@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "pro__L": -2.0,
+  "cys__L": -1.5,
+  "gly": -1.0,
+  "ac": 6.5,
+  "for": 3.5,
+  "but": 4.2,
+  "co2": 5.5,
+  "h2": 0.5
+ },
+ "growth_rate": 0.18,
+ "rationale": "Nitrogen is critically limiting (0.765 mM NH\u2084 remaining at t=32h). I am shifting to amino acid catabolism (proline, cysteine, glycine) to obtain both carbon and nitrogen. Acetate provides energy. Fermentation products (acetate, butyrate, formate, CO\u2082, H\u2082) balance the carbon budget. Growth rate limited by available nitrogen and carbon balance; modest rate (0.18 /h) is sustainable for the remaining 16 hours before culture exhaustion.",
+ "confidence": 0.62
+}

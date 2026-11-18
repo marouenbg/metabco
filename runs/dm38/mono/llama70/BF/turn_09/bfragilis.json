@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "but": -5.0,
+  "ac": -3.0,
+  "cys__L": -2.0,
+  "ppa": 2.0,
+  "nh4": -1.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Fermenting butyrate, acetate, and L-cysteine to produce acetate, butyrate, and propionate",
+ "confidence": 0.8
+}

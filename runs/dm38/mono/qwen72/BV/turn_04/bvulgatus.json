@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "ppa": 5.0,
+  "but": 5.0,
+  "nh4": 2.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.273,
+ "rationale": "Utilizing glucose, lactate, and arginine for growth, producing acetate, propionate, butyrate, and formate. Carbon and nitrogen balances support the calculated growth rate.",
+ "confidence": 0.9
+}

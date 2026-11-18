@@ -1,0 +1,127 @@
+# Metabolic decision for Blautia hydrogenotrophica DSM 10507, turn 1
+
+## Analysis of available transporters and carbon sources
+
+Blautia hydrogenotrophica is a strict anaerobe and obligate hydrogen-oxidizing bacterium. Its core metabolic strategy is **hydrogenotrophic autotrophy** — it oxidizes H₂ and reduces CO₂ to acetate. However, this organism also has the capacity to ferment sugars and organic acids when available, which is ecologically important in the human gut.
+
+**Carbon sources I can transport:**
+- **D-glucose (glc__D)**: Yes — Blautia has glucose transporters and can ferment glucose via glycolysis
+- **L-lactate (lac__L)**: Yes — lactate is a known substrate; can be oxidized or fermented
+- **L-arabinose (arab__L)**: Yes — pentose fermentation is typical for gut Firmicutes
+- **Maltose (malt)**: Yes — disaccharide fermentation
+- **Amino acids (arg__L, cys__L, ser__L, etc.)**: Yes — amino acid fermentation is a hallmark of this genus; Blautia uses the Stickland reaction and amino acid deamination
+- **CO₂**: Yes — as terminal electron acceptor in hydrogenotrophy (if H₂ is available)
+- **H₂**: Yes — the primary energy substrate for this species
+
+**Carbon sources I likely cannot access efficiently:**
+- **myo-inositol (inost)**: Requires specific inositol transporters; uncertain
+- **4-Aminobenzoate, xanthine, orotate**: Unlikely given genomic profile
+
+## Fermentation products
+
+Blautia hydrogenotrophica is known to produce:
+- **Acetate** (primary product from both H₂/CO₂ and sugar fermentation)
+- **Formate** (from glucose fermentation)
+- **H₂** (from lactate and amino acid fermentation)
+- **CO₂** (from decarboxylation reactions)
+
+The organism can also produce small amounts of butyrate or propionate under certain conditions, but acetate dominates.
+
+## Strategy for this turn
+
+At t=4h, I have consumed most glucose (was 24.62, typical depletion pattern). Lactate is abundant (28.22 mM). Amino acids are present in reasonable quantities. H₂ is present at trace levels (listed as <0.14 mM), which I can use.
+
+**Primary strategy**: Mixed fermentation
+1. Continue glucose uptake (still available at 24.62 mM, though declining)
+2. Increase lactate uptake (abundant, 28.22 mM)
+3. Utilize amino acids, especially the abundant ones: arginine (21.81), cysteine (8.4), serine (6.4)
+4. Use CO₂ as terminal electron acceptor (via H₂ oxidation if available, or as acceptor in mixed fermentation)
+
+From turn 0, I grew at 0.350 /h on glucose + lactate. I will maintain a similar strategy but shift more toward lactate + amino acids as glucose becomes limiting.
+
+## Carbon and nitrogen audit
+
+**Uptake plan:**
+- Glucose: -15.0 mmol/gDW/h (C₆: 90 mmol C/mol)
+- Lactate: -8.0 mmol/gDW/h (C₃: 24 mmol C/mol)
+- Arginine: -2.0 mmol/gDW/h (C₆N₄: 36 mmol C, 8 mmol N per mol)
+- Cysteine: -1.5 mmol/gDW/h (C₃N: 9 mmol C, 2 mmol N per mol)
+
+**Carbon in:**
+- Glucose: 15.0 × 6 = 90 mmol C
+- Lactate: 8.0 × 3 = 24 mmol C
+- Arginine: 2.0 × 6 = 12 mmol C
+- Cysteine: 1.5 × 3 = 4.5 mmol C
+- **Total C in: 130.5 mmol C/gDW/h**
+
+**Nitrogen in:**
+- Arginine: 2.0 × 4 = 8 mmol N
+- Cysteine: 1.5 × 1 = 1.5 mmol N
+- Ammonium uptake: -2.5 mmol/gDW/h = 2.5 mmol N
+- **Total N in: 12 mmol N/gDW/h**
+
+**Growth calculation:**
+- Carbon cost for growth: 38 mmol C/gDW
+- Nitrogen cost for growth: 10 mmol N/gDW
+- Growth rate limited by N: 12 / 10 = 1.2 /h (theoretical max)
+- Growth rate limited by C: 130.5 / 38 = 3.4 /h (theoretical max)
+- **Realistic growth rate: 0.45 /h** (accounting for maintenance, redox balance, and metabolic efficiency)
+
+**Carbon out (products):**
+- Acetate: +5.5 mmol/gDW/h (C₂: 11 mmol C)
+- Formate: +3.0 mmol/gDW/h (C₁: 3 mmol C)
+- CO₂: +2.5 mmol/gDW/h (C₁: 2.5 mmol C)
+- H₂: +1.2 mmol/gDW/h (no carbon)
+- Biomass: 0.45 × 38 = 17.1 mmol C
+- **Total C out: 11 + 3 + 2.5 + 17.1 = 33.6 mmol C/gDW/h**
+
+**Carbon balance: 130.5 in − 33.6 out = 96.9 mmol C/gDW/h unaccounted** — this excess is problematic. Let me reduce uptake or increase products.
+
+**Revised approach**: Lower uptake rates to match realistic fermentation stoichiometry:
+- Glucose: -12.0 mmol/gDW/h (72 mmol C)
+- Lactate: -6.0 mmol/gDW/h (18 mmol C)
+- Arginine: -1.5 mmol/gDW/h (9 mmol C)
+- Cysteine: -1.0 mmol/gDW/h (3 mmol C)
+- Ammonium: -2.0 mmol/gDW/h (2 mmol N)
+
+**Total C in: 102 mmol C; Total N in: 10 mmol N**
+
+**Growth: 0.40 /h** (limited by N: 10/10 = 1.0, but constrained by carbon fermentation efficiency ~40%)
+
+**Products to balance:**
+- Acetate: +4.5 mmol/gDW/h (9 mmol C)
+- Formate: +2.5 mmol/gDW/h (2.5 mmol C)
+- CO₂: +2.0 mmol/gDW/h (2 mmol C)
+- H₂: +1.0 mmol/gDW/h (0 mmol C)
+- Biomass: 0.40 × 38 = 15.2 mmol C
+
+**Carbon balance: 102 − (9 + 2.5 + 2 + 15.2) = 73.3 mmol C unaccounted** — still too high. 
+
+Fermentation yields are typically 30-50% for mixed substrates. Let me recalculate with realistic yields:
+
+**Final revised uptake (realistic for mixed fermentation at 0.40 /h):**
+- Glucose: -10.0 mmol/gDW/h (60 mmol C)
+- Lactate: -5.0 mmol/gDW/h (15 mmol C)
+- Arginine: -1.2 mmol/gDW/h (7.2 mmol C)
+- Ammonium: -2.0 mmol/gDW/h (2 mmol N)
+
+**Total C in: 82.2 mmol C; Total N in: 10 mmol N**
+
+**Products (fermentation yield ~45%):**
+- Acetate: +3.5 mmol/gDW/h (7 mmol C)
+- Formate: +2.0 mmol/gDW/h (2 mmol C)
+- CO₂: +1.8 mmol/gDW/h (1.8 mmol C)
+- H₂: +0.8 mmol/gDW/h (0 mmol C)
+- Biomass: 0.40 × 38 = 15.2 mmol C
+
+**Carbon balance: 82.2 − (7 + 2 + 1.8 + 15.2) = 56.2 mmol C unaccounted** — still imbalanced.
+
+The issue is I'm overestimating uptake. For a growth rate of 0.40 /h with 38 mmol C/gDW cost:
+- **C needed for growth: 15.2 mmol**
+- **C available for fermentation products: 82.2 − 15.2 = 67 mmol**
+- **If fermentation yield is 45%, products should be: 67 × 0.45 = 30.15 mmol C in products**
+
+This is realistic. The remaining ~37 mmol C is oxidized to CO₂ or other fully oxidized forms. Let me allocate:
+- Acetate: +2.5 mmol/gDW/h (5 mmol C)
+- Formate: +1.5 mmol/gDW/h (1.5 mmol C)
+- CO₂: +4.0 mmol/gDW/h (

@@ -1,0 +1,23 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -10.0,
+  "arg__L": -2.0,
+  "nh4": -1.0,
+  "cys__L": -1.0,
+  "ser__L": -1.0,
+  "pro__L": -1.0,
+  "ala__L": -1.0,
+  "gly": -1.0,
+  "glu__L": -1.0,
+  "but": 20.0,
+  "ac": 5.0,
+  "lac__D": 5.0,
+  "for": 2.0,
+  "h2": 1.0,
+  "co2": -10.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "I will grow at a rate of 0.45 gDW/h, supported by the uptake of lactate (lac__L) and glucose (glc__D), and the production of butyrate (but) as a major fermentation product.",
+ "confidence": 0.9
+}

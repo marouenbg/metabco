@@ -1,0 +1,29 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 7,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.583 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilize L-lactate (lac__L) and Ammonium (nh4) as primary carbon and nitrogen sources, respectively. Release acetate (ac) as a fermentation product.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -28.01,
+   "nh4": -8.746,
+   "ac": 2.63
+  },
+  "fluxes_applied": {
+   "lac__L": -28.01,
+   "nh4": -8.746,
+   "ac": 2.63,
+   "pi": -0.5832,
+   "so4": -0.1309
+  }
+ }
+]

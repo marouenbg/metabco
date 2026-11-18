@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "but": -8.0,
+  "arg__L": -2.5,
+  "ser__L": -1.5,
+  "cys__L": -1.0,
+  "ala__L": -1.0,
+  "nh4": -1.5,
+  "ac": 6.0,
+  "for": 4.0,
+  "co2": 12.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Dorea is proteolytic and ferments amino acids and butyrate anaerobically. With glucose depleted, I switch to butyrate + amino acid fermentation, generating acetate, formate, CO\u2082, and H\u2082 as products. Nitrogen from arginine, serine, cysteine, alanine, and ammonium supports growth. This flux is sustainable within the sealed batch and matches known Dorea metabolism.",
+ "confidence": 0.72
+}

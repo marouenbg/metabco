@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": 20.0,
+  "nh4": 10.0,
+  "ac": 5.09,
+  "but": 3.51,
+  "for": 3.51
+ },
+ "growth_rate": 0.1773,
+ "rationale": "L-lactate and Ammonium uptake supports growth at 0.1773 /h, with carbon and nitrogen balances met.",
+ "confidence": 0.9
+}

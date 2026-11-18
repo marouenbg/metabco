@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 1,
+  "growth_claimed": 0.1955,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=0 out=62 biomass=7.92"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "S: credited 0.0429 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 3.65 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.196 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "I chose to take up CO2, L-lactate, and Ammonium at rates of 10 mmol/gDW/h, 8 mmol/gDW/h, and 2 mmol/gDW/h, respectively. I will produce acetate, butyrate, and formate at rates of 4 mmol/gDW/h. The gro",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "co2": 10.0,
+   "lac__L": 8.0,
+   "nh4": 2.0,
+   "ac": 4.0,
+   "but": 4.0,
+   "for": 4.0,
+   "h2": 0.5,
+   "pi": -0.41
+  },
+  "fluxes_applied": {
+   "co2": 0.0,
+   "lac__L": 0.0,
+   "nh4": -1.6494,
+   "ac": 0.0,
+   "but": 0.0,
+   "for": 0.0,
+   "h2": 0.5,
+   "pi": -0.41,
+   "so4": -0.0429
+  }
+ }
+]

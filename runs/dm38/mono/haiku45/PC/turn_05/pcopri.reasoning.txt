@@ -1,0 +1,100 @@
+# Metabolic Decision: Prevotella copri CB7 DSM 18205, Turn 5
+
+## Analysis of available resources and constraints
+
+**Carbon sources I can transport:**
+- Acetate (62.42 mM): Yes, via acetyl-CoA synthetase
+- Propionate (47.35 mM): Yes, via propionyl-CoA synthetase
+- Formate (28.23 mM): Yes, via formate dehydrogenase
+- Maltose (4.382 mM): Yes, I encode maltose PTS
+- L-arabinose (4.12 mM): Yes, arabinose isomerase pathway
+- myo-inositol (6.272 mM): Yes, I ferment inositol
+- Amino acids (various): Yes, I have broad aminotransferase capacity
+
+**Carbon sources I cannot efficiently use:**
+- CO₂ (103.7 mM): I am heterotrophic; cannot fix CO₂ autotrophically. CO₂ is a waste product.
+
+**Nitrogen sources:**
+- Ammonium (0.7548 mM): Very limited, only 0.21 mmol available
+- Amino acids: Rich source; can deaminate for NH₄⁺ and use carbon skeleton
+
+## Fermentation strategy
+
+As a Prevotella species, I am an obligate anaerobe that ferments carbohydrates and amino acids to short-chain fatty acids (acetate, propionate, formate) and lactate. My recent history shows:
+- Turns 1-2: Glucose fermentation → acetate, propionate, formate (high growth 0.65 /h)
+- Turn 3: Lactate utilization when glucose depleted
+- Turn 4: Amino acid fermentation (proline, alanine), zero growth
+
+**Current situation (turn 5):** Glucose is exhausted. I must shift to alternative carbon/nitrogen sources. The amino acid pool is still substantial and offers both carbon and nitrogen.
+
+## Growth calculation
+
+**Optimal strategy:** Ferment amino acids (which provide both C and N) + residual carbohydrates (maltose, arabinose, inositol).
+
+**Uptake plan:**
+- Maltose: -4.0 mmol/gDW/h (remaining supply ~4.4 mM, 1 L vessel, 3.424 gDW → ~1.3 mmol/gDW available)
+- L-arabinose: -3.0 mmol/gDW/h
+- myo-inositol: -2.0 mmol/gDW/h
+- Mixed amino acids (Phe, Leu, Val, Tyr, Ser, Cys, Ala, Gln, Asn, Lys, Pro, Thr, Ile, His, Met, Trp, Asp, Glu): -8.0 mmol/gDW/h total
+- Formate: -1.0 mmol/gDW/h (can reoxidize some to CO₂)
+
+**Carbon balance:**
+- Uptake: 4.0(C₁₂) + 3.0(C₅) + 2.0(C₆) + 8.0(avg C₅) = 48 + 15 + 12 + 40 = **115 mmol C/gDW/h**
+- Growth cost: 45 mmol C/gDW/h (for ~1 g new biomass per hour)
+- Secretion budget: 115 - 45 = **70 mmol C/gDW/h** as fermentation products
+
+**Nitrogen balance:**
+- Uptake: ~8 mmol amino acid N/gDW/h + 0.22 mmol NH₄⁺/gDW/h ≈ **8.2 mmol N/gDW/h**
+- Growth cost: 10 mmol N/gDW/h for 1 g biomass
+- **Deficit:** 1.8 mmol N/gDW/h
+
+This forces growth rate down. With 8.2 mmol N available and 10 mmol needed per gram:
+**Maximum growth = 8.2 / 10 = 0.82 /h**
+
+Realistically, accounting for biosynthetic inefficiency and maintenance: **μ = 0.45 /h**
+
+**Secretion products** (fermentation):
+- Acetate: +15 mmol/gDW/h
+- Propionate: +12 mmol/gDW/h
+- Formate: +8 mmol/gDW/h
+- CO₂: +20 mmol/gDW/h
+- Lactate: +5 mmol/gDW/h
+
+Total C out: 15(1) + 12(1) + 8(1) + 20(1) + 5(1) = 60 mmol C/gDW/h
+Plus growth: 45 mmol C/gDW/h
+**Total: 105 mmol C/gDW/h** ✓ (within 115 mmol uptake)
+
+---
+
+```json
+{
+  "fluxes": {
+    "malt": -4.0,
+    "arab__L": -3.0,
+    "inost": -2.0,
+    "phe__L": -1.2,
+    "leu__L": -1.0,
+    "val__L": -0.9,
+    "tyr__L": -0.8,
+    "ser__L": -0.8,
+    "cys__L": -0.8,
+    "ala__L": -0.8,
+    "gln__L": -0.5,
+    "asn__L": -0.4,
+    "lys__L": -0.4,
+    "pro__L": -0.3,
+    "thr__L": -0.3,
+    "ile__L": -0.2,
+    "his__L": -0.1,
+    "for": -1.0,
+    "nh4": -0.22,
+    "ac": +15.0,
+    "ppa": +12.0,
+    "co2": +20.0,
+    "lac__L": +5.0
+  },
+  "growth_rate": 0.45,
+  "rationale": "Amino acid fermentation + residual carbohydrate utilization. Nitrogen is limiting (8.2 mmol available vs 10 mmol needed per gram growth); growth constrained to 0.45 /h. Fermentation to acetate, propionate, formate, lactate and CO₂ balances carbon budget (105 mmol C out vs 115 mmol C in). Maintains anaerobic fermentation phenotype.",
+  "confidence": 0.62
+}
+```

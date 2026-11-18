@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 4,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "P: credited 0.626 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing D-glucose and L-arginine as primary carbon and nitrogen sources, with acetate, propionate, and butyrate as fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -15.0,
+   "arg__L": -5.0,
+   "ac": 7.5,
+   "ppa": 3.0,
+   "but": 3.0,
+   "nh4": -2.5
+  },
+  "fluxes_applied": {
+   "glc__D": -15.0,
+   "arg__L": -5.0,
+   "ac": 7.5,
+   "ppa": 3.0,
+   "but": 3.0,
+   "nh4": 0.0,
+   "pi": -0.6263,
+   "so4": -0.1309
+  }
+ }
+]

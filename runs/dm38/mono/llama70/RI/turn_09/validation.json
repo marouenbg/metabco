@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 9,
+  "growth_claimed": 0.145,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=6 out=12.5 biomass=5.47"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.169 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.038 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.145 -> 0",
+   "C: secretions scaled by 0.504"
+  ],
+  "rationale": "Butyrate and L-alanine uptake, butyrate and acetate production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": 2.5,
+   "ala__L": -2.0,
+   "ac": 1.25
+  },
+  "fluxes_applied": {
+   "but": 1.26,
+   "ala__L": -2.0,
+   "ac": 0.63,
+   "pi": -0.1691,
+   "so4": -0.038
+  }
+ }
+]

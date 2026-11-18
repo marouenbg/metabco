@@ -1,0 +1,15 @@
+As Dorea formicigenerans ATCC 27755, I must decide on the best metabolic strategy for the next 4 hours. Given the available nutrients, I notice that there are several carbon sources present, including formate, L-leucine, L-arabinose, myo-inositol, and others. However, as an anaerobic bacterium, I am limited in my ability to utilize certain carbon sources.
+
+First, I consider the transporters that my genome encodes. As a member of the Firmicutes phylum, I am likely to have transporters for peptides, amino acids, and other small molecules. I can transport formate, which is present at a concentration of 5.428 mmol/L. I can also transport L-leucine, L-arabinose, and myo-inositol, although the latter two may require additional enzymatic steps to utilize.
+
+Next, I consider the fermentation products that my species is known to make. As a butyrate-producing bacterium, I am likely to produce butyrate, acetate, and possibly other short-chain fatty acids.
+
+To determine the growth rate that my chosen uptake supports, I must calculate the amount of carbon and nitrogen that I can acquire. Assuming that I take up formate, L-leucine, and myo-inositol, I can estimate the amount of carbon and nitrogen that I can acquire per hour. Based on the concentrations and my transport capabilities, I estimate that I can take up approximately 10 mmol of carbon per hour.
+
+Using the biomass production costs provided, I calculate that I need approximately 33 mmol of carbon and 7 mmol of nitrogen per gram of dry weight produced. Assuming that I can acquire sufficient nitrogen from the available amino acids, I can estimate the growth rate that my chosen uptake supports. Based on the carbon uptake rate, I estimate that I can support a growth rate of approximately 0.3 gDW/h.
+
+Finally, I perform an audit to ensure that carbon in must cover carbon out plus the biomass cost. Assuming that I produce butyrate and acetate as fermentation products, I estimate that I will release approximately 5 mmol of carbon per hour as butyrate and 2 mmol of carbon per hour as acetate. Adding the biomass production cost, I estimate that I will require approximately 10 mmol of carbon per hour to support growth and fermentation. Since I can acquire approximately 10 mmol of carbon per hour from the available nutrients, my carbon budget is balanced.
+
+In conclusion, I decide to take up formate, L-leucine, and myo-inositol, and produce butyrate and acetate as fermentation products. I estimate that I can support a growth rate of approximately 0.3 gDW/h.
+
+{"fluxes": {"for": -2.0, "leu__L": -1.5, "inost": -1.0, "but": 5.0, "ac": 2.0, "co2": 1.0}, "growth_rate": 0.3, "rationale": "Balanced carbon budget with formate, L-leucine, and myo-inositol uptake", "confidence": 0.8}

@@ -1,0 +1,48 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 6,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: malt",
+   "uptake_exceeds_pool: inost",
+   "c_imbalance: in=85.5 out=177 biomass=16.6"
+  ],
+  "warnings": [
+   "no_transporter: inost",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake malt to pool limit -3.04",
+   "clipped uptake inost to pool limit -4.36",
+   "C: growth 0.5 -> 0",
+   "C: secretions scaled by 0.507"
+  ],
+  "rationale": "Dorea formicigenerans ferments available carbohydrates (maltose, inositol) and amino acids (arginine for N; cysteine for C/N). Fermentation yields butyrate, acetate, formate, CO\u2082, and H\u2082. Carbon balan",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "malt": -7.5,
+   "inost": -5.5,
+   "arg__L": -2.4,
+   "cys__L": -2.8,
+   "but": 26.0,
+   "ac": 16.0,
+   "for": 9.0,
+   "co2": 32.0,
+   "h2": 1.2
+  },
+  "fluxes_applied": {
+   "malt": -3.0431,
+   "inost": -4.3557,
+   "arg__L": -2.4,
+   "cys__L": -2.8,
+   "but": 13.1799,
+   "ac": 8.1107,
+   "for": 4.5623,
+   "co2": 16.2214,
+   "h2": 1.2
+  }
+ }
+]

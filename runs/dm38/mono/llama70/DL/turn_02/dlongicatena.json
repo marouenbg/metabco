@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -2.5,
+  "ac": 10.0,
+  "co2": 5.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "D-glucose fermentation to acetate and CO2, with ammonium uptake for nitrogen",
+ "confidence": 0.8
+}

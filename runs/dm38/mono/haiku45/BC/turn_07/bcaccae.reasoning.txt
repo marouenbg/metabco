@@ -1,0 +1,71 @@
+# Metabolic decision for Bacteroides caccae at t=28h
+
+Let me work through this systematically.
+
+## Carbon and nitrogen sources available and transportable
+
+**Abundant carbon sources I can use:**
+- Acetate (ac): 21.34 mM — I have acetate transporters and have been using this consistently
+- Propionate (ppa): 9.435 mM — I produce this, can recycle it
+- Formate (for): 7.59 mM — small but available
+- L-arginine (arg__L): 9.124 mM — I have been fermenting this; it's both C and N source
+- Amino acids (serine, cysteine, proline, alanine, glycine, etc.) — I can ferment these
+
+**Carbohydrates:** Maltose, L-arabinose are present but I've shown limited uptake recently. My recent turns show I was using glucose and arabinose earlier but those are now depleted. I likely lack efficient transporters for the remaining sugars or they're not preferred substrates.
+
+**Nitrogen sources:**
+- L-arginine: 9.124 mM (excellent — provides both C and N)
+- Ammonium: 1.519 mM (low but present)
+- Other amino acids provide nitrogen but at lower concentrations
+
+## Fermentation products I make
+Based on my recent history and Bacteroides caccae metabolism:
+- Acetate (primary product)
+- Propionate (secondary product)
+- Formate
+- CO₂
+- Lactate (when glucose available, but glucose is now depleted)
+
+## Current metabolic strategy
+
+I'm at 28h of a 48h batch culture with significant nutrients remaining. I should maximize growth while I can.
+
+**Primary substrates:**
+1. L-arginine (9.124 mM) — excellent dual C/N source, I've been using 1.5 mmol/gDW/h
+2. Acetate (21.34 mM) — abundant, I ferment it to propionate and other products
+3. Amino acids (ser, cys, pro, ala, gly) — secondary carbon/nitrogen sources
+
+**Nitrogen audit:**
+- L-arginine uptake at 1.5 mmol/gDW/h provides ~1.5 mmol N/gDW/h
+- Growth at ~0.5 /h needs ~10 mmol N/gDW/h × 0.5 = 5 mmol N/gDW/h... wait, that's per gram produced
+- At 0.5 /h growth, I need 10 × 0.5 = 5 mmol N/gDW/h
+- Arginine at 1.5 mmol/gDW/h provides only 1.5 mmol N/gDW/h
+- I need additional nitrogen: L-serine (6.4 mM), glycine (4.7 mM), alanine (5.3 mM)
+
+Let me recalibrate: if I take up arginine at 1.5, serine at 1.0, glycine at 1.0, I get ~3.5 mmol N/gDW/h plus ammonium ~0.3 = ~3.8 mmol N/gDW/h. This supports growth of ~0.38 /h.
+
+**Carbon audit for growth at 0.38 /h:**
+- Need: 42 × 0.38 = 15.96 mmol C/gDW/h for biomass
+- Arginine (1.5): 6 carbons × 1.5 = 9 mmol C/gDW/h
+- Serine (1.0): 3 carbons × 1.0 = 3 mmol C/gDW/h
+- Glycine (1.0): 2 carbons × 1.0 = 2 mmol C/gDW/h
+- Acetate (3.0): 2 carbons × 3.0 = 6 mmol C/gDW/h
+- **Total in: 20 mmol C/gDW/h**
+- **Used for biomass: 15.96 mmol C/gDW/h**
+- **Available for fermentation: 4.04 mmol C/gDW/h**
+
+This would produce acetate (~2 mmol), propionate (~1.5 mmol), formate (~0.5 mmol), CO₂ (~1 mmol).
+
+Let me use: arginine -1.5, serine -1.0, glycine -1.0, acetate -3.0, ammonium -0.5, and release acetate +2.0, propionate +1.0, formate +0.5, CO₂ +2.0
+
+Growth rate: **0.38 /h**
+
+```json
+{"fluxes": {"arg__L": -1.5, "ser__L": -1.0, "gly": -1.0, "ac": -3.0, "nh4": -0.5, "ac": 2.0, "ppa": 1.0, "for": 0.5, "co2": 2.0}, "growth_rate": 0.38, "rationale": "Fermenting arginine, serine, glycine and acetate; nitrogen-limited by available amino acids and ammonium; producing acetate, propionate, formate and CO2 as end products", "confidence": 0.65}
+```
+
+Wait, I have duplicate "ac" keys. Let me fix:
+
+```json
+{"fluxes": {"arg__L": -1.5, "ser__L": -1.0, "gly": -1.0, "ac": -3.0, "nh4": -0.5, "ppa": 1.0, "for": 0.5, "co2": 2.0}, "growth_rate": 0.38, "rationale": "Fermenting arginine, serine, glycine and acetate; nitrogen-limited by available amino acids and ammonium; producing propionate, formate and CO2 as end products while net consuming acetate", "confidence": 0.65}
+```

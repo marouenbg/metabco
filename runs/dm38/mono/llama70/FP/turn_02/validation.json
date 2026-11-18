@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 2,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.419 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0946 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 1.17 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "L-lactate and D-glucose uptake support butyrate production and growth",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "but": 7.0,
+   "ac": 2.0,
+   "nh4": -2.0,
+   "co2": 1.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "but": 7.0,
+   "ac": 2.0,
+   "nh4": -3.1651,
+   "co2": 1.0,
+   "h2": 1.0,
+   "pi": -0.4188,
+   "so4": -0.0946
+  }
+ }
+]

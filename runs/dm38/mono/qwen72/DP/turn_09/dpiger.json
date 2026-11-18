@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "nh4": -5.0,
+  "h2s": 1.0,
+  "for": 1.0
+ },
+ "growth_rate": 0.1,
+ "rationale": "Utilizing acetate and ammonium for growth, producing hydrogen sulfide and formate as byproducts.",
+ "confidence": 0.8
+}

@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -6.0,
+  "arg__L": -3.0,
+  "arab__L": -2.0,
+  "nh4": -2.5,
+  "ac": 18.0,
+  "ppa": 12.0,
+  "succ": 8.0,
+  "co2": 45.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Parabacteroides johnsonii is a saccharolytic anaerobe with mixed-acid fermentation. At 8h, I transition to exponential growth using abundant glucose, lactate, and arginine. Nitrogen is limiting (9.3 mM ammonium + arginine nitrogen); uptake of 2.5 mM NH4 + ~0.5 mM N from arginine supports ~0.25/h growth. Carbon balance: 94 mmol C/h uptake \u2192 10.5 (biomass) + 83.5 (fermentation products: acetate, propionate, succinate, CO\u2082). This is consistent with Bacteroidetes fermentation stoichiometry.",
+ "confidence": 0.62
+}

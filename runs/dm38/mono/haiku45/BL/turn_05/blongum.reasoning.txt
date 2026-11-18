@@ -1,0 +1,58 @@
+# Metabolic decision for Bifidobacterium longum NCC2705 at t=20h
+
+## Analysis
+
+**Carbon sources available and transportable:**
+I have been consuming D-glucose, L-arabinose, and L-lactate in previous turns. Looking at the current environment:
+- D-glucose: depleted (was my primary substrate)
+- L-lactate: 17.11 mM — abundant, I have lactate transporters and dehydrogenase
+- L-arabinose: 5.416 mM — still present, I can ferment pentoses
+- Acetate: 13.08 mM — I produce this, not typically a primary uptake substrate for growth in anaerobic conditions
+- Maltose: 4.382 mM — I likely have maltose transporters (bifidobacteria ferment disaccharides)
+- myo-inositol: 6.272 mM — fermentable by some Bifidobacterium strains
+
+My recent pattern shows I preferentially consume lactate and arabinose while fermenting to acetate, formate, and lactate. At turn 4, I took up 12 mM lactate and 4 mM arabinose.
+
+**Nitrogen sources:**
+- Ammonium: 11.45 mM — primary nitrogen source
+- Amino acids abundant: arginine (5.6 mM), serine (6.4 mM), cysteine (6.583 mM), etc.
+- I've been taking arginine (5–6 mM/h) in previous turns; this is both a carbon and nitrogen source
+
+**Fermentation strategy:**
+Bifidobacterium longum is a heterofermentative lactic acid bacterium. Under anaerobic conditions with lactate and arabinose available, I ferment primarily to:
+- Acetate (major product)
+- Lactate (some re-secretion)
+- Formate (minor)
+- CO₂ (from mixed-acid pathways)
+
+**Growth rate calculation:**
+At turn 4, I grew at 0.45 /h with:
+- Lactate: 12 mM/gDW/h uptake
+- Arabinose: 4 mM/gDW/h uptake
+- Arginine: 6 mM/gDW/h uptake
+- Total C uptake: (12×2) + (4×5) + (6×6) = 24 + 20 + 36 = 80 mmol C/gDW/h
+- N uptake: 1.5 (NH₄) + 6 (Arg) = 7.5 mmol N/gDW/h
+
+Growth cost: 38 mmol C and 10 mmol N per gram biomass.
+At 0.45 /h: 38×0.45 = 17.1 mmol C/gDW/h for growth; 10×0.45 = 4.5 mmol N/gDW/h for growth.
+
+Lactate is now the most abundant easily fermentable carbon source. I'll increase lactate uptake to ~14 mM/gDW/h, maintain arabinose at ~4 mM/gDW/h, and reduce arginine slightly (to ~4 mM/gDW/h) since ammonium is available.
+
+- C uptake: (14×2) + (4×5) + (4×6) = 28 + 20 + 24 = 72 mmol C/gDW/h
+- N uptake: 2 (NH₄) + 4 (Arg) = 6 mmol N/gDW/h
+
+This supports: growth rate = 6/10 = **0.60 /h** (limited by nitrogen)
+
+**Carbon audit:**
+- C in: 72 mmol/gDW/h
+- C cost for biomass: 38 × 0.60 = 22.8 mmol/gDW/h
+- C available for fermentation products: 72 − 22.8 = 49.2 mmol/gDW/h
+
+Fermentation of lactate and arabinose yields acetate and CO₂ primarily:
+- Lactate (14 mmol) → ~7 mmol acetate + 7 mmol CO₂ (simplified)
+- Arabinose (4 mmol) → ~2 mmol acetate + 2 mmol CO₂ (simplified)
+- Total: ~9 mmol acetate + 9 mmol CO₂ + small formate/lactate
+
+This balances within fermentation stoichiometry. I'll release acetate (9 mM), CO₂ (9 mM), and minor formate.
+
+{"fluxes": {"lac__L": -14.0, "arab__L": -4.0, "arg__L": -4.0, "nh4": -2.0, "ac": 9.0, "co2": 9.0, "for": 0.5}, "growth_rate": 0.60, "rationale": "Lactate is now the dominant fermentable carbon source; arabinose and arginine provide supplementary C and N. Ammonium is available for N. Growth is N-limited at 0.60/h. Fermentation yields acetate and CO2 as major products, consistent with Bifidobacterium heterofermentation.", "confidence": 0.72}

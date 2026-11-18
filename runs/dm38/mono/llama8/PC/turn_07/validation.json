@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 7,
+  "growth_claimed": 0.0444,
+  "growth_allowed": 0.0444,
+  "ok": false,
+  "violations": [
+   "uptake_absent: lac__L"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "zeroed uptake of absent lac__L",
+   "P: credited 0.0605 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "taking up carbon dioxide, formate, and amino acids to support growth, and releasing acetate and hydrogen gas as fermentation products",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "co2": -10.0,
+   "for": -5.0,
+   "pro__L": -5.0,
+   "cys__L": -5.0,
+   "arg__L": -5.0,
+   "lac__L": -5.0,
+   "h2": 10.0,
+   "ac": 20.0
+  },
+  "fluxes_applied": {
+   "co2": -10.0,
+   "for": -5.0,
+   "pro__L": -5.0,
+   "cys__L": -5.0,
+   "arg__L": -5.0,
+   "lac__L": 0.0,
+   "h2": 10.0,
+   "ac": 20.0,
+   "pi": -0.0605
+  }
+ }
+]

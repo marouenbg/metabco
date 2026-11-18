@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "lac__L": -5.0,
+  "arg__L": -2.0,
+  "nh4": -2.0,
+  "ac": 20.0,
+  "but": 10.0,
+  "for": 6.0,
+  "co2": 2.5,
+  "h2": 1.7
+ },
+ "growth_rate": 0.6,
+ "rationale": "Mixed-acid fermentation of glucose and lactate with arginine catabolism. Glucose and lactate are abundant and well-used. Ammonium is limiting; conserve it while using arginine (which provides both C and N). Products reflect typical Clostridium fermentation: acetate, butyrate, formate, CO\u2082, H\u2082. Carbon and nitrogen balance verified.",
+ "confidence": 0.72
+}

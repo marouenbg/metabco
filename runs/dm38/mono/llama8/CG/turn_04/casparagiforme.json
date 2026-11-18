@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10,
+  "lac__L": -20,
+  "arg__L": -5,
+  "h2": 1,
+  "for": 2,
+  "but": 1
+ },
+ "growth_rate": 0.55,
+ "rationale": "Taking up glucose and lactate, releasing hydrogen, formate, and butyrate, and growing at a rate of 0.55/h.",
+ "confidence": 0.8
+}

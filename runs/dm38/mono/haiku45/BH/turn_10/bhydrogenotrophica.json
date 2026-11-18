@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "arg__L": -3.0,
+  "for": 12.0,
+  "malt": -2.0,
+  "lac__L": -2.0,
+  "ac": 15.0,
+  "co2": 14.6,
+  "h2": 2.0,
+  "nh4": 0.5
+ },
+ "growth_rate": 0.3,
+ "rationale": "Recovering from H\u2082 starvation by oxidizing formate to regenerate H\u2082 and CO\u2082. Fermenting arginine (N source), maltose, and lactate to acetate, formate, and CO\u2082. Growth limited by N availability (3 mmol from arginine vs 10 mmol needed per g biomass).",
+ "confidence": 0.65
+}

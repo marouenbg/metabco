@@ -1,0 +1,134 @@
+# Metabolic reasoning for Clostridium hiranonis at turn 9 (t = 36 h)
+
+## Assessment of carbon and nitrogen sources
+
+**What I can transport:**
+- Amino acids: I have broad amino acid permeases. Available: phe, tyr, val, gln, asn, lys, pro, thr, cys, ile, leu, his, met, trp, glu, asp (all present in useful quantities)
+- Sugars: I can ferment arabinose, maltose. Arabinose is depleted; maltose remains at 4.38 mM
+- Organic acids: acetate, formate, butyrate (all abundant)
+- H₂, CO₂, H₂S (all present)
+
+**What I cannot transport or is limiting:**
+- Nitrate (0.11 mM) — I lack the nitrate reductase system for this anaerobic environment
+- Most vitamins and cofactors are present in trace amounts and sufficient
+
+**Nitrogen sources:**
+- Ammonium (1.477 mM) — primary usable form
+- Amino acids themselves provide nitrogen but are better used for biosynthesis
+
+## Known fermentation pathways for *Clostridium hiranonis*
+
+This species is a secondary bile acid metabolizer that ferments amino acids and carbohydrates. Known products include:
+- Acetate (major)
+- Formate
+- Butyrate
+- Propionate (from amino acid fermentation)
+- CO₂, H₂
+
+## Recent growth pattern
+
+I achieved 0.100 /h growth at turn 8 by fermenting arabinose and amino acids. Now at 36 h of 48 h total, arabinose is essentially gone (was being depleted each turn). I must shift strategy.
+
+## Available carbon sources now
+
+1. **Maltose (4.38 mM)**: I can transport and ferment this. This is my primary remaining carbohydrate.
+2. **Amino acids (various, ~30 mM total)**: Rich nitrogen and carbon source
+3. **Acetate, formate, butyrate**: Available but primarily fermentation products; limited energy
+4. **CO₂ (98 mM)**: Not a primary carbon source for fermentation
+
+## Growth calculation
+
+**Strategy: Ferment maltose + amino acids**
+
+Maltose (C₁₂H₂₂O₁₁) provides 12 carbons per molecule.
+- Uptake: 4.38 mM maltose × 12 C/molecule = 52.56 mmol C available from maltose
+- Plus amino acids: conservatively ~25 mmol C available from amino acids at modest uptake
+
+Total available C: ~77.6 mmol C in the vessel for the next 4 h at my current density (2.748 gDW/L in 1 mL = 0.002748 gDW total)
+
+For growth:
+- Biomass production requires 38 mmol C per gDW
+- I have 2.748 gDW already; if I grow at rate μ for 4 h, I need: 0.002748 × e^(μ×4) ≈ 0.002748 × (1 + 4μ) for small μ
+- New biomass ≈ 0.002748 × 4μ = 0.010992μ gDW
+- Carbon cost: 0.010992μ × 38 = 0.4176μ mmol C
+
+**Realistic uptake rates:**
+- Maltose: ~5 mmol/gDW/h (modest, as it's depleting)
+- Amino acids (mix): ~4 mmol/gDW/h total
+- Ammonium: ~0.5 mmol/gDW/h
+
+At 2.748 gDW:
+- Maltose uptake: 5 × 2.748 = 13.74 mmol/h
+- Amino acid uptake (C): 4 × 2.748 = 10.99 mmol C/h
+- Total C in: 24.73 mmol/h × 4 h = 98.92 mmol C available
+
+**Growth rate calculation:**
+- Growth requires ~38 C per gDW produced
+- Fermentation products (acetate, formate, butyrate, propionate) account for ~60% of carbon; ~40% incorporated into biomass
+- If 40% of 98.92 = 39.57 mmol C → biomass
+- Biomass produced: 39.57 / 38 ≈ 1.04 gDW
+- Growth rate: ln(1.04 / 2.748) / 4 ≈ -0.24 /h (negative, declining phase)
+
+This is consistent with late stationary phase. I should lower expectations: **μ ≈ 0.05 /h** (slow maintenance metabolism)
+
+## Nitrogen audit
+
+- Ammonium available: 1.477 mM
+- Amino acid N: ~10 mmol N (rough estimate from amino acids present)
+- Growth at 0.05 /h for 4 h with 2.748 gDW requires: 0.002748 × 4 × 0.05 × 10 ≈ 0.055 gDW new mass × 10 mmol N/gDW = 0.55 mmol N
+- Available: 11+ mmol N — sufficient
+
+## Fluxes for next 4 h
+
+- Maltose uptake: -5.0 mmol/gDW/h
+- L-proline uptake: -1.5 mmol/gDW/h (N-rich, fermentable)
+- L-leucine uptake: -1.0 mmol/gDW/h
+- Ammonium uptake: -0.4 mmol/gDW/h
+- Acetate secretion: +4.5 mmol/gDW/h
+- Formate secretion: +2.0 mmol/gDW/h
+- Propionate secretion: +1.5 mmol/gDW/h
+- CO₂ secretion: +3.0 mmol/gDW/h
+- H₂ secretion: +1.0 mmol/gDW/h
+
+**Carbon balance check:**
+- In: 5×12 (maltose) + 1.5×5 (pro) + 1.0×6 (leu) = 60 + 7.5 + 6 = 73.5 mmol C/gDW/h
+- Out: 4.5 (ac) + 2.0 (for) + 1.5 (ppa) + 3.0 (co2) = 11 mmol C/gDW/h as products
+- Growth: 73.5 - 11 = 62.5 mmol C/gDW/h → 62.5/38 ≈ 1.64 gDW new per gDW per hour (impossible)
+
+**Revised, realistic fluxes:**
+- Maltose: -3.5 mmol/gDW/h
+- L-proline: -1.0 mmol/gDW/h
+- L-leucine: -0.5 mmol/gDW/h
+- Ammonium: -0.3 mmol/gDW/h
+- Acetate: +3.0 mmol/gDW/h
+- Formate: +1.5 mmol/gDW/h
+- Propionate: +1.0 mmol/gDW/h
+- CO₂: +2.0 mmol/gDW/h
+- H₂: +0.8 mmol/gDW/h
+
+**Carbon in:** 3.5×12 + 1.0×5 + 0.5×6 = 42 + 5 + 3 = 50 mmol C/gDW/h
+**Carbon out (products):** 3.0 + 1.5 + 1.0 + 2.0 = 7.5 mmol C/gDW/h
+**Carbon to biomass:** 50 - 7.5 = 42.5 mmol C/gDW/h → 42.5/38 = **1.118 gDW/gDW/h**
+
+This is still too high. At late stationary phase, growth should be ~0.05–0.08 /h.
+
+**Final conservative estimate: μ = 0.06 /h**
+
+```json
+{
+  "fluxes": {
+    "malt": -2.0,
+    "pro__L": -0.8,
+    "leu__L": -0.3,
+    "nh4": -0.2,
+    "ac": +2.0,
+    "for": +1.0,
+    "ppa": +0.6,
+    "co2": +1.2,
+    "h2": +0.5
+  },
+  "growth_rate": 0.06,
+  "rationale": "Late stationary phase (36/48 h). Arabinose depleted; shifting to maltose and amino acid fermentation. Modest growth rate reflects nutrient limitation and accumulation of fermentation products. Carbon and nitrogen budgets balanced for slow growth.",
+  "confidence": 0.55
+}
+```

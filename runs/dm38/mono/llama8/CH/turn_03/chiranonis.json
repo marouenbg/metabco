@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -20.0,
+  "co2": -15.38,
+  "nh4": -9.39,
+  "but": 3.51,
+  "ac": 3.51,
+  "for": 3.51
+ },
+ "growth_rate": 0.43,
+ "rationale": "Based on my transporters and the available nutrients, I chose to take up L-lactate, CO2, and ammonia, and release butyrate, acetate, and formate. I can support a growth rate of 0.43/h.",
+ "confidence": 0.9
+}

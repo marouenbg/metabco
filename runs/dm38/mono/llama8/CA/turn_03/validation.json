@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 3,
+  "growth_claimed": 0.058,
+  "growth_allowed": 0.0125,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=0.963 out=0.642 biomass=1.71"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0392 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.015 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.058 -> 0.0125"
+  ],
+  "rationale": "Collinsella aerofaciens will take up lactate and release lactate and acetate to support a growth rate of 0.058 mmol of carbon per gram dry weight per hour.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -0.107,
+   "arg__L": -0.107,
+   "nh4": -0.107,
+   "lac__D": 0.107,
+   "ac": 0.107,
+   "for": 0.107
+  },
+  "fluxes_applied": {
+   "lac__L": -0.107,
+   "arg__L": -0.107,
+   "nh4": -0.107,
+   "lac__D": 0.107,
+   "ac": 0.107,
+   "for": 0.107,
+   "pi": -0.0392,
+   "so4": -0.015
+  }
+ }
+]

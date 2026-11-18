@@ -1,0 +1,120 @@
+# Reasoning
+
+## My metabolic capabilities
+
+I am *Clostridium hiranonis*, a Gram-positive, strictly anaerobic bacterium. My genome encodes:
+- Carbohydrate fermentation (especially sugars and polyols)
+- Amino acid catabolism (particularly aromatic amino acids like phenylalanine and tyrosine)
+- Bile acid 7α-dehydroxylation (my signature trait)
+- Acetate and formate production
+- Hydrogen production under anaerobic conditions
+
+## Available carbon sources I can use
+
+**Can transport and metabolize:**
+- **Amino acids** (abundant): phenylalanine, tyrosine, valine, leucine, isoleucine, proline, cysteine, threonine, lysine, histidine, methionine, tryptophan, asparagine, glutamine — these are my preferred substrates. I catabolize aromatic amino acids efficiently.
+- **Short-chain fatty acids**: acetate (though I'm already producing it, uptake is minimal), butyrate
+- **Carbohydrates**: maltose, myo-inositol (limited capacity)
+- **Formate**: can use this as electron acceptor/carbon source
+
+**Cannot efficiently use or cannot transport:**
+- CO₂ (present in high concentration but I'm not autotrophic; I produce it, not consume it)
+- H₂ (I can produce it, not efficiently consume it)
+- H₂S (I can produce it, not consume it)
+- Nitrate (I lack the reductase for anaerobic nitrate respiration)
+
+## Recent pattern analysis
+
+Turns 8 and 10 show growth (0.100 and 0.180 /h respectively). Both involved:
+- **Amino acid uptake**: branched-chain and aromatic amino acids (val, leu, ile, phe, tyr, pro)
+- **Acetate and CO₂ production**: fermentation end products
+- Growth correlates with amino acid catabolism
+
+Turn 9 showed zero growth—likely substrate limitation or metabolic pause.
+
+## Current state (turn 11, t=44h, 48h total)
+
+Only **4 hours remain**. I have:
+- Substantial amino acids still available (phe 3.46, tyr 2.28, val 1.42, ile 0.68, pro 1.40, etc.)
+- Limited carbohydrates (maltose 4.38, inositol 6.27)
+- Butyrate 28.25 mmol/L (underutilized so far)
+- Acetate 95.49 mmol/L (mostly from my production)
+- Low ammonium (1.477 mmol/L) — nitrogen is becoming limiting
+
+## Metabolic strategy for next 4 hours
+
+**Primary strategy:** Amino acid catabolism (aromatic and branched-chain), which drives growth in this organism.
+
+**Key constraint:** Nitrogen. At ~10 mmol N per gram dry weight growth, and only 1.477 mmol NH₄ available, plus amino acid nitrogen:
+- Amino acids contain ~1 nitrogen per molecule (roughly)
+- Total available N: ~1.5 (NH₄) + ~20 mmol from amino acids = ~21.5 mmol N
+- Maximum growth: ~2.1 gDW (if all N used)
+- Current biomass: 2.962 gDW
+- Realistic growth: limited to ~0.15 /h for 4 hours = 0.6 gDW max (but N limits to ~0.4 gDW)
+
+**Uptake targets:**
+- Aromatic amino acids: phe, tyr (high affinity for my transporters)
+- Branched-chain: val, ile, leu, pro (support growth)
+- Butyrate: minor uptake (energy source)
+- Ammonium: all remaining (1.477 mmol/L)
+
+**Fermentation products:**
+- Acetate (major)
+- Formate (minor)
+- CO₂ (from decarboxylation)
+- H₂ (from fermentation)
+
+## Carbon audit
+
+Assume uptake of:
+- phe: 1.5 mmol/gDW/h × 2.962 gDW = 4.44 mmol/h (C₉H₁₁NO₂, 9 C)
+- tyr: 0.8 mmol/gDW/h × 2.962 gDW = 2.37 mmol/h (C₉H₁₁NO₃, 9 C)
+- val: 0.6 mmol/gDW/h × 2.962 gDW = 1.78 mmol/h (C₅H₁₁NO₂, 5 C)
+- ile: 0.4 mmol/gDW/h × 2.962 gDW = 1.18 mmol/h (C₆H₁₃NO₂, 6 C)
+- pro: 0.4 mmol/gDW/h × 2.962 gDW = 1.18 mmol/h (C₅H₉NO₂, 5 C)
+- but: 1.0 mmol/gDW/h × 2.962 gDW = 2.96 mmol/h (C₄H₈O₂, 4 C)
+
+**Carbon in:** 4.44×9 + 2.37×9 + 1.78×5 + 1.18×6 + 1.18×5 + 2.96×4 = 40 + 21.3 + 8.9 + 7.1 + 5.9 + 11.8 = ~95 mmol C/h
+
+**Growth rate:** ~0.12 /h (conservative; nitrogen limiting)
+**Carbon for growth:** 0.12 × 38 = 4.56 mmol C/gDW/h × 2.962 gDW = 13.5 mmol C/h
+**Carbon for products:** ~95 - 13.5 = 81.5 mmol C/h (acetate, formate, CO₂)
+
+This is feasible.
+
+## Final fluxes (mmol/gDW/h)
+
+- phe__L: -1.5
+- tyr__L: -0.8
+- val__L: -0.6
+- ile__L: -0.4
+- pro__L: -0.4
+- but: -1.0
+- nh4: -0.5
+- ac: +2.5 (acetate production)
+- for: +1.2 (formate)
+- co2: +2.0
+- h2: +0.8
+
+**Growth rate:** 0.12 /h
+
+```json
+{
+  "fluxes": {
+    "phe__L": -1.5,
+    "tyr__L": -0.8,
+    "val__L": -0.6,
+    "ile__L": -0.4,
+    "pro__L": -0.4,
+    "but": -1.0,
+    "nh4": -0.5,
+    "ac": +2.5,
+    "for": +1.2,
+    "co2": +2.0,
+    "h2": +0.8
+  },
+  "growth_rate": 0.12,
+  "rationale": "Amino acid catabolism (phe, tyr, val, ile, pro) is my primary growth substrate; butyrate provides additional energy. Nitrogen is limiting (only 1.5 mM NH4 remains). Fermentation yields acetate, formate, CO2, and H2. Growth limited by N availability and approaching culture end (4h remaining).",
+  "confidence": 0.68
+}
+```

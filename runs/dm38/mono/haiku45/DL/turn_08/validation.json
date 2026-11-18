@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 8,
+  "growth_claimed": 0.18,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=16.5 out=38.8 biomass=6.8"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.21 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.18 -> 0",
+   "C: secretions scaled by 0.447"
+  ],
+  "rationale": "Nitrogen is critically limiting (0.765 mM NH\u2084 remaining at t=32h). I am shifting to amino acid catabolism (proline, cysteine, glycine) to obtain both carbon and nitrogen. Acetate provides energy. Ferm",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "pro__L": -2.0,
+   "cys__L": -1.5,
+   "gly": -1.0,
+   "ac": 6.5,
+   "for": 3.5,
+   "but": 4.2,
+   "co2": 5.5,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "pro__L": -2.0,
+   "cys__L": -1.5,
+   "gly": -1.0,
+   "ac": 2.9024,
+   "for": 1.5628,
+   "but": 1.8754,
+   "co2": 2.4559,
+   "h2": 0.5,
+   "pi": -0.21
+  }
+ }
+]

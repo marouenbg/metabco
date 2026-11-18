@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "arab__L": -5.0,
+  "gln__L": -2.0,
+  "asn__L": -1.0,
+  "ac": 5.0,
+  "ppa": 2.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Utilizing L-lactate and L-arabinose as carbon sources, and L-glutamine and L-asparagine as nitrogen sources, to produce acetate and propionate as fermentation products.",
+ "confidence": 0.8
+}

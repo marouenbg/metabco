@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "for": 15.0,
+  "ac": 15.0,
+  "co2": 10.0,
+  "nh4": 5.0
+ },
+ "growth_rate": 0.833,
+ "rationale": "Formate and acetate are key metabolites in my metabolism, and taking them up will support my growth. I'll also take up carbon dioxide to ensure I'm not releasing more carbon than I take in. To balance the carbon flux, I'll secrete formate and acetate into the vessel.",
+ "confidence": 0.8
+}

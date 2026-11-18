@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "ppa": 2.0,
+  "pro__L": -2.0,
+  "but": 1.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Limited by nitrogen uptake, utilizing available short-chain fatty acids and amino acids",
+ "confidence": 0.8
+}

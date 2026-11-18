@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "h2": -10.0,
+  "co2": -5.0,
+  "nh4": -2.0,
+  "ac": 5.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.275,
+ "rationale": "H2 and CO2 utilization with NH4 as nitrogen source",
+ "confidence": 0.8
+}

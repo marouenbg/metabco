@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 2,
+  "growth_claimed": 0.85,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "p_imbalance: in=0 out=0 biomass=1.16"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "S: credited 0.222 mmol/gDW/h of so4 (declared present in excess)",
+   "P: growth 0.85 -> 0"
+  ],
+  "rationale": "Utilizing D-glucose, L-serine, and L-arginine for growth, with secondary nitrogen source ammonium. Releasing formate, acetate, and succinate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -12.6,
+   "ser__L": -6.11,
+   "arg__L": -2.72,
+   "nh4": -2.72,
+   "for": 4.44,
+   "ac": 2.28,
+   "succ": 0.9,
+   "h2": 0.9
+  },
+  "fluxes_applied": {
+   "glc__D": -12.6,
+   "ser__L": -6.11,
+   "arg__L": -2.72,
+   "nh4": -2.72,
+   "for": 4.44,
+   "ac": 2.28,
+   "succ": 0.9,
+   "h2": 0.9,
+   "so4": -0.2225
+  }
+ }
+]

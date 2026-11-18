@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "co2": -15.375,
+  "lac__L": -3.5075,
+  "but": 3.5075,
+  "ac": 3.5075,
+  "nh4": -0.925
+ },
+ "growth_rate": 0.925,
+ "rationale": "I will take up CO2 and L-lactate to produce biomass, butyrate, and acetate. I will also take up NH4 to support growth.",
+ "confidence": 0.8
+}

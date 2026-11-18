@@ -1,0 +1,130 @@
+# Reasoning
+
+## Assessment of current state
+
+I am *Eubacterium rectale*, a butyrate-producing, strictly anaerobic bacterium. At turn 9 (36 h), I have reached 4.119 gDW/L. The culture is sealed and has been running for 36 of 48 hours. I must be strategic about the remaining 12 hours.
+
+## Carbon and nitrogen sources I can use
+
+**Primary carbon sources available:**
+- **Butyrate** (53.87 mM): I can ferment this via β-oxidation and produce acetate, formate, CO₂, and potentially H₂. This is a core substrate for me.
+- **Formate** (8.963 mM): I can use this via formate dehydrogenase.
+- **Acetate** (8.933 mM): I can use this, though it's less efficient than butyrate for growth.
+- **Amino acids** (phenylalanine, cysteine, tyrosine, valine, etc.): I can catabolize these for both carbon and nitrogen, but they're limited and should be reserved for nitrogen.
+- **CO₂** (130.5 mM): I cannot fix CO₂ autotrophically; I use it only as an electron acceptor in limited contexts or release it as a fermentation product.
+
+**Nitrogen sources:**
+- **Ammonium** (12.13 mM): Direct uptake via GS/GOGAT pathway. This is my primary nitrogen source.
+- **Amino acids**: Can be deaminated to provide both carbon and nitrogen.
+- **Nitrate** (0.1093 mM): Trace; not viable for anaerobic growth in my metabolism.
+
+## Fermentation products I make
+
+As a butyrate-producer fermenting carbohydrates and short-chain fatty acids:
+- **Acetate**: From β-oxidation of butyrate and from pyruvate.
+- **Formate**: From pyruvate decarboxylation.
+- **CO₂**: From decarboxylation reactions.
+- **H₂**: From ferredoxin oxidation (minor in butyrate fermentation).
+- **Lactate**: Less likely in this anaerobic, butyrate-rich environment.
+
+## Metabolic strategy for this interval
+
+**Observation:** Recent turns show declining growth (0.600 → 0.350 → 0.000 → 0.150 /h). This suggests nutrient depletion, particularly nitrogen. Ammonium is still present (12.13 mM), but I'm at high cell density (4.119 gDW/L).
+
+**Strategy:**
+1. **Consume butyrate** as the primary carbon source. At 53.87 mM, there is still significant supply.
+2. **Consume ammonium** to support growth. With 12.13 mM available and ~4 h remaining in this interval, I can afford modest uptake.
+3. **Catabolize amino acids** (particularly those in higher concentration: phe, cys, tyr, val) for supplementary carbon and nitrogen.
+4. **Release acetate, formate, and CO₂** as fermentation products.
+
+## Growth rate calculation
+
+**Biomass synthesis requirements:**
+- ~33 mmol C per gram dry weight
+- ~7 mmol N per gram dry weight
+
+**Proposed uptake (per gDW/h):**
+- Butyrate: 8 mmol/gDW/h (sustainable given ~54 mM available)
+- Ammonium: 2.5 mmol/gDW/h
+- Amino acids (mixed): ~1.5 mmol/gDW/h (for supplementary N and C)
+
+**Carbon balance:**
+- Butyrate in: 8 mmol C/gDW/h (4 carbons per butyrate = 32 mmol C)
+- Amino acids in: ~1.5 mmol/gDW/h (avg ~5 C per amino acid = 7.5 mmol C)
+- Total C in: ~39.5 mmol/gDW/h
+
+**Nitrogen balance:**
+- Ammonium in: 2.5 mmol/gDW/h
+- Amino acids in: ~1.5 mmol/gDW/h (1 N per amino acid)
+- Total N in: ~4 mmol/gDW/h
+
+**Growth calculation:**
+- C needed for growth: 33 mmol/gDW
+- N needed for growth: 7 mmol/gDW
+- With 4 mmol N available, growth is limited by nitrogen.
+- Growth rate = 4 / 7 ≈ **0.57 /h**
+
+**But let me recalculate conservatively:** With declining trends, I should assume growth rate of **0.35 /h** to be safe.
+
+- C needed: 33 × 0.35 = 11.55 mmol/gDW
+- N needed: 7 × 0.35 = 2.45 mmol/gDW
+- C remaining for fermentation: 39.5 - 11.55 = 27.95 mmol C/gDW/h
+- N remaining: 4 - 2.45 = 1.55 mmol N/gDW/h
+
+**Fermentation products:**
+- Acetate: ~14 mmol/gDW/h
+- Formate: ~8 mmol/gDW/h
+- CO₂: ~5.95 mmol/gDW/h
+
+## Audit
+
+**Carbon in:** 8 (but) + 1.5 (aa) = 9.5 mmol C/gDW/h uptake
+- Butyrate: 8 × 4 = 32 mmol C
+- Amino acids: 1.5 × 5 = 7.5 mmol C
+- **Total: 39.5 mmol C in**
+
+**Carbon out:**
+- Biomass: 11.55 mmol C (at 0.35 /h growth)
+- Acetate: 14 × 2 = 28 mmol C
+- Formate: 8 × 1 = 8 mmol C
+- CO₂: 5.95 × 1 = 5.95 mmol C
+- **Total: 53.5 mmol C out** ← **Deficit!**
+
+Let me adjust. I'll reduce fermentation products:
+
+**Revised uptake:**
+- Butyrate: 6 mmol/gDW/h
+- Ammonium: 2.5 mmol/gDW/h
+- Amino acids: 1.0 mmol/gDW/h
+
+**Carbon in: 6×4 + 1×5 = 29 mmol C/gDW/h**
+
+**At growth rate 0.35 /h:**
+- Biomass C: 11.55 mmol
+- Remaining for fermentation: 29 - 11.55 = 17.45 mmol C
+
+**Fermentation products:**
+- Acetate: 8.5 mmol/gDW/h (17 mmol C)
+- Formate: 0.45 mmol/gDW/h (0.45 mmol C)
+- CO₂: 0 mmol/gDW/h (released as part of acetate formation)
+
+**Audit passes.** Growth rate: **0.35 /h**
+
+```json
+{
+  "fluxes": {
+    "but": -6.0,
+    "nh4": -2.5,
+    "phe__L": -0.3,
+    "cys__L": -0.3,
+    "tyr__L": -0.2,
+    "val__L": -0.2,
+    "ac": 8.5,
+    "for": 0.45,
+    "co2": 0.0
+  },
+  "growth_rate": 0.35,
+  "rationale": "Butyrate fermentation with amino acid catabolism for nitrogen supplementation. Ammonium limiting at high biomass. Produce acetate and formate as primary fermentation products. Conservative growth rate given declining trend and approaching culture end.",
+  "confidence": 0.65
+}
+```

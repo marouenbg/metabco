@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "malt": -4.0,
+  "ac": 5.0,
+  "arg__L": -3.0,
+  "cys__L": -2.0,
+  "ser__L": -1.5,
+  "pro__L": -1.5,
+  "nh4": -2.0,
+  "lac__L": 2.5,
+  "for": 0.5,
+  "co2": 3.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Secondary phase metabolism: consuming residual maltose and amino acids (arg, cys, ser, pro), re-assimilating acetate from earlier fermentation, and maintaining steady-state fermentation to lactate, acetate, and formate. Nitrogen from ammonium and amino acid catabolism supports continued biomass synthesis.",
+ "confidence": 0.72
+}

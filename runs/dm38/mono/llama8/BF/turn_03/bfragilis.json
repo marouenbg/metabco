@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -4.0,
+  "glc__D": -1.5,
+  "arg__L": -2.82,
+  "but": 1.0,
+  "for": 0.5,
+  "h2": 0.5,
+  "nh4": -3.76,
+  "co2": 0.2
+ },
+ "growth_rate": 0.047,
+ "rationale": "I'll consume D-glucose, L-lactate, and L-arginine to support growth. I'll produce butyrate, formate, and hydrogen gas as fermentation products.",
+ "confidence": 0.8
+}

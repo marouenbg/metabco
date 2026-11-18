@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 9,
+  "growth_claimed": 0.38,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "p_imbalance: in=0 out=0 biomass=0.476"
+  ],
+  "warnings": [],
+  "repairs": [
+   "S: credited 0.0995 mmol/gDW/h of so4 (declared present in excess)",
+   "P: growth 0.38 -> 0"
+  ],
+  "rationale": "Late-stage batch culture (36/48 h). Nitrogen is limiting; amino acid fermentation via Stickland pathways yields acetate and propionate. Uptake of 7.5 mmol amino acids/gDW/h (mix of 3\u20135 C atoms, 1 N ea",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "gly": -2.0,
+   "ser__L": -1.5,
+   "leu__L": -1.2,
+   "val__L": -1.0,
+   "phe__L": -1.0,
+   "tyr__L": -0.8,
+   "ac": 3.5,
+   "ppa": 2.5,
+   "co2": 1.2,
+   "nh4": 2.0,
+   "h2": 0.3
+  },
+  "fluxes_applied": {
+   "gly": -2.0,
+   "ser__L": -1.5,
+   "leu__L": -1.2,
+   "val__L": -1.0,
+   "phe__L": -1.0,
+   "tyr__L": -0.8,
+   "ac": 3.5,
+   "ppa": 2.5,
+   "co2": 1.2,
+   "nh4": 2.0,
+   "h2": 0.3,
+   "so4": -0.0995
+  }
+ }
+]

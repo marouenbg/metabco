@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__D": -10.0,
+  "lac__L": -10.0,
+  "for": 0.85,
+  "pi": -0.99,
+  "so4": -0.22
+ },
+ "growth_rate": 0.85,
+ "rationale": "Based on previous growth rates and available nutrients, I'll take up D-lactate and L-lactate at a rate of 10 mmol/gDW/h each, release formate at a rate of 0.85 mmol/gDW/h, and take up hydrogenphosphate and sulfate at a rate of 0.99 mmol/gDW/h and 0.22 mmol/gDW/h, respectively.",
+ "confidence": 0.8
+}

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -8.0,
+  "arab__L": -2.5,
+  "arg__L": -1.5,
+  "nh4": -1.5,
+  "but": 1.5,
+  "ac": 1.0,
+  "for": 1.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Glucose depleted; shifting to lactate fermentation with arabinose and arginine as secondary substrates. Nitrogen is limiting (3 mmol available vs 10 needed per gram growth). Ferment lactate to butyrate, acetate, formate and CO\u2082 as per canonical metabolism. Growth constrained by nitrogen availability.",
+ "confidence": 0.72
+}

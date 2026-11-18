@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "lac__L": 5.0,
+  "but": 5.0,
+  "nh4": 2.0,
+  "h2": -0.5,
+  "butyrate": 5.0,
+  "lactate": 5.0,
+  "acetate": 5.0
+ },
+ "growth_rate": 0.82,
+ "rationale": "Utilizing available carbon sources, adjusting uptake to include lactate and butyrate, and releasing fermentation products to support growth.",
+ "confidence": 0.8
+}

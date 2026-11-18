@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 10,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.14 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Utilizing acetate and amino acids for carbon and nitrogen, producing butyrate, acetate, and hydrogen.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "ac": 2.0,
+   "co2": -3.0,
+   "but": 2.0,
+   "h2": 2.0,
+   "cys__L": -2.0,
+   "phe__L": -1.0
+  },
+  "fluxes_applied": {
+   "ac": 2.0,
+   "co2": -3.0,
+   "but": 2.0,
+   "h2": 2.0,
+   "cys__L": -2.0,
+   "phe__L": -1.0,
+   "pi": -0.1396
+  }
+ }
+]

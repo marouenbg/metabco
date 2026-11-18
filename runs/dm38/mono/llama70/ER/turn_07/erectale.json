@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "but": -5.0,
+  "arg__L": -1.0,
+  "co2": 2.0,
+  "ppa": 0.0,
+  "cys__L": 0.0,
+  "ser__L": 0.0
+ },
+ "growth_rate": 0.1515,
+ "rationale": "Carbon and nitrogen sources support growth rate of 0.1515 gDW/h",
+ "confidence": 0.8
+}

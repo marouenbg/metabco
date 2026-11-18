@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 7,
+  "growth_claimed": 0.33,
+  "growth_allowed": 0.3036,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=42 out=34 biomass=11"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.307 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.33 -> 0.304"
+  ],
+  "rationale": "Butyrate specialist fermenting primary substrate (butyrate) to acetate, CO\u2082, and H\u2082. Supplementing with amino acids (cysteine, alanine, serine, proline) to satisfy nitrogen requirements (7 mmol N/gDW ",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "but": -8.0,
+   "cys__L": -1.0,
+   "ala__L": -1.0,
+   "ser__L": -0.5,
+   "pro__L": -0.5,
+   "ac": 12.0,
+   "co2": 8.0,
+   "for": 2.0,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "but": -8.0,
+   "cys__L": -1.0,
+   "ala__L": -1.0,
+   "ser__L": -0.5,
+   "pro__L": -0.5,
+   "ac": 12.0,
+   "co2": 8.0,
+   "for": 2.0,
+   "h2": 0.5,
+   "pi": -0.3072
+  }
+ }
+]

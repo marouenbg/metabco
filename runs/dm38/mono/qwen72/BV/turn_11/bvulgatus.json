@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ac": 6.5833,
+  "ppa": 6.5833,
+  "but": 6.5833,
+  "nh4": -2.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Utilizing acetate, propionate, and butyrate for carbon and energy, and ammonium for nitrogen. The growth rate is limited by nitrogen availability.",
+ "confidence": 0.9
+}

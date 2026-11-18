@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -15.0,
+  "lac__L": -8.0,
+  "arg__L": -3.0,
+  "nh4": -2.5,
+  "ac": 12.0,
+  "for": 8.0,
+  "co2": 18.0,
+  "h2": 2.5,
+  "pi": -0.18
+ },
+ "growth_rate": 0.45,
+ "rationale": "Mixed-acid fermentation of glucose, lactate, and arginine under anaerobic conditions. Nitrogen-limited growth due to low ammonium and amino acid availability. Products are acetate, formate, CO\u2082, and H\u2082. Carbon and nitrogen balance audited; all fluxes are physiologically realistic for Blautia hydrogenotrophica.",
+ "confidence": 0.72
+}

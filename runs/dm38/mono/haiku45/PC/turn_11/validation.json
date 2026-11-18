@@ -1,0 +1,51 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 11,
+  "growth_claimed": 0.16,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: glu__L",
+   "uptake_exceeds_pool: asp__L",
+   "uptake_exceeds_pool: thr__L",
+   "c_imbalance: in=5.52 out=46.2 biomass=7.19"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake glu__L to pool limit -0.403",
+   "clipped uptake asp__L to pool limit -0.243",
+   "clipped uptake thr__L to pool limit -0.183",
+   "P: credited 0.218 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0419 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.16 -> 0",
+   "C: secretions scaled by 0.125"
+  ],
+  "rationale": "At turn 11 with 4 h remaining, I'm in stationary-phase growth. I maximize uptake of abundant fermentable substrates (acetate, formate, propionate) while drawing nitrogen from available amino acids (gl",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "ac": 6.0,
+   "for": 4.0,
+   "ppa": 5.5,
+   "glu__L": -0.8,
+   "asp__L": -0.5,
+   "leu__L": -0.3,
+   "thr__L": -0.2,
+   "succ": 3.0,
+   "co2": 1.7
+  },
+  "fluxes_applied": {
+   "ac": 0.7528,
+   "for": 0.5018,
+   "ppa": 0.69,
+   "glu__L": -0.4033,
+   "asp__L": -0.2434,
+   "leu__L": -0.3,
+   "thr__L": -0.1826,
+   "succ": 0.3764,
+   "co2": 0.2133,
+   "pi": -0.2181,
+   "so4": -0.0419
+  }
+ }
+]

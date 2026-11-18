@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 9,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.0794,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ala__L",
+   "c_imbalance: in=16.9 out=14.8 biomass=7.55"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake ala__L to pool limit -0.0496",
+   "P: credited 0.233 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0523 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.2 -> 0.0794"
+  ],
+  "rationale": "At t=36h in stationary phase, I'm conserving resources. Acetate remains the primary carbon source; I supplement with amino acids for nitrogen and biosynthetic precursors (glycine, serine, alanine are ",
+  "confidence": 0.6,
+  "fluxes_claimed": {
+   "ac": -6.0,
+   "gly": -1.2,
+   "ser__L": -0.8,
+   "ala__L": -0.5,
+   "lac__L": 4.0,
+   "for": 0.3,
+   "co2": 2.5
+  },
+  "fluxes_applied": {
+   "ac": -6.0,
+   "gly": -1.2,
+   "ser__L": -0.8,
+   "ala__L": -0.0496,
+   "lac__L": 4.0,
+   "for": 0.3,
+   "co2": 2.5,
+   "pi": -0.2326,
+   "so4": -0.0523
+  }
+ }
+]

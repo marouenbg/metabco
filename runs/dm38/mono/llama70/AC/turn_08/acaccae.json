@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "ppa": -2.0,
+  "arg__L": -1.0,
+  "but": 3.0,
+  "co2": 2.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.132,
+ "rationale": "Butyrate production with acetate, propionate, and amino acid uptake",
+ "confidence": 0.8
+}

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "inost": -5.0,
+  "lac__L": -2.0,
+  "ala__L": -1.0,
+  "but": 2.0,
+  "ac": 1.0,
+  "ppa": 0.5,
+  "h2": 1.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.24,
+ "rationale": "Optimal carbon and nitrogen source utilization",
+ "confidence": 0.8
+}

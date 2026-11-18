@@ -1,0 +1,48 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 10,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ser__L",
+   "uptake_exceeds_pool: ala__L"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake ser__L to pool limit -1.19",
+   "clipped uptake ala__L to pool limit -0.854",
+   "P: credited 0.302 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.116 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Mixed fermentation of acetate and amino acids. Acetate remains abundant; amino acids provide both C and N. Ammonium uptake supports growth. Butyrate and CO\u2082 are major fermentation products. Growth rat",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "gly": -1.5,
+   "leu__L": -1.5,
+   "val__L": -1.5,
+   "ser__L": -1.2,
+   "ala__L": -1.3,
+   "nh4": -2.5,
+   "but": 4.5,
+   "co2": 6.0,
+   "for": 0.5
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "gly": -1.5,
+   "leu__L": -1.5,
+   "val__L": -1.5,
+   "ser__L": -1.1916,
+   "ala__L": -0.8544,
+   "nh4": -2.5,
+   "but": 4.5,
+   "co2": 6.0,
+   "for": 0.5,
+   "pi": -0.3025,
+   "so4": -0.1162
+  }
+ }
+]

@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -4.0,
+  "arg__L": -2.0,
+  "cys__L": -1.0,
+  "nh4": -3.0,
+  "ac": 15.0,
+  "but": 6.0,
+  "co2": 2.0,
+  "for": 1.0,
+  "h2": 4.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Glucose and lactate are abundant primary substrates. Arginine and cysteine provide supplemental N and C. Ammonium is limited (~8.7 mM) and constrains growth. Mixed-acid fermentation of sugars and amino acids yields acetate, butyrate, formate, CO\u2082, and H\u2082. Carbon balance: 75 mmol in \u2212 19 (growth) \u2212 57 (products) \u2248 0. Nitrogen: 6 mmol in \u2212 5 (growth) = 1 mmol margin. Growth rate of 0.50 /h is conservative but sustainable over 4 h in this N-limited batch.",
+ "confidence": 0.68
+}

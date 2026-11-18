@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -4.0,
+  "nh4": -0.8,
+  "ac": 1.5,
+  "but": 1.5,
+  "for": 1.5,
+  "h2": 0.5,
+  "co2": 0.2
+ },
+ "growth_rate": 0.45,
+ "rationale": "Optimizing growth rate while ensuring mass balance and avoiding over-consumption of available nutrients.",
+ "confidence": 0.8
+}

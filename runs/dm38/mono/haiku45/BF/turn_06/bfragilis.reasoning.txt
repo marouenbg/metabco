@@ -1,0 +1,134 @@
+# Reasoning through my metabolic strategy at t=24h
+
+## Assessment of my situation
+I am *Bacteroides fragilis*, a Gram-negative anaerobic bacterium. At 24 h into a 48 h sealed batch culture, I have reached 2.698 gDW/L and am in mid-exponential phase. My recent growth rates (0.38–0.45 /h) show I've been successfully utilizing available substrates. Now I must decide what to consume for the next 4 hours.
+
+## Available carbon sources and transportability
+
+**What I can use:**
+- **Acetate** (19.68 mM): Bacteroides fragilis has acetyl-CoA synthetase and can activate acetate. This is a reliable substrate.
+- **Butyrate** (16.24 mM): I can β-oxidize butyrate to acetyl-CoA. Abundant.
+- **Formate** (14.91 mM): I can oxidize formate via formate dehydrogenase; it's a secondary carbon source.
+- **Amino acids** (cysteine, proline, alanine, glycine, etc.): I encode amino acid permeases and can catabolize these. They provide both C and N.
+- **myo-inositol** (6.27 mM): Bacteroides has inositol utilization pathways; this is usable.
+- **L-arabinose** (0.42 mM): Nearly depleted, but I can still use it via arabinose isomerase.
+
+**What I cannot use effectively:**
+- **CO₂**: This is a product, not a primary carbon source for heterotrophs like me.
+- **Glucose, lactate, maltose**: My recent history shows I consumed these early (turns 2–3) but they are now absent. I likely do not have high-affinity uptake for these or they were exhausted.
+
+## Nitrogen sources
+
+**Available:**
+- **L-cysteine** (7.35 mM): Contains both C and S; I can use it.
+- **Amino acids** (proline, alanine, glycine, serine, etc.): Rich source of N and C.
+- **Ammonium** (0.59 mM): Very limited; I should prioritize amino acids.
+- **L-glutamine, L-asparagine**: Good N donors.
+
+## Fermentation products I produce
+
+Bacteroides fragilis is a saccharolytic and proteolytic anaerobe. My fermentation end products are:
+- **Acetate** (major)
+- **Butyrate** (major)
+- **Formate** (secondary)
+- **CO₂** (from pyruvate decarboxylation and deamination)
+- **Succinate** (minor, from amino acid deamination)
+- **H₂** (trace, under low redox)
+
+My recent pattern confirms this: I consume amino acids and carbohydrates, release acetate, butyrate, formate, and CO₂.
+
+## Carbon and nitrogen balance calculation
+
+**Strategy:** Continue the successful pattern from turn 5, but adjust for substrate depletion:
+- Acetate and butyrate are abundant; keep consuming them as energy/carbon.
+- Amino acids are still present; prioritize them for nitrogen and additional carbon.
+- Formate is abundant; can be used.
+
+**Proposed uptake (mmol/gDW/h):**
+- **Acetate**: -8.0 (abundant, reliable)
+- **Butyrate**: -5.0 (abundant, reliable)
+- **L-alanine**: -2.5 (good N source, some C)
+- **L-cysteine**: -1.5 (good N and S source)
+- **Glycine**: -1.0 (small N contribution)
+- **L-serine**: -1.0 (small N and C)
+- **myo-inositol**: -1.5 (C source, good for Bacteroides)
+- **Formate**: +0.5 (minor secretion, not uptake; I'll skip this)
+
+**Carbon accounting:**
+- Acetate (C₂): 8.0 × 2 = 16.0 mmol C/gDW/h
+- Butyrate (C₄): 5.0 × 4 = 20.0 mmol C/gDW/h
+- Alanine (C₃): 2.5 × 3 = 7.5 mmol C/gDW/h
+- Cysteine (C₃): 1.5 × 3 = 4.5 mmol C/gDW/h
+- Glycine (C₂): 1.0 × 2 = 2.0 mmol C/gDW/h
+- Serine (C₃): 1.0 × 3 = 3.0 mmol C/gDW/h
+- myo-inositol (C₆): 1.5 × 6 = 9.0 mmol C/gDW/h
+
+**Total C in: 62.0 mmol/gDW/h**
+
+**Nitrogen accounting:**
+- Alanine: 2.5 × 1 = 2.5 mmol N/gDW/h
+- Cysteine: 1.5 × 1 = 1.5 mmol N/gDW/h
+- Glycine: 1.0 × 1 = 1.0 mmol N/gDW/h
+- Serine: 1.0 × 1 = 1.0 mmol N/gDW/h
+
+**Total N in: 6.0 mmol/gDW/h**
+
+**Growth rate:**
+- Carbon needed for growth: 41 mmol C per gram dry weight produced
+- Nitrogen needed for growth: 8 mmol N per gram dry weight produced
+- N-limited: 6.0 / 8 = 0.75 gDW/h growth
+
+**Carbon balance for growth:**
+- Carbon for growth: 0.75 × 41 = 30.75 mmol C/gDW/h
+- Carbon for catabolism (ATP): 62.0 − 30.75 = 31.25 mmol C/gDW/h
+
+**Products released:**
+Assume fermentation of acetate and butyrate yields acetate, butyrate, formate, and CO₂. Amino acids yield CO₂, NH₃ (via ammonium), and organic acids.
+
+Rough stoichiometry:
+- Acetate and butyrate fermentation: mostly recycled as products
+- Amino acids: produce CO₂ + organic acids + ammonium
+
+**Estimated secretion:**
+- **Acetate**: +4.5 mmol/gDW/h (net from fermentation)
+- **Butyrate**: +3.0 mmol/gDW/h (net from fermentation)
+- **Formate**: +2.0 mmol/gDW/h (from acetate oxidation)
+- **CO₂**: +8.0 mmol/gDW/h (from pyruvate and amino acid decarboxylation)
+- **Ammonium**: +1.0 mmol/gDW/h (from amino acid deamination, excess)
+
+**Carbon out check:**
+- Acetate (C₂): 4.5 × 2 = 9.0 mmol C/gDW/h
+- Butyrate (C₄): 3.0 × 4 = 12.0 mmol C/gDW/h
+- Formate (CH₂O₂): 2.0 × 1 = 2.0 mmol C/gDW/h
+- CO₂: 8.0 mmol C/gDW/h
+- Biomass: 30.75 mmol C/gDW/h
+
+**Total C out: 9.0 + 12.0 + 2.0 + 8.0 + 30.75 = 61.75 mmol C/gDW/h ≈ 62.0 ✓**
+
+**Growth rate: 0.75 /h** (N-limited, realistic for mid-exponential phase with depleting amino acids)
+
+This is consistent with my recent history (0.38–0.45 /h) and slightly lower, reflecting amino acid depletion.
+
+---
+
+```json
+{
+  "fluxes": {
+    "ac": -8.0,
+    "but": -5.0,
+    "ala__L": -2.5,
+    "cys__L": -1.5,
+    "gly": -1.0,
+    "ser__L": -1.0,
+    "inost": -1.5,
+    "ac": 4.5,
+    "but": 3.0,
+    "for": 2.0,
+    "co2": 8.0,
+    "nh4": 1.0
+  },
+  "growth_rate": 0.75,
+  "rationale": "Bacteroides fragilis continues saccharolytic and proteolytic fermentation. Acetate and butyrate are abundant and well-utilized; amino acids provide limiting nitrogen (6 mmol/gDW/h in, 8 needed for growth). Growth is N-limited at 0.75 /h. Carbon balance: 62 mmol in, 30.75 for biomass, 31.25 for catabolic products (acetate, butyrate, formate, CO₂). Ammonium released from amino acid deamination.",
+  "confidence": 0.72
+}
+```

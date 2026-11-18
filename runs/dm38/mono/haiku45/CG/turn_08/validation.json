@@ -1,0 +1,45 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 8,
+  "growth_claimed": 0.18,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=35.7 out=37.8 biomass=6.17"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.187 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0471 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.18 -> 0",
+   "C: secretions scaled by 0.992"
+  ],
+  "rationale": "Nitrogen severely limiting at 16h remaining. Fermenting arabinose + amino acids to support modest growth (0.18/h). Carbon-balanced fermentation to acetate, butyrate, CO2, formate. Nitrogen sourced fro",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "arab__L": -6.0,
+   "asn__L": -0.8,
+   "pro__L": -0.5,
+   "nh4": -0.3,
+   "ac": 6.5,
+   "but": 3.5,
+   "co2": 10.0,
+   "for": 0.8
+  },
+  "fluxes_applied": {
+   "arab__L": -6.0,
+   "asn__L": -0.8,
+   "pro__L": -0.5,
+   "nh4": -0.3,
+   "ac": 6.4458,
+   "but": 3.4708,
+   "co2": 9.9167,
+   "for": 0.7933,
+   "pi": -0.1871,
+   "so4": -0.0471
+  }
+ }
+]

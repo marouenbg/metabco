@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "ac": 7.0,
+  "but": 5.0,
+  "for": 1.0,
+  "nh4": -1.0
+ },
+ "growth_rate": 0.0476,
+ "rationale": "Utilizing glucose and lactate for fermentation to produce acetate, butyrate, and formate, with growth rate limited by carbon balance.",
+ "confidence": 0.9
+}

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "but": -4.0,
+  "ac": 2.0,
+  "nh4": -2.2,
+  "phe__L": -0.8,
+  "leu__L": -0.6,
+  "for": 1.2,
+  "co2": 3.5,
+  "h2": 0.1
+ },
+ "growth_rate": 0.18,
+ "rationale": "Nitrogen-limited growth in stationary phase. Fermenting butyrate and acetate with amino acid supplementation. Releasing acetate, formate, and CO2 as overflow. Nitrogen availability constrains growth to 0.18/h.",
+ "confidence": 0.62
+}

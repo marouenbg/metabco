@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "pro__L": -2.0,
+  "for": 2.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Balanced carbon and nitrogen uptake with fermentation product secretion",
+ "confidence": 0.7
+}

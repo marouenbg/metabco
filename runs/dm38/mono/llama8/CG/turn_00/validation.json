@@ -1,0 +1,49 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 0,
+  "growth_claimed": 0.7,
+  "growth_allowed": 0.7,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: ppa",
+   "no_transporter: h2s"
+  ],
+  "repairs": [
+   "P: credited 0.728 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.183 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "I will take up D-glucose and L-arginine as my primary carbon and nitrogen sources, respectively. I will also take up ammonium as a supplementary nitrogen source. I will produce acetate, butyrate, prop",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arg__L": -5.0,
+   "nh4": -0.1,
+   "lac__L": 5.0,
+   "for": 2.0,
+   "h2": 1.0,
+   "ac": 5.0,
+   "but": 1.0,
+   "ppa": 1.0,
+   "co2": 0.0,
+   "h2s": 0.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arg__L": -5.0,
+   "nh4": -0.1,
+   "lac__L": 5.0,
+   "for": 2.0,
+   "h2": 1.0,
+   "ac": 5.0,
+   "but": 1.0,
+   "ppa": 1.0,
+   "co2": 0.0,
+   "h2s": 0.0,
+   "pi": -0.7278,
+   "so4": -0.1832
+  }
+ }
+]

@@ -1,0 +1,106 @@
+# Metabolic reasoning for Blautia hydrogenotrophica DSM 10507 at t=40h
+
+## Genomic capabilities and available substrates
+
+*Blautia hydrogenotrophica* is a strict anaerobe capable of:
+- **Hydrogenotrophic growth**: CO₂ + H₂ → acetate (primary known metabolism)
+- **Heterotrophic fermentation**: sugars, amino acids → acetate, formate, H₂
+- **Amino acid fermentation**: particularly arginine via the arginine deiminase pathway
+
+Looking at turn 9, I reported zero growth despite abundant substrates. This suggests I hit a constraint—likely **hydrogen depletion**. My previous strategy (turn 8) consumed H₂ at -8.00 mmol/gDW/h while producing it slowly. By turn 9, H₂ was exhausted or critically low, blocking autotrophic CO₂ fixation.
+
+## Current substrate assessment
+
+**Available for uptake:**
+- **CO₂** (66.03 mM): I can fix this via the reductive acetyl-CoA pathway, but only if H₂ is available
+- **Acetate** (45.52 mM): Already a product; limited value as carbon source
+- **Formate** (15.26 mM): Can be oxidized to CO₂ + H₂ (net H₂ production)
+- **L-arginine** (11.19 mM): Excellent—arginine deiminase pathway yields ammonia, CO₂, and ATP
+- **Amino acids** (ser, cys, pro, ala, gly, phe, leu, tyr, val, etc.): Fermentable, but most are scarce
+- **L-lactate** (4.002 mM): Fermentable
+- **Maltose** (4.382 mM): Fermentable if I have maltose transport (likely yes, given prior glucose use)
+
+**Cannot use efficiently:**
+- Nitrate (0.11 mM): too low; anaerobic nitrate reduction is not my primary strategy
+- Vitamins, cofactors: already present in excess
+
+## Metabolic strategy for recovery
+
+At t=40h (8 h remaining), I need to:
+
+1. **Restart growth** using fermentation of abundant amino acids and carbohydrates
+2. **Avoid H₂ starvation**: I'll oxidize formate to regenerate H₂ and CO₂
+3. **Prioritize arginine**: high N content (supports growth), yields ammonia, CO₂, and ATP
+4. **Use maltose and lactate** as secondary carbon/energy sources
+
+**Proposed pathway:**
+- Uptake: **arginine** (-3.0), **formate** (-5.0), **maltose** (-2.0), **lactate** (-2.0)
+- Oxidize formate → CO₂ + H₂ (net reductive)
+- Ferment arginine, maltose, lactate → acetate, formate, CO₂, H₂
+- Net products: **acetate, formate, CO₂, H₂** (and NH₄⁺ from arginine)
+
+## Carbon and nitrogen audit
+
+**Carbon inputs (mmol/gDW/h):**
+- Arginine (C₆): 3.0 × 6 = 18.0
+- Formate (C₁): 5.0 × 1 = 5.0
+- Maltose (C₁₂): 2.0 × 12 = 24.0
+- Lactate (C₃): 2.0 × 3 = 6.0
+- **Total in: 53.0 mmol C/gDW/h**
+
+**Growth requirement:**
+- Growth rate estimate: With 53 mmol C and 38 mmol needed per g, growth ≈ 53/38 ≈ **1.39 /h** (upper limit)
+- But N is limiting: arginine provides 3.0 × 1 = 3.0 mmol N; need 10 mmol N per g
+- Realistic growth: ~0.30 /h (limited by N availability)
+
+**Carbon outputs (mmol/gDW/h) at μ = 0.30:**
+- Biomass cost: 0.30 × 38 = 11.4 mmol C
+- Fermentation products (acetate + formate + CO₂): 53.0 - 11.4 = 41.6 mmol C
+- Allocate: acetate +15.0, formate +12.0, CO₂ +14.6
+
+**Check: 15.0 + 12.0 + 14.6 = 41.6 ✓**
+
+**Nitrogen audit:**
+- Input: 3.0 mmol N (from arginine)
+- Biomass cost: 0.30 × 10 = 3.0 mmol N
+- Output (NH₄⁺): 0 (all N retained in biomass) ✓
+
+## Final fluxes
+
+```
+Uptake:
+- arginine: -3.0
+- formate: -5.0
+- maltose: -2.0
+- lactate: -2.0
+
+Secretion:
+- acetate: +15.0
+- formate: +12.0
+- co2: +14.6
+- h2: +2.0 (regenerated from formate oxidation)
+- nh4: +0.5 (small overflow from arginine catabolism)
+```
+
+Growth rate: **0.30 /h**
+
+Confidence: **0.65** — I'm recovering from H₂ starvation using formate oxidation and amino acid fermentation, but N limitation constrains growth. The strategy is sound, but exact fermentation stoichiometry for mixed substrates carries uncertainty.
+
+```json
+{
+  "fluxes": {
+    "arg__L": -3.0,
+    "for": -5.0,
+    "malt": -2.0,
+    "lac__L": -2.0,
+    "ac": 15.0,
+    "for": 12.0,
+    "co2": 14.6,
+    "h2": 2.0,
+    "nh4": 0.5
+  },
+  "growth_rate": 0.30,
+  "rationale": "Recovering from H₂ starvation by oxidizing formate to regenerate H₂ and CO₂. Fermenting arginine (N source), maltose, and lactate to acetate, formate, and CO₂. Growth limited by N availability (3 mmol from arginine vs 10 mmol needed per g biomass).",
+  "confidence": 0.65
+}
+```

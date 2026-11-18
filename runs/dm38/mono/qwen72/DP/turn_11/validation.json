@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 11,
+  "growth_claimed": 0.01,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=0 out=0 biomass=0.103"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0131 mmol/gDW/h of pi (declared present in excess)",
+   "N: growth 0.01 -> 0"
+  ],
+  "rationale": "Minimal growth to maintain metabolic activity due to limited carbon and nitrogen availability.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "h2": -2.0,
+   "so4": -1.0,
+   "h2s": 1.0,
+   "for": 1.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "h2": -2.0,
+   "so4": -1.0,
+   "h2s": 1.0,
+   "for": 1.0,
+   "co2": 1.0,
+   "pi": -0.0131
+  }
+ }
+]

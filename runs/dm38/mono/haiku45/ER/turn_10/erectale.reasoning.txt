@@ -1,0 +1,92 @@
+# Reasoning: Eubacterium rectale at turn 10
+
+## Current status
+- Biomass: 5.927 gDW/L
+- Time elapsed: 40 h of 48 h total
+- 8 hours remaining
+- Recent pattern: alternating growth (0.35 /h) and fermentation phases (0 /h)
+
+## Transporters and carbon sources available
+
+*E. rectale* is a butyrate-producing bacterium with the following capabilities:
+- **Can use**: acetate, butyrate, formate (short-chain fatty acids via β-oxidation and fermentation)
+- **Can use**: amino acids (multiple transporters for branched-chain, aromatic, and polar amino acids)
+- **Cannot use efficiently**: CO₂ (not a primary carbon source for this heterotroph; only used for anaplerotic reactions)
+- **Cannot use**: maltose (no α-glucosidase in this strain)
+- **Cannot use**: myo-inositol (lacks inositol permerase)
+
+## Fermentation products
+E. rectale is a strict anaerobe that produces:
+- **Butyrate** (primary product via acetyl-CoA condensation)
+- **Acetate** (overflow/secondary)
+- **Formate** (from pyruvate decarboxylation)
+- **H₂** (from formate or pyruvate)
+- **CO₂** (from decarboxylations)
+
+## Metabolic strategy for this interval
+
+At turn 10, I have:
+- Abundant acetate (50.16 mM) — primary carbon/energy source
+- Substantial butyrate (24.77 mM) — can be oxidized or further fermented
+- Formate (11.15 mM) — useful cofactor regeneration
+- Diverse amino acids — nitrogen sources and secondary carbon
+
+The culture is in late stationary phase (40/48 h). Nutrient depletion is accelerating. I should:
+1. **Maximize growth before resources collapse** — acetate and amino acids are still available
+2. **Ferment acetate to butyrate** — my signature pathway, conserving energy
+3. **Draw nitrogen from amino acids** — glutamine, asparagine, and other amino acids present
+
+## Growth calculation
+
+For growth rate *μ*:
+- Carbon requirement: ~33 mmol C per gDW
+- Nitrogen requirement: ~7 mmol N per gDW
+
+Uptake plan:
+- Acetate: -12.0 mmol/gDW/h (primary carbon)
+- Amino acids (glutamine, asparagine, serine, threonine, glycine): -3.5 mmol/gDW/h (nitrogen + secondary carbon)
+- Formate: -0.8 mmol/gDW/h (cofactor)
+
+Carbon balance:
+- Acetate in: 12.0 × 2 = 24.0 mmol C/gDW/h
+- Amino acids in: ~3.5 × 4 (average) = 14.0 mmol C/gDW/h
+- **Total C in: 38.0 mmol/gDW/h**
+
+For growth *μ* = 0.40 /h:
+- Biomass C cost: 0.40 × 33 = 13.2 mmol/gDW/h
+- Remaining for fermentation: 38.0 − 13.2 = 24.8 mmol/gDW/h
+
+Fermentation products (acetate → butyrate via β-oxidation reversal):
+- Butyrate release: +6.0 mmol/gDW/h (4 C atoms)
+- Formate/CO₂ release: +0.8 mmol/gDW/h
+
+Carbon check: 6.0 × 4 + 0.8 = 24.8 ✓
+
+Nitrogen balance:
+- Glutamine + asparagine: 2.7 + 2.6 = 5.3 mM available
+- Uptake: -2.0 mmol/gDW/h (amino acids)
+- Biomass N cost: 0.40 × 7 = 2.8 mmol/gDW/h ✓
+
+This is sustainable and realistic for E. rectale in late batch culture.
+
+## Confidence
+High (0.85): The metabolic strategy aligns with known E. rectale physiology, mass is balanced, and the growth rate is realistic for nutrient-limited conditions. Minor uncertainty remains about exact transporter kinetics and the precise mix of amino acid utilization.
+
+```json
+{
+  "fluxes": {
+    "ac": -12.0,
+    "gln__L": -1.2,
+    "asn__L": -0.8,
+    "ser__L": -0.5,
+    "thr__L": -0.5,
+    "for": -0.8,
+    "but": 6.0,
+    "co2": 2.4,
+    "nh4": 0.5
+  },
+  "growth_rate": 0.40,
+  "rationale": "E. rectale ferments acetate to butyrate via acetyl-CoA condensation. Uptaking abundant acetate (12 mmol/gDW/h) plus amino acids (2 mmol/gDW/h) for nitrogen yields 38 mmol C/gDW/h. After 13.2 mmol C/gDW/h biomass cost at μ=0.40, remaining 24.8 mmol C/gDW/h is fermented to butyrate (6 mmol/gDW/h, 24 C) and CO₂ (2.4 mmol). Nitrogen sourced from glutamine and asparagine (2 mmol/gDW/h) covers 2.8 mmol/gDW/h demand. Late stationary phase; maximize growth before nutrient crash.",
+  "confidence": 0.85
+}
+```

@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "arab__L": -0.4,
+  "gln__L": -0.1,
+  "nh4": -0.1,
+  "lac__L": 0,
+  "for": 0,
+  "but": 0,
+  "ac": 0,
+  "h2": 0,
+  "h2s": 0,
+  "etoh": 0,
+  "co2": 0
+ },
+ "growth_rate": 0.85,
+ "rationale": "producing acetate and butyrate, taking up L-arabinose, L-glutamine, and ammonium",
+ "confidence": 0.9
+}

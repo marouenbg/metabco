@@ -1,0 +1,109 @@
+# Metabolic reasoning for *Bacteroides caccae* at t=24h
+
+## Transporters and substrate utilization
+
+*Bacteroides caccae* is a saccharolytic and proteolytic anaerobe. My genome encodes:
+- **Carbohydrate transporters**: PTS systems and permeases for glucose, arabinose, maltose; likely lactate permease (lactate is a major substrate for this species)
+- **Amino acid transporters**: broad specificity for proteinogenic amino acids
+- **Organic acid transporters**: lactate, acetate, formate, propionate (fermentation products and cross-feeding)
+
+**Carbon sources I can use:**
+- L-lactate (15.58 mM) — excellent; I've been fermenting this
+- D-glucose (0 mM) — depleted by now
+- L-arabinose (10.95 mM) — available, fermentable
+- Amino acids (arg, cys, ser, pro, ala, gly, phe, leu, tyr, val, etc.) — can be catabolized for C and N
+- Maltose (4.382 mM) — fermentable
+
+**Carbon sources I cannot use efficiently:**
+- Acetate, propionate, formate — products of my own fermentation; poor energy yield in anaerobic conditions
+
+## Fermentation strategy
+
+At 24h, I'm in mid-exponential phase (1.522 gDW/L). My recent pattern shows:
+- Heavy lactate uptake (-2.5 to -4.0 mmol/gDW/h)
+- Simultaneous glucose uptake when available
+- Amino acid scavenging (arginine consistently -1.5)
+- Release of acetate, propionate, formate, CO₂
+
+This is typical mixed-acid fermentation of lactate and carbohydrates.
+
+## Current substrate selection
+
+**Primary carbon/energy:**
+- **L-lactate**: 15.58 mM available. Lactate fermentation yields acetate + CO₂ (or lactate → pyruvate → mixed acids). Uptake rate: ~4.0 mmol/gDW/h (consistent with turns 4–5)
+- **L-arabinose**: 10.95 mM available. Fermentable via pentose pathway. Uptake: ~2.0 mmol/gDW/h
+- **Amino acids**: Arginine (14.97 mM) is abundant and I've used ~1.5 mmol/gDW/h. Cysteine (8.31 mM) provides both C and S. Serine (6.4 mM) is gluconeogenic. Uptake: ~1.5 mmol/gDW/h (arginine) + ~0.5 (cysteine/serine mix)
+
+**Nitrogen:**
+- Ammonium (5.415 mM) — direct uptake; I've used ~0.8–1.5 mmol/gDW/h
+- Arginine, cysteine, serine — amino acids provide N; arginine especially valuable (C₆H₁₄N₄O₂)
+
+## Growth rate calculation
+
+**Carbon budget:**
+- Lactate uptake: 4.0 mmol/gDW/h (C₃ = 12 mmol C/gDW/h)
+- Arabinose uptake: 2.0 mmol/gDW/h (C₅ = 10 mmol C/gDW/h)
+- Arginine uptake: 1.5 mmol/gDW/h (C₆ = 9 mmol C/gDW/h)
+- Cysteine uptake: 0.5 mmol/gDW/h (C₃ = 1.5 mmol C/gDW/h)
+- **Total C in: ~32.5 mmol C/gDW/h**
+
+**Carbon cost of growth:**
+- Growth rate μ requires ~42 mmol C/gDW biomass produced
+- If μ = 0.50 /h → 42 × 0.50 = 21 mmol C/gDW/h for biosynthesis
+- Remaining for fermentation: 32.5 − 21 = 11.5 mmol C/gDW/h → products (acetate, propionate, CO₂, formate)
+
+**Nitrogen budget:**
+- Ammonium: 1.0 mmol/gDW/h
+- Arginine: 1.5 mmol/gDW/h (6 N atoms, but 1 is from guanidinium; ~4 usable) → ~6 mmol N/gDW/h
+- Cysteine: 0.5 mmol/gDW/h (1 N) → 0.5 mmol N/gDW/h
+- **Total N in: ~7.5 mmol N/gDW/h**
+- Growth cost: 42 × 0.50 / 4.2 ≈ 5 mmol N/gDW/h
+- **N is sufficient.**
+
+**Growth rate:** 0.50 /h is sustainable and consistent with observed turn 4 (0.60 /h) and turn 5 (0.23 /h, possibly slower due to depletion). I'll target **0.50 /h** as a realistic mid-range.
+
+## Fermentation products
+
+Lactate fermentation typically yields:
+- **Acetate** (main product)
+- **Propionate** (secondary)
+- **CO₂** (from decarboxylation)
+- **Formate** (minor)
+
+I'll release acetate (primary), propionate, CO₂, and formate in stoichiometric proportions consistent with mixed-acid fermentation.
+
+## Final audit
+
+**Carbon in:**
+- Lactate: 4.0 × 3 = 12 mmol C/gDW/h
+- Arabinose: 2.0 × 5 = 10 mmol C/gDW/h
+- Arginine: 1.5 × 6 = 9 mmol C/gDW/h
+- Cysteine: 0.5 × 3 = 1.5 mmol C/gDW/h
+- **Total: 32.5 mmol C/gDW/h**
+
+**Carbon out:**
+- Biomass (growth 0.50 /h): 42 × 0.50 = 21 mmol C/gDW/h
+- Acetate: ~4.0 mmol C/gDW/h (2.0 mmol acetate)
+- Propionate: ~2.0 mmol C/gDW/h (0.67 mmol propionate)
+- CO₂: ~3.5 mmol C/gDW/h
+- Formate: ~1.0 mmol C/gDW/h
+- **Total: ~31.5 mmol C/gDW/h** ✓ (balanced within rounding)
+
+```json
+{
+  "fluxes": {
+    "lac__L": -4.0,
+    "arab__L": -2.0,
+    "arg__L": -1.5,
+    "cys__L": -0.5,
+    "nh4": -1.0,
+    "ac": 2.0,
+    "ppa": 0.67,
+    "co2": 3.5,
+    "for": 1.0
+  },
+  "growth_rate": 0.50,
+  "rationale": "Lactate and arabinose fermentation with amino acid scavenging. Lactate is the preferred substrate; arabinose provides supplementary carbohydrate. Arginine and cysteine supply nitrogen and additional carbon. Mixed-acid fermentation products (acetate, propionate, CO₂, formate) are released. Growth rate of 0.50 /h is supported by C and N availability and is intermediate between observed turns 4 and 5.",
+  "confidence": 0.72
+}
+```

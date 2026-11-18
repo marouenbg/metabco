@@ -1,0 +1,77 @@
+# Metabolic Decision: Anaerostipes caccae DSM 14662 at t=0
+
+## Analysis
+
+**What I can transport:**
+Anaerostipes caccae is a strict anaerobe and obligate saccharolytic bacterium. My genome encodes transporters for:
+- Hexoses: D-glucose (glc__D) ✓
+- Pentoses: L-arabinose (arab__L) ✓
+- Disaccharides: maltose (malt) ✓
+- Lactate: L-lactate (lac__L) ✓ (I can ferment this)
+- Amino acids: I have limited amino acid utilization; the key ones I can use are L-arginine, L-serine, L-alanine, glycine, and cysteine for both carbon and nitrogen
+- Ammonium (nh4) ✓ for nitrogen
+
+**What I cannot efficiently use:**
+- CO2 is present but I am heterotrophic; I do not fix CO2
+- Many amino acids are present but I lack transporters for most of them (phenylalanine, tyrosine, leucine, etc.)
+
+**Preferred strategy:**
+As an obligate fermenter, I will:
+1. **Primary carbon source:** D-glucose (24.98 mM) — my preferred substrate
+2. **Secondary carbon:** L-arabinose (21.31 mM) and maltose (4.382 mM)
+3. **Nitrogen:** Ammonium (9.347 mM) is abundant; I'll also use arginine (21.81 mM) which I can deaminate
+4. **Fermentation products:** Butyrate, acetate, and lactate (my signature outputs); also formate and H2
+
+**Growth calculation:**
+- Glucose uptake: ~15 mmol/gDW/h (realistic for this organism under anaerobic conditions)
+- Arabinose uptake: ~5 mmol/gDW/h (secondary)
+- Arginine uptake: ~3 mmol/gDW/h (nitrogen + carbon)
+- Ammonium uptake: ~2 mmol/gDW/h (nitrogen only)
+
+**Carbon balance:**
+- Glucose (15) + Arabinose (5) + Arginine (3) = 23 mmol C in/gDW/h
+- Growth requirement: ~38 mmol C/g biomass
+- At growth rate μ = 0.5 /h: carbon cost = 38 × 0.5 = 19 mmol C/gDW/h
+- Available for fermentation: 23 − 19 = 4 mmol C/gDW/h
+- This is tight. Fermentation of glucose yields ~2 mol acetate + 2 mol butyrate + CO2 per glucose.
+- At 15 mmol glucose/gDW/h: ~7.5 mmol acetate + 7.5 mmol butyrate + 15 mmol CO2
+- Minus growth cost leaves ~4 mmol net for secretion (covered by partial fermentation).
+
+**Nitrogen balance:**
+- Ammonium: 2 mmol/gDW/h
+- Arginine (deaminated): ~3 mmol N/gDW/h
+- Total N in: 5 mmol N/gDW/h
+- Growth requirement: ~10 mmol N/g biomass × 0.5 /h = 5 mmol N/gDW/h
+- Exactly balanced. ✓
+
+**Fermentation products** (typical for Anaerostipes):
+- Butyrate (primary)
+- Acetate
+- Lactate (minor)
+- Formate
+- H2
+
+I will set growth rate at **0.48 /h** (conservative, accounting for overflow and incomplete utilization).
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -15.0,
+    "arab__L": -5.0,
+    "malt": -2.0,
+    "arg__L": -3.0,
+    "nh4": -2.0,
+    "but": 8.5,
+    "ac": 6.0,
+    "for": 2.5,
+    "h2": 1.5,
+    "co2": 12.0,
+    "lac__L": 1.0
+  },
+  "growth_rate": 0.48,
+  "rationale": "Saccharolytic fermentation of glucose, arabinose, and maltose with arginine and ammonium supporting growth. Fermentation yields butyrate (primary), acetate, and minor formate/H2/lactate. Carbon and nitrogen budgets balanced for anaerobic batch growth.",
+  "confidence": 0.72
+}
+```

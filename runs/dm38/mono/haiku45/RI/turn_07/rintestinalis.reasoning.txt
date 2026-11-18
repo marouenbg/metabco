@@ -1,0 +1,119 @@
+# Metabolic Decision for Roseburia intestinalis L1-82 — Turn 7
+
+## Analysis
+
+### Carbon and nitrogen sources available to me
+
+**Primary carbon sources I can use:**
+- **Butyrate (but)**: 25.07 mM — I am a butyrate-producer, so I have the full metabolic machinery to consume it via β-oxidation and fermentation
+- **Acetate (ac)**: 17.96 mM — I can take this up and use it
+- **Formate (for)**: 2.745 mM — accessible via formate dehydrogenase
+- **Maltose (malt)**: 2.046 mM — I have glycoside transporters for disaccharides
+- **D-glucose (glc__D)**: 0.7746 mM — very low, but accessible
+- **L-arabinose (arab__L)**: depleted (I consumed it turn 5)
+- **myo-inositol (inost)**: 6.272 mM — I can ferment this
+
+**Amino acids as nitrogen + carbon:**
+- **L-arginine (arg__L)**: 13.91 mM — excellent source; I have arginine decarboxylase and can use this for both C and N
+- **L-cysteine (cys__L)**: 7.232 mM — good source
+- **L-serine (ser__L)**: 5.621 mM — can be deaminated
+- **L-alanine (ala__L)**: 5.3 mM — usable
+- Other amino acids present but lower priority
+
+**Nitrogen source:**
+- Ammonium (nh4): not listed as available, so I must rely on amino acid catabolism
+
+### My known fermentation products
+
+From my recent history, I produce:
+- **Butyrate** (but) — my signature product, 5 mmol/gDW/h consistently
+- **Acetate** (ac) — 3–4.5 mmol/gDW/h
+- **CO₂** (co2) — 8–8.5 mmol/gDW/h from decarboxylation
+- **Formate** (for) — trace amounts (0.5 mmol/gDW/h)
+- **Hydrogen** (h2) — trace (0.2 mmol/gDW/h)
+
+I am an obligate anaerobe using mixed-acid fermentation, with butyrate as my primary end product.
+
+### Current metabolic strategy
+
+I'm at 28 h of a 48 h batch. I have:
+- Abundant butyrate, acetate, and amino acids (especially arginine, cysteine, serine)
+- Declining glucose and simple sugars
+- Good supply of inositol
+
+**Key observation:** Butyrate and acetate are accumulating products from prior fermentation. I can consume these via β-oxidation coupled to fermentation. Arginine is especially valuable—it provides both carbon and nitrogen, and I can decarboxylate it to putrescine while capturing energy.
+
+### Carbon and nitrogen balance calculation
+
+**Planned uptake:**
+- Butyrate: -8.0 mmol/gDW/h (4 carbons each = 32 C)
+- Acetate: -6.0 mmol/gDW/h (2 carbons each = 12 C)
+- L-arginine: -3.0 mmol/gDW/h (6 carbons, 2 nitrogens = 18 C, 6 N)
+- L-cysteine: -1.5 mmol/gDW/h (3 carbons, 1 nitrogen = 4.5 C, 1.5 N)
+- L-serine: -1.0 mmol/gDW/h (3 carbons, 1 nitrogen = 3 C, 1 N)
+- myo-inositol: -2.0 mmol/gDW/h (6 carbons = 12 C)
+
+**Total carbon in:** 32 + 12 + 18 + 4.5 + 3 + 12 = **81.5 mmol C/gDW/h**
+
+**Planned secretion (fermentation products):**
+- Butyrate: +5.0 mmol/gDW/h (20 C)
+- Acetate: +4.0 mmol/gDW/h (8 C)
+- CO₂: +8.0 mmol/gDW/h (8 C)
+- Formate: +0.5 mmol/gDW/h (0.5 C)
+
+**Total carbon out (products):** 20 + 8 + 8 + 0.5 = **36.5 mmol C/gDW/h**
+
+**Carbon for growth:** 81.5 − 36.5 = **45 mmol C/gDW/h**
+
+**Growth rate calculation:** At 38 mmol C per gram of biomass produced:
+- Growth = 45 / 38 = **1.18 /h**
+
+Wait—this is too high. Let me recalibrate. My recent turns show growth rates of 0.35–0.48 /h. Let me use a more conservative uptake.
+
+**Revised uptake:**
+- Butyrate: -5.0 mmol/gDW/h (20 C)
+- Acetate: -4.0 mmol/gDW/h (8 C)
+- L-arginine: -2.5 mmol/gDW/h (15 C, 5 N)
+- L-cysteine: -1.0 mmol/gDW/h (3 C, 1 N)
+- L-serine: -0.8 mmol/gDW/h (2.4 C, 0.8 N)
+- myo-inositol: -1.5 mmol/gDW/h (9 C)
+
+**Total C in:** 20 + 8 + 15 + 3 + 2.4 + 9 = **57.4 mmol C/gDW/h**
+**Total N in:** 5 + 1 + 0.8 = **6.8 mmol N/gDW/h**
+
+**Products:**
+- Butyrate: +5.0 (20 C)
+- Acetate: +3.5 (7 C)
+- CO₂: +8.0 (8 C)
+- Formate: +0.4 (0.4 C)
+
+**Total C out:** 35.4 mmol C/gDW/h
+**Carbon for growth:** 57.4 − 35.4 = **22 mmol C/gDW/h** → **0.58 /h growth**
+
+**Nitrogen check:** 6.8 mmol N available; at ~10 mmol N per gram biomass, 0.58 /h growth needs 5.8 mmol N. ✓ Feasible.
+
+This aligns with my recent pattern (turns 3–6: 0.35–0.48 /h). A rate of **0.50 /h** is conservative and realistic.
+
+---
+
+```json
+{
+  "fluxes": {
+    "but": -5.0,
+    "ac": -4.0,
+    "arg__L": -2.5,
+    "cys__L": -1.0,
+    "ser__L": -0.8,
+    "inost": -1.5,
+    "co2": 8.0,
+    "for": 0.4
+  },
+  "products": {
+    "but": 5.0,
+    "ac": 3.5
+  },
+  "growth_rate": 0.50,
+  "rationale": "I consume butyrate and acetate via β-oxidation, paired with amino acid catabolism (arginine, cysteine, serine) for nitrogen and additional carbon. Inositol provides fermentable hexose. Fermentation yields butyrate, acetate, and CO₂ as end products. Carbon balance: 57.4 in − 35.4 products = 22 mmol C for biomass at 38 mmol C/g = 0.58 /h; conservatively report 0.50 /h. Nitrogen: 6.8 mmol N in supports this growth rate.",
+  "confidence": 0.72
+}
+```

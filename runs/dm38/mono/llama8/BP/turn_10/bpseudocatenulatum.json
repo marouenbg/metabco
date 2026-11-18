@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "glc__D": 6.67,
+  "lac__L": 6.67,
+  "for": 6.67
+ },
+ "growth_rate": 3.0,
+ "rationale": "Utilizing D-glucose and L-lactate at moderate rates, with a focus on balancing carbon and nitrogen fluxes to support a growth rate of 3 gDW/h.",
+ "confidence": 0.8
+}

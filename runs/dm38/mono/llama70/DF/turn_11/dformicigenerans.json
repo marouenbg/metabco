@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "for": -2.0,
+  "leu__L": -1.5,
+  "inost": -1.0,
+  "but": 5.0,
+  "ac": 2.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Balanced carbon budget with formate, L-leucine, and myo-inositol uptake",
+ "confidence": 0.8
+}

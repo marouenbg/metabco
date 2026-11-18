@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 9,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: phe__L",
+   "n_imbalance: in=3.67 out=0 biomass=4.66",
+   "p_imbalance: in=0 out=0 biomass=0.508"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake phe__L to pool limit -3.67",
+   "S: credited 0.118 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.45 -> 0.372",
+   "P: growth 0.372 -> 0"
+  ],
+  "rationale": "Optimizing growth and survival in a sealed batch culture by utilizing available carbon sources and producing fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "phe__L": -5.0,
+   "ppa": 2.5,
+   "succ": 1.5,
+   "lac__L": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "phe__L": -3.6694,
+   "ppa": 2.5,
+   "succ": 1.5,
+   "lac__L": 1.0,
+   "so4": -0.1178
+  }
+ }
+]

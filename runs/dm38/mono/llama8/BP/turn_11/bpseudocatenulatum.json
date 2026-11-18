@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -26.12,
+  "nh4": -6.672,
+  "for": 16.2,
+  "h2": 4.32,
+  "co2": 16.2
+ },
+ "growth_rate": 0.54,
+ "rationale": "Utilizing D-glucose as the primary carbon source and ammonium as the nitrogen source, with production of formate and hydrogen to account for biomass production.",
+ "confidence": 0.9
+}

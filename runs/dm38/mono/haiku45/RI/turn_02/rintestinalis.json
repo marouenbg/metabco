@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -8.0,
+  "nh4": -4.0,
+  "pi": -0.43,
+  "but": 5.0,
+  "ac": 3.0,
+  "co2": 8.0,
+  "for": 0.5
+ },
+ "growth_rate": 0.37,
+ "rationale": "Roseburia intestinalis is a lactate/glucose fermenter producing butyrate and acetate. Lactate and glucose remain abundant (27.31 and 24.18 mM). Continuing established high-rate co-fermentation (10 mmol lactate, 8 mmol glucose per gDW/h) with 0.37 /h growth is sustainable for 4 more hours given ammonium availability (8.948 mM supports ~2 h at 4 mmol/gDW/h). Carbon balance: 18 mmol C in \u2212 14.06 mmol C biomass = 3.94 mmol C for fermentation products, consistent with butyrate/acetate/CO\u2082/formate stoichiometry in lactate fermentation.",
+ "confidence": 0.75
+}

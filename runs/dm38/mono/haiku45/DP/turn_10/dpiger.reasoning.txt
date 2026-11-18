@@ -1,0 +1,106 @@
+# Metabolic Decision for Desulfovibrio piger — Turn 10 (t=40h)
+
+## Analysis
+
+**Current Status:**
+- Biomass: 2.05 gDW/L in a 1 mL sealed vessel
+- Time remaining: 8 hours (to 48h total)
+- Anaerobic, sulfate-reducing conditions maintained
+
+**Carbon and Nitrogen Source Assessment:**
+
+*Available transporters and substrates:*
+- D-glucose (3.256 mM): Desulfovibrio can ferment glucose; good carbon source
+- L-arabinose (21.31 mM): Pentose sugar; transportable via PTS or permeases
+- Maltose (4.382 mM): Disaccharide; may be limiting for transport
+- Amino acids (serine, cysteine, proline, alanine, etc.): Desulfovibrio can catabolize these for both C and N
+- Formate (2.168 mM): Can be oxidized; low concentration
+- CO₂ (102.5 mM): Abundant but not a growth carbon source for heterotroph
+- H₂S (32.38 mM): Product of sulfate reduction; not a primary carbon source
+- Ammonium (1.837 mM): Nitrogen source, but limited
+
+*Cannot efficiently use:*
+- Lactate is absent (was produced in earlier turns, now consumed)
+- Acetate (absent from current environment) was previously available
+- Nitrate (trace): Desulfovibrio prefers sulfate/sulfite
+
+**Fermentation Strategy:**
+
+Given the sealed batch conditions and depletion of lactate/acetate, I should:
+1. **Oxidize glucose and arabinose** via fermentation, reducing sulfate to H₂S
+2. **Catabolize amino acids** for both carbon and nitrogen recovery
+3. **Produce acetate and CO₂** as primary fermentation products
+4. Continue sulfate reduction as the electron sink
+
+Recent turns show I can grow on glucose + sulfate reduction (turn 9: 0.150 /h on glucose + arginine). Turn 8 showed zero growth when only acetate was available and depleted.
+
+**Growth Rate Calculation:**
+
+Target: Moderate growth rate sustainable on remaining glucose and arabinose.
+
+- Glucose uptake: ~3.0 mmol/gDW/h (limited by availability: 3.256 mM)
+- Arabinose uptake: ~2.0 mmol/gDW/h (abundant at 21.31 mM)
+- Amino acids (serine, cysteine, arginine): ~1.5 mmol C/gDW/h + N source
+
+Total C uptake: ~6.5 mmol C/gDW/h
+
+Carbon budget for growth at μ = 0.15 /h:
+- Biomass cost: 0.15 × 43 = 6.45 mmol C/gDW/h
+- Fermentation products (acetate + CO₂): ~0.05 mmol C/gDW/h net (minimal overflow)
+
+This is tight but feasible. Nitrogen from amino acids (serine, cysteine) + ammonium should cover ~1.5 mmol N/gDW/h needed.
+
+**Stoichiometry Check:**
+
+Glucose fermentation with sulfate reduction:
+- C₆H₁₂O₆ + SO₄²⁻ → products
+- Expected: acetate, CO₂, H₂S
+
+For 3 mmol glucose:
+- 18 mmol C in
+- ~6 mmol C for biomass (at 0.15 /h over 4h)
+- ~12 mmol C as products (acetate, CO₂)
+
+Sulfate reduction: 2 mmol SO₄²⁻/gDW/h (historical pattern) → 2 mmol H₂S
+
+**Final Flux Decision:**
+
+```
+Uptake:
+- glc__D: -3.0 (glucose fermentation)
+- arab__L: -2.0 (arabinose fermentation)
+- ser__L: -1.2 (amino acid catabolism, N source)
+- cys__L: -0.8 (amino acid catabolism, N + S source)
+- arg__L: -1.0 (amino acid catabolism, N source)
+- so4: -2.0 (sulfate reduction as e⁻ sink)
+- nh4: -0.3 (ammonium for biosynthesis)
+
+Secretion:
+- ac: +3.5 (acetate from fermentation)
+- co2: +2.5 (CO₂ from fermentation)
+- h2s: +2.0 (from sulfate reduction)
+
+Growth rate: 0.15 /h
+```
+
+**Confidence: 0.68** — Glucose and arabinose availability support this, but sealed batch conditions and competing amino acid catabolism introduce uncertainty in exact partitioning.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -3.0,
+    "arab__L": -2.0,
+    "ser__L": -1.2,
+    "cys__L": -0.8,
+    "arg__L": -1.0,
+    "so4": -2.0,
+    "nh4": -0.3,
+    "ac": 3.5,
+    "co2": 2.5,
+    "h2s": 2.0
+  },
+  "growth_rate": 0.15,
+  "rationale": "Glucose and arabinose fermentation coupled to sulfate reduction. Amino acids provide supplemental C and N. Acetate and CO₂ are primary fermentation products. Carbon balance: 10 mmol C in, ~6 mmol for biomass, ~4 mmol as products. Sustainable for remaining 8 h.",
+  "confidence": 0.68
+}
+```

@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 8,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.101 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Late batch phase with ammonium depletion; shift to lactate fermentation with amino acid co-metabolism. Produces acetate, formate, propionate via mixed-acid fermentation. Carbon and nitrogen balanced f",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "lac__L": -3.5,
+   "ala__L": -1.0,
+   "cys__L": -0.5,
+   "nh4": -0.5,
+   "ac": 1.8,
+   "for": 0.8,
+   "ppa": 0.7,
+   "co2": 2.5
+  },
+  "fluxes_applied": {
+   "lac__L": -3.5,
+   "ala__L": -1.0,
+   "cys__L": -0.5,
+   "nh4": -0.5,
+   "ac": 1.8,
+   "for": 0.8,
+   "ppa": 0.7,
+   "co2": 2.5,
+   "pi": -0.1014
+  }
+ }
+]

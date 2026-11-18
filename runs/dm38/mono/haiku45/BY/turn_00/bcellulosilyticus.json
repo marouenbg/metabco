@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -6.0,
+  "nh4": -2.5,
+  "arg__L": -1.5,
+  "ac": 8.75,
+  "ppa": 4.83,
+  "but": 2.18,
+  "co2": 17.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Bacteroides cellulosilyticus is a saccharolytic anaerobe. Primary substrates are glucose and lactate; secondary nitrogen from arginine. Mixed-acid fermentation yields acetate, propionate, and butyrate. Growth limited by nitrogen availability (4 mmol/h \u00f7 10 mmol/gDW = 0.40 /h). Carbon balance verified.",
+ "confidence": 0.72
+}

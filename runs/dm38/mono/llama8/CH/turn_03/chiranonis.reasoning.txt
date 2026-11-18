@@ -1,0 +1,17 @@
+To decide on my next metabolic strategy, I'll first consider my capabilities and the available nutrients in the environment. As Clostridium hiranonis TO-931 (DSM 13275), I have a set of transporters that allow me to take up certain substrates. I can use my lactate transporter to take up L-lactate, and my carbon dioxide transporter to take up CO2. I can also utilize my arginine and glutamine transporters to take up L-arginine and L-glutamine, respectively. However, my glucose transporter is not functional, so I cannot take up glucose.
+
+I can use my butyrate transporter to release butyrate as a product. As for the other metabolites mentioned, I can release acetate, formate, hydrogen, and ammonia.
+
+Given the available nutrients, I can support a growth rate of 0.43/h. To calculate this, I'll use the rough estimate that 38 mmol of carbon and 10 mmol of nitrogen are needed per gram of dry weight produced. I can take up 38 mmol of CO2 and 10 mmol of ammonia per gram of dry weight per hour, which would allow me to produce 0.43 grams of dry weight per hour.
+
+Here's my audit of carbon in and out:
+
+* Carbon in: 47.44 mmol/L (CO2) + 28.01 mmol/L (L-lactate) = 75.45 mmol/L
+* Carbon out: 38 mmol/gDW/h (growth) + 15.38 mmol/gDW/h (acetate production) = 53.38 mmol/gDW/h
+* Carbon balance: 75.45 mmol/L (in) - 53.38 mmol/gDW/h (out) = 22.07 mmol/L (excess carbon)
+
+With this audit, I can see that I have excess carbon available for growth and product formation. I'll choose to take up L-lactate, CO2, and ammonia, and release butyrate, acetate, and formate.
+
+Here's my decision in JSON format:
+
+{"fluxes": {"lac__L": -20.00, "co2": -15.38, "nh4": -9.39, "but": 3.51, "ac": 3.51, "for": 3.51}, "growth_rate": 0.43, "rationale": "Based on my transporters and the available nutrients, I chose to take up L-lactate, CO2, and ammonia, and release butyrate, acetate, and formate. I can support a growth rate of 0.43/h.", "confidence": 0.9}

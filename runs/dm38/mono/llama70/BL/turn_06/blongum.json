@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "arg__L": -2.0,
+  "gln__L": -1.0,
+  "ac": 5.0,
+  "for": 2.0,
+  "nh4": -1.0
+ },
+ "growth_rate": 0.34,
+ "rationale": "Utilizing L-lactate as primary carbon source, with L-arginine and L-glutamine as nitrogen sources, and producing acetate and formate as fermentation products",
+ "confidence": 0.8
+}

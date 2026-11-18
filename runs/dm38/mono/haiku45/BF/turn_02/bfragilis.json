@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arab__L": -3.0,
+  "lac__L": -5.0,
+  "arg__L": -4.0,
+  "nh4": -1.5,
+  "cys__L": -0.8,
+  "ser__L": -0.5,
+  "ac": 1.5,
+  "but": 1.2,
+  "for": 0.6,
+  "co2": 2.5
+ },
+ "growth_rate": 0.395,
+ "rationale": "Glucose and arabinose are declining but still primary substrates; lactate uptake increases as it accumulates and becomes cost-effective. Arginine provides both nitrogen and additional catabolizable carbon. Mixed-acid fermentation yields acetate, butyrate, and formate as characteristic products. Growth rate declines moderately as substrate depletion proceeds in batch culture.",
+ "confidence": 0.72
+}

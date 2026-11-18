@@ -1,0 +1,32 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 3,
+  "growth_claimed": 0.267,
+  "growth_allowed": 0.267,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [],
+  "rationale": "Continuing with L-lactate and L-arginine as primary carbon and nitrogen sources, producing acetate and butyrate. Carbon-limited growth rate calculated.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "arg__L": -5.0,
+   "nh4": -4.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "pi": -0.34,
+   "so4": -0.13
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "arg__L": -5.0,
+   "nh4": -4.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "pi": -0.34,
+   "so4": -0.13
+  }
+ }
+]

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "co2": 100.7,
+  "arab__L": 17.37,
+  "inost": 6.272,
+  "nh4": -19.65,
+  "ac": 23.6,
+  "for": 4.32,
+  "h2": 0.43,
+  "h2s": 0.0
+ },
+ "growth_rate": 0.875,
+ "rationale": "Based on the available carbon and nitrogen sources, I can support a growth rate of 0.875 g/h. I take up CO2, L-arabinose (arab__L), and myo-inositol (inost) as carbon sources and ammonium (nh4) as a nitrogen source. I release acetate (ac) and formate (for) as fermentation products and hydrogen (h2) as a gas.",
+ "confidence": 0.8
+}

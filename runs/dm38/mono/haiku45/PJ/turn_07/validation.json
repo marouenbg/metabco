@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 7,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.313 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0654 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Maintain established fermentative metabolism: glucose + lactate + arabinose as primary fermentable carbons; arginine + ammonium for nitrogen. Produce acetate, propionate, succinate via mixed-acid ferm",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "glc__D": -9.5,
+   "lac__L": -6.0,
+   "arab__L": -3.0,
+   "arg__L": -2.5,
+   "nh4": -1.0,
+   "ac": 7.0,
+   "ppa": 4.5,
+   "succ": 2.5,
+   "co2": 5.5
+  },
+  "fluxes_applied": {
+   "glc__D": -9.5,
+   "lac__L": -6.0,
+   "arab__L": -3.0,
+   "arg__L": -2.5,
+   "nh4": -1.0,
+   "ac": 7.0,
+   "ppa": 4.5,
+   "succ": 2.5,
+   "co2": 5.5,
+   "pi": -0.3132,
+   "so4": -0.0654
+  }
+ }
+]

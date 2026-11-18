@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 11,
+  "growth_claimed": 0.42,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=0 out=165 biomass=15.9"
+  ],
+  "warnings": [
+   "no_transporter: lac__D"
+  ],
+  "repairs": [
+   "P: credited 0.49 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.42 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Utilizing readily available carbon dioxide (co2) and hydrogen (h2) to support growth, while also taking up L-cysteine (cys__L) to produce amino acids and other compounds.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "co2": 65.12,
+   "h2": 57.19,
+   "cys__L": 8.4,
+   "lac__D": 10.0,
+   "ac": 10.0,
+   "for": 5.0,
+   "succ": 5.0
+  },
+  "fluxes_applied": {
+   "co2": 0.0,
+   "h2": 57.19,
+   "cys__L": 0.0,
+   "lac__D": 0.0,
+   "ac": 0.0,
+   "for": 0.0,
+   "succ": 0.0,
+   "pi": -0.4899
+  }
+ }
+]

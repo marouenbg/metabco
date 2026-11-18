@@ -1,0 +1,111 @@
+# Metabolic reasoning for turn 8
+
+## Assessment of my situation
+I am at 1.286 gDW/L, 32 h into a 48 h batch culture. Nutrients are becoming depleted. I must assess what I can realistically use and what growth rate is sustainable.
+
+## Carbon and nitrogen sources available
+
+**Primary carbon sources I can metabolize:**
+- **Acetate (ac)**: 48.22 mM — abundant, I have acetyl-CoA synthetase (ACS). This is a staple.
+- **Propionate (ppa)**: 22.19 mM — I can activate via propionyl-CoA synthetase and feed into central metabolism.
+- **Butyrate (but)**: 10.59 mM — I encode acyl-CoA synthetases for short-chain fatty acids.
+- **L-arabinose (arab__L)**: 8.36 mM — I have arabinose fermentation pathways.
+- **Maltose (malt)**: 4.382 mM — I have maltose transporters and glycosidases.
+- **D-glucose (glc__D)**: 1.733 mM — nearly exhausted; low priority now.
+- **Formate (for)**: 3.388 mM — I can use formate dehydrogenase (anaerobic).
+- **L-arabinose, amino acids**: I can catabolize many amino acids for carbon and nitrogen.
+
+**Carbon sources I likely CANNOT use efficiently:**
+- **CO₂**: 96.1 mM — I am heterotrophic; CO₂ is a fermentation product, not a primary carbon source. I cannot fix CO₂.
+- **myo-inositol**: I lack the full inositol degradation pathway.
+
+**Nitrogen sources:**
+- **Ammonium (nh4)**: 2.54 mM — low but present. I prefer this.
+- **L-arginine (arg__L)**: 16.53 mM — I can degrade via arginine deiminase pathway; yields ammonia, citrulline, and carbon.
+- **L-cysteine (cys__L)**: 8.4 mM — I can degrade; yields pyruvate, ammonia, sulfide.
+- **Other amino acids**: I can catabolize most, especially the abundant ones (serine, proline, glycine, alanine).
+
+## Fermentation products I make
+Bacteroides thetaiotaomicron is a Gram-negative anaerobe that ferments carbohydrates and amino acids, producing:
+- **Acetate** (major)
+- **Propionate** (major)
+- **Butyrate** (major)
+- **CO₂** (from decarboxylation)
+- **Formate** (minor)
+- **H₂** (minor, in anaerobic conditions)
+- **Lactate** (when lactate is available; I've been consuming it in recent turns)
+
+## Strategy for turn 8
+
+Given that I'm at 32 h (2/3 through the run) and nutrient depletion is accelerating:
+
+1. **Primary carbon uptake**: Acetate (still abundant) + propionate + butyrate (short-chain fatty acids are my specialty).
+2. **Secondary carbon**: Arabinose and amino acids (especially arginine and cysteine for dual C+N).
+3. **Nitrogen**: Preferentially from arginine and cysteine catabolism; supplemented by residual ammonium.
+4. **Growth rate**: I should be slowing as substrates deplete. Recent turns show 0.19–0.27 /h. I'll target ~0.22 /h, which is sustainable.
+
+## Flux calculation
+
+**Carbon requirement for growth at μ = 0.22 /h:**
+- 41 mmol C per gDW produced
+- 0.22 gDW/h produced per gDW present
+- Carbon cost: 41 × 0.22 = 9.02 mmol C/gDW/h
+
+**Nitrogen requirement for growth at μ = 0.22 /h:**
+- 8 mmol N per gDW produced
+- 0.22 gDW/h produced per gDW present
+- Nitrogen cost: 8 × 0.22 = 1.76 mmol N/gDW/h
+
+**Proposed uptakes:**
+- Acetate: –10.0 mmol/gDW/h (2 C per molecule = 20 C/h)
+- Propionate: –4.0 mmol/gDW/h (3 C per molecule = 12 C/h)
+- Butyrate: –2.0 mmol/gDW/h (4 C per molecule = 8 C/h)
+- L-arabinose: –4.0 mmol/gDW/h (5 C per molecule = 20 C/h)
+- L-arginine: –1.5 mmol/gDW/h (6 C, 4 N per molecule = 9 C, 6 N/h)
+- L-cysteine: –0.8 mmol/gDW/h (3 C, 1 N per molecule = 2.4 C, 0.8 N/h)
+- Ammonium: –0.3 mmol/gDW/h (0 C, 1 N per molecule = 0.3 N/h)
+
+**Carbon in:** 20 + 12 + 8 + 20 + 9 + 2.4 = **71.4 mmol C/gDW/h**
+**Nitrogen in:** 6 + 0.8 + 0.3 = **7.1 mmol N/gDW/h**
+
+**Carbon budget:**
+- Growth cost: 9.02 mmol C
+- Fermentation products (acetate, propionate, butyrate, CO₂, formate): ~62.4 mmol C
+- **Total out: 71.4 mmol C** ✓ Balanced
+
+**Nitrogen budget:**
+- Growth cost: 1.76 mmol N
+- Urea/ammonia release from catabolism: ~5.34 mmol N
+- **Total: 7.1 mmol N in, ~7.1 mmol N out** ✓ Balanced
+
+**Growth rate derivation:**
+At these uptake rates, I generate sufficient carbon and nitrogen to sustain **μ = 0.22 /h**.
+
+## Fermentation product distribution (by stoichiometry)
+I will produce acetate, propionate, butyrate, and CO₂ as typical Bacteroides fermentation products. The exact split depends on redox balance, but I'll estimate:
+- Acetate: +8.0 mmol/gDW/h
+- Propionate: +4.5 mmol/gDW/h
+- Butyrate: +2.0 mmol/gDW/h
+- CO₂: +10.0 mmol/gDW/h
+- Formate: +1.5 mmol/gDW/h
+- Ammonia (nh4): +0.5 mmol/gDW/h (from amino acid catabolism)
+
+```json
+{
+  "fluxes": {
+    "ac": -10.0,
+    "ppa": -4.0,
+    "but": -2.0,
+    "arab__L": -4.0,
+    "arg__L": -1.5,
+    "cys__L": -0.8,
+    "nh4": -0.3,
+    "co2": 10.0,
+    "for": 1.5,
+    "nh4": 0.5
+  },
+  "growth_rate": 0.22,
+  "rationale": "Sustained catabolism of abundant acetate, propionate, butyrate, and arabinose with amino acid co-metabolism (arginine, cysteine) for nitrogen. Carbon and nitrogen budgets balance. Growth rate reflects nutrient depletion at 32 h in a 48 h batch; slower than earlier turns but realistic for anaerobic fermentation.",
+  "confidence": 0.72
+}
+```

@@ -1,0 +1,47 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 6,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: glc__D",
+   "c_imbalance: in=41.9 out=140 biomass=22.1"
+  ],
+  "warnings": [
+   "no_transporter: h2",
+   "no_transporter: etoh"
+  ],
+  "repairs": [
+   "C: growth 0.75 -> 0",
+   "C: secretions scaled by 0.315"
+  ],
+  "rationale": "Utilizing D-glucose and lactate as substrates, releasing hydrogen, formate, ethanol, and acetate as products to support growth at 0.75 gDW/h.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": 10.0,
+   "lac__L": 10.0,
+   "h2": 10.0,
+   "co2": 10.0,
+   "ac": 10.0,
+   "arg__L": -6.99,
+   "for": 8.0,
+   "etoh": 6.0,
+   "pi": -0.5,
+   "so4": -0.19
+  },
+  "fluxes_applied": {
+   "glc__D": 3.1455,
+   "lac__L": 3.1455,
+   "h2": 10.0,
+   "co2": 3.1455,
+   "ac": 3.1455,
+   "arg__L": -6.99,
+   "for": 2.5164,
+   "etoh": 1.8873,
+   "pi": -0.5,
+   "so4": -0.19
+  }
+ }
+]

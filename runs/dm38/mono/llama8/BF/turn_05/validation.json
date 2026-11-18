@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 5,
+  "growth_claimed": 0.047,
+  "growth_allowed": 0.047,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.0427 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0103 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Based on my transporters and the available substrates, I chose to take up L-lactate, D-glucose, and Ammonium (NH4). I can produce butyrate, formate, and hydrogen gas. The growth rate supported by this",
+  "confidence": 1.0,
+  "fluxes_claimed": {
+   "lac__L": -1.5,
+   "glc__D": -0.75,
+   "arg__L": -0.75,
+   "but": 2.5,
+   "for": 1.5,
+   "h2": 0.75,
+   "nh4": 0.75,
+   "co2": 0.2
+  },
+  "fluxes_applied": {
+   "lac__L": -1.5,
+   "glc__D": -0.75,
+   "arg__L": -0.75,
+   "but": 2.5,
+   "for": 1.5,
+   "h2": 0.75,
+   "nh4": 0.75,
+   "co2": 0.2,
+   "pi": -0.0427,
+   "so4": -0.0103
+  }
+ }
+]

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "but": -8.0,
+  "for": -3.0,
+  "gly": -1.5,
+  "cys__L": -0.8,
+  "asp__L": -0.4,
+  "nh4": 1.1,
+  "co2": 2.5
+ },
+ "growth_rate": 0.2,
+ "rationale": "Late stationary phase (40/48 h). Nitrogen is limiting; I'm catabolizing abundant butyrate, acetate, and formate while carefully consuming amino acids for both C and N. Modest growth of 0.20/h is sustainable given amino acid scarcity. Carbon and nitrogen budgets balance.",
+ "confidence": 0.72
+}

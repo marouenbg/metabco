@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -2.0,
+  "ac": 5.0,
+  "ppa": 3.75,
+  "but": 2.5,
+  "co2": 1.25,
+  "for": 0.25
+ },
+ "growth_rate": 0.25,
+ "rationale": "Bacteroides thetaiotaomicron ferments glucose anaerobically to mixed short-chain fatty acids (acetate, propionate, butyrate) and CO\u2082/formate. At 10 mmol glucose/gDW/h and 2 mmol NH\u2084/gDW/h, growth rate of 0.25 /h is supported (41 mmol C and 8 mmol N per gram biomass). Fermentation product ratios reflect typical Bacteroides metabolism. This strategy was successful in turn 0 and remains sustainable given the abundant glucose pool (24.84 mM) and ammonium (9.319 mM) remaining.",
+ "confidence": 0.72
+}

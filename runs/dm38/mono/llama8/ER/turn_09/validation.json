@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "erectale",
+  "turn": 9,
+  "growth_claimed": 0.083,
+  "growth_allowed": 0.083,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0773 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0174 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "D-glucose and L-serine uptake to support growth, with acetate, formate, and hydrogenphosphate production as byproducts.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "ser__L": -6.4,
+   "nh4": -6.17,
+   "co2": 8.3
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "ser__L": -6.4,
+   "nh4": -6.17,
+   "co2": 8.3,
+   "pi": -0.0773,
+   "so4": -0.0174
+  }
+ }
+]

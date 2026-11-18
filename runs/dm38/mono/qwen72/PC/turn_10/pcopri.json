@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "malt": -2.0,
+  "ppa": 2.0,
+  "for": 1.0,
+  "ac": 3.0,
+  "inost": -1.0,
+  "arg__L": -1.0,
+  "gln__L": -1.0,
+  "lys__L": -1.0,
+  "nh4": 3.0
+ },
+ "growth_rate": 0.089,
+ "rationale": "Utilizing maltose, propionate, formate, acetate, and myo-inositol for carbon and energy, and L-arginine, L-glutamine, and L-lysine for nitrogen. Producing acetate, propionate, and formate as fermentation products.",
+ "confidence": 0.8
+}

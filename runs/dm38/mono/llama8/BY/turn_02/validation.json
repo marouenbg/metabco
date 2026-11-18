@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "bcellulosilyticus",
+  "turn": 2,
+  "growth_claimed": 0.91,
+  "growth_allowed": 0.91,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 1.14 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.238 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Selected L-lactate (lac__L), carbon dioxide (co2), and Ammonium (nh4) as primary carbon and nitrogen sources. Released acetate (ac), butyrate (but), and formate (for) as primary fermentation products.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -14.26,
+   "co2": -47.57,
+   "nh4": -21.81,
+   "ac": 0.91,
+   "but": 0.91,
+   "for": 0.91
+  },
+  "fluxes_applied": {
+   "lac__L": -14.26,
+   "co2": -47.57,
+   "nh4": -21.81,
+   "ac": 0.91,
+   "but": 0.91,
+   "for": 0.91,
+   "pi": -1.1399,
+   "so4": -0.2382
+  }
+ }
+]

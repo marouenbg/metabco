@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "nh4": 8.0,
+  "ac": 5.0,
+  "but": 0.0,
+  "lac__L": 0.0,
+  "for": 0.0,
+  "succ": 0.0,
+  "etoh": 0.0,
+  "co2": 0.0,
+  "h2": 0.0,
+  "h2s": 0.0
+ },
+ "growth_rate": 0.125,
+ "rationale": "D-glucose (glc__D) and Ammonium (nh4) uptake supports growth at 0.125/h, with acetate (ac) release.",
+ "confidence": 0.9
+}

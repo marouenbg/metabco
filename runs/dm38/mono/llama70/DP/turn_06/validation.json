@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 6,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "s_imbalance: in=2 out=5 biomass=0.0523"
+  ],
+  "warnings": [
+   "no_transporter: arab__L"
+  ],
+  "repairs": [
+   "P: credited 0.263 mmol/gDW/h of pi (declared present in excess)",
+   "S: growth 0.2 -> 0",
+   "S: secretions scaled by 0.42"
+  ],
+  "rationale": "Limited by carbon and nitrogen availability, using L-arabinose and L-cysteine as primary sources",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arab__L": -10.0,
+   "cys__L": -2.0,
+   "h2": -5.0,
+   "ac": 2.5,
+   "co2": 5.0,
+   "h2s": 5.0
+  },
+  "fluxes_applied": {
+   "arab__L": -10.0,
+   "cys__L": -2.0,
+   "h2": -5.0,
+   "ac": 2.5,
+   "co2": 5.0,
+   "h2s": 2.1,
+   "pi": -0.2626
+  }
+ }
+]

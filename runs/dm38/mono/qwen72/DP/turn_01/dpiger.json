@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -5.0,
+  "cys__L": -2.0,
+  "ac": 5.0,
+  "h2": 2.0,
+  "for": 1.0,
+  "so4": -1.0,
+  "h2s": 1.0
+ },
+ "growth_rate": 0.093,
+ "rationale": "Utilizing lactate for carbon and energy, ammonium for nitrogen, and cysteine for sulfur. Producing acetate, hydrogen, formate, and hydrogen sulfide as fermentation products. Carbon and nitrogen balance support a growth rate of 0.093 /h.",
+ "confidence": 0.9
+}

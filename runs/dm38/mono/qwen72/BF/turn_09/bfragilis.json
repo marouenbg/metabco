@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "gly": -2.569,
+  "lys__L": -2.4,
+  "asn__L": -2.6,
+  "ac": 3.0,
+  "but": 2.0,
+  "ppa": 1.0,
+  "co2": 2.0,
+  "h2": 2.0
+ },
+ "growth_rate": 0.1846,
+ "rationale": "Utilizing abundant amino acids for growth and producing typical fermentation products.",
+ "confidence": 0.9
+}

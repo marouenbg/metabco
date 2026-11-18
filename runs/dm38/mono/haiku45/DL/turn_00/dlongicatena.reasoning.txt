@@ -1,0 +1,88 @@
+# Metabolic Decision: Dorea longicatena DSM 13814 at t=0
+
+## Analysis of available transporters and substrates
+
+Dorea longicatena is a strictly anaerobic, gram-positive bacterium known as a butyrate producer in the human gut microbiota. It is a saccharolytic and proteolytic organism.
+
+**Carbon sources I can transport:**
+- **D-glucose (glc__D)**: 24.98 mM — yes, I have PTS and other hexose transporters
+- **L-lactate (lac__L)**: 28.31 mM — yes, I can ferment lactate via lactate utilization pathways
+- **L-arabinose (arab__L)**: 21.31 mM — yes, pentose fermentation capability
+- **Maltose (malt)**: 4.382 mM — yes, disaccharide transporter
+- **Amino acids** (arg, ser, cys, pro, ala, gly, phe, leu, tyr, val, etc.): I possess amino acid transporters and can catabolize amino acids for both carbon and nitrogen
+
+**Abundant sources I cannot use effectively:**
+- CO₂ at 47.62 mM: I am not autotrophic; CO₂ is primarily a fermentation product, not a primary substrate
+
+**Nitrogen sources:**
+- **NH₄⁺**: 9.347 mM — primary nitrogen source
+- **Amino acids**: Multiple sources of both C and N simultaneously
+
+## Fermentation strategy
+
+As a butyrate producer, my primary fermentation pathway is glucose/carbohydrate → pyruvate → acetyl-CoA + butyrate, with lactate as an alternative substrate. I will also catabolize amino acids, particularly arginine (21.81 mM), which is abundant and can be fermented via the arginine deiminase pathway.
+
+## Substrate selection and uptake rates
+
+I will prioritize:
+1. **D-glucose** (24.98 mM): efficient hexose metabolism, ~10 mmol/gDW/h uptake
+2. **L-lactate** (28.31 mM): secondary fermentable substrate, ~8 mmol/gDW/h
+3. **L-arginine** (21.81 mM): provides both C and N; arginine deiminase pathway, ~6 mmol/gDW/h
+4. **L-arabinose** (21.31 mM): pentose, slower than glucose, ~4 mmol/gDW/h
+5. **NH₄⁺**: nitrogen source, ~2 mmol/gDW/h
+
+## Growth calculation
+
+**Carbon balance:**
+- Glucose uptake: 10 mmol/gDW/h (6 carbons each)
+- Lactate uptake: 8 mmol/gDW/h (3 carbons each)
+- Arginine uptake: 6 mmol/gDW/h (6 carbons each)
+- Arabinose uptake: 4 mmol/gDW/h (5 carbons each)
+- **Total C in**: 10×6 + 8×3 + 6×6 + 4×5 = 60 + 24 + 36 + 20 = **140 mmol C/gDW/h**
+
+**Nitrogen balance:**
+- NH₄⁺ uptake: 2 mmol/gDW/h
+- Arginine uptake: 6 mmol/gDW/h (1 N per molecule)
+- **Total N in**: 2 + 6 = **8 mmol N/gDW/h**
+
+**Growth cost and fermentation products:**
+- Growth requires ~38 mmol C and ~10 mmol N per g biomass
+- With 8 mmol N/gDW/h available, growth rate ≈ 8/10 = **0.8 /h**
+- Carbon for growth at 0.8 /h: 38 × 0.8 = 30.4 mmol C/gDW/h
+- Carbon remaining for fermentation: 140 − 30.4 = **109.6 mmol C/gDW/h**
+
+**Fermentation products (butyrate-dominant):**
+Assuming roughly 60% butyrate, 30% acetate, 10% CO₂ (typical for Doera):
+- Butyrate (4C): ~16.4 mmol/gDW/h
+- Acetate (2C): ~8.2 mmol/gDW/h
+- CO₂ (1C): ~8.2 mmol/gDW/h
+- Formate (1C): ~4.1 mmol/gDW/h (trace)
+- H₂: minor, ~1 mmol/gDW/h
+
+**Carbon audit:**
+- In: 140 mmol C
+- Out (growth): 30.4 mmol C
+- Out (fermentation): 16.4×4 + 8.2×2 + 8.2×1 + 4.1×1 = 65.6 + 16.4 + 8.2 + 4.1 = 94.3 mmol C
+- **Total out: 30.4 + 94.3 = 124.7 mmol C ✓ (within 140 mmol)**
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "lac__L": -8.0,
+    "arg__L": -6.0,
+    "arab__L": -4.0,
+    "nh4": -2.0,
+    "but": 16.4,
+    "ac": 8.2,
+    "co2": 8.2,
+    "for": 4.1,
+    "h2": 1.0
+  },
+  "growth_rate": 0.8,
+  "rationale": "Dorea longicatena is a butyrate-producing anaerobe. Glucose, lactate, arginine, and arabinose are fermented via mixed-acid fermentation to butyrate (primary), acetate, and CO₂. Nitrogen limitation from 8 mmol N/gDW/h (NH₄⁺ + arginine) constrains growth to 0.8 /h. Carbon balance verified: 140 mmol C in supports 30.4 mmol C (biomass) + 94.3 mmol C (fermentation products).",
+  "confidence": 0.72
+}
+```

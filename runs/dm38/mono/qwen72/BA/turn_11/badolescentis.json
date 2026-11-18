@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "for": -2.0,
+  "h2s": 1.0,
+  "co2": 1.0,
+  "cys__L": -2.0,
+  "gln__L": -1.0,
+  "val__L": -1.0
+ },
+ "growth_rate": 0.3,
+ "rationale": "Balanced carbon and nitrogen uptake with production of fermentation products to support moderate growth.",
+ "confidence": 0.85
+}

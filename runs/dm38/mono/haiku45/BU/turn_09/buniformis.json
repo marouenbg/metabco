@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -6.0,
+  "arab__L": -2.0,
+  "arg__L": -2.5,
+  "cys__L": -1.5,
+  "ser__L": -1.5,
+  "ala__L": -1.0,
+  "nh4": -1.5,
+  "ac": 2.5,
+  "for": 0.5
+ },
+ "growth_rate": 0.22,
+ "rationale": "Late stationary phase (36/48 h); lactate and arabinose are primary fermentable carbons; arginine provides both C and N; amino acids balance nitrogen deficit; fermentation yields acetate and formate as products.",
+ "confidence": 0.65
+}

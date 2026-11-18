@@ -1,0 +1,42 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 1,
+  "growth_claimed": 0.182,
+  "growth_allowed": 0.182,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: glc__D",
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.13 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0399 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing L-lactate, D-glucose, and L-arginine for growth, producing acetate, propionate, CO2, and H2. Carbon and nitrogen balances support the growth rate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "co2": 2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "co2": 2.0,
+   "h2": 1.0,
+   "pi": -0.1297,
+   "so4": -0.0399
+  }
+ }
+]

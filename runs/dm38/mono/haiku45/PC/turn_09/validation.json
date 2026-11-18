@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 9,
+  "growth_claimed": 0.08,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=11.4 out=37.5 biomass=3.6"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.109 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.08 -> 0",
+   "C: secretions scaled by 0.319"
+  ],
+  "rationale": "Late-stage batch culture (36/48 h). Nitrogen is limiting; abundant acetate, propionate, and formate remain. Slow fermentation with amino acid supplementation supports modest growth. Carbon budget bala",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "ac": 12.0,
+   "ppa": -3.0,
+   "for": 6.0,
+   "cys__L": -0.5,
+   "ala__L": -0.3,
+   "co2": 7.5
+  },
+  "fluxes_applied": {
+   "ac": 3.8304,
+   "ppa": -3.0,
+   "for": 1.9152,
+   "cys__L": -0.5,
+   "ala__L": -0.3,
+   "co2": 2.394,
+   "pi": -0.1091
+  }
+ }
+]

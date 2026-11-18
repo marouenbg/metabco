@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 2,
+  "growth_claimed": 0.41,
+  "growth_allowed": 0.41,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.514 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Nitrogen-limited growth (4.1 mmol N uptake supports 0.41 /h). Glucose + lactate co-fermentation with amino acid catabolism. Mixed-acid fermentation products (acetate, propionate, formate, butyrate, CO",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -9.5,
+   "lac__L": -2.5,
+   "arg__L": -1.8,
+   "cys__L": -0.8,
+   "nh4": -1.5,
+   "ac": 2.5,
+   "ppa": 2.0,
+   "for": 1.5,
+   "co2": 3.0,
+   "but": 0.5
+  },
+  "fluxes_applied": {
+   "glc__D": -9.5,
+   "lac__L": -2.5,
+   "arg__L": -1.8,
+   "cys__L": -0.8,
+   "nh4": -1.5,
+   "ac": 2.5,
+   "ppa": 2.0,
+   "for": 1.5,
+   "co2": 3.0,
+   "but": 0.5,
+   "pi": -0.5136
+  }
+ }
+]

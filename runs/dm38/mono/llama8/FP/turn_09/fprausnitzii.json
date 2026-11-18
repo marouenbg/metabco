@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "but": 10.0,
+  "lac__L": 0,
+  "for": 0,
+  "lac__D": 0,
+  "ac": 10.0,
+  "co2": -33.0,
+  "nh4": -7.0,
+  "h2": 0,
+  "pi": 0,
+  "so4": 0
+ },
+ "growth_rate": 0.35,
+ "rationale": "Butyrate-oxidizing metabolism, prioritizing butyrate uptake and production, with a focus on acetate and butyrate as fermentation products.",
+ "confidence": 0.8
+}

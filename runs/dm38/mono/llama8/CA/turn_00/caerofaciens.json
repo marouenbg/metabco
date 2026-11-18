@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": 8.0,
+  "co2": 12.0,
+  "h2": 0.0,
+  "nh4": 0.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Utilizing lactate for growth, producing lactic acid as a fermentation product, and releasing excess carbon as CO2.",
+ "confidence": 0.9
+}

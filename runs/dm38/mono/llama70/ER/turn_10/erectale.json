@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "but": -5.0,
+  "ser__L": -2.0,
+  "co2": 2.0,
+  "ac": 1.0
+ },
+ "growth_rate": 0.286,
+ "rationale": "Utilizing butyrate and L-serine for carbon and nitrogen, producing butyrate and acetate as fermentation products.",
+ "confidence": 0.8
+}

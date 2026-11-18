@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "buniformis",
+  "turn": 5,
+  "growth_claimed": 0.28,
+  "growth_allowed": 0.28,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.351 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0733 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "L-arabinose uptake and fermentation to short-chain fatty acids",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arab__L": -10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "co2": 2.0
+  },
+  "fluxes_applied": {
+   "arab__L": -10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "co2": 2.0,
+   "pi": -0.3507,
+   "so4": -0.0733
+  }
+ }
+]

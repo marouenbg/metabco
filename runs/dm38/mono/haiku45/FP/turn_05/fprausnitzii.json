@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": -8.0,
+  "arg__L": -2.5,
+  "ser__L": -1.5,
+  "nh4": -1.0,
+  "co2": 8.0,
+  "but": 2.0,
+  "for": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Acetate and arginine are abundant; glucose is depleted. Shifting to mixed amino acid and acetate fermentation. Arginine provides nitrogen; serine adds supplemental C and N. Fermentation yields butyrate, formate, and CO\u2082 as products. Growth rate reflects mid-batch phase with declining carbohydrate availability.",
+ "confidence": 0.72
+}

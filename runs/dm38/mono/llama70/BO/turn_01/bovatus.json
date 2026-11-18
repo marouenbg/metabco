@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -8,
+  "nh4": -5,
+  "lac__L": -1,
+  "ac": 5,
+  "ppa": 2
+ },
+ "growth_rate": 0.214,
+ "rationale": "Balanced carbon and nitrogen uptake for growth and fermentation",
+ "confidence": 0.8
+}

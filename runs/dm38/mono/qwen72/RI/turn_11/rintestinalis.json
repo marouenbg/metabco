@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -3.0,
+  "ac": 2.5,
+  "arg__L": -1.0,
+  "but": 2.5
+ },
+ "growth_rate": 0.1,
+ "rationale": "Utilizing lactate and acetate for carbon, and arginine for nitrogen, to support growth and produce butyrate and acetate.",
+ "confidence": 0.9
+}

@@ -1,0 +1,89 @@
+# Decision reasoning for Bacteroides fragilis NCTC 9343 at t=28h
+
+## Assessment of metabolic state
+
+I am at 2.698 gDW/L with 20 hours of culture remaining. I have been growing intermittently (turns 3–5 showed growth; turn 6 showed zero growth). This suggests I hit a metabolic limitation or unfavorable condition. I must now reassess what I can use and commit to a sustainable strategy.
+
+## Carbon and nitrogen source analysis
+
+**What I can transport and use:**
+- **Amino acids**: I have abundant L-proline (5.9 mM), L-phenylalanine (4.5 mM), L-cysteine (4.173 mM), L-leucine (3.6 mM), and many others. B. fragilis has permeases for amino acids and can catabolize them for both carbon and nitrogen.
+- **Short-chain fatty acids**: Acetate (28.08 mM) and butyrate (21.85 mM) are present and I have the metabolic machinery to use them (acetyl-CoA and butyryl-CoA pathways).
+- **Formate** (18.65 mM): usable as a one-carbon unit and energy source.
+- **CO₂** (84.16 mM): present but cannot be used directly for heterotrophic growth; only as an electron sink or in anaplerotic reactions.
+- **Ammonium** (2.711 mM): limited but available for biosynthesis.
+
+**What I cannot efficiently use:**
+- Glucose and arabinose were consumed in earlier turns but are now depleted (not listed).
+- Maltose was used but is now depleted.
+- Lactate was used but is now depleted.
+
+## Why turn 6 showed zero growth
+
+Turn 6 consumed only alanine, cysteine, and inositol at low rates with no growth reported. This suggests either:
+1. I was in a transition state awaiting substrate depletion signals, or
+2. The uptake rates were too low to support growth kinetics.
+
+## Fermentation strategy
+
+B. fragilis is a Gram-negative obligate anaerobe that ferments amino acids and carbohydrates, producing **acetate, butyrate, propionate, formate, CO₂, and sometimes succinate**. In the absence of fermentable carbohydrates, amino acid fermentation becomes the primary pathway. The Stickland reaction pairs oxidation and reduction of amino acids.
+
+## Proposed uptake and growth calculation
+
+I will prioritize:
+1. **Amino acids** as primary carbon and nitrogen: L-proline (good carbon skeleton), L-leucine, L-phenylalanine, L-cysteine (also provides sulfur).
+2. **Acetate and butyrate** as supplementary carbon and energy.
+3. **Ammonium** for biosynthetic nitrogen (though amino acids provide most).
+
+**Uptake proposal:**
+- L-proline: 3.0 mmol/gDW/h (5 carbons, 1 nitrogen per molecule)
+- L-leucine: 1.5 mmol/gDW/h (6 carbons, 1 nitrogen)
+- L-phenylalanine: 1.2 mmol/gDW/h (9 carbons, 1 nitrogen)
+- L-cysteine: 1.0 mmol/gDW/h (3 carbons, 1 nitrogen, 1 sulfur)
+- Acetate: 4.0 mmol/gDW/h (2 carbons per molecule)
+- Ammonium: 0.8 mmol/gDW/h (1 nitrogen)
+
+**Carbon balance:**
+- Uptake: (3.0×5) + (1.5×6) + (1.2×9) + (1.0×3) + (4.0×2) = 15 + 9 + 10.8 + 3 + 8 = 45.8 mmol C/gDW/h
+- Growth requirement: 41 mmol C/gDW/h for 1 gDW/h growth
+- Fermentation products (acetate, butyrate, formate, CO₂): ~4.8 mmol C/gDW/h
+
+**Nitrogen balance:**
+- Uptake: 3.0 + 1.5 + 1.2 + 1.0 + 0.8 = 7.5 mmol N/gDW/h
+- Growth requirement: 8 mmol N/gDW/h for 1 gDW/h growth
+- This is slightly short; reduce growth rate to 0.93 /h
+
+**Revised growth rate:** 0.93 /h, supporting 38.1 mmol C and 7.44 mmol N consumed in biomass.
+
+**Fermentation products released:**
+- Acetate: +2.5 mmol/gDW/h
+- Butyrate: +1.5 mmol/gDW/h
+- Formate: +0.8 mmol/gDW/h
+- CO₂: +1.0 mmol/gDW/h
+
+Total C released: 2.5×2 + 1.5×4 + 0.8 + 1.0 = 5 + 6 + 0.8 + 1 = 12.8 mmol C/gDW/h
+Total C balance: 45.8 (in) = 38.1 (growth) + 7.7 (products) ✓
+
+## Confidence
+
+Moderate-high (0.75). I am using well-characterized B. fragilis pathways (amino acid fermentation, short-chain fatty acid utilization), but the exact stoichiometry of mixed amino acid fermentation and the precise Stickland coupling reactions introduce some uncertainty. The nitrogen balance is tight.
+
+```json
+{
+  "fluxes": {
+    "pro__L": -3.0,
+    "leu__L": -1.5,
+    "phe__L": -1.2,
+    "cys__L": -1.0,
+    "ac": -4.0,
+    "nh4": -0.8,
+    "ac": 2.5,
+    "but": 1.5,
+    "for": 0.8,
+    "co2": 1.0
+  },
+  "growth_rate": 0.93,
+  "rationale": "Switching to amino acid and acetate fermentation in the absence of carbohydrates. Stickland-like amino acid catabolism provides carbon, nitrogen, and energy. Acetate supplementation maintains reducing power balance. Fermentation products (acetate, butyrate, formate, CO₂) are typical of B. fragilis anaerobic metabolism. Carbon and nitrogen budgets close at growth rate 0.93 /h.",
+  "confidence": 0.75
+}
+```

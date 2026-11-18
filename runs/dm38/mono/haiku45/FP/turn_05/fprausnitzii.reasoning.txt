@@ -1,0 +1,104 @@
+# Reasoning
+
+## Current metabolic state
+I am at 2.772 gDW/L after 20 h of growth. The culture is anaerobic, sealed, with no fresh substrate input. I must work with what remains.
+
+## Available carbon and nitrogen sources
+
+**Abundant carbon sources I can use:**
+- Acetate (ac): 35.28 mM — readily transportable via acetyl-CoA synthetase
+- Butyrate (but): 28.44 mM — I ferment this; can also consume it
+- Formate (for): 7.441 mM — usable
+- CO₂: 94.47 mM — available but primarily a waste product, not a primary carbon source anaerobically
+- Glucose (glc__D): 0.7775 mM — very low; I used it early but it's nearly exhausted
+- Amino acids: serine, proline, alanine, etc. — can be catabolized but are secondary
+
+**Nitrogen sources:**
+- L-arginine (arg__L): 10.75 mM — excellent; I've been using this
+- Ammonium (nh4): 2.887 mM — direct nitrogen source
+- Other amino acids: cysteine, serine, proline, etc. — can be deaminated
+
+**What I cannot use well:**
+- Butyrate and propionate as sole nitrogen sources (no N in them)
+- CO₂ as a primary carbon source without a co-substrate in anaerobic fermentation
+
+## Known fermentation strategy for F. prausnitzii
+- Primary fermentation: glucose/carbohydrates → butyrate + acetate + CO₂
+- Secondary: can consume butyrate under certain conditions or use mixed substrates
+- Arginine is a preferred nitrogen source; supports growth via amino acid catabolism
+- Produces mainly butyrate and acetate; formate as a minor product
+- Can perform mixed-acid fermentation
+
+## Recent pattern analysis
+Turns 1–4 show I've been:
+1. Consuming glucose, lactate, arabinose, maltose (carbohydrates when available)
+2. Consuming arginine for nitrogen
+3. Producing butyrate, acetate, CO₂, and formate
+4. Growth rates: 0.45–0.65 /h
+
+The carbohydrate supply is now nearly exhausted (only 0.78 mM glucose left). I must shift to amino acid catabolism and acetate/butyrate fermentation.
+
+## Growth calculation for turn 5
+
+**Strategy:** 
+- Consume acetate (abundant, 35.28 mM) as primary carbon
+- Consume arginine (10.75 mM) as nitrogen source
+- Consume a small amount of amino acids for supplemental carbon/nitrogen
+- Produce butyrate, acetate, formate, CO₂
+
+**Stoichiometry:**
+- Growth requirement: ~33 mmol C and ~7 mmol N per gDW
+- Over 4 h with current biomass (2.772 gDW/L):
+  - Carbon needed: 2.772 × 33 = 91.5 mmol/L total
+  - Nitrogen needed: 2.772 × 7 = 19.4 mmol/L total
+
+**Proposed uptakes (mmol/gDW/h):**
+- Acetate: -8.0 (acetate is abundant; realistic uptake)
+- L-arginine: -2.5 (good nitrogen source, abundant)
+- L-serine: -1.5 (additional nitrogen + carbon)
+- Ammonium: -1.0 (supplemental nitrogen)
+
+**Carbon balance:**
+- Acetate uptake: 8.0 mmol C/gDW/h (2 C per acetate)
+- Serine uptake: 1.5 mmol C/gDW/h (3 C per serine)
+- Arginine uptake: 2.5 mmol C/gDW/h (6 C per arginine)
+- **Total C in: ~19.5 mmol C/gDW/h**
+
+**Nitrogen balance:**
+- Arginine: 2.5 mmol N/gDW/h (1 N per arginine, but arginine has more complex N)
+- Serine: 1.5 mmol N/gDW/h (1 N per serine)
+- Ammonium: 1.0 mmol N/gDW/h
+- **Total N in: ~5.0 mmol N/gDW/h** (sufficient for growth)
+
+**Growth rate:** 
+With ~19.5 mmol C/gDW/h input and ~33 mmol C/gDW needed for growth:
+- μ ≈ 0.50 /h (realistic for this phase of batch culture with mixed substrates)
+
+**Fermentation products (outputs):**
+- CO₂: +8.0 (from acetate oxidation)
+- Butyrate: +2.0 (fermentation product)
+- Formate: +1.0 (minor fermentation)
+- Acetate: +0.5 (overflow/re-secretion)
+
+**Mass audit:**
+- C in: (8.0×2) + (1.5×3) + (2.5×6) = 16 + 4.5 + 15 = 35.5 mmol C
+- C out (products): (8.0×1) + (2.0×4) + (1.0×1) + (0.5×2) = 8 + 8 + 1 + 1 = 18 mmol C
+- C for biomass: 0.50 × 33 = 16.5 mmol C
+- **Balance: 35.5 ≈ 18 + 16.5 = 34.5 ✓ (acceptable)**
+
+```json
+{
+  "fluxes": {
+    "ac": -8.0,
+    "arg__L": -2.5,
+    "ser__L": -1.5,
+    "nh4": -1.0,
+    "co2": 8.0,
+    "but": 2.0,
+    "for": 1.0
+  },
+  "growth_rate": 0.50,
+  "rationale": "Acetate and arginine are abundant; glucose is depleted. Shifting to mixed amino acid and acetate fermentation. Arginine provides nitrogen; serine adds supplemental C and N. Fermentation yields butyrate, formate, and CO₂ as products. Growth rate reflects mid-batch phase with declining carbohydrate availability.",
+  "confidence": 0.72
+}
+```

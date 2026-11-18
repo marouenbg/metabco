@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 8,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.626 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "I'm choosing to take up glucose and lactate to support growth, while secreting acetate and hydrogen to offset the carbon and nitrogen fluxes required to support growth. I'm also taking up ammonium to ",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "ac": 5.0,
+   "h2": 0.5,
+   "nh4": -5.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "ac": 5.0,
+   "h2": 0.5,
+   "nh4": -5.0,
+   "pi": -0.6263,
+   "so4": -0.1309
+  }
+ }
+]

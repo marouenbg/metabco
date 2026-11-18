@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 11,
+  "growth_claimed": 0.035,
+  "growth_allowed": 0.035,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0407 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Carbon and nitrogen limitation",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "for": -1.0,
+   "lac__L": -0.5,
+   "cys__L": -0.5,
+   "ser__L": -0.25,
+   "pro__L": -0.25,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "for": -1.0,
+   "lac__L": -0.5,
+   "cys__L": -0.5,
+   "ser__L": -0.25,
+   "pro__L": -0.25,
+   "co2": 1.0,
+   "pi": -0.0407
+  }
+ }
+]

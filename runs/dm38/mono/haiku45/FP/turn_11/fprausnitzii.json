@@ -1,0 +1,21 @@
+{
+ "fluxes": {
+  "leu__L": -0.5,
+  "ile__L": -0.4,
+  "val__L": -0.4,
+  "phe__L": -0.4,
+  "tyr__L": -0.4,
+  "lys__L": -0.3,
+  "cys__L": -0.2,
+  "thr__L": -0.2,
+  "ac": -4.0,
+  "for": -1.0,
+  "nh4": -0.3,
+  "co2": 5.0,
+  "but": 2.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.12,
+ "rationale": "Late-stage batch culture (44/48 h). Continuing amino acid and acetate fermentation with mixed-acid end products (butyrate, acetate, formate, H\u2082, CO\u2082). Nitrogen becomes limiting; amino acids provide both C and N. Conservative growth rate reflects substrate depletion and accumulation of fermentation products.",
+ "confidence": 0.65
+}

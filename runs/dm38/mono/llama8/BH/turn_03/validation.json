@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 3,
+  "growth_claimed": 0.263,
+  "growth_allowed": 0.263,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.307 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0688 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 0.583 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "taking up lactate and glucose, releasing acetate and formate as fermentation products, and hydrogen gas.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -5.0,
+   "glc__D": -5.0,
+   "nh4": -2.0,
+   "ac": 2.63,
+   "for": 2.63,
+   "h2": 2.63
+  },
+  "fluxes_applied": {
+   "lac__L": -5.0,
+   "glc__D": -5.0,
+   "nh4": -2.5827,
+   "ac": 2.63,
+   "for": 2.63,
+   "h2": 2.63,
+   "pi": -0.3068,
+   "so4": -0.0688
+  }
+ }
+]

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "arab__L": -15.0,
+  "arg__L": -2.5,
+  "pi": -0.48,
+  "but": 5.0,
+  "ac": 4.5,
+  "co2": 8.0,
+  "for": 0.5,
+  "h2": 0.2
+ },
+ "growth_rate": 0.48,
+ "rationale": "Lactate depleted; switch to abundant L-arabinose (pentose fermentation) with arginine as nitrogen source. Ferment to butyrate, acetate, CO2, formate via mixed-acid pathway. Arabinose at 15 mmol/gDW/h is realistic for pentose uptake; arginine at 2.5 provides N and supplemental C. Growth rate 0.48 /h is typical for Roseburia on arabinose in anaerobic batch culture.",
+ "confidence": 0.72
+}

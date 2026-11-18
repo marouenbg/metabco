@@ -1,0 +1,115 @@
+# Metabolic reasoning for Bacteroides uniformis at t=36h
+
+## Assessment of the situation
+I am at 1.871 gDW/L in a sealed 1 mL anaerobic batch culture with 12 hours remaining (36/48 h). Nutrients are depleting but still present. I need to assess what I can metabolize and sustain growth.
+
+## Carbon and nitrogen sources available and transportable
+
+**Primary carbon sources I can use:**
+- **L-arabinose** (15.33 mM): I have arabinose transporters and can ferment this to acetate, propionate, formate
+- **L-lactate** (9.739 mM): Lactate is a preferred substrate; I can consume and ferment it
+- **Acetate** (8.495 mM): Present but typically a product, not a primary uptake substrate at this pH
+- **L-arginine** (13.83 mM): Can be catabolized for both carbon and nitrogen
+- **L-cysteine** (8.28 mM): Can be used; provides both C and S
+- **Propionate** (6.478 mM): Unlikely to be a net uptake source; typically a product
+- **Amino acids** (ser, pro, ala, gly, phe, leu, tyr, val, gln, asn, lys, thr, ile, his, met, trp): Available in varying amounts; I can transport and catabolize these
+
+**Primary nitrogen sources:**
+- **L-arginine** (13.83 mM): Excellent dual C+N source
+- **Ammonium** (2.889 mM): Limited but usable
+- **Other amino acids**: Provide N but variable C:N ratios
+
+**Sources I cannot use well or at all:**
+- **Glucose**: Not in the list (already consumed in earlier turns)
+- **Maltose** (4.382 mM): I lack strong maltose utilization pathways as a Bacteroides species
+
+## Recent metabolic pattern
+Turns 5, 6, 8 show consistent uptake of:
+- Glucose (unavailable now)
+- Lactate (-6 mmol/gDW/h)
+- Arginine (-2.5 to -3 mmol/gDW/h)
+- Arabinose (-2 mmol/gDW/h)
+- Ammonium (-2 to -2.5 mmol/gDW/h)
+
+Products: Acetate, propionate, formate (typical Bacteroides fermentation profile)
+
+Turn 7 showed 0 growth—likely a metabolic transition or substrate limitation moment.
+
+## Fermentation products this species makes
+As an obligate anaerobe, I produce:
+- **Acetate** (major)
+- **Propionate** (major)
+- **Formate** (minor)
+- Potentially: succinate, lactate (if reoxidizing), H₂
+
+## Growth rate calculation
+
+**Available high-quality substrates:**
+- L-arabinose: 15.33 mM (can take ~2 mmol/gDW/h based on history)
+- L-lactate: 9.739 mM (can take ~6 mmol/gDW/h based on history)
+- L-arginine: 13.83 mM (can take ~2.5 mmol/gDW/h based on history)
+- L-cysteine: 8.28 mM (can take ~1-2 mmol/gDW/h)
+- Amino acids (Ser, Pro, Ala, Gly, Phe, Leu, Tyr): ~30 mM total (can take ~2-3 mmol/gDW/h mixed)
+
+**Proposed uptake strategy:**
+- Lactate: -6 mmol/gDW/h (3 carbons per lactate = 18 C)
+- Arabinose: -2 mmol/gDW/h (5 carbons per arabinose = 10 C)
+- Arginine: -2.5 mmol/gDW/h (6 carbons, 2 nitrogens per arginine = 15 C, 5 N)
+- Cysteine: -1.5 mmol/gDW/h (3 carbons, 1 nitrogen = 4.5 C, 1.5 N)
+- Ammonium: -1.5 mmol/gDW/h (0 C, 1.5 N)
+
+**Carbon balance:**
+- Uptake: 18 + 10 + 15 + 4.5 = 47.5 C mmol/gDW/h
+- Growth requirement: 42 C mmol/gDW/h
+- Available for products: 47.5 - 42 = 5.5 C mmol/gDW/h
+
+**Nitrogen balance:**
+- Uptake: 5 (Arg) + 1.5 (Cys) + 1.5 (NH4) = 8 N mmol/gDW/h
+- Growth requirement: 10 N mmol/gDW/h
+- **Deficit: 2 N mmol/gDW/h** — need more amino acids
+
+**Revised uptake (add more amino acids):**
+- Lactate: -6
+- Arabinose: -2
+- Arginine: -2.5
+- Cysteine: -1.5
+- Serine: -1.5 mmol/gDW/h (2 C, 1 N)
+- Alanine: -1 mmol/gDW/h (3 C, 1 N)
+- Ammonium: -0.5 mmol/gDW/h
+
+**Revised carbon:** 18 + 10 + 15 + 4.5 + 3 + 3 = 53.5 C
+**Revised nitrogen:** 5 + 1.5 + 1 + 1 + 0.5 = 9 N (still short by 1 N)
+
+**Add more ammonium to -1.5:**
+- Nitrogen: 5 + 1.5 + 1 + 1 + 1.5 = 10 N ✓
+- Carbon: 53.5 C
+
+**Growth rate:**
+- Growth = (53.5 - 42) / (42 + 10) = 11.5 / 52 ≈ **0.22 /h**
+
+**Fermentation products (5.5 C released):**
+- Acetate: +2.5 mmol/gDW/h (5 C)
+- Formate: +0.5 mmol/gDW/h (0.5 C)
+- Total: 5.5 C ✓
+
+## Confidence assessment
+Moderate confidence (0.65): I am extrapolating from limited recent data with depleting substrates. The nitrogen balance required careful adjustment. The system is in late stationary phase, so growth will slow further.
+
+```json
+{
+  "fluxes": {
+    "lac__L": -6.0,
+    "arab__L": -2.0,
+    "arg__L": -2.5,
+    "cys__L": -1.5,
+    "ser__L": -1.5,
+    "ala__L": -1.0,
+    "nh4": -1.5,
+    "ac": 2.5,
+    "for": 0.5
+  },
+  "growth_rate": 0.22,
+  "rationale": "Late stationary phase (36/48 h); lactate and arabinose are primary fermentable carbons; arginine provides both C and N; amino acids balance nitrogen deficit; fermentation yields acetate and formate as products.",
+  "confidence": 0.65
+}
+```

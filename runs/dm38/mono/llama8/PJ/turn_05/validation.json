@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 5,
+  "growth_claimed": -0.238,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "negative_growth: -0.238"
+  ],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: h2"
+  ],
+  "repairs": [],
+  "rationale": "Based on my transporters, fermentation products, and carbon and nitrogen balances, I have chosen to take up D-glucose (glc__D), L-lactate (lac__L), and Ammonium (nh4), and release Acetate (ac), Format",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -2.41,
+   "ac": 2.0,
+   "for": 5.0,
+   "h2": 0.5,
+   "pi": -0.78
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -2.41,
+   "ac": 2.0,
+   "for": 5.0,
+   "h2": 0.5,
+   "pi": -0.78
+  }
+ }
+]

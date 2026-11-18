@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 6,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.3,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.203 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0775 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Glucose depleted; switching to lactate and arabinose fermentation with arginine as nitrogen source. Mixed-acid fermentation under anaerobic conditions produces acetate, formate, and propionate. Carbon",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -4.0,
+   "arab__L": -3.0,
+   "arg__L": -2.0,
+   "ac": 4.0,
+   "for": 1.5,
+   "ppa": 1.5,
+   "co2": 5.0,
+   "nh4": 0.5
+  },
+  "fluxes_applied": {
+   "lac__L": -4.0,
+   "arab__L": -3.0,
+   "arg__L": -2.0,
+   "ac": 4.0,
+   "for": 1.5,
+   "ppa": 1.5,
+   "co2": 5.0,
+   "nh4": 0.5,
+   "pi": -0.2027,
+   "so4": -0.0775
+  }
+ }
+]

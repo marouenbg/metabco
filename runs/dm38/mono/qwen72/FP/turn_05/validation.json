@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 5,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.233 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0525 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing with the same metabolic strategy as previous turns, which has been successful. The available nutrients support the chosen growth rate and product formation.",
+  "confidence": 1.0,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "nh4": -7.0,
+   "but": 2.0,
+   "ac": 2.0,
+   "h2": 2.0,
+   "co2": 6.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "nh4": -7.0,
+   "but": 2.0,
+   "ac": 2.0,
+   "h2": 2.0,
+   "co2": 6.0,
+   "pi": -0.2327,
+   "so4": -0.0525
+  }
+ }
+]

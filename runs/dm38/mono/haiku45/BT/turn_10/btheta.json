@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": -8.0,
+  "ppa": -3.0,
+  "arg__L": -1.2,
+  "for": 13.0,
+  "co2": 13.0
+ },
+ "growth_rate": 0.15,
+ "rationale": "Late-stage batch culture (t=40/48h). Nitrogen becoming limiting; amino acid catabolism (arginine) provides N for growth while acetate and propionate supply bulk carbon. Mixed-acid fermentation produces formate and CO\u2082. Conservative growth rate reflects nutrient scarcity and approaching stationary phase.",
+ "confidence": 0.62
+}

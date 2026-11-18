@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 6,
+  "growth_claimed": 0.357,
+  "growth_allowed": 0.357,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.447 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0934 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Balanced uptake of L-arabinose and acetate for carbon, and L-arginine for nitrogen, supporting growth and fermentation product secretion.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "arab__L": -10.0,
+   "ac": 3.0,
+   "arg__L": -5.0,
+   "ppa": 3.0,
+   "but": 1.0
+  },
+  "fluxes_applied": {
+   "arab__L": -10.0,
+   "ac": 3.0,
+   "arg__L": -5.0,
+   "ppa": 3.0,
+   "but": 1.0,
+   "pi": -0.4472,
+   "so4": -0.0934
+  }
+ }
+]

@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "ac": -12.0,
+  "pro__L": -2.0,
+  "succ": 5.0
+ },
+ "growth_rate": 0.333,
+ "rationale": "Utilizing abundant acetate and propionate, producing succinate as a fermentation product, and limiting growth rate based on carbon and nitrogen availability",
+ "confidence": 0.8
+}

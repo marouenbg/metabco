@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": -8.0,
+  "pro__L": -3.0,
+  "ala__L": -2.0,
+  "nh4": -1.0,
+  "ac": 5.0,
+  "ppa": 4.0,
+  "for": 2.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.6,
+ "rationale": "Lactate and amino acids are primary fermentable substrates. Lactate (8 mmol/gDW/h) + proline (3) + alanine (2) provide 39 mmol C and 6 mmol N. Nitrogen limits growth to 0.60 /h, consuming 27 mmol C. Remaining 12 mmol C is fermented to acetate, propionate, formate, and CO\u2082. Carbon balance verified.",
+ "confidence": 0.72
+}

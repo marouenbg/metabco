@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "co2": 2.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.6,
+ "rationale": "L-lactate and L-arginine uptake support growth and fermentation product production",
+ "confidence": 0.8
+}

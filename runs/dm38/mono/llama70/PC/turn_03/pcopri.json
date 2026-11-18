@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "arg__L": -5.0,
+  "ac": 5.0,
+  "ppa": 2.5,
+  "nh4": -2.0,
+  "pi": -0.3,
+  "so4": -0.05
+ },
+ "growth_rate": 0.55,
+ "rationale": "L-lactate and L-arginine utilization for growth and fermentation product formation",
+ "confidence": 0.8
+}

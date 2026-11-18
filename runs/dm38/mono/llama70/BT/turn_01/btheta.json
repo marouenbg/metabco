@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "nh4": -2.5,
+  "ac": 5.0,
+  "ppa": 2.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "Utilizing glucose and ammonium for growth and producing acetate and propionate as fermentation products under anaerobic conditions.",
+ "confidence": 0.8
+}

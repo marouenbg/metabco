@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "arg__L": -4.0,
+  "nh4": -2.0,
+  "ac": 10.0,
+  "ppa": 6.0,
+  "for": 5.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.6,
+ "rationale": "Prevotella copri is saccharolytic and amino-acid fermenting. Glucose and arginine are preferred substrates; uptake rates chosen to support ~0.6/h growth (N-limited by available ammonium + arginine N). Fermentation to acetate, propionate, and formate is consistent with known Prevotella metabolism. Carbon balance: 72 mmol C in, 27 for biomass, 45 for products.",
+ "confidence": 0.65
+}

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "for": -5.0,
+  "h2": 2.5,
+  "nh4": 0.6,
+  "arg__L": -0.6
+ },
+ "growth_rate": 0.227,
+ "rationale": "Continuing acetate and formate fermentation for hydrogen production and L-arginine utilization for growth.",
+ "confidence": 0.9
+}

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "arab__L": -10.0,
+  "ac": 3.0,
+  "arg__L": -5.0,
+  "ppa": 3.0,
+  "but": 1.0
+ },
+ "growth_rate": 0.357,
+ "rationale": "Balanced uptake of L-arabinose and acetate for carbon, and L-arginine for nitrogen, supporting growth and fermentation product secretion.",
+ "confidence": 0.85
+}

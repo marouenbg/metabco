@@ -1,0 +1,30 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 5,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0419 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0329 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing D-glucose and Ammonium to meet energy and nitrogen requirements. Producing acetate, butyrate, and propionate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "nh4": -4.17,
+   "arg__L": -0.5,
+   "pi": -0.09
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "nh4": -4.17,
+   "arg__L": -0.5,
+   "pi": -0.1319,
+   "so4": -0.0329
+  }
+ }
+]

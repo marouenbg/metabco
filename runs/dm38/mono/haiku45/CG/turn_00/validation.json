@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 0,
+  "growth_claimed": 1.0,
+  "growth_allowed": 0.9906,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=99 out=70 biomass=34.3"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 1.04 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.262 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 1 -> 0.991"
+  ],
+  "rationale": "Glucose and lactate are primary fermentable substrates. Arginine provides supplementary nitrogen (6 mmol) combined with ammonium (4 mmol) to meet the 10 mmol/gDW/h biomass nitrogen demand. Remaining c",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -5.0,
+   "arg__L": -6.0,
+   "nh4": -4.0,
+   "ac": 17.5,
+   "but": 7.5,
+   "h2": 2.0,
+   "co2": 5.0
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -5.0,
+   "arg__L": -6.0,
+   "nh4": -4.0,
+   "ac": 17.5,
+   "but": 7.5,
+   "h2": 2.0,
+   "co2": 5.0,
+   "pi": -1.0397,
+   "so4": -0.2617
+  }
+ }
+]

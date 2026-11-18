@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "for": -5.0,
+  "ala__L": -2.0,
+  "ser__L": -1.0,
+  "ppa": 2.0,
+  "nh4": 1.0
+ },
+ "growth_rate": 0.3125,
+ "rationale": "Utilizing abundant carbon and nitrogen sources for growth and fermentation",
+ "confidence": 0.8
+}

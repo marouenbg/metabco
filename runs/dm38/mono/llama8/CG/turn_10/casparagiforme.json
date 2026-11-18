@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": 7.89,
+  "asn__L": 2.6,
+  "ac": 4.54,
+  "but": 4.54,
+  "for": 4.54
+ },
+ "growth_rate": 0.63,
+ "rationale": "taking up D-glucose and L-asparagine, secreting acetate, butyrate, and formate",
+ "confidence": 0.9
+}

@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -8.0,
+  "glc__D": -6.0,
+  "arg__L": -4.0,
+  "nh4": -2.0,
+  "ac": 15.0,
+  "but": 8.0,
+  "co2": 8.0,
+  "h2": 5.0,
+  "for": 3.0
+ },
+ "growth_rate": 0.8,
+ "rationale": "C. hiranonis ferments lactate and glucose while using arginine as primary N source. At 0.8 /h growth, 84 mmol C/h input supports 30.4 mmol C biomass plus 53.6 mmol C fermented to acetate, butyrate, CO\u2082, H\u2082, and formate. N balance: 18 mmol/h in (16 from arginine, 2 from NH\u2084) minus 8 mmol/h for growth leaves 10 mmol/h for fermentation products.",
+ "confidence": 0.72
+}

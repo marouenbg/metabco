@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "nh4": -7.0,
+  "co2": 6.0,
+  "but": 2.0,
+  "ac": 2.0,
+  "h2": 2.0,
+  "pi": -0.23
+ },
+ "growth_rate": 0.25,
+ "rationale": "Continuing to use D-glucose and L-lactate as primary carbon sources while maintaining the same nitrogen uptake and product secretion rates as previous turns to maximize growth and resource utilization.",
+ "confidence": 0.9
+}

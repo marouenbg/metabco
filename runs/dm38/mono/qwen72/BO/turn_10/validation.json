@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 10,
+  "growth_claimed": 0.071,
+  "growth_allowed": 0.071,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "S: credited 0.0186 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing with the same metabolic strategy as previous turns, utilizing D-glucose and L-lactate for carbon and ammonium for nitrogen. Producing acetate and butyrate as fermentation products, with a s",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -1.0,
+   "ac": 7.0,
+   "but": 5.0,
+   "for": 1.0,
+   "pi": -0.09
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -5.0,
+   "nh4": -1.0,
+   "ac": 7.0,
+   "but": 5.0,
+   "for": 1.0,
+   "pi": -0.09,
+   "so4": -0.0186
+  }
+ }
+]

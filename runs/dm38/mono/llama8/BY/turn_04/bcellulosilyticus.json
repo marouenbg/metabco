@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "co2": -46.79,
+  "arg__L": -23.13,
+  "but": 4.79,
+  "lac__L": 4.79,
+  "for": 4.79,
+  "ac": 4.79
+ },
+ "growth_rate": 0.099,
+ "rationale": "Using CO2 as primary carbon source, taking up ammonium, and secreting butyrate, formate, and acetate.",
+ "confidence": 0.9
+}

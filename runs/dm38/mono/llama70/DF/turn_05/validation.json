@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 5,
+  "growth_claimed": 0.17,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=9 out=17 biomass=5.66"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.158 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0357 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.17 -> 0",
+   "C: secretions scaled by 0.556"
+  ],
+  "rationale": "acetate, formate, and L-arginine uptake, with acetate, formate, and carbon dioxide production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": 5.0,
+   "for": 2.0,
+   "arg__L": -1.5,
+   "nh4": -0.5,
+   "co2": 5.0
+  },
+  "fluxes_applied": {
+   "ac": 2.7794,
+   "for": 1.1118,
+   "arg__L": -1.5,
+   "nh4": -0.5,
+   "co2": 2.7794,
+   "pi": -0.1582,
+   "so4": -0.0357
+  }
+ }
+]

@@ -1,0 +1,67 @@
+# Metabolic reasoning for Anaerostipes caccae DSM 14662 at t=32h
+
+## Analysis of available substrates and transport capacity
+
+**Carbon sources I can use:**
+- Acetate (ac): 49.16 mM — I have acetyl-CoA synthase; this is a primary substrate
+- Formate (for): 33.22 mM — formyl-CoA transferase; usable
+- Propionate (ppa): 19.72 mM — propionyl-CoA synthetase; usable
+- Butyrate (but): 4.013 mM — butyryl-CoA synthetase; usable
+- Hydrogen (h2): 11.71 mM — I can use this in syntrophic reduction; limited value alone
+- CO₂: 119.8 mM — I can fix some via Wood-Ljungdahl pathway as an electron sink
+
+**Amino acids present:** My recent history shows I can catabolize L-arginine, L-proline, L-cysteine, L-serine. However, turns 6–7 show zero growth despite amino acid uptake. This suggests I've exhausted preferred substrates and amino acid catabolism alone is energetically unfavorable in this anaerobic, sealed environment.
+
+**Nitrogen source:**
+- Ammonium (nh4): 7.135 mM — currently available, sufficient for growth
+
+## Fermentation strategy
+
+As an obligate anaerobe and acetogen, my known fermentation products are:
+- **Acetate** (major)
+- **Butyrate** (major)
+- **Formate** (secondary)
+- **CO₂** (from decarboxylation and Wood-Ljungdahl)
+- **H₂** (from formate oxidation and reductive metabolism)
+
+My recent turns (6–7) show I was catabolizing amino acids and releasing organic acids with zero growth. This indicates substrate limitation or unfavorable thermodynamics.
+
+## Current situation assessment
+
+At t=32h in a 48h batch, I have:
+- Decent acetate (49.16 mM)
+- Reasonable formate (33.22 mM)  
+- Limited but present butyrate (4.013 mM)
+- Ammonium still available (7.135 mM)
+
+The zero-growth turns suggest I was in a starvation phase after consuming preferred substrates. Now I should resume growth on remaining acetate and formate.
+
+## Growth calculation
+
+**Uptake plan:**
+- Acetate: -12 mmol/gDW/h (primary carbon/energy source)
+- Formate: -8 mmol/gDW/h (secondary carbon/energy source)
+- Ammonium: -2.5 mmol/gDW/h (nitrogen for biosynthesis)
+
+**Carbon balance:**
+- In: 12 (acetate) + 8 (formate) = 20 mmol C/gDW/h
+- Biosynthesis cost: 38 mmol C/gDW/h per gram biomass produced
+- For growth rate μ: carbon consumed for growth = 38μ
+- Remaining carbon for fermentation products: 20 - 38μ
+
+**Nitrogen balance:**
+- In: 2.5 mmol N/gDW/h
+- Biosynthesis cost: 10 mmol N/gDW/h per gram biomass produced
+- For growth rate μ: 2.5 = 10μ → μ = 0.25 /h
+
+**Carbon check at μ = 0.25:**
+- Growth cost: 38 × 0.25 = 9.5 mmol C/gDW/h
+- Available for fermentation: 20 - 9.5 = 10.5 mmol C/gDW/h
+- Fermentation products: acetate +5, formate +3, CO₂ +2.5 (reasonable distribution)
+
+This is sustainable and realistic for this organism at this stage.
+
+**Nitrogen check:**
+- Required: 10 × 0.25 = 2.5 mmol N/gDW/h ✓
+
+{"fluxes": {"ac": -12.0, "for": -8.0, "nh4": -2.5, "ac": 5.0, "for": 3.0, "co2": 2.5}, "growth_rate": 0.25, "rationale": "Resuming growth on remaining acetate and formate after amino-acid starvation phase. Nitrogen limitation sets growth at 0.25/h. Carbon balance closes with fermentation products. Realistic uptake rates and sustainable for sealed batch at 32h mark.", "confidence": 0.72}

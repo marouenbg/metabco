@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "but": -8.0,
+  "malt": -6.0,
+  "arg__L": -2.5,
+  "nh4": -1.0,
+  "ac": 8.5,
+  "for": 2.0,
+  "co2": 5.0,
+  "ppa": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Lactate exhausted; pivoting to butyrate and maltose fermentation. Nitrogen limitation (arginine + ammonium) constrains growth to 0.50/h. Fermentation products reflect mixed-acid pathway typical of F. prausnitzii. Carbon conserved: 119 in = 16.5 (growth) + 102.5 (products).",
+ "confidence": 0.72
+}

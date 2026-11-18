@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -6.0,
+  "arab__L": -3.0,
+  "arg__L": -2.5,
+  "nh4": -1.5,
+  "ac": 7.0,
+  "ppa": 4.0,
+  "succ": 2.0,
+  "co2": 0.5
+ },
+ "growth_rate": 0.2,
+ "rationale": "Sustained mixed-acid fermentation of glucose, lactate, and arabinose with ammonium and arginine as nitrogen sources. Growth rate conservative to avoid nutrient depletion over remaining 32 h. Carbon and nitrogen budgets balanced.",
+ "confidence": 0.65
+}

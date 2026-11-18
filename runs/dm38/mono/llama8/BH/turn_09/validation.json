@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 9,
+  "growth_claimed": 0.72,
+  "growth_allowed": 0.4933,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=22.5 out=5 biomass=27.2"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.84 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.188 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.72 -> 0.493"
+  ],
+  "rationale": "Prioritize hydrogen gas as the primary carbon source, use L-arginine as the primary nitrogen source, and produce acetate as the primary fermentation product.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "h2": 10.0,
+   "arg__L": -2.5,
+   "ac": 2.5,
+   "nh4": 0.5,
+   "co2": -7.5
+  },
+  "fluxes_applied": {
+   "h2": 10.0,
+   "arg__L": -2.5,
+   "ac": 2.5,
+   "nh4": 0.5,
+   "co2": -7.5,
+   "pi": -0.8399,
+   "so4": -0.1885
+  }
+ }
+]

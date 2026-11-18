@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": -7.0,
+  "arg__L": -2.5,
+  "pro__L": -2.0,
+  "for": -1.5,
+  "but": 5.0,
+  "co2": 8.0,
+  "nh4": -0.7
+ },
+ "growth_rate": 0.32,
+ "rationale": "F. prausnitzii catabolizes acetate, amino acids (arginine, proline), and formate under anaerobic conditions, producing butyrate as primary fermentation product with acetate and CO2 as co-products. Carbon is limiting at this stage; uptake of 40.5 mmol C/gDW/h minus 30 mmol C/gDW/h output leaves 10.5 mmol C/gDW/h for biomass, supporting 0.32 /h growth. Nitrogen (4.0 mmol/gDW/h) is sufficient.",
+ "confidence": 0.68
+}

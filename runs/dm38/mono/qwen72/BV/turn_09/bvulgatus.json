@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "ppa": 5.0,
+  "but": 5.0,
+  "for": 2.0,
+  "nh4": -2.0,
+  "cys__L": -2.0,
+  "ser__L": -2.0,
+  "pro__L": -2.0,
+  "lac__L": 2.0
+ },
+ "growth_rate": 0.39,
+ "rationale": "Utilizing abundant acetate, propionate, butyrate, and formate for carbon, and ammonium, cysteine, serine, and proline for nitrogen. Producing acetate, propionate, butyrate, formate, and lactate as fermentation products.",
+ "confidence": 0.85
+}

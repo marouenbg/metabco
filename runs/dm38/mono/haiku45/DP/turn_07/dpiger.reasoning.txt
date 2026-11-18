@@ -1,0 +1,83 @@
+# Metabolic Decision for Desulfovibrio piger — Turn 7 (t = 28.00 h)
+
+## Analysis
+
+### Carbon and nitrogen sources available
+Looking at my genome and physiology as a sulfate-reducing bacterium:
+
+**Carbon sources I can transport and use:**
+- **L-lactate** (6.629 mM): My primary substrate. I oxidize lactate to acetate and CO₂, coupled to sulfate reduction. This is my canonical metabolism.
+- **Acetate** (14.2 mM): Available, but typically used only after lactate depletion or as overflow product.
+- **D-glucose** (11.93 mM): I have glucose transporters and can ferment/oxidize glucose.
+- **L-arabinose** (21.31 mM): I can use pentoses.
+- **Amino acids** (arg, ser, pro, ala, etc.): I can catabolize these, but they are secondary substrates and more valuable as nitrogen sources.
+
+**Nitrogen sources:**
+- **L-arginine** (17.59 mM): Excellent; I can degrade arginine via the arginine deiminase pathway, yielding ammonia, citrulline, and ornithine.
+- **L-serine, glycine, other amino acids**: Can be catabolized for nitrogen.
+- **Ammonium**: Not present; I must generate it from amino acid catabolism.
+
+### Recent metabolic pattern
+My last three turns show a strategy:
+- **Turns 4–5**: Strong lactate oxidation (−8 mmol/gDW/h), coupled to sulfate reduction (−2 mmol/gDW/h), producing acetate, CO₂, and H₂S. Growth ~0.25–0.30 /h.
+- **Turn 6**: Shift to glucose fermentation (−5.5 mmol/gDW/h), with lactate excretion (+3 mmol/gDW/h). Growth collapsed to 0.019 /h.
+
+The turn 6 collapse suggests glucose fermentation is inefficient or unfavorable under these conditions. I should return to lactate-driven sulfate reduction.
+
+### Fermentation products
+As a sulfate-reducing bacterium, my main products are:
+- **Acetate** (from lactate oxidation to acetyl-CoA, then acetyl-P → acetate)
+- **CO₂** (from complete oxidation)
+- **H₂S** (from sulfate reduction)
+- Possibly **formate, butyrate** under stress, but acetate is primary.
+
+### Metabolic strategy for this interval
+
+**Primary substrate: L-lactate**
+- Lactate is abundant (6.629 mM) and my preferred substrate.
+- Oxidation: 2 lactate → 2 acetate + 2 CO₂ (net: 1 acetate + 1 CO₂ per lactate, with electrons to sulfate reduction)
+- Sulfate is in excess; H₂S production is favorable.
+
+**Nitrogen: L-arginine catabolism**
+- Arginine (17.59 mM) is abundant and a good nitrogen source.
+- Arginine deiminase: Arg → Citrulline + NH₃ (yields ammonia for biosynthesis)
+- This avoids depleting scarce amino acids.
+
+**Growth rate calculation:**
+Assuming lactate-driven sulfate reduction with arginine as nitrogen source:
+- Lactate uptake: ~8 mmol/gDW/h (similar to turns 4–5, sustainable given 6.629 mM available over 4 h)
+- Arginine uptake: ~1.5 mmol/gDW/h (sufficient for nitrogen demand at growth ~0.30 /h)
+- Growth rate: ~0.30 /h (consistent with successful turns 4–5)
+
+**Carbon audit:**
+- Lactate C in: 8 mmol/gDW/h × 3 C/lactate = 24 mmol C/gDW/h
+- Growth C cost: 0.30 /h × 43 mmol C/gDW = 12.9 mmol C/gDW/h
+- Remaining for secretion: 24 − 12.9 = 11.1 mmol C/gDW/h
+- Acetate out: ~5 mmol/gDW/h (2 C per acetate = 10 mmol C/gDW/h)
+- CO₂ out: ~0.5 mmol/gDW/h (1 C per CO₂ = 0.5 mmol C/gDW/h)
+- Total out: 10.5 mmol C/gDW/h ✓ (within budget)
+
+**Nitrogen audit:**
+- Arginine N in: 1.5 mmol/gDW/h × 3 N/arginine = 4.5 mmol N/gDW/h
+- Growth N cost: 0.30 /h × 10 mmol N/gDW = 3.0 mmol N/gDW/h
+- Excess N → ammonia excretion: ~1.5 mmol N/gDW/h ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "lac__L": -8.0,
+    "arg__L": -1.5,
+    "so4": -2.0,
+    "ac": 5.0,
+    "co2": 0.5,
+    "h2s": 2.0,
+    "nh4": 1.5,
+    "pi": -0.40
+  },
+  "growth_rate": 0.30,
+  "rationale": "Return to lactate-driven sulfate reduction (turns 4–5 strategy), which was highly productive. Lactate (6.6 mM) is abundant and my canonical substrate. Arginine provides nitrogen without depleting scarce amino acids. Sulfate reduction yields H₂S and drives energy conservation. Carbon and nitrogen budgets balance. Growth rate 0.30 /h is sustainable and matches prior success.",
+  "confidence": 0.78
+}
+```

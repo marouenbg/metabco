@@ -1,0 +1,20 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "arg__L": -5.0,
+  "co2": 0.0,
+  "ac": 5.0,
+  "h2": 0.5,
+  "h2s": 0.0,
+  "nh4": 0.0,
+  "for": 0.0,
+  "succ": 0.0,
+  "etoh": 0.0,
+  "but": 0.0,
+  "ppa": 0.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Based on the available nutrients, I will take up glucose and lactate as my primary carbon sources and arginine as my primary nitrogen source. I will then release acetate and hydrogen gas as my primary fermentation products. I will also produce a certain amount of biomass, which will require carbon and nitrogen. My growth rate is 0.5/h, and I will release acetate and hydrogen gas at a rate of 5.00 mmol/gDW/h and 0.50 mmol/gDW/h, respectively.",
+ "confidence": 0.9
+}

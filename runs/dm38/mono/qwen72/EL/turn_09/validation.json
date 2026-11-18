@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 9,
+  "growth_claimed": 0.152,
+  "growth_allowed": 0.0945,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=23 out=21 biomass=5.07"
+  ],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.108 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0334 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.152 -> 0.0945"
+  ],
+  "rationale": "Utilizing amino acids for nitrogen and carbon, producing acetate, propionate, hydrogen, and carbon dioxide as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "arg__L": -2.0,
+   "ser__L": -1.0,
+   "pro__L": -1.0,
+   "ala__L": -1.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "h2": 2.0,
+   "co2": 2.0,
+   "nh4": 4.0
+  },
+  "fluxes_applied": {
+   "arg__L": -2.0,
+   "ser__L": -1.0,
+   "pro__L": -1.0,
+   "ala__L": -1.0,
+   "ac": 5.0,
+   "ppa": 3.0,
+   "h2": 2.0,
+   "co2": 2.0,
+   "nh4": 4.0,
+   "pi": -0.1083,
+   "so4": -0.0334
+  }
+ }
+]

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "for": 5.0,
+  "nh4": 5.39,
+  "pi": -0.71,
+  "so4": -0.16
+ },
+ "growth_rate": 0.229,
+ "rationale": "Maximizing growth by utilizing glucose and arginine, producing acetate and formate.",
+ "confidence": 0.9
+}

@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -6.0,
+  "arg__L": -5.0,
+  "cys__L": -2.0,
+  "nh4": -3.0,
+  "pi": -0.45,
+  "ac": 8.0,
+  "but": 6.0,
+  "co2": 10.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "Coprococcus comes is a butyrate fermenter. At turn 4, lactate and glucose remain abundant. I continue mixed-acid fermentation of these preferred substrates, with nitrogen from arginine, cysteine, and ammonium. Growth is limited by available nitrogen (~0.45 /h). Carbon balance is maintained: 100 mmol C in supports 13.5 mmol C biomass plus ~50 mmol C in acetate, butyrate, and CO\u2082, with remainder in minor products.",
+ "confidence": 0.72
+}

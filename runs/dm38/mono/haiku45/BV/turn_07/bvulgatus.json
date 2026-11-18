@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "but": -3.5,
+  "ppa": -2.5,
+  "leu__L": -1.0,
+  "ile__L": -0.8,
+  "val__L": -0.7,
+  "phe__L": -0.5,
+  "malt": -0.5,
+  "tyr__L": -0.3,
+  "ac": 40.0,
+  "succ": 15.0,
+  "co2": 19.0
+ },
+ "growth_rate": 0.41,
+ "rationale": "Consuming available butyrate and propionate (abundant SCFAs) along with branched-chain and aromatic amino acids for both C and N. Fermentation yields acetate, succinate, and CO2. Growth rate supported by 3.3 mmol N/gDW/h uptake (8 mmol N per gDW needed). Carbon balance: 99 mmol in = 16.9 (growth) + 82.1 (products).",
+ "confidence": 0.72
+}

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": 15.0,
+  "lac__L": 10.0,
+  "arg__L": 5.0,
+  "malt": 5.0,
+  "leu__L": 8.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "based on growth rate and available nutrients, taking up D-glucose (glc__D), L-lactate (lac__L), maltose (malt), and L-leucine (leu__L) to support growth and produce butyrate (but), acetate (ac), and formate (for) as major fermentation products",
+ "confidence": 1.0
+}

@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bovatus",
+  "turn": 2,
+  "growth_claimed": 0.55,
+  "growth_allowed": 0.55,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.689 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.144 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Mixed-acid fermentation of glucose and lactate with arginine catabolism. Carbon and nitrogen budgets balanced: 67.5 mmol C in supports 42 mmol biomass C + 22.5 mmol fermentation products C; 10 mmol N ",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -2.5,
+   "arg__L": -2.0,
+   "nh4": -6.0,
+   "ac": 4.5,
+   "ppa": 2.0,
+   "succ": 1.2,
+   "co2": 2.5
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -2.5,
+   "arg__L": -2.0,
+   "nh4": -6.0,
+   "ac": 4.5,
+   "ppa": 2.0,
+   "succ": 1.2,
+   "co2": 2.5,
+   "pi": -0.6889,
+   "so4": -0.144
+  }
+ }
+]

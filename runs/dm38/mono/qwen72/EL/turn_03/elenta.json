@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": -10.0,
+  "arg__L": -2.0,
+  "nh4": -2.0,
+  "ac": 5.0,
+  "ppa": 3.0
+ },
+ "growth_rate": 0.152,
+ "confidence": 0.9,
+ "rationale": "Maintaining a steady metabolic strategy with D-glucose, L-lactate, and L-arginine as primary carbon and nitrogen sources, producing acetate and propionate as fermentation products."
+}

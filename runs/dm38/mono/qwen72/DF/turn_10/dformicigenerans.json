@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "arg__L": -1.0,
+  "for": -5.0,
+  "h2": 5.0,
+  "ac": 5.0
+ },
+ "growth_rate": 0.0303,
+ "rationale": "Utilizing L-arginine and formate to support growth, producing hydrogen and acetate as byproducts.",
+ "confidence": 0.8
+}

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "but": 3.0,
+  "ppa": 1.75,
+  "nh4": -2.0
+ },
+ "growth_rate": 0.5,
+ "confidence": 0.9,
+ "rationale": "Continuing to utilize D-glucose, L-lactate, and L-arginine for growth and fermentation, maintaining a balanced and efficient growth rate."
+}

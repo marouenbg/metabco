@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 1,
+  "growth_claimed": 0.65,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=90 out=145 biomass=19.2"
+  ],
+  "warnings": [],
+  "repairs": [
+   "C: growth 0.65 -> 0",
+   "C: secretions scaled by 0.652"
+  ],
+  "rationale": "Coprococcus thrives on lactate and glucose in anaerobic conditions, using arginine as a key N+C source. Fermentation yields butyrate and acetate as primary products. Substrate remains abundant; growth",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -6.0,
+   "arg__L": -4.0,
+   "nh4": -1.0,
+   "but": 20.0,
+   "ac": 25.0,
+   "co2": 15.0,
+   "pi": -0.45,
+   "so4": -0.18
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -6.0,
+   "arg__L": -4.0,
+   "nh4": -1.0,
+   "but": 13.0345,
+   "ac": 16.2931,
+   "co2": 9.7759,
+   "pi": -0.45,
+   "so4": -0.18
+  }
+ }
+]

@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 0,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.0356,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=30 out=30 biomass=31.6"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.939 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.196 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 5.67 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.75 -> 0.0356"
+  ],
+  "rationale": "Anaerobic fermentation of glucose to acetate and CO2, with ammonium as a nitrogen source",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "nh4": -2.0,
+   "ac": 10.0,
+   "co2": 10.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "nh4": -7.6662,
+   "ac": 10.0,
+   "co2": 10.0,
+   "pi": -0.9395,
+   "so4": -0.1963
+  }
+ }
+]

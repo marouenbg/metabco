@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 10,
+  "growth_claimed": 0.0303,
+  "growth_allowed": 0.0303,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0282 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.00637 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing L-arginine and formate to support growth, producing hydrogen and acetate as byproducts.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arg__L": -1.0,
+   "for": -5.0,
+   "h2": 5.0,
+   "ac": 5.0
+  },
+  "fluxes_applied": {
+   "arg__L": -1.0,
+   "for": -5.0,
+   "h2": 5.0,
+   "ac": 5.0,
+   "pi": -0.0282,
+   "so4": -0.0064
+  }
+ }
+]

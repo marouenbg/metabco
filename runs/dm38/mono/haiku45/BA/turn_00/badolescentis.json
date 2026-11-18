@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -15.0,
+  "nh4": -5.0,
+  "arg__L": -3.0,
+  "ac": 50.0,
+  "lac__L": 30.0,
+  "for": 4.0
+ },
+ "growth_rate": 1.0,
+ "rationale": "Bifid fermentation of glucose with arginine as secondary N source. Glucose is preferred hexose; fermentation yields acetate and lactate as major products. Growth rate limited by nitrogen availability (8 mmol/gDW/h required). Carbon balance verified: 117 in, 117 out.",
+ "confidence": 0.75
+}

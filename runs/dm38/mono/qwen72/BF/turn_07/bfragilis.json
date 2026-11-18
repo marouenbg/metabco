@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "but": -5.0,
+  "ac": -5.0,
+  "ppa": 1.0,
+  "nh4": -0.5,
+  "h2": 0.5,
+  "co2": 0.5
+ },
+ "growth_rate": 0.15,
+ "confidence": 0.9,
+ "rationale": "Utilizing abundant butyrate and acetate for energy and carbon, producing butyrate, acetate, and propionate. Ammonium is used for nitrogen, and hydrogen and carbon dioxide are produced as byproducts."
+}

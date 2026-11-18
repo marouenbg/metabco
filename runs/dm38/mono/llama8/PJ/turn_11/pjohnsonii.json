@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "arab__L": 10.0,
+  "malt": 8.0,
+  "h2": 5.0,
+  "ac": 0.5,
+  "lac__L": 0.5,
+  "for": 0.5
+ },
+ "growth_rate": 0.7,
+ "rationale": "I've chosen to take up L-arabinose, maltose, and hydrogen to support growth. I'll produce acetate, lactate, and formate as fermentation products.",
+ "confidence": 0.9
+}

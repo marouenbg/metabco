@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 8,
+  "growth_claimed": 0.233,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: lac__L",
+   "uptake_exceeds_pool: gly",
+   "uptake_exceeds_pool: nh4",
+   "c_imbalance: in=9.37 out=16 biomass=6.88"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake lac__L to pool limit -1.96",
+   "clipped uptake gly to pool limit -1.74",
+   "clipped uptake nh4 to pool limit -0.982",
+   "P: credited 0.157 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0602 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.233 -> 0",
+   "C: secretions scaled by 0.615"
+  ],
+  "rationale": "Balanced carbon and nitrogen uptake to support sustainable growth while producing butyrate and acetate.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "ac": 2.0,
+   "lac__L": -2.0,
+   "gly": -2.0,
+   "nh4": -1.0,
+   "but": 3.0
+  },
+  "fluxes_applied": {
+   "ac": 1.23,
+   "lac__L": -1.9632,
+   "gly": -1.741,
+   "nh4": -0.9816,
+   "but": 1.845,
+   "pi": -0.1566,
+   "so4": -0.0602
+  }
+ }
+]

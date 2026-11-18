@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "inost": -5.0,
+  "ala__L": -2.0,
+  "ac": 2.0,
+  "ppa": 1.0,
+  "nh4": 0.5
+ },
+ "growth_rate": 0.042,
+ "rationale": "myo-inositol and L-alanine uptake, acetate and propionate production",
+ "confidence": 0.8
+}

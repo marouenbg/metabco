@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 9,
+  "growth_claimed": 0.125,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: glc__D",
+   "c_imbalance: in=0 out=22.2 biomass=3.69"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.084 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0323 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 5.04 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.125 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Utilizing glucose and arginine for growth, with formate and hydrogen as products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": 2.5,
+   "arg__L": 1.0,
+   "for": 1.25,
+   "h2": 0.125
+  },
+  "fluxes_applied": {
+   "glc__D": 0.0,
+   "arg__L": 0.0,
+   "for": 0.0,
+   "h2": 0.125,
+   "pi": -0.084,
+   "so4": -0.0323,
+   "nh4": -5.039
+  }
+ }
+]

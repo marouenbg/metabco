@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 3,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.136 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0329 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Optimizing carbon and nitrogen uptake to support growth and producing fermentation products based on available carbon sources.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": -3.0,
+   "co2": -2.0,
+   "arg__L": -0.5,
+   "asn__L": -0.2
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": -3.0,
+   "co2": -2.0,
+   "arg__L": -0.5,
+   "asn__L": -0.2,
+   "pi": -0.1364,
+   "so4": -0.0329
+  }
+ }
+]

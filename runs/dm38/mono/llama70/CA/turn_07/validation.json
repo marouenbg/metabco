@@ -1,0 +1,31 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 7,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.169 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Limited by nitrogen availability",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arab__L": -5.0,
+   "cys__L": -1.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "for": 2.0
+  },
+  "fluxes_applied": {
+   "arab__L": -5.0,
+   "cys__L": -1.0,
+   "nh4": -1.0,
+   "ac": 5.0,
+   "for": 2.0,
+   "pi": -0.169
+  }
+ }
+]

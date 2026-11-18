@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": 5.0,
+  "nh4": -8.0,
+  "arg__L": -2.0,
+  "ac": 4.0,
+  "but": 4.0,
+  "for": 3.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Continuing to utilize D-glucose and L-lactate as primary carbon sources, and ammonium and L-arginine as nitrogen sources. Producing acetate, butyrate, formate, and L-lactate as fermentation products. Moderate growth rate to ensure sustainable metabolism.",
+ "confidence": 0.85
+}

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": -6.0,
+  "nh4": -1.5,
+  "gly": -0.8,
+  "ala__L": -0.7,
+  "co2": 2.0,
+  "for": 0.5,
+  "h2": 0.1
+ },
+ "growth_rate": 0.25,
+ "rationale": "Acetate is abundant and my preferred carbon source. Ammonium and amino acids provide nitrogen (limiting nutrient). Growth at 0.25 /h balances carbon and nitrogen availability. Fermentation yields CO\u2082, formate, and minor H\u2082 as waste products. Carbon audit: 13.5 mmol C in; 10.5 (growth) + 3.0 (fermentation) = 13.5 out. Nitrogen: 3.0 mmol N in; 0.25 \u00d7 10 = 2.5 for growth, 0.5 margin.",
+ "confidence": 0.62
+}

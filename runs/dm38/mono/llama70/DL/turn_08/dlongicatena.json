@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "arab__L": -5.0,
+  "cys__L": -2.0,
+  "ser__L": -1.0,
+  "ac": 3.0,
+  "ppa": 2.0,
+  "but": 1.0
+ },
+ "growth_rate": 0.053,
+ "rationale": "Carbon and nitrogen balance equations satisfied",
+ "confidence": 0.8
+}

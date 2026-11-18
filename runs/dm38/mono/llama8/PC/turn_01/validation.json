@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 1,
+  "growth_claimed": 0.9,
+  "growth_allowed": 0.9,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 1.23 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.236 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 2.01 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "I will take up lactate, glucose, and arginine to support growth. I will secrete formate and succinate as fermentation products. I will also release CO2 to balance the carbon audit.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -6.49,
+   "arg__L": -1.56,
+   "nh4": -0.71,
+   "for": 0.9,
+   "succ": 0.9,
+   "co2": 0.39
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -6.49,
+   "arg__L": -1.56,
+   "nh4": -2.7246,
+   "for": 0.9,
+   "succ": 0.9,
+   "co2": 0.39,
+   "pi": -1.2269,
+   "so4": -0.2356
+  }
+ }
+]

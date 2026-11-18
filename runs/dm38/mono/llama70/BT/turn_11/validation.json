@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 11,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=2 out=0 biomass=2.95",
+   "p_imbalance: in=0 out=0 biomass=0.226"
+  ],
+  "warnings": [],
+  "repairs": [
+   "N: growth 0.35 -> 0.249",
+   "P: growth 0.249 -> 0"
+  ],
+  "rationale": "Optimal carbon and nitrogen uptake for growth",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "ppa": -2.5,
+   "succ": -1.0,
+   "leu__L": -1.0,
+   "tyr__L": -0.5,
+   "cys__L": -0.5,
+   "co2": 2.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "ppa": -2.5,
+   "succ": -1.0,
+   "leu__L": -1.0,
+   "tyr__L": -0.5,
+   "cys__L": -0.5,
+   "co2": 2.0
+  }
+ }
+]

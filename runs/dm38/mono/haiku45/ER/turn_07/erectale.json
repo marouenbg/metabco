@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "ac": -12.0,
+  "arg__L": -4.0,
+  "ser__L": -1.5,
+  "ala__L": -1.0,
+  "gly": -0.5,
+  "but": 20.0,
+  "co2": 12.0,
+  "for": 3.0,
+  "nh4": 4.5
+ },
+ "growth_rate": 0.45,
+ "rationale": "Eubacterium rectale ferments acetate and arginine as primary C and N sources, producing butyrate as the dominant product. Acetate (12 mmol/gDW/h) drives butyrate synthesis; arginine (4 mmol/gDW/h) provides both C and N via dihydrolase pathway. Amino acids supplement C and N. Growth rate of 0.45 /h is supported by ~50 mmol C/gDW/h input, with 14.85 mmol consumed for biomass, remainder as fermentation products (butyrate, acetate, CO\u2082, formate). Nitrogen balance: arginine + amino acids + trace NH\u2084 supply 7.5 mmol N/gDW/h; growth consumes 3.15, excess released as NH\u2083.",
+ "confidence": 0.72
+}

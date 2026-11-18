@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -5.0,
+  "arg__L": -2.0,
+  "nh4": -0.1,
+  "ac": 5.0,
+  "but": 5.0,
+  "etoh": 1.0,
+  "pi": -0.05
+ },
+ "growth_rate": 0.016,
+ "rationale": "Balanced carbon and nitrogen uptake to support growth while reducing ethanol production to ensure a positive carbon balance.",
+ "confidence": 0.85
+}

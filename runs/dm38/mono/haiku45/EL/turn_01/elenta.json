@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "lac__L": 5.7,
+  "glc__D": -6.0,
+  "arg__L": -3.0,
+  "nh4": -2.0,
+  "cys__L": -1.0,
+  "ac": 11.4,
+  "for": 11.4,
+  "co2": 11.4
+ },
+ "growth_rate": 0.25,
+ "rationale": "E. lenta ferments lactate and glucose as primary C sources under anaerobic conditions, with arginine and ammonium as N sources. Mixed-acid fermentation yields acetate, formate, and CO\u2082 as major products. Uptake of 8 lactate + 6 glucose + 3 arginine + 2 ammonium + 1 cysteine supports growth at 0.25/h with fermentation products balancing the C budget.",
+ "confidence": 0.72
+}

@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arab__L": -10.0,
+  "malt": -10.0,
+  "nh4": -10.0,
+  "ac": 10.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "Utilizing readily available and accessible carbon and nitrogen sources for growth, producing acetate as a fermentation product, and supporting a growth rate of 0.45 /h.",
+ "confidence": 0.8
+}

@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 9,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: glc__D"
+  ],
+  "repairs": [],
+  "rationale": "Lactate depleted; switching to acetate (primary substrate) + arginine (N-rich). Sulfate reduction provides energy. Glucose fermentation supplements. Growth limited by nitrogen availability (only 13 mM",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "ac": -8.0,
+   "arg__L": -1.5,
+   "glc__D": -2.0,
+   "so4": -2.0,
+   "nh4": -0.5,
+   "pi": -0.4,
+   "co2": 4.0,
+   "h2s": 2.0,
+   "for": 0.5
+  },
+  "fluxes_applied": {
+   "ac": -8.0,
+   "arg__L": -1.5,
+   "glc__D": -2.0,
+   "so4": -2.0,
+   "nh4": -0.5,
+   "pi": -0.4,
+   "co2": 4.0,
+   "h2s": 2.0,
+   "for": 0.5
+  }
+ }
+]

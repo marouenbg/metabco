@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 2,
+  "growth_claimed": 0.01,
+  "growth_allowed": 0.01,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.00676 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.00258 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "I will take up D-glucose, L-arginine, and ammonium to support growth. I will release lactate, acetate, formate, and ethanol as fermentation products. I will take up maltose through the malt transporte",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": 10.0,
+   "glc__D": -5.0,
+   "arg__L": -5.0,
+   "ac": 10.0,
+   "for": 0.0,
+   "etoh": 0.0,
+   "nh4": 0.0,
+   "co2": 0.0
+  },
+  "fluxes_applied": {
+   "lac__L": 10.0,
+   "glc__D": -5.0,
+   "arg__L": -5.0,
+   "ac": 10.0,
+   "for": 0.0,
+   "etoh": 0.0,
+   "nh4": 0.0,
+   "co2": 0.0,
+   "pi": -0.0068,
+   "so4": -0.0026
+  }
+ }
+]

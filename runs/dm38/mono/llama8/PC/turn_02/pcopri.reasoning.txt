@@ -1,0 +1,26 @@
+As Prevotella copri CB7 DSM 18205, I must consider my metabolic capabilities and the available nutrients in the environment. I can transport various carbon and nitrogen sources through specific transporters encoded in my genome.
+
+My genome encodes for the transport of L-arabinose, L-arginine, D-glucose, L-lactate, L-cysteine, L-serine, myo-inositol, L-proline, L-alanine, glycine, ammonium, and other amino acids. I can also transport maltose, but my growth rate on this substrate is not as high as on glucose.
+
+I am known to ferment various substrates, including glucose, lactate, and amino acids. In this environment, I will take up D-glucose (glc__D) and L-serine (ser__L) as primary carbon and nitrogen sources, respectively. I will also utilize L-arginine (arg__L) and ammonium (nh4) as secondary nitrogen sources.
+
+As a result of my chosen uptake, I will secrete formate (for), acetate (ac), and succinate (succ) as fermentation products. I will also release hydrogen (h2) as a byproduct of my metabolism.
+
+Given my uptake and secretion rates, I can support a growth rate of approximately 0.85 /h. To audit my carbon balance, I will take in 12.6 mmol of carbon per gram dry weight per hour (6.49 mmol of glucose, 6.11 mmol of serine). This will cover the carbon required for growth (45 mmol/gDW/h) and the carbon released as formate, acetate, and succinate (4.44 mmol/gDW/h).
+
+Here is the JSON object describing my decision:
+{
+  "fluxes": {
+    "glc__D": -12.6, 
+    "ser__L": -6.11, 
+    "arg__L": -2.72, 
+    "nh4": -2.72, 
+    "for": 4.44, 
+    "ac": 2.28, 
+    "succ": 0.9, 
+    "h2": 0.9
+  },
+  "growth_rate": 0.85,
+  "rationale": "Utilizing D-glucose, L-serine, and L-arginine for growth, with secondary nitrogen source ammonium. Releasing formate, acetate, and succinate as fermentation products.",
+  "confidence": 0.9
+}

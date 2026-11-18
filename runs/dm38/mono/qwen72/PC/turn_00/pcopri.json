@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -5,
+  "lac__L": -5,
+  "arg__L": -2,
+  "nh4": -2,
+  "ac": 3,
+  "ppa": 2,
+  "for": 1
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilize abundant glucose and lactate for carbon, arginine and ammonium for nitrogen, producing acetate, propionate, and formate as fermentation products.",
+ "confidence": 0.9
+}

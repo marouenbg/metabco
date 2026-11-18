@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "but": 14.0,
+  "lac__L": 1.0,
+  "glc__D": 1.0,
+  "ac": 5.0,
+  "for": 1.0
+ },
+ "growth_rate": 0.75,
+ "rationale": "balanced carbon and nitrogen fluxes to support a growth rate of 0.75/h",
+ "confidence": 0.9
+}

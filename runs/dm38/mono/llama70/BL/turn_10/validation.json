@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 10,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": false,
+  "violations": [
+   "uptake_absent: malt",
+   "uptake_exceeds_pool: arg__L"
+  ],
+  "warnings": [],
+  "repairs": [
+   "zeroed uptake of absent malt",
+   "clipped uptake arg__L to pool limit -3.69",
+   "P: credited 0.291 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0654 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing available carbon and nitrogen sources to support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "malt": -3.13,
+   "ac": -5.0,
+   "arg__L": -5.0,
+   "lac__L": 1.25,
+   "for": 2.5
+  },
+  "fluxes_applied": {
+   "malt": 0.0,
+   "ac": -5.0,
+   "arg__L": -3.6934,
+   "lac__L": 1.25,
+   "for": 2.5,
+   "pi": -0.2907,
+   "so4": -0.0654
+  }
+ }
+]

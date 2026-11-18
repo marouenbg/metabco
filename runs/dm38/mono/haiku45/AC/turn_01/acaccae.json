@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -14.0,
+  "lac__L": -3.0,
+  "arg__L": -2.5,
+  "ser__L": -1.5,
+  "nh4": -0.5,
+  "but": 8.0,
+  "ac": 5.5,
+  "for": 2.0,
+  "co2": 1.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "Glucose and lactate fermentation with amino acid Stickland reactions (arginine + serine). Butyrate is the primary fermentation end product. Nitrogen from amino acids and trace ammonium. Carbon balance verified: 115 mmol C in supports 45 mmol products + 17.1 mmol biomass.",
+ "confidence": 0.78
+}

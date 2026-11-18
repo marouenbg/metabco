@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "arg__L": -1.0,
+  "ac": 2.5,
+  "lac__L": 1.5,
+  "co2": 1.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "D-glucose and L-arginine uptake, acetate and lactate production, and growth at 0.4 /h",
+ "confidence": 0.8
+}

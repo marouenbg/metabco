@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 7,
+  "growth_claimed": 0.43,
+  "growth_allowed": 0.43,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.502 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.113 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 4.39 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Balanced uptake of L-lactate and D-glucose to support growth, with moderate release of acetate and formate to maintain a balanced fermentation profile.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -14.0,
+   "glc__D": -10.0,
+   "ac": 3.5,
+   "for": 3.5
+  },
+  "fluxes_applied": {
+   "lac__L": -14.0,
+   "glc__D": -10.0,
+   "ac": 3.5,
+   "for": 3.5,
+   "pi": -0.5016,
+   "so4": -0.1126,
+   "nh4": -4.3861
+  }
+ }
+]

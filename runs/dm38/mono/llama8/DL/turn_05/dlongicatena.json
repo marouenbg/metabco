@@ -1,0 +1,9 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -2.5
+ },
+ "growth_rate": 0.5,
+ "rationale": "Utilize L-lactate and ammonium to meet carbon and nitrogen requirements, and produce lactate to accumulate in the environment.",
+ "confidence": 0.8
+}

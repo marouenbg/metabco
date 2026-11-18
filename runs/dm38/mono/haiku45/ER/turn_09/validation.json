@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "erectale",
+  "turn": 9,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.35,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.326 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Butyrate fermentation with amino acid catabolism for nitrogen supplementation. Ammonium limiting at high biomass. Produce acetate and formate as primary fermentation products. Conservative growth rate",
+  "confidence": 0.65,
+  "fluxes_claimed": {
+   "but": -6.0,
+   "nh4": -2.5,
+   "phe__L": -0.3,
+   "cys__L": -0.3,
+   "tyr__L": -0.2,
+   "val__L": -0.2,
+   "ac": 8.5,
+   "for": 0.45,
+   "co2": 0.0
+  },
+  "fluxes_applied": {
+   "but": -6.0,
+   "nh4": -2.5,
+   "phe__L": -0.3,
+   "cys__L": -0.3,
+   "tyr__L": -0.2,
+   "val__L": -0.2,
+   "ac": 8.5,
+   "for": 0.45,
+   "co2": 0.0,
+   "pi": -0.3258
+  }
+ }
+]

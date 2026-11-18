@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "ppa": -2.0,
+  "leu__L": -1.0,
+  "succ": 1.5
+ },
+ "growth_rate": 0.1,
+ "rationale": "Nitrogen limitation from available substrates dictates growth rate, with carbon sources utilized for energy and biomass production.",
+ "confidence": 0.8
+}

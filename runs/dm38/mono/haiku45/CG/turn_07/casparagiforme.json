@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "glc__D": -1.5,
+  "arab__L": -2.0,
+  "asn__L": -1.0,
+  "gln__L": -1.0,
+  "lys__L": -0.8,
+  "nh4": -1.2,
+  "ac": 3.5,
+  "but": 2.0,
+  "co2": 4.0,
+  "h2": 1.5,
+  "for": 0.8,
+  "lac__L": 0.5
+ },
+ "growth_rate": 0.2,
+ "rationale": "Nitrogen-limited growth phase; consuming remaining glucose and arabinose with amino acid catabolism (asparagine, glutamine, lysine) for both C and N; mixed-acid fermentation producing acetate, butyrate, CO2, H2, formate, and lactate. Conservative estimate accounting for maintenance and fermentation efficiency.",
+ "confidence": 0.62
+}

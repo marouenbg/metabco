@@ -1,0 +1,11 @@
+{
+ "ac": 20.0,
+ "co2": -10.0,
+ "h2": 10.0,
+ "succ": 5.0,
+ "for": -5.0,
+ "gly": 35.0,
+ "growth_rate": 0.1,
+ "rationale": "maximizing growth rate while minimizing carbon and nitrogen consumption",
+ "confidence": 0.95
+}

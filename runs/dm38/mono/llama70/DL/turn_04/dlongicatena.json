@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "ppa": 2.0,
+  "nh4": -1.0
+ },
+ "growth_rate": 0.132,
+ "rationale": "Utilizing D-glucose and L-arginine as primary carbon and nitrogen sources, producing acetate and propionate as fermentation products",
+ "confidence": 0.8
+}

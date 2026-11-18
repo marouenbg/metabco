@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "arab__L": -8.0,
+  "but": 4.0,
+  "arg__L": -2.0,
+  "nh4": 4.7,
+  "ac": 9.0,
+  "co2": 5.0,
+  "for": 1.0
+ },
+ "growth_rate": 0.6,
+ "rationale": "Consuming remaining arabinose and butyrate with minimal amino acid uptake (N-limited by low ammonium). Fermentation yields acetate, butyrate, CO2, and formate. Carbon and nitrogen balance verified.",
+ "confidence": 0.72
+}

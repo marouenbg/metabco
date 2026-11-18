@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 0,
+  "growth_claimed": 0.105,
+  "growth_allowed": 0.105,
+  "ok": false,
+  "violations": [
+   "unknown_metabolite: nh3"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.122 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0275 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 0.0206 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing glucose and ammonium for growth, with lactate and other amino acids available for nitrogen. Fermenting lactate into acetate and releasing ammonia.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -4.0,
+   "nh4": -1.0,
+   "lac__L": -2.0,
+   "ac": 4.0,
+   "nh3": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -4.0,
+   "nh4": -1.0206,
+   "lac__L": -2.0,
+   "ac": 4.0,
+   "pi": -0.1221,
+   "so4": -0.0275
+  }
+ }
+]

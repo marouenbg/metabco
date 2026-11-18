@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 11,
+  "growth_claimed": 0.003,
+  "growth_allowed": 0.003,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.00279 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.00063 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Severe nitrogen limitation (1.62 mmol/L ammonium in 1 mL vessel) restricts growth to ~0.003/h. Continuing slow fermentation of residual butyrate and acetate via \u03b2-oxidation; producing CO2, formate, an",
+  "confidence": 0.42,
+  "fluxes_claimed": {
+   "but": -2.0,
+   "ac": 0.5,
+   "nh4": -0.25,
+   "co2": 1.5,
+   "for": 0.8
+  },
+  "fluxes_applied": {
+   "but": -2.0,
+   "ac": 0.5,
+   "nh4": -0.25,
+   "co2": 1.5,
+   "for": 0.8,
+   "pi": -0.0028,
+   "so4": -0.0006
+  }
+ }
+]

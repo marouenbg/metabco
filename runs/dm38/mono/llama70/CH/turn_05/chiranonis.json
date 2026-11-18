@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "arg__L": -2.0,
+  "ac": 1.0,
+  "co2": 1.5
+ },
+ "growth_rate": 0.3,
+ "rationale": "Utilizing arginine and acetate for growth, producing acetate and CO2",
+ "confidence": 0.8
+}

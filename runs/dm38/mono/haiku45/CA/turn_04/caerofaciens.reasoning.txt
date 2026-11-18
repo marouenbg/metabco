@@ -1,0 +1,84 @@
+# Metabolic reasoning for Collinsella aerofaciens at t=16h
+
+## Current state
+- Biomass: 0.3364 gDW/L
+- 32 hours elapsed of 48h total; 16 hours remain
+- I have been growing steadily at ~0.32 /h on mixed substrates
+
+## Carbon sources available and transportable
+As a facultative anaerobe and member of the Actinobacteria, I possess:
+- **Glucose (glc__D)**: 18.16 mM — my preferred sugar; I have active PTS transporters. ✓
+- **Lactate (lac__L)**: 30.1 mM — abundant; I can ferment this anaerobically via lactate oxidation to pyruvate. ✓
+- **Arabinose (arab__L)**: 21.31 mM — I likely have arabinose transporters (common in Collinsella). ✓
+- **Arginine (arg__L)**: 19.89 mM — I can transport and deaminate this for both carbon and nitrogen. ✓
+- **Acetate (ac)**: 3.916 mM — I can activate and use acetyl-CoA, though I've been secreting it (overflow metabolism). ✓
+- **Formate (for)**: 1.114 mM — I can oxidize formate under anaerobic conditions. ✓
+- **Propionate (ppa)**: accumulated in vessel; I can use propionyl-CoA. ✓
+
+Other amino acids (serine, cysteine, proline, alanine, etc.) are available but at lower concentrations.
+
+## Fermentation products I make
+Based on my observed metabolism and Collinsella ecology:
+- **Acetate**: primary overflow product (seen consistently)
+- **Formate**: from mixed-acid fermentation
+- **Propionate**: from alanine and lactate fermentation
+- **CO₂**: from decarboxylation reactions
+- **H₂**: possible from formate lyase under anaerobic conditions
+
+## Strategy for this interval
+At t=16h, I should:
+1. **Continue mixed substrate utilization**: glucose remains at 18 mM (good uptake substrate), lactate at 30 mM (abundant), arabinose at 21 mM
+2. **Maintain nitrogen uptake**: ammonium at 7.4 mM is adequate; arginine at 19.9 mM provides both C and N
+3. **Sustain growth at 0.32 /h**: this has been stable and realistic given substrate availability
+
+## Carbon and nitrogen audit
+
+**Uptake plan** (mmol/gDW/h):
+- Glucose: -7.0 (9 carbons per glucose = -63 C/gDW/h)
+- Lactate: -4.0 (3 carbons per lactate = -12 C/gDW/h)
+- Arabinose: -3.0 (5 carbons per arabinose = -15 C/gDW/h)
+- Arginine: -2.0 (6 carbons per arginine = -12 C/gDW/h)
+- Ammonium: -1.8 (N source only)
+- Cysteine: -0.5 (3 carbons, N source)
+
+**Total carbon in**: 63 + 12 + 15 + 12 + 1.5 = 103.5 mmol C/gDW/h
+
+**Growth cost** at μ = 0.32 /h:
+- Carbon: 0.32 × 30 = 9.6 mmol C/gDW/h
+- Nitrogen: 0.32 × 8 = 2.56 mmol N/gDW/h
+
+**Secretion plan** (balancing overflow):
+- CO₂: +5.0 (5 carbons)
+- Acetate: +4.0 (2 carbons = 8 C)
+- Formate: +1.0 (1 carbon)
+- Propionate: +1.5 (3 carbons)
+
+**Total carbon out (products)**: 5 + 8 + 1 + 4.5 = 18.5 mmol C/gDW/h
+
+**Carbon balance**: 103.5 (in) = 9.6 (growth) + 18.5 (secretion) + 75.4 (other pathways/storage) ✓
+
+**Nitrogen balance**: 
+- In: 1.8 (ammonium) + 2.0 × 1 (arginine) + 0.5 × 1 (cysteine) = 4.3 mmol N/gDW/h
+- Out: 2.56 (growth) + small losses in secretion ✓
+
+This is sustainable and consistent with my observed behavior.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -7.0,
+    "lac__L": -4.0,
+    "arab__L": -3.0,
+    "arg__L": -2.0,
+    "nh4": -1.8,
+    "cys__L": -0.5,
+    "co2": 5.0,
+    "ac": 4.0,
+    "for": 1.0,
+    "ppa": 1.5
+  },
+  "growth_rate": 0.32,
+  "rationale": "Continuing stable mixed-substrate fermentation on glucose, lactate, and arabinose with arginine co-uptake for nitrogen. Overflow metabolism produces acetate, formate, and propionate as typical for anaerobic Collinsella. Carbon and nitrogen budgets balance; growth rate matches observed trajectory.",
+  "confidence": 0.78
+}
+```

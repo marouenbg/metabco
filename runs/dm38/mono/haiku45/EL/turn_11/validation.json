@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 11,
+  "growth_claimed": 0.089,
+  "growth_allowed": 0.089,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: glc__D"
+  ],
+  "repairs": [
+   "P: credited 0.0634 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Continuing established mixed-acid fermentation of glucose and lactate with amino acid catabolism. Sufficient carbon (73.5 mmol/gDW/h in) covers growth cost (~2.94) and secretion (~28.5), with remainde",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -6.5,
+   "lac__L": -3.5,
+   "arg__L": -3.5,
+   "cys__L": -1.0,
+   "nh4": -0.5,
+   "ac": 9.5,
+   "for": 5.0,
+   "co2": 4.5
+  },
+  "fluxes_applied": {
+   "glc__D": -6.5,
+   "lac__L": -3.5,
+   "arg__L": -3.5,
+   "cys__L": -1.0,
+   "nh4": -0.5,
+   "ac": 9.5,
+   "for": 5.0,
+   "co2": 4.5,
+   "pi": -0.0634
+  }
+ }
+]

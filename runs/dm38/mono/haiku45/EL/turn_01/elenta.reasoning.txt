@@ -1,0 +1,97 @@
+# Reasoning through my metabolic strategy
+
+## What I can transport and metabolize
+
+I am *Eggerthella lenta*, a strictly anaerobic, gram-positive bacterium. My genome encodes transport and metabolism for:
+
+**Primary carbon sources I can use:**
+- **D-glucose** (24.91 mM): I have hexose transporters and can ferment glucose via glycolysis
+- **L-lactate** (28.26 mM): I am a lactate fermenter; this is a key substrate
+- **L-arabinose** (21.31 mM): I have pentose metabolism capability
+- **Maltose** (4.382 mM): I have maltose phosphotransferase system
+- **Amino acids** (multiple present): I can catabolize these for both C and N
+
+**Abundant carbons I likely CANNOT use efficiently:**
+- **CO₂** (47.74 mM): I am heterotrophic, not autotrophic; I release CO₂, not consume it for biosynthesis in significant amounts
+- **Acetate** (0.26 mM only): Too scarce; also I produce it
+
+**Nitrogen sources:**
+- **Ammonium** (9.417 mM): Primary inorganic N source
+- **L-arginine** (21.78 mM): Rich amino acid; I can deaminate for N and C
+- **L-cysteine** (8.391 mM): Provides both C and S
+- **Other amino acids**: Available but less abundant
+
+## Known fermentation products
+
+*E. lenta* performs mixed-acid/lactate fermentation under anaerobic conditions. I produce:
+- **Acetate** (major product)
+- **Formate** (major product)
+- **CO₂** (from decarboxylation)
+- **Lactate** (from pyruvate, or further metabolism of lactate substrate)
+- Possibly small amounts of **succinate** or **propionate**
+
+My previous turn shows I produced acetate (+29.30), formate (+24.41), and CO₂ (+14.65) while consuming glucose, lactate, arginine, and cysteine. This is consistent with fermentation.
+
+## Growth calculation
+
+**Substrate uptake strategy for next 4 h:**
+
+I will prioritize:
+1. **L-lactate** (abundant, direct substrate): uptake ~8 mmol/gDW/h
+2. **D-glucose** (abundant, efficient): uptake ~6 mmol/gDW/h  
+3. **L-arginine** (abundant, provides N): uptake ~3 mmol/gDW/h
+4. **Ammonium** (efficient N source): uptake ~2 mmol/gDW/h
+5. **L-cysteine** (provides S and C): uptake ~1 mmol/gDW/h
+
+**Carbon balance:**
+- Lactate in: 8 mmol C (C₃)
+- Glucose in: 6 mmol C (C₆) = 36 mmol C
+- Arginine in: 3 mmol C (C₆) = 18 mmol C
+- Cysteine in: 1 mmol C (C₃) = 3 mmol C
+- **Total C in: 8 + 36 + 18 + 3 = 65 mmol C/gDW/h**
+
+**Nitrogen balance:**
+- Arginine: 3 mmol N (2 from guanidinium + 1 from α-amino)
+- Ammonium: 2 mmol N
+- Cysteine: 1 mmol N
+- **Total N in: 6 mmol N/gDW/h**
+
+**Growth requirement:**
+- Growth rate µ: needs 33 mmol C and 8 mmol N per gram biomass
+- If µ = 0.20 /h: requires 6.6 mmol C and 1.6 mmol N per gDW/h
+- If µ = 0.30 /h: requires 9.9 mmol C and 2.4 mmol N per gDW/h
+
+**Fermentation products (acetate, formate, CO₂, lactate):**
+- Approximate yield from mixed-acid fermentation: ~40% of substrate C → acetate/formate, ~20% → CO₂, ~40% → other products or growth
+- With 65 mmol C in and µ = 0.25 /h consuming ~8.25 mmol C for growth:
+  - Remaining for fermentation: ~56.75 mmol C
+  - Acetate + formate: ~22.7 mmol C (as ~11.4 mmol ac + 11.4 mmol for)
+  - CO₂: ~11.4 mmol
+  - Lactate/succinate: ~11.4 mmol
+
+**Audit at µ = 0.25 /h:**
+- C in: 65 mmol
+- C out (fermentation): ~22.7 (acetate) + 11.4 (formate) + 11.4 (CO₂) + 11.4 (lactate) + 8.1 (growth) ≈ 64.6 mmol ✓
+- N in: 6 mmol
+- N out (growth): 2.0 mmol; excess NH₄: 4 mmol (recycled) ✓
+
+This is sustainable.
+
+```json
+{
+  "fluxes": {
+    "lac__L": -8.0,
+    "glc__D": -6.0,
+    "arg__L": -3.0,
+    "nh4": -2.0,
+    "cys__L": -1.0,
+    "ac": 11.4,
+    "for": 11.4,
+    "co2": 11.4,
+    "lac__L": 5.7
+  },
+  "growth_rate": 0.25,
+  "rationale": "E. lenta ferments lactate and glucose as primary C sources under anaerobic conditions, with arginine and ammonium as N sources. Mixed-acid fermentation yields acetate, formate, and CO₂ as major products. Uptake of 8 lactate + 6 glucose + 3 arginine + 2 ammonium + 1 cysteine supports growth at 0.25/h with fermentation products balancing the C budget.",
+  "confidence": 0.72
+}
+```

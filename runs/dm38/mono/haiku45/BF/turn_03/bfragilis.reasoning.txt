@@ -1,0 +1,101 @@
+# Metabolic Decision for Bacteroides fragilis NCTC 9343 — Turn 3
+
+## Analysis
+
+### Carbon and Nitrogen Sources Available
+
+**Primary carbon sources I can transport:**
+- D-glucose (8.83 mM): Bacteroides has robust glucose transporters; this is a preferred substrate
+- L-arabinose (16.31 mM): Bacteroides has arabinose utilization pathways
+- L-lactate (21.77 mM): I can ferment lactate; this is abundant
+- Maltose (4.382 mM): I have maltose transporters
+- Amino acids (arg, ser, ala, gly, pro, etc.): These serve dual roles as C and N sources
+
+**Carbon sources I cannot efficiently use:**
+- CO₂ (51.35 mM): I am a heterotroph, not autotrophic. CO₂ is a fermentation product, not a primary substrate
+- Short-chain fatty acids (acetate, butyrate, formate): These are my fermentation products, not primary substrates for growth
+
+**Nitrogen sources:**
+- Ammonium (6.846 mM): Direct uptake via glutamine synthetase/GOGAT
+- Amino acids provide both C and N: arginine (14.99), serine (5.746), alanine (5.3), glycine (4.7), proline (5.9), etc.
+
+### My Fermentation Strategy
+
+As a Gram-negative anaerobe, I ferment carbohydrates and amino acids to:
+- **Acetate** (primary product)
+- **Butyrate** (secondary product)
+- **Formate** (minor product)
+- **CO₂** (from decarboxylation reactions)
+
+Recent turns show I've been consuming glucose, arabinose, and arginine while producing acetate, butyrate, and formate. This is consistent with mixed-acid fermentation.
+
+### Resource Constraints at Turn 3
+
+- Glucose is declining (8.83 mM remaining; consumed 12 mM/gDW/h initially, now lower)
+- Lactate is abundant (21.77 mM) — I should shift to lactate as glucose depletes
+- Arginine is still available (14.99 mM) — valuable for both C and N
+- Ammonium is limited (6.846 mM) — I should rely on amino acid N
+
+### Growth Rate Calculation
+
+**Biomass composition requirement:** ~41 mmol C/gDW, ~8 mmol N/gDW
+
+**Proposed uptake (mmol/gDW/h):**
+- D-glucose: -8.0 (remaining supply supports this)
+- L-lactate: -4.0 (shift toward abundant substrate)
+- L-arginine: -3.0 (good C:N ratio; 6 C, 2 N per molecule)
+- L-arabinose: -2.0 (available, good C source)
+- Ammonium: -1.0 (limited; prefer amino acid N)
+
+**Carbon balance:**
+- Uptake: (8.0 × 6) + (4.0 × 3) + (3.0 × 6) + (2.0 × 5) + (1.0 × 0) = 48 + 12 + 18 + 10 = 88 mmol C/gDW/h
+- Growth cost: 41 mmol C/gDW/h
+- Available for fermentation products: 88 − 41 = 47 mmol C/gDW/h
+
+**Nitrogen balance:**
+- Uptake: (3.0 × 2) + (1.0 × 1) = 6 + 1 = 7 mmol N/gDW/h
+- Growth cost: 8 mmol N/gDW/h
+- **Deficit: 1 mmol N/gDW/h** — I need to increase ammonium or amino acid uptake
+
+**Revised uptake:**
+- Ammonium: -2.0 (increase to cover N deficit)
+
+**Revised N balance:** 6 + 2 = 8 mmol N/gDW/h ✓
+
+**Fermentation product allocation (47 mmol C to distribute):**
+- Acetate: +15 mmol C/gDW/h (5 C per acetate = 3.0 mmol acetate/gDW/h)
+- Butyrate: +12 mmol C/gDW/h (4 C per butyrate = 3.0 mmol butyrate/gDW/h)
+- Formate: +10 mmol C/gDW/h (1 C per formate = 10 mmol formate/gDW/h)
+- CO₂: +10 mmol C/gDW/h (from fermentation decarboxylation)
+
+**Total C out:** 15 + 12 + 10 + 10 = 47 ✓
+
+**Growth rate:** With 41 mmol C/gDW consumed and ~8 mmol N/gDW consumed per gram of biomass produced:
+- Growth rate ≈ **0.42 /h** (conservative, given declining glucose and need to shift substrates)
+
+### Mass Audit
+- **Carbon in:** 88 mmol/gDW/h
+- **Carbon out (growth + fermentation):** 41 + 47 = 88 mmol/gDW/h ✓
+- **Nitrogen in:** 8 mmol/gDW/h
+- **Nitrogen out (growth):** 8 mmol/gDW/h ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -4.0,
+    "arg__L": -3.0,
+    "arab__L": -2.0,
+    "nh4": -2.0,
+    "ac": 3.0,
+    "but": 3.0,
+    "for": 10.0,
+    "co2": 10.0
+  },
+  "growth_rate": 0.42,
+  "rationale": "Shifting from glucose-dominant to mixed lactate/glucose/arginine strategy as glucose depletes. Lactate is abundant and fermentable. Arginine provides both C and N. Maintaining anaerobic fermentation to acetate, butyrate, formate, and CO₂. Growth rate declining as preferred substrates (glucose) become limiting; N-limited by ammonium availability.",
+  "confidence": 0.68
+}
+```

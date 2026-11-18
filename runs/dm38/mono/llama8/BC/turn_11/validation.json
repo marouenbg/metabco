@@ -1,0 +1,47 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 11,
+  "growth_claimed": 0.212,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4",
+   "c_imbalance: in=128 out=248 biomass=8.94"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "P: credited 0.266 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.212 -> 0",
+   "C: secretions scaled by 0.541"
+  ],
+  "rationale": "Based on my transport capabilities, I'll take up CO2, butyrate, and succinate. I'll release acetate, butyrate, and succinate as fermentation products. My growth rate is adjusted to account for the ava",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "co2": -47.62,
+   "but": 22.5,
+   "succ": 15.62,
+   "ac": 47.62,
+   "cys__L": -8.4,
+   "pro__L": -5.9,
+   "ala__L": -5.3,
+   "gly": -4.7,
+   "nh4": -10.0
+  },
+  "fluxes_applied": {
+   "co2": -47.62,
+   "but": 12.1711,
+   "succ": 8.4494,
+   "ac": 25.7594,
+   "cys__L": -8.4,
+   "pro__L": -5.9,
+   "ala__L": -5.3,
+   "gly": -4.7,
+   "nh4": 0.0,
+   "pi": -0.2656
+  }
+ }
+]

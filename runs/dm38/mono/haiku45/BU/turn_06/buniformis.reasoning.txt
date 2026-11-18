@@ -1,0 +1,83 @@
+# Metabolic reasoning for Bacteroides uniformis ATCC 8492 at t=24h
+
+## Assessment of available resources and transporters
+
+**Carbon sources available and accessible:**
+- D-glucose (20.49 mM): abundant, Bacteroides uniformis has constitutive PTS and other glucose transporters
+- L-lactate (25.11 mM): abundant, this species ferments lactate well
+- L-arabinose (20.45 mM): present at high concentration, Bacteroides has arabinose utilization pathways
+- Maltose (4.38 mM): modest amount, transportable
+- Acetate (2.09 mM): low, but present as fermentation product from my own metabolism
+- Propionate (1.36 mM): low, also a fermentation product
+- CO₂ (49.41 mM): present but not a primary carbon source for heterotrophic growth
+
+**Nitrogen sources:**
+- L-arginine (20.23 mM): high, excellent nitrogen source
+- Ammonium (8.01 mM): moderate, preferred nitrogen source
+- L-cysteine (8.28 mM): can serve dual role (C and N)
+- Other amino acids present but in lower concentrations
+
+**Recent metabolic pattern:**
+I have been successfully fermenting glucose and lactate, producing acetate, propionate, formate, succinate, and CO₂. Growth rates have been 0.32-0.45 /h with brief stasis at turn 4. This is consistent with mixed-acid fermentation typical of Bacteroides.
+
+## Metabolic strategy for next interval
+
+I will continue the mixed-acid fermentation strategy:
+1. **Primary substrates**: glucose and lactate (most abundant and readily metabolized)
+2. **Nitrogen**: ammonium and arginine (already being used effectively)
+3. **Secondary carbon**: arabinose to diversify substrate utilization and avoid depletion bottlenecks
+
+**Flux calculations:**
+
+Taking up:
+- D-glucose: -8.0 mmol/gDW/h (consistent with previous turns, sustainable rate)
+- L-lactate: -6.0 mmol/gDW/h (consistent pattern)
+- L-arabinose: -2.0 mmol/gDW/h (to utilize available resource)
+- L-arginine: -2.5 mmol/gDW/h (nitrogen + carbon)
+- Ammonium: -2.0 mmol/gDW/h (preferred nitrogen)
+
+**Carbon balance for growth:**
+- Carbon in: 8(glucose) + 6(lactate) + 2(arabinose) + 2.5(arginine) = 18.5 mmol C/gDW/h
+- Growth requirement: 42 mmol C per gram DW produced
+- Maximum growth: 18.5/42 = 0.44 g/g/h *if all carbon went to biomass*
+- But fermentation requires release of partially oxidized products
+
+**Fermentation products (typical for Bacteroides mixed-acid fermentation):**
+- Acetate: +2.5 mmol/gDW/h
+- Propionate: +2.0 mmol/gDW/h
+- Formate: +1.5 mmol/gDW/h
+- CO₂: +1.5 mmol/gDW/h
+- Succinate: +0.5 mmol/gDW/h
+
+**Carbon audit:**
+- In: 18.5 mmol C/gDW/h
+- Out as products: 2.5(acetate) + 2.0(propionate) + 1.5(formate) + 1.5(CO₂) + 0.5(succinate) = 8.0 mmol C/gDW/h
+- Remaining for biomass: 18.5 - 8.0 = 10.5 mmol C/gDW/h
+- Growth rate: 10.5/42 = 0.25 g/g/h
+
+**Nitrogen audit:**
+- In: 2.0(ammonium) + 2.5(arginine) = 4.5 mmol N/gDW/h
+- Required for biomass: 0.25 × 10 = 2.5 mmol N/gDW/h
+- Surplus: 2.0 mmol N/gDW/h (reasonable, can be stored or partially released)
+
+**Confidence assessment:** High (0.85). This strategy follows established patterns, respects mass balance, and uses abundant substrates that have proven effective in prior turns.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.0,
+    "lac__L": -6.0,
+    "arab__L": -2.0,
+    "arg__L": -2.5,
+    "nh4": -2.0,
+    "ac": 2.5,
+    "ppa": 2.0,
+    "for": 1.5,
+    "co2": 1.5,
+    "succ": 0.5
+  },
+  "growth_rate": 0.25,
+  "rationale": "Continuing mixed-acid fermentation of glucose and lactate with arabinose supplementation. Nitrogen from ammonium and arginine. Fermentation products (acetate, propionate, formate, succinate) balance carbon budget while supporting growth at 0.25/h with positive nitrogen balance.",
+  "confidence": 0.85
+}
+```

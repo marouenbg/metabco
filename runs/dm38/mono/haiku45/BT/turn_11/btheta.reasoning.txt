@@ -1,0 +1,102 @@
+# Reasoning
+
+## Current situation
+At t=44h in a 48h batch culture, I am at 2.441 gDW/L. Nutrients are becoming depleted, but several carbon and nitrogen sources remain available. I need to assess what I can actually metabolize and sustain growth.
+
+## Transportable carbon sources
+As *Bacteroides thetaiotaomicron*, I have:
+- **Formate** (63.46 mM): I can ferment formate via formate hydrogen lyase or convert to acetyl-CoA. This is a primary substrate.
+- **Butyrate, Propionate, Acetate**: I can oxidize short-chain fatty acids anaerobically, but in a sealed system these are mainly fermentation products I would release, not consume further.
+- **Amino acids** (cys, arg, pro, ser, gly, phe, leu, tyr, ala, val, gln, asn, lys, thr, ile, his, met, trp, glu, asp): I have amino acid transporters and can perform Stickland reactions and amino acid fermentation. Arginine is particularly useful (I've been consuming it regularly).
+- **Carbohydrates** (myo-inositol, maltose): I have inositol and maltose transporters. Maltose is nearly depleted (0.338 mM), but inositol (6.272 mM) is still available.
+- **CO₂**: I take this up to balance redox and pH; it's a sink, not a primary energy source.
+
+## Non-transportable abundant sources
+- **Nitrate** (0.1093 mM): I lack nitrate reductase for anaerobic nitrate reduction.
+- **Glucose**: My recent history shows I consumed some glucose, but it's now absent from the list. I likely cannot import it efficiently or it's already consumed.
+
+## Nitrogen sources
+- **Ammonium** (12.36 mM): Primary nitrogen source. I will need ~8 mmol/gDW for growth.
+- **Amino acids**: Provide both carbon and nitrogen; I can catabolize them.
+- **Arginine** (5.826 mM): I've consistently consumed this; it's a key substrate for Stickland fermentation and provides both C and N.
+
+## Fermentation strategy
+At turn 11, with 4 hours left, I should:
+1. **Continue consuming formate** (abundant at 63.46 mM): Ferment to acetate, CO₂, H₂, or formate hydrogen lyase products. This is energetically favorable anaerobically.
+2. **Consume arginine** (5.826 mM): Stickland reactions with arginine as electron acceptor, producing ornithine, ammonia, and short-chain fatty acids (acetate, butyrate, propionate).
+3. **Consume inositol** (6.272 mM): Ferment via the inositol degradation pathway, producing acetate and propionate.
+4. **Use ammonium**: Incorporate into biomass and amino acid synthesis.
+5. **Release CO₂, acetate, propionate, butyrate**: Products of fermentation.
+
+## Growth rate calculation
+**Carbon budget:**
+- Formate uptake: ~12 mmol/gDW/h (moderate rate, limited by enzyme kinetics and redox balance)
+- Arginine uptake: ~1.5 mmol/gDW/h (consistent with recent turns)
+- Inositol uptake: ~2.0 mmol/gDW/h (6-carbon sugar alcohol, significant but not maximal)
+- **Total C in:** 12 + 1.5×2 + 2.0×6 = 12 + 3 + 12 = 27 mmol C/gDW/h
+
+**Nitrogen budget:**
+- Ammonium uptake: ~2.0 mmol/gDW/h
+- Arginine uptake (1.5 mmol/gDW/h provides 1.5 mmol N)
+- **Total N in:** 2.0 + 1.5 = 3.5 mmol N/gDW/h
+- **N needed for growth:** 8 mmol N/gDW growth, so growth ≤ 3.5/8 = 0.44 /h (N-limited)
+
+**Carbon cost of growth:**
+- At 0.40 /h growth: 0.40 × 41 = 16.4 mmol C/gDW/h needed for biomass
+- **Carbon available for secretion:** 27 − 16.4 = 10.6 mmol C/gDW/h
+
+**Fermentation products (stoichiometry):**
+- Formate (C1) → Acetate (C2) + CO₂ + H₂ (roughly)
+- Arginine fermentation → Acetate + Butyrate + CO₂ + NH₄⁺
+- Inositol (C6) → Acetate + Propionate + CO₂
+
+Allocating ~10.6 mmol C/gDW/h to products (acetate, propionate, butyrate, CO₂).
+
+**Growth rate:** Limited by N at ~0.40 /h
+
+## Fluxes (mmol/gDW/h)
+- **for**: −12.0 (formate uptake)
+- **arg__L**: −1.5 (arginine uptake)
+- **inost**: −2.0 (inositol uptake)
+- **nh4**: −2.0 (ammonium uptake)
+- **ac**: +4.0 (acetate secretion)
+- **ppa**: +3.5 (propionate secretion)
+- **but**: +1.5 (butyrate secretion)
+- **co2**: +5.0 (CO₂ release for redox/pH balance)
+
+**Carbon audit:**
+- In: 12 + (1.5×2) + (2.0×6) + (2.0×0) = 12 + 3 + 12 = 27 mmol C
+- Out (growth): 0.40 × 41 = 16.4 mmol C
+- Out (products): 4.0 + (3.5×3) + (1.5×4) + 5.0 = 4 + 10.5 + 6 + 5 = 25.5 mmol C (this exceeds available, so reduce)
+
+Adjusting: reduce product fluxes proportionally.
+- ac: +3.0, ppa: +2.5, but: +1.0, co2: +4.5 → Total = 3 + 7.5 + 4 + 4.5 = 19 mmol C (still too high)
+
+Recalculate more carefully. With 27 mmol C in and 16.4 mmol C for growth, only 10.6 mmol C can be secreted.
+- ac: +2.5, ppa: +2.0, but: +1.0, co2: +5.0 → 2.5 + 6 + 4 + 5 = 17.5 (still over)
+
+Let me be stricter:
+- ac: +2.0, ppa: +2.0, but: +0.8, co2: +5.8 → 2 + 6 + 3.2 + 5.8 = 17 (over by 6.4)
+
+Reduce all products by ~40%:
+- ac: +1.2, ppa: +1.2, but: +0.5, co2: +3.5 → 1.2 + 3.6 + 2 + 3.5 = 10.3 ✓
+
+**Growth rate: 0.40 /h**
+
+```json
+{
+  "fluxes": {
+    "for": -12.0,
+    "arg__L": -1.5,
+    "inost": -2.0,
+    "nh4": -2.0,
+    "ac": 1.2,
+    "ppa": 1.2,
+    "but": 0.5,
+    "co2": 3.5
+  },
+  "growth_rate": 0.40,
+  "rationale": "In late stationary phase with 4 h remaining, I consume abundant formate and inositol as primary carbon sources, supplemented by arginine Stickland fermentation. Nitrogen is limiting; I take up ammonium and amino acid nitrogen. Fermentation products (acetate, propionate, butyrate, CO₂) are released to balance redox and pH. Growth is limited by nitrogen availability to ~0.40 /h.",
+  "confidence": 0.60
+}
+```

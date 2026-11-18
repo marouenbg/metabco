@@ -1,0 +1,45 @@
+[
+ {
+  "species_id": "buniformis",
+  "turn": 5,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.4,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.501 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.105 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Resuming fermentative growth on glucose, lactate, and arginine after transient pause. Balanced uptake of primary sugars and amino acids supports 0.40 /h growth with nitrogen sufficiency. Fermentation ",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -6.0,
+   "arg__L": -3.0,
+   "arab__L": -2.0,
+   "nh4": -2.5,
+   "ac": 2.5,
+   "ppa": 2.0,
+   "for": 1.2,
+   "co2": 1.5,
+   "succ": 0.8
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -6.0,
+   "arg__L": -3.0,
+   "arab__L": -2.0,
+   "nh4": -2.5,
+   "ac": 2.5,
+   "ppa": 2.0,
+   "for": 1.2,
+   "co2": 1.5,
+   "succ": 0.8,
+   "pi": -0.501,
+   "so4": -0.1047
+  }
+ }
+]

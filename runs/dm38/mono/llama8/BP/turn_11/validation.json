@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 11,
+  "growth_claimed": 0.54,
+  "growth_allowed": 0.54,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.363 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.139 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing D-glucose as the primary carbon source and ammonium as the nitrogen source, with production of formate and hydrogen to account for biomass production.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -26.12,
+   "nh4": -6.672,
+   "for": 16.2,
+   "h2": 4.32,
+   "co2": 16.2
+  },
+  "fluxes_applied": {
+   "glc__D": -26.12,
+   "nh4": -6.672,
+   "for": 16.2,
+   "h2": 4.32,
+   "co2": 16.2,
+   "pi": -0.363,
+   "so4": -0.1394
+  }
+ }
+]

@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "glc__D": -12.0,
+  "lac__L": -4.0,
+  "arab__L": -3.0,
+  "arg__L": -2.0,
+  "ser__L": -1.0,
+  "nh4": -3.0,
+  "but": 1.02,
+  "ac": 1.02,
+  "for": 0.34,
+  "co2": 0.34
+ },
+ "growth_rate": 0.4,
+ "rationale": "Mixed fermentation of glucose, lactate, arabinose, and arginine. Nitrogen becomes limiting (5.5 mmol available vs 10 mmol needed per g biomass). Butyrate dominant product (60%), acetate secondary (30%), formate/CO2 minor (10%). Conservative growth rate reflects nitrogen constraint and maintenance costs.",
+ "confidence": 0.68
+}

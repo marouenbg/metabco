@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 8,
+  "growth_claimed": 0.099,
+  "growth_allowed": 0.099,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "P: credited 0.09 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0217 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Uptake of butyrate, propionate, and L-arginine to support growth and production of acetate and butyrate as fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": 2.0,
+   "ppa": -3.0,
+   "arg__L": -2.0,
+   "ac": 3.0,
+   "nh4": -1.0
+  },
+  "fluxes_applied": {
+   "but": 2.0,
+   "ppa": -3.0,
+   "arg__L": -2.0,
+   "ac": 3.0,
+   "nh4": 0.0,
+   "pi": -0.09,
+   "so4": -0.0217
+  }
+ }
+]

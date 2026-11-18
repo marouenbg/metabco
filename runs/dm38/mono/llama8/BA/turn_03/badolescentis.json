@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "co2": 0.07,
+  "lac__L": 0.28,
+  "glc__D": 0.09,
+  "nh4": 0.39,
+  "lac__D": 0.28,
+  "for": 0.09
+ },
+ "growth_rate": 0.083,
+ "rationale": "I took up carbon dioxide, L-lactate, and D-glucose as my primary carbon sources, and ammonium and L-arginine as my primary nitrogen sources. I produced lactate, formate, and possibly other short-chain fatty acids as my fermentation products. I calculated my growth rate based on my chosen uptake and the growth costs of carbon and nitrogen.",
+ "confidence": 0.8
+}

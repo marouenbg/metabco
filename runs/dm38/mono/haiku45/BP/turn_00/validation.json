@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 0,
+  "growth_claimed": 0.08,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=15 out=24.2 biomass=2.36"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0538 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0207 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.08 -> 0",
+   "C: secretions scaled by 0.649"
+  ],
+  "rationale": "Bifidobacterium pseudocatenulatum ferments glucose via the bifid shunt under anaerobic conditions, producing acetate and lactate. Glucose is the preferred carbon source (24.98 mM available). Nitrogen ",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "glc__D": -2.5,
+   "nh4": -0.64,
+   "ac": 6.25,
+   "lac__L": 3.75,
+   "for": 0.25,
+   "co2": 0.25
+  },
+  "fluxes_applied": {
+   "glc__D": -2.5,
+   "nh4": -0.64,
+   "ac": 4.0593,
+   "lac__L": 2.4356,
+   "for": 0.1624,
+   "co2": 0.1624,
+   "pi": -0.0538,
+   "so4": -0.0207
+  }
+ }
+]

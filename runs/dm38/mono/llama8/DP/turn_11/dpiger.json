@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": 10.0,
+  "h2": 10.0,
+  "h2s": -10.0,
+  "for": 1.75,
+  "ac": 1.75,
+  "lac__L": 1.75
+ },
+ "growth_rate": 0.082,
+ "rationale": "Utilizing glucose and hydrogen as primary carbon and nitrogen sources, respectively, to support growth.",
+ "confidence": 0.9
+}

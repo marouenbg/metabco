@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -5.0,
+  "arg__L": -2.0,
+  "ac": 3.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.125,
+ "rationale": "Lactate and arginine uptake support growth and fermentation",
+ "confidence": 0.8
+}

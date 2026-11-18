@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -3.0,
+  "arg__L": -0.5,
+  "nh4": -1.8,
+  "ac": 10.0,
+  "ppa": 4.0,
+  "but": 2.0,
+  "co2": 9.1,
+  "for": 0.5
+ },
+ "growth_rate": 0.27,
+ "rationale": "Co-ferment glucose and lactate with arginine as secondary N/C source. Mixed-acid fermentation to acetate, propionate, butyrate. Growth limited by ammonium availability. Carbon and nitrogen balance verified.",
+ "confidence": 0.72
+}

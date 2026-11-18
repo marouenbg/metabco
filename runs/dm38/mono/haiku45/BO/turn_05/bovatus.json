@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "arab__L": -5.0,
+  "lac__L": -3.0,
+  "arg__L": -1.5,
+  "nh4": -8.5,
+  "ac": 2.5,
+  "ppa": 1.0,
+  "co2": 2.0,
+  "h2": 0.5
+ },
+ "growth_rate": 1.0,
+ "rationale": "Glucose depleted; switching to arabinose (primary fermentable sugar, 20.9 mM available) + lactate co-fermentation. Arginine provides both carbon and nitrogen. Ammonium covers nitrogen deficit. Fermentation products (acetate, propionate, CO\u2082, H\u2082) are typical for Bacteroides mixed-substrate anaerobic metabolism. Carbon and nitrogen budgets balance.",
+ "confidence": 0.72
+}

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "ser__L": -10.0,
+  "nh4": -10.0,
+  "ac": 15.0,
+  "but": 10.0,
+  "succ": 10.0,
+  "h2": -2.0
+ },
+ "growth_rate": 0.283,
+ "rationale": "We take up D-glucose, L-serine, and ammonium to meet our growth requirement. We release acetate, butyrate, and succinate to meet our carbon balance requirement.",
+ "confidence": 0.9
+}

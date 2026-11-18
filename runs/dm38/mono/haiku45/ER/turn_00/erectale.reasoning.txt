@@ -1,0 +1,76 @@
+# Metabolic decision for Eubacterium rectale ATCC 33656 at t=0
+
+## Analysis of transporters and available substrates
+
+Eubacterium rectale is a saccharolytic and proteolytic Gram-positive anaerobe from the human gut microbiota. My genome encodes:
+- Carbohydrate transporters: PTS systems and permeases for glucose, arabinose, lactate, and other sugars
+- Amino acid transporters: broad specificity for proteinogenic amino acids
+- I can ferment sugars to short-chain fatty acids and lactate
+
+**Available carbon sources I can use:**
+- D-glucose (24.98 mM): excellent substrate, high affinity
+- L-lactate (28.31 mM): can ferment lactate
+- L-arabinose (21.31 mM): pentose, can metabolize
+- Maltose (4.382 mM): disaccharide, can ferment
+- Amino acids: extensive pool for catabolism
+
+**Nitrogen sources:**
+- Ammonium (9.347 mM): primary nitrogen source
+- Amino acids: can be deaminated and used for both carbon and nitrogen
+
+## Fermentation strategy
+
+As an obligate anaerobe, I ferment carbohydrates to short-chain fatty acids (acetate, butyrate, propionate) and lactate. Given the abundance of glucose and lactate, I will pursue mixed-acid fermentation. My typical products are acetate, butyrate, and propionate, with some formate and H₂.
+
+## Growth calculation
+
+**Uptake plan:**
+- Glucose: 10 mmol/gDW/h (primary fermentable carbon source)
+- Lactate: 5 mmol/gDW/h (secondary, can co-ferment)
+- Ammonium: 2 mmol/gDW/h (nitrogen source)
+- Amino acids (cysteine, serine, arginine): 2 mmol/gDW/h combined (additional N and C)
+
+**Total carbon uptake:** ~17 mmol/gDW/h (glucose + lactate + amino acids)
+
+**Growth requirement:** 33 mmol C per gram dry weight produced
+**Nitrogen requirement:** 7 mmol N per gram dry weight produced
+
+With 2 mmol/gDW/h nitrogen uptake, maximum growth = 2/7 ≈ 0.29 /h (nitrogen-limited)
+
+With 17 mmol/gDW/h carbon and 33 mmol/g requirement: 17/33 ≈ 0.51 /h (carbon could support more)
+
+**Nitrogen is limiting.** Growth rate = 0.28 /h
+
+**Carbon balance audit:**
+- In: 17 mmol/gDW/h
+- Growth cost: 0.28 /h × 33 mmol/g = 9.24 mmol/gDW/h
+- Fermentation products: 17 - 9.24 = 7.76 mmol/gDW/h (as acetate, butyrate, propionate, formate)
+
+Typical E. rectale fermentation yields ~60% acetate, ~30% butyrate, ~10% other products (formate, propionate).
+
+**Secretion plan:**
+- Acetate: 4.7 mmol/gDW/h
+- Butyrate: 2.3 mmol/gDW/h
+- Formate: 0.76 mmol/gDW/h
+
+This balances carbon, supports the calculated growth rate, and aligns with known E. rectale metabolism.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "lac__L": -5.0,
+    "nh4": -2.0,
+    "cys__L": -0.8,
+    "ser__L": -0.6,
+    "arg__L": -0.6,
+    "ac": 4.7,
+    "but": 2.3,
+    "for": 0.76,
+    "co2": 0.5
+  },
+  "growth_rate": 0.28,
+  "rationale": "E. rectale ferments glucose and lactate anaerobically to short-chain fatty acids. Nitrogen (ammonium + amino acids) limits growth at 0.28 /h. Carbon balance: 17 mmol in, 9.24 for biomass, 7.76 as fermentation products (acetate, butyrate, formate). Typical gut fermentation profile.",
+  "confidence": 0.72
+}
+```

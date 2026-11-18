@@ -1,0 +1,99 @@
+# Metabolic reasoning for Bacteroides vulgatus at t=44h
+
+## Assessment of current state
+I am at 5.2 gDW/L in a sealed anaerobic batch culture with 4 hours remaining. Nutrient depletion is advancing: acetate (once abundant) is now at 75 mM, and many amino acids are scarce. The culture is in stationary-phase decline.
+
+## Carbon and nitrogen sources available to me
+
+**Primary carbon sources I can use:**
+- **Acetate (75.12 mM)**: I have acetyl-CoA synthetase and can ferment this robustly
+- **Propionate (5.72 mM)**: Bacteroides encode propionyl-CoA pathways; usable but limited
+- **Butyrate (2.82 mM)**: I can β-oxidize this to acetyl-CoA
+- **Succinate (5.13 mM)**: Fumarate reductase pathway available anaerobically
+- **Amino acids**: Multiple L-amino acids present (phe, thr, tyr, his, met, etc.); I can deaminate and ferment these
+- **myo-inositol (2.76 mM)**: Bacteroides have inositol utilization operons; I can ferment this
+
+**Carbon sources I cannot use:**
+- **CO₂**: I lack RuBisCO and the Calvin cycle; I'm heterotrophic
+- **H₂**: No hydrogenase that would support growth
+- **Maltose, trace sugars**: Depleted to <0.04 mM; negligible
+
+**Nitrogen sources:**
+- Amino acids themselves provide both carbon and nitrogen
+- No free ammonia listed (only in excess minerals)
+- Amino acid uptake and deamination is my primary nitrogen strategy
+
+## Recent metabolic pattern
+My last three turns show:
+- Turn 8–9: Modest growth (0.15–0.16 /h) on acetate + amino acid catabolism
+- Turn 10: Higher growth (0.25 /h) with acetate uptake and fermentation product secretion
+- Consistent pattern: acetate → acetyl-CoA → biomass + fermentation products (butyrate, propionate, CO₂)
+
+## Fermentation products I produce
+As a Bacteroides species in anaerobic conditions:
+- **Acetate** (overflow, or from amino acid fermentation)
+- **Propionate** (from odd-chain amino acids, succinate)
+- **Butyrate** (from acetyl-CoA condensation)
+- **CO₂** (from decarboxylation)
+- **Formate** (minor pathway)
+- **H₂** (trace, from some fermentations)
+
+## Growth calculation
+
+**Carbon budget:**
+- Acetate uptake: 12 mmol/gDW/h (realistic for Bacteroides; within 0–20 range)
+- Propionate uptake: 1.5 mmol/gDW/h (limited supply, but available)
+- Amino acid uptake: ~3 mmol C/gDW/h (from Phe, Tyr, His, Met, Trp, Val, Leu collectively)
+- **Total C in: ~16.5 mmol C/gDW/h**
+
+**Carbon cost of growth:**
+- Growth rate: 0.24 /h (sustained from recent turns; slightly lower than turn 10 due to nutrient scarcity)
+- C cost: 0.24 × 41 = 9.84 mmol C/gDW/h
+- N cost: 0.24 × 8 = 1.92 mmol N/gDW/h
+
+**Nitrogen budget:**
+- Amino acids provide ~2.0 mmol N/gDW/h (from Phe, Tyr, His, Met, Trp, Val, Leu, Asn, Asp, Glu uptake)
+- Sufficient for 0.24 /h growth ✓
+
+**Carbon secretion (fermentation products):**
+- Acetate: +2.0 mmol C/gDW/h (overflow)
+- Propionate: +0.5 mmol C/gDW/h
+- Butyrate: +1.0 mmol C/gDW/h
+- CO₂: +3.5 mmol C/gDW/h
+- **Total C out: 7.0 mmol C/gDW/h**
+
+**Carbon balance:**
+- In: 16.5
+- Growth: 9.84
+- Out: 7.0
+- **Balance: 16.5 − 9.84 − 7.0 = −0.34 ≈ 0** ✓ (within rounding)
+
+**Nitrogen balance:**
+- In: 2.0
+- Growth: 1.92
+- **Balance: 2.0 − 1.92 = +0.08** ✓ (slight surplus; acceptable)
+
+## Final strategy
+Sustain moderate growth (0.24 /h) on acetate and amino acids, with fermentation product secretion. This is conservative given nutrient limitation and only 4 hours remaining, but realistic for a Bacteroides in stationary phase.
+
+```json
+{
+  "fluxes": {
+    "ac": -12.0,
+    "ppa": -1.5,
+    "phe__L": -0.8,
+    "tyr__L": -0.7,
+    "his__L": -0.5,
+    "met__L": -0.4,
+    "trp__L": -0.3,
+    "val__L": -0.3,
+    "leu__L": -0.2,
+    "co2": 3.5,
+    "but": 1.0,
+    "for": 0.5
+  },
+  "growth_rate": 0.24,
+  "rationale": "Acetate and amino acid catabolism support moderate growth in late stationary phase. Fermentation products (butyrate, formate, CO₂) balance carbon. Nitrogen from amino acids meets biosynthetic demand.",
+  "confidence": 0.72
+}
+```

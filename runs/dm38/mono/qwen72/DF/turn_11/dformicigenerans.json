@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "for": -5.0,
+  "co2": -5.0,
+  "arg__L": -1.0,
+  "ac": 5.0,
+  "h2": 2.5
+ },
+ "growth_rate": 0.143,
+ "rationale": "Utilize formate and arginine for growth, produce acetate and hydrogen as fermentation products, with a nitrogen-limited growth rate.",
+ "confidence": 0.9
+}

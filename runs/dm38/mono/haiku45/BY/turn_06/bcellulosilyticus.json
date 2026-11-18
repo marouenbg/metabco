@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -6.0,
+  "arg__L": -2.5,
+  "ala__L": -2.0,
+  "ser__L": -1.5,
+  "ac": 12.0,
+  "ppa": -1.5,
+  "for": 8.0,
+  "but": 3.0,
+  "co2": 23.44
+ },
+ "growth_rate": 0.18,
+ "rationale": "Glucose depleted; pivoting to mixed fermentation of lactate, amino acids (arg, ala, ser), and short-chain fatty acids. Lactate and amino acids provide primary fermentable carbon and nitrogen. Fermentation yields acetate, formate, and butyrate as overflow products. Growth limited by carbon availability in batch culture approaching stationary phase.",
+ "confidence": 0.62
+}

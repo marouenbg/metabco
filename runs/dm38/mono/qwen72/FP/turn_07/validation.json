@@ -1,0 +1,51 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 7,
+  "growth_claimed": 1.33,
+  "growth_allowed": 0.8478,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4",
+   "c_imbalance: in=44 out=18 biomass=44.2"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "P: credited 0.996 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.28 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 1.33 -> 0.848"
+  ],
+  "rationale": "Using available amino acids to support growth and producing butyrate and acetate as fermentation products.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "pro__L": -2.0,
+   "ala__L": -2.0,
+   "ser__L": -2.0,
+   "arg__L": -3.0,
+   "gly": -2.0,
+   "co2": 6.0,
+   "but": 2.0,
+   "ac": 2.0,
+   "h2": 2.0,
+   "nh4": -9.31,
+   "pi": -0.23
+  },
+  "fluxes_applied": {
+   "pro__L": -2.0,
+   "ala__L": -2.0,
+   "ser__L": -2.0,
+   "arg__L": -3.0,
+   "gly": -2.0,
+   "co2": 6.0,
+   "but": 2.0,
+   "ac": 2.0,
+   "h2": 2.0,
+   "nh4": 0.0,
+   "pi": -1.2264,
+   "so4": -0.2795
+  }
+ }
+]

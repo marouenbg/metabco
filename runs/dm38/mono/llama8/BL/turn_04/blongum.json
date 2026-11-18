@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "glc__D": 4.0,
+  "lac__L": 2.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "D-glucose uptake supports growth rate of 0.45 /h, and lactate and formate are released as by-products.",
+ "confidence": 0.9
+}

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": -5.0,
+  "ac": 3.0,
+  "ppa": 2.0,
+  "for": 1.0,
+  "co2": 1.0,
+  "arg__L": -2.0,
+  "nh4": -2.0
+ },
+ "growth_rate": 0.631,
+ "confidence": 0.9,
+ "rationale": "Optimized for carbon and nitrogen balance, utilizing glucose and lactate for energy and growth, with feasible growth rate supported by carbon balance."
+}

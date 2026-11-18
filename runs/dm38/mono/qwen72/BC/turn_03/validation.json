@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bcaccae",
+  "turn": 3,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.313 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0654 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Maintaining steady uptake of glucose, lactate, and arginine to support growth and production of acetate, propionate, and butyrate. Carbon and nitrogen audits support the chosen growth rate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "arg__L": -2.5,
+   "nh4": -5.0,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "arg__L": -2.5,
+   "nh4": -5.0,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 2.0,
+   "pi": -0.3132,
+   "so4": -0.0654
+  }
+ }
+]

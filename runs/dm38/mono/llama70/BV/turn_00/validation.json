@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 0,
+  "growth_claimed": 0.36,
+  "growth_allowed": 0.36,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.327 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.079 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "carbon and nitrogen availability",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arg__L": -5.0,
+   "nh4": -2.0,
+   "co2": -4.8,
+   "ac": 5.0,
+   "but": 3.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arg__L": -5.0,
+   "nh4": -2.0,
+   "co2": -4.8,
+   "ac": 5.0,
+   "but": 3.0,
+   "pi": -0.3273,
+   "so4": -0.079
+  }
+ }
+]

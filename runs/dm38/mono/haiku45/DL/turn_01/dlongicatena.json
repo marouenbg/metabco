@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -8.0,
+  "lac__L": -6.0,
+  "arg__L": -4.0,
+  "nh4": -2.0,
+  "but": 10.0,
+  "ac": 4.0,
+  "co2": 3.0,
+  "for": 0.5
+ },
+ "growth_rate": 0.19,
+ "rationale": "Continuing successful glucose-lactate-arginine fermentation at conservative uptake rates to sustain growth over remaining 44 h. Produces butyrate (primary), acetate, and CO\u2082. Nitrogen sufficient from arginine + ammonium. Carbon balance: 18 in, 17.5 out + 0.5 retained in biomass at 0.19 /h growth.",
+ "confidence": 0.72
+}

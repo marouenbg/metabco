@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "inost": -1.5,
+  "nh4": -1.5,
+  "ppa": 1.2,
+  "but": 0.8,
+  "for": 0.5,
+  "co2": 2.0
+ },
+ "growth_rate": 0.15,
+ "rationale": "Late stationary phase: fermenting residual acetate and myo-inositol (Bacteroides specialty) with ammonium. Modest growth sustained by mixed-acid fermentation producing propionate, butyrate, formate, and CO\u2082. Carbon and nitrogen budgets balanced.",
+ "confidence": 0.62
+}

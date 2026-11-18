@@ -1,0 +1,109 @@
+# Metabolic Decision for Anaerostipes caccae — Turn 6
+
+## Analysis
+
+### Carbon and Nitrogen Sources Available
+
+**Readily usable carbon sources:**
+- Butyrate (15.71 mM) — a short-chain fatty acid; *Anaerostipes caccae* is a butyrate producer and can ferment various substrates, but likely cannot use butyrate as a primary growth substrate (it produces butyrate, doesn't consume it for growth)
+- Acetate (10.89 mM) — requires acetyl-CoA synthetase; present but typically not a preferred growth substrate for anaerobes in the presence of better options
+- Formate (7.71 mM) — limited utility; can be oxidized but not a primary carbon source for growth
+- Amino acids (arginine, cysteine, proline, alanine, glycine, phenylalanine, leucine, serine, tyrosine, valine, etc.) — fermentable; *Anaerostipes* can catabolize amino acids
+- Maltose (4.33 mM) — a disaccharide; *Anaerostipes* has maltose transporters and can ferment it
+- myo-inositol (6.27 mM) — fermentable by some Firmicutes; likely accessible
+
+**Nitrogen sources:**
+- Ammonium (13.17 mM) — primary nitrogen source, readily assimilated
+- Amino acids — contain nitrogen; arginine (10.39 mM) is abundant and can serve dual roles
+
+### Recent Metabolic Pattern
+
+Turns 2–5 show clear preference for:
+- Glucose and arabinose (rapidly consumed when available) → now depleted
+- Lactate (rapidly consumed when available) → now depleted
+- Amino acid catabolism (arginine consistently taken up)
+- Production of butyrate, acetate, formate, CO₂ (typical fermentation products)
+
+The organism has shifted from glucose/lactate fermentation to amino acid fermentation as preferred substrates ran out.
+
+### Current Strategy (Turn 6)
+
+With glucose and lactate exhausted, I should prioritize:
+1. **Amino acids** — abundant, fermentable, provide both C and N
+2. **Maltose** — still available, fermentable
+3. **myo-inositol** — fermentable poliol
+
+**Primary uptake:**
+- L-arginine (10.39 mM): high abundance, dual C/N role
+- L-proline (5.9 mM): fermentable amino acid
+- L-alanine (5.3 mM): fermentable amino acid
+- Glycine (4.7 mM): fermentable
+- Maltose (4.33 mM): fermentable sugar
+- Ammonium (13.17 mM): nitrogen assimilation
+
+**Fermentation products** from amino acid catabolism:
+- Acetate, butyrate, propionate, formate, CO₂, H₂ (typical Clostridium-family products)
+- Ammonia (from amino acid deamination)
+
+### Growth Rate Calculation
+
+At turn 5, growth was 0.250 /h with declining substrate diversity. Now, with multiple amino acids available but in lower total concentration than earlier glucose/lactate phases, I expect a moderate growth rate.
+
+**Uptake plan (mmol/gDW/h):**
+- arg__L: -8.0 (primary amino acid source)
+- pro__L: -4.0 (secondary amino acid)
+- ala__L: -3.0 (tertiary amino acid)
+- gly: -2.5 (minor amino acid)
+- malt: -3.0 (carbohydrate)
+- nh4: -2.0 (nitrogen assimilation)
+
+**Total C in:** 
+- Arg (5 C × 8.0) = 40 mmol C
+- Pro (5 C × 4.0) = 20 mmol C
+- Ala (3 C × 3.0) = 9 mmol C
+- Gly (2 C × 2.5) = 5 mmol C
+- Malt (12 C × 3.0) = 36 mmol C
+- **Total: 110 mmol C/gDW/h**
+
+**Growth cost:** ~0.20 /h × 38 mmol C/gDW = 7.6 mmol C
+**Remaining for fermentation:** 110 − 7.6 = 102.4 mmol C
+
+**Fermentation products (stoichiometry-based):**
+- Acetate: +15 mmol/gDW/h
+- Butyrate: +12 mmol/gDW/h
+- Propionate: +8 mmol/gDW/h
+- Formate: +10 mmol/gDW/h
+- CO₂: +25 mmol/gDW/h
+- H₂: +5 mmol/gDW/h
+
+**Growth rate: 0.20 /h** (conservative, given substrate depletion trend and amino acid-dependent catabolism)
+
+### Audit
+- C in: 110 mmol
+- C out (products): 15 + 12 + 8 + 10 + 25 = 70 mmol
+- C for growth: 7.6 mmol
+- **Balance: 110 − 70 − 7.6 = 32.4 mmol (buffer for error/other pathways)** ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "arg__L": -8.0,
+    "pro__L": -4.0,
+    "ala__L": -3.0,
+    "gly": -2.5,
+    "malt": -3.0,
+    "nh4": -2.0,
+    "ac": 15.0,
+    "but": 12.0,
+    "ppa": 8.0,
+    "for": 10.0,
+    "co2": 25.0,
+    "h2": 5.0
+  },
+  "growth_rate": 0.20,
+  "rationale": "Glucose and lactate exhausted; switching to amino acid fermentation (arginine, proline, alanine, glycine) plus residual maltose. Fermentation yields acetate, butyrate, propionate, formate, CO₂, H₂. Conservative growth rate reflects substrate transition and declining bioavailable carbon.",
+  "confidence": 0.68
+}
+```

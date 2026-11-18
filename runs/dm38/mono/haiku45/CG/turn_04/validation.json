@@ -1,0 +1,43 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 4,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.4,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.416 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Shift from glucose-limited to amino acid fermentation using abundant amino acids (alanine, serine, proline, arginine, cysteine) plus arabinose. Stickland-type reactions yield acetate, butyrate, CO\u2082, a",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "ala__L": -5.0,
+   "ser__L": -3.0,
+   "pro__L": -3.0,
+   "arg__L": -2.0,
+   "cys__L": -1.5,
+   "arab__L": -4.0,
+   "ac": 12.0,
+   "but": 8.0,
+   "co2": 8.0,
+   "h2": 0.4
+  },
+  "fluxes_applied": {
+   "ala__L": -5.0,
+   "ser__L": -3.0,
+   "pro__L": -3.0,
+   "arg__L": -2.0,
+   "cys__L": -1.5,
+   "arab__L": -4.0,
+   "ac": 12.0,
+   "but": 8.0,
+   "co2": 8.0,
+   "h2": 0.4,
+   "pi": -0.4159
+  }
+ }
+]

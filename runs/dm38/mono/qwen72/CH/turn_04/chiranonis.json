@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -3.5,
+  "lac__L": -3.5,
+  "nh4": -3.0,
+  "ac": 5.0,
+  "but": 3.0,
+  "h2": 1.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.105,
+ "rationale": "Utilizing D-glucose and L-lactate as primary carbon sources and ammonium as the nitrogen source, producing acetate, butyrate, hydrogen, and carbon dioxide. The growth rate is calculated based on the carbon and nitrogen requirements and the metabolic fluxes.",
+ "confidence": 0.85
+}

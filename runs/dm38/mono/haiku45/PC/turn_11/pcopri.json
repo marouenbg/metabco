@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "ac": 6.0,
+  "for": 4.0,
+  "ppa": 5.5,
+  "glu__L": -0.8,
+  "asp__L": -0.5,
+  "leu__L": -0.3,
+  "thr__L": -0.2,
+  "succ": 3.0,
+  "co2": 1.7
+ },
+ "growth_rate": 0.16,
+ "rationale": "At turn 11 with 4 h remaining, I'm in stationary-phase growth. I maximize uptake of abundant fermentable substrates (acetate, formate, propionate) while drawing nitrogen from available amino acids (glutamate, aspartate, leucine, threonine). This supports moderate growth (0.16 /h) while maintaining carbon and nitrogen balance. Fermentation products (acetate, propionate, formate, succinate, CO\u2082) are released as typical Prevotella mixed-acid fermentation end products. The low growth rate reflects the high cell density and limited remaining time.",
+ "confidence": 0.68
+}

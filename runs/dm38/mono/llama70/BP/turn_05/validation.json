@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 5,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.168 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0645 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "L-lactate and L-arginine uptake, acetate and CO2 production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "co2": 5.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "co2": 5.0,
+   "h2": 1.0,
+   "pi": -0.168,
+   "so4": -0.0645
+  }
+ }
+]

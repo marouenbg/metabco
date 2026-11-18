@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -7.5,
+  "nh4": -1.875,
+  "ac": 7.5,
+  "co2": 3.75
+ },
+ "growth_rate": 0.045,
+ "rationale": "glucose and ammonium uptake, acetate and carbon dioxide production",
+ "confidence": 0.8
+}

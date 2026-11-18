@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 8,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.35,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.248 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0768 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Bifidobacterium adolescentis ferments lactate and glucose to acetate and CO\u2082 via the bifid shunt. Arginine provides both carbon and nitrogen; ammonium is assimilated. Nitrogen is limiting at 57 mmol/L",
+  "confidence": 0.78,
+  "fluxes_claimed": {
+   "lac__L": -15.0,
+   "glc__D": -3.0,
+   "arg__L": -3.0,
+   "nh4": -1.5,
+   "ac": 12.0,
+   "co2": 8.0,
+   "for": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -15.0,
+   "glc__D": -3.0,
+   "arg__L": -3.0,
+   "nh4": -1.5,
+   "ac": 12.0,
+   "co2": 8.0,
+   "for": 1.0,
+   "pi": -0.2481,
+   "so4": -0.0768
+  }
+ }
+]

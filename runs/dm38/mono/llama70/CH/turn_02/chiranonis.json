@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -5.0,
+  "nh4": -3.0,
+  "ac": 5.0,
+  "co2": 5.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Fermentative metabolism using glucose and lactate as carbon sources",
+ "confidence": 0.8
+}

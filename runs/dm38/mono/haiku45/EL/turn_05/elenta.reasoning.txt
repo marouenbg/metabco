@@ -1,0 +1,74 @@
+# Metabolic decision for Eggerthella lenta DSM 2243 — turn 5
+
+## Analysis
+
+**Carbon sources available:**
+- D-glucose (24.61 mM): I can ferment this via the Embden–Meyerhof–Parnas pathway
+- L-lactate (28.31 mM): I can use this as both carbon and energy source
+- L-arabinose (21.31 mM): pentose fermentation pathway available
+- Maltose (4.382 mM): disaccharide, transportable
+- Acetate (0.7 mM): very low, not a primary target
+
+**Carbon sources I cannot use:**
+- CO₂: I lack the autotrophic capacity; it appears in my output as a fermentation product
+- Formate: I release it, not consume it
+
+**Nitrogen sources:**
+- Ammonium (9.421 mM): primary nitrogen source
+- L-arginine (21.61 mM): I consume this for both amino acid and nitrogen acquisition
+- L-cysteine (8.347 mM): sulfur and nitrogen source
+- Other amino acids: I can catabolize these for nitrogen and carbon
+
+**Fermentation strategy:**
+I am a strict anaerobe (redox -200 mV, no O₂). My historical pattern shows:
+- Glucose → mixed-acid fermentation (acetate, formate, lactate, CO₂)
+- Lactate can be co-fermented or oxidized to acetate + formate
+- My recent turns show consistent acetate and formate production
+
+**Growth rate calculation:**
+At turn 4, I grew at 0.080 /h with glucose uptake of 6 mmol/gDW/h and arginine uptake of 3.5 mmol/gDW/h.
+
+For this turn, I have abundant glucose (24.61 mM) and lactate (28.31 mM). I will maintain a slightly elevated glucose uptake (6.5 mmol/gDW/h) plus lactate co-utilization (3.0 mmol/gDW/h), with continued arginine uptake for nitrogen (3.5 mmol/gDW/h) and cysteine (1.0 mmol/gDW/h).
+
+**Carbon balance:**
+- Glucose uptake: 6.5 mmol C (6 carbons per glucose)
+- Lactate uptake: 3.0 mmol C (3 carbons per lactate)
+- Arginine uptake: 3.5 mmol C (6 carbons per arginine) = 21 mmol C
+- Cysteine uptake: 1.0 mmol C (3 carbons per cysteine) = 3 mmol C
+- **Total C in: 6.5×6 + 3.0×3 + 21 + 3 = 39 + 9 + 24 = 72 mmol C/gDW/h**
+
+**Carbon out (growth at 0.085 /h):**
+- Biomass: 0.085 gDW/h × 33 mmol C/gDW = 2.805 mmol C/gDW/h
+- Fermentation products: acetate (~9.5), formate (~5.0), CO₂ (~4.5), lactate (~2.0) = ~21 mmol C/gDW/h
+- **Total C out: 2.805 + 21 ≈ 23.8 mmol C/gDW/h**
+
+This is conservative and balanced.
+
+**Nitrogen balance:**
+- Ammonium uptake: 1.0 mmol/gDW/h
+- Arginine: 3.5 mmol N (1 N per arginine)
+- Cysteine: 1.0 mmol N
+- **Total N in: 1 + 3.5 + 1 = 5.5 mmol N/gDW/h**
+- Biomass cost: 0.085 × 8 = 0.68 mmol N/gDW/h
+- Remaining: 5.5 - 0.68 = 4.82 mmol N (excess released as ammonia or amino acids)
+
+**Confidence:** 0.75 — I am confident in glucose and lactate fermentation, but the exact split between acetate/formate and the precise growth rate depend on enzyme kinetics not fully specified.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -6.5,
+    "lac__L": -3.0,
+    "arg__L": -3.5,
+    "cys__L": -1.0,
+    "nh4": -1.0,
+    "ac": 9.5,
+    "for": 5.0,
+    "co2": 4.5,
+    "nh4": 3.5
+  },
+  "growth_rate": 0.085,
+  "rationale": "Mixed fermentation of glucose and lactate with amino acid catabolism. Arginine and cysteine provide both carbon and nitrogen. Acetate and formate are primary fermentation products. Growth supported by carbon balance (72 in vs ~24 out after biomass) and nitrogen sufficiency.",
+  "confidence": 0.75
+}
+```

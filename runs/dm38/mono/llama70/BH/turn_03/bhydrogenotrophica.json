@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -8,
+  "glc__D": -2,
+  "nh4": -1.5,
+  "ac": 2,
+  "co2": 2,
+  "for": 1,
+  "h2": 1
+ },
+ "growth_rate": 0.15,
+ "rationale": "Balancing carbon and nitrogen sources to support growth",
+ "confidence": 0.8
+}

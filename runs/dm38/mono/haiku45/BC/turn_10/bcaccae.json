@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "malt": -2.0,
+  "arab__L": -1.5,
+  "inost": -1.0,
+  "ppa": -2.0,
+  "nh4": -2.5,
+  "ac": 10.0,
+  "for": 5.0,
+  "co2": 6.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Consuming remaining carbohydrates (maltose, arabinose, inositol) as preferred substrates, supplemented by propionate. Nitrogen-limited growth at 0.25 /h (ammonium constraint). Fermentation to acetate, formate, and CO\u2082 balances carbon. All constraints satisfied.",
+ "confidence": 0.72
+}

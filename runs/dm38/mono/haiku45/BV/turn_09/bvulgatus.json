@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": 3.0,
+  "but": -2.0,
+  "ppa": -0.8,
+  "pro__L": -0.6,
+  "lys__L": -0.5,
+  "co2": 4.5,
+  "h2": 0.15
+ },
+ "growth_rate": 0.15,
+ "rationale": "Nitrogen-limited stationary phase. Consuming remaining short-chain fatty acids and amino acids via Stickland pathways. Secreting acetate, CO\u2082, and H\u2082 as major fermentation products. Growth rate constrained by amino acid availability.",
+ "confidence": 0.68
+}

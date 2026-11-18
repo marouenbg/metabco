@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 8,
+  "growth_claimed": 0.132,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_absent: arg__L",
+   "c_imbalance: in=16 out=14 biomass=4.98",
+   "n_imbalance: in=0 out=0 biomass=0.757"
+  ],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "zeroed uptake of absent arg__L",
+   "P: credited 0.153 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0346 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.132 -> 0.0742",
+   "N: growth 0.0742 -> 0"
+  ],
+  "rationale": "Butyrate production with acetate, propionate, and amino acid uptake",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -5.0,
+   "ppa": -2.0,
+   "arg__L": -1.0,
+   "but": 3.0,
+   "co2": 2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -5.0,
+   "ppa": -2.0,
+   "arg__L": 0.0,
+   "but": 3.0,
+   "co2": 2.0,
+   "h2": 1.0,
+   "pi": -0.1535,
+   "so4": -0.0346
+  }
+ }
+]

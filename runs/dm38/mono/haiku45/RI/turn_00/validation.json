@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 0,
+  "growth_claimed": 0.37,
+  "growth_allowed": 0.37,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.432 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0968 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Roseburia intestinalis ferments glucose and lactate (both abundant) to butyrate as primary product, with acetate and formate as minor byproducts. Ammonium supports growth. Carbon and nitrogen budgets ",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": -10.0,
+   "nh4": -4.0,
+   "but": 0.8,
+   "ac": 0.5,
+   "for": 0.3,
+   "co2": 0.4,
+   "h2": 0.2
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": -10.0,
+   "nh4": -4.0,
+   "but": 0.8,
+   "ac": 0.5,
+   "for": 0.3,
+   "co2": 0.4,
+   "h2": 0.2,
+   "pi": -0.4316,
+   "so4": -0.0968
+  }
+ }
+]

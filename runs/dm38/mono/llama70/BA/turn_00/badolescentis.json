@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": -10,
+  "nh4": -1,
+  "ac": 5,
+  "lac__L": 2.5
+ },
+ "growth_rate": 0.5,
+ "rationale": "Glucose and ammonium uptake support moderate growth and fermentation to acetate and lactate",
+ "confidence": 0.8
+}

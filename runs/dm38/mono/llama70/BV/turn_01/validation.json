@@ -1,0 +1,34 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 1,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.75,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.682 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.165 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 4.23 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing glucose as primary carbon source with ammonium as nitrogen source, producing acetate and butyrate as fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "nh4": -2.0,
+   "ac": 5.0,
+   "but": 3.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "nh4": -6.2277,
+   "ac": 5.0,
+   "but": 3.0,
+   "pi": -0.6819,
+   "so4": -0.1646
+  }
+ }
+]

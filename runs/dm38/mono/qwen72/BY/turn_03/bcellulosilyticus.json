@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "glc__D": -18.0,
+  "lac__L": -5.0,
+  "arg__L": -2.0,
+  "nh4": -5.0,
+  "ac": 12.0,
+  "but": 12.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.595,
+ "rationale": "Maximizing growth by utilizing abundant glucose and lactate, with arginine contributing to both carbon and nitrogen metabolism. Acetate and butyrate are produced as primary fermentation products.",
+ "confidence": 0.9
+}

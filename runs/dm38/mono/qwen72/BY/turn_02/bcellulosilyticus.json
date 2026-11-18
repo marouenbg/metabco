@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -18.0,
+  "lac__L": -5.0,
+  "nh4": -5.0,
+  "ac": 12.0,
+  "but": 12.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.15,
+ "rationale": "Balanced carbon and nitrogen uptake with reduced formate production to support growth.",
+ "confidence": 0.8
+}

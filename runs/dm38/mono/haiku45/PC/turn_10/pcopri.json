@@ -1,0 +1,10 @@
+{
+ "fluxes": {
+  "ac": -10.0,
+  "for": 3.0,
+  "asn__L": -1.5
+ },
+ "growth_rate": 0.13,
+ "rationale": "Late stationary phase; consuming remaining acetate and asparagine for mixed-acid fermentation. Acetate provides abundant carbon; asparagine supplies both carbon and nitrogen. Modest growth sustained by fermentation of acetate and formate production from incomplete oxidation.",
+ "confidence": 0.62
+}

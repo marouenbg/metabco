@@ -1,0 +1,17 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "arab__L": -0.3,
+  "leu__L": -1.2,
+  "val__L": -1.0,
+  "ile__L": -0.8,
+  "pro__L": -0.5,
+  "nh4": -1.8,
+  "lac__L": 0.5,
+  "for": 0.3,
+  "co2": 4.0
+ },
+ "growth_rate": 0.42,
+ "rationale": "Late-stage batch culture; carbohydrates nearly depleted. Switching to amino acid-driven growth with moderate acetate uptake. Carbon-limited by remaining acetate and amino acids. Fermentation produces acetate, lactate, formate, and CO\u2082. Nitrogen from ammonium and amino acid catabolism. Growth rate constrained by carbon availability in sealed system.",
+ "confidence": 0.62
+}

@@ -1,0 +1,32 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 2,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.583 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.131 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 2.48 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "D-glucose fermentation to acetate and CO2, with ammonium uptake for nitrogen",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "nh4": -2.5,
+   "ac": 10.0,
+   "co2": 5.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "nh4": -4.9751,
+   "ac": 10.0,
+   "co2": 5.0,
+   "pi": -0.5832,
+   "so4": -0.1309
+  }
+ }
+]

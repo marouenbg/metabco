@@ -1,0 +1,116 @@
+# Metabolic decision reasoning
+
+## Transporters and substrate availability
+
+I am *Bacteroides ovatus*, a gram-negative anaerobe specializing in complex carbohydrate and amino acid fermentation. My genome encodes:
+- PTS systems and permeases for glucose, arabinose, and other sugars
+- Amino acid transporters (broad specificity for L-amino acids)
+- Organic acid uptake (lactate, acetate, propionate, succinate)
+- Arginine utilization pathways (via arginine deaminase and related enzymes)
+
+**Abundant carbon sources I can use:**
+- D-glucose (22.68 mM) — primary fermentable sugar
+- L-lactate (27.55 mM) — excellent substrate for mixed-acid fermentation
+- L-arabinose (20.9 mM) — fermentable pentose
+- L-arginine (21.77 mM) — can be catabolized via arginine deaminase to ornithine + CO₂ + NH₃, yielding reducing equivalents
+
+**Nitrogen sources:**
+- Ammonium (7.673 mM) — primary nitrogen source
+- L-arginine (21.77 mM) — dual role: carbon + nitrogen
+- Other amino acids present but less abundant
+
+## Fermentation strategy
+
+*Bacteroides* produces mixed fermentation products under anaerobic conditions:
+- **Acetate** (major end product)
+- **Propionate** (from lactate, succinate, or alanine fermentation)
+- **Succinate** (intermediate, can accumulate)
+- **CO₂** (from decarboxylation)
+- **Formate** (minor, from pyruvate)
+- **H₂** (trace, under some conditions)
+
+My recent history (turns 0–1) shows I've been:
+- Consuming glucose and lactate
+- Producing acetate, propionate, succinate, and CO₂
+- Using ammonium and arginine for growth
+
+This is consistent with mixed-acid fermentation.
+
+## Carbon and nitrogen budget
+
+**Current biomass:** 0.2 gDW/L
+
+**Growth cost per gram dry weight:**
+- Carbon: ~42 mmol/gDW
+- Nitrogen: ~10 mmol/gDW
+
+**Proposed uptake strategy for next 4 h:**
+
+I will prioritize:
+1. **Glucose** (8.0 mmol/gDW/h) — most readily fermentable
+2. **Lactate** (2.5 mmol/gDW/h) — secondary carbon source, also provides reducing power
+3. **Arginine** (1.5 mmol/gDW/h) — provides both C and N; arginine deaminase yields ~1 CO₂ and ~1 NH₃ per arginine
+4. **Ammonium** (2.0 mmol/gDW/h) — primary inorganic N source
+
+**Carbon balance (per gDW):**
+- Glucose uptake: 8.0 mmol/gDW → 8 × 6 = 48 mmol C
+- Lactate uptake: 2.5 mmol/gDW → 2.5 × 3 = 7.5 mmol C
+- Arginine uptake: 1.5 mmol/gDW → 1.5 × 6 = 9 mmol C
+- **Total C in: 64.5 mmol C/gDW**
+
+**Carbon allocation:**
+- Growth biomass: 42 mmol C/gDW (obligate)
+- Fermentation products:
+  - Acetate: 4.8 mmol/gDW (2 C each) = 9.6 mmol C
+  - Propionate: 2.5 mmol/gDW (3 C each) = 7.5 mmol C
+  - Succinate: 1.5 mmol/gDW (4 C each) = 6.0 mmol C
+  - CO₂: 3.2 mmol/gDW = 3.2 mmol C
+- **Total C out: 42 + 9.6 + 7.5 + 6.0 + 3.2 = 68.3 mmol C/gDW**
+
+This exceeds input. Let me adjust:
+
+**Revised fermentation products (scaling down slightly):**
+- Acetate: 4.0 mmol/gDW
+- Propionate: 2.0 mmol/gDW
+- Succinate: 1.2 mmol/gDW
+- CO₂: 2.5 mmol/gDW
+- **Total C out: 42 + 8 + 6 + 4.8 + 2.5 = 63.3 mmol C/gDW** ✓ (within budget)
+
+**Nitrogen balance:**
+- Ammonium uptake: 2.0 mmol/gDW
+- Arginine uptake: 1.5 mmol/gDW (contains 1 N per molecule)
+- Arginine deaminase releases ~1.5 mmol NH₃/gDW
+- **Total N available: 2.0 + 1.5 + 1.5 = 5.0 mmol N/gDW**
+- Growth requirement: 10 mmol N/gDW
+
+This is insufficient. I must increase ammonium or arginine uptake.
+
+**Adjusted uptake:**
+- Ammonium: 5.0 mmol/gDW/h
+- Arginine: 1.5 mmol/gDW/h
+- Arginine deaminase NH₃: 1.5 mmol/gDW
+- **Total N: 5.0 + 1.5 + 1.5 = 8.0 mmol N/gDW** (still short)
+
+**Final adjustment:**
+- Ammonium: 6.0 mmol/gDW/h
+- Arginine: 2.0 mmol/gDW/h
+- Arginine deaminase NH₃: 2.0 mmol/gDW
+- **Total N: 6.0 + 2.0 + 2.0 = 10.0 mmol N/gDW** ✓
+
+**Recalculate carbon with arginine = 2.0:**
+- Glucose: 8.0 mmol/gDW → 48 mmol C
+- Lactate: 2.5 mmol/gDW → 7.5 mmol C
+- Arginine: 2.0 mmol/gDW → 12 mmol C
+- **Total C in: 67.5 mmol C/gDW**
+
+**Fermentation products:**
+- Acetate: 4.5 mmol/gDW (9 mmol C)
+- Propionate: 2.0 mmol/gDW (6 mmol C)
+- Succinate: 1.2 mmol/gDW (4.8 mmol C)
+- CO₂: 2.5 mmol/gDW (2.5 mmol C)
+- **Total C out: 42 + 9 + 6 + 4.8 + 2.5 = 64.3 mmol C/gDW** ✓
+
+**Growth rate:**
+With these fluxes supporting biomass synthesis, and given prior turns achieved ~0.55–0.58 /h with similar substrate levels, I estimate **μ = 0.55 /h** for the next interval.
+
+{"fluxes": {"glc__D": -8.0, "lac__L": -2.5, "arg__L": -2.0, "nh4": -6.0, "ac": 4.5, "ppa": 2.0, "succ": 1.2, "co2": 2.5}, "growth_rate": 0.55, "rationale": "Mixed-acid fermentation of glucose and lactate with arginine catabolism. Carbon and nitrogen budgets balanced: 67.5 mmol C in supports 42 mmol biomass C + 22.5 mmol fermentation products C; 10 mmol N from ammonium and arginine deaminase meets growth requirement. Fluxes consistent with prior turns and known Bacteroides metabolism.", "confidence": 0.72}

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "arab__L": -12.0,
+  "lac__L": -6.0,
+  "arg__L": -2.0,
+  "nh4": -1.5,
+  "ac": 8.0,
+  "ppa": 3.0,
+  "but": 2.0,
+  "co2": 8.0
+ },
+ "growth_rate": 1.2,
+ "rationale": "Shift from glucose (nearly depleted) to arabinose fermentation, the primary abundant pentose substrate for Bacteroides vulgatus. Co-ferment lactate and use arginine for nitrogen. Mixed-acid fermentation produces acetate, propionate, and butyrate. Carbon and nitrogen balance achieved; growth rate consistent with turn 1 performance.",
+ "confidence": 0.75
+}

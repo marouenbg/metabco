@@ -1,0 +1,101 @@
+# Metabolic reasoning for Dorea formicigenerans at turn 7 (t=28h)
+
+## Analysis of carbon and nitrogen sources
+
+**Available transporters and substrates:**
+- Dorea formicigenerans is a gram-positive anaerobic bacterium capable of fermenting carbohydrates and amino acids
+- **Primary carbon sources present:** butyrate (49.88 mM), acetate (37.2 mM), formate (20.06 mM), CO₂ (99.16 mM)
+- **Amino acids:** abundant L-serine (5.96 mM), L-proline (5.9 mM), L-alanine (5.3 mM), and others
+- **Nitrogen:** amino acids provide nitrogen; nitrate (0.11 mM) is minimal and likely not preferred anaerobically
+
+**Key constraint:** My recent history (turns 5–6) shows zero growth despite substrate availability. The pattern suggests I was consuming non-fermentable carbohydrates (arabinose, maltose, myo-inositol) that I cannot efficiently metabolize, and amino acids without net energy gain. I need to refocus on what I *can* ferment efficiently.
+
+**What I can use:**
+- **Butyrate and acetate:** These are short-chain fatty acids. As a butyrate-producing bacterium, I can oxidize butyrate via β-oxidation to acetyl-CoA, or use acetate directly. However, in a sealed anaerobic culture, these are typically fermentation products I *produce*, not consume efficiently for growth—they accumulate because I release them.
+- **Amino acids:** Dorea can ferment amino acids (Stickland reactions, transamination, decarboxylation). L-serine, L-proline, and L-alanine are good candidates.
+- **Formate and H₂:** Products of my own fermentation; limited use for further catabolism.
+- **CO₂:** Primarily a product; limited uptake.
+
+**Critical realization:** Turns 3–4 showed growth (0.65, 0.60 /h) when I was consuming L-arabinose and amino acids. Turn 5–6 showed zero growth when I shifted to non-fermentable carbohydrates. The arabinose and amino acids are now depleted or very low. I am in late stationary/decline phase.
+
+## Fermentation products
+
+Dorea formicigenerans produces:
+- **Butyrate** (major)
+- **Acetate** (major)
+- **Formate**
+- **H₂**
+- **CO₂**
+- **Lactate** (minor, seen in turn 3)
+
+## Growth rate calculation
+
+**Current situation:** At 28h, most fermentable carbohydrates are consumed. Amino acids remain (5+ mM each for several), but my recent turns show I struggle to grow on them alone at high rates.
+
+**Conservative estimate:** Given:
+- Amino acids available: ~40 mM total (all amino acids summed)
+- At ~7 mmol N per gram biomass, and amino acids ~1 N per amino acid, I could theoretically support ~5.7 g biomass
+- But at 3.6 gDW/L already present, I'm in stationary phase
+- Realistic growth on amino acids alone: 0.1–0.3 /h (much lower than on carbohydrates)
+
+**Choice:** I will attempt modest amino acid fermentation, targeting ~0.15 /h growth.
+
+**Amino acid uptake strategy:**
+- Consume L-serine (5.96 mM): good substrate, provides both C and N
+- Consume L-alanine (5.3 mM): simple, fermentable
+- Consume L-proline (5.9 mM): fermentable, provides C and N
+
+**Uptake rates for 0.15 /h growth over 4h:**
+- Growth demand: 0.15 /h × 33 mmol C/g = 4.95 mmol C/g/h
+- Growth N demand: 0.15 /h × 7 mmol N/g = 1.05 mmol N/g/h
+
+**Proposed uptake (negative = uptake):**
+- L-serine (ser__L): -3.0 mmol/gDW/h (3 C, 1 N per molecule)
+- L-alanine (ala__L): -2.0 mmol/gDW/h (3 C, 1 N per molecule)
+- L-proline (pro__L): -1.5 mmol/gDW/h (5 C, 1 N per molecule)
+
+**Carbon balance:**
+- Uptake: (3×3) + (2×3) + (1.5×5) = 9 + 6 + 7.5 = 22.5 mmol C/g/h
+- Growth cost: 4.95 mmol C/g/h
+- Fermentation products: 22.5 − 4.95 = 17.55 mmol C/g/h to distribute
+
+**Nitrogen balance:**
+- Uptake: 3 + 2 + 1.5 = 6.5 mmol N/g/h
+- Growth cost: 1.05 mmol N/g/h
+- Excess: 5.45 mmol N/g/h (released as NH₄)
+
+**Fermentation product release:**
+- Acetate: +7.0 mmol/gDW/h
+- Butyrate: +5.5 mmol/gDW/h
+- Formate: +3.0 mmol/gDW/h
+- CO₂: +2.0 mmol/gDW/h
+- NH₄: +5.5 mmol/gDW/h (from deamination)
+
+**Audit:**
+- C in: 22.5
+- C out (products): 7 + 5.5 + 3 + 2 = 17.5
+- C in biomass: 4.95
+- Total out: 17.5 + 4.95 = 22.45 ✓ (balanced)
+
+- N in: 6.5
+- N out (NH₄): 5.45
+- N in biomass: 1.05
+- Total out: 5.45 + 1.05 = 6.5 ✓ (balanced)
+
+```json
+{
+  "fluxes": {
+    "ser__L": -3.0,
+    "ala__L": -2.0,
+    "pro__L": -1.5,
+    "ac": 7.0,
+    "but": 5.5,
+    "for": 3.0,
+    "co2": 2.0,
+    "nh4": 5.5
+  },
+  "growth_rate": 0.15,
+  "rationale": "Late stationary phase: fermentable carbohydrates depleted, switching to amino acid fermentation (serine, alanine, proline). Modest growth rate reflects substrate limitation and reduced energy yield from amino acid catabolism vs. carbohydrates. Carbon and nitrogen balanced. Produces acetate, butyrate, formate, CO₂, and ammonia consistent with Dorea fermentation metabolism.",
+  "confidence": 0.45
+}
+```

@@ -1,0 +1,132 @@
+# Metabolic decision for Blautia hydrogenotrophica DSM 10507 — turn 9
+
+## Analysis of available resources and constraints
+
+**Carbon sources I can transport:**
+- Acetate (ac): 45.52 mM — I have acetyl-CoA synthetase; this is a primary fuel
+- Formate (for): 15.26 mM — I can oxidize this
+- L-lactate (lac__L): 4.002 mM — fermentable
+- Maltose (malt): 4.382 mM — I possess maltose transporters
+- Amino acids: arginine, cysteine, serine, proline, alanine, glycine, phenylalanine, leucine, tyrosine, valine, glutamine, asparagine, lysine, threonine, isoleucine, histidine, methionine, tryptophan, glutamate, aspartate — all can be catabolized for carbon and/or nitrogen
+
+**Carbon sources I cannot transport:**
+- D-glucose (glc__D) — absent from current environment anyway; I lack glucose transporters
+- L-arabinose (arab__L) — absent from current environment anyway
+
+**Nitrogen sources:**
+- L-arginine (arg__L): 11.19 mM — excellent source (can also be fermented to ammonia, acetate, ornithine)
+- Ammonium (nh4): <0.073 mM — effectively depleted
+- Other amino acids provide nitrogen but at lower concentrations
+
+**Known fermentation products for this species:**
+Blautia hydrogenotrophica is a hydrogenotrophic acetogen. Under anaerobic conditions it produces:
+- Acetate (primary product from H₂ + CO₂ or carbohydrate fermentation)
+- Formate
+- Hydrogen (H₂)
+- CO₂
+- Ammonia/ammonium (from amino acid deamination)
+
+**Current metabolic state (turn 8 observation):**
+Turn 8 shows I switched to hydrogenotrophic mode: consuming CO₂ and H₂ to produce acetate and formate. This is characteristic of my acetogenic metabolism. However, I also consumed arginine and phosphate, indicating I'm still growing.
+
+## Growth rate calculation
+
+At turn 9 (t=36h), I'm 12 hours from the 48-hour endpoint. I have substantial acetate (45.52 mM) and CO₂ (66.03 mM) available. 
+
+For hydrogenotrophic acetogenesis:
+- 4H₂ + 2CO₂ → CH₃COOH + 2H₂O (net: produces acetate)
+- This is energy-efficient and my preferred mode
+
+However, I have no H₂ listed in the environment. I must rely on fermentation of available organics.
+
+**Strategy: Mixed fermentation using acetate + amino acids**
+
+I will:
+1. **Consume acetate** (4.0 mmol/gDW/h) — oxidize partially via TCA-like pathways and fermentation
+2. **Consume L-arginine** (1.5 mmol/gDW/h) — nitrogen source + carbon; arginine fermentation yields ornithine, ammonia, acetate, CO₂
+3. **Consume L-lactate** (2.0 mmol/gDW/h) — fermentable carboxylic acid
+4. **Produce acetate** (2.5 mmol/gDW/h) — from amino acid and lactate fermentation
+5. **Produce formate** (1.5 mmol/gDW/h) — from mixed fermentation
+6. **Produce CO₂** (3.0 mmol/gDW/h) — from decarboxylation
+7. **Produce ammonia** (1.0 mmol/gDW/h) — from arginine deamination
+
+**Carbon audit:**
+- In: acetate (4.0 × 2C = 8C) + lactate (2.0 × 3C = 6C) + arginine (1.5 × 6C = 9C) = 23 mmol C/gDW/h
+- Out: acetate (2.5 × 2C = 5C) + formate (1.5 × 1C = 1.5C) + CO₂ (3.0 × 1C = 3C) = 9.5 mmol C/gDW/h
+- Growth cost: 38 mmol C/gDW/h × μ
+- Balance: 23 = 9.5 + 38μ → μ = (23 − 9.5)/38 = 13.5/38 = **0.355 /h**
+
+**Nitrogen audit:**
+- In: arginine (1.5 × 1N = 1.5 mmol N/gDW/h)
+- Out: ammonia (1.0 mmol N/gDW/h)
+- Growth cost: 10 mmol N/gDW/h × μ = 10 × 0.355 = 3.55 mmol N/gDW/h
+- Balance: 1.5 + 0 = 1.0 + 3.55 → **deficit of 2.05 mmol N/gDW/h**
+
+This is problematic. I need more nitrogen. Let me revise to consume additional amino acids.
+
+**Revised strategy:**
+- Acetate (ac): -4.0
+- L-arginine (arg__L): -2.0 (increased for nitrogen)
+- L-lactate (lac__L): -2.0
+- L-serine (ser__L): -1.0 (adds carbon and nitrogen)
+- Acetate production (ac): +3.0
+- Formate production (for): +1.5
+- CO₂ production (co2): +3.5
+- Ammonia production (nh4): +1.5
+
+**Revised carbon audit:**
+- In: 4.0×2 + 2.0×3 + 2.0×6 + 1.0×3 = 8 + 6 + 12 + 3 = 29 mmol C/gDW/h
+- Out: 3.0×2 + 1.5×1 + 3.5×1 = 6 + 1.5 + 3.5 = 11 mmol C/gDW/h
+- Growth: 38μ
+- Balance: 29 = 11 + 38μ → μ = 18/38 = **0.474 /h**
+
+**Revised nitrogen audit:**
+- In: 2.0×1 + 1.0×1 = 3.0 mmol N/gDW/h
+- Out: 1.5 mmol N/gDW/h (ammonia)
+- Growth: 10 × 0.474 = 4.74 mmol N/gDW/h
+- Balance: 3.0 = 1.5 + 4.74 → **deficit of 3.24 mmol N/gDW/h**
+
+Still insufficient. I need to reduce growth rate or increase amino acid uptake further. Given limited amino acids, I'll accept a lower growth rate.
+
+**Final strategy (conservative):**
+- Acetate (ac): -3.5
+- L-arginine (arg__L): -1.8
+- L-serine (ser__L): -0.8
+- L-lactate (lac__L): -1.5
+- Acetate production (ac): +2.0
+- Formate production (for): +1.2
+- CO₂ production (co2): +2.8
+- Ammonia production (nh4): +1.2
+
+Carbon: In = 3.5×2 + 1.8×6 + 0.8×3 + 1.5×3 = 7 + 10.8 + 2.4 + 4.5 = 24.7 mmol C/gDW/h
+Out = 2.0×2 + 1.2×1 + 2.8×1 = 4 + 1.2 + 2.8 = 8 mmol C/gDW/h
+Growth: μ = (24.7 − 8)/38 = **0.439 /h**
+
+Nitrogen: In = 1.8 + 0.8 = 2.6 mmol N/gDW/h
+Out = 1.2 mmol N/gDW/h
+Growth cost = 10 × 0.439 = 4.39 mmol N/gDW/h
+Balance: 2.6 = 1.2 + 4.39 → **deficit of 2.99 mmol N/gDW/h**
+
+The nitrogen limitation is severe. I'll reduce growth to match available nitrogen more closely.
+
+**Realistic final plan:**
+μ = 0.25 /h (conservative, sustainable)
+Growth N cost = 10 × 0.25 = 2.5 mmol N/gDW/h
+
+Uptakes:
+- Acetate: -3.0
+- L-arginine: -1.5
+- L-serine: -0.6
+- L-lactate: -1.2
+
+Carbon in = 3.0×2 + 1.5×6 + 0.6×3 + 1.2×3 = 6 + 9 + 1.8 + 3.6 = 20.4 mmol C/gDW/h
+Carbon out (growth + secretion) = 38×0.25 + secretion = 9.5 + secretion
+Secretion available = 20.4 − 9.5 = 10.9 mmol C/gDW/h
+
+Secretions:
+- Acetate: +1.8
+- Formate: +1.0
+- CO₂: +2.8
+- Ammonia: +1.0
+
+Check: 1.8×2 + 1.0×1 + 2.8×1 = 3.6 

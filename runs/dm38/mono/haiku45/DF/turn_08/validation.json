@@ -1,0 +1,59 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 8,
+  "growth_claimed": 0.015,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: gly",
+   "uptake_exceeds_pool: ala__L",
+   "uptake_exceeds_pool: pro__L",
+   "uptake_exceeds_pool: arg__L",
+   "uptake_exceeds_pool: cys__L",
+   "c_imbalance: in=40.6 out=50 biomass=0.499"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "clipped uptake gly to pool limit -3.26",
+   "clipped uptake ala__L to pool limit -0.919",
+   "clipped uptake pro__L to pool limit -2.03",
+   "clipped uptake arg__L to pool limit -2.03",
+   "clipped uptake cys__L to pool limit -3.02",
+   "P: credited 0.014 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.015 -> 0",
+   "C: secretions scaled by 0.853"
+  ],
+  "rationale": "Shift to amino acid fermentation as carbohydrates depleted. Glycine, alanine, proline, arginine, and cysteine fermented via Stickland and amino acid degradation pathways. Low growth rate reflects stat",
+  "confidence": 0.45,
+  "fluxes_claimed": {
+   "gly": -4.7,
+   "ala__L": -1.3,
+   "pro__L": -2.9,
+   "arg__L": -2.9,
+   "cys__L": -4.4,
+   "nh4": -0.5,
+   "ac": 8.0,
+   "but": 5.0,
+   "co2": 12.0,
+   "for": 2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "gly": -3.2639,
+   "ala__L": -0.9194,
+   "pro__L": -2.0264,
+   "arg__L": -2.0266,
+   "cys__L": -3.0214,
+   "nh4": -0.5,
+   "ac": 6.8279,
+   "but": 4.2674,
+   "co2": 10.2418,
+   "for": 1.707,
+   "h2": 1.0,
+   "pi": -0.014
+  }
+ }
+]

@@ -1,0 +1,107 @@
+# Metabolic reasoning for Desulfovibrio piger at t=20h
+
+## Assessment of my genomic capabilities
+
+D. piger is a sulfate-reducing bacterium with well-characterized metabolic scope:
+- **Primary carbon sources**: lactate (excellent), glucose, amino acids, organic acids
+- **Electron acceptor**: sulfate reduction (SO₄²⁻ → H₂S)
+- **Known fermentation products**: acetate, CO₂, H₂S, sometimes formate
+- **Nitrogen sources**: ammonium, amino acids
+
+Looking at my recent history (turns 1-4), I've been consistently:
+- Consuming lactate at ~8-10 mmol/gDW/h
+- Reducing sulfate at ~2 mmol/gDW/h
+- Producing acetate (~2-3), CO₂ (~7-8), H₂S (~2)
+- Growing at 0.25-0.45 /h
+
+This is classic lactate-sulfate fermentation.
+
+## Current substrate availability
+
+**Abundant carbon sources still present:**
+- Lactate: 9.009 mM (excellent, my preferred substrate)
+- Glucose: 24.08 mM (usable)
+- Arginine: 21.81 mM (amino acid, usable)
+- Arabinose: 21.31 mM (usable)
+
+**Nitrogen sources:**
+- Ammonium: 3.215 mM (limiting)
+- Multiple amino acids (can serve dual C+N function)
+
+**Electron acceptor:**
+- Sulfate: abundant in excess
+
+## Stoichiometry of lactate-sulfate metabolism
+
+The canonical pathway for D. piger:
+```
+Lactate + SO₄²⁻ → Acetate + CO₂ + H₂S
+```
+
+More precisely (simplified):
+- 1 lactate (C₃) → ~1.5 acetate (C₂ each) + 0.5 CO₂ + energy
+- Requires SO₄²⁻ as electron acceptor
+
+**Growth calculation:**
+- Growth requires: ~43 mmol C/gDW and ~10 mmol N/gDW
+- With only 3.215 mM ammonium available and current biomass 0.72 gDW/L in 1 mL:
+  - That's 0.00072 gDW total
+  - Nitrogen constraint: 3.215 mmol ÷ 10 mmol/gDW = 0.3215 gDW maximum additional growth
+  - But we're in a 48h batch; I should moderate growth
+
+Given lactate availability (9 mM) and sulfate in excess, I can sustain moderate growth.
+
+**Proposed fluxes for next 4h interval:**
+
+Lactate uptake: -9.0 mmol/gDW/h (aggressive but sustainable given 9 mM available)
+Sulfate uptake: -1.8 mmol/gDW/h (coupled to lactate reduction)
+Ammonium uptake: -1.5 mmol/gDW/h (nitrogen limitation)
+
+**Products from lactate fermentation:**
+- Acetate: +4.5 (rough 1:1 from lactate)
+- CO₂: +3.5 (from decarboxylation)
+- H₂S: +1.8 (from sulfate reduction)
+
+**Growth rate derivation:**
+- Carbon consumed: 9.0 mmol lactate = 27 mmol C
+- Carbon to growth: 43 mmol C/gDW
+- Carbon to products: acetate (4.5 × 2 = 9 C) + CO₂ (3.5 C) = 12.5 mmol C
+- Available for growth: 27 - 12.5 = 14.5 mmol C
+- Growth rate: 14.5 ÷ 43 = **0.337 /h**
+
+**Nitrogen audit:**
+- Uptake: 1.5 mmol N/gDW/h
+- Growth cost: 0.337 /h × 10 mmol N/gDW = 3.37 mmol N/gDW/h
+- **PROBLEM**: Uptake insufficient!
+
+**Revised approach:** Use amino acids for dual C+N:
+- Lactate: -8.0 mmol/gDW/h (C source)
+- Arginine: -1.2 mmol/gDW/h (provides N + some C)
+- Sulfate: -1.8 mmol/gDW/h
+- Ammonium: -0.5 mmol/gDW/h
+
+This provides ~9.6 mmol N available, supporting ~0.30 /h growth with margin.
+
+Carbon balance: 8.0×3 (lactate) + 1.2×6 (arginine) = 24 + 7.2 = 31.2 mmol C in
+Products (acetate 4.0 + CO₂ 3.5): 8 + 3.5 = 11.5 mmol C out
+Growth: 0.30 × 43 = 12.9 mmol C
+Total out: 11.5 + 12.9 = 24.4 mmol C ✓ (balanced)
+
+**Final growth rate: 0.30 /h**
+
+```json
+{
+  "fluxes": {
+    "lac__L": -8.0,
+    "arg__L": -1.2,
+    "so4": -1.8,
+    "nh4": -0.5,
+    "ac": 4.0,
+    "co2": 3.5,
+    "h2s": 1.8
+  },
+  "growth_rate": 0.30,
+  "rationale": "Lactate-sulfate fermentation with amino acid co-utilization. Lactate is preferred carbon/energy source; arginine provides supplemental nitrogen and carbon. Sulfate reduction coupled to lactate oxidation. Products: acetate, CO₂, H₂S. Growth limited by ammonium availability.",
+  "confidence": 0.72
+}
+```

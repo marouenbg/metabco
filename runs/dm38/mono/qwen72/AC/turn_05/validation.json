@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 5,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.2,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.233 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Utilizing D-glucose and L-arginine for carbon and nitrogen, producing butyrate, acetate, CO2, and H2. Carbon and nitrogen balances support the growth rate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -2.0,
+   "arg__L": -1.0,
+   "cys__L": -0.5,
+   "nh4": -0.5,
+   "but": 2.0,
+   "ac": 1.0,
+   "co2": 1.0,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "glc__D": -2.0,
+   "arg__L": -1.0,
+   "cys__L": -0.5,
+   "nh4": -0.5,
+   "but": 2.0,
+   "ac": 1.0,
+   "co2": 1.0,
+   "h2": 0.5,
+   "pi": -0.2326
+  }
+ }
+]

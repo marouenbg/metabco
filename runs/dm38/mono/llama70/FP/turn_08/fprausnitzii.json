@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "but": -10.0,
+  "arg__L": -2.0,
+  "ac": 2.0,
+  "co2": 1.0,
+  "h2": 1.0
+ },
+ "growth_rate": 0.21,
+ "rationale": "Butyrate and L-arginine uptake, butyrate and acetate production",
+ "confidence": 0.8
+}

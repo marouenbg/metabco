@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": -2.0,
+  "nh4": -2.0,
+  "ac": 2.0,
+  "for": 1.5,
+  "co2": 0.5
+ },
+ "growth_rate": 0.083,
+ "confidence": 0.9,
+ "rationale": "Continuing with the efficient utilization of glucose and lactate for growth, while maintaining a consistent and sustainable growth rate."
+}

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -11.0,
+  "lac__L": -7.0,
+  "arg__L": -3.0,
+  "nh4": -2.5,
+  "ac": 35.0,
+  "ppa": 15.0,
+  "co2": 18.0,
+  "succ": 8.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "Bacteroides uniformis preferentially ferments glucose and lactate under anaerobic conditions. Uptake of primary carbohydrates (11 mmol glucose, 7 mmol lactate) with ammonium and arginine as N sources supports mixed-acid fermentation producing acetate, propionate, succinate, and CO2. Growth rate limited by nitrogen availability; carbon and nitrogen budgets balance.",
+ "confidence": 0.72
+}

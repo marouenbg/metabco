@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 11,
+  "growth_claimed": 0.67,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: but",
+   "uptake_exceeds_pool: ac",
+   "n_imbalance: in=3 out=0 biomass=5.57",
+   "p_imbalance: in=0 out=0 biomass=0.255"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "clipped uptake but to pool limit -3.95",
+   "clipped uptake ac to pool limit -3.17",
+   "S: credited 0.173 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.67 -> 0.379",
+   "P: growth 0.379 -> 0"
+  ],
+  "rationale": "Utilizing butyrate and acetate as primary carbon sources, with some amino acids for nitrogen, to support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "but": -10.0,
+   "ac": -5.0,
+   "phe__L": -1.0,
+   "leu__L": -1.0,
+   "val__L": -1.0,
+   "co2": 5.0,
+   "h2": 0.0
+  },
+  "fluxes_applied": {
+   "but": -3.9508,
+   "ac": -3.1657,
+   "phe__L": -1.0,
+   "leu__L": -1.0,
+   "val__L": -1.0,
+   "co2": 5.0,
+   "h2": 0.0,
+   "so4": -0.173
+  }
+ }
+]

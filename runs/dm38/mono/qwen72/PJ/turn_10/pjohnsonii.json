@@ -1,0 +1,31 @@
+{
+ "fluxes": {
+  "malt": -2.0,
+  "leu__L": -1.0,
+  "tyr__L": -1.0,
+  "val__L": -1.0,
+  "gln__L": -1.0,
+  "asn__L": -1.0,
+  "ser__L": -1.0,
+  "lys__L": -1.0,
+  "thr__L": -1.0,
+  "ile__L": -1.0,
+  "pro__L": -1.0,
+  "his__L": -1.0,
+  "met__L": -1.0,
+  "gly": -1.0,
+  "trp__L": -1.0,
+  "glu__L": -1.0,
+  "phe__L": -1.0,
+  "asp__L": -1.0,
+  "cys__L": -1.0,
+  "ac": 3.0,
+  "but": 3.0,
+  "ppa": 2.0,
+  "h2": 2.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.05,
+ "rationale": "Utilizing maltose and amino acids for growth, producing acetate, butyrate, and propionate as fermentation products.",
+ "confidence": 0.8
+}

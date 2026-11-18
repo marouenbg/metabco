@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 6,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.3,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.409 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0785 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing L-lactate and L-arabinose as carbon sources, and L-glutamine and L-asparagine as nitrogen sources, to produce acetate and propionate as fermentation products.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "arab__L": -5.0,
+   "gln__L": -2.0,
+   "asn__L": -1.0,
+   "ac": 5.0,
+   "ppa": 2.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "arab__L": -5.0,
+   "gln__L": -2.0,
+   "asn__L": -1.0,
+   "ac": 5.0,
+   "ppa": 2.0,
+   "pi": -0.409,
+   "so4": -0.0785
+  }
+ }
+]

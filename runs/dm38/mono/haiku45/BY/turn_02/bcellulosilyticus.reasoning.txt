@@ -1,0 +1,96 @@
+# Reasoning
+
+## Current situation
+I am at 0.053 gDW/L after 8 hours of growth. The sealed batch is anaerobic, pH 7, with abundant carbohydrates and amino acids remaining. I've been growing steadily at 0.4 /h using mixed fermentation.
+
+## Carbon and nitrogen sources I can use
+
+**Primary carbon sources (confirmed by my recent uptake pattern):**
+- D-glucose (glc__D): 24.23 mM available — I've been taking this up at ~7 mmol/gDW/h
+- L-lactate (lac__L): 27.65 mM available — I've been taking this up at ~5.75 mmol/gDW/h
+- L-arabinose (arab__L): 21.31 mM available — I can ferment this (Bacteroides cellulosilyticus is a saccharolytic specialist)
+- Maltose (malt): 4.382 mM — fermentable
+
+**Amino acids as nitrogen + carbon:**
+- L-arginine (arg__L): 21.64 mM — I've been using this at ~1.5 mmol/gDW/h
+- L-cysteine (cys__L): 8.4 mM — can be oxidized for energy and N
+- L-serine (ser__L): 6.4 mM — fermentable
+- Others present but lower priority
+
+**Nitrogen sources:**
+- Ammonium (nh4): 9.101 mM — I've been taking ~2 mmol/gDW/h
+- Amino acids provide both C and N
+
+## Fermentation products I make
+Based on my recent pattern and Bacteroides metabolism:
+- **Acetate** (ac): primary product, ~5–8 mmol/gDW/h
+- **Propionate** (ppa): ~3–4 mmol/gDW/h
+- **Butyrate** (but): ~2–2.5 mmol/gDW/h
+- **CO₂** (co2): ~9–17 mmol/gDW/h (from decarboxylation)
+- **Succinate** (succ): minor
+- **Formate** (for): possible in low amounts
+- **H₂** (h2): possible in trace amounts
+
+## Strategy for turn 2
+I've been performing well at 0.4 /h. Glucose and lactate remain abundant. I should maintain this rate:
+- Continue glucose uptake at ~6.5 mmol/gDW/h (still abundant)
+- Continue lactate uptake at ~5.5 mmol/gDW/h (still abundant)
+- Continue arginine uptake at ~1.5 mmol/gDW/h (good N source, still plentiful)
+- Maintain ammonium uptake at ~2.0 mmol/gDW/h
+- Produce acetate, propionate, butyrate, and CO₂ as before
+
+## Growth rate calculation
+At 0.4 /h growth:
+- Biomass cost: 42 mmol C/gDW + 10 mmol N/gDW per gram produced
+- Per hour: 0.4 × 42 = 16.8 mmol C/gDW/h, and 0.4 × 10 = 4 mmol N/gDW/h
+
+**Carbon balance:**
+- Uptake: 6.5 (glucose, 6C) + 5.5 (lactate, 3C) + 1.5 (arginine, 6C) = 6.5×6 + 5.5×3 + 1.5×6 = 39 + 16.5 + 9 = 64.5 mmol C/gDW/h
+- Growth cost: 16.8 mmol C/gDW/h
+- Available for fermentation products: 64.5 − 16.8 = 47.7 mmol C/gDW/h
+
+**Nitrogen balance:**
+- Uptake: 2.0 (NH₄) + 1.5 (Arg, 1N) = 2.0 + 1.5 = 3.5 mmol N/gDW/h
+- Growth cost: 4.0 mmol N/gDW/h
+- Shortfall: 0.5 mmol N/gDW/h — need to increase arginine or reduce growth slightly
+
+Let me adjust: increase arginine to 2.0 mmol/gDW/h:
+- N uptake: 2.0 + 2.0 = 4.0 mmol N/gDW/h ✓
+- C from arginine: 2.0 × 6 = 12 mmol C/gDW/h
+- Total C uptake: 6.5×6 + 5.5×3 + 2.0×6 = 39 + 16.5 + 12 = 67.5 mmol C/gDW/h
+- Growth cost: 16.8 mmol C/gDW/h
+- Available for products: 67.5 − 16.8 = 50.7 mmol C/gDW/h
+
+**Product distribution** (maintaining ~75% acetate, ~20% propionate, ~5% butyrate):
+- Acetate: ~38 mmol C/gDW/h = 19 mmol/gDW/h (as 2C units)
+- Propionate: ~10 mmol C/gDW/h = 3.3 mmol/gDW/h (as 3C units)
+- Butyrate: ~2.5 mmol C/gDW/h = 0.6 mmol/gDW/h (as 4C units)
+- CO₂: balance
+
+Total C in products: 38 + 10 + 2.5 = 50.5 mmol C/gDW/h ✓
+
+CO₂ release: ~12 mmol/gDW/h
+
+## Final audit
+- C in: 67.5 mmol/gDW/h
+- C out: 16.8 (growth) + 50.7 (products) = 67.5 ✓
+- N in: 4.0 mmol/gDW/h
+- N out: 4.0 (growth) ✓
+
+```json
+{
+  "fluxes": {
+    "glc__D": -6.5,
+    "lac__L": -5.5,
+    "arg__L": -2.0,
+    "nh4": -2.0,
+    "ac": 19.0,
+    "ppa": 3.3,
+    "but": 0.6,
+    "co2": 12.0
+  },
+  "growth_rate": 0.4,
+  "rationale": "Maintaining steady 0.4 /h growth using glucose, lactate, and arginine as primary carbon/nitrogen sources. Fermentation yields acetate, propionate, butyrate, and CO₂. Carbon and nitrogen budgets balanced; all substrates remain abundant.",
+  "confidence": 0.75
+}
+```

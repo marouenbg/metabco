@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 7,
+  "growth_claimed": 0.12,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ser__L",
+   "s_imbalance: in=0 out=1 biomass=0.0314"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake ser__L to pool limit -3.82",
+   "P: credited 0.158 mmol/gDW/h of pi (declared present in excess)",
+   "S: growth 0.12 -> 0",
+   "S: secretions scaled by 0"
+  ],
+  "rationale": "using L-serine, L-proline, and acetate as carbon and nitrogen sources, with sulfate reduction and fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ser__L": -5.0,
+   "pro__L": -3.0,
+   "ac": -2.0,
+   "co2": 2.0,
+   "h2s": 1.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "ser__L": -3.8166,
+   "pro__L": -3.0,
+   "ac": -2.0,
+   "co2": 2.0,
+   "h2s": 0.0,
+   "h2": 1.0,
+   "pi": -0.1576
+  }
+ }
+]

@@ -1,0 +1,82 @@
+# Metabolic reasoning for Parabacteroides johnsonii at t=24h
+
+## Assessment of carbon sources and transporters
+
+I am a Gram-negative anaerobic bacterium with a well-characterized saccharolytic and proteolytic metabolism. My recent history shows consistent uptake of:
+- **D-glucose** (glc__D): −8 to −10 mmol/gDW/h — primary hexose sugar
+- **L-lactate** (lac__L): −6 to −7 mmol/gDW/h — fermentation product, readily used
+- **L-arabinose** (arab__L): −3 to −4 mmol/gDW/h — pentose sugar
+- **L-arginine** (arg__L): −2.5 to −3 mmol/gDW/h — amino acid, can be catabolized
+
+I secrete acetate, propionate, succinate, and CO₂—typical mixed-acid fermentation products of Bacteroidetes.
+
+Abundant but unused substrates like maltose (4.38 mM), myo-inositol (6.27 mM), and various amino acids (serine, proline, phenylalanine, etc.) remain largely untouched, indicating I lack efficient transporters for these or they are not energetically favorable at this stage.
+
+## Growth status and nutrient limitation
+
+At t=24h, I am at 0.06068 gDW/L with recent growth rates of 0.20–0.38 /h. Nitrogen is now the primary constraint:
+- **Ammonium** (nh4): 8.86 mM remaining (down from initial ~12–13 mM)
+- **Arginine** (arg__L): 21.1 mM — still abundant, I use ~3 mmol/gDW/h
+- **Other amino acids**: present but not yet rate-limiting
+
+Carbon sources remain plentiful: glucose (22.55 mM), lactate (26.66 mM), arabinose (20.61 mM).
+
+## Fermentation strategy
+
+Given anaerobic conditions and my metabolic history, I will continue mixed-acid fermentation:
+- Glucose and lactate → pyruvate (via glycolysis or lactate oxidation)
+- Pyruvate → acetyl-CoA, succinate, propionate via fermentative pathways
+- Arginine catabolism contributes both carbon and nitrogen (via the arginine deiminase pathway)
+
+## Growth rate calculation
+
+To support growth at rate μ, I need:
+- Carbon: ~42 mmol/gDW for biomass
+- Nitrogen: ~10 mmol/gDW for biomass
+
+**Nitrogen constraint:**
+- Ammonium uptake: I can take ~2 mmol/gDW/h (conservative, as it becomes limiting)
+- Arginine uptake: ~3 mmol/gDW/h provides both C and N (arginine is ~7% N by mass)
+- Total N available per hour: ~2 + (3 × 0.16) ≈ 2.5 mmol N/gDW/h
+- Maximum growth: μ ≈ 2.5 / 10 ≈ 0.25 /h
+
+**Carbon balance check:**
+- Glucose: 10 mmol/gDW/h (6 carbons each) = 60 mmol C/h
+- Lactate: 6 mmol/gDW/h (3 carbons each) = 18 mmol C/h
+- Arabinose: 3 mmol/gDW/h (5 carbons each) = 15 mmol C/h
+- Arginine: 3 mmol/gDW/h (6 carbons each) = 18 mmol C/h
+- **Total C in: ~111 mmol/gDW/h**
+
+For μ = 0.25 /h:
+- Biomass C cost: 0.25 × 42 = 10.5 mmol C/gDW
+- Remaining for fermentation products: 111 − 10.5 = 100.5 mmol C/h
+
+Fermentation products (acetate, propionate, succinate, CO₂, lactate):
+- Acetate: ~8 mmol/gDW/h (2 C each) = 16 mmol C
+- Propionate: ~5 mmol/gDW/h (3 C each) = 15 mmol C
+- Succinate: ~3 mmol/gDW/h (4 C each) = 12 mmol C
+- CO₂: ~5.5 mmol/gDW/h (1 C each) = 5.5 mmol C
+- Total: ~48.5 mmol C/h ✓ (leaves room for additional CO₂ or other products)
+
+## Final flux selection
+
+I will uptake primary substrates and maintain a growth rate of **0.25 /h**, consistent with nitrogen availability.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "lac__L": -6.0,
+    "arab__L": -3.0,
+    "arg__L": -3.0,
+    "nh4": -2.0,
+    "ac": 8.0,
+    "ppa": 5.0,
+    "succ": 3.0,
+    "co2": 6.0
+  },
+  "growth_rate": 0.25,
+  "rationale": "Nitrogen limitation (ammonium + arginine-derived N ~2.5 mmol/gDW/h) restricts growth to ~0.25 /h. Glucose, lactate, and arabinose ferment to acetate, propionate, and succinate via mixed-acid pathways. Arginine provides both C and N. Carbon balance verified: 111 mmol C in − 10.5 (biomass) − 48.5 (products) leaves margin for additional CO₂.",
+  "confidence": 0.72
+}
+```

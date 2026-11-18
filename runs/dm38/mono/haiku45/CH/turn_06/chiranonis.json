@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": 4.0,
+  "but": 2.5,
+  "gly": -2.0,
+  "ala__L": -1.5,
+  "nh4": -2.5,
+  "for": -1.0,
+  "co2": 3.5,
+  "h2": 1.5
+ },
+ "growth_rate": 0.22,
+ "rationale": "Moderate growth phase utilizing abundant acetate, butyrate, and amino acids as C/N sources. Fermentation produces acetate, butyrate, CO\u2082, and H\u2082 to maintain redox balance. Growth limited by declining amino acid and ammonium availability after 24 h of culture.",
+ "confidence": 0.65
+}

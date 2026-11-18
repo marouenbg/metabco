@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "but": -8.0,
+  "cys__L": -1.0,
+  "ala__L": -1.0,
+  "ser__L": -0.5,
+  "pro__L": -0.5,
+  "ac": 12.0,
+  "co2": 8.0,
+  "for": 2.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.33,
+ "rationale": "Butyrate specialist fermenting primary substrate (butyrate) to acetate, CO\u2082, and H\u2082. Supplementing with amino acids (cysteine, alanine, serine, proline) to satisfy nitrogen requirements (7 mmol N/gDW growth) while maintaining carbon balance. Growth rate limited by nitrogen availability and realistic transport capacity. Conservative strategy for sealed batch culture with finite resources.",
+ "confidence": 0.72
+}

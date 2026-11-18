@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "for": 5.0,
+  "ac": 2.0,
+  "h2": -0.5,
+  "nh4": -2.41,
+  "lac__L": -5.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Formate and acetate are readily available carbon sources that support growth. Hydrogen gas is a byproduct of my metabolism and is released to maintain the anaerobic environment.",
+ "confidence": 0.8
+}

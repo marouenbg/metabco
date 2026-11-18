@@ -1,0 +1,111 @@
+# Metabolic reasoning for Faecalibacterium prausnitzii A2-165 at t=24h
+
+## Carbon and nitrogen source assessment
+
+**Available carbon sources I can transport:**
+- **Butyrate** (34.21 mM): I am a butyrate-producer and can ferment it. However, at this stage I should consider whether to consume or produce it. My genome encodes monocarboxylate transporters.
+- **Acetate** (12.18 mM): I can transport and ferment acetate via acetyl-CoA pathways.
+- **Formate** (10.33 mM): I can use formate as both carbon and electron source in anaerobic metabolism.
+- **L-amino acids** (proline, alanine, cysteine, etc.): I can deaminate and ferment these. Proline (5.9 mM) and alanine (5.3 mM) are abundant.
+- **D-glucose** (0.7775 mM): Nearly depleted; minimal contribution now.
+- **myo-inositol** (6.272 mM): I likely lack specific inositol transporters; skip this.
+
+**Nitrogen sources:**
+- **L-arginine** (3.527 mM): I can use this; it's been a consistent uptake substrate.
+- **L-glutamine, L-asparagine**: Present but lower priority than arginine.
+- **Ammonium**: Not listed, but I produce it from amino acid catabolism.
+
+## Known fermentation products for F. prausnitzii
+
+This species is a **butyrate producer** in healthy microbiota. I typically:
+- Ferment carbohydrates and amino acids → acetyl-CoA
+- Produce **butyrate** (primary product) via the butyryl-CoA pathway
+- Co-produce **acetate** and **formate** as secondary products
+- Under anaerobic conditions with limited electron acceptors, I may produce small amounts of **lactate** or **succinate** if redox balance requires it
+
+## Current metabolic state (turn 6, t=24h)
+
+I have been growing at ~0.45–0.50 /h consistently. Biomass is at 4.353 gDW/L.
+
+**Key observation:** Butyrate is now abundant (34.21 mM), suggesting it has accumulated from my own production and/or input. I should continue catabolizing mixed substrates (acetate, amino acids) while maintaining butyrate production to avoid overflow accumulation.
+
+## Strategy for next 4h interval
+
+**Primary uptakes:**
+1. **Acetate** (12.18 mM available): Reliable carbon/energy source. Uptake ~6 mmol/gDW/h
+2. **L-arginine** (3.527 mM): Nitrogen + carbon. Uptake ~2.5 mmol/gDW/h
+3. **L-proline** (5.9 mM): Additional amino acid carbon/nitrogen. Uptake ~1.5 mmol/gDW/h
+4. **Formate** (10.33 mM): Supplementary carbon. Uptake ~1.0 mmol/gDW/h
+
+**Outputs (fermentation):**
+- **Butyrate**: Primary product. Release ~4.0 mmol/gDW/h
+- **CO₂**: From decarboxylation. Release ~6.0 mmol/gDW/h
+- **Acetate**: Secondary fermentation product. Release ~2.0 mmol/gDW/h (net, after uptake)
+
+## Carbon and nitrogen audit
+
+**Carbon inputs (mmol/gDW/h):**
+- Acetate: 6 mmol (2C each) = 12 C
+- Arginine: 2.5 mmol (6C each) = 15 C
+- Proline: 1.5 mmol (5C each) = 7.5 C
+- Formate: 1.0 mmol (1C each) = 1 C
+- **Total in: 35.5 C**
+
+**Carbon outputs (mmol/gDW/h):**
+- Butyrate: 4.0 mmol (4C each) = 16 C
+- CO₂: 6.0 mmol = 6 C
+- Acetate net: 2.0 mmol (2C each) = 4 C
+- **Total out: 26 C**
+
+**Carbon for growth:**
+- Available: 35.5 − 26 = 9.5 C
+- Required per gram: 33 mmol C
+- Growth rate: 9.5 / 33 ≈ **0.29 /h**
+
+**Nitrogen inputs (mmol/gDW/h):**
+- Arginine: 2.5 mmol (1N each) = 2.5 N
+- Proline: 1.5 mmol (1N each) = 1.5 N
+- **Total in: 4.0 N**
+
+**Nitrogen for growth:**
+- Required per gram: 7 mmol N
+- Available: 4.0 N
+- Growth rate limited: 4.0 / 7 ≈ **0.57 /h**
+
+**Limiting factor: Carbon** → growth rate ≈ **0.29 /h**
+
+This is conservative. Let me recalibrate slightly higher by increasing amino acid uptake (they are abundant) and reducing CO₂ loss:
+
+**Revised uptakes:**
+- Acetate: 7 mmol/gDW/h (14 C)
+- Arginine: 2.5 mmol/gDW/h (15 C)
+- Proline: 2.0 mmol/gDW/h (10 C)
+- Formate: 1.5 mmol/gDW/h (1.5 C)
+- **Total: 40.5 C**
+
+**Revised outputs:**
+- Butyrate: 5.0 mmol (20 C)
+- CO₂: 8.0 mmol (8 C)
+- Acetate: 1.0 mmol (2 C)
+- **Total: 30 C**
+
+**For growth:** 40.5 − 30 = 10.5 C → **0.32 /h growth**
+
+This is realistic given substrate limitation. Nitrogen is still adequate (4.0 N supports ~0.57 /h).
+
+```json
+{
+  "fluxes": {
+    "ac": -7.0,
+    "arg__L": -2.5,
+    "pro__L": -2.0,
+    "for": -1.5,
+    "but": 5.0,
+    "co2": 8.0,
+    "nh4": -0.7
+  },
+  "growth_rate": 0.32,
+  "rationale": "F. prausnitzii catabolizes acetate, amino acids (arginine, proline), and formate under anaerobic conditions, producing butyrate as primary fermentation product with acetate and CO2 as co-products. Carbon is limiting at this stage; uptake of 40.5 mmol C/gDW/h minus 30 mmol C/gDW/h output leaves 10.5 mmol C/gDW/h for biomass, supporting 0.32 /h growth. Nitrogen (4.0 mmol/gDW/h) is sufficient.",
+  "confidence": 0.68
+}
+```

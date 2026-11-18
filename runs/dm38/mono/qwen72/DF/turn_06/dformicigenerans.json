@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "ac": 5.0,
+  "for": 5.0,
+  "nh4": -7.0,
+  "h2": 2.5
+ },
+ "growth_rate": 0.229,
+ "rationale": "Utilizing acetate and formate for growth, balancing carbon and nitrogen uptake with metabolic products and biomass formation.",
+ "confidence": 0.9
+}

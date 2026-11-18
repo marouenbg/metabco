@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": 2.0,
+  "lac__L": -2.0,
+  "gly": -2.0,
+  "nh4": -1.0,
+  "but": 3.0
+ },
+ "growth_rate": 0.233,
+ "confidence": 0.85,
+ "rationale": "Balanced carbon and nitrogen uptake to support sustainable growth while producing butyrate and acetate."
+}

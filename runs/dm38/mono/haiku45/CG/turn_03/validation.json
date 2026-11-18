@@ -1,0 +1,47 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 3,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=72 out=78 biomass=15.4"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.468 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.45 -> 0",
+   "C: secretions scaled by 0.969"
+  ],
+  "rationale": "Fermenting lactate, glucose, and arginine (Stickland) under anaerobic conditions. Arginine provides both C and N. Products are acetate, butyrate, CO\u2082, and H\u2082 typical of mixed-acid fermentation. Growth",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -6.0,
+   "glc__D": -4.0,
+   "arg__L": -4.0,
+   "cys__L": -2.0,
+   "nh4": -2.0,
+   "ac": 10.0,
+   "but": 8.0,
+   "co2": 20.0,
+   "h2": 2.0,
+   "ala__L": 2.0
+  },
+  "fluxes_applied": {
+   "lac__L": -6.0,
+   "glc__D": -4.0,
+   "arg__L": -4.0,
+   "cys__L": -2.0,
+   "nh4": -2.0,
+   "ac": 9.6923,
+   "but": 7.7538,
+   "co2": 19.3846,
+   "h2": 2.0,
+   "ala__L": 1.9385,
+   "pi": -0.4679
+  }
+ }
+]

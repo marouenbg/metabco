@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 4,
+  "growth_claimed": 0.6,
+  "growth_allowed": 0.6,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.558 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.126 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Glucose depleted; shifting to arabinose fermentation with arginine as dual C/N source. Butyrate recycling under N-limitation. Fermentation yields butyrate, acetate, formate, CO\u2082, and H\u2082 consistent wit",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "arab__L": -8.0,
+   "arg__L": -2.5,
+   "but": 3.5,
+   "nh4": -1.0,
+   "ac": 2.0,
+   "for": 1.5,
+   "co2": 4.0,
+   "h2": 0.8
+  },
+  "fluxes_applied": {
+   "arab__L": -8.0,
+   "arg__L": -2.5,
+   "but": 3.5,
+   "nh4": -1.0,
+   "ac": 2.0,
+   "for": 1.5,
+   "co2": 4.0,
+   "h2": 0.8,
+   "pi": -0.5585,
+   "so4": -0.1261
+  }
+ }
+]

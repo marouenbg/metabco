@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 8,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.0358,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=9 out=8 biomass=10.1"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.227 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.25 -> 0.0358"
+  ],
+  "rationale": "uptake of propionate and acetate supports growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ppa": 1.0,
+   "ac": 2.0,
+   "cys__L": -1.0,
+   "ser__L": -1.0,
+   "ala__L": -1.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "ppa": 1.0,
+   "ac": 2.0,
+   "cys__L": -1.0,
+   "ser__L": -1.0,
+   "ala__L": -1.0,
+   "co2": 1.0,
+   "pi": -0.2273
+  }
+ }
+]

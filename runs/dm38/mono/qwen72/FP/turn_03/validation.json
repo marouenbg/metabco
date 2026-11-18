@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 3,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "S: credited 0.0525 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing to use D-glucose and L-lactate as primary carbon sources while maintaining the same nitrogen uptake and product secretion rates as previous turns to maximize growth and resource utilization",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "nh4": -7.0,
+   "co2": 6.0,
+   "but": 2.0,
+   "ac": 2.0,
+   "h2": 2.0,
+   "pi": -0.23
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "nh4": -7.0,
+   "co2": 6.0,
+   "but": 2.0,
+   "ac": 2.0,
+   "h2": 2.0,
+   "pi": -0.23,
+   "so4": -0.0525
+  }
+ }
+]

@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "ac": 5.0,
+  "but": 3.0,
+  "ppa": 1.75,
+  "nh4": -2.01
+ },
+ "growth_rate": 0.25125,
+ "rationale": "Utilizing abundant glucose and lactate for growth, secreting acetate, butyrate, and propionate. Growth rate is limited by nitrogen uptake.",
+ "confidence": 0.95
+}

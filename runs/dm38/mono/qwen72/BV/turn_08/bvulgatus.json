@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "malt": -10.0,
+  "ac": 2.0,
+  "ppa": 2.0,
+  "but": 2.0,
+  "for": 1.0,
+  "lac__L": 1.0,
+  "nh4": -2.0
+ },
+ "growth_rate": 0.049,
+ "rationale": "Sustainable carbon and nitrogen balance, focusing on maltose uptake and reduced SCFA production.",
+ "confidence": 0.9
+}

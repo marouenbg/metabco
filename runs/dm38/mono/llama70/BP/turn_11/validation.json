@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 11,
+  "growth_claimed": 0.125,
+  "growth_allowed": 0.125,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: lac__L",
+   "uptake_exceeds_pool: arg__L"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake lac__L to pool limit -1.83",
+   "clipped uptake arg__L to pool limit -1.3",
+   "P: credited 0.084 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0323 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Lactate and arginine uptake support growth and fermentation",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -5.0,
+   "arg__L": -2.0,
+   "ac": 3.0,
+   "co2": 2.0
+  },
+  "fluxes_applied": {
+   "lac__L": -1.8345,
+   "arg__L": -1.3049,
+   "ac": 3.0,
+   "co2": 2.0,
+   "pi": -0.084,
+   "so4": -0.0323
+  }
+ }
+]

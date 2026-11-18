@@ -1,0 +1,11 @@
+As I ponder my metabolic strategy for the next 4 hours, I take stock of the available nutrients and my capabilities as Clostridium hiranonis TO-931 (DSM 13275). I can transport a variety of carbon sources, including L-arabinose, L-arginine, acetate, formate, L-cysteine, L-serine, L-lactate, L-proline, D-glucose, L-alanine, myo-inositol, glycine, L-phenylalanine, maltose, L-leucine, L-tyrosine, butyrate, L-valine, L-glutamine, L-asparagine, L-lysine, L-threonine, L-isoleucine, L-histidine, L-methionine, L-tryptophan, and L-aspartate. However, I notice that some of these sources are present in relatively low concentrations, and I'll need to prioritize them.
+
+I also consider the fermentation products that my species is known to make. As Clostridium hiranonis, I am capable of producing acetate, butyrate, formate, lactate, and ethanol. Given the abundance of acetate and butyrate in the vessel, I decide to focus on producing these two compounds.
+
+To calculate the growth rate supported by my chosen uptake, I need to consider the carbon and nitrogen sources that I'll be taking up. I'll be consuming L-arabinose, L-glutamine, and ammonium (as NH4+). I estimate that I'll require approximately 38 mmol of carbon and 10 mmol of nitrogen per gram of dry weight produced. Based on my uptake rates, I can support a growth rate of approximately 0.85/h.
+
+Now, I perform an audit of the carbon in and out, including the biomass cost. I'll be taking up L-arabinose (38 mmol/gDW/h), L-glutamine (10 mmol/gDW/h), and ammonium (10 mmol/gDW/h). I'll be producing acetate (15 mmol/gDW/h), butyrate (15 mmol/gDW/h), and formate (15 mmol/gDW/h). To account for the biomass cost, I'll need to subtract the carbon and nitrogen consumed by growth. This leaves me with a carbon balance of approximately 0 mmol/gDW/h and a nitrogen balance of approximately 0 mmol/gDW/h.
+
+Given my decision, I will take up the following metabolites at the specified rates:
+
+{"fluxes": {"arab__L": -0.4, "gln__L": -0.1, "nh4": -0.1, "lac__L": 0, "for": 0, "but": 0, "ac": 0, "h2": 0, "h2s": 0, "etoh": 0, "co2": 0}, "growth_rate": 0.85, "rationale": "producing acetate and butyrate, taking up L-arabinose, L-glutamine, and ammonium", "confidence": 0.9}

@@ -1,0 +1,85 @@
+# Metabolic Decision — Turn 10, t = 40.00 h
+
+## Analysis
+
+**Current state:** I am at 4.117 gDW/L, 8 hours into a 48-hour batch culture. Nutrients are becoming depleted. I must assess what I can still access and metabolize.
+
+**Carbon and nitrogen sources available:**
+
+I am *Coprococcus comes*, a butyrate-producing bacterium from the human gut microbiome. My known transporters and metabolic capabilities:
+- **Acetate (ac)**: 34.42 mM — I can transport and ferment this via acetyl-CoA
+- **Butyrate (but)**: 33.59 mM — I produce this, but can also consume it for energy if needed
+- **L-arabinose (arab__L)**: 5.818 mM — I can ferment pentoses
+- **Maltose (malt)**: 4.382 mM — I can use disaccharides
+- **Amino acids**: Multiple L-amino acids available — I can catabolize these for C and N
+- **Ammonium (nh4)**: 10.77 mM — my primary N source
+- **CO₂**: 101.8 mM — product, not a carbon source for me
+
+**Cannot use:**
+- Formate, lactate as primary carbon sources (limited transporters)
+- Glucose (absent now; was used earlier)
+
+**Fermentation products I make:**
+- Butyrate (main end product)
+- Acetate (overflow)
+- CO₂, H₂ (from fermentation)
+- Lactate (minor, under certain conditions)
+
+## Growth calculation
+
+Recent turns show I've been growing at 0.3–0.85 /h when consuming mixed substrates. At t=40h with 8h remaining, nutrient depletion is significant. However, I still have:
+- Acetate: 34.42 mM (abundant)
+- Amino acids: ~50 mM total
+- Ammonium: 10.77 mM
+
+**Strategy:** Continue mixed fermentation of acetate + amino acids.
+
+For growth at rate μ:
+- Carbon cost: 30 mmol C / gDW
+- Nitrogen cost: 8 mmol N / gDW
+
+If I grow at μ = 0.45 /h over 4 hours:
+- Biomass produced: 0.45 × 4 = 1.8 gDW/L (per liter basis, per gram basis: 1.8 mmol C and N cost per gDW)
+- Total C needed: 30 × 0.45 × 4 = 54 mmol C
+- Total N needed: 8 × 0.45 × 4 = 14.4 mmol N
+
+**Carbon budget:**
+- Acetate uptake: ~10 mmol/gDW/h × 2 C/acetate = 20 C/h
+- Amino acid uptake: ~8 mmol/gDW/h, avg ~4 C per amino acid = 32 C/h
+- Total C in: ~52 C/h → supports ~54 mmol over 4h ✓
+- Release as butyrate (~4 C/butyrate), acetate overflow, CO₂
+
+**Nitrogen budget:**
+- Ammonium: 10.77 mM available; uptake ~2.5 mmol/gDW/h
+- Amino acids: ~8 mmol/gDW/h, avg 1 N each = 8 N/h
+- Total N in: ~10.5 N/h → supports ~14.4 mmol over 4h ✓
+
+**Fluxes (mmol/gDW/h):**
+- Acetate: −10.0 (uptake)
+- Amino acids (mixed): −8.0 (uptake, sampling gly, leu, val, ser)
+- Ammonium: −2.5 (uptake)
+- Butyrate: +4.5 (secretion)
+- Acetate (overflow): +2.0 (secretion)
+- CO₂: +6.0 (fermentation product)
+
+Growth rate: **0.45 /h**
+
+```json
+{
+  "fluxes": {
+    "ac": -10.0,
+    "gly": -1.5,
+    "leu__L": -1.5,
+    "val__L": -1.5,
+    "ser__L": -1.2,
+    "ala__L": -1.3,
+    "nh4": -2.5,
+    "but": 4.5,
+    "co2": 6.0,
+    "for": 0.5
+  },
+  "growth_rate": 0.45,
+  "rationale": "Mixed fermentation of acetate and amino acids. Acetate remains abundant; amino acids provide both C and N. Ammonium uptake supports growth. Butyrate and CO₂ are major fermentation products. Growth rate constrained by N availability (10.77 mM nh4 limits sustained high μ).",
+  "confidence": 0.72
+}
+```

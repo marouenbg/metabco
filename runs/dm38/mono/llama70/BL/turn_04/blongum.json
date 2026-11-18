@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "arab__L": -6.0,
+  "lac__L": 2.0,
+  "arg__L": -1.5,
+  "nh4": -1.5,
+  "ac": 4.0
+ },
+ "growth_rate": 0.158,
+ "rationale": "Balanced carbon and nitrogen uptake, considering maintenance and biomass production costs",
+ "confidence": 0.8
+}

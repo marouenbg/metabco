@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 4,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: but"
+  ],
+  "repairs": [],
+  "rationale": "I will prioritize taking up lactate and glucose as my primary carbon sources, and utilize the abundant nitrogen sources to support my growth.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -15.0,
+   "glc__D": -10.0,
+   "nh4": -4.5,
+   "ac": 5.09,
+   "but": 3.51,
+   "for": 3.51,
+   "pi": -1.08,
+   "so4": -0.24
+  },
+  "fluxes_applied": {
+   "lac__L": -15.0,
+   "glc__D": -10.0,
+   "nh4": -4.5,
+   "ac": 5.09,
+   "but": 3.51,
+   "for": 3.51,
+   "pi": -1.08,
+   "so4": -0.24
+  }
+ }
+]

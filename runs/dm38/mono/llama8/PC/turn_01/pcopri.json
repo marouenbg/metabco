@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -10,
+  "glc__D": -6.49,
+  "arg__L": -1.56,
+  "nh4": -0.71,
+  "for": 0.9,
+  "succ": 0.9,
+  "co2": 0.39
+ },
+ "growth_rate": 0.9,
+ "rationale": "I will take up lactate, glucose, and arginine to support growth. I will secrete formate and succinate as fermentation products. I will also release CO2 to balance the carbon audit.",
+ "confidence": 0.9
+}

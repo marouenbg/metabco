@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": -8.0,
+  "gly": -1.2,
+  "ser__L": -0.8,
+  "pro__L": -0.6,
+  "leu__L": -0.4,
+  "lac__L": 2.5,
+  "for": 0.3,
+  "co2": 1.6
+ },
+ "growth_rate": 0.2,
+ "rationale": "Acetate is abundant and my preferred carbon source; amino acids provide nitrogen for growth. Fermentation to lactate and formate is my characteristic metabolism. Growth rate 0.20/h is sustainable given remaining time (8h) and nutrient availability; carbon budget balances at 11.0 mmol in vs 7.6 (growth) + 3.4 (products) out.",
+ "confidence": 0.68
+}

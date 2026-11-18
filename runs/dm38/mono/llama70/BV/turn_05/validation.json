@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 5,
+  "growth_claimed": 0.244,
+  "growth_allowed": 0.244,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.222 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "balanced carbon budget with lactate, cysteine, and butyrate uptake",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "cys__L": -2.0,
+   "but": -2.0,
+   "ac": 2.0,
+   "co2": 4.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "cys__L": -2.0,
+   "but": -2.0,
+   "ac": 2.0,
+   "co2": 4.0,
+   "pi": -0.2218
+  }
+ }
+]

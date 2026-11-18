@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "malt": -5.0,
+  "ac": 2.5,
+  "lac__L": 1.25,
+  "for": 1.25,
+  "arg__L": -1.25
+ },
+ "growth_rate": 0.15,
+ "rationale": "Maltose is the primary carbon source, with acetate, lactate, and formate as fermentation products. L-arginine is the primary nitrogen source.",
+ "confidence": 0.8
+}

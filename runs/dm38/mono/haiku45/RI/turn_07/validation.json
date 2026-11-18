@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 7,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "P: credited 0.583 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "I consume butyrate and acetate via \u03b2-oxidation, paired with amino acid catabolism (arginine, cysteine, serine) for nitrogen and additional carbon. Inositol provides fermentable hexose. Fermentation yi",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "but": -5.0,
+   "ac": -4.0,
+   "arg__L": -2.5,
+   "cys__L": -1.0,
+   "ser__L": -0.8,
+   "inost": -1.5,
+   "co2": 8.0,
+   "for": 0.4
+  },
+  "fluxes_applied": {
+   "but": -5.0,
+   "ac": -4.0,
+   "arg__L": -2.5,
+   "cys__L": -1.0,
+   "ser__L": -0.8,
+   "inost": -1.5,
+   "co2": 8.0,
+   "for": 0.4,
+   "pi": -0.5832
+  }
+ }
+]

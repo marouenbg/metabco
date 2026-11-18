@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 10,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_absent: nh4",
+   "n_imbalance: in=0 out=0 biomass=4.59"
+  ],
+  "warnings": [],
+  "repairs": [
+   "zeroed uptake of absent nh4",
+   "S: credited 0.118 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.45 -> 0"
+  ],
+  "rationale": "acetate, formate, and L-lactate uptake support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "for": -5.0,
+   "lac__L": -2.0,
+   "nh4": -2.0,
+   "co2": 2.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "for": -5.0,
+   "lac__L": -2.0,
+   "nh4": 0.0,
+   "co2": 2.0,
+   "so4": -0.1178
+  }
+ }
+]

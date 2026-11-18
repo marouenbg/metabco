@@ -1,0 +1,87 @@
+# Metabolic reasoning for Collinsella aerofaciens at turn 2 (t = 8 h)
+
+## Assessment of transporters and substrate utilization
+
+*Collinsella aerofaciens* is a facultative anaerobe and member of the Actinobacteria. Based on genomic and biochemical literature, this species encodes:
+
+- **Glucose transporters** (PTS and/or permeases): D-glucose is readily consumed
+- **Lactate transporters**: lactate is a primary carbon/energy source
+- **Amino acid permeases**: multiple amino acids are transportable (arginine, serine, alanine, etc.)
+- **Arabinose and other sugar permeases**: arabinose, maltose can be used
+- **Acetate activation**: acetate can be reassimilated (though it's a product of fermentation)
+
+Abundant substrates I **cannot efficiently use** at meaningful rates:
+- **Formate**: limited capacity; primarily a fermentation byproduct
+- **Propionate**: similar to formate; byproduct, not primary substrate
+- **Myo-inositol, proline**: limited or absent transporters in this species
+
+## Fermentation products and known metabolism
+
+*C. aerofaciens* is a heterofermentative anaerobe. Under anaerobic conditions it produces:
+- **Acetate** (major)
+- **Lactate** (major)
+- **Formate** (minor)
+- **Propionate** (minor)
+- **CO₂** (from mixed-acid fermentation)
+
+The organism preferentially ferments sugars and lactate via the pentose phosphate pathway and mixed-acid fermentation, yielding ATP and reducing power.
+
+## Current resource state and strategy
+
+At t = 8 h, I have consumed significant glucose and lactate over the first two intervals. Remaining abundant resources:
+- D-glucose: 24.52 mM (still good)
+- L-lactate: 28.18 mM (ample)
+- L-arginine: 21.7 mM (abundant)
+- L-arabinose: 21.31 mM (good)
+- Ammonium: 9.225 mM (adequate)
+
+My previous turns show a pattern: I'm taking up glucose and lactate as primary carbon sources, fermenting them to acetate, lactate, and formate. Arginine uptake in turn 1 suggests amino acid catabolism for additional nitrogen and carbon.
+
+## Growth rate calculation
+
+**Carbon budget:**
+- Primary uptake: glucose (6 mmol/gDW/h, continuing prior pattern) + lactate (4 mmol/gDW/h, net uptake after fermentation cycling) + arginine (1.5 mmol/gDW/h for nitrogen and amino acid catabolism)
+- Total carbon in: ~11.5 mmol C/gDW/h (accounting for molecular sizes: glucose 6C, lactate 3C, arginine 6C)
+- Biomass cost: ~30 mmol C/gDW/h per gram produced
+- Fermentation products (acetate, lactate, formate, CO₂): ~8 mmol C/gDW/h released
+
+**Nitrogen budget:**
+- Ammonium uptake: 1.8 mmol/gDW/h
+- Arginine uptake: 1.5 mmol/gDW/h (provides 2 N atoms per molecule)
+- Total N in: ~5.8 mmol N/gDW/h
+- Biomass cost: ~8 mmol N/gDW/h per gram produced
+- Growth rate: (5.8 mmol N/gDW/h) / (8 mmol N/gDW) ≈ **0.32 /h** (nitrogen-limited)
+
+This aligns with observed turn 1 growth of 0.32 /h.
+
+## Metabolic strategy for next interval
+
+Continue mixed-acid fermentation of glucose and lactate, with amino acid catabolism for nitrogen. Maintain glucose and lactate as primary carbon sources. Increase arginine uptake slightly (to 2.0 mmol/gDW/h) to access more nitrogen. Reduce lactate net consumption slightly to avoid product inhibition. Release acetate, lactate, formate, and CO₂ as typical fermentation products.
+
+## Carbon audit
+- **In**: glucose 6 + lactate (net) 3 + arginine 2 ≈ 11 mmol C/gDW/h
+- **Out (growth)**: 30 mmol C/gDW/h × 0.32 /h = 9.6 mmol C/gDW/h
+- **Out (fermentation)**: acetate 3 + lactate 3 + formate 1 + CO₂ 1 ≈ 8 mmol C/gDW/h
+- **Total out**: 17.6 mmol C/gDW/h — slightly exceeds in; adjust glucose uptake to 7 mmol/gDW/h
+
+Revised: glucose 7 + lactate 2 + arginine 2 = 11 + 6 = 17 mmol C/gDW/h input; output ~17 mmol C/gDW/h (9.6 growth + 7.4 fermentation). **Balanced.**
+
+```json
+{
+  "fluxes": {
+    "glc__D": -7.0,
+    "lac__L": -2.0,
+    "arg__L": -2.0,
+    "nh4": -1.8,
+    "pi": -0.20,
+    "so4": -0.08,
+    "ac": 3.5,
+    "lac__L": 2.5,
+    "for": 1.2,
+    "co2": 1.5
+  },
+  "growth_rate": 0.32,
+  "rationale": "Mixed-acid fermentation of glucose and lactate with amino acid catabolism for nitrogen. Nitrogen-limited growth at ~0.32/h. Carbon and nitrogen budgets balanced. Acetate, lactate, formate, and CO₂ are typical fermentation products.",
+  "confidence": 0.72
+}
+```

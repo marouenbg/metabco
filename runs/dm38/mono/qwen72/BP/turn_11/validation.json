@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 11,
+  "growth_claimed": 0.1,
+  "growth_allowed": 0.1,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "S: credited 0.0258 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing to utilize D-glucose and L-lactate for carbon, ammonium for nitrogen, and producing acetate, formate, and CO2 as fermentation products, while maintaining a sustainable growth rate.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": -2.0,
+   "nh4": -2.0,
+   "ac": 2.0,
+   "for": 1.5,
+   "co2": 0.5,
+   "pi": -0.07
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": -2.0,
+   "nh4": -2.0,
+   "ac": 2.0,
+   "for": 1.5,
+   "co2": 0.5,
+   "pi": -0.07,
+   "so4": -0.0258
+  }
+ }
+]

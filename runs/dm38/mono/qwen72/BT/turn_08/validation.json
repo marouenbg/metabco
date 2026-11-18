@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 8,
+  "growth_claimed": 0.131,
+  "growth_allowed": 0.131,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "P: credited 0.119 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Utilizing available carbon and nitrogen sources to support growth and production of typical fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": 5.0,
+   "but": 3.0,
+   "ppa": 2.0,
+   "lac__L": -1.0,
+   "inost": -1.0,
+   "arg__L": -2.0,
+   "cys__L": -1.0,
+   "ala__L": -1.0,
+   "ser__L": -1.0,
+   "pro__L": -1.0
+  },
+  "fluxes_applied": {
+   "ac": 5.0,
+   "but": 3.0,
+   "ppa": 2.0,
+   "lac__L": -1.0,
+   "inost": -1.0,
+   "arg__L": -2.0,
+   "cys__L": -1.0,
+   "ala__L": -1.0,
+   "ser__L": -1.0,
+   "pro__L": -1.0,
+   "pi": -0.1191
+  }
+ }
+]

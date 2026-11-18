@@ -1,0 +1,110 @@
+# Reasoning
+
+## Current situation
+At t = 36 h in a sealed 48 h batch culture, I am at 1.765 gDW/L. Glucose is nearly depleted (1.733 mM), but I have access to a rich mixture of amino acids, organic acids, and carbohydrates. I'm anaerobic, so I must ferment.
+
+## Carbon and nitrogen sources I can transport
+
+**Carbohydrates:** As *Bacteroides thetaiotaomicron*, I encode multiple carbohydrate transporters:
+- D-glucose (glc__D): 1.733 mM — nearly exhausted, but still present
+- Maltose (malt): 4.382 mM — I have maltose PTS and can use it
+- L-arabinose (arab__L): I've been using this; it's now depleted in the environment but I've fermented it before
+
+**Organic acids:** I can transport and ferment:
+- Acetate (ac): 27.32 mM — abundant, can be oxidized via acetyl-CoA
+- Propionate (ppa): 13.83 mM — I can use this
+- Butyrate (but): 6.407 mM — I can ferment this
+- Formate (for): 6.523 mM — I can use this
+
+**Amino acids:** My genome encodes multiple amino acid transporters. Abundant options:
+- L-arginine (arg__L): 13.39 mM — excellent source; I can degrade it to acetate, ammonia, and CO₂
+- L-cysteine (cys__L): 6.728 mM — I can ferment this
+- L-proline (pro__L): 5.9 mM — fermentable
+- L-serine (ser__L): 6.4 mM — I can deaminate and ferment to pyruvate
+- Glycine (gly): 4.7 mM — fermentable
+- L-alanine (ala__L): 3.141 mM — usable
+- L-leucine, L-valine, L-isoleucine: branched-chain amino acids; I can ferment these
+
+**What I cannot use well:**
+- Glucose is nearly gone (1.733 mM), so I must pivot away from it
+- Vitamins and cofactors are present but not carbon sources
+
+## Fermentation strategy
+
+*Bacteroides* is a saccharolytic and proteolytic fermenter. My classical fermentation products are:
+- **Acetate** (major end product)
+- **Propionate** (via succinate pathway or acrylyl-CoA)
+- **Butyrate** (via butyryl-CoA)
+- **Formate** (minor)
+- **CO₂** (from decarboxylation)
+- **H₂** (from hydrogenase, but limited in this redox state)
+
+Given that I've been producing acetate, propionate, and butyrate in my recent turns, I'll continue that pattern.
+
+## Carbon and nitrogen audit for this interval
+
+**Primary substrates to prioritize:**
+1. **Maltose (4.382 mM):** C₁₂H₂₂O₁₁ → 2 glucose equivalents. Rich carbohydrate, good energy yield.
+2. **L-arginine (13.39 mM):** C₆H₁₄N₄O₂. Nitrogen-rich; I can ferment it to acetate + CO₂ + NH₄⁺.
+3. **L-serine (6.4 mM):** C₃H₇NO₃. Deaminates to pyruvate; ferments to acetate/formate.
+4. **Glucose (1.733 mM):** Finish what's left.
+5. **Propionate and butyrate:** I can oxidize these in mixed fermentation.
+
+**Uptake plan (per gDW/h):**
+- Glucose (glc__D): −1.5 mmol/gDW/h (finish the remnant quickly)
+- Maltose (malt): −3.5 mmol/gDW/h (good fermentation substrate)
+- L-arginine (arg__L): −2.0 mmol/gDW/h (proteolytic fermentation)
+- L-serine (ser__L): −1.0 mmol/gDW/h (amino acid fermentation)
+- Acetate (ac): −1.0 mmol/gDW/h (as overflow substrate; I can use it anabolically or oxidize it)
+- Ammonium (nh4): −0.5 mmol/gDW/h (nitrogen for biosynthesis)
+
+**Carbon accounting:**
+- Glucose: 1.5 × 6 = 9.0 mmol C/gDW/h
+- Maltose: 3.5 × 12 = 42.0 mmol C/gDW/h
+- L-arginine: 2.0 × 6 = 12.0 mmol C/gDW/h
+- L-serine: 1.0 × 3 = 3.0 mmol C/gDW/h
+- Acetate: 1.0 × 2 = 2.0 mmol C/gDW/h
+- **Total C in: 68.0 mmol C/gDW/h**
+
+**Nitrogen accounting:**
+- L-arginine: 2.0 × 4 = 8.0 mmol N/gDW/h
+- L-serine: 1.0 × 1 = 1.0 mmol N/gDW/h
+- Ammonium: 0.5 × 1 = 0.5 mmol N/gDW/h
+- **Total N in: 9.5 mmol N/gDW/h**
+
+**Growth cost:**
+- Growth rate μ = 0.22 /h (conservative estimate based on recent turns and nutrient depletion)
+- C cost: 0.22 × 41 = 9.02 mmol C/gDW/h
+- N cost: 0.22 × 8 = 1.76 mmol N/gDW/h
+
+**Carbon out (fermentation products):**
+- C available for secretion: 68.0 − 9.02 = 58.98 mmol C/gDW/h
+- Allocate as: Acetate (+8.0), Propionate (+5.0), Butyrate (+2.0), CO₂ (+43.98)
+- Check: 8 + 5 + 2 + 43.98 = 58.98 ✓
+
+**Nitrogen out:**
+- N available: 9.5 − 1.76 = 7.74 mmol N/gDW/h
+- Release as NH₄⁺: +7.74 mmol N/gDW/h (excess from amino acid catabolism)
+
+## Final decision
+
+Growth rate: **0.22 /h** (sustainable given nutrient depletion and 12 h remaining)
+
+```
+Uptake:
+- glc__D: -1.5
+- malt: -3.5
+- arg__L: -2.0
+- ser__L: -1.0
+- ac: -1.0
+- nh4: -0.5
+
+Secretion:
+- ac: +8.0 (acetate)
+- ppa: +5.0 (propionate)
+- but: +2.0 (butyrate)
+- co2: +43.98 (CO₂)
+- nh4: +7.74 (ammonia from amino acid catabolism)
+```
+
+{"fluxes": {"glc__D": -1.5, "malt": -3.5, "arg__L": -2.0, "ser__L": -1.0, "ac": -1.0, "nh4": -0.5, "ac": 8.0, "ppa": 5.0, "but": 2.0, "co2": 43.98, "nh4": 7.74}, "growth_rate": 0.22, "rationale": "Glucose depleted; pivoting to maltose and amino acid fermentation. Arginine and serine provide both carbon and nitrogen. Ferment to acetate, propionate, butyrate, and CO₂. Sustainable growth rate given 12 h remaining in batch culture.", "confidence": 0.72}

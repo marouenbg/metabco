@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -6.5,
+  "lac__L": -3.5,
+  "arg__L": -3.5,
+  "cys__L": -1.0,
+  "nh4": -0.5,
+  "ac": 9.5,
+  "for": 5.0,
+  "co2": 4.5
+ },
+ "growth_rate": 0.089,
+ "rationale": "Continuing established mixed-acid fermentation of glucose and lactate with amino acid catabolism. Sufficient carbon (73.5 mmol/gDW/h in) covers growth cost (~2.94) and secretion (~28.5), with remainder supporting biomass and redox balance. Nitrogen from arginine and cysteine adequate. Anaerobic conditions favour formate and acetate production.",
+ "confidence": 0.72
+}

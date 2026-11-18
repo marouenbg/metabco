@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -33.0,
+  "arg__L": -8.0,
+  "ser__L": -2.0,
+  "lac__L": 5.0,
+  "ac": 3.0,
+  "h2": 0.2
+ },
+ "growth_rate": 0.75,
+ "rationale": "I will take up D-glucose (glc__D), L-arginine (arg__L), and L-serine (ser__L) to support growth and fermentation. I will release lactate (lac__L) and acetate (ac) as fermentation products. I will also produce hydrogen (h2) gas as a byproduct of fermentation.",
+ "confidence": 0.9
+}

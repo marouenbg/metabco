@@ -1,0 +1,45 @@
+[
+ {
+  "species_id": "erectale",
+  "turn": 6,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.35,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.326 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0736 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Lactate exhausted; switching to arabinose and maltose fermentation with amino acid catabolism. Nitrogen-limited growth at 0.35/h supported by ammonium and amino acid nitrogen. Butyrate and acetate pro",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "arab__L": -5.0,
+   "malt": -2.5,
+   "arg__L": -1.5,
+   "ala__L": -2.0,
+   "gly": -1.5,
+   "pro__L": -1.0,
+   "nh4": -1.2,
+   "but": 3.5,
+   "ac": 2.5,
+   "for": 1.5,
+   "co2": 8.0
+  },
+  "fluxes_applied": {
+   "arab__L": -5.0,
+   "malt": -2.5,
+   "arg__L": -1.5,
+   "ala__L": -2.0,
+   "gly": -1.5,
+   "pro__L": -1.0,
+   "nh4": -1.2,
+   "but": 3.5,
+   "ac": 2.5,
+   "for": 1.5,
+   "co2": 8.0,
+   "pi": -0.3258,
+   "so4": -0.0736
+  }
+ }
+]

@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 7,
+  "growth_claimed": 0.93,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=37.8 out=12.8 biomass=37.7",
+   "p_imbalance: in=0 out=0 biomass=0.603"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "C: growth 0.93 -> 0.664",
+   "P: growth 0.664 -> 0"
+  ],
+  "rationale": "Switching to amino acid and acetate fermentation in the absence of carbohydrates. Stickland-like amino acid catabolism provides carbon, nitrogen, and energy. Acetate supplementation maintains reducing",
+  "confidence": 0.75,
+  "fluxes_claimed": {
+   "pro__L": -3.0,
+   "leu__L": -1.5,
+   "phe__L": -1.2,
+   "cys__L": -1.0,
+   "ac": 2.5,
+   "nh4": -0.8,
+   "but": 1.5,
+   "for": 0.8,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "pro__L": -3.0,
+   "leu__L": -1.5,
+   "phe__L": -1.2,
+   "cys__L": -1.0,
+   "ac": 2.5,
+   "nh4": -0.8,
+   "but": 1.5,
+   "for": 0.8,
+   "co2": 1.0
+  }
+ }
+]

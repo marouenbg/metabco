@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -3.0,
+  "arg__L": -2.0,
+  "nh4": -2.2,
+  "ac": 4.5,
+  "ppa": 2.0,
+  "co2": 1.5,
+  "for": 0.8,
+  "h2": 0.2
+ },
+ "growth_rate": 0.18,
+ "rationale": "Bacteroides caccae prioritizes glucose fermentation under anaerobic conditions, with lactate and arginine as secondary substrates. Fermentation yields acetate, propionate, formate, and CO\u2082. Growth rate limited by carbon availability in sealed batch culture; nitrogen from ammonium and arginine is sufficient. Excess amino-group nitrogen released as ammonia.",
+ "confidence": 0.62
+}

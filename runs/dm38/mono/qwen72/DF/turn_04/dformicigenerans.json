@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "arg__L": -0.6,
+  "ac": 5.0,
+  "for": 5.0,
+  "nh4": -1.6,
+  "pi": -0.71,
+  "so4": -0.16
+ },
+ "growth_rate": 0.229,
+ "rationale": "Continuing to ferment L-lactate to acetate and formate while supplementing nitrogen with L-arginine to support growth.",
+ "confidence": 0.9
+}

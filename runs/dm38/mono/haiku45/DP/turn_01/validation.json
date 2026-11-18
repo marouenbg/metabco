@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 1,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.4,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.525 mmol/gDW/h of pi (declared present in excess)",
+   "N: credited 0.549 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Lactate-sulfate reduction is my primary metabolism. Lactate is abundant (28 mM) and I oxidize it to acetate while reducing sulfate to H\u2082S. Amino acids supplement nitrogen. Carbon balance: 30 mmol C in",
+  "confidence": 0.75,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "so4": -2.02,
+   "nh4": -2.0,
+   "gly": -0.8,
+   "ala__L": -0.6,
+   "ac": 3.0,
+   "co2": 8.0,
+   "h2s": 2.0
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "so4": -2.02,
+   "nh4": -2.5487,
+   "gly": -0.8,
+   "ala__L": -0.6,
+   "ac": 3.0,
+   "co2": 8.0,
+   "h2s": 2.0,
+   "pi": -0.5252
+  }
+ }
+]

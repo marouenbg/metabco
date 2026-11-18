@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "chiranonis",
+  "turn": 4,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.4,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.467 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.105 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Shift to amino acid fermentation via Stickland reactions. Arginine is abundant and provides both C and N. Lactate and serine support additional carbon. Products are CO\u2082, NH\u2084, acetate, and H\u2082 from ferm",
+  "confidence": 0.62,
+  "fluxes_claimed": {
+   "arg__L": -5.0,
+   "lac__L": -3.0,
+   "ser__L": -2.0,
+   "co2": 8.0,
+   "nh4": 4.0,
+   "ac": 4.0,
+   "h2": 2.0
+  },
+  "fluxes_applied": {
+   "arg__L": -5.0,
+   "lac__L": -3.0,
+   "ser__L": -2.0,
+   "co2": 8.0,
+   "nh4": 4.0,
+   "ac": 4.0,
+   "h2": 2.0,
+   "pi": -0.4666,
+   "so4": -0.1047
+  }
+ }
+]

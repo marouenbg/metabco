@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 7,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: malt",
+   "c_imbalance: in=26.7 out=165 biomass=28.3",
+   "n_imbalance: in=0 out=15 biomass=0"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.872 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.196 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.75 -> 0",
+   "C: secretions scaled by 0.17",
+   "N: secretions scaled by 0"
+  ],
+  "rationale": "Utilizing D-lactate, L-lactate, and Maltose for growth, and producing acetate, succinate, and formate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__D": 10.0,
+   "lac__L": 10.0,
+   "malt": 5.0,
+   "ac": -13.35,
+   "succ": 10.0,
+   "for": 5.0,
+   "nh4": 15.0
+  },
+  "fluxes_applied": {
+   "lac__D": 1.6991,
+   "lac__L": 1.6991,
+   "malt": 0.8495,
+   "ac": -13.35,
+   "succ": 1.6991,
+   "for": 0.8495,
+   "nh4": 0.0,
+   "pi": -0.8722,
+   "so4": -0.1963
+  }
+ }
+]

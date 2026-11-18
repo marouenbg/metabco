@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "gly": -2.0,
+  "phe__L": -1.0,
+  "leu__L": -1.0,
+  "ac": 10.0,
+  "for": 5.0
+ },
+ "growth_rate": 0.4,
+ "rationale": "Optimizing carbon and nitrogen uptake for growth and fermentation product formation",
+ "confidence": 0.8
+}

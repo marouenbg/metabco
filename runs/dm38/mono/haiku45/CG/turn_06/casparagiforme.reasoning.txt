@@ -1,0 +1,122 @@
+# Reasoning
+
+## 1. Metabolic capacity assessment
+
+I am *Clostridium asparagiforme* DSM 15981, a strict anaerobe. My recent history shows:
+- I ferment amino acids (arginine, alanine, serine, proline, lactate, glucose, arabinose)
+- I produce acetate, butyrate, CO₂, and H₂
+- My growth has declined from 0.5 /h (turn 2) to 0.142 /h (turn 5)
+
+At turn 6 (t=24h, halfway through the 48h run), nutrient depletion is accelerating. The pool of readily fermentable substrates is shrinking.
+
+## 2. Available substrates I can metabolize
+
+**Amino acids** (my primary carbon/nitrogen sources):
+- L-alanine: 2.876 mM (excellent)
+- L-phenylalanine: 4.5 mM (good)
+- L-leucine: 3.6 mM (good)
+- L-valine: 2.8 mM (good)
+- L-tyrosine: 3.201 mM (good)
+- L-serine, L-proline, L-glutamine, L-lysine, L-threonine, etc. (all present, all fermentable)
+- L-arginine: 0.5715 mM (depleted; I've used it heavily)
+
+**Sugars**:
+- D-glucose: 2.661 mM (low but present)
+- L-arabinose: 15.85 mM (still abundant!)
+- Maltose: 4.382 mM (present)
+
+**Organic acids**:
+- L-lactate: 3.815 mM (present)
+- Acetate: 60.68 mM (abundant, but this is a product I'm already making; limited utility for growth)
+- Butyrate: 41.2 mM (abundant, also a product)
+
+**Other**:
+- myo-inositol: 6.272 mM (fermentable by some clostridia)
+- H₂: 9.557 mM (product; I release it; can't use it anaerobically)
+
+## 3. Fermentation strategy
+
+Clostridium asparagiforme is a Stickland fermenter and amino acid fermentor. The classical pathway:
+- **Amino acid oxidation** (e.g., alanine → pyruvate + NH₄⁺ + 2e⁻)
+- **Amino acid reduction** (e.g., glycine → acetate + NH₄⁺ + CO₂, using electrons from oxidation)
+- Products: **acetate, butyrate, CO₂, H₂, NH₄⁺**
+
+My past fluxes confirm this: I take up amino acids and lactate, release acetate, butyrate, CO₂, H₂.
+
+## 4. Constraint analysis at turn 6
+
+I am at **1.603 gDW/L** and have 24 hours left. The culture is half-spent:
+- Amino acids are becoming limiting (most <5 mM)
+- L-arabinose at 15.85 mM is still abundant — I should exploit this
+- D-glucose is low (2.661 mM)
+- Lactate is low (3.815 mM)
+
+**Growth cost**: 34 mmol C + 10 mmol N per gram dry weight.
+
+## 5. Proposed uptake and growth rate
+
+I will prioritize:
+1. **L-arabinose** (abundant, fermentable, C₅)
+2. **Amino acids** (especially alanine, phenylalanine, leucine, valine, tyrosine — still decent concentrations)
+3. **D-glucose** (low, but worth some uptake)
+4. **L-lactate** (low, supplementary)
+
+**Uptake plan** (mmol/gDW/h):
+- L-arabinose: -8.0 (C₅, yields ~2.5 C per molecule in fermentation products)
+- L-alanine: -4.0 (C₃, high N content)
+- L-phenylalanine: -2.0 (C₉, aromatic)
+- L-leucine: -2.0 (C₆)
+- D-glucose: -1.5 (C₆)
+- L-lactate: -1.5 (C₃)
+- L-valine: -1.0 (C₅)
+
+**Total carbon in**: 
+- Arabinose: 8 × 5 = 40 C
+- Alanine: 4 × 3 = 12 C
+- Phenylalanine: 2 × 9 = 18 C
+- Leucine: 2 × 6 = 12 C
+- Glucose: 1.5 × 6 = 9 C
+- Lactate: 1.5 × 3 = 4.5 C
+- Valine: 1 × 5 = 5 C
+- **Total: 100.5 mmol C/gDW/h**
+
+**Total nitrogen in**:
+- Alanine: 4 × 1 = 4 N
+- Phenylalanine: 2 × 1 = 2 N
+- Leucine: 2 × 1 = 2 N
+- Valine: 1 × 1 = 1 N
+- (Arabinose, glucose, lactate have no N)
+- **Total: 9 mmol N/gDW/h**
+
+**Growth rate calculation**:
+- Carbon needed for growth: 34 mmol C/gDW
+- Carbon available: 100.5 mmol C/gDW/h
+- Nitrogen needed for growth: 10 mmol N/gDW
+- Nitrogen available: 9 mmol N/gDW/h
+
+Nitrogen is the limiting factor: 9/10 = 0.9 gDW/gDW/h growth is theoretically possible, but I must account for maintenance and fermentation overhead. A realistic growth rate is **0.25–0.35 /h** given the declining substrate pool and accumulating products.
+
+I'll commit to **μ = 0.30 /h**.
+
+**Carbon balance for products**:
+- Carbon in: 100.5 mmol C/gDW/h
+- Carbon for growth: 34 × 0.30 = 10.2 mmol C/gDW/h
+- Carbon for fermentation products: 100.5 − 10.2 = 90.3 mmol C/gDW/h
+
+**Fermentation products** (Stickland + sugar fermentation):
+- Acetate: ~30 mmol/gDW/h
+- Butyrate: ~20 mmol/gDW/h
+- CO₂: ~25 mmol/gDW/h
+- H₂: ~10 mmol/gDW/h
+- Formate: ~5 mmol/gDW/h
+
+This sums to ~90 mmol C, which is consistent.
+
+**Nitrogen balance**:
+- N in: 9 mmol/gDW/h
+- N for growth: 10 × 0.30 = 3 mmol/gDW/h
+- N released as NH₄⁺: 9 − 3 = 6 mmol/gDW/h
+
+---
+
+{"fluxes": {"arab__L": -8.0, "ala__L": -4.0, "phe__L": -2.0, "leu__L": -2.0, "glc__D": -1.5, "lac__L": -1.5, "val__L": -1.0, "ac": 30.0, "but": 20.0, "co2": 25.0, "h2": 10.0, "for": 5.0, "nh4": 6.0}, "growth_rate": 0.30, "rationale": "Stickland + sugar fermentation on abundant arabinose and limiting amino acids. Nitrogen constrains growth. Products: acetate, butyrate, CO₂, H₂, formate, NH₄⁺. Carbon balance: 100.5 in, 10.2 growth, 90.3 products.", "confidence": 0.62}

@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "casparagiforme",
+  "turn": 11,
+  "growth_claimed": 0.1095,
+  "growth_allowed": 0.0772,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=0.75 out=0 biomass=1.12"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.114 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0287 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.11 -> 0.0772"
+  ],
+  "rationale": "Limited by maltose availability, utilizing amino acids as nitrogen sources, and producing typical Clostridium fermentation products",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "malt": -1.095,
+   "pro__L": -0.5,
+   "ala__L": -0.25,
+   "ac": 1.0,
+   "co2": 1.0,
+   "h2": 0.1
+  },
+  "fluxes_applied": {
+   "malt": -1.095,
+   "pro__L": -0.5,
+   "ala__L": -0.25,
+   "ac": 1.0,
+   "co2": 1.0,
+   "h2": 0.1,
+   "pi": -0.1138,
+   "so4": -0.0287
+  }
+ }
+]

@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 3,
+  "growth_claimed": 0.45,
+  "growth_allowed": 0.45,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.336 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.118 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Mixed-acid fermentation of glucose, lactate, and arginine under anaerobic conditions. Nitrogen-limited growth due to low ammonium and amino acid availability. Products are acetate, formate, CO\u2082, and H",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -15.0,
+   "lac__L": -8.0,
+   "arg__L": -3.0,
+   "nh4": -2.5,
+   "ac": 12.0,
+   "for": 8.0,
+   "co2": 18.0,
+   "h2": 2.5,
+   "pi": -0.18
+  },
+  "fluxes_applied": {
+   "glc__D": -15.0,
+   "lac__L": -8.0,
+   "arg__L": -3.0,
+   "nh4": -2.5,
+   "ac": 12.0,
+   "for": 8.0,
+   "co2": 18.0,
+   "h2": 2.5,
+   "pi": -0.5159,
+   "so4": -0.1178
+  }
+ }
+]

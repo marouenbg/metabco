@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 7,
+  "growth_claimed": 0.8,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=78 out=68 biomass=30.2",
+   "p_imbalance: in=0 out=0 biomass=0.428"
+  ],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "C: growth 0.8 -> 0.368",
+   "P: growth 0.368 -> 0"
+  ],
+  "rationale": "Butyrate fermentation with co-catabolism of L-cysteine and L-serine to recover from arginine depletion. Nitrogen-limited growth at 0.80 /h supported by amino acid deamination. Carbon balance: 78 mmol ",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "but": -15.0,
+   "cys__L": -4.0,
+   "ser__L": -2.0,
+   "nh4": -2.0,
+   "ac": 12.0,
+   "for": 8.0,
+   "ppa": 6.0,
+   "co2": 18.0,
+   "h2": 3.0
+  },
+  "fluxes_applied": {
+   "but": -15.0,
+   "cys__L": -4.0,
+   "ser__L": -2.0,
+   "nh4": -2.0,
+   "ac": 12.0,
+   "for": 8.0,
+   "ppa": 6.0,
+   "co2": 18.0,
+   "h2": 3.0
+  }
+ }
+]

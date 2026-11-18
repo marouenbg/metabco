@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 6,
+  "growth_claimed": 0.2,
+  "growth_allowed": 0.2,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "P: credited 0.251 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0523 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Carbon-limited growth with mixed acid fermentation",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "ppa": -5.0,
+   "lac__L": -2.0,
+   "arg__L": -2.0,
+   "nh4": -1.0,
+   "co2": 5.0,
+   "succ": 2.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "ppa": -5.0,
+   "lac__L": -2.0,
+   "arg__L": -2.0,
+   "nh4": -1.0,
+   "co2": 5.0,
+   "succ": 2.0,
+   "pi": -0.2505,
+   "so4": -0.0523
+  }
+ }
+]

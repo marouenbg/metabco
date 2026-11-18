@@ -1,0 +1,45 @@
+[
+ {
+  "species_id": "pjohnsonii",
+  "turn": 11,
+  "growth_claimed": 0.5177,
+  "growth_allowed": 0.2028,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=2 out=0 biomass=5.36"
+  ],
+  "warnings": [
+   "no_transporter: but",
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.648 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.136 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.518 -> 0.203"
+  ],
+  "rationale": "Balanced uptake of acetate and maltose for carbon, and L-leucine and L-tyrosine for nitrogen, with production of acetate, butyrate, propionate, hydrogen, and carbon dioxide to support growth.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "ac": 1.5,
+   "malt": -2.0,
+   "leu__L": -1.0,
+   "tyr__L": -1.0,
+   "but": 1.0,
+   "ppa": 1.0,
+   "h2": 1.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "ac": 1.5,
+   "malt": -2.0,
+   "leu__L": -1.0,
+   "tyr__L": -1.0,
+   "but": 1.0,
+   "ppa": 1.0,
+   "h2": 1.0,
+   "co2": 1.0,
+   "pi": -0.6485,
+   "so4": -0.1355
+  }
+ }
+]

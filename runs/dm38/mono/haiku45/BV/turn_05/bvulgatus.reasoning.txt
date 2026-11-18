@@ -1,0 +1,72 @@
+# Metabolic Decision: Bacteroides vulgatus ATCC 8482, Turn 5
+
+## Analysis
+
+**Situation assessment:**
+- I am at 2.388 gDW/L after 20 hours, having grown well early then stalled
+- The vessel is sealed; all resources are finite and accumulating
+- I have already consumed the preferred sugars (glucose, arabinose, lactate)
+- Turns 2–4 show zero growth, suggesting I hit a limitation
+
+**Carbon and nitrogen sources I can transport:**
+As a Bacteroides species, I have:
+- Amino acid transporters (arg, cys, ala, gly, ser, leu, phe, tyr, pro, val, gln, asn, lys, thr, ile, his, met, trp, glu, asp all present)
+- Short-chain fatty acid uptake (acetate, butyrate, propionate already being produced/consumed)
+- Carbohydrate transporters (maltose is present at 4.4 mM, but I appear to have limited capacity)
+- Inositol transport (6.3 mM available)
+
+**Sources I cannot use effectively:**
+- CO₂ is abundant (74 mM) but I cannot fix it autotrophically; it is a fermentation product
+- Nitrate (0.11 mM) is too low and anaerobic nitrate reduction is not a Bacteroides strength
+
+**The stall (turns 2–4):**
+My recent fluxes show I was fermenting amino acids (consuming arg, nh4) and releasing acetate, butyrate, propionate, CO₂. But growth dropped to zero. This indicates **nitrogen limitation**. I consumed ammonium rapidly in early turns; the remaining free amino acids are now my only nitrogen source, but they must also provide carbon for growth.
+
+**Nitrogen budget:**
+- Biomass requires ~8 mmol N per gram DW produced
+- Available free amino acids (most abundant): arg (8.8), cys (8.4), ala (5.3), gly (4.7)
+- Total harvestable amino-acid nitrogen: ~60–70 mmol/L
+- At 2.4 gDW/L, I have consumed ~19 mmol N already; ~50 mmol remains
+
+**Strategy for next 4 hours:**
+I will resume amino acid fermentation, focusing on the most abundant amino acids (arginine, cysteine, alanine) which provide both carbon and nitrogen. I will couple this with uptake of myo-inositol (6.3 mM, a polyol carbon source). This will support modest growth.
+
+**Growth rate calculation:**
+- If I consume 5 mmol/gDW/h of mixed amino acids (C₃–C₆, averaging ~4 carbons each = 20 mmol C/gDW/h) plus 2 mmol/gDW/h inositol (6 carbons = 12 mmol C/gDW/h)
+- Total C uptake: ~32 mmol C/gDW/h
+- Growth cost: 41 mmol C/gDW/h of growth
+- Available for fermentation: 32 − (41 × μ) mmol C/gDW/h
+- Nitrogen uptake: ~3 mmol N/gDW/h from amino acids
+- Growth cost: 8 mmol N/gDW/h of growth → μ_max = 0.375 /h
+- Carbon check: 32 mmol C in, minus 41 × 0.35 = 14.4 mmol C for growth = 17.6 mmol C for fermentation products ✓
+
+I will target **μ = 0.35 /h**, a modest recovery from zero.
+
+**Fermentation products:**
+From amino acid deamination and mixed fermentation under anaerobic conditions, I will release acetate, butyrate, propionate, and CO₂ (and some H₂ if formate pathway is active).
+
+**Carbon audit:**
+- Uptake: arg (5.0) × 6C = 30; cys (2.0) × 3C = 6; ala (2.0) × 3C = 6; inositol (2.0) × 6C = 12 → **54 mmol C in**
+- Growth: 0.35 μ × 41 = 14.4 mmol C
+- Fermentation: 54 − 14.4 = 39.6 mmol C → release as ac, but, ppa, co₂ ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "arg__L": -5.0,
+    "cys__L": -2.0,
+    "ala__L": -2.0,
+    "inost": -2.0,
+    "ac": 8.5,
+    "but": 4.2,
+    "ppa": 3.1,
+    "co2": 8.0,
+    "nh4": -1.8
+  },
+  "growth_rate": 0.35,
+  "rationale": "Nitrogen limitation halted growth; resuming amino acid fermentation (arg, cys, ala) with inositol co-utilization. Mixed fermentation yields acetate, butyrate, propionate, CO₂. Modest growth recovery supported by available amino-acid N.",
+  "confidence": 0.62
+}
+```

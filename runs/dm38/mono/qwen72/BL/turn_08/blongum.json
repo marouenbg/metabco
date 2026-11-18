@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "nh4": -7.0,
+  "ac": 5.0,
+  "for": 2.0
+ },
+ "growth_rate": 0.3,
+ "confidence": 0.9,
+ "rationale": "Continuing to use lactate and ammonium, producing acetate and formate, with a sustainable growth rate."
+}

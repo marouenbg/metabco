@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 10,
+  "growth_claimed": 0.8571,
+  "growth_allowed": 0.5179,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=45 out=30 biomass=28.5"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.608 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.188 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 1.85 mmol/gDW/h of nh4 (declared present in excess)",
+   "C: growth 0.857 -> 0.518"
+  ],
+  "rationale": "Based on the available nutrients and my capabilities as Bifidobacterium adolescentis ATCC 15703, I will take up D-glucose, L-lactate, and L-serine at a rate of -5.00 mmol/gDW/h each, and release lacta",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "lac__L": 5.0,
+   "ser__L": -5.0,
+   "for": 5.0,
+   "ac": 5.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "lac__L": 5.0,
+   "ser__L": -5.0,
+   "for": 5.0,
+   "ac": 5.0,
+   "pi": -0.6076,
+   "so4": -0.1881,
+   "nh4": -1.8525
+  }
+ }
+]

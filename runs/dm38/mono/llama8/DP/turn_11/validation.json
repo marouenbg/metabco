@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "dpiger",
+  "turn": 11,
+  "growth_claimed": 0.082,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "sugar_export: glc__D",
+   "uptake_absent: h2s",
+   "c_imbalance: in=0 out=70.5 biomass=3.49"
+  ],
+  "warnings": [
+   "no_transporter: glc__D"
+  ],
+  "repairs": [
+   "zeroed uptake of absent h2s",
+   "P: credited 0.108 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0215 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.082 -> 0",
+   "C: secretions scaled by 0"
+  ],
+  "rationale": "Utilizing glucose and hydrogen as primary carbon and nitrogen sources, respectively, to support growth.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": 10.0,
+   "h2": 10.0,
+   "h2s": -10.0,
+   "for": 1.75,
+   "ac": 1.75,
+   "lac__L": 1.75
+  },
+  "fluxes_applied": {
+   "glc__D": 0.0,
+   "h2": 10.0,
+   "h2s": 0.0,
+   "for": 0.0,
+   "ac": 0.0,
+   "lac__L": 0.0,
+   "pi": -0.1077,
+   "so4": -0.0215
+  }
+ }
+]

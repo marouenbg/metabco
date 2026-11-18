@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 10,
+  "growth_claimed": 0.37,
+  "growth_allowed": 0.37,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.249 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0955 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continuing glucose-lactate co-fermentation via bifidus pathway with arginine for nitrogen. Substrate depletion approaching (48 h total); moderate growth rate sustainable with available carbon and nitr",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -8.0,
+   "lac__L": 3.0,
+   "arg__L": -1.5,
+   "nh4": -1.0,
+   "ser__L": -0.5,
+   "ac": 12.0,
+   "for": 0.5,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -8.0,
+   "lac__L": 3.0,
+   "arg__L": -1.5,
+   "nh4": -1.0,
+   "ser__L": -0.5,
+   "ac": 12.0,
+   "for": 0.5,
+   "co2": 1.0,
+   "pi": -0.2487,
+   "so4": -0.0955
+  }
+ }
+]

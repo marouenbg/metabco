@@ -1,0 +1,15 @@
+I am Bacteroides fragilis NCTC 9343, and I've been growing in this sealed batch culture for the past 12 hours. I've been consuming L-lactate, D-glucose, and L-arginine, which are all available in the culture. I've also been releasing acetate, butyrate, formate, and hydrogen gas.
+
+As I look at the available nutrients, I notice that I can transport and consume L-lactate, D-glucose, and L-arginine, but I'm not sure about the other amino acids. I'll focus on the carbon sources I can use. I can transport and consume L-lactate, D-glucose, and L-arginine, but I'll need to consider the other carbon sources.
+
+As B. fragilis, I'm known to be a butyrate-producing species. I'll aim to produce butyrate as a fermentation product. To do this, I'll need to consume a suitable carbon source and produce butyrate. I'll aim to consume D-glucose, which is available in the culture.
+
+To calculate the growth rate, I'll use the rough estimate that growth costs 41 mmol of carbon and 8 mmol of nitrogen per gram of dry weight produced. I'll assume that I'll consume 1.5 mmol of carbon per gram of dry weight per hour, which is a reasonable estimate based on my consumption of D-glucose.
+
+Here's an audit of the carbon balance: I'll consume 1.5 mmol of carbon per gram of dry weight per hour. I'll produce butyrate, which is 1 mmol of carbon per mmol of butyrate. I'll aim to produce 1 mmol of butyrate per gram of dry weight per hour, which is a reasonable estimate based on my butyrate production. I'll also produce 0.2 mmol of carbon dioxide per gram of dry weight per hour, which is a reasonable estimate based on my carbon dioxide production. I'll consume 1.5 mmol of carbon per gram of dry weight per hour, which is a reasonable estimate based on my consumption of D-glucose.
+
+Here's my decision:
+
+{"fluxes": {"lac__L": -4.00, "glc__D": -1.50, "arg__L": -2.82, "but": 1.00, "for": 0.50, "h2": 0.50, "nh4": -3.76, "co2": 0.20}, "growth_rate": 0.047, "rationale": "I'll consume D-glucose, L-lactate, and L-arginine to support growth. I'll produce butyrate, formate, and hydrogen gas as fermentation products.", "confidence": 0.8}
+
+{"fluxes": {"lac__L": -4.00, "glc__D": -1.50, "arg__L": -2.82, "but": 1.00, "for": 0.50, "h2": 0.50, "nh4": -3.76, "co2": 0.20}, "growth_rate": 0.047, "rationale": "I'll consume D-glucose, L-lactate, and L-arginine to support growth. I'll produce butyrate, formate, and hydrogen gas as fermentation products.", "confidence": 0.8}

@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 11,
+  "growth_claimed": 1.2,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=12 out=17 biomass=45.3"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "P: credited 0.87 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.314 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 1.2 -> 0",
+   "C: secretions scaled by 0.741"
+  ],
+  "rationale": "Utilizing abundant lactate and arginine, producing more biomass and maintaining a stable pH.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": 5.0,
+   "arg__L": -2.0,
+   "pi": -0.5,
+   "for": 1.0,
+   "ac": 0.5,
+   "h2": 0.5
+  },
+  "fluxes_applied": {
+   "lac__L": 3.7059,
+   "arg__L": -2.0,
+   "pi": -1.3704,
+   "for": 0.7412,
+   "ac": 0.3706,
+   "h2": 0.5,
+   "so4": -0.3141
+  }
+ }
+]

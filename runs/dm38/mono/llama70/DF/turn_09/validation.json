@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "dformicigenerans",
+  "turn": 9,
+  "growth_claimed": 0.01,
+  "growth_allowed": 0.01,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ser__L"
+  ],
+  "warnings": [
+   "no_transporter: inost"
+  ],
+  "repairs": [
+   "clipped uptake ser__L to pool limit -4.45",
+   "P: credited 0.00931 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0021 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Balanced uptake of carbon and nitrogen sources to support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ser__L": -5.0,
+   "ala__L": -3.0,
+   "inost": -2.0,
+   "for": -1.0,
+   "ac": 3.0,
+   "co2": 1.0
+  },
+  "fluxes_applied": {
+   "ser__L": -4.4502,
+   "ala__L": -3.0,
+   "inost": -2.0,
+   "for": -1.0,
+   "ac": 3.0,
+   "co2": 1.0,
+   "pi": -0.0093,
+   "so4": -0.0021
+  }
+ }
+]

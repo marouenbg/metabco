@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "nh4": -2.63,
+  "but": 5.0,
+  "ac": 5.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.263,
+ "rationale": "Prioritize glucose and lactate uptake for efficient butyrate and acetate production, with ammonium as the nitrogen source. Growth rate is limited by nitrogen availability.",
+ "confidence": 0.9
+}

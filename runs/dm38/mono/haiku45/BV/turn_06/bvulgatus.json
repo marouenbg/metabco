@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "ac": 1.5,
+  "but": -3.5,
+  "ppa": -2.5,
+  "malt": -1.5,
+  "cys__L": -1.5,
+  "gly": -1.2,
+  "ser__L": -1.0,
+  "ala__L": -0.8,
+  "leu__L": -0.5,
+  "lac__L": -0.5,
+  "co2": 0.6,
+  "for": 0.0
+ },
+ "growth_rate": 0.44,
+ "rationale": "Scavenging acetate, butyrate, propionate and residual sugars with amino acids as primary N source. Carbon budget: 20.1 in, 18.0 for biomass, 2.1 for fermentation products. Nitrogen-limited at 3.5 mmol/gDW/h supports 0.44 /h growth.",
+ "confidence": 0.68
+}

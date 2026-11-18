@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "ac": -2.0,
+  "nh4": -0.6,
+  "gly": -0.3,
+  "but": 0.3,
+  "for": 0.4,
+  "co2": 0.3,
+  "h2": 0.1
+ },
+ "growth_rate": 0.065,
+ "rationale": "Nitrogen severely limiting (1.3 mM NH\u2084 for 2 g/L biomass). Consuming acetate, ammonium, and glycine; fermenting to butyrate, formate, CO\u2082, H\u2082. Growth constrained by N availability; modest positive growth sustainable for final 4 hours.",
+ "confidence": 0.62
+}

@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "arab__L": -5.0,
+  "gly": -2.0,
+  "ser__L": -2.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "but": 3.0,
+  "ppa": 1.75,
+  "nh4": -1.0
+ },
+ "growth_rate": 0.131,
+ "rationale": "Utilizing L-arabinose, glycine, and L-serine as carbon sources, and L-arginine as a nitrogen source to support growth. Producing acetate, butyrate, and propionate as fermentation products.",
+ "confidence": 0.9
+}

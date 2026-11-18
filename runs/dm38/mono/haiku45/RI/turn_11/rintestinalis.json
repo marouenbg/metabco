@@ -1,0 +1,18 @@
+{
+ "fluxes": {
+  "but": -3.0,
+  "ac": -2.5,
+  "phe__L": -0.8,
+  "tyr__L": -0.6,
+  "leu__L": -0.7,
+  "ile__L": -0.6,
+  "for": -1.0,
+  "gly": -0.8,
+  "co2": 8.0,
+  "h2": 1.5,
+  "nh4": 1.9
+ },
+ "growth_rate": 0.2,
+ "rationale": "Late-stage batch fermentation: amino acids and short-chain fatty acids are limiting. Catabolizing remaining butyrate, acetate, and branched-chain amino acids (Phe, Tyr, Leu, Ile) plus glycine. Formate oxidation supports fermentation. Modest growth (0.20 /h) consistent with nutrient depletion. Excess nitrogen released as ammonia. Carbon conserved; fermentation products CO\u2082 and H\u2082 expected.",
+ "confidence": 0.68
+}

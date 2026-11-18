@@ -1,0 +1,34 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 1,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.5,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.455 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.11 mmol/gDW/h of so4 (declared present in excess)",
+   "N: credited 2.64 mmol/gDW/h of nh4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing primary carbon sources for energy and growth, with a balanced approach to nitrogen uptake and fermentation product release.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -5.0,
+   "glc__D": -3.0,
+   "nh4": -1.5,
+   "ac": 2.0,
+   "ppa": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -5.0,
+   "glc__D": -3.0,
+   "nh4": -4.1434,
+   "ac": 2.0,
+   "ppa": 1.0,
+   "pi": -0.4546,
+   "so4": -0.1097
+  }
+ }
+]

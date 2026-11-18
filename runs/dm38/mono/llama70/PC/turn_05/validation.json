@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "pcopri",
+  "turn": 5,
+  "growth_claimed": 1.0,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ser__L",
+   "n_imbalance: in=8.52 out=0 biomass=10.3",
+   "p_imbalance: in=0 out=0 biomass=1.18"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake ser__L to pool limit -3.52",
+   "S: credited 0.262 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 1 -> 0.865",
+   "P: growth 0.865 -> 0"
+  ],
+  "rationale": "L-arabinose and L-serine/L-alanine uptake support growth",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "arab__L": -10.0,
+   "ser__L": -5.0,
+   "ala__L": -5.0,
+   "ac": 5.0,
+   "ppa": 2.0,
+   "succ": 1.0
+  },
+  "fluxes_applied": {
+   "arab__L": -10.0,
+   "ser__L": -3.5246,
+   "ala__L": -5.0,
+   "ac": 5.0,
+   "ppa": 2.0,
+   "succ": 1.0,
+   "so4": -0.2617
+  }
+ }
+]

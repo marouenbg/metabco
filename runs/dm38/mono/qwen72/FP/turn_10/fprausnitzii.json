@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": 2.0,
+  "co2": -3.0,
+  "but": 2.0,
+  "h2": 2.0,
+  "cys__L": -2.0,
+  "phe__L": -1.0
+ },
+ "growth_rate": 0.15,
+ "rationale": "Utilizing acetate and amino acids for carbon and nitrogen, producing butyrate, acetate, and hydrogen.",
+ "confidence": 0.85
+}

@@ -1,0 +1,14 @@
+{
+ "fluxes": {
+  "lac__L": -10.0,
+  "glc__D": -5.0,
+  "arg__L": -2.0,
+  "nh4": -2.0,
+  "ac": 2.0,
+  "but": 1.0,
+  "ppa": 1.0
+ },
+ "growth_rate": 0.5,
+ "rationale": "Optimal growth and fermentation product formation based on available substrates and metabolic capabilities",
+ "confidence": 0.8
+}

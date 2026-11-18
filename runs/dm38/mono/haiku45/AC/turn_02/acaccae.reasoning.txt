@@ -1,0 +1,91 @@
+# Metabolic decision for Anaerostipes caccae DSM 14662, turn 2
+
+## Analysis of transporters and substrate availability
+
+Anaerostipes caccae is a strict anaerobe, butyrate-producing bacterium. Based on genomic and phenotypic data, this species can ferment:
+- **Sugars**: glucose, arabinose, maltose (hexoses and pentoses via PTS and other transporters)
+- **Organic acids**: lactate (via lactate permease)
+- **Amino acids**: arginine (via arginine deiminase pathway), serine, other amino acids for catabolism and biosynthesis
+
+The abundant substrates I *cannot* efficiently use include:
+- **Inositol, proline, phenylalanine, tyrosine, valine, leucine, isoleucine**: These require specific transporters not well-characterized in this strain, or their catabolism is energetically unfavorable in this context.
+- **Cysteine**: While present, it is limited and better reserved for biosynthesis (methionine/cysteine metabolism).
+
+## Carbon and nitrogen sources I will use
+
+**Primary carbon sources:**
+- **D-glucose** (22.49 mM): Excellent substrate, high uptake rate expected
+- **L-lactate** (27.88 mM): Secondary carbon source, supports growth
+- **L-arabinose** (21.2 mM): Fermentable pentose
+- **L-arginine** (21.36 mM): Nitrogen and carbon source via arginine deiminase
+
+**Nitrogen sources:**
+- **Ammonium** (9.223 mM): Primary inorganic nitrogen
+- **L-arginine**: Dual role (carbon + nitrogen)
+- **L-serine, L-alanine**: Minor amino acid nitrogen
+
+## Fermentation strategy
+
+A. caccae is known to produce **butyrate** as a major end product, along with **acetate**, **formate**, and **CO₂**. Previous turns show this pattern clearly.
+
+## Growth calculation
+
+From turn 1: growth was 0.450 /h with glucose uptake of 14 mmol/gDW/h.
+
+At turn 2, I have depleted some glucose (was ~22.49 mM remaining) and lactate is abundant. I will continue mixed-substrate fermentation:
+
+**Proposed uptake:**
+- Glucose: 12 mmol/gDW/h (slightly reduced as it is becoming limiting)
+- Lactate: 4 mmol/gDW/h (supplementary carbon)
+- Arabinose: 3 mmol/gDW/h
+- Arginine: 2 mmol/gDW/h (nitrogen + carbon)
+- Serine: 1 mmol/gDW/h (minor amino acid)
+- Ammonium: 3 mmol/gDW/h (primary nitrogen)
+
+**Total carbon uptake:** 12 + 4 + 3 + 2 + 1 = 22 mmol C/gDW/h
+
+**Nitrogen uptake:** 3 (from NH₄) + 2 (from arg, ~1 N per arg) + 0.5 (from ser) = 5.5 mmol N/gDW/h
+
+**Growth requirement:** 38 mmol C and 10 mmol N per gram of biomass.
+
+With 22 mmol C available and 5.5 mmol N available:
+- Carbon permits: 22 / 38 = 0.58 g biomass
+- Nitrogen permits: 5.5 / 10 = 0.55 g biomass
+
+**Limiting factor: nitrogen** → growth rate ≈ **0.40 /h** (conservative, accounting for maintenance)
+
+## Fermentation products (mass balance)
+
+Carbon balance:
+- In: 22 mmol C/gDW/h
+- Biomass cost: 0.40 × 38 = 15.2 mmol C/gDW/h
+- Available for fermentation: 22 - 15.2 = 6.8 mmol C/gDW/h
+
+Products (typical A. caccae fermentation, 60% butyrate, 30% acetate, 10% formate/CO₂):
+- **Butyrate**: 6.8 × 0.60 / 4 = 1.02 mmol/gDW/h
+- **Acetate**: 6.8 × 0.30 / 2 = 1.02 mmol/gDW/h
+- **Formate + CO₂**: 6.8 × 0.10 = 0.68 mmol/gDW/h (split as formate 0.34, CO₂ 0.34)
+
+## Confidence and rationale
+
+This strategy reflects known A. caccae metabolism: mixed-acid fermentation with butyrate as the dominant product. Nitrogen becomes limiting, which is realistic in batch culture. Growth rate is moderate and sustainable given substrate depletion over 8 hours.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -12.0,
+    "lac__L": -4.0,
+    "arab__L": -3.0,
+    "arg__L": -2.0,
+    "ser__L": -1.0,
+    "nh4": -3.0,
+    "but": 1.02,
+    "ac": 1.02,
+    "for": 0.34,
+    "co2": 0.34
+  },
+  "growth_rate": 0.40,
+  "rationale": "Mixed fermentation of glucose, lactate, arabinose, and arginine. Nitrogen becomes limiting (5.5 mmol available vs 10 mmol needed per g biomass). Butyrate dominant product (60%), acetate secondary (30%), formate/CO2 minor (10%). Conservative growth rate reflects nitrogen constraint and maintenance costs.",
+  "confidence": 0.68
+}
+```

@@ -1,0 +1,74 @@
+# Metabolic decision for Parabacteroides johnsonii DSM 18315 — turn 9
+
+## Analysis
+
+**Current state:** I am at 0.4484 gDW/L after 36 hours. Turn 8 showed zero growth, suggesting I hit a constraint. Now I must reassess what I can actually use.
+
+**Carbon sources available and transportable:**
+- D-glucose (8.344 mM): I have the genes to ferment this via the Embden-Meyerhof pathway
+- L-lactate (17.81 mM): High concentration; I can ferment lactate
+- L-arabinose (16.18 mM): I can transport and ferment this
+- Acetate (12.94 mM): I can use acetate via acetyl-CoA
+- Propionate (8.241 mM): I can metabolize propionate
+- Succinate (4.766 mM): I can use succinate
+- Maltose (4.382 mM): I have maltose transporters
+- Various amino acids: I can catabolize these for carbon and nitrogen
+
+**Nitrogen sources:**
+- Ammonium (6.987 mM): Direct incorporation
+- L-arginine (17.22 mM): Can use for both carbon and nitrogen
+- L-serine (6.362 mM): Can use for both
+- Other amino acids: Can catabolize
+
+**Why turn 8 was zero growth:**
+Most likely nitrogen limitation became acute. Ammonium was depleted or nearly so by turn 8. I need to shift strategy to use amino acids as both carbon and nitrogen sources.
+
+**Fermentation strategy for turn 9:**
+As a Gram-negative anaerobe in the Bacteroidetes, I ferment mixed substrates and produce acetate, propionate, and succinate as major products. I should:
+1. Use remaining glucose (8.344 mM available)
+2. Use L-lactate (abundant at 17.81 mM)
+3. Use L-arginine (17.22 mM) — excellent dual carbon/nitrogen source
+4. Use L-arabinose (16.18 mM)
+5. Rely less on ammonium (6.987 mM remaining)
+
+**Growth rate calculation:**
+- Glucose fermentation: 1 glucose (6C) → ~2 acetate (4C) + CO₂ (1C) + reducing power
+- Lactate fermentation: 1 lactate (3C) → acetate (2C) + propionate (3C) or similar
+- Arginine catabolism: 1 arginine (6C, 2N) → multiple products including CO₂, ammonia, acetate, etc.
+
+Conservative uptake rates:
+- Glucose: 8 mmol/gDW/h (depleting the 8.344 mM pool)
+- L-lactate: 6 mmol/gDW/h
+- L-arginine: 4 mmol/gDW/h (dual C/N source)
+- L-arabinose: 3 mmol/gDW/h
+
+Total C uptake: (8×6) + (6×3) + (4×6) + (3×5) = 48 + 18 + 24 + 15 = 105 mmol C/gDW/h
+Total N uptake: (4×2) + (ammonia uptake ~1) = ~9 mmol N/gDW/h
+
+Growth requirement: 42 mmol C + 10 mmol N per gDW
+Growth rate = min(105/42, 9/10) = min(2.5, 0.9) = **0.9 /h** (nitrogen-limited)
+
+At 0.9 /h growth:
+- C consumed for growth: 0.9 × 42 = 37.8 mmol C/gDW/h
+- N consumed for growth: 0.9 × 10 = 9 mmol N/gDW/h
+- C remaining for secretion: 105 − 37.8 = 67.2 mmol C/gDW/h
+
+**Fermentation products (typical for P. johnsonii):**
+- Acetate: ~35 mmol/gDW/h
+- Propionate: ~20 mmol/gDW/h
+- Succinate: ~10 mmol/gDW/h
+- CO₂: ~2 mmol/gDW/h
+
+**Audit:**
+- C in: 105 mmol
+- C out (products): 35 + 20 + 10 + 2 = 67 mmol
+- C in biomass: 37.8 mmol
+- Total: 67 + 37.8 = 104.8 ≈ 105 ✓
+
+- N in: 9 mmol
+- N in biomass: 9 mmol
+- N balance: ✓
+
+```json
+{"fluxes": {"glc__D": -8.0, "lac__L": -6.0, "arg__L": -4.0, "arab__L": -3.0, "nh4": -1.0, "ac": 35.0, "ppa": 20.0, "succ": 10.0, "co2": 2.0}, "growth_rate": 0.9, "rationale": "Nitrogen-limited growth using arginine as dual C/N source to recover from turn 8 arrest. Mixed fermentation of glucose, lactate, and arabinose with acetate, propionate, and succinate as products. Arginine catabolism provides critical nitrogen for biosynthesis.", "confidence": 0.72}
+```

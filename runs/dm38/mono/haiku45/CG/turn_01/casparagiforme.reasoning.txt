@@ -1,0 +1,114 @@
+# Metabolic reasoning for Clostridium asparagiforme DSM 15981 at t=4h
+
+## Available transporters and carbon sources
+
+As a Clostridium species, I have broad fermentative capabilities. Looking at the abundant substrates:
+- **D-glucose (24.24 mM)**: Readily fermentable via glycolysis. I have glucose transporters.
+- **L-lactate (27.85 mM)**: I can consume lactate as both carbon and energy source.
+- **L-arabinose (21.31 mM)**: Pentose fermentation is typical for Clostridium spp.
+- **Acetate (1.618 mM)**: Present but limited; I can use it but glucose/lactate are superior.
+- **Amino acids (arg, cys, ser, pro, ala, etc.)**: Clostridia are proteolytic and can ferment amino acids via the Stickland reaction and direct catabolism.
+
+I cannot use **myo-inositol** or **maltose** efficiently without specific transport systems I likely lack.
+
+## Nitrogen sources
+
+- **Ammonium (8.978 mM)**: Primary nitrogen source, readily assimilated.
+- **L-arginine (21.26 mM)**: High abundance; I can catabolize via Stickland reactions (paired with glycine or other amino acids).
+- **Other amino acids**: Can serve dual roles as carbon and nitrogen.
+
+## Known fermentation products
+
+Clostridium asparagiforme, like most clostridia, performs mixed-acid fermentation:
+- **Acetate**: Major product (acetyl-CoA → acetate)
+- **Butyrate**: Major product (via butyryl-CoA)
+- **Lactate**: Produced under certain conditions
+- **Formate**: From pyruvate decarboxylation
+- **H₂ and CO₂**: From pyruvate and formate metabolism
+- **Ethanol**: Minor, under specific redox conditions
+
+From my previous turn, I was producing acetate (+17.50) and butyrate (+7.50), which is consistent.
+
+## Substrate selection and growth rate calculation
+
+**Primary strategy**: Continue mixed-acid fermentation on glucose + lactate + amino acids.
+
+**Carbon uptake plan**:
+- D-glucose: -8.0 mmol/gDW/h (as before; well-tolerated rate)
+- L-lactate: -5.0 mmol/gDW/h (continuing lactate co-fermentation)
+- L-arginine: -3.0 mmol/gDW/h (Stickland reaction; provides both C and N)
+- L-cysteine: -1.5 mmol/gDW/h (Stickland partner; provides S as well)
+
+**Nitrogen uptake**:
+- Ammonium (nh4): -3.0 mmol/gDW/h
+- Arginine provides ~0.4 mmol N per mmol (from -3.0 uptake = -1.2 mmol N)
+- Cysteine provides ~0.2 mmol N per mmol (from -1.5 uptake = -0.3 mmol N)
+- Total N uptake: 3.0 + 1.2 + 0.3 = 4.5 mmol/gDW/h
+
+**Growth rate derivation**:
+- Growth requires ~34 mmol C and ~10 mmol N per gram dry weight.
+- Carbon available: (8.0 + 5.0 + 3.0 + 1.5) = 17.5 mmol C/gDW/h
+- Nitrogen available: 4.5 mmol N/gDW/h
+- C-limited growth: 17.5 / 34 = 0.515 /h
+- N-limited growth: 4.5 / 10 = 0.45 /h
+- **Limiting factor: Nitrogen → growth rate ≈ 0.45 /h**
+
+## Fermentation product distribution
+
+From 17.5 mmol C input, ~7.65 mmol C goes to biomass (0.45 /h × 34 = 15.3 mmol C per gDW, but accounting for maintenance and overflow, ~7.65 mmol net to biomass).
+
+Remaining ~9.85 mmol C/gDW/h must be excreted as fermentation products:
+- Acetate: +8.0 mmol/gDW/h (primary overflow)
+- Butyrate: +1.5 mmol/gDW/h (secondary product)
+- CO₂: +3.0 mmol/gDW/h (decarboxylation)
+- H₂: +1.0 mmol/gDW/h (hydrogenase activity)
+- Formate: +0.5 mmol/gDW/h (minor)
+
+**Carbon audit**:
+- In: 8.0 + 5.0 + 3.0 + 1.5 = 17.5 mmol C/gDW/h
+- Out (products): 8.0 + 1.5 + 3.0 + 0.5 = 13.0 mmol C/gDW/h
+- Biomass: 0.45 /h × 34 = 15.3 mmol C/gDW/h per hour... 
+
+Wait, this exceeds input. Let me recalculate: at 0.45 /h growth, I need 0.45 × 34 = 15.3 mmol C captured into biomass *per unit time per unit biomass*. But I'm already at 0.1145 gDW/L, so the absolute amount is 0.1145 × 15.3 = 1.75 mmol C/L/h total. Per gDW/h, it's still 15.3... which exceeds 17.5. 
+
+**Correction**: I must reduce growth rate or uptake. Let me recalibrate:
+- If growth = 0.40 /h: C cost = 0.40 × 34 = 13.6 mmol C/gDW/h
+- Remaining for fermentation: 17.5 - 13.6 = 3.9 mmol C/gDW/h (as products)
+
+This is too low for realistic fermentation. Let me reduce substrate uptake:
+- D-glucose: -6.0 mmol/gDW/h
+- L-lactate: -4.0 mmol/gDW/h
+- L-arginine: -2.0 mmol/gDW/h
+- L-cysteine: -1.0 mmol/gDW/h
+- **Total C in: 13.0 mmol/gDW/h**
+
+**Revised N**: 3.0 (nh4) + 0.8 (arg) + 0.2 (cys) = 4.0 mmol N/gDW/h → growth = 0.40 /h
+
+**Carbon audit (revised)**:
+- In: 13.0 mmol C/gDW/h
+- Biomass: 0.40 × 34 = 13.6 mmol C/gDW/h
+
+Still over. Growth must be lower. Try **growth = 0.35 /h**:
+- C cost: 0.35 × 34 = 11.9 mmol C/gDW/h
+- Fermentation products: 13.0 - 11.9 = 1.1 mmol C/gDW/h
+
+This is realistic. Distribute as: acetate +0.8, butyrate +0.2, CO₂ +0.1.
+
+```json
+{
+  "fluxes": {
+    "glc__D": -6.0,
+    "lac__L": -4.0,
+    "arg__L": -2.0,
+    "cys__L": -1.0,
+    "nh4": -3.0,
+    "ac": +0.8,
+    "but": +0.2,
+    "co2": +0.1,
+    "h2": +0.5
+  },
+  "growth_rate": 0.35,
+  "rationale": "Mixed-acid fermentation on glucose, lactate, and amino acids under anaerobic conditions. Nitrogen becomes limiting; uptake rates balanced to support ~0.35 /h growth while maintaining fermentation product secretion. Carbon audit: 13 mmol C in, 11.9 to biomass, ~1.1 to products.",
+  "confidence": 0.62
+}
+```

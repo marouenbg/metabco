@@ -1,0 +1,38 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 3,
+  "growth_claimed": 0.04,
+  "growth_allowed": 0.0397,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=30 out=30 biomass=1.51"
+  ],
+  "warnings": [
+   "no_transporter: lac__L"
+  ],
+  "repairs": [
+   "C: growth 0.04 -> 0.0397"
+  ],
+  "rationale": "Continuing with the same metabolic strategy as the previous turns, utilizing L-lactate and ammonium for growth and producing acetate, butyrate, and hydrogen as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "nh4": -5.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "h2": 2.0,
+   "pi": -0.31,
+   "so4": -0.07
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "nh4": -5.0,
+   "ac": 5.0,
+   "but": 5.0,
+   "h2": 2.0,
+   "pi": -0.31,
+   "so4": -0.07
+  }
+ }
+]

@@ -1,0 +1,48 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 10,
+  "growth_claimed": 0.12,
+  "growth_allowed": 0.12,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: lac__L"
+  ],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "clipped uptake lac__L to pool limit -1.92",
+   "P: credited 0.0811 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.031 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Late stationary phase: N-limited growth on remaining acetate, lactate, and amino acids. Mixed-acid fermentation producing propionate and CO\u2082. Conservative flux to respect mass balance in sealed cultur",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "ac": -4.0,
+   "lac__L": -2.0,
+   "malt": -1.5,
+   "for": -0.8,
+   "pro__L": -0.8,
+   "ser__L": -0.5,
+   "gly": -0.3,
+   "ppa": 1.5,
+   "co2": 3.0,
+   "h2": 0.4
+  },
+  "fluxes_applied": {
+   "ac": -4.0,
+   "lac__L": -1.9205,
+   "malt": -1.5,
+   "for": -0.8,
+   "pro__L": -0.8,
+   "ser__L": -0.5,
+   "gly": -0.3,
+   "ppa": 1.5,
+   "co2": 3.0,
+   "h2": 0.4,
+   "pi": -0.0811,
+   "so4": -0.031
+  }
+ }
+]

@@ -1,0 +1,19 @@
+{
+ "fluxes": {
+  "arg__L": -8.0,
+  "pro__L": -4.0,
+  "ala__L": -3.0,
+  "gly": -2.5,
+  "malt": -3.0,
+  "nh4": -2.0,
+  "ac": 15.0,
+  "but": 12.0,
+  "ppa": 8.0,
+  "for": 10.0,
+  "co2": 25.0,
+  "h2": 5.0
+ },
+ "growth_rate": 0.2,
+ "rationale": "Glucose and lactate exhausted; switching to amino acid fermentation (arginine, proline, alanine, glycine) plus residual maltose. Fermentation yields acetate, butyrate, propionate, formate, CO\u2082, H\u2082. Conservative growth rate reflects substrate transition and declining bioavailable carbon.",
+ "confidence": 0.68
+}

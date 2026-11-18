@@ -1,0 +1,16 @@
+{
+ "treatment": "PC",
+ "members": [
+  "pcopri"
+ ],
+ "codes": [
+  "PC"
+ ],
+ "dt_h": 4.0,
+ "n_turns": 12,
+ "medium": "DM38",
+ "memory": true,
+ "model": "anthropic:claude-haiku-4-5-20251001",
+ "od_start": 0.0066,
+ "gdw_per_od": 0.33
+}

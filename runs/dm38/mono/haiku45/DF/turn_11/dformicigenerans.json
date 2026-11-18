@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "but": -2.0,
+  "ac": 0.5,
+  "nh4": -0.25,
+  "co2": 1.5,
+  "for": 0.8
+ },
+ "growth_rate": 0.003,
+ "rationale": "Severe nitrogen limitation (1.62 mmol/L ammonium in 1 mL vessel) restricts growth to ~0.003/h. Continuing slow fermentation of residual butyrate and acetate via \u03b2-oxidation; producing CO2, formate, and acetate as overflow products. Stationary phase maintenance metabolism.",
+ "confidence": 0.42
+}

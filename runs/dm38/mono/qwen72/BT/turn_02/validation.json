@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "btheta",
+  "turn": 2,
+  "growth_claimed": 0.75,
+  "growth_allowed": 0.75,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.682 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.165 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Continued utilization of D-glucose and L-lactate for carbon and L-arginine and ammonium for nitrogen. Produced acetate, butyrate, and propionate as fermentation products.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "ppa": 1.75,
+   "nh4": -2.01,
+   "arg__L": -2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "ac": 5.0,
+   "but": 3.0,
+   "ppa": 1.75,
+   "nh4": -2.01,
+   "arg__L": -2.0,
+   "pi": -0.6819,
+   "so4": -0.1646
+  }
+ }
+]

@@ -1,0 +1,34 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 10,
+  "growth_claimed": 0.263,
+  "growth_allowed": 0.114,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=26 out=23 biomass=9.92"
+  ],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.306 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.263 -> 0.114"
+  ],
+  "rationale": "acetate and L-cysteine uptake support growth and fermentation product formation",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "cys__L": -2.0,
+   "but": 5.0,
+   "co2": 3.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "cys__L": -2.0,
+   "but": 5.0,
+   "co2": 3.0,
+   "h2": 1.0,
+   "pi": -0.3058
+  }
+ }
+]

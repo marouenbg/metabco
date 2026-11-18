@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "ac": -5.0,
+  "arg__L": -1.8,
+  "ser__L": -1.0,
+  "lac__L": 3.0,
+  "for": 1.0,
+  "co2": 2.0
+ },
+ "growth_rate": 0.25,
+ "rationale": "Lactate and arabinose depleted; shifting to acetate fermentation with amino acid catabolism (arginine, serine) for nitrogen. Fermentation yields lactate, formate, and CO2 as products. Growth rate limited by nitrogen availability and energy constraints in anaerobic batch culture.",
+ "confidence": 0.65
+}

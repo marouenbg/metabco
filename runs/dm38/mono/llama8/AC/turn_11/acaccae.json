@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "arab__L": 8.5,
+  "arg__L": 4,
+  "lac__D": 1.5,
+  "cys__L": 1,
+  "succ": 0.5,
+  "malt": 0.5,
+  "pro__L": 0.5,
+  "ser__L": 0.5,
+  "glu__L": 0.5
+ },
+ "growth_rate": 0.867,
+ "rationale": "Based on available nutrients, capabilities, and growth rate calculation, I've chosen to take up L-arabinose, L-arginine, D-lactate, L-cysteine, and succinate, and produce lactate, succinate, and formate.",
+ "confidence": 0.9
+}

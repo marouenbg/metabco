@@ -1,0 +1,98 @@
+# Metabolic reasoning for Prevotella copri CB7 DSM 18205 at t=8h
+
+## Assessment of available carbon and nitrogen sources
+
+**Primary carbon sources I can metabolize:**
+- D-glucose (20.69 mM): Prevotella species are saccharolytic obligate anaerobes with robust glucose utilization via phosphotransferase systems
+- L-arabinose (20.11 mM): Pentose fermentation is well-documented in Prevotella
+- L-lactate (28.31 mM): I can ferment lactate as a secondary carbon source
+- Acetate (6.37 mM): Available but typically not a preferred uptake substrate for me; more likely a product
+- Propionate (5.03 mM): Similarly, a fermentation product I produce
+- Formate (3.39 mM): Product of mixed-acid fermentation
+
+**Nitrogen sources:**
+- L-arginine (19.67 mM): Excellent source; Prevotella encode arginine transport and metabolism via the arginine deiminase pathway
+- Ammonium (8.275 mM): Direct assimilation
+- L-cysteine (8.4 mM): Can be catabolized for both C and N
+- Other amino acids present but less preferred
+
+**What I cannot use efficiently:**
+- CO2 (48.49 mM): I am heterotrophic, not autotrophic; CO2 is primarily a waste product
+- Maltose (4.38 mM): My genome lacks robust maltose PTS transporters
+- Most other amino acids: While present, they're not primary substrates and would be used only after preferred sources deplete
+
+## Fermentation strategy
+
+As a saccharolytic anaerobe under anaerobic conditions at -200 mV, I ferment sugars and amino acids to:
+- **Acetate** (major end product)
+- **Propionate** (major end product)
+- **Formate** (minor end product)
+- **CO2** (from decarboxylations)
+- Possibly trace **succinate** or **lactate** (though lactate is already available)
+
+My previous turns show this pattern: glucose in, acetate/propionate/formate out.
+
+## Flux calculation
+
+**Current biomass:** 0.3232 gDW/L
+**Time interval:** 4 hours
+
+**Carbon budget approach:**
+I'll prioritize glucose (20.69 mM) and arabinose (20.11 mM) as primary fermentable substrates, plus arginine (19.67 mM) for both C and N.
+
+Glucose: 6 carbons; arabinose: 5 carbons; arginine: 6 carbons (with N source)
+
+**Assumed uptake fluxes (mmol/gDW/h):**
+- Glucose: -8.5 (realistic, in line with previous turns)
+- Arabinose: -4.0 (secondary pentose)
+- L-arginine: -5.0 (excellent N source, also provides C)
+- L-cysteine: -2.0 (additional N and C)
+- Ammonium: -1.5 (supplementary N)
+
+**Carbon accounting:**
+- In: (8.5 × 6) + (4.0 × 5) + (5.0 × 6) + (2.0 × 3) = 51 + 20 + 30 + 6 = **107 mmol C/gDW/h**
+
+**Nitrogen accounting:**
+- In: (5.0 × 1) + (2.0 × 1) + (1.5 × 1) = **8.5 mmol N/gDW/h**
+
+**Growth calculation:**
+- C needed for growth: 45 mmol C/gDW
+- N needed for growth: 10 mmol N/gDW
+- N is limiting: 8.5 / 10 = 0.85 gDW/gDW (theoretical max)
+- But C cost: 107 - (0.85 × 45) = 107 - 38.25 = 68.75 mmol C remaining for fermentation products
+- Realistic growth rate: **0.65 /h** (consistent with previous turn, sustainable)
+
+**Fermentation products (carbon balance):**
+- C available for products: 107 - (0.65 × 45) = 107 - 29.25 = **77.75 mmol C/gDW/h**
+- Typical fermentation yields: acetate (~40%), propionate (~35%), formate (~15%), CO2 (~10%)
+- Acetate: +12.0 (2C per molecule = 24 C)
+- Propionate: +10.0 (3C per molecule = 30 C)
+- Formate: +6.0 (1C per molecule = 6 C)
+- CO2: +18.0 (1C per molecule = 18 C)
+- Total C out: 24 + 30 + 6 + 18 = **78 mmol C** ✓ (matches available)
+
+**N balance:**
+- In: 8.5 mmol N/gDW/h
+- Growth cost: 0.65 × 10 = 6.5 mmol N/gDW/h
+- Excess N released as NH4: +2.0 mmol/gDW/h ✓
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -8.5,
+    "arab__L": -4.0,
+    "arg__L": -5.0,
+    "cys__L": -2.0,
+    "nh4": -1.5,
+    "ac": 12.0,
+    "ppa": 10.0,
+    "for": 6.0,
+    "co2": 18.0
+  },
+  "growth_rate": 0.65,
+  "rationale": "Saccharolytic fermentation of glucose and arabinose with arginine as primary N source. Fermentation yields acetate, propionate, formate, and CO2. N is limiting; growth sustainable at 0.65/h with carbon fully balanced.",
+  "confidence": 0.78
+}
+```

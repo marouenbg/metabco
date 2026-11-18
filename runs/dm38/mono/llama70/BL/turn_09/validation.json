@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "blongum",
+  "turn": 9,
+  "growth_claimed": 0.15,
+  "growth_allowed": 0.15,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: malt"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake malt to pool limit -3.13",
+   "P: credited 0.174 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0393 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Maltose is the primary carbon source, with acetate, lactate, and formate as fermentation products. L-arginine is the primary nitrogen source.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "malt": -5.0,
+   "ac": 2.5,
+   "lac__L": 1.25,
+   "for": 1.25,
+   "arg__L": -1.25
+  },
+  "fluxes_applied": {
+   "malt": -3.1343,
+   "ac": 2.5,
+   "lac__L": 1.25,
+   "for": 1.25,
+   "arg__L": -1.25,
+   "pi": -0.1744,
+   "so4": -0.0393
+  }
+ }
+]

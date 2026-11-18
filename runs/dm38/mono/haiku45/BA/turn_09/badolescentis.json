@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "lac__L": -8.0,
+  "arab__L": -5.0,
+  "arg__L": -2.5,
+  "cys__L": -1.5,
+  "ser__L": -1.0,
+  "ac": 5.0,
+  "for": 1.5,
+  "co2": 1.0,
+  "nh4": 1.6
+ },
+ "growth_rate": 0.3,
+ "rationale": "Bifid fermentation of lactate and arabinose with amino acid-derived nitrogen. High acetate production via bifid shunt. Lactate and arabinose are preferred fermentable substrates; glucose nearly depleted. Amino acids provide both carbon and nitrogen for growth.",
+ "confidence": 0.72
+}

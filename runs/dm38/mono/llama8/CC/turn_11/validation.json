@@ -1,0 +1,47 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 11,
+  "growth_claimed": 0.65,
+  "growth_allowed": 0.0576,
+  "ok": false,
+  "violations": [
+   "c_imbalance: in=24 out=23.5 biomass=19.2"
+  ],
+  "warnings": [
+   "no_transporter: h2",
+   "no_transporter: h2s"
+  ],
+  "repairs": [
+   "P: credited 0.437 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.168 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.65 -> 0.0576"
+  ],
+  "rationale": "Utilizing formate, acetate, and maltose as primary carbon sources, and releasing a mix of formate, acetate, butyrate, and lactate as products. Growth rate estimated based on available substrates and b",
+  "confidence": null,
+  "fluxes_claimed": {
+   "h2": -10.0,
+   "co2": 0.0,
+   "ac": 5.0,
+   "for": 10.0,
+   "malt": -2.0,
+   "nh4": -4.0,
+   "lac__L": 0.5,
+   "but": 0.5,
+   "h2s": 0.0
+  },
+  "fluxes_applied": {
+   "h2": -10.0,
+   "co2": 0.0,
+   "ac": 5.0,
+   "for": 10.0,
+   "malt": -2.0,
+   "nh4": -4.0,
+   "lac__L": 0.5,
+   "but": 0.5,
+   "h2s": 0.0,
+   "pi": -0.4369,
+   "so4": -0.1678
+  }
+ }
+]

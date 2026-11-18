@@ -1,0 +1,36 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 2,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: lac__L",
+   "no_transporter: lac__D"
+  ],
+  "repairs": [
+   "P: credited 0.292 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0654 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "I'll take up carbon dioxide and L-arginine to support my growth. I'll also take up L-serine to provide additional nitrogen. I'll release lactic acid as a fermentation product.",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "co2": -15.0,
+   "lac__L": 5.0,
+   "arg__L": -2.0,
+   "ser__L": -10.0,
+   "lac__D": 5.0
+  },
+  "fluxes_applied": {
+   "co2": -15.0,
+   "lac__L": 5.0,
+   "arg__L": -2.0,
+   "ser__L": -10.0,
+   "lac__D": 5.0,
+   "pi": -0.2916,
+   "so4": -0.0654
+  }
+ }
+]

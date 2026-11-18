@@ -1,0 +1,47 @@
+[
+ {
+  "species_id": "ccomes",
+  "turn": 10,
+  "growth_claimed": 0.5,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: gln__L",
+   "c_imbalance: in=19.6 out=41 biomass=14.8",
+   "n_imbalance: in=5.86 out=14 biomass=0"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "clipped uptake gln__L to pool limit -2.93",
+   "P: credited 0.336 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.129 mmol/gDW/h of so4 (declared present in excess)",
+   "C: growth 0.5 -> 0",
+   "C: secretions scaled by 0.503",
+   "N: secretions scaled by 0.439"
+  ],
+  "rationale": "Utilizing available sugars and organic acids, and taking in ammonium as a nitrogen source. Audit shows that growth rate is supported by available nutrients.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "h2": 10.0,
+   "for": 10.0,
+   "lac__L": 5.0,
+   "nh4": 10.0,
+   "co2": -5.0,
+   "gln__L": -10.0,
+   "gly": 8.0
+  },
+  "fluxes_applied": {
+   "h2": 10.0,
+   "for": 5.0306,
+   "lac__L": 2.5153,
+   "nh4": 4.3853,
+   "co2": -5.0,
+   "gln__L": -2.9286,
+   "gly": 1.7648,
+   "pi": -0.3361,
+   "so4": -0.1291
+  }
+ }
+]

@@ -1,0 +1,44 @@
+[
+ {
+  "species_id": "bfragilis",
+  "turn": 11,
+  "growth_claimed": 0.375,
+  "growth_allowed": 0.0652,
+  "ok": false,
+  "violations": [
+   "n_imbalance: in=1 out=0.5 biomass=3.16"
+  ],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.341 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0823 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.375 -> 0.0652"
+  ],
+  "rationale": "Utilizing acetate, butyrate, and propionate for carbon and energy, and amino acids for nitrogen. Growth rate is nitrogen-limited.",
+  "confidence": 0.9,
+  "fluxes_claimed": {
+   "ac": -3.0,
+   "but": -2.0,
+   "ppa": -1.0,
+   "ala__L": -0.5,
+   "pro__L": -0.5,
+   "co2": 2.0,
+   "h2": 2.0,
+   "nh4": 0.5
+  },
+  "fluxes_applied": {
+   "ac": -3.0,
+   "but": -2.0,
+   "ppa": -1.0,
+   "ala__L": -0.5,
+   "pro__L": -0.5,
+   "co2": 2.0,
+   "h2": 2.0,
+   "nh4": 0.5,
+   "pi": -0.3409,
+   "so4": -0.0823
+  }
+ }
+]

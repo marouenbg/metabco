@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "bhydrogenotrophica",
+  "turn": 7,
+  "growth_claimed": 0.4,
+  "growth_allowed": 0.4,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.467 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.105 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Glucose exhausted; switching to mixed fermentation of arabinose, lactate, and arginine. Arginine provides both C and N. Ammonium uptake covers growth N demand. Fermentation products (acetate, formate,",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "arab__L": -10.0,
+   "lac__L": -8.0,
+   "arg__L": -3.0,
+   "nh4": -2.5,
+   "for": -2.0,
+   "ac": 12.0,
+   "co2": 15.0,
+   "h2": 2.0
+  },
+  "fluxes_applied": {
+   "arab__L": -10.0,
+   "lac__L": -8.0,
+   "arg__L": -3.0,
+   "nh4": -2.5,
+   "for": -2.0,
+   "ac": 12.0,
+   "co2": 15.0,
+   "h2": 2.0,
+   "pi": -0.4666,
+   "so4": -0.1047
+  }
+ }
+]

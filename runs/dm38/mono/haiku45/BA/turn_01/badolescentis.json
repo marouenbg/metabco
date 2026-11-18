@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -12.0,
+  "lac__L": 2.0,
+  "nh4": -2.0,
+  "arg__L": -1.5,
+  "cys__L": -0.5,
+  "ac": 8.0,
+  "for": 1.5,
+  "co2": 3.0
+ },
+ "growth_rate": 0.35,
+ "rationale": "Bifidobacterium adolescentis preferentially ferments glucose via the bifid shunt, producing acetate as major product with lactate and formate. Abundant glucose and lactate support rapid growth. Ammonium and arginine provide nitrogen. Growth rate of 0.35 /h is supported by available C (93 mmol/h) and N (4 mmol/h) with conservative fermentation stoichiometry.",
+ "confidence": 0.72
+}

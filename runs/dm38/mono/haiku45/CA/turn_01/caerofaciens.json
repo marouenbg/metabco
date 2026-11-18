@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "lac__L": -4.0,
+  "arg__L": -2.0,
+  "nh4": -1.5,
+  "ac": 6.0,
+  "for": 3.0,
+  "ppa": 2.0,
+  "co2": 8.0
+ },
+ "growth_rate": 0.32,
+ "rationale": "Mixed-acid fermentation of glucose with lactate as electron acceptor; arginine catabolism supplies supplemental carbon and nitrogen. Glucose is primary fermentative substrate; lactate is reduced to acetate and other products. Growth supported by 60 mmol C and 3.5 mmol N uptake against 30 mmol C and 8 mmol N biomass cost per gram.",
+ "confidence": 0.72
+}

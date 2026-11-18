@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": 1.5,
+  "pro__L": -2.0,
+  "arg__L": -1.0,
+  "nh4": -1.5,
+  "ppa": 1.2,
+  "co2": 1.0,
+  "for": 0.2,
+  "h2": 0.1
+ },
+ "growth_rate": 0.18,
+ "rationale": "Bacteroides ovatus ferments remaining acetate and amino acids (proline, arginine) under anaerobic conditions. Moderate uptake rates reflect nutrient depletion at 32h into 48h batch. Nitrogen from amino acids and ammonium supports growth. Fermentation products (acetate, propionate, CO2, formate, H2) are typical for this saccharolytic/proteolytic anaerobe. Carbon budget balanced: 11 mmol C in covers 7.56 mmol biomass cost plus 3.44 mmol fermentation products.",
+ "confidence": 0.62
+}

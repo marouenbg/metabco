@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "erectale",
+  "turn": 9,
+  "growth_claimed": 0.098,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: ppa",
+   "uptake_exceeds_pool: nh4",
+   "c_imbalance: in=20.3 out=22 biomass=3.26"
+  ],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "clipped uptake ppa to pool limit -4.75",
+   "clipped uptake nh4 to pool limit -0.947",
+   "P: credited 0.0912 mmol/gDW/h of pi (declared present in excess)",
+   "C: growth 0.098 -> 0",
+   "C: secretions scaled by 0.967"
+  ],
+  "rationale": "Uptake of propionate and L-cysteine for carbon and nitrogen sources, production of butyrate as a fermentation product",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "ppa": -5.0,
+   "cys__L": -2.0,
+   "nh4": -1.0,
+   "but": 5.0,
+   "co2": 2.0
+  },
+  "fluxes_applied": {
+   "ppa": -4.7517,
+   "cys__L": -2.0,
+   "nh4": -0.9471,
+   "but": 4.8336,
+   "co2": 1.9335,
+   "pi": -0.0912
+  }
+ }
+]

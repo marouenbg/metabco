@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "elenta",
+  "turn": 3,
+  "growth_claimed": 0.072,
+  "growth_allowed": 0.072,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: glc__D"
+  ],
+  "repairs": [
+   "P: credited 0.0513 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Eggerthella lenta ferments glucose and amino acids anaerobically. Increasing glucose and arginine uptake to sustain growth at 0.072 /h on abundant substrates. Major products are acetate, formate, and ",
+  "confidence": 0.68,
+  "fluxes_claimed": {
+   "glc__D": -7.0,
+   "lac__L": -2.0,
+   "arg__L": -4.0,
+   "cys__L": -1.0,
+   "nh4": 3.5,
+   "ac": 9.0,
+   "for": 5.0,
+   "co2": 4.0
+  },
+  "fluxes_applied": {
+   "glc__D": -7.0,
+   "lac__L": -2.0,
+   "arg__L": -4.0,
+   "cys__L": -1.0,
+   "nh4": 3.5,
+   "ac": 9.0,
+   "for": 5.0,
+   "co2": 4.0,
+   "pi": -0.0513
+  }
+ }
+]

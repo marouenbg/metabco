@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "lac__L": -10.0,
+  "arg__L": -5.0,
+  "cys__L": -2.0,
+  "nh4": -3.0,
+  "pi": -0.45,
+  "but": 6.0,
+  "ac": 8.0,
+  "co2": 10.0
+ },
+ "growth_rate": 0.45,
+ "rationale": "Continuing established fermentation strategy: lactate and glucose fermentation to butyrate and acetate. Arginine and cysteine provide amino acid catabolism for growth and energy. Nitrogen balance supports 0.45 /h growth. Lactate becoming limiting but still sufficient for 4h interval.",
+ "confidence": 0.75
+}

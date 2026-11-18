@@ -1,0 +1,90 @@
+# Metabolic reasoning for Collinsella aerofaciens at t=12h
+
+## Genomic capacity and transport
+
+*Collinsella aerofaciens* is an obligate anaerobic, gram-positive bacterium from the Actinobacteria. Based on its known physiology and the pattern of my previous turns, I can:
+
+**Primary carbon sources I can use:**
+- D-glucose (glc__D): 23.14 mM available — I have PTS or permease systems
+- L-lactate (lac__L): 28.68 mM available — I ferment and can re-utilize lactate
+- L-arabinose (arab__L): 21.31 mM available — pentose utilization
+- Maltose (malt): 4.382 mM — maltose permease
+- Amino acids: arginine, serine, proline, alanine, and others — via amino acid permeases
+
+**Sources I cannot efficiently use:**
+- Formate and propionate: I produce these but have limited uptake capacity
+- Acetate: I produce it readily; uptake is minimal (only 1.07 mM left, and acetyl-CoA synthetase flux is limited)
+
+**Nitrogen sources:**
+- Ammonium (nh4): 8.869 mM — primary inorganic source
+- L-arginine (arg__L): 21.31 mM — I catabolize this for both carbon and nitrogen
+- Other amino acids: cysteine, serine, proline, alanine, etc.
+
+## Recent metabolic pattern
+
+My previous three turns show:
+- Consistent glucose uptake (6–8 mmol/gDW/h)
+- Lactate production and some re-uptake (net fermentation)
+- Acetate production (3–6.5 mmol/gDW/h)
+- Arginine uptake (~2 mmol/gDW/h) for amino acid catabolism
+- Growth rate stabilizing around 0.32 /h
+
+This is consistent with **mixed-acid fermentation** of glucose and amino acids.
+
+## Nutrient status at turn 3
+
+- Glucose: still abundant (23.14 mM)
+- Lactate: still abundant (28.68 mM)
+- Arginine: still abundant (21.31 mM)
+- Ammonium: moderate (8.869 mM) — becoming limiting
+- Amino acids: various available
+
+## Growth rate derivation
+
+**Carbon requirement:** 30 mmol C / gDW produced
+**Nitrogen requirement:** 8 mmol N / gDW produced
+
+If I grow at μ = 0.32 /h:
+- C demand: 0.32 × 30 = 9.6 mmol C/gDW/h
+- N demand: 0.32 × 8 = 2.56 mmol N/gDW/h
+
+**Carbon budget (per gDW/h):**
+- Glucose uptake: 7.0 mmol (6 carbons each) = 42 mmol C
+- Arginine uptake: 2.0 mmol (6 carbons each) = 12 mmol C
+- Total C in: 54 mmol C/gDW/h
+
+**Fermentation products (mixed-acid):**
+- Acetate: ~4 mmol (2 C each) = 8 mmol C
+- Lactate (net): ~1 mmol = 3 mmol C
+- Formate: ~1 mmol = 1 mmol C
+- CO₂: ~5 mmol = 5 mmol C
+- Total C out (products): ~17 mmol C
+
+**Biomass C:** 54 − 17 = 37 mmol C, supporting ~1.23 gDW at 30 mmol C/gDW ✓
+
+**Nitrogen budget:**
+- Ammonium: 2.0 mmol uptake
+- Arginine: 2.0 mmol (1 N each) = 2 mmol N
+- Serine: 0.5 mmol (1 N each) = 0.5 mmol N
+- Total N in: 4.5 mmol N/gDW/h
+- Biomass N: 0.32 × 8 = 2.56 mmol N ✓
+
+This is feasible. I will sustain **μ = 0.32 /h**.
+
+## Metabolite fluxes for next 4h interval
+
+| Metabolite | Flux (mmol/gDW/h) | Rationale |
+|---|---|---|
+| glc__D | −7.0 | Primary carbon/energy source |
+| arg__L | −2.0 | Amino acid catabolism for C and N |
+| ser__L | −0.5 | Supplemental N and C |
+| nh4 | −2.0 | Inorganic N for biosynthesis |
+| pi | −0.22 | Phosphate for nucleotides/lipids |
+| ac | +4.0 | Major fermentation product |
+| lac__L | +2.0 | Lactate from mixed-acid fermentation |
+| co2 | +5.0 | CO₂ from decarboxylations |
+| for | +1.0 | Formate from pyruvate |
+
+**Growth rate: 0.32 /h**
+
+{"fluxes": {"glc__D": -7.0, "arg__L": -2.0, "ser__L": -0.5, "nh4": -2.0, "pi": -0.22, "ac": 4.0, "lac__L": 2.0, "co2": 5.0, "for": 1.0}, "growth_rate": 0.32, "rationale": "Sustained mixed-acid fermentation of glucose and arginine; acetate and lactate are major products; ammonium and amino acids supply nitrogen; growth rate limited by N availability (~8.9 mM nh4 remaining)", "confidence": 0.72}

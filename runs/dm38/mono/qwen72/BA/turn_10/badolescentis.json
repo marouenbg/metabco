@@ -1,0 +1,12 @@
+{
+ "fluxes": {
+  "ac": 3,
+  "gly": -2,
+  "cys__L": -1,
+  "for": 2,
+  "h2s": 1
+ },
+ "growth_rate": 0.375,
+ "rationale": "Utilizing abundant acetate, glycine, and L-cysteine for growth and producing acetate, formate, and hydrogen sulfide as fermentation products.",
+ "confidence": 0.85
+}

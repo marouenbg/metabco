@@ -1,0 +1,90 @@
+# Metabolic decision: Clostridium asparagiforme at t=36h
+
+## Analysis
+
+**Genome and transporters:**
+As a Clostridium species, I possess:
+- Amino acid permeases (broad specificity for L-amino acids)
+- Carbohydrate transporters (PTS, symporters for sugars and organic acids)
+- Acetate, butyrate, formate, lactate uptake systems
+- Ammonia/ammonium transporters
+- CO₂ fixation capability (via Wood-Ljungdahl pathway, typical for Clostridium)
+
+**Carbon sources available and usable:**
+- **Acetate** (86.34 mM): readily transportable, fermentable
+- **Butyrate** (56.86 mM): can be oxidized/fermented
+- **Formate** (4.132 mM): usable via Wood-Ljungdahl
+- **Lactate** (3.263 mM): fermentable
+- **Maltose** (4.382 mM): fermentable if I have maltose PTS
+- **myo-inositol** (6.272 mM): fermentable
+- **Amino acids** (many present): can be catabolized for carbon and nitrogen
+
+**Nitrogen sources:**
+- **Ammonium** (2.649 mM): primary nitrogen source, nearly depleted
+- **Amino acids** (L-asparagine, L-glutamine, others): can provide N via deamination
+
+**Recent behaviour pattern:**
+Turns 6 and 8 show zero growth despite nutrient availability, suggesting nitrogen limitation (ammonium was consumed in turns 7-8). Turn 7 showed growth at 0.2 /h when amino acids were catabolized alongside glucose fermentation.
+
+**Current situation (t=36h, 12h remaining):**
+- Ammonium is critically low (2.649 mM)
+- Abundant carbon sources remain: acetate (86 mM), butyrate (57 mM)
+- Amino acids present, particularly asparagine (0.48 mM) and glutamine (1.645 mM)
+- I am nitrogen-limited
+
+**Fermentation strategy:**
+Clostridium asparagiforme is an obligate anaerobe that performs mixed-acid fermentation. Known products include:
+- Acetate, butyrate, formate (all already present—likely my prior products)
+- Lactate, ethanol (secondary products)
+- H₂ and CO₂ (from pyruvate fermentation)
+
+**Growth calculation:**
+To grow at 0.15 /h for 4 hours:
+- Carbon needed: 0.15 × 34 = 5.1 mmol C/gDW
+- Nitrogen needed: 0.15 × 10 = 1.5 mmol N/gDW
+
+**Nitrogen source strategy:**
+I must catabolize amino acids for nitrogen. Asparagine (0.48 mM) and glutamine (1.645 mM) are ideal—they yield ammonia directly upon deamination. I will also take up small amounts of other amino acids (glycine, alanine, serine) as secondary nitrogen and carbon sources.
+
+**Carbon source strategy:**
+Ferment acetate (abundant, easily metabolized) and amino acids. The amino acid carbon can support growth while their nitrogen supplies the biosynthetic demand.
+
+**Proposed fluxes (mmol/gDW/h):**
+- Acetate uptake: -8.0 (abundant, high flux)
+- Asparagine uptake: -0.4 (good N source)
+- Glutamine uptake: -0.8 (good N source)
+- Glycine uptake: -0.5 (supplemental N and C)
+- CO₂ production: +2.0 (fermentation byproduct)
+- Formate production: +1.5 (fermentation byproduct)
+- Butyrate production: +2.0 (fermentation product)
+- H₂ production: +0.5 (anaerobic fermentation)
+
+**Carbon audit:**
+- Acetate in: 8.0 C (2 C per acetate)
+- Asparagine in: 0.4 × 4 = 1.6 C
+- Glutamine in: 0.8 × 5 = 4.0 C
+- Glycine in: 0.5 × 2 = 1.0 C
+- **Total C in: 14.6 mmol C**
+
+- Growth at 0.15 /h: 0.15 × 34 = 5.1 C
+- Butyrate out: 2.0 × 4 = 8.0 C
+- Formate out: 1.5 × 1 = 1.5 C
+- CO₂ out: 2.0 × 1 = 2.0 C
+- **Total C out: 16.6 mmol C**
+
+This exceeds input. Adjust: reduce butyrate to 1.0, formate to 0.8:
+- Out: 5.1 + 4.0 + 0.8 + 2.0 = 11.9 C ✓
+
+**Nitrogen audit:**
+- Asparagine: 0.4 × 2 = 0.8 N
+- Glutamine: 0.8 × 2 = 1.6 N
+- Glycine: 0.5 × 1 = 0.5 N
+- **Total N in: 2.9 mmol N**
+- Growth demand: 0.15 × 10 = 1.5 N
+- **Remaining: 1.4 N** (released as ammonia or retained) ✓
+
+Growth rate: **0.15 /h** is sustainable and realistic for late-stage batch culture under N limitation.
+
+```json
+{"fluxes": {"ac": -8.0, "asn__L": -0.4, "gln__L": -0.8, "gly": -0.5, "co2": 2.0, "for": 0.8, "but": 1.0, "h2": 0.5}, "growth_rate": 0.15, "rationale": "Nitrogen-limited growth via amino acid catabolism (asparagine, glutamine) coupled to acetate fermentation. Produces butyrate, formate, CO2, H2 as typical Clostridium fermentation products. Carbon and nitrogen budgets balanced.", "confidence": 0.72}
+```

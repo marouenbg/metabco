@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "rintestinalis",
+  "turn": 3,
+  "growth_claimed": 0.37,
+  "growth_allowed": 0.37,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "S: credited 0.0968 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Roseburia ferments lactate and glucose anaerobically to butyrate, acetate, formate, and CO\u2082. This strategy has sustained 0.370 /h growth over three turns. Substrates remain abundant (lactate 23.73 mM,",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "lac__L": -10.0,
+   "glc__D": -8.0,
+   "nh4": -4.0,
+   "pi": -0.43,
+   "but": 5.0,
+   "ac": 3.0,
+   "co2": 8.0,
+   "for": 0.5
+  },
+  "fluxes_applied": {
+   "lac__L": -10.0,
+   "glc__D": -8.0,
+   "nh4": -4.0,
+   "pi": -0.43,
+   "but": 5.0,
+   "ac": 3.0,
+   "co2": 8.0,
+   "for": 0.5,
+   "so4": -0.0968
+  }
+ }
+]

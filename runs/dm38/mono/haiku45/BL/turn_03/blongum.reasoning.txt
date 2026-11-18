@@ -1,0 +1,101 @@
+# Metabolic decision for Bifidobacterium longum NCC2705 — turn 3
+
+## Analysis of available transporters and substrates
+
+*Bifidobacterium longum* is a facultative anaerobe with a well-characterized genome. Key metabolic capabilities:
+
+**Primary carbon sources I can transport:**
+- **D-glucose (glc__D)**: 21.82 mM available. I have active PTS and other glucose transporters. This is a preferred substrate.
+- **L-arabinose (arab__L)**: 21.19 mM available. I encode arabinose permeases and can ferment it.
+- **L-lactate (lac__L)**: 28.99 mM available. I can consume lactate via lactate oxidase/dehydrogenase pathways.
+- **Maltose (malt)**: 4.382 mM available. I have maltose transporters.
+- **Acetate (ac)**: 1.856 mM. I can use this but it's limited and typically a fermentation product, not a primary uptake target.
+
+**Abundant but unavailable to me:**
+- Glycine, most free amino acids beyond arginine/cysteine/serine: I lack specific high-affinity transporters for most individual amino acids at useful rates in this context.
+- CO₂: I release this, not take it up significantly.
+
+**Nitrogen sources:**
+- **L-arginine (arg__L)**: 20.17 mM. I have arginine permeases and can catabolize arginine for both carbon and nitrogen.
+- **Ammonium (nh4)**: 8.729 mM. Primary nitrogen source; I can assimilate this efficiently.
+- **L-cysteine (cys__L)**: 8.4 mM. Source of both C, N, and S.
+
+## Fermentation strategy
+
+At turn 2, I grew at 0.5 /h on glucose + arginine. Now at 12 h, I have good glucose and arabinose still available, plus substantial lactate. My typical anaerobic fermentation of glucose yields:
+- **Acetate, lactate, formate, and CO₂** as primary products (mixed acid fermentation)
+- Some **butyrate** via cross-feeding or secondary metabolism
+
+Given the sealed batch and anaerobic conditions, I will prioritize:
+1. **Glucose uptake** (fastest growth, well-established pathway)
+2. **Arabinose uptake** (secondary but readily fermented)
+3. **Arginine uptake** (nitrogen + some carbon)
+4. **Lactate uptake** (can be fermented further; I produce it but also consume it)
+
+## Growth calculation
+
+From my recent history:
+- Turn 0: 0.6 /h on glucose + arginine
+- Turn 2: 0.5 /h on similar substrates
+
+Current strategy: aggressive glucose + arabinose + arginine uptake.
+
+**Glucose metabolism (simplified):**
+- 1 glucose → ~1.5 acetate + 0.5 lactate + CO₂ (approximate Bifidobacterium fermentation)
+- Yield: ~0.8 g biomass per 100 mmol glucose (rough estimate for mixed-acid fermenters)
+
+**Uptake proposal:**
+- Glucose: -10.0 mmol/gDW/h (sustainable, proven in turn 2)
+- Arabinose: -6.0 mmol/gDW/h (secondary substrate, good transport)
+- Arginine: -4.0 mmol/gDW/h (nitrogen + carbon)
+- Lactate: -2.0 mmol/gDW/h (secondary, can ferment)
+- Cysteine: -1.0 mmol/gDW/h (supplemental N and C)
+
+**Carbon input:** 10 + 6 + 4 + 2 + 1 = 23 mmol C/gDW/h
+**Nitrogen input:** (from arginine) 4 + (from cysteine) 1 + (from ammonium) ~2 = ~7 mmol N/gDW/h
+
+**Growth cost:** 38 mmol C + 10 mmol N per gram biomass
+**Growth rate estimate:** (23 - 38×μ) must be balanced by secretion; solving for μ:
+- If μ = 0.45 /h: carbon cost = 17.1 mmol, available for secretion = 5.9 mmol C/gDW/h
+- Nitrogen: 7 mmol available; cost = 4.5 mmol; surplus = 2.5 mmol (excess, released as NH₄⁺)
+
+**Growth rate: 0.45 /h** (conservative, achievable)
+
+## Secretion plan
+
+**Carbon balance:**
+- Input: 23 mmol C/gDW/h
+- Biomass cost: 17.1 mmol (at 0.45 /h)
+- Available for fermentation: 5.9 mmol C/gDW/h
+
+Fermentation products (typical Bifidobacterium):
+- Acetate: +3.5 mmol/gDW/h
+- Lactate: +1.5 mmol/gDW/h
+- CO₂: +0.9 mmol/gDW/h
+- Total C out: 3.5 + 1.5 + 0.9 = 5.9 mmol ✓
+
+**Nitrogen balance:**
+- Excess ammonia: +2.5 mmol/gDW/h
+
+---
+
+```json
+{
+  "fluxes": {
+    "glc__D": -10.0,
+    "arab__L": -6.0,
+    "arg__L": -4.0,
+    "lac__L": -2.0,
+    "cys__L": -1.0,
+    "nh4": -2.0,
+    "pi": -0.60,
+    "ac": 3.5,
+    "lac__L": 1.5,
+    "co2": 0.9,
+    "nh4": 2.5
+  },
+  "growth_rate": 0.45,
+  "rationale": "Glucose and arabinose are abundant and readily fermented. Arginine provides supplemental nitrogen and carbon. Lactate can be consumed and re-fermented. At 0.45 /h growth, carbon and nitrogen budgets balance: 23 mmol C in minus 17.1 mmol biomass cost leaves 5.9 mmol for fermentation products (acetate, lactate, CO₂). Nitrogen: 7 mmol in, 4.5 mmol biomass cost, 2.5 mmol excess released as NH₄⁺.",
+  "confidence": 0.72
+}
+```

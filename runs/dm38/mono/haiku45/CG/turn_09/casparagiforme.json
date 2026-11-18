@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "ac": -8.0,
+  "asn__L": -0.4,
+  "gln__L": -0.8,
+  "gly": -0.5,
+  "co2": 2.0,
+  "for": 0.8,
+  "but": 1.0,
+  "h2": 0.5
+ },
+ "growth_rate": 0.15,
+ "rationale": "Nitrogen-limited growth via amino acid catabolism (asparagine, glutamine) coupled to acetate fermentation. Produces butyrate, formate, CO2, H2 as typical Clostridium fermentation products. Carbon and nitrogen budgets balanced.",
+ "confidence": 0.72
+}

@@ -1,0 +1,16 @@
+{
+ "fluxes": {
+  "glc__D": -10.0,
+  "lac__L": -10.0,
+  "nh4": 2.0,
+  "arg__L": -2.0,
+  "ac": 5.0,
+  "ppa": 5.0,
+  "but": 5.0,
+  "for": 2.0,
+  "succ": 2.0
+ },
+ "growth_rate": 0.12,
+ "rationale": "Utilizing glucose and lactate for fermentation, producing acetate, propionate, butyrate, formate, and succinate. Ammonium and arginine are used for nitrogen requirements. Growth rate is balanced by carbon and nitrogen uptake and product formation.",
+ "confidence": 0.9
+}

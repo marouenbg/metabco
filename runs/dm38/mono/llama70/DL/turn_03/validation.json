@@ -1,0 +1,35 @@
+[
+ {
+  "species_id": "dlongicatena",
+  "turn": 3,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.292 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0654 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "D-glucose and L-arginine uptake support growth and fermentation product production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "ppa": 2.0,
+   "nh4": -1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "arg__L": -2.0,
+   "ac": 5.0,
+   "ppa": 2.0,
+   "nh4": -1.0,
+   "pi": -0.2916,
+   "so4": -0.0654
+  }
+ }
+]

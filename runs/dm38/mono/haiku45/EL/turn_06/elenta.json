@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -6.5,
+  "lac__L": -3.5,
+  "arg__L": -3.5,
+  "cys__L": -1.0,
+  "nh4": -0.5,
+  "ac": 9.5,
+  "for": 5.0,
+  "co2": 4.5
+ },
+ "growth_rate": 0.088,
+ "rationale": "Continuing established mixed fermentation of glucose and lactate with arginine as co-substrate for nitrogen and additional carbon. Fermentation products (acetate, formate, CO\u2082) reflect anaerobic metabolism. Growth rate accelerates slightly due to adequate nutrient availability and established metabolic steady state.",
+ "confidence": 0.75
+}

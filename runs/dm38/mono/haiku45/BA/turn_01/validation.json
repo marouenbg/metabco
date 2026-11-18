@@ -1,0 +1,37 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 1,
+  "growth_claimed": 0.35,
+  "growth_allowed": 0.35,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.248 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Bifidobacterium adolescentis preferentially ferments glucose via the bifid shunt, producing acetate as major product with lactate and formate. Abundant glucose and lactate support rapid growth. Ammoni",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "glc__D": -12.0,
+   "lac__L": 2.0,
+   "nh4": -2.0,
+   "arg__L": -1.5,
+   "cys__L": -0.5,
+   "ac": 8.0,
+   "for": 1.5,
+   "co2": 3.0
+  },
+  "fluxes_applied": {
+   "glc__D": -12.0,
+   "lac__L": 2.0,
+   "nh4": -2.0,
+   "arg__L": -1.5,
+   "cys__L": -0.5,
+   "ac": 8.0,
+   "for": 1.5,
+   "co2": 3.0,
+   "pi": -0.2481
+  }
+ }
+]

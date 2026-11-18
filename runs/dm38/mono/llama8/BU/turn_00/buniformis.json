@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "lac__L": -4.0,
+  "arg__L": -0.5,
+  "cys__L": -0.5,
+  "etoh": 2.0
+ },
+ "growth_rate": 0.0625,
+ "rationale": "I will take up lactate, arginine, and cysteine as carbon and nitrogen sources, respectively, and produce lactate, ethanol, and other short-chain fatty acids as fermentation products.",
+ "confidence": 0.9
+}

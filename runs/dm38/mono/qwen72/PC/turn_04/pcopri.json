@@ -1,0 +1,15 @@
+{
+ "fluxes": {
+  "glc__D": -5.0,
+  "lac__L": -5.0,
+  "ac": 3.0,
+  "ppa": 2.0,
+  "for": 1.0,
+  "co2": 1.0,
+  "arg__L": -2.0,
+  "nh4": -2.0
+ },
+ "growth_rate": 0.6,
+ "rationale": "Continued fermentation of D-glucose and L-lactate, with L-arginine and ammonium as nitrogen sources. Growth rate adjusted to ensure nitrogen balance.",
+ "confidence": 0.9
+}

@@ -1,0 +1,40 @@
+[
+ {
+  "species_id": "bpseudocatenulatum",
+  "turn": 9,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: lac__L",
+   "uptake_exceeds_pool: phe__L"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "clipped uptake lac__L to pool limit -3.1",
+   "clipped uptake phe__L to pool limit -1.96",
+   "P: credited 0.168 mmol/gDW/h of pi (declared present in excess)"
+  ],
+  "rationale": "Amino acid metabolism with acetate production",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "lac__L": -5.0,
+   "phe__L": -2.0,
+   "cys__L": -1.0,
+   "ac": 4.0,
+   "co2": 2.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "lac__L": -3.1001,
+   "phe__L": -1.9646,
+   "cys__L": -1.0,
+   "ac": 4.0,
+   "co2": 2.0,
+   "h2": 1.0,
+   "pi": -0.168
+  }
+ }
+]

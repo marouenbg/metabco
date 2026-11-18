@@ -1,0 +1,39 @@
+[
+ {
+  "species_id": "acaccae",
+  "turn": 10,
+  "growth_claimed": 0.08,
+  "growth_allowed": 0.08,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: ppa"
+  ],
+  "repairs": [
+   "P: credited 0.093 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0209 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Nitrogen (ammonium) is now severely limiting; only 3.2 mM remains for 4 hours, supporting ~0.08 /h max. Ferment abundant acetate and formate anaerobically via Wood-Ljungdahl and \u03b2-oxidation pathways, ",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "ac": -10.0,
+   "for": -8.0,
+   "h2": -2.0,
+   "nh4": -0.8,
+   "co2": 6.0,
+   "but": 2.96,
+   "ppa": 0.0
+  },
+  "fluxes_applied": {
+   "ac": -10.0,
+   "for": -8.0,
+   "h2": -2.0,
+   "nh4": -0.8,
+   "co2": 6.0,
+   "but": 2.96,
+   "ppa": 0.0,
+   "pi": -0.093,
+   "so4": -0.0209
+  }
+ }
+]

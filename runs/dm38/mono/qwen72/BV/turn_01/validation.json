@@ -1,0 +1,41 @@
+[
+ {
+  "species_id": "bvulgatus",
+  "turn": 1,
+  "growth_claimed": 0.25,
+  "growth_allowed": 0.25,
+  "ok": true,
+  "violations": [],
+  "warnings": [
+   "no_transporter: but"
+  ],
+  "repairs": [
+   "P: credited 0.227 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0549 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Utilizing glucose and lactate for energy and carbon, and arginine for nitrogen. Supporting growth with a focus on efficient fermentation products.",
+  "confidence": 0.85,
+  "fluxes_claimed": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 5.0,
+   "for": 2.0,
+   "arg__L": -2.0,
+   "nh4": 2.0
+  },
+  "fluxes_applied": {
+   "glc__D": -10.0,
+   "lac__L": -10.0,
+   "ac": 5.0,
+   "ppa": 5.0,
+   "but": 5.0,
+   "for": 2.0,
+   "arg__L": -2.0,
+   "nh4": 2.0,
+   "pi": -0.2273,
+   "so4": -0.0549
+  }
+ }
+]

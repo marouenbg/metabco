@@ -1,0 +1,33 @@
+[
+ {
+  "species_id": "caerofaciens",
+  "turn": 4,
+  "growth_claimed": 0.05,
+  "growth_allowed": 0.05,
+  "ok": true,
+  "violations": [],
+  "warnings": [],
+  "repairs": [
+   "P: credited 0.0338 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0129 mmol/gDW/h of so4 (declared present in excess)"
+  ],
+  "rationale": "Based on available nutrients and metabolic capabilities",
+  "confidence": 0.8,
+  "fluxes_claimed": {
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "ac": 3.0,
+   "for": 1.0,
+   "lac__L": 1.0
+  },
+  "fluxes_applied": {
+   "glc__D": -5.0,
+   "arg__L": -2.0,
+   "ac": 3.0,
+   "for": 1.0,
+   "lac__L": 1.0,
+   "pi": -0.0338,
+   "so4": -0.0129
+  }
+ }
+]

@@ -1,0 +1,11 @@
+{
+ "fluxes": {
+  "glc__D": 2.5,
+  "arg__L": 1,
+  "for": 1.25,
+  "h2": 0.125
+ },
+ "growth_rate": 0.125,
+ "rationale": "Utilizing glucose and arginine for growth, with formate and hydrogen as products.",
+ "confidence": 0.9
+}

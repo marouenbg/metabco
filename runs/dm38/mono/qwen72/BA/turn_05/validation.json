@@ -1,0 +1,46 @@
+[
+ {
+  "species_id": "badolescentis",
+  "turn": 5,
+  "growth_claimed": 0.3886,
+  "growth_allowed": 0.3801,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: malt",
+   "uptake_absent: nh4",
+   "n_imbalance: in=3 out=0 biomass=3.22"
+  ],
+  "warnings": [],
+  "repairs": [
+   "clipped uptake malt to pool limit -8.56",
+   "zeroed uptake of absent nh4",
+   "P: credited 0.275 mmol/gDW/h of pi (declared present in excess)",
+   "S: credited 0.0853 mmol/gDW/h of so4 (declared present in excess)",
+   "N: growth 0.389 -> 0.38"
+  ],
+  "rationale": "Utilizing maltose for carbon and amino acids for nitrogen to support growth, producing acetate, formate, and lactate as fermentation products.",
+  "confidence": 0.7,
+  "fluxes_claimed": {
+   "malt": -10.0,
+   "ac": 5.0,
+   "for": 2.0,
+   "lac__L": 3.0,
+   "nh4": -0.1093,
+   "ser__L": -1.0,
+   "pro__L": -1.0,
+   "ala__L": -1.0
+  },
+  "fluxes_applied": {
+   "malt": -8.5633,
+   "ac": 5.0,
+   "for": 2.0,
+   "lac__L": 3.0,
+   "nh4": 0.0,
+   "ser__L": -1.0,
+   "pro__L": -1.0,
+   "ala__L": -1.0,
+   "pi": -0.2755,
+   "so4": -0.0853
+  }
+ }
+]

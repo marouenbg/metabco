@@ -1,0 +1,50 @@
+[
+ {
+  "species_id": "fprausnitzii",
+  "turn": 8,
+  "growth_claimed": 0.3,
+  "growth_allowed": 0.0,
+  "ok": false,
+  "violations": [
+   "uptake_exceeds_pool: gly",
+   "uptake_exceeds_pool: ala__L",
+   "uptake_absent: ser__L",
+   "c_imbalance: in=33 out=28 biomass=9.98",
+   "p_imbalance: in=0 out=0 biomass=0.187"
+  ],
+  "warnings": [
+   "no_transporter: h2"
+  ],
+  "repairs": [
+   "clipped uptake gly to pool limit -1.87",
+   "clipped uptake ala__L to pool limit -0.462",
+   "zeroed uptake of absent ser__L",
+   "C: growth 0.3 -> 0.201",
+   "P: growth 0.201 -> 0"
+  ],
+  "rationale": "Acetate is abundant and my preferred substrate; amino acids provide both carbon and nitrogen. Fermentation produces butyrate (my signature product), acetate, CO\u2082, and H\u2082. Growth rate is constrained by",
+  "confidence": 0.72,
+  "fluxes_claimed": {
+   "ac": -12.0,
+   "gly": -2.0,
+   "cys__L": -0.8,
+   "ala__L": -0.5,
+   "ser__L": -0.5,
+   "for": -1.5,
+   "but": 6.0,
+   "co2": 4.0,
+   "h2": 1.0
+  },
+  "fluxes_applied": {
+   "ac": -12.0,
+   "gly": -1.8705,
+   "cys__L": -0.8,
+   "ala__L": -0.4625,
+   "ser__L": 0.0,
+   "for": -1.5,
+   "but": 6.0,
+   "co2": 4.0,
+   "h2": 1.0
+  }
+ }
+]

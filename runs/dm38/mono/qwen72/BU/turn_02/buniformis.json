@@ -1,0 +1,13 @@
+{
+ "fluxes": {
+  "glc__D": -6.0,
+  "nh4": -1.0,
+  "ac": 3.0,
+  "but": 2.0,
+  "ppa": 1.0,
+  "for": 0.45
+ },
+ "growth_rate": 0.12,
+ "rationale": "Balanced carbon and nitrogen uptake to support moderate growth rate, with fermentation products acetate, butyrate, propionate, and formate.",
+ "confidence": 0.9
+}
